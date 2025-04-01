@@ -54,11 +54,11 @@ const Portfolio = () => {
               <div className="py-4">
                 <div className="flex flex-row items-center justify-between relative">
                   {/* Project name and tags - always in one line */}
-                  <div className="flex items-center flex-grow gap-4 overflow-hidden">
-                    <div className="text-4xl font-bold text-portfolio-text mr-4 group-hover:text-portfolio-highlight whitespace-nowrap">
+                  <div className="flex items-center flex-grow overflow-hidden">
+                    <div className="text-4xl font-bold text-portfolio-text group-hover:text-portfolio-highlight whitespace-nowrap mr-8">
                       {project.name}
                     </div>
-                    <div className="flex items-center flex-wrap gap-2">
+                    <div className="flex items-center gap-4">
                       <span className="project-year-tag group-hover:project-year-tag-highlight group-hover:bg-portfolio-highlight group-hover:text-portfolio-text whitespace-nowrap">
                         {project.year}
                       </span>
@@ -76,7 +76,7 @@ const Portfolio = () => {
                       )}
                       
                       {project.awardWinning && (
-                        <div className="relative inline-block">
+                        <div className="relative inline-block ml-4">
                           <AwardIcon />
                         </div>
                       )}
@@ -85,7 +85,7 @@ const Portfolio = () => {
                   
                   {/* Thumbnails - positioned in the middle right, showing immediately on hover with right-to-left exit animation */}
                   <div 
-                    className={`flex gap-2 transition-all duration-300 ${
+                    className={`flex gap-4 transition-all duration-300 ${
                       hoveredProject === project.name 
                         ? "opacity-100" // No entry animation, just appear
                         : "opacity-0 animate-slide-out-left"
