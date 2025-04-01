@@ -68,20 +68,17 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				'portfolio': {
-					'bg': '#F1F0EC',                  // Updated to warm off-white
-					'text': '#2A2A2A',                // Updated to soft charcoal
-					'text-secondary': '#4F635C',      // Added desaturated olive-gray
-					'tag-bg': '#6BD8D7',              // Kept UV Turquoise
-					'tag-bg-light': '#A5E3E2',        // Added light turquoise variant
-					'tag-text': '#ffffff',            // Kept as white
-					'divider': '#DADADA',             // Updated to neutral light gray
-					'highlight': '#FFD275',           // Updated to muted apricot yellow
-					'accent': '#EFB7B7',              // Added warm tech pink
-					'white-tag-bg': '#ffffff',        // Kept as white
-					'white-tag-text': '#6BD8D7',      // Kept as turquoise
-					'about-bg': '#4F635C',            // Updated to match text-secondary
-					'footer-text': '#f1f1f1',         // Kept as is
-					'footer-muted': '#a0a0a0',        // Kept as is
+					'bg': '#f9f8e2',
+					'text': '#5a6b36',
+					'tag-bg': '#5a6b36',
+					'tag-text': '#ffffff',
+					'divider': '#5a6b36',
+					'highlight': '#d4d118',
+					'white-tag-bg': '#ffffff',
+					'white-tag-text': '#5a6b36',
+					'about-bg': '#283618',
+					'footer-text': '#f1f1f1',
+					'footer-muted': '#a0a0a0',
 				}
 			},
 			borderRadius: {
