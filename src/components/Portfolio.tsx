@@ -35,13 +35,14 @@ const Portfolio = () => {
             <div className="portfolio-divider"></div>
             
             {/* Normal state */}
-            <div className="py-4 flex flex-col md:items-start justify-between group-hover:hidden">
-              <div className="text-4xl font-bold mb-2">
-                {project.name}
+            <div className="py-4 flex flex-col items-start justify-between group-hover:hidden">
+              <div className="flex items-center gap-4 mb-2">
+                <div className="text-4xl font-bold">
+                  {project.name}
+                </div>
+                <span className="project-year-tag">{project.year}</span>
               </div>
               <div className="flex flex-wrap gap-2 items-center">
-                <span className="project-year-tag">{project.year}</span>
-                
                 {project.categories.map((category) => (
                   <span key={category} className="project-category-tag">
                     {category}
@@ -65,12 +66,13 @@ const Portfolio = () => {
             {/* Hover state */}
             <div className="py-4 hidden group-hover:block text-portfolio-highlight">
               <div className="flex flex-col items-start">
-                <div className="text-4xl font-bold mb-2">
-                  {project.name}
+                <div className="flex items-center gap-4 mb-2">
+                  <div className="text-4xl font-bold">
+                    {project.name}
+                  </div>
+                  <span className="project-year-tag">{project.year}</span>
                 </div>
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className="project-year-tag">{project.year}</span>
-                  
                   {project.categories.map((category) => (
                     <span key={category} className="project-category-tag">
                       {category}
