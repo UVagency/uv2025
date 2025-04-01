@@ -45,7 +45,7 @@ const Portfolio = () => {
                 </span>
                 
                 {project.categories.map((category) => (
-                  <span key={category} className="project-category-tag">
+                  <span key={category} className="project-category-tag group-hover:project-category-tag-highlight">
                     {category}
                   </span>
                 ))}
