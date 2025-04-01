@@ -2,8 +2,6 @@
 import { DiamondIcon } from "./DiamondIcon";
 import { AwardIcon } from "./AwardIcon";
 import { AspectRatio } from "./ui/aspect-ratio";
-import { Skeleton } from "./ui/skeleton";
-import { useState, useEffect } from "react";
 
 interface Project {
   name: string;
@@ -68,17 +66,6 @@ const projects: Project[] = [
 ];
 
 const Portfolio = () => {
-  const [imagesLoaded, setImagesLoaded] = useState(false);
-
-  useEffect(() => {
-    // Simulate image loading delay
-    const timer = setTimeout(() => {
-      setImagesLoaded(true);
-    }, 1000);
-    
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <div className="max-w-[90%] mx-auto px-4 py-8 font-sans">
       <div className="flex items-center mb-8">
@@ -93,22 +80,7 @@ const Portfolio = () => {
             
             {/* Project item */}
             <div className="py-4">
-              <div className="flex flex-col md:flex-row gap-6">
-                {/* Project images - Now on the left */}
-                <div className="w-full md:w-[240px] flex-shrink-0">
-                  <div className="h-[160px] bg-portfolio-tag-bg rounded-md overflow-hidden relative">
-                    {!imagesLoaded ? (
-                      <Skeleton className="w-full h-full" />
-                    ) : (
-                      <img 
-                        src={project.imageUrl} 
-                        alt={project.name}
-                        className="w-full h-full object-cover"
-                      />
-                    )}
-                  </div>
-                </div>
-                
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
                 {/* Project name and tags */}
                 <div className="flex-1">
                   <div className="text-4xl font-bold text-portfolio-text mr-4 group-hover:text-portfolio-highlight">
@@ -136,6 +108,41 @@ const Portfolio = () => {
                         <AwardIcon />
                       </div>
                     )}
+                  </div>
+                </div>
+                
+                {/* Project images */}
+                <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 max-w-full md:max-w-[40%]">
+                  {/* Main image */}
+                  <div className="min-w-[100px] w-[100px] h-[60px] rounded-md overflow-hidden bg-portfolio-tag-bg">
+                    <AspectRatio ratio={5/3}>
+                      <img 
+                        src={project.imageUrl} 
+                        alt={project.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </AspectRatio>
+                  </div>
+                  
+                  {/* Additional images (for design purposes) */}
+                  <div className="min-w-[100px] w-[100px] h-[60px] rounded-md overflow-hidden bg-portfolio-tag-bg">
+                    <AspectRatio ratio={5/3}>
+                      <img 
+                        src={project.imageUrl} 
+                        alt={`${project.name} thumbnail`}
+                        className="w-full h-full object-cover"
+                      />
+                    </AspectRatio>
+                  </div>
+                  
+                  <div className="min-w-[100px] w-[100px] h-[60px] rounded-md overflow-hidden bg-portfolio-tag-bg">
+                    <AspectRatio ratio={5/3}>
+                      <img 
+                        src={project.imageUrl} 
+                        alt={`${project.name} thumbnail`}
+                        className="w-full h-full object-cover"
+                      />
+                    </AspectRatio>
                   </div>
                 </div>
               </div>
