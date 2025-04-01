@@ -22,7 +22,7 @@ const projectsData: Record<string, ProjectData> = {
     name: "MERGUI",
     year: "2019",
     categories: ["MUSIC VIDEO"],
-    description: "A vibrant mixed-media music video created for international pop star Mergui's summer hit, "Not Myself."",
+    description: "A vibrant mixed-media music video created for international pop star Mergui's summer hit, \"Not Myself.\"",
     client: "Mergui",
     songTitle: "Not Myself",
     images: [
