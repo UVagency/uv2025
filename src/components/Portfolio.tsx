@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { DiamondIcon } from "./DiamondIcon";
 import { AwardIcon } from "./AwardIcon";
 import { AspectRatio } from "./ui/aspect-ratio";
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
+import projectsData, { ProjectData } from "@/data/projectsData";
 
 interface Project {
   name: string;
@@ -13,128 +13,25 @@ interface Project {
   comingSoon?: boolean;
   awardWinning?: boolean;
   imageUrl: string;
-  thumbnails?: string[]; // Add thumbnails array
+  thumbnails: string[];
   slug?: string;
 }
 
-const projects: Project[] = [
-  { 
-    name: "MERGUI", 
-    year: "2019", 
-    categories: ["MUSIC VIDEO"],
-    imageUrl: "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
-    thumbnails: [
-      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180",
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180",
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180"
-    ],
-    slug: "mergui"
-  },
-  { 
-    name: "CODE NAME", 
-    year: "2023", 
-    categories: ["GRAPHICS PACKAGE"],
-    imageUrl: "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
-    thumbnails: [
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180",
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180",
-      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180"
-    ],
-    slug: "code-name"
-  },
-  { 
-    name: "VAXA", 
-    year: "2025", 
-    categories: ["EXPLAINER"], 
-    comingSoon: true,
-    imageUrl: "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
-    thumbnails: [
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180",
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180",
-      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180",
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180"
-    ],
-    slug: "vaxa"
-  },
-  { 
-    name: "DANA", 
-    year: "2023", 
-    categories: ["GRAPHICS PACKAGE"],
-    imageUrl: "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
-    thumbnails: [
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180",
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180",
-      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180",
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180"
-    ],
-    slug: "dana"
-  },
-  { 
-    name: "BOOKAWAY", 
-    year: "2020", 
-    categories: ["COMMERCIAL"],
-    imageUrl: "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
-    thumbnails: [
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180",
-      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180",
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180"
-    ],
-    slug: "bookaway"
-  },
-  { 
-    name: "DORITOS", 
-    year: "2017", 
-    categories: ["COMMERCIAL"],
-    imageUrl: "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
-    thumbnails: [
-      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180",
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180",
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180"
-    ],
-    slug: "doritos"
-  },
-  { 
-    name: "KAYMA", 
-    year: "2024", 
-    categories: ["MUSIC VIDEO"],
-    imageUrl: "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
-    thumbnails: [
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180",
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180",
-      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180"
-    ],
-    slug: "kayma"
-  },
-  { 
-    name: "PARIS", 
-    year: "2018", 
-    categories: ["PERSONAL"], 
-    awardWinning: true,
-    imageUrl: "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
-    thumbnails: [
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180",
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180",
-      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180",
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180"
-    ],
-    slug: "paris"
-  },
-];
+// Convert projectsData to an array for the portfolio
+const projects: Project[] = Object.entries(projectsData).map(([slug, project]) => ({
+  name: project.name,
+  year: project.year,
+  categories: project.categories,
+  comingSoon: project.year > new Date().getFullYear().toString(),
+  awardWinning: slug === "paris", // Just keeping the same one that was award-winning
+  imageUrl: project.images[0],
+  thumbnails: project.thumbnails || [],
+  slug
+}));
 
 const Portfolio = () => {
+  const [hoveredProject, setHoveredProject] = useState<string | null>(null);
+
   return (
     <div className="max-w-[90%] mx-auto px-4 py-8 font-sans">
       <div className="flex items-center mb-8">
@@ -144,71 +41,67 @@ const Portfolio = () => {
 
       <div className="space-y-4">
         {projects.map((project, index) => (
-          <div key={project.name} className="project-item group">
+          <div 
+            key={project.name} 
+            className="project-item group"
+            onMouseEnter={() => setHoveredProject(project.name)}
+            onMouseLeave={() => setHoveredProject(null)}
+          >
             <div className="portfolio-divider"></div>
             
             {/* Project item - now wrapped with Link */}
-            <HoverCard openDelay={0} closeDelay={0}>
-              <HoverCardTrigger asChild>
-                <Link to={project.comingSoon ? "#" : `/project/${project.slug}`} className={project.comingSoon ? "cursor-not-allowed" : "cursor-pointer"}>
-                  <div className="py-4">
-                    <div className="flex flex-row items-center justify-between">
-                      {/* Project name and tags - always in one line */}
-                      <div className="flex items-center flex-grow gap-4 overflow-hidden">
-                        <div className="text-4xl font-bold text-portfolio-text mr-4 group-hover:text-portfolio-highlight whitespace-nowrap">
-                          {project.name}
+            <Link to={project.comingSoon ? "#" : `/project/${project.slug}`} className={project.comingSoon ? "cursor-not-allowed" : "cursor-pointer"}>
+              <div className="py-4">
+                <div className="flex flex-row items-center justify-between">
+                  {/* Project name and tags - always in one line */}
+                  <div className="flex items-center flex-grow gap-4 overflow-hidden">
+                    <div className="text-4xl font-bold text-portfolio-text mr-4 group-hover:text-portfolio-highlight whitespace-nowrap">
+                      {project.name}
+                    </div>
+                    <div className="flex items-center flex-wrap gap-2">
+                      <span className="project-year-tag group-hover:project-year-tag-highlight group-hover:bg-portfolio-highlight group-hover:text-portfolio-text whitespace-nowrap">
+                        {project.year}
+                      </span>
+                      
+                      {project.categories.map((category) => (
+                        <span key={category} className="project-category-tag group-hover:project-category-tag-highlight whitespace-nowrap">
+                          {category}
+                        </span>
+                      ))}
+                      
+                      {project.comingSoon && (
+                        <span className="project-coming-soon-tag whitespace-nowrap">
+                          COMING SOOOOOON
+                        </span>
+                      )}
+                      
+                      {project.awardWinning && (
+                        <div className="relative inline-block">
+                          <AwardIcon />
                         </div>
-                        <div className="flex items-center flex-wrap gap-2">
-                          <span className="project-year-tag group-hover:project-year-tag-highlight group-hover:bg-portfolio-highlight group-hover:text-portfolio-text whitespace-nowrap">
-                            {project.year}
-                          </span>
-                          
-                          {project.categories.map((category) => (
-                            <span key={category} className="project-category-tag group-hover:project-category-tag-highlight whitespace-nowrap">
-                              {category}
-                            </span>
-                          ))}
-                          
-                          {project.comingSoon && (
-                            <span className="project-coming-soon-tag whitespace-nowrap">
-                              COMING SOOOOOON
-                            </span>
-                          )}
-                          
-                          {project.awardWinning && (
-                            <div className="relative inline-block">
-                              <AwardIcon />
+                      )}
+                      
+                      {/* Thumbnails - only show when hovered */}
+                      {hoveredProject === project.name && (
+                        <div className="flex gap-2 ml-2 animate-slide-in-right">
+                          {project.thumbnails.slice(0, 5).map((thumbnail, idx) => (
+                            <div key={idx} className="min-w-[100px] w-[100px] h-[60px] rounded-md overflow-hidden bg-portfolio-tag-bg">
+                              <AspectRatio ratio={5/3}>
+                                <img 
+                                  src={thumbnail} 
+                                  alt={`${project.name} thumbnail ${idx + 1}`}
+                                  className="w-full h-full object-cover"
+                                />
+                              </AspectRatio>
                             </div>
-                          )}
+                          ))}
                         </div>
-                      </div>
+                      )}
                     </div>
                   </div>
-                </Link>
-              </HoverCardTrigger>
-              
-              <HoverCardContent 
-                side="right" 
-                align="start" 
-                className="p-0 bg-transparent border-0 shadow-none"
-                sideOffset={20}
-              >
-                <div className="flex gap-2 animate-slide-in-right overflow-hidden">
-                  {/* Show 5 thumbnails on hover */}
-                  {project.thumbnails && project.thumbnails.map((thumbnail, idx) => (
-                    <div key={idx} className="min-w-[100px] w-[100px] h-[60px] rounded-md overflow-hidden bg-portfolio-tag-bg">
-                      <AspectRatio ratio={5/3}>
-                        <img 
-                          src={thumbnail} 
-                          alt={`${project.name} thumbnail ${idx + 1}`}
-                          className="w-full h-full object-cover"
-                        />
-                      </AspectRatio>
-                    </div>
-                  ))}
                 </div>
-              </HoverCardContent>
-            </HoverCard>
+              </div>
+            </Link>
           </div>
         ))}
       </div>

@@ -8,7 +8,7 @@ export interface ProjectData {
   client?: string;
   songTitle?: string;
   images: string[];
-  thumbnails?: string[]; // Add thumbnails array to the interface
+  thumbnails: string[]; // Make thumbnails required
 }
 
 // Sample project data - in a real application, this would come from a database or API
