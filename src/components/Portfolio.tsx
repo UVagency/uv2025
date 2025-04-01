@@ -1,6 +1,7 @@
 
 import { DiamondIcon } from "./DiamondIcon";
 import { AwardIcon } from "./AwardIcon";
+import { Film, Music, Rocket, Tv, Palette, Code, Star } from "lucide-react";
 
 interface Project {
   name: string;
@@ -21,6 +22,24 @@ const projects: Project[] = [
   { name: "FLY YOUR WAY", year: "2022", categories: ["MEDIA"], awardWinning: true },
 ];
 
+// Function to get the appropriate icon based on project category
+const getCategoryIcon = (category: string) => {
+  switch (category) {
+    case "IMMERSIVE":
+      return <Star className="h-7 w-7 text-portfolio-highlight" />;
+    case "INTEGRATED":
+      return <Rocket className="h-7 w-7 text-portfolio-highlight" />;
+    case "PROMO":
+      return <Tv className="h-7 w-7 text-portfolio-highlight" />;
+    case "LAUNCH":
+      return <Film className="h-7 w-7 text-portfolio-highlight" />;
+    case "MEDIA":
+      return <Music className="h-7 w-7 text-portfolio-highlight" />;
+    default:
+      return <Palette className="h-7 w-7 text-portfolio-highlight" />;
+  }
+};
+
 const Portfolio = () => {
   return (
     <div className="max-w-[90%] mx-auto px-4 py-8 font-sans">
@@ -34,12 +53,12 @@ const Portfolio = () => {
           <div key={project.name} className="project-item group cursor-pointer">
             <div className="portfolio-divider"></div>
             
-            {/* Normal state */}
-            <div className="py-4 flex items-center">
+            <div className="py-4 flex items-center justify-between">
               <div className="text-4xl font-bold text-portfolio-text mr-4 group-hover:text-portfolio-highlight">
                 {project.name}
               </div>
-              <div className="flex items-center gap-2">
+              
+              <div className="flex items-center gap-6">
                 <span className="project-year-tag group-hover:project-year-tag-highlight group-hover:bg-portfolio-highlight group-hover:text-portfolio-text">
                   {project.year}
                 </span>
@@ -61,6 +80,11 @@ const Portfolio = () => {
                     <AwardIcon />
                   </div>
                 )}
+                
+                {/* Visual element (icon) replacing thumbnails */}
+                <div className="flex items-center justify-center ml-4 animate-pulse-slow">
+                  {getCategoryIcon(project.categories[0])}
+                </div>
               </div>
             </div>
           </div>
