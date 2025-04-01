@@ -1,5 +1,5 @@
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -30,9 +30,9 @@ const brands: Brand[] = [
 const BrandCarousel = () => {
   const autoplayPlugin = useRef(
     Autoplay({ 
-      delay: 0,    // No delay for continuous scrolling
-      stopOnInteraction: false, // Don't stop on user interaction
-      playOnInit: true, // Start playing immediately
+      delay: 2000,    // 2 segundos entre cada movimiento automático
+      stopOnInteraction: true, // Detener al interactuar
+      playOnInit: true, // Comenzar a reproducir inmediatamente
     })
   );
 
@@ -43,8 +43,10 @@ const BrandCarousel = () => {
           opts={{
             align: "start",
             loop: true,
-            dragFree: true, // Enable free-form dragging
-            skipSnaps: true, // Allow the carousel to skip snap points
+            direction: "rtl", // Dirección de derecha a izquierda
+            dragFree: false, // Desactivar arrastre libre para mejor control
+            skipSnaps: false, // Mantener snap points para un desplazamiento más controlado
+            speed: 10, // Velocidad de desplazamiento más lenta (mayor número = más lento)
           }}
           plugins={[autoplayPlugin.current]}
           className="w-full"
