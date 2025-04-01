@@ -1,14 +1,18 @@
 
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import ProjectHeader from "../components/project/ProjectHeader";
 import ProjectGallery from "../components/project/ProjectGallery";
 import ProjectVideoLink from "../components/project/ProjectVideoLink";
 import ProjectNotFound from "../components/project/ProjectNotFound";
 import projectsData from "../data/projectsData";
+import Footer from "../components/Footer";
 
 const ProjectDetail = () => {
   const { projectId } = useParams<{ projectId: string }>();
-  const project = projectId && projectsData[projectId.toLowerCase()];
+  const navigate = useNavigate();
+  
+  // Buscar el proyecto por ID
+  const project = projectId ? projectsData[projectId.toLowerCase()] : undefined;
   
   if (!project) {
     return <ProjectNotFound />;
@@ -20,6 +24,7 @@ const ProjectDetail = () => {
         <ProjectHeader project={project} />
         <ProjectGallery project={project} />
         <ProjectVideoLink show={project.name === "MERGUI"} />
+        <Footer />
       </div>
     </div>
   );

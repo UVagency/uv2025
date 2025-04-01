@@ -2,7 +2,7 @@
 import React from 'react';
 import { ProjectData } from '@/data/projectsData';
 import { X } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 interface ProjectHeaderProps {
   project: ProjectData;
@@ -37,6 +37,18 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ project }) => {
               {category}
             </span>
           ))}
+          
+          {project.comingSoon && (
+            <span className="project-coming-soon-tag text-base px-6 py-2 border rounded-full bg-portfolio-highlight text-portfolio-bg">
+              COMING SOOOOOON
+            </span>
+          )}
+          
+          {project.awardWinning && (
+            <div className="relative inline-block ml-2">
+              <span title="Award Winning Project">🏆</span>
+            </div>
+          )}
         </div>
       </div>
       
@@ -54,6 +66,15 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ project }) => {
         {project.songTitle && (
           <div className="text-portfolio-text/70">
             <span className="font-semibold">Song:</span> "{project.songTitle}"
+          </div>
+        )}
+        
+        {project.emojis && (
+          <div className="text-portfolio-text/70 flex items-center">
+            <span className="font-semibold mr-2">Vibes:</span>
+            {project.emojis.map((emoji, index) => (
+              <span key={index} className="text-2xl mx-1">{emoji}</span>
+            ))}
           </div>
         )}
       </div>
