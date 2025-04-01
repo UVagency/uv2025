@@ -1,7 +1,9 @@
 
+import { useState } from "react";
 import { DiamondIcon } from "./DiamondIcon";
 import { AwardIcon } from "./AwardIcon";
 import { AspectRatio } from "./ui/aspect-ratio";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
 
 interface Project {
   name: string;
@@ -79,42 +81,52 @@ const Portfolio = () => {
             <div className="portfolio-divider"></div>
             
             {/* Project item */}
-            <div className="py-4">
-              <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
-                {/* Project name and tags */}
-                <div className="flex-1">
-                  <div className="text-4xl font-bold text-portfolio-text mr-4 group-hover:text-portfolio-highlight">
-                    {project.name}
-                  </div>
-                  <div className="flex items-center flex-wrap gap-2 mt-2">
-                    <span className="project-year-tag group-hover:project-year-tag-highlight group-hover:bg-portfolio-highlight group-hover:text-portfolio-text">
-                      {project.year}
-                    </span>
-                    
-                    {project.categories.map((category) => (
-                      <span key={category} className="project-category-tag group-hover:project-category-tag-highlight">
-                        {category}
-                      </span>
-                    ))}
-                    
-                    {project.comingSoon && (
-                      <span className="project-coming-soon-tag">
-                        COMING SOOOOOON
-                      </span>
-                    )}
-                    
-                    {project.awardWinning && (
-                      <div className="relative inline-block">
-                        <AwardIcon />
+            <HoverCard openDelay={0} closeDelay={0}>
+              <HoverCardTrigger asChild>
+                <div className="py-4">
+                  <div className="flex flex-row items-center justify-between">
+                    {/* Project name and tags - always in one line */}
+                    <div className="flex items-center flex-grow gap-4 overflow-hidden">
+                      <div className="text-4xl font-bold text-portfolio-text mr-4 group-hover:text-portfolio-highlight whitespace-nowrap">
+                        {project.name}
                       </div>
-                    )}
+                      <div className="flex items-center flex-wrap gap-2">
+                        <span className="project-year-tag group-hover:project-year-tag-highlight group-hover:bg-portfolio-highlight group-hover:text-portfolio-text whitespace-nowrap">
+                          {project.year}
+                        </span>
+                        
+                        {project.categories.map((category) => (
+                          <span key={category} className="project-category-tag group-hover:project-category-tag-highlight whitespace-nowrap">
+                            {category}
+                          </span>
+                        ))}
+                        
+                        {project.comingSoon && (
+                          <span className="project-coming-soon-tag whitespace-nowrap">
+                            COMING SOOOOOON
+                          </span>
+                        )}
+                        
+                        {project.awardWinning && (
+                          <div className="relative inline-block">
+                            <AwardIcon />
+                          </div>
+                        )}
+                      </div>
+                    </div>
                   </div>
                 </div>
-                
-                {/* Project images */}
-                <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 max-w-full md:max-w-[40%]">
-                  {/* Main image */}
-                  <div className="min-w-[100px] w-[100px] h-[60px] rounded-md overflow-hidden bg-portfolio-tag-bg">
+              </HoverCardTrigger>
+              
+              <HoverCardContent 
+                side="right" 
+                align="start" 
+                className="p-0 bg-transparent border-0 shadow-none"
+                sideOffset={20}
+              >
+                <div className="flex gap-2 animate-slide-in-right overflow-hidden">
+                  {/* Project images that appear on hover */}
+                  <div className="min-w-[180px] w-[180px] h-[108px] rounded-md overflow-hidden bg-portfolio-tag-bg">
                     <AspectRatio ratio={5/3}>
                       <img 
                         src={project.imageUrl} 
@@ -124,8 +136,7 @@ const Portfolio = () => {
                     </AspectRatio>
                   </div>
                   
-                  {/* Additional images (for design purposes) */}
-                  <div className="min-w-[100px] w-[100px] h-[60px] rounded-md overflow-hidden bg-portfolio-tag-bg">
+                  <div className="min-w-[180px] w-[180px] h-[108px] rounded-md overflow-hidden bg-portfolio-tag-bg">
                     <AspectRatio ratio={5/3}>
                       <img 
                         src={project.imageUrl} 
@@ -135,7 +146,7 @@ const Portfolio = () => {
                     </AspectRatio>
                   </div>
                   
-                  <div className="min-w-[100px] w-[100px] h-[60px] rounded-md overflow-hidden bg-portfolio-tag-bg">
+                  <div className="min-w-[180px] w-[180px] h-[108px] rounded-md overflow-hidden bg-portfolio-tag-bg">
                     <AspectRatio ratio={5/3}>
                       <img 
                         src={project.imageUrl} 
@@ -145,8 +156,8 @@ const Portfolio = () => {
                     </AspectRatio>
                   </div>
                 </div>
-              </div>
-            </div>
+              </HoverCardContent>
+            </HoverCard>
           </div>
         ))}
       </div>
