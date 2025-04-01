@@ -1,4 +1,3 @@
-
 export interface ProjectData {
   name: string;
   year: string;
@@ -76,7 +75,7 @@ const projectsData: Record<string, ProjectData> = {
       "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png"
     ],
     thumbnails: [
-      "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=180",
+      "https://images.unsplash.com/photo-1501386761578-eac5c94b8034?q=80&w=180",
       "https://images.unsplash.com/photo-1570499998979-115dbcd8e4f8?q=80&w=180"
     ],
     emojis: ["🏙️", "🎧", "🎵", "🎤", "🥁"]
@@ -145,7 +144,6 @@ const projectsData: Record<string, ProjectData> = {
     awardWinning: true,
     emojis: ["✈️", "🛫", "🌍", "☁️", "🧳"]
   },
-  // Mantener los proyectos existentes
   "mergui": {
     name: "MERGUI",
     year: "2019",
@@ -184,7 +182,39 @@ const projectsData: Record<string, ProjectData> = {
       "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180"
     ]
   },
-  // ... mantener el resto de los proyectos existentes (vaxa, dana, bookaway, etc.)
+  "wix": {
+    name: "WIX",
+    year: "2024",
+    categories: ["EXPLAINER"],
+    description: "Una experiencia de diseño web que explica las capacidades de la plataforma Wix de manera interactiva.",
+    client: "Wix",
+    images: [
+      "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png",
+      "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png"
+    ],
+    thumbnails: [
+      "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=180", 
+      "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=180"
+    ],
+    emojis: ["💻", "🎨", "🌐", "✨", "🚀"]
+  },
+  "waking-up": {
+    name: "WAKING UP",
+    year: "2025",
+    categories: ["EXPLAINER"],
+    description: "Una experiencia visual que explora la conciencia humana y el proceso de despertar a nuevas realidades.",
+    client: "Sam Harris",
+    images: [
+      "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
+      "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png"
+    ],
+    thumbnails: [
+      "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=80&w=180",
+      "https://images.unsplash.com/photo-1547394765-185e1e68f34e?q=80&w=180"
+    ],
+    comingSoon: true,
+    emojis: ["🧠", "💭", "🌌", "🔮", "🧘‍♂️"]
+  }
 };
 
 export default projectsData;

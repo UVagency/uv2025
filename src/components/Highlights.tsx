@@ -1,5 +1,5 @@
 
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { DiamondIcon } from "./DiamondIcon";
 
 interface HighlightProject {
@@ -28,6 +28,12 @@ const highlights: HighlightProject[] = [
 ];
 
 const Highlights = () => {
+  const navigate = useNavigate();
+  
+  const handleProjectClick = (projectSlug: string) => {
+    navigate(`/project/${projectSlug}`);
+  };
+
   return (
     <div className="max-w-[90%] mx-auto px-4 mb-16 font-sans">
       <div className="flex items-center mb-8">
@@ -39,7 +45,11 @@ const Highlights = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {highlights.map((project) => (
-          <Link key={project.name} to={`/project/${project.slug}`} className="cursor-pointer group">
+          <div 
+            key={project.name} 
+            onClick={() => handleProjectClick(project.slug)}
+            className="cursor-pointer group"
+          >
             <div className="relative w-full h-80 overflow-hidden rounded-md mb-4">
               <img 
                 src={project.imageUrl} 
@@ -64,7 +74,7 @@ const Highlights = () => {
                 ))}
               </div>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </div>
