@@ -19,11 +19,11 @@ const highlights: HighlightProject[] = [
     slug: "soundcore"
   },
   {
-    name: "WAKING UP",
+    name: "FESTIVAL SEASON",
     year: "2025",
-    categories: ["EXPLAINER"],
+    categories: ["CONTENT CREATION"],
     imageUrl: "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png",
-    slug: "waking-up"
+    slug: "paris"
   }
 ];
 
