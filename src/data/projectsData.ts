@@ -8,6 +8,7 @@ export interface ProjectData {
   client?: string;
   songTitle?: string;
   images: string[];
+  thumbnails?: string[]; // Add thumbnails array to the interface
 }
 
 // Sample project data - in a real application, this would come from a database or API
@@ -24,6 +25,13 @@ const projectsData: Record<string, ProjectData> = {
       "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
       "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
       "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png"
+    ],
+    thumbnails: [
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180",
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180"
     ]
   },
   "code-name": {
@@ -34,6 +42,13 @@ const projectsData: Record<string, ProjectData> = {
     images: [
       "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
       "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png"
+    ],
+    thumbnails: [
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180",
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180"
     ]
   },
   "vaxa": {
@@ -43,6 +58,13 @@ const projectsData: Record<string, ProjectData> = {
     description: "An innovative explainer video for a tech startup's new product launch.",
     images: [
       "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png"
+    ],
+    thumbnails: [
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180",
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180",
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180"
     ]
   },
   "dana": {
@@ -52,6 +74,13 @@ const projectsData: Record<string, ProjectData> = {
     description: "A bold and colorful graphics package for a fashion brand's seasonal campaign.",
     images: [
       "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png"
+    ],
+    thumbnails: [
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180",
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180",
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180"
     ]
   },
   "bookaway": {
@@ -61,6 +90,13 @@ const projectsData: Record<string, ProjectData> = {
     description: "A dynamic commercial showcasing travel experiences around the world.",
     images: [
       "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png"
+    ],
+    thumbnails: [
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180",
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180",
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180"
     ]
   },
   "doritos": {
@@ -70,6 +106,13 @@ const projectsData: Record<string, ProjectData> = {
     description: "A vibrant commercial for Doritos featuring colorful animations and effects.",
     images: [
       "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png"
+    ],
+    thumbnails: [
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180",
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180"
     ]
   },
   "kayma": {
@@ -79,6 +122,13 @@ const projectsData: Record<string, ProjectData> = {
     description: "An artistic music video with experimental visual techniques.",
     images: [
       "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png"
+    ],
+    thumbnails: [
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180",
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180"
     ]
   },
   "paris": {
@@ -88,6 +138,13 @@ const projectsData: Record<string, ProjectData> = {
     description: "A personal project exploring the beauty and rhythm of Parisian life.",
     images: [
       "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png"
+    ],
+    thumbnails: [
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180",
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180",
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180"
     ]
   },
   "wix": {
@@ -97,6 +154,13 @@ const projectsData: Record<string, ProjectData> = {
     description: "An informative explainer video for Wix's latest website builder features.",
     images: [
       "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png"
+    ],
+    thumbnails: [
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180",
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180",
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180"
     ]
   },
   "waking-up": {
@@ -106,6 +170,13 @@ const projectsData: Record<string, ProjectData> = {
     description: "A dreamy and informative explainer for a meditation app.",
     images: [
       "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png"
+    ],
+    thumbnails: [
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180",
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180"
     ]
   }
 };

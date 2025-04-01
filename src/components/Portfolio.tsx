@@ -13,6 +13,7 @@ interface Project {
   comingSoon?: boolean;
   awardWinning?: boolean;
   imageUrl: string;
+  thumbnails?: string[]; // Add thumbnails array
   slug?: string;
 }
 
@@ -22,6 +23,13 @@ const projects: Project[] = [
     year: "2019", 
     categories: ["MUSIC VIDEO"],
     imageUrl: "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
+    thumbnails: [
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180",
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180"
+    ],
     slug: "mergui"
   },
   { 
@@ -29,6 +37,13 @@ const projects: Project[] = [
     year: "2023", 
     categories: ["GRAPHICS PACKAGE"],
     imageUrl: "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
+    thumbnails: [
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180",
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180"
+    ],
     slug: "code-name"
   },
   { 
@@ -37,6 +52,13 @@ const projects: Project[] = [
     categories: ["EXPLAINER"], 
     comingSoon: true,
     imageUrl: "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
+    thumbnails: [
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180",
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180",
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180"
+    ],
     slug: "vaxa"
   },
   { 
@@ -44,6 +66,13 @@ const projects: Project[] = [
     year: "2023", 
     categories: ["GRAPHICS PACKAGE"],
     imageUrl: "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
+    thumbnails: [
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180",
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180",
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180"
+    ],
     slug: "dana"
   },
   { 
@@ -51,6 +80,13 @@ const projects: Project[] = [
     year: "2020", 
     categories: ["COMMERCIAL"],
     imageUrl: "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
+    thumbnails: [
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180",
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180",
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180"
+    ],
     slug: "bookaway"
   },
   { 
@@ -58,6 +94,13 @@ const projects: Project[] = [
     year: "2017", 
     categories: ["COMMERCIAL"],
     imageUrl: "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
+    thumbnails: [
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180",
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180"
+    ],
     slug: "doritos"
   },
   { 
@@ -65,6 +108,13 @@ const projects: Project[] = [
     year: "2024", 
     categories: ["MUSIC VIDEO"],
     imageUrl: "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
+    thumbnails: [
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180",
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180"
+    ],
     slug: "kayma"
   },
   { 
@@ -73,6 +123,13 @@ const projects: Project[] = [
     categories: ["PERSONAL"], 
     awardWinning: true,
     imageUrl: "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
+    thumbnails: [
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180",
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180",
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180"
+    ],
     slug: "paris"
   },
 ];
@@ -137,36 +194,18 @@ const Portfolio = () => {
                 sideOffset={20}
               >
                 <div className="flex gap-2 animate-slide-in-right overflow-hidden">
-                  {/* Project images that appear on hover */}
-                  <div className="min-w-[180px] w-[180px] h-[108px] rounded-md overflow-hidden bg-portfolio-tag-bg">
-                    <AspectRatio ratio={5/3}>
-                      <img 
-                        src={project.imageUrl} 
-                        alt={project.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </AspectRatio>
-                  </div>
-                  
-                  <div className="min-w-[180px] w-[180px] h-[108px] rounded-md overflow-hidden bg-portfolio-tag-bg">
-                    <AspectRatio ratio={5/3}>
-                      <img 
-                        src={project.imageUrl} 
-                        alt={`${project.name} thumbnail`}
-                        className="w-full h-full object-cover"
-                      />
-                    </AspectRatio>
-                  </div>
-                  
-                  <div className="min-w-[180px] w-[180px] h-[108px] rounded-md overflow-hidden bg-portfolio-tag-bg">
-                    <AspectRatio ratio={5/3}>
-                      <img 
-                        src={project.imageUrl} 
-                        alt={`${project.name} thumbnail`}
-                        className="w-full h-full object-cover"
-                      />
-                    </AspectRatio>
-                  </div>
+                  {/* Show 5 thumbnails on hover */}
+                  {project.thumbnails && project.thumbnails.map((thumbnail, idx) => (
+                    <div key={idx} className="min-w-[100px] w-[100px] h-[60px] rounded-md overflow-hidden bg-portfolio-tag-bg">
+                      <AspectRatio ratio={5/3}>
+                        <img 
+                          src={thumbnail} 
+                          alt={`${project.name} thumbnail ${idx + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </AspectRatio>
+                    </div>
+                  ))}
                 </div>
               </HoverCardContent>
             </HoverCard>
