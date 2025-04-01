@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
           <div className="flex items-center space-x-2">
             <Mail className="w-4 h-4 text-portfolio-highlight" />
-            <span className="uppercase">hello@yellowfellow.tv</span>
+            <span className="uppercase">hi@uv.agency</span>
           </div>
         </div>
 
@@ -31,8 +31,8 @@ const Footer = () => {
           <div className="flex items-start space-x-2">
             <MapPin className="w-4 h-4 text-portfolio-highlight mt-1" />
             <div>
-              <p>94 ALLENBY ST.</p>
-              <p>TEL AVIV</p>
+              <p>WORLDWIDE</p>
+              <p>PLANET EARTH</p>
             </div>
           </div>
         </div>
