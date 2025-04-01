@@ -46,7 +46,6 @@ const BrandCarousel = () => {
             direction: "rtl", // Dirección de derecha a izquierda
             dragFree: false, // Desactivar arrastre libre para mejor control
             skipSnaps: false, // Mantener snap points para un desplazamiento más controlado
-            speed: 10, // Velocidad de desplazamiento más lenta (mayor número = más lento)
           }}
           plugins={[autoplayPlugin.current]}
           className="w-full"
