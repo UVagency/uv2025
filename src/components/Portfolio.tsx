@@ -33,7 +33,9 @@ const Portfolio = () => {
         {projects.map((project, index) => (
           <div key={project.name} className="project-item group cursor-pointer">
             <div className="portfolio-divider"></div>
-            <div className="py-4 flex flex-col md:flex-row md:items-center justify-between">
+            
+            {/* Normal state */}
+            <div className="py-4 flex flex-col md:flex-row md:items-center justify-between group-hover:hidden">
               <div className="text-4xl font-bold mb-2 md:mb-0">
                 {project.name}
               </div>
@@ -60,14 +62,17 @@ const Portfolio = () => {
               </div>
             </div>
             
-            {/* Hover state that appears on hover */}
-            <div className="project-hover-state opacity-0 group-hover:opacity-100 transition-opacity duration-300 py-4 px-3 bg-portfolio-highlight border-t border-b border-portfolio-text">
-              <div className="flex items-center">
-                <span className="text-4xl font-bold text-portfolio-text">{project.name}</span>
-                <div className="ml-6 flex items-center">
-                  <span className="project-year-tag mr-3">{project.year}</span>
+            {/* Hover state */}
+            <div className="py-4 hidden group-hover:block text-portfolio-highlight">
+              <div className="flex items-start">
+                <div className="text-4xl font-bold">
+                  {project.name}
+                </div>
+                <div className="ml-4 flex items-center gap-2">
+                  <span className="project-year-tag">{project.year}</span>
+                  
                   {project.categories.map((category) => (
-                    <span key={category} className="project-category-tag mr-3">
+                    <span key={category} className="project-category-tag">
                       {category}
                     </span>
                   ))}
