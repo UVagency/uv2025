@@ -1,6 +1,5 @@
 
-import { useParams, Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ProjectHeader from "../components/project/ProjectHeader";
@@ -22,12 +21,6 @@ const ProjectDetail = () => {
       <Navbar />
       
       <div className="max-w-[90%] mx-auto pt-8 pb-16">
-        {/* Back button */}
-        <Link to="/" className="inline-flex items-center text-portfolio-text hover:text-portfolio-highlight mb-8 transition-colors">
-          <ArrowLeft size={20} className="mr-2" />
-          <span>Back to Projects</span>
-        </Link>
-        
         {/* Project components */}
         <ProjectHeader project={project} />
         <ProjectGallery project={project} />
