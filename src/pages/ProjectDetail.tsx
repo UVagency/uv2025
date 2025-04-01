@@ -1,7 +1,5 @@
 
 import { useParams } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import ProjectHeader from "../components/project/ProjectHeader";
 import ProjectGallery from "../components/project/ProjectGallery";
 import ProjectVideoLink from "../components/project/ProjectVideoLink";
@@ -17,17 +15,12 @@ const ProjectDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-portfolio-bg">
-      <Navbar />
-      
+    <div className="fixed inset-0 z-50 bg-portfolio-bg overflow-y-auto">
       <div className="max-w-[90%] mx-auto pt-8 pb-16">
-        {/* Project components */}
         <ProjectHeader project={project} />
         <ProjectGallery project={project} />
         <ProjectVideoLink show={project.name === "MERGUI"} />
       </div>
-      
-      <Footer />
     </div>
   );
 };

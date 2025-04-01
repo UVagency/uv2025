@@ -2,19 +2,28 @@
 import React from 'react';
 import { ProjectData } from '@/data/projectsData';
 import { X } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 interface ProjectHeaderProps {
   project: ProjectData;
 }
 
 const ProjectHeader: React.FC<ProjectHeaderProps> = ({ project }) => {
+  const navigate = useNavigate();
+  
+  const handleClose = () => {
+    navigate('/');
+  };
+  
   return (
     <div className="border-b border-portfolio-divider pb-6 mb-12">
       <div className="flex items-center gap-4 mb-6">
-        <Link to="/" className="w-10 h-10 rounded-full bg-transparent border border-portfolio-text flex items-center justify-center text-portfolio-text hover:bg-portfolio-text hover:text-portfolio-bg transition-colors">
+        <button 
+          onClick={handleClose}
+          className="w-10 h-10 rounded-full bg-transparent border border-portfolio-text flex items-center justify-center text-portfolio-text hover:bg-portfolio-text hover:text-portfolio-bg transition-colors"
+        >
           <X size={18} />
-        </Link>
+        </button>
         
         <h1 className="text-7xl font-bold text-portfolio-text">{project.name}</h1>
         
