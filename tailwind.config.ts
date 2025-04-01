@@ -68,17 +68,17 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				'portfolio': {
-					'bg': '#F9F9F9',                  // Changed from #f9f8e2 to #F9F9F9
-					'text': '#333333',                // Changed from #5a6b36 to #333333
-					'tag-bg': '#6BD8D7',              // Changed from #5a6b36 to #6BD8D7
-					'tag-text': '#ffffff',            // Kept as #ffffff
-					'divider': '#6BD8D7',             // Changed from #5a6b36 to #6BD8D7
-					'highlight': '#F8C84F',           // Changed from #d4d118 to #F8C84F
-					'white-tag-bg': '#ffffff',        // Kept as #ffffff
-					'white-tag-text': '#6BD8D7',      // Changed from #5a6b36 to #6BD8D7
-					'about-bg': '#299b9a',            // Changed from #283618 to #299b9a
-					'footer-text': '#f1f1f1',         // Kept as #f1f1f1
-					'footer-muted': '#a0a0a0',        // Kept as #a0a0a0
+					'bg': '#f9f8e2',                  // Changed back to #f9f8e2 from #F9F9F9
+					'text': '#333333',                // Keeping the new text color #333333
+					'tag-bg': '#6BD8D7',              // Keeping the new tag background color #6BD8D7
+					'tag-text': '#ffffff',            // Keeping as #ffffff
+					'divider': '#6BD8D7',             // Keeping the new divider color #6BD8D7
+					'highlight': '#F8C84F',           // Keeping the new highlight color #F8C84F
+					'white-tag-bg': '#ffffff',        // Keeping as #ffffff
+					'white-tag-text': '#6BD8D7',      // Keeping the new tag text color #6BD8D7
+					'about-bg': '#299b9a',            // Keeping the new about background color #299b9a
+					'footer-text': '#f1f1f1',         // Keeping as #f1f1f1
+					'footer-muted': '#a0a0a0',        // Keeping as #a0a0a0
 				}
 			},
 			borderRadius: {
