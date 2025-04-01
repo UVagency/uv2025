@@ -5,7 +5,7 @@ import { ScrollIndicator } from "./hero/ScrollIndicator";
 
 const Hero = () => {
   return (
-    <div className="relative bg-portfolio-bg overflow-hidden min-h-[85vh] flex items-center">
+    <div className="relative bg-portfolio-bg overflow-hidden min-h-[85vh] flex items-center mb-12">
       {/* Background elements */}
       <HeroBackgroundAnimations />
 
