@@ -1,17 +1,16 @@
 
-import React from 'react';
-import Navbar from '../components/Navbar';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const About = () => {
-  return (
-    <div className="min-h-screen bg-portfolio-bg">
-      <Navbar />
-      <div className="max-w-[90%] mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-portfolio-text mb-8">About</h1>
-        <p className="text-portfolio-text">About page content goes here.</p>
-      </div>
-    </div>
-  );
+  const navigate = useNavigate();
+  
+  useEffect(() => {
+    // Redirigir a la página principal, ya que About ahora es un panel desplegable
+    navigate('/');
+  }, [navigate]);
+  
+  return null; // No renderizamos nada, ya que se redirigirá
 };
 
 export default About;

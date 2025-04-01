@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -67,7 +66,6 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for the project portfolio
 				'portfolio': {
 					'bg': '#f9f8e2',
 					'text': '#5a6b36',
@@ -77,6 +75,7 @@ export default {
 					'highlight': '#d4d118',
 					'white-tag-bg': '#ffffff',
 					'white-tag-text': '#5a6b36',
+					'about-bg': '#283618'
 				}
 			},
 			borderRadius: {
