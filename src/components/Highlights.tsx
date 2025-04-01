@@ -12,11 +12,11 @@ interface HighlightProject {
 
 const highlights: HighlightProject[] = [
   {
-    name: "WIX",
-    year: "2024",
-    categories: ["EXPLAINER"],
+    name: "LOLLA VIBES",
+    year: "2025",
+    categories: ["IMMERSIVE"],
     imageUrl: "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png",
-    slug: "wix"
+    slug: "soundcore"
   },
   {
     name: "WAKING UP",
