@@ -8,7 +8,7 @@ interface Brand {
   logoUrl: string;
 }
 
-// Expanded brand list to include more clients
+// Expanded brand list to include 20 clients
 const brands: Brand[] = [
   { name: "Flaviar", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
   { name: "VAXA", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
@@ -24,7 +24,12 @@ const brands: Brand[] = [
   { name: "Meta", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
   { name: "Tesla", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
   { name: "Spotify", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
-  { name: "Adobe", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" }
+  { name: "Adobe", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
+  { name: "IBM", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
+  { name: "Intel", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
+  { name: "Samsung", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
+  { name: "Sony", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
+  { name: "Oracle", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" }
 ];
 
 const BrandCarousel = () => {
