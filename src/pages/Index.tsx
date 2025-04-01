@@ -1,10 +1,12 @@
 
+import Navbar from "../components/Navbar";
 import Highlights from "../components/Highlights";
 import Portfolio from "../components/Portfolio";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-portfolio-bg">
+      <Navbar />
       <Highlights />
       <Portfolio />
     </div>
