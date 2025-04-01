@@ -43,7 +43,7 @@ const Portfolio = () => {
         {projects.map((project, index) => (
           <div 
             key={project.name} 
-            className="project-item group relative"
+            className="project-item group relative h-auto"
             onMouseEnter={() => setHoveredProject(project.name)}
             onMouseLeave={() => setHoveredProject(null)}
           >
@@ -81,22 +81,24 @@ const Portfolio = () => {
                         </div>
                       )}
                       
-                      {/* Thumbnails - show immediately on hover with smooth animation */}
-                      {hoveredProject === project.name && (
-                        <div className="flex gap-2 ml-2 opacity-100 transition-all duration-150">
-                          {project.thumbnails.slice(0, 5).map((thumbnail, idx) => (
-                            <div key={idx} className="min-w-[100px] w-[100px] h-[60px] rounded-md overflow-hidden bg-portfolio-tag-bg">
-                              <AspectRatio ratio={5/3}>
-                                <img 
-                                  src={thumbnail} 
-                                  alt={`${project.name} thumbnail ${idx + 1}`}
-                                  className="w-full h-full object-cover"
-                                />
-                              </AspectRatio>
-                            </div>
-                          ))}
-                        </div>
-                      )}
+                      {/* Thumbnails - show with entry and exit animations */}
+                      <div className={`flex gap-2 ml-2 transition-all duration-300 ${
+                        hoveredProject === project.name 
+                          ? "opacity-100 animate-slide-in-right" 
+                          : "opacity-0 animate-slide-out-right"
+                      } absolute`}>
+                        {project.thumbnails.slice(0, 5).map((thumbnail, idx) => (
+                          <div key={idx} className="min-w-[100px] w-[100px] h-[60px] rounded-md overflow-hidden bg-portfolio-tag-bg">
+                            <AspectRatio ratio={5/3}>
+                              <img 
+                                src={thumbnail} 
+                                alt={`${project.name} thumbnail ${idx + 1}`}
+                                className="w-full h-full object-cover"
+                              />
+                            </AspectRatio>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
