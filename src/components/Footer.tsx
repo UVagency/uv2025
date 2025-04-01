@@ -50,7 +50,7 @@ const Footer = () => {
       {/* Credits */}
       <div className="max-w-[90%] mx-auto mt-16 flex flex-col md:flex-row md:items-center text-sm text-gray-400 space-y-2 md:space-y-0">
         <div className="flex items-center">
-          <span>website design with 💖 by </span>
+          <span>website design with  💖  by </span>
           <a href="#" className="ml-1 text-white hover:text-portfolio-highlight">UV</a>
           <span className="mx-2 text-portfolio-highlight">✦</span>
         </div>
