@@ -113,14 +113,17 @@ const Portfolio = () => {
                   </div>
                 )}
                 
-                {/* Emojis que aparecen al hacer hover */}
+                {/* Emojis con animación mejorada */}
                 {hoveredProject === project.name && project.emojis && (
                   <div className="flex ml-4 animate-fade-in">
                     {project.emojis.map((emoji, index) => (
                       <span 
                         key={index} 
-                        className="text-2xl mx-1 animate-bounce" 
-                        style={{ animationDelay: `${index * 0.1}s` }}
+                        className="text-2xl mx-1 animate-float" 
+                        style={{ 
+                          animationDelay: `${index * 0.15}s`,
+                          animationDuration: '2s'
+                        }}
                       >
                         {emoji}
                       </span>
