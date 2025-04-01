@@ -35,40 +35,14 @@ const Portfolio = () => {
             <div className="portfolio-divider"></div>
             
             {/* Normal state */}
-            <div className="py-4 flex items-center group-hover:hidden">
-              <div className="text-4xl font-bold text-portfolio-text mr-4">
+            <div className="py-4 flex items-center">
+              <div className="text-4xl font-bold text-portfolio-text mr-4 group-hover:text-portfolio-highlight">
                 {project.name}
               </div>
               <div className="flex items-center gap-2">
-                <span className="project-year-tag">{project.year}</span>
-                
-                {project.categories.map((category) => (
-                  <span key={category} className="project-category-tag">
-                    {category}
-                  </span>
-                ))}
-                
-                {project.comingSoon && (
-                  <span className="project-coming-soon-tag">
-                    COMING SOOOOOON
-                  </span>
-                )}
-                
-                {project.awardWinning && (
-                  <div className="relative inline-block">
-                    <AwardIcon />
-                  </div>
-                )}
-              </div>
-            </div>
-            
-            {/* Hover state */}
-            <div className="py-4 hidden group-hover:flex items-center">
-              <div className="text-4xl font-bold text-portfolio-highlight mr-4">
-                {project.name}
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="project-year-tag-highlight">{project.year}</span>
+                <span className="project-year-tag group-hover:project-year-tag-highlight group-hover:bg-portfolio-highlight group-hover:text-portfolio-text">
+                  {project.year}
+                </span>
                 
                 {project.categories.map((category) => (
                   <span key={category} className="project-category-tag">

@@ -126,7 +126,7 @@
   }
   
   .project-category-tag {
-    @apply bg-portfolio-white-tag-bg text-portfolio-tag-text border border-portfolio-text px-4 py-1 rounded-full inline-block;
+    @apply bg-portfolio-white-tag-bg text-portfolio-text border border-portfolio-text px-4 py-1 rounded-full inline-block;
   }
   
   .project-coming-soon-tag {
