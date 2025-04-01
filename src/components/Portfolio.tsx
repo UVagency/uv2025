@@ -11,7 +11,7 @@ interface Project {
 }
 
 const projects: Project[] = [
-  { name: "CLOSER TO THE SUN", year: "2024", categories: ["Immersive"] },
+  { name: "CLOSER TO THE SUN", year: "2024", categories: ["IMMERSIVE"] },
   { name: "SABOR DE BARRIO", year: "2024", categories: ["INTEGRATED"] },
   { name: "WE MAKE YOUR DAY", year: "2024", categories: ["INTEGRATED"], comingSoon: true },
   { name: "URBAN BEAT", year: "2023", categories: ["INTEGRATED"] },
