@@ -1,4 +1,5 @@
 
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { DiamondIcon } from "./DiamondIcon";
 import { AwardIcon } from "./AwardIcon";
@@ -29,6 +30,8 @@ const projects: Project[] = Object.entries(projectsData).map(([slug, project]) =
 }));
 
 const Portfolio = () => {
+  const [hoveredProject, setHoveredProject] = useState<string | null>(null);
+
   return (
     <div className="max-w-[90%] mx-auto px-4 py-8 font-sans">
       <div className="flex items-center mb-8">
@@ -41,6 +44,8 @@ const Portfolio = () => {
           <div 
             key={project.name} 
             className="project-item group"
+            onMouseEnter={() => setHoveredProject(project.name)}
+            onMouseLeave={() => setHoveredProject(null)}
           >
             <div className="portfolio-divider"></div>
             
@@ -76,20 +81,22 @@ const Portfolio = () => {
                         </div>
                       )}
                       
-                      {/* Thumbnails - always visible */}
-                      <div className="flex gap-2 ml-2">
-                        {project.thumbnails.slice(0, 5).map((thumbnail, idx) => (
-                          <div key={idx} className="min-w-[100px] w-[100px] h-[60px] rounded-md overflow-hidden bg-portfolio-tag-bg">
-                            <AspectRatio ratio={5/3}>
-                              <img 
-                                src={thumbnail} 
-                                alt={`${project.name} thumbnail ${idx + 1}`}
-                                className="w-full h-full object-cover"
-                              />
-                            </AspectRatio>
-                          </div>
-                        ))}
-                      </div>
+                      {/* Thumbnails - only show when hovered */}
+                      {hoveredProject === project.name && (
+                        <div className="flex gap-2 ml-2 animate-slide-in-right">
+                          {project.thumbnails.slice(0, 5).map((thumbnail, idx) => (
+                            <div key={idx} className="min-w-[100px] w-[100px] h-[60px] rounded-md overflow-hidden bg-portfolio-tag-bg">
+                              <AspectRatio ratio={5/3}>
+                                <img 
+                                  src={thumbnail} 
+                                  alt={`${project.name} thumbnail ${idx + 1}`}
+                                  className="w-full h-full object-cover"
+                                />
+                              </AspectRatio>
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
