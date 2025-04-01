@@ -68,17 +68,17 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				'portfolio': {
-					'bg': '#f9f8e2',
-					'text': '#5a6b36',
-					'tag-bg': '#5a6b36',
-					'tag-text': '#ffffff',
-					'divider': '#5a6b36',
-					'highlight': '#d4d118',
-					'white-tag-bg': '#ffffff',
-					'white-tag-text': '#5a6b36',
-					'about-bg': '#283618',
-					'footer-text': '#f1f1f1',
-					'footer-muted': '#a0a0a0',
+					'bg': '#F9F9F9',                  // Changed from #f9f8e2 to #F9F9F9
+					'text': '#333333',                // Changed from #5a6b36 to #333333
+					'tag-bg': '#6BD8D7',              // Changed from #5a6b36 to #6BD8D7
+					'tag-text': '#ffffff',            // Kept as #ffffff
+					'divider': '#6BD8D7',             // Changed from #5a6b36 to #6BD8D7
+					'highlight': '#F8C84F',           // Changed from #d4d118 to #F8C84F
+					'white-tag-bg': '#ffffff',        // Kept as #ffffff
+					'white-tag-text': '#6BD8D7',      // Changed from #5a6b36 to #6BD8D7
+					'about-bg': '#299b9a',            // Changed from #283618 to #299b9a
+					'footer-text': '#f1f1f1',         // Kept as #f1f1f1
+					'footer-muted': '#a0a0a0',        // Kept as #a0a0a0
 				}
 			},
 			borderRadius: {
