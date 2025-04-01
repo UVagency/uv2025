@@ -52,7 +52,7 @@ const Portfolio = () => {
             {/* Project item - now wrapped with Link */}
             <Link to={project.comingSoon ? "#" : `/project/${project.slug}`} className={project.comingSoon ? "cursor-not-allowed" : "cursor-pointer"}>
               <div className="py-4">
-                <div className="flex flex-row items-center justify-between">
+                <div className="flex flex-row items-center justify-between relative">
                   {/* Project name and tags - always in one line */}
                   <div className="flex items-center flex-grow gap-4 overflow-hidden">
                     <div className="text-4xl font-bold text-portfolio-text mr-4 group-hover:text-portfolio-highlight whitespace-nowrap">
@@ -80,26 +80,28 @@ const Portfolio = () => {
                           <AwardIcon />
                         </div>
                       )}
-                      
-                      {/* Thumbnails - show immediately on hover, with right-to-left exit animation */}
-                      <div className={`flex gap-2 ml-2 transition-all duration-300 ${
-                        hoveredProject === project.name 
-                          ? "opacity-100" // No entry animation, just appear
-                          : "opacity-0 animate-slide-out-left"
-                      } absolute right-0 top-1/2 -translate-y-1/2`}>
-                        {project.thumbnails.slice(0, 5).map((thumbnail, idx) => (
-                          <div key={idx} className="min-w-[100px] w-[100px] h-[60px] rounded-md overflow-hidden bg-portfolio-tag-bg">
-                            <AspectRatio ratio={5/3}>
-                              <img 
-                                src={thumbnail} 
-                                alt={`${project.name} thumbnail ${idx + 1}`}
-                                className="w-full h-full object-cover"
-                              />
-                            </AspectRatio>
-                          </div>
-                        ))}
-                      </div>
                     </div>
+                  </div>
+                  
+                  {/* Thumbnails - positioned in the middle right, showing immediately on hover with right-to-left exit animation */}
+                  <div 
+                    className={`flex gap-2 transition-all duration-300 ${
+                      hoveredProject === project.name 
+                        ? "opacity-100" // No entry animation, just appear
+                        : "opacity-0 animate-slide-out-left"
+                    } absolute right-0 top-1/2 -translate-y-1/2 z-10`}
+                  >
+                    {project.thumbnails.slice(0, 5).map((thumbnail, idx) => (
+                      <div key={idx} className="min-w-[100px] w-[100px] h-[60px] rounded-md overflow-hidden bg-portfolio-tag-bg">
+                        <AspectRatio ratio={5/3}>
+                          <img 
+                            src={thumbnail} 
+                            alt={`${project.name} thumbnail ${idx + 1}`}
+                            className="w-full h-full object-cover"
+                          />
+                        </AspectRatio>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
