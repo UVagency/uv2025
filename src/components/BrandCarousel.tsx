@@ -33,6 +33,9 @@ const BrandCarousel = () => {
       delay: 2000,    // 2 segundos entre cada movimiento automático
       stopOnInteraction: true, // Detener al interactuar
       playOnInit: true, // Comenzar a reproducir inmediatamente
+      rootNode: (emblaRoot) => emblaRoot.parentElement, // Necesario para el funcionamiento correcto
+      stopOnMouseEnter: true, // Detener al pasar el mouse
+      stopOnFocusIn: true, // Detener al enfocar con teclado
     })
   );
 
