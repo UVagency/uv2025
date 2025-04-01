@@ -13,10 +13,6 @@ const Footer = () => {
             <h3 className="text-xl uppercase">Contact</h3>
           </div>
           <div className="flex items-center space-x-2">
-            <Phone className="w-4 h-4 text-portfolio-highlight" />
-            <span>+972-050-726-6631</span>
-          </div>
-          <div className="flex items-center space-x-2">
             <Mail className="w-4 h-4 text-portfolio-highlight" />
             <span className="uppercase">hi@uv.agency</span>
           </div>
