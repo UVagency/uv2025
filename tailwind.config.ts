@@ -69,7 +69,7 @@ export default {
 				},
 				'portfolio': {
 					'bg': '#F1F0EC',                  // Updated to warm off-white
-					'text': '#A5E3E2',                // Updated to soft charcoal
+					'text': '#2A2A2A',                // Updated to soft charcoal
 					'text-secondary': '#4F635C',      // Added desaturated olive-gray
 					'tag-bg': '#6BD8D7',              // Kept UV Turquoise
 					'tag-bg-light': '#A5E3E2',        // Added light turquoise variant
