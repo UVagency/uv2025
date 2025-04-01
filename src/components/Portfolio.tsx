@@ -119,7 +119,7 @@ const Portfolio = () => {
                     {project.emojis.map((emoji, index) => (
                       <span 
                         key={index} 
-                        className="text-2xl mx-1 animate-float" 
+                        className="text-4xl mx-1 animate-float" 
                         style={{ 
                           animationDelay: `${index * 0.15}s`,
                           animationDuration: '2s'
