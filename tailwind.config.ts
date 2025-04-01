@@ -76,7 +76,9 @@ export default {
 					'highlight': '#d4d118',
 					'white-tag-bg': '#ffffff',
 					'white-tag-text': '#5a6b36',
-					'about-bg': '#283618'
+					'about-bg': '#283618',
+					'footer-text': '#f1f1f1',
+					'footer-muted': '#a0a0a0',
 				}
 			},
 			borderRadius: {

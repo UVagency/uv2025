@@ -2,6 +2,8 @@
 import Navbar from "../components/Navbar";
 import Highlights from "../components/Highlights";
 import Portfolio from "../components/Portfolio";
+import BrandCarousel from "../components/BrandCarousel";
+import Footer from "../components/Footer";
 
 const Index = () => {
   return (
@@ -9,6 +11,8 @@ const Index = () => {
       <Navbar />
       <Highlights />
       <Portfolio />
+      <BrandCarousel />
+      <Footer />
     </div>
   );
 };
