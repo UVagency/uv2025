@@ -68,7 +68,7 @@ const Portfolio = () => {
                 {project.name}
               </div>
               <div className="flex items-center gap-2">
-                <span className="project-year-tag">{project.year}</span>
+                <span className="project-year-tag-highlight">{project.year}</span>
                 
                 {project.categories.map((category) => (
                   <span key={category} className="project-category-tag">
