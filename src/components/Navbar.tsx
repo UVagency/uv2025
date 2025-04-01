@@ -15,7 +15,7 @@ const Navbar = () => {
                 About
               </button>
             </SheetTrigger>
-            <SheetContent side="top" className="w-full max-w-full h-screen bg-[#283618] pt-20 px-4 overflow-auto">
+            <SheetContent side="top" className="w-full max-w-full h-screen bg-portfolio-about-bg pt-20 px-4 overflow-auto">
               <AboutContent />
             </SheetContent>
           </Sheet>
@@ -46,11 +46,11 @@ const AboutContent = () => {
           <img 
             src="/lovable-uploads/c15594f5-19d0-42d5-9d84-3379cd2243a3.png" 
             alt="Award trophy" 
-            className="w-full h-full object-cover bg-[#f9f8e2]"
+            className="w-full h-full object-cover bg-portfolio-bg"
           />
         </div>
       </div>
-      <div className="w-full md:w-2/3 text-[#f9f8e2] opacity-80">
+      <div className="w-full md:w-2/3 text-white opacity-80">
         <h1 className="text-5xl font-bold text-portfolio-highlight mb-6">
           <span className="italic">Yellow Fellow</span>, founded by <span className="italic">Guy Trefler</span>,
         </h1>

@@ -19,7 +19,7 @@ export const HeroContent = () => {
           <h1 className="text-[clamp(3rem,14vw,10rem)] leading-[0.9] font-black text-portfolio-highlight mx-auto">
             United<br />Visions
           </h1>
-          <p className="text-xl md:text-2xl text-portfolio-text/80 max-w-2xl mx-auto mt-8 mb-6">
+          <p className="text-xl md:text-2xl text-portfolio-text-secondary max-w-2xl mx-auto mt-8 mb-6">
             (The integrated marketing agency)
           </p>
         </div>

@@ -68,17 +68,20 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				'portfolio': {
-					'bg': '#f9f8e2',                  // Changed back to #f9f8e2 from #F9F9F9
-					'text': '#333333',                // Keeping the new text color #333333
-					'tag-bg': '#6BD8D7',              // Keeping the new tag background color #6BD8D7
-					'tag-text': '#ffffff',            // Keeping as #ffffff
-					'divider': '#6BD8D7',             // Keeping the new divider color #6BD8D7
-					'highlight': '#F8C84F',           // Keeping the new highlight color #F8C84F
-					'white-tag-bg': '#ffffff',        // Keeping as #ffffff
-					'white-tag-text': '#6BD8D7',      // Keeping the new tag text color #6BD8D7
-					'about-bg': '#299b9a',            // Keeping the new about background color #299b9a
-					'footer-text': '#f1f1f1',         // Keeping as #f1f1f1
-					'footer-muted': '#a0a0a0',        // Keeping as #a0a0a0
+					'bg': '#F1F0EC',                  // Updated to warm off-white
+					'text': '#2A2A2A',                // Updated to soft charcoal
+					'text-secondary': '#4F635C',      // Added desaturated olive-gray
+					'tag-bg': '#6BD8D7',              // Kept UV Turquoise
+					'tag-bg-light': '#A5E3E2',        // Added light turquoise variant
+					'tag-text': '#ffffff',            // Kept as white
+					'divider': '#DADADA',             // Updated to neutral light gray
+					'highlight': '#FFD275',           // Updated to muted apricot yellow
+					'accent': '#EFB7B7',              // Added warm tech pink
+					'white-tag-bg': '#ffffff',        // Kept as white
+					'white-tag-text': '#6BD8D7',      // Kept as turquoise
+					'about-bg': '#4F635C',            // Updated to match text-secondary
+					'footer-text': '#f1f1f1',         // Kept as is
+					'footer-muted': '#a0a0a0',        // Kept as is
 				}
 			},
 			borderRadius: {
