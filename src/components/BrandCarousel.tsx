@@ -40,7 +40,7 @@ const BrandCarousel = () => {
       playOnInit: true, // Comenzar a reproducir inmediatamente
       rootNode: (emblaRoot) => emblaRoot.parentElement, // Necesario para el funcionamiento correcto
       stopOnMouseEnter: true, // Detener al pasar el mouse
-      stopOnFocusIn: true, // Detener al enfocar con teclado
+      stopOnFocusIn: true, // Detener al enfocar con teclado,
     })
   );
 
@@ -51,7 +51,7 @@ const BrandCarousel = () => {
           opts={{
             align: "start",
             loop: true,
-            direction: "rtl", // Dirección de derecha a izquierda
+            direction: "ltr", // Cambiado de 'rtl' a 'ltr' para cambiar la dirección
             dragFree: false, // Desactivar arrastre libre para mejor control
             skipSnaps: false, // Mantener snap points para un desplazamiento más controlado
           }}
