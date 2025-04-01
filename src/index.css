@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -130,5 +131,13 @@
   
   .portfolio-divider {
     @apply border-t border-portfolio-divider my-4;
+  }
+  
+  .project-item {
+    @apply relative;
+  }
+  
+  .project-hover-state {
+    @apply absolute left-0 right-0 z-10;
   }
 }
