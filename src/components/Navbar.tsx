@@ -1,12 +1,9 @@
-
 import React, { useState } from 'react';
 import { Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Sheet, SheetContent, SheetTrigger } from '../components/ui/sheet';
-
 const Navbar = () => {
-  return (
-    <nav className="w-full px-8 py-4 font-sans bg-portfolio-bg z-50 relative">
+  return <nav className="w-full px-8 py-4 font-sans bg-portfolio-bg z-50 relative">
       <div className="max-w-[90%] mx-auto flex justify-between items-center">
         <div className="flex space-x-12">
           <Sheet>
@@ -27,27 +24,18 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="cursor-pointer">
-          <Eye 
-            size={28} 
-            className="text-portfolio-text hover:text-portfolio-highlight transition-colors" 
-          />
+          <Eye size={28} className="text-portfolio-text hover:text-portfolio-highlight transition-colors" />
         </div>
       </div>
-    </nav>
-  );
+    </nav>;
 };
 
 // Contenido del About que se mostrará en el Sheet
 const AboutContent = () => {
-  return (
-    <div className="max-w-[90%] mx-auto flex flex-col md:flex-row gap-8 md:gap-16 items-start">
+  return <div className="max-w-[90%] mx-auto flex flex-col md:flex-row gap-8 md:gap-16 items-start">
       <div className="w-full md:w-1/3">
         <div className="rounded-full overflow-hidden w-80 h-80 mx-auto">
-          <img 
-            src="/lovable-uploads/c15594f5-19d0-42d5-9d84-3379cd2243a3.png" 
-            alt="Award trophy" 
-            className="w-full h-full object-cover bg-[#f9f8e2]"
-          />
+          <img alt="Award trophy" className="w-full h-full object-cover bg-[#f9f8e2]" src="/lovable-uploads/af5c0765-b397-4bf4-b0db-667ed840a472.png" />
         </div>
       </div>
       <div className="w-full md:w-2/3 text-[#f9f8e2] opacity-80">
@@ -70,8 +58,6 @@ const AboutContent = () => {
           We love what we do and we know that <span className="italic">hard work pays off</span>.
         </p>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Navbar;
