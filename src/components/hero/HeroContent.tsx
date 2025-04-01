@@ -14,7 +14,7 @@ export const HeroContent = () => {
       <div className={`transition-all duration-700 ${showMainText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="text-center mb-8">
           <div className="inline-block bg-portfolio-tag-bg text-white px-4 py-1 rounded-full text-sm font-medium mb-4">
-            UNITED VISIONS
+            Driving business growth through creativity, media, and phygital innovation
           </div>
           <h1 className="text-[clamp(3rem,14vw,10rem)] leading-[0.9] font-black text-portfolio-highlight mx-auto">
             United<br />Vision
