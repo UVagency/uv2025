@@ -81,12 +81,12 @@ const Portfolio = () => {
                         </div>
                       )}
                       
-                      {/* Thumbnails - show with entry and exit animations */}
+                      {/* Thumbnails - show immediately on hover, with only exit animation */}
                       <div className={`flex gap-2 ml-2 transition-all duration-300 ${
                         hoveredProject === project.name 
-                          ? "opacity-100 animate-slide-in-right" 
+                          ? "opacity-100" // No entry animation, just appear
                           : "opacity-0 animate-slide-out-right"
-                      } absolute`}>
+                      } absolute right-0 top-1/2 -translate-y-1/2`}>
                         {project.thumbnails.slice(0, 5).map((thumbnail, idx) => (
                           <div key={idx} className="min-w-[100px] w-[100px] h-[60px] rounded-md overflow-hidden bg-portfolio-tag-bg">
                             <AspectRatio ratio={5/3}>
