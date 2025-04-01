@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { DiamondIcon } from "./DiamondIcon";
 import { AwardIcon } from "./AwardIcon";
+import { useNavigate } from "react-router-dom";
 
 interface Project {
   name: string;
@@ -67,6 +68,13 @@ const projects: Project[] = [
 
 const Portfolio = () => {
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
+  const navigate = useNavigate();
+
+  const handleProjectClick = (projectName: string) => {
+    // Convertir el nombre del proyecto a un formato de URL adecuado
+    const projectId = projectName.toLowerCase().replace(/\s+/g, '-');
+    navigate(`/project/${projectId}`);
+  };
 
   return (
     <div className="max-w-[90%] mx-auto px-4 py-8 font-sans">
@@ -82,6 +90,7 @@ const Portfolio = () => {
             className="project-item group cursor-pointer"
             onMouseEnter={() => setHoveredProject(project.name)}
             onMouseLeave={() => setHoveredProject(null)}
+            onClick={() => handleProjectClick(project.name)}
           >
             <div className="portfolio-divider"></div>
             
