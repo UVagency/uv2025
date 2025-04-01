@@ -133,7 +133,7 @@
   }
   
   .project-coming-soon-tag {
-    @apply bg-portfolio-highlight text-portfolio-tag-text px-4 py-1 rounded-full inline-block;
+    @apply bg-portfolio-highlight text-portfolio-text px-4 py-1 rounded-full inline-block;
   }
   
   .portfolio-divider {

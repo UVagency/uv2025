@@ -68,17 +68,19 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				'portfolio': {
-					'bg': '#f9f8e2',
-					'text': '#5a6b36',
-					'tag-bg': '#5a6b36',
-					'tag-text': '#ffffff',
-					'divider': '#5a6b36',
-					'highlight': '#d4d118',
-					'white-tag-bg': '#ffffff',
-					'white-tag-text': '#5a6b36',
-					'about-bg': '#283618',
-					'footer-text': '#f1f1f1',
-					'footer-muted': '#a0a0a0',
+					'bg': '#F5F6E8',           // Soft warm cream
+					'text': '#3D4A28',         // Deep olive green
+					'tag-bg': '#5A6B36',       // Classic olive green
+					'tag-text': '#ffffff',     // White text for tags
+					'divider': '#D5D5C2',      // Warm light gray-beige
+					'highlight': '#D5C43A',    // Muted mustard yellow
+					'white-tag-bg': '#ffffff', // White
+					'white-tag-text': '#5A6B36', // Tag Green
+					'about-bg': '#3D4A28',     // Deep olive green (same as text)
+					'footer-text': '#F5F6E8',  // Same as bg
+					'footer-muted': '#90967C', // Soft green-gray
+					'accent': '#6BD8D7',       // UV turquoise
+					'text-secondary': '#90967C' // Soft green-gray (subtext muted)
 				}
 			},
 			borderRadius: {
