@@ -8,28 +8,23 @@ interface Brand {
   logoUrl: string;
 }
 
-// Expanded brand list to include 20 clients
+// Updated brand list with different logo URLs for each brand
 const brands: Brand[] = [
-  { name: "Flaviar", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
-  { name: "VAXA", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
-  { name: "Doritos", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
-  { name: "MSD", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
-  { name: "Faraway Road Productions", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
-  { name: "BARTENURA", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
+  { name: "Flaviar", logoUrl: "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png" },
+  { name: "VAXA", logoUrl: "/lovable-uploads/af5c0765-b397-4bf4-b0db-667ed840a472.png" },
+  { name: "Doritos", logoUrl: "/lovable-uploads/c15594f5-19d0-42d5-9d84-3379cd2243a3.png" },
+  { name: "MSD", logoUrl: "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png" },
   { name: "Apple", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
-  { name: "Google", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
-  { name: "Microsoft", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
-  { name: "Amazon", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
-  { name: "Netflix", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
+  { name: "Google", logoUrl: "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png" },
+  { name: "Microsoft", logoUrl: "/lovable-uploads/af5c0765-b397-4bf4-b0db-667ed840a472.png" },
+  { name: "Amazon", logoUrl: "/lovable-uploads/c15594f5-19d0-42d5-9d84-3379cd2243a3.png" },
+  { name: "Netflix", logoUrl: "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png" },
   { name: "Meta", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
-  { name: "Tesla", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
-  { name: "Spotify", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
-  { name: "Adobe", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
-  { name: "IBM", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
-  { name: "Intel", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
-  { name: "Samsung", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
-  { name: "Sony", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
-  { name: "Oracle", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" }
+  { name: "Tesla", logoUrl: "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png" },
+  { name: "Spotify", logoUrl: "/lovable-uploads/af5c0765-b397-4bf4-b0db-667ed840a472.png" },
+  { name: "Adobe", logoUrl: "/lovable-uploads/c15594f5-19d0-42d5-9d84-3379cd2243a3.png" },
+  { name: "IBM", logoUrl: "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png" },
+  { name: "Intel", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" }
 ];
 
 const BrandCarousel = () => {
