@@ -2,8 +2,7 @@
 import { useEffect, useState } from "react";
 import Lottie from "lottie-react";
 import { useIsMobile } from "../hooks/use-mobile";
-import { Button } from "./ui/button";
-import { ArrowRight, ArrowDown } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 
 // Import Lottie animation data
 // Note: These are placeholder animations - in production you would use your own animations
@@ -336,18 +335,6 @@ const Hero = () => {
             <p className="text-xl md:text-2xl text-portfolio-text/80 max-w-2xl mx-auto mt-8 mb-6">
               (A motion studio with a twist)
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-portfolio-text text-white hover:bg-portfolio-text/90 gap-2">
-                Our Work
-                <ArrowRight size={16} />
-              </Button>
-              <Button 
-                variant="outline" 
-                className="border-portfolio-text text-portfolio-text hover:bg-portfolio-text/10"
-              >
-                Contact us
-              </Button>
-            </div>
           </div>
         </div>
 
