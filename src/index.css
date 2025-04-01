@@ -1,7 +1,35 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "TheBasics";
+    font-weight: 400;
+    src: url("../fonts/TheBasics-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "TheBasics";
+    font-weight: 500;
+    src: url("../fonts/TheBasics-Medium.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "TheBasics";
+    font-weight: 700;
+    src: url("../fonts/TheBasics-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "TheBasics";
+    font-weight: 900;
+    src: url("../fonts/TheBasics-Black.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "TheBasicsMono";
+    src: url("../fonts/TheBasics-Mono.woff2") format("woff2");
+}
 
 @layer base {
   :root {
@@ -48,7 +76,31 @@
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-    /* ... keep existing code (dark theme variables) */
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 222.2 84% 4.9%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 222.2 84% 4.9%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 216 39% 83.1%;
+    --input: 216 39% 83.1%;
+    --ring: 222.2 84% 4.9%;
   }
 }
 
@@ -59,7 +111,7 @@
 
   body {
     @apply bg-portfolio-bg text-portfolio-text;
-    font-family: 'Courier', monospace;
+    font-family: 'TheBasics', sans-serif;
   }
 }
 
