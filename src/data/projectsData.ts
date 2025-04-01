@@ -183,11 +183,11 @@ const projectsData: Record<string, ProjectData> = {
     ]
   },
   "wix": {
-    name: "WIX",
-    year: "2024",
-    categories: ["EXPLAINER"],
-    description: "Una experiencia de diseño web que explica las capacidades de la plataforma Wix de manera interactiva.",
-    client: "Wix",
+    name: "LOLLA VIBES",
+    year: "2025",
+    categories: ["IMMERSIVE"],
+    description: "At Lolla 2025, we want you to feel the music like never before: vibrating with you in every jump, every chorus, every magical moment. Because good vibes aren’t just heard—they’re lived!",
+    client: "Soundcore by Anker",
     images: [
       "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png",
       "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png"
