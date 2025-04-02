@@ -68,19 +68,21 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				'portfolio': {
-					'bg': '#F5F6E8',           // Soft warm cream
-					'text': '#3D4A28',         // Deep olive green
-					'tag-bg': '#5A6B36',       // Classic olive green
+					'bg': '#F5F6E8',           // Soft warm cream (updated)
+					'text': '#3D4A28',         // Deep olive green (updated)
+					'tag-bg': '#3D4A28',       // Deep olive green for tags (updated)
 					'tag-text': '#ffffff',     // White text for tags
-					'divider': '#D5D5C2',      // Warm light gray-beige
-					'highlight': '#D5C43A',    // Muted mustard yellow
+					'divider': '#84806E',      // Grayish olive (updated)
+					'highlight': '#EACB5D',    // Soft muted yellow (updated)
 					'white-tag-bg': '#ffffff', // White
-					'white-tag-text': '#5A6B36', // Tag Green
-					'about-bg': '#3D4A28',     // Deep olive green (same as text)
-					'footer-text': '#F5F6E8',  // Same as bg
-					'footer-muted': '#90967C', // Soft green-gray
-					'accent': '#6BD8D7',       // UV turquoise
-					'text-secondary': '#90967C' // Soft green-gray (subtext muted)
+					'white-tag-text': '#3D4A28', // Deep olive green (updated)
+					'about-bg': '#3D4A28',     // Deep olive green (same as text, updated)
+					'footer-text': '#F5F6E8',  // Same as bg (updated)
+					'footer-muted': '#84806E', // Grayish olive (updated)
+					'accent': '#6BD8D7',       // UV turquoise (same)
+					'text-secondary': '#84806E', // Grayish olive for secondary text (updated)
+					'muted-purple': '#A493A4', // Soft lavender gray (new)
+					'soft-pink': '#EBA3A9',    // Warm dusty pink (new)
 				}
 			},
 			borderRadius: {
