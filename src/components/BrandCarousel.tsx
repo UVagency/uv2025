@@ -37,7 +37,7 @@ const BrandCarousel = () => {
   return (
     <div className="py-16 bg-portfolio-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl font-semibold text-center text-portfolio-text mb-12">Trusted by Brands Worldwide</h2>
+        <h2 className="text-2xl font-semibold text-center text-portfolio-text mb-12">Trusted by leading brands worldwide</h2>
         
         <Carousel
           opts={{
