@@ -20,6 +20,7 @@ const projectsData: Record<string, ProjectData> = {
     year: "2024",
     categories: ["IMMERSIVE"],
     description: "Una experiencia inmersiva que transporta a los espectadores a un entorno de verano tropical lleno de sol y playa.",
+    client: "L'Oréal Paris",
     images: [
       "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
       "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
@@ -36,7 +37,7 @@ const projectsData: Record<string, ProjectData> = {
     year: "2024",
     categories: ["INTEGRATED"],
     description: "Una campaña integrada que celebra la rica cultura culinaria de los barrios latinos con sus sabores, colores y tradiciones.",
-    client: "Restaurantes Unidos",
+    client: "Deliciosa",
     images: [
       "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
       "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png"
@@ -52,7 +53,7 @@ const projectsData: Record<string, ProjectData> = {
     year: "2024",
     categories: ["INTEGRATED"],
     description: "Una campaña interactiva diseñada para sorprender y alegrar el día de las personas con experiencias inesperadas.",
-    client: "Cadena de Tiendas Happy",
+    client: "Krispy Kreme",
     images: [
       "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
       "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png"
@@ -69,7 +70,7 @@ const projectsData: Record<string, ProjectData> = {
     year: "2023",
     categories: ["INTEGRATED"],
     description: "Una serie de experiencias urbanas que fusionan música, arte callejero y cultura urbana en un ambiente dinámico.",
-    client: "Festival de Cultura Urbana",
+    client: "Ball Corporation",
     images: [
       "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
       "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png"
@@ -84,6 +85,7 @@ const projectsData: Record<string, ProjectData> = {
     name: "ENJOY THE UNEXPECTED",
     year: "2023",
     categories: ["PROMO"],
+    client: "Heineken",
     description: "Una campaña promocional que invita a los consumidores a descubrir sorpresas inesperadas en cada interacción con la marca.",
     images: [
       "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
@@ -100,7 +102,7 @@ const projectsData: Record<string, ProjectData> = {
     year: "2023",
     categories: ["PROMO"],
     description: "Una campaña motivacional centrada en el primer día de grandes proyectos, nuevos comienzos y oportunidades.",
-    client: "StartUp Academy",
+    client: "Mattel",
     images: [
       "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
       "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png"
@@ -116,7 +118,7 @@ const projectsData: Record<string, ProjectData> = {
     year: "2023",
     categories: ["LAUNCH"],
     description: "Lanzamiento de un producto de audio de alta fidelidad con una campaña que celebra la intensidad del sonido.",
-    client: "SoundMax",
+    client: "Maybelline New York",
     images: [
       "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
       "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png"
@@ -132,7 +134,7 @@ const projectsData: Record<string, ProjectData> = {
     year: "2022",
     categories: ["MEDIA"],
     description: "Una campaña para una aerolínea que enfatiza la libertad y personalización en los viajes aéreos.",
-    client: "FreedomAir",
+    client: "JetSmart",
     images: [
       "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
       "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png"
