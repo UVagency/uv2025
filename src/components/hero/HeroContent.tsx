@@ -5,7 +5,7 @@ export const HeroContent = () => {
   const [showMainText, setShowMainText] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowMainText(true), 1200);
+    const timer = setTimeout(() => setShowMainText(true), 800);
     return () => clearTimeout(timer);
   }, []);
 
