@@ -145,27 +145,6 @@ const projectsData: Record<string, ProjectData> = {
     awardWinning: true,
     emojis: ["✈️", "🛫", "🌍", "☁️", "🧳"]
   },
-  "mergui": {
-    name: "MERGUI",
-    year: "2019",
-    categories: ["MUSIC VIDEO"],
-    description: "A vibrant mixed-media music video created for international pop star Mergui's summer hit, \"Not Myself.\"",
-    client: "Mergui",
-    songTitle: "Not Myself",
-    images: [
-      "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
-      "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
-      "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
-      "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png"
-    ],
-    thumbnails: [
-      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180",
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180",
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180"
-    ]
-  },
   "Lolla": {
     name: "LOLLA VIBES",
     year: "2025",

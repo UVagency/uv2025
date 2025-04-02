@@ -16,12 +16,14 @@ const highlights: HighlightProject[] = [
     year: "2025",
     categories: ["IMMERSIVE"],
     imageUrl: "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png",
+    comingSoon: true,
     slug: "soundcore"
   },
   {
     name: "FESTIVAL SEASON",
     year: "2025",
     categories: ["CONTENT CREATION"],
+    comingSoon: true,
     imageUrl: "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png",
     slug: "paris"
   }
