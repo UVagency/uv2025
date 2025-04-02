@@ -6,11 +6,11 @@ const About = () => {
   const navigate = useNavigate();
   
   useEffect(() => {
-    // Redirigir a la página principal, ya que About ahora es un panel desplegable
+    // Redirect to home page, since About is now a slide-down panel
     navigate('/');
   }, [navigate]);
   
-  return null; // No renderizamos nada, ya que se redirigirá
+  return null;
 };
 
 export default About;
