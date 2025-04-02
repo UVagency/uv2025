@@ -15,33 +15,35 @@ export interface ProjectData {
 
 // Sample project data - in a real application, this would come from a database or API
 const projectsData: Record<string, ProjectData> = {
-  "closer-to-the-sun": {
-    name: "CLOSER TO THE SUN",
-    year: "2024",
-    categories: ["IMMERSIVE"],
+  "festival-season": {
+    name: "FESTIVAL SEASON",
+    year: "2025",
+    categories: ["CONTENT CREATION"],
     description: "Una experiencia inmersiva que transporta a los espectadores a un entorno de verano tropical lleno de sol y playa.",
-    client: "L'Oréal Paris",
+    client: "Tiendas Paris",
     images: [
       "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
       "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
       "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png"
     ],
+    comingSoon: true,
     thumbnails: [
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=180",
       "https://images.unsplash.com/photo-1520454974749-611b7248ffdb?q=80&w=180"
     ],
     emojis: ["☀️", "🌊", "🏄‍♂️", "🌴", "🕶️"]
   },
-  "sabor-de-barrio": {
-    name: "SABOR DE BARRIO",
-    year: "2024",
-    categories: ["INTEGRATED"],
+  "lolla-vibes": {
+    name: "LOLLA VIBES",
+    year: "2025",
+    categories: ["IMMERSIVE"],
     description: "Una campaña integrada que celebra la rica cultura culinaria de los barrios latinos con sus sabores, colores y tradiciones.",
-    client: "Deliciosa",
+    client: "Soundcore by Anker",
     images: [
       "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
       "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png"
     ],
+    comingSoon: true,
     thumbnails: [
       "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=180",
       "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=180"

@@ -12,18 +12,16 @@ interface HighlightProject {
 
 const highlights: HighlightProject[] = [
   {
-    name: "LOLLA VIBES",
-    year: "2025",
+    name: "CLOSER TO THE SUN",
+    year: "2024",
     categories: ["IMMERSIVE"],
     imageUrl: "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png",
-    comingSoon: true,
     slug: "soundcore"
   },
   {
-    name: "FESTIVAL SEASON",
-    year: "2025",
-    categories: ["CONTENT CREATION"],
-    comingSoon: true,
+    name: "SABOR DE BARRIO",
+    year: "2024",
+    categories: ["INTEGRATED"],
     imageUrl: "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png",
     slug: "paris"
   }
