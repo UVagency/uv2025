@@ -35,11 +35,8 @@ const Footer = () => {
 
         {/* Social Media Links */}
         <div className="flex flex-col space-y-4">
-          <Link to="https://www.instagram.com" className="text-xl uppercase underline hover:text-portfolio-highlight transition-colors">
+          <Link to="https://www.instagram.com/uvagency" className="text-xl uppercase underline hover:text-portfolio-highlight transition-colors">
             Instagram
-          </Link>
-          <Link to="https://www.behance.net" className="text-xl uppercase underline hover:text-portfolio-highlight transition-colors">
-            Behance
           </Link>
           <Link to="https://www.linkedin.com" className="text-xl uppercase underline hover:text-portfolio-highlight transition-colors">
             LinkedIn
