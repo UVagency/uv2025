@@ -62,7 +62,6 @@ const projectsData: Record<string, ProjectData> = {
       "https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=180",
       "https://images.unsplash.com/photo-1531686264889-56fdcabd163f?q=80&w=180"
     ],
-    comingSoon: true,
     emojis: ["🎁", "🎉", "🎊", "🎈", "🥳"]
   },
   "urban-beat": {
@@ -167,24 +166,7 @@ const projectsData: Record<string, ProjectData> = {
       "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180"
     ]
   },
-  "code-name": {
-    name: "CODE NAME",
-    year: "2023",
-    categories: ["GRAPHICS PACKAGE"],
-    description: "A comprehensive graphics package for an international brand campaign.",
-    images: [
-      "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
-      "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png"
-    ],
-    thumbnails: [
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=180",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=180",
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=180",
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=180",
-      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=180"
-    ]
-  },
-  "wix": {
+  "Lolla": {
     name: "LOLLA VIBES",
     year: "2025",
     categories: ["IMMERSIVE"],
@@ -199,23 +181,6 @@ const projectsData: Record<string, ProjectData> = {
       "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=180"
     ],
     emojis: ["💻", "🎨", "🌐", "✨", "🚀"]
-  },
-  "waking-up": {
-    name: "WAKING UP",
-    year: "2025",
-    categories: ["EXPLAINER"],
-    description: "Una experiencia visual que explora la conciencia humana y el proceso de despertar a nuevas realidades.",
-    client: "Sam Harris",
-    images: [
-      "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
-      "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png"
-    ],
-    thumbnails: [
-      "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=80&w=180",
-      "https://images.unsplash.com/photo-1547394765-185e1e68f34e?q=80&w=180"
-    ],
-    comingSoon: true,
-    emojis: ["🧠", "💭", "🌌", "🔮", "🧘‍♂️"]
   }
 };
 
