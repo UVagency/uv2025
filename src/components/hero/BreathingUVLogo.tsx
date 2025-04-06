@@ -17,7 +17,7 @@ const BreathingUVLogo = () => {
         
         // Sinusoidal breathing pattern - smoother and more natural
         const breatheValue = Math.sin(progress * Math.PI * 2);
-        const normalizedScale = 1 + (breatheValue * 0.1); // Scale between 0.9 and 1.1
+        const normalizedScale = 1 + (breatheValue * 0.05); // Scale between 0.95 and 1.05
         
         setScale(normalizedScale);
         requestAnimationFrame(animate);
@@ -33,53 +33,37 @@ const BreathingUVLogo = () => {
   return (
     <div className="inline-flex items-center">
       <svg 
-        width="100" 
-        height="48" 
-        viewBox="0 0 100 48" 
+        width="110" 
+        height="60" 
+        viewBox="0 0 110 60" 
         xmlns="http://www.w3.org/2000/svg"
         className="overflow-visible"
       >
-        {/* U shape with circles */}
+        {/* Main breathing group */}
         <g style={{ transform: `scale(${scale})`, transformOrigin: 'center' }}>
-          {/* First circle for the U left side */}
-          <circle cx="20" cy="24" r="15" fill="none" stroke="#6BD8D7" strokeWidth="4" />
+          {/* Turquoise circle background */}
+          <circle cx="50" cy="30" r="30" fill="#6BD8D7" />
           
-          {/* Second circle for the U bottom curve */}
-          <circle cx="40" cy="32" r="15" fill="none" stroke="#6BD8D7" strokeWidth="4" />
-          
-          {/* Third circle for the U right side */}
-          <circle cx="60" cy="24" r="15" fill="none" stroke="#6BD8D7" strokeWidth="4" />
-          
-          {/* V shape with circles */}
-          <circle cx="80" cy="10" r="8" fill="none" stroke="#6BD8D7" strokeWidth="4" />
-          <circle cx="90" cy="24" r="8" fill="none" stroke="#6BD8D7" strokeWidth="4" />
-          <circle cx="70" cy="24" r="8" fill="none" stroke="#6BD8D7" strokeWidth="4" />
-          
-          {/* Small bubbles/spheres for animation embellishment */}
-          <circle 
-            cx="30" 
-            cy="15" 
-            r="3" 
-            fill="#6BD8D7" 
-            opacity="0.7"
-            style={{ animation: 'float 4s ease-in-out infinite' }}
+          {/* U letter */}
+          <path 
+            d="M30 18v8c0 4.4 3.6 8 8 8s8-3.6 8-8v-8" 
+            stroke="white" 
+            strokeWidth="5" 
+            strokeLinecap="round"
+            fill="none"
           />
-          <circle 
-            cx="50" 
-            cy="20" 
-            r="2" 
-            fill="#6BD8D7" 
-            opacity="0.6" 
-            style={{ animation: 'float 5s ease-in-out infinite 0.5s' }}
+          
+          {/* V letter */}
+          <path 
+            d="M52 18l6 16 6-16" 
+            stroke="white" 
+            strokeWidth="5" 
+            strokeLinecap="round"
+            fill="none"
           />
-          <circle 
-            cx="75" 
-            cy="32" 
-            r="2.5" 
-            fill="#6BD8D7" 
-            opacity="0.8" 
-            style={{ animation: 'float 3.5s ease-in-out infinite 1s' }}
-          />
+          
+          {/* Dot after V */}
+          <circle cx="70" cy="34" r="2.5" fill="white" />
         </g>
       </svg>
     </div>
