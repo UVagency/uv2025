@@ -1,5 +1,4 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Sheet, SheetContent, SheetTrigger } from '../components/ui/sheet';
 import AnimatedEye from './hero/AnimatedEye';
@@ -77,11 +76,49 @@ const AboutContent = () => {
     </div>;
 };
 
-// Eye of Curiosity component - a smaller version of AnimatedEye for inline text
+// Eye of Curiosity component - a smaller version of AnimatedEye for inline text with random colors
 const EyeOfCuriosity = () => {
+  // Color palette for the eyes
+  const colorPalette = [
+    { bg: 'bg-portfolio-highlight', iris: 'bg-portfolio-text' },      // Default colors
+    { bg: 'bg-white', iris: 'bg-portfolio-accent' },                  // White with turquoise
+    { bg: 'bg-portfolio-accent', iris: 'bg-portfolio-text' },         // Turquoise with dark green
+    { bg: 'bg-portfolio-soft-pink', iris: 'bg-portfolio-text' },      // Soft pink with dark green
+    { bg: 'bg-portfolio-muted-purple', iris: 'bg-white' },            // Muted purple with white
+    { bg: 'bg-portfolio-text-secondary', iris: 'bg-portfolio-highlight' }, // Gray with yellow
+  ];
+
+  // Pick a random color scheme
+  const [colorScheme, setColorScheme] = useState(() => {
+    return colorPalette[Math.floor(Math.random() * colorPalette.length)];
+  });
+
   return (
     <span className="inline-flex items-center justify-center mx-2 transform scale-75">
-      <AnimatedEye />
+      <div className="relative w-[28px] h-[28px]">
+        {/* Eye outer */}
+        <div className={`absolute inset-0 rounded-full ${colorScheme.bg} border border-portfolio-text overflow-hidden`}>
+          {/* Iris */}
+          <div 
+            className={`absolute left-1/2 top-1/2 w-[18px] h-[18px] rounded-full ${colorScheme.iris} 
+                     transition-all duration-300`}
+            style={{ 
+              transform: 'translate(-50%, -50%)',
+            }}
+          >
+            {/* Pupil */}
+            <div 
+              className="absolute left-1/2 top-1/2 w-[10px] h-[10px] rounded-full bg-portfolio-bg transition-all duration-300"
+              style={{ 
+                transform: 'translate(-50%, -50%)',
+              }}
+            >
+              {/* Light reflection */}
+              <div className="absolute top-1 left-1 w-[3px] h-[3px] rounded-full bg-white opacity-80"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </span>
   );
 };
