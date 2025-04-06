@@ -18,6 +18,8 @@ export const AnimatedEye = () => {
 
   // Handle mouse movement
   useEffect(() => {
+    let lookTimeout: number;
+    
     const handleMouseMove = (e: MouseEvent) => {
       const { clientX, clientY } = e;
       const { innerWidth, innerHeight } = window;
@@ -31,12 +33,11 @@ export const AnimatedEye = () => {
       
       // Reset looking state after some time
       clearTimeout(lookTimeout);
-      const lookTimeout = setTimeout(() => {
+      lookTimeout = setTimeout(() => {
         setIsLooking(false);
-      }, 5000);
+      }, 5000) as unknown as number;
     };
 
-    let lookTimeout: number;
     window.addEventListener('mousemove', handleMouseMove);
     
     return () => {
