@@ -33,7 +33,7 @@ export const HeroContent = () => {
   }, [currentWordIndex, showMainText, words]);
 
   return (
-    <div className="z-10 relative py-10 w-full">
+    <div className="z-10 relative py-10">
       <div className={`transition-all duration-500 ${showMainText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="text-left mb-8">
           <h1 className="text-[clamp(2rem,5vw,3.5rem)] leading-[1.2] text-portfolio-text max-w-5xl min-h-[6rem]">
