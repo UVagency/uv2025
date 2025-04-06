@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Sheet, SheetContent, SheetTrigger } from '../components/ui/sheet';
+import AnimatedEye from './hero/AnimatedEye';
+
 const Navbar = () => {
   return <nav className="w-full px-8 py-4 font-sans bg-portfolio-bg z-50 relative">
       <div className="max-w-[90%] mx-auto flex justify-between items-center">
@@ -23,8 +24,8 @@ const Navbar = () => {
             Contact
           </Link>
         </div>
-        <div className="cursor-pointer">
-          <Eye size={28} className="text-portfolio-text hover:text-portfolio-highlight transition-colors" />
+        <div>
+          <AnimatedEye />
         </div>
       </div>
     </nav>;
@@ -60,4 +61,5 @@ const AboutContent = () => {
       </div>
     </div>;
 };
+
 export default Navbar;
