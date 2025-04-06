@@ -67,14 +67,23 @@ const AboutContent = () => {
       <div className="w-full">
         <h2 className="text-4xl font-bold text-portfolio-highlight mb-8">Values</h2>
         <p className="text-3xl leading-relaxed text-[#f9f8e2] opacity-80">
-          UV is Zero Bullshit & Crazy High Standards &<br/>
-          Endless Passion & Celebrating Emotion & Taking<br/>
-          Risks & Trusting Our Instincts & Being Human &<br/>
-          Making Work That's Human & Taking Work Seriously<br/>
-          & Not Taking Ourselves Too Seriously
+          UV is Zero Bullshit <EyeOfCuriosity /> Crazy High Standards <EyeOfCuriosity /><br/>
+          Endless Passion <EyeOfCuriosity /> Celebrating Emotion <EyeOfCuriosity /> Taking<br/>
+          Risks <EyeOfCuriosity /> Trusting Our Instincts <EyeOfCuriosity /> Being Human <EyeOfCuriosity /><br/>
+          Making Work That's Human <EyeOfCuriosity /> Taking Work Seriously<br/>
+          <EyeOfCuriosity /> Not Taking Ourselves Too Seriously
         </p>
       </div>
     </div>;
+};
+
+// Eye of Curiosity component - a smaller version of AnimatedEye for inline text
+const EyeOfCuriosity = () => {
+  return (
+    <span className="inline-flex items-center justify-center mx-2 transform scale-75">
+      <AnimatedEye />
+    </span>
+  );
 };
 
 export default Navbar;
