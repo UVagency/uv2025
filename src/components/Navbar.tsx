@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Sheet, SheetContent, SheetTrigger } from '../components/ui/sheet';
@@ -73,7 +74,58 @@ const AboutContent = () => {
           <EyeOfCuriosity /> Not Taking Ourselves Too Seriously
         </p>
       </div>
+      
+      {/* Services Section */}
+      <div className="w-full">
+        <h2 className="text-4xl font-bold text-portfolio-highlight mb-8">Our Services</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-4">
+          <div className="flex flex-col gap-4">
+            <ServiceItem name="Advertising" />
+            <ServiceItem name="Art Direction" />
+            <ServiceItem name="Animation" />
+            <ServiceItem name="Branding" />
+            <ServiceItem name="Brand Strategy" />
+            <ServiceItem name="Consultancy" />
+            <ServiceItem name="Copywriting" />
+            <ServiceItem name="Concepts" />
+            <ServiceItem name="Commercials" />
+          </div>
+          <div className="flex flex-col gap-4">
+            <ServiceItem name="Digital" />
+            <ServiceItem name="Design" />
+            <ServiceItem name="Environmental" />
+            <ServiceItem name="Exhibition" />
+            <ServiceItem name="Film & Video" />
+            <ServiceItem name="Identity" />
+            <ServiceItem name="Illustration" />
+            <ServiceItem name="Installation" />
+            <ServiceItem name="Interactive" />
+          </div>
+          <div className="flex flex-col gap-4">
+            <ServiceItem name="Naming" />
+            <ServiceItem name="Mural Design" />
+            <ServiceItem name="Packaging" />
+            <ServiceItem name="Photography" />
+            <ServiceItem name="Print / OOH" />
+            <ServiceItem name="Social Strategy" />
+            <ServiceItem name="Social Content" />
+            <ServiceItem name="Strategy" />
+            <ServiceItem name="Target Audience" />
+            <ServiceItem name="Website Design" />
+          </div>
+        </div>
+      </div>
     </div>;
+};
+
+// Service item component for consistent styling
+const ServiceItem = ({ name }: { name: string }) => {
+  return (
+    <div className="flex items-center gap-3">
+      <EyeOfCuriosity />
+      <span className="text-2xl text-[#f9f8e2] opacity-80">{name}</span>
+    </div>
+  );
 };
 
 // Eye of Curiosity component - a smaller version of AnimatedEye for inline text with random colors
