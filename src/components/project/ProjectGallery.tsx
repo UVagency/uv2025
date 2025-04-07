@@ -44,7 +44,6 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project }) => {
       skipSnaps: true, // Permitir deslizamiento suave sin "snapping"
       dragFree: true, // Movimiento libre sin restricciones
       containScroll: false, // Sin contener el desplazamiento
-      speed: 10, // Velocidad más lenta para movimiento continuo
     },
     [Autoplay(autoplayOptions)]
   );
@@ -116,7 +115,8 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project }) => {
             ))}
           </div>
         </div>
-        <style jsx>{`
+        <style>
+          {`
           @keyframes scroll {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
@@ -124,7 +124,8 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project }) => {
           .embla:hover .animate-marquee {
             animation-play-state: paused;
           }
-        `}</style>
+          `}
+        </style>
       </div>
 
       {/* Texto destacado con el estilo exacto de la referencia */}
