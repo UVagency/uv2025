@@ -18,7 +18,7 @@
     "/projects/heineken/thb9mPzo81EbJ49Ok7VpWNtheA.jpg"
   ],
   "emojis": ["🎲", "🎯", "🎪", "🎭", "✨"],
-  "carouselSpeed": 100,
+  "carouselSpeed": 10,
   "gallery": {
     "featureText": "With the activation of the 'Enjoy the unexpected' promotion, we were able to position the country's point of sale as the <em>stars of the year</em>.",
     "sections": [

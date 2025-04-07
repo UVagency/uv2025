@@ -17,7 +17,8 @@ const ProjectImageCarousel: React.FC<ProjectImageCarouselProps> = ({
 }) => {
   // Calculate autoplay speed: lower carouselSpeed value means slower carousel
   // We invert the relationship: higher input number = faster carousel
-  const autoPlaySpeed = carouselSpeed > 0 ? 5000 / carouselSpeed : 0;
+  // With a base of 8000ms for the slowest speed (value of 1)
+  const autoPlaySpeed = carouselSpeed > 0 ? 8000 / carouselSpeed : false;
   
   const flickityOptions = {
     autoPlay: autoPlaySpeed,
