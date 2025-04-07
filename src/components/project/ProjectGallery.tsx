@@ -10,9 +10,10 @@ import ProjectMixedGrid from './gallery/ProjectMixedGrid';
 
 interface ProjectGalleryProps {
   project: ProjectData;
+  carouselSpeed?: number; // New prop for carousel speed
 }
 
-const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project }) => {
+const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project, carouselSpeed = 30 }) => {
   // Placeholder images para usar como demostración
   const placeholders = [
     ...project.images,
@@ -26,7 +27,11 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project }) => {
   return (
     <div className="mb-16">
       {/* Carousel de imágenes como en la referencia - con movimiento continuo */}
-      <ProjectImageCarousel images={placeholders} projectName={project.name} />
+      <ProjectImageCarousel 
+        images={placeholders} 
+        projectName={project.name} 
+        carouselSpeed={carouselSpeed} // Pass the carouselSpeed prop
+      />
 
       {/* Texto destacado con el estilo exacto de la referencia */}
       <ProjectFeatureText>

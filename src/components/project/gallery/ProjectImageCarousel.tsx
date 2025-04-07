@@ -7,13 +7,22 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 interface ProjectImageCarouselProps {
   images: string[];
   projectName: string;
+  carouselSpeed?: number; // New prop for carousel speed
 }
 
-const ProjectImageCarousel: React.FC<ProjectImageCarouselProps> = ({ images, projectName }) => {
+const ProjectImageCarousel: React.FC<ProjectImageCarouselProps> = ({ 
+  images, 
+  projectName,
+  carouselSpeed = 30 // Default value of 30
+}) => {
+  // Calculate the proper delay based on speed
+  // Lower speed value means faster carousel (inverse relationship)
+  const delay = carouselSpeed > 0 ? 2000 / carouselSpeed : 0;
+  
   // Use autoplay plugin with Embla Carousel with continuous movement settings
   const autoplayRef = useRef(
     Autoplay({ 
-      delay: 0,
+      delay: delay,
       stopOnInteraction: false,
       stopOnMouseEnter: true,
       rootNode: (emblaRoot) => emblaRoot.parentElement,
@@ -30,6 +39,14 @@ const ProjectImageCarousel: React.FC<ProjectImageCarouselProps> = ({ images, pro
     },
     [autoplayRef.current]
   );
+
+  // Effect to recreate the autoplay instance when carouselSpeed changes
+  useEffect(() => {
+    if (emblaApi) {
+      autoplayRef.current.options.delay = delay;
+      autoplayRef.current.reset();
+    }
+  }, [carouselSpeed, delay, emblaApi]);
 
   useEffect(() => {
     if (emblaApi) {
