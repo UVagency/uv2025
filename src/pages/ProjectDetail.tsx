@@ -19,7 +19,7 @@ const ProjectDetail = () => {
 
   return (
     <div className="fixed inset-0 z-50 bg-portfolio-bg overflow-y-auto">
-      <div className="max-w-5xl mx-auto pt-8 pb-16">
+      <div className="w-full mx-auto pt-8 pb-16 px-4 sm:px-6 lg:px-8">
         <ProjectHeader project={project} />
         <ProjectGallery project={project} />
         <ProjectVideoLink show={project.name === "MERGUI"} />

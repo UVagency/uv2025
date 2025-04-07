@@ -37,12 +37,12 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project }) => {
       </div>
 
       {/* Texto destacado - similar a la descripción en la referencia */}
-      <div className="text-xl mb-6 italic text-portfolio-text/90">
+      <div className="text-4xl mb-8 text-portfolio-text/90 font-light leading-tight">
         A full graphics package for a {project.categories[0].toLowerCase()} about {project.client}.
       </div>
 
       {/* Fila de miniaturas - 4 imágenes en fila */}
-      <div className="grid grid-cols-4 gap-2 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         {[1, 2, 3, 4].map((index) => (
           <div key={`row1-${index}`} className="overflow-hidden rounded-md">
             <AspectRatio ratio={16/9}>
@@ -62,7 +62,7 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project }) => {
       </div>
 
       {/* Banner secundario - imagen grande */}
-      <div className="mb-6 overflow-hidden rounded-lg">
+      <div className="mb-8 overflow-hidden rounded-lg">
         <AspectRatio ratio={16/9}>
           <img 
             src={placeholders[2]} 
@@ -79,14 +79,14 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project }) => {
       </div>
 
       {/* Texto explicativo secundario */}
-      <div className="text-lg mb-6 text-portfolio-text/80">
+      <div className="text-3xl mb-8 text-portfolio-text/80 font-light">
         An iconic {project.categories[0].toLowerCase()} deserves an iconic graphics package. Drawing inspiration from {project.emojis ? project.emojis.join(' and ') : 'various elements'}, we designed a graphic language featuring bold colors, halftone patterns, and sleek vector-style neon looks.
       </div>
 
       {/* Grid variado de imágenes - como en el moodboard */}
-      <div className="grid grid-cols-12 gap-2 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 mb-8">
         {/* Imagen columna izquierda */}
-        <div className="col-span-4 overflow-hidden rounded-md">
+        <div className="lg:col-span-4 overflow-hidden rounded-md">
           <AspectRatio ratio={9/16}>
             <img 
               src={placeholders[3]} 
@@ -100,7 +100,7 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project }) => {
         </div>
 
         {/* Grid de 2x4 en el centro y derecha */}
-        <div className="col-span-8 grid grid-cols-2 grid-rows-4 gap-2">
+        <div className="lg:col-span-8 grid grid-cols-2 grid-rows-2 sm:grid-rows-4 gap-4">
           {[...Array(8)].map((_, index) => (
             <div key={`grid-${index}`} className="overflow-hidden rounded-md">
               <AspectRatio ratio={index % 3 === 0 ? 16/9 : 1}>
@@ -137,7 +137,7 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project }) => {
       </div>
 
       {/* Fila final de imágenes - 3 imágenes en fila */}
-      <div className="grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {[1, 2, 3].map((index) => (
           <div key={`final-${index}`} className="overflow-hidden rounded-md">
             <AspectRatio ratio={16/9}>
