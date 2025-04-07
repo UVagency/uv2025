@@ -145,6 +145,45 @@
   }
 }
 
+/* Flickity Custom Styles */
+.flickity-slider {
+  display: flex;
+  align-items: center;
+}
+
+.brand-carousel .flickity-slider {
+  display: flex;
+  align-items: center;
+}
+
+/* Hide Flickity default page dots since we don't need them */
+.flickity-page-dots {
+  display: none;
+}
+
+/* Make sure carousel images look good */
+.carousel-cell {
+  margin-right: 10px;
+}
+
+/* Animation for Flickity */
+.flickity-slider > * {
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Customize Flickity appearance */
+.project-images-carousel {
+  margin-bottom: 20px;
+}
+
+/* Fix height for brand carousel cells */
+.brand-carousel .carousel-cell {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @keyframes slideInRight {
   from {
     transform: translateX(100%);
