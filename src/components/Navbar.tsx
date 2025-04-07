@@ -79,39 +79,42 @@ const Navbar = () => {
 
 const AboutContent = () => {
   return (
-    <div className="max-w-[90%] mx-auto flex flex-col gap-16 items-start about-content overflow-auto h-full">
-      <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
-        <div className="w-full md:w-1/3">
-          <div className="rounded-full overflow-hidden w-80 h-80 mx-auto">
-            <img alt="Award trophy" className="w-full h-full object-cover bg-[#f9f8e2]" src="/lovable-uploads/af5c0765-b397-4bf4-b0db-667ed840a472.png" />
-          </div>
+    <div className="max-w-[90%] mx-auto flex flex-col items-center text-center">
+      <div className="w-full flex flex-col items-center gap-8">
+        <div className="w-64 h-64 rounded-full overflow-hidden bg-[#f9f8e2] mb-4">
+          <img 
+            alt="Award trophy" 
+            className="w-full h-full object-cover" 
+            src="/lovable-uploads/af5c0765-b397-4bf4-b0db-667ed840a472.png" 
+          />
         </div>
-        <div className="w-full md:w-2/3 text-[#f9f8e2] opacity-80">
-          <h1 className="text-5xl font-bold text-portfolio-highlight mb-6">
-            <span className="italic">UV</span>, founded by <span className="italic">Mookie Tenembaun</span>,
+        <div className="text-[#f9f8e2] max-w-3xl">
+          <h1 className="text-4xl md:text-5xl mb-6">
+            <span className="italic text-portfolio-highlight">UV</span>, founded by{" "}
+            <span className="italic text-portfolio-highlight">Mookie Tenembaun</span>,
           </h1>
-          <p className="text-3xl leading-relaxed mb-8">
+          <p className="text-2xl md:text-3xl leading-relaxed mb-8">
             is a motion studio driven by design & creative thinking.
           </p>
-          <p className="text-3xl leading-relaxed mb-6">
-            We specialize in crafting <span className="italic">graphics packages</span> for films & series, 
-            building <span className="italic">design systems</span> for brands, creating stunning <span className="italic">explainers</span> and 
-            mind-blowing <span className="italic">Music Videos</span>.
+          <p className="text-2xl md:text-3xl leading-relaxed mb-6">
+            We specialize in crafting <span className="italic">graphics packages</span> for films & series,{" "}
+            building <span className="italic">design systems</span> for brands, creating stunning{" "}
+            <span className="italic">explainers</span> and mind-blowing <span className="italic">Music Videos</span>.
           </p>
-          <p className="text-3xl leading-relaxed mb-6">
-            We're grateful to be working with top brands, production houses, ad agencies and music labels to create
-            <span className="italic"> unique & fresh</span> moving content.
+          <p className="text-2xl md:text-3xl leading-relaxed mb-6">
+            We're grateful to be working with top brands, production houses, ad agencies and music labels to create{" "}
+            <span className="italic">unique & fresh</span> moving content.
           </p>
-          <p className="text-3xl leading-relaxed">
+          <p className="text-2xl md:text-3xl leading-relaxed">
             We love what we do and we know that <span className="italic">hard work pays off</span>.
           </p>
         </div>
       </div>
       
       {/* Values Section */}
-      <div className="w-full">
-        <h2 className="text-4xl font-bold text-portfolio-highlight mb-8">Values</h2>
-        <p className="text-3xl leading-relaxed text-[#f9f8e2] opacity-80">
+      <div className="w-full mt-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-portfolio-highlight mb-8">Values</h2>
+        <p className="text-2xl md:text-3xl leading-relaxed text-[#f9f8e2] opacity-80">
           UV is Zero Bullshit <EyeOfCuriosity /> Crazy High Standards <EyeOfCuriosity /><br/>
           Endless Passion <EyeOfCuriosity /> Celebrating Emotion <EyeOfCuriosity /> Taking<br/>
           Risks <EyeOfCuriosity /> Trusting Our Instincts <EyeOfCuriosity /> Being Human <EyeOfCuriosity /><br/>
@@ -121,10 +124,10 @@ const AboutContent = () => {
       </div>
       
       {/* Services Section */}
-      <div className="w-full">
-        <h2 className="text-4xl font-bold text-portfolio-highlight mb-8">Our Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-4">
-          <div className="flex flex-col gap-4">
+      <div className="w-full mt-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-portfolio-highlight mb-8">Our Services</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 md:gap-x-8">
+          <div className="flex flex-col items-center gap-4">
             <ServiceItem name="Advertising" />
             <ServiceItem name="Art Direction" />
             <ServiceItem name="Animation" />
@@ -135,7 +138,7 @@ const AboutContent = () => {
             <ServiceItem name="Concepts" />
             <ServiceItem name="Commercials" />
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col items-center gap-4">
             <ServiceItem name="Digital" />
             <ServiceItem name="Design" />
             <ServiceItem name="Environmental" />
@@ -146,7 +149,7 @@ const AboutContent = () => {
             <ServiceItem name="Installation" />
             <ServiceItem name="Interactive" />
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col items-center gap-4">
             <ServiceItem name="Naming" />
             <ServiceItem name="Mural Design" />
             <ServiceItem name="Packaging" />
@@ -166,9 +169,9 @@ const AboutContent = () => {
 
 const ServiceItem = ({ name }: { name: string }) => {
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-3 justify-center">
       <EyeOfCuriosity />
-      <span className="text-2xl text-[#f9f8e2] opacity-80">{name}</span>
+      <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">{name}</span>
     </div>
   );
 };
