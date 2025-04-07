@@ -31,11 +31,13 @@ const BrandCarousel = () => {
     speed: 20
   };
 
+  // The AutoScroll plugin accepts these properties:
+  // delay, stopOnInteraction, playOnInit
+  // 'speed' doesn't exist in the type, so we'll remove it
   const autoScrollPlugin = AutoScroll({ 
     delay: 0, 
     stopOnInteraction: true,
-    playOnInit: true, 
-    speed: 0.5 
+    playOnInit: true
   });
 
   return (
