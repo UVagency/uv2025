@@ -1,5 +1,5 @@
 
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import ProjectHeader from "../components/project/ProjectHeader";
 import ProjectGallery from "../components/project/ProjectGallery";
 import ProjectVideoLink from "../components/project/ProjectVideoLink";
@@ -9,7 +9,6 @@ import Footer from "../components/Footer";
 
 const ProjectDetail = () => {
   const { projectId } = useParams<{ projectId: string }>();
-  const navigate = useNavigate();
   
   // Buscar el proyecto por ID
   const project = projectId ? projectsData[projectId.toLowerCase()] : undefined;
