@@ -2,6 +2,7 @@
 import { useParams } from "react-router-dom";
 import ProjectHeader from "../components/project/ProjectHeader";
 import ProjectGallery from "../components/project/ProjectGallery";
+import ProjectVideoPlayer from "../components/project/ProjectVideoPlayer";
 import ProjectVideoLink from "../components/project/ProjectVideoLink";
 import ProjectNotFound from "../components/project/ProjectNotFound";
 import projectsData from "../data/projectsData";
@@ -21,6 +22,7 @@ const ProjectDetail = () => {
     <div className="fixed inset-0 z-50 bg-portfolio-bg overflow-y-auto">
       <div className="w-full mx-auto pt-8 pb-16 px-4 sm:px-6 lg:px-8">
         <ProjectHeader project={project} />
+        <ProjectVideoPlayer project={project} />
         <ProjectGallery project={project} />
         <ProjectVideoLink show={project.name === "MERGUI"} />
         <Footer />

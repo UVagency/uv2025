@@ -2,6 +2,13 @@
 import React from 'react';
 import { ProjectData } from '@/data/projectsData';
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { 
+  Carousel, 
+  CarouselContent, 
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext
+} from "@/components/ui/carousel";
 
 interface ProjectGalleryProps {
   project: ProjectData;
@@ -11,17 +18,52 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project }) => {
   // Placeholder images para usar como demostración
   const placeholders = [
     ...project.images,
-    "https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?q=80&w=800", // adicionales para tener más variedad
+    "https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?q=80&w=800", 
     "https://images.unsplash.com/photo-1507290439931-a861b5a38200?q=80&w=800",
     "https://images.unsplash.com/photo-1608501078713-8e445a709b39?q=80&w=800",
     "https://images.unsplash.com/photo-1517697471339-4aa32003c11a?q=80&w=800",
-    "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=800",
-    "https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?q=80&w=800",
-    "https://images.unsplash.com/photo-1519861531473-9200262188bf?q=80&w=800"
+    "/lovable-uploads/34e302e2-f607-4404-8b61-61850043a158.png" // La imagen de referencia
   ];
 
   return (
     <div className="mb-16">
+      {/* Carousel de imágenes como en la referencia */}
+      <div className="mb-12">
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent>
+            {placeholders.slice(0, 5).map((image, index) => (
+              <CarouselItem key={index} className="basis-1/5 md:basis-1/5">
+                <div className="overflow-hidden rounded-md">
+                  <AspectRatio ratio={1/1}>
+                    <img
+                      src={image}
+                      alt={`${project.name} - Slide ${index}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </AspectRatio>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="left-2" />
+          <CarouselNext className="right-2" />
+        </Carousel>
+      </div>
+
+      {/* Texto destacado con el estilo exacto de la referencia */}
+      <div className="bg-portfolio-bg px-4 py-8 sm:px-8">
+        <p className="text-[2.25rem] md:text-[3rem] leading-[1.2] font-light text-portfolio-text/90 max-w-6xl">
+          <span className="font-normal">Adding a punch of spicy vibes to <em className="not-italic font-normal">five short spots</em> for <em className="not-italic font-semibold">Doritos USA</em>,</span> we crafted five
+          wacky cutout collages to represent each unique flavor.
+        </p>
+      </div>
+
       {/* Banner principal - imagen destacada a todo lo ancho */}
       <div className="mb-6 overflow-hidden rounded-lg">
         <AspectRatio ratio={21/9}>
@@ -34,11 +76,6 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project }) => {
             NEXT FRIDAY
           </div>
         </AspectRatio>
-      </div>
-
-      {/* Texto destacado - similar a la descripción en la referencia */}
-      <div className="text-4xl mb-8 text-portfolio-text/90 font-light leading-tight">
-        A full graphics package for a {project.categories[0].toLowerCase()} about {project.client}.
       </div>
 
       {/* Fila de miniaturas - 4 imágenes en fila */}
@@ -83,7 +120,7 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project }) => {
         An iconic {project.categories[0].toLowerCase()} deserves an iconic graphics package. Drawing inspiration from {project.emojis ? project.emojis.join(' and ') : 'various elements'}, we designed a graphic language featuring bold colors, halftone patterns, and sleek vector-style neon looks.
       </div>
 
-      {/* Grid variado de imágenes - como en el moodboard */}
+      {/* Grid variado de imágenes */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 mb-8">
         {/* Imagen columna izquierda */}
         <div className="lg:col-span-4 overflow-hidden rounded-md">
