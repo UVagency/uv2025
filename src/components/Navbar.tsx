@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '../components/ui/sheet';
@@ -21,7 +22,7 @@ const Navbar = () => {
                 About
               </button>
             </SheetTrigger>
-            <SheetContent side="top" className="w-full max-w-full h-screen bg-[#283618] pt-20 px-4 overflow-auto">
+            <SheetContent side="top" className="pt-24 px-4 overflow-auto bg-[#283618] border-none w-full max-w-full" style={{ height: 'calc(100vh - 77px)', top: '77px' }}>
               <div className="absolute top-4 left-8">
                 <SheetClose className="text-[#f9f8e2] hover:text-portfolio-highlight transition-colors rounded-full size-10 flex items-center justify-center border border-[#f9f8e2] hover:border-portfolio-highlight">
                   <X size={24} />
