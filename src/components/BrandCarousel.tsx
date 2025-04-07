@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import AutoScroll from "embla-carousel-autoplay";
@@ -28,13 +27,15 @@ const BrandCarousel = () => {
     align: "start" as const,
     slidesToScroll: 1,
     inViewThreshold: 0,
+    speed: 50,
   };
 
-  // Configuración correcta del plugin AutoScroll según la documentación
+  // Configuración del plugin AutoScroll con valores más suaves
   const autoScrollPlugin = AutoScroll({
     delay: 0,
     stopOnInteraction: false,
     playOnInit: true,
+    speed: 0.5,
     rootNode: (emblaRoot) => emblaRoot.parentElement,
   });
 
