@@ -10,10 +10,24 @@ const Navbar = () => {
 
   const handleAboutToggle = (open: boolean) => {
     setIsAboutOpen(open);
+    
+    // When about is opened, add a class to the body to push content down
+    if (open) {
+      document.body.classList.add('about-open');
+    } else {
+      document.body.classList.remove('about-open');
+    }
   };
 
+  // Cleanup effect when component unmounts
+  useEffect(() => {
+    return () => {
+      document.body.classList.remove('about-open');
+    };
+  }, []);
+
   return (
-    <nav className={`w-full px-8 py-4 font-sans bg-portfolio-bg z-50 relative transition-all duration-300 ${isAboutOpen ? 'translate-x-12' : ''}`}>
+    <nav className={`w-full px-8 py-4 font-sans bg-portfolio-bg z-50 sticky top-0 transition-all duration-300 ${isAboutOpen ? 'translate-x-12' : ''}`}>
       <div className="max-w-[90%] mx-auto flex justify-between items-center">
         <div className="flex space-x-12">
           <Sheet open={isAboutOpen} onOpenChange={handleAboutToggle}>
@@ -22,7 +36,7 @@ const Navbar = () => {
                 About
               </button>
             </SheetTrigger>
-            <SheetContent side="top" className="pt-24 px-4 overflow-auto bg-[#283618] border-none w-full max-w-full" style={{ height: 'calc(100vh - 77px)', top: '77px' }}>
+            <SheetContent side="top" className="pt-24 px-4 overflow-auto bg-[#283618] border-none w-full max-w-full" style={{ height: 'auto', maxHeight: 'calc(100vh - 77px)', top: '77px' }}>
               <div className="absolute top-4 left-8">
                 <SheetClose className="text-[#f9f8e2] hover:text-portfolio-highlight transition-colors rounded-full size-10 flex items-center justify-center border border-[#f9f8e2] hover:border-portfolio-highlight">
                   <X size={24} />
