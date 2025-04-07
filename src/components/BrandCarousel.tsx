@@ -8,34 +8,27 @@ interface Brand {
   logoUrl: string;
 }
 
-// Updated brand list with different logo URLs for each brand
+// Updated brand list with actual client logos from client-logos directory
 const brands: Brand[] = [
-  { name: "Paris", logoUrl: "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png" },
-  { name: "Soundcore", logoUrl: "/lovable-uploads/af5c0765-b397-4bf4-b0db-667ed840a472.png" },
-  { name: "Little Caesars", logoUrl: "/lovable-uploads/c15594f5-19d0-42d5-9d84-3379cd2243a3.png" },
-  { name: "Krispy Kreme", logoUrl: "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png" },
-  { name: "Me-Elecmetal", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
-  { name: "Philips", logoUrl: "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png" },
-  { name: "PepsiCo", logoUrl: "/lovable-uploads/af5c0765-b397-4bf4-b0db-667ed840a472.png" },
-  { name: "Royal Canin", logoUrl: "/lovable-uploads/c15594f5-19d0-42d5-9d84-3379cd2243a3.png" },
-  { name: "Ball", logoUrl: "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png" },
-  { name: "Heineken", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" },
-  { name: "L'Oréal Paris", logoUrl: "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png" },
-  { name: "Mattel", logoUrl: "/lovable-uploads/af5c0765-b397-4bf4-b0db-667ed840a472.png" },
-  { name: "JetSmart", logoUrl: "/lovable-uploads/c15594f5-19d0-42d5-9d84-3379cd2243a3.png" },
-  { name: "Maybelline New York", logoUrl: "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png" },
-  { name: "Edusoft", logoUrl: "/lovable-uploads/61a9efdd-45b8-476f-8dd8-8847b5637f42.png" }
+  { name: "Philips", logoUrl: "/client-logos/philips.svg" },
+  { name: "PepsiCo", logoUrl: "/client-logos/pepsico.svg" },
+  { name: "Royal Canin", logoUrl: "/client-logos/royalcanin.svg" },
+  { name: "Little Caesars", logoUrl: "/client-logos/littlecaesars.svg" },
+  { name: "Me-Elecmetal", logoUrl: "/client-logos/melecmetal.svg" },
+  { name: "Ball", logoUrl: "/client-logos/ball.svg" },
+  { name: "Heineken", logoUrl: "/client-logos/heineken.svg" },
+  { name: "Edusoft", logoUrl: "/client-logos/edusoft.svg" }
 ];
 
 const BrandCarousel = () => {
   const autoplayPlugin = useRef(
     Autoplay({ 
-      delay: 2000,    // 2 segundos entre cada movimiento automático
-      stopOnInteraction: true, // Detener al interactuar
-      playOnInit: true, // Comenzar a reproducir inmediatamente
-      rootNode: (emblaRoot) => emblaRoot.parentElement, // Necesario para el funcionamiento correcto
-      stopOnMouseEnter: true, // Detener al pasar el mouse
-      stopOnFocusIn: true, // Detener al enfocar con teclado,
+      delay: 2000,    // 2 seconds between each automatic movement
+      stopOnInteraction: true, // Stop on interaction
+      playOnInit: true, // Start playing immediately
+      rootNode: (emblaRoot) => emblaRoot.parentElement, // Required for proper functioning
+      stopOnMouseEnter: true, // Stop when mouse enters
+      stopOnFocusIn: true, // Stop when focused with keyboard
     })
   );
 
@@ -46,9 +39,9 @@ const BrandCarousel = () => {
           opts={{
             align: "start",
             loop: true,
-            direction: "ltr", // Cambiado de 'rtl' a 'ltr' para cambiar la dirección
-            dragFree: false, // Desactivar arrastre libre para mejor control
-            skipSnaps: false, // Mantener snap points para un desplazamiento más controlado
+            direction: "ltr",
+            dragFree: false,
+            skipSnaps: false,
           }}
           plugins={[autoplayPlugin.current]}
           className="w-full"
@@ -57,13 +50,13 @@ const BrandCarousel = () => {
             {brands.map((brand, index) => (
               <CarouselItem 
                 key={index} 
-                className="basis-1/4 md:basis-1/5 lg:basis-1/6 pl-4 flex items-center justify-center"
+                className="basis-1/3 md:basis-1/4 lg:basis-1/6 pl-4 flex items-center justify-center"
               >
                 <div className="h-16 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
                   <img 
                     src={brand.logoUrl} 
                     alt={`${brand.name} logo`} 
-                    className="max-h-full max-w-full object-contain filter brightness-0 invert-[.25] sepia-[.25] saturate-[.25] hue-rotate-[20deg]"
+                    className="max-h-full max-w-full object-contain"
                   />
                 </div>
               </CarouselItem>
