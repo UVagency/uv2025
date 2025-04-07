@@ -2,7 +2,6 @@
 import { lazy } from 'react';
 import enjoyTheUnexpected from './projects/enjoy-the-unexpected.json';
 import festivalSeason from './projects/festival-season.json';
-import mergui from './projects/mergui.json';
 
 export interface GallerySection {
   type: 'banner' | 'textSection' | 'imageGrid' | 'mixedGrid';

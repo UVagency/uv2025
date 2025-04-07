@@ -4,7 +4,7 @@
   "name": "ENJOY THE UNEXPECTED",
   "year": "2023",
   "categories": ["PROMO"],
-  "description": "Una campaña promocional que invita a los consumidores a descubrir sorpresas inesperadas en cada interacción con la marca.",
+  "description": "With the activation of the 'Enjoy the unexpected' promotion, we were able to position the country's point of sale as the stars of the year.",
   "client": "Heineken",
   "fullDescription": "Creamos una campaña inmersiva para Heineken que desafía las expectativas tradicionales. A través de instalaciones interactivas y experiencias digitales únicas, invitamos a los consumidores a descubrir elementos sorprendentes que rompen con lo cotidiano.",
   "images": [
@@ -18,7 +18,7 @@
     "https://images.unsplash.com/photo-1481162324536-ecd186aaa0d6?q=80&w=180"
   ],
   "emojis": ["🎲", "🎯", "🎪", "🎭", "✨"],
-  "carouselSpeed": 10,
+  "carouselSpeed": 100,
   "gallery": {
     "featureText": "Con una mezcla de <em>realidad aumentada</em> y <em>experiencias físicas</em>, creamos momentos inesperados que sorprenden y cautivan al consumidor.",
     "sections": [
