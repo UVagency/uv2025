@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import BreathingUVLogo from "./BreathingUVLogo";
@@ -23,20 +22,19 @@ export const HeroContent = () => {
       const timer = setTimeout(() => {
         setTypedText(prev => prev + (prev ? " " : "") + words[currentWordIndex]);
         setCurrentWordIndex(currentWordIndex + 1);
-      }, 80); // Speed of typing animation
+      }, 80);
       
       return () => clearTimeout(timer);
     } else {
-      // Show hashtags after typing is complete
       setShowHashtags(true);
     }
   }, [currentWordIndex, showMainText, words]);
 
   return (
-    <div className="z-10 relative py-10 w-full">
-      <div className={`transition-all duration-500 w-full ${showMainText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <div className="text-left mb-8 w-full">
-          <h1 className="text-[clamp(2rem,5vw,3.5rem)] leading-[1.2] text-portfolio-text max-w-full min-h-[6rem]">
+    <div className="w-full">
+      <div className={`transition-all duration-500 ${showMainText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className="text-left">
+          <h1 className="text-[clamp(2rem,5vw,3.5rem)] leading-[1.2] text-portfolio-text">
             <BreathingUVLogo />{" "}
             <span className="font-normal italic">es una</span>{" "}
             <span className="font-black">agencia creativa independiente.</span>{" "}

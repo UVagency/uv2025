@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '../components/ui/sheet';
@@ -8,18 +7,17 @@ import { X } from 'lucide-react';
 const Navbar = () => {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
 
-  const handleAboutToggle = (open: boolean) => {
-    setIsAboutOpen(open);
-    
-    // When about is opened, add a class to the body to push content down
-    if (open) {
+  const toggleAbout = () => {
+    setIsAboutOpen(!isAboutOpen);
+    // Toggle body class and overflow
+    if (!isAboutOpen) {
       document.body.classList.add('about-open');
     } else {
       document.body.classList.remove('about-open');
     }
   };
 
-  // Cleanup effect when component unmounts
+  // Cleanup effect
   useEffect(() => {
     return () => {
       document.body.classList.remove('about-open');
@@ -27,41 +25,61 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`w-full px-8 py-4 font-sans bg-portfolio-bg z-50 sticky top-0 transition-all duration-300 ${isAboutOpen ? 'translate-x-12' : ''}`}>
-      <div className="max-w-[90%] mx-auto flex justify-between items-center">
-        <div className="flex space-x-12">
-          <Sheet open={isAboutOpen} onOpenChange={handleAboutToggle}>
-            <SheetTrigger asChild>
-              <button className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors ${isAboutOpen ? 'text-portfolio-highlight' : ''}`}>
-                About
-              </button>
-            </SheetTrigger>
-            <SheetContent side="top" className="pt-24 px-4 overflow-auto bg-[#283618] border-none w-full max-w-full" style={{ height: 'auto', maxHeight: 'calc(100vh - 77px)', top: '77px' }}>
-              <div className="absolute top-4 left-8">
-                <SheetClose className="text-[#f9f8e2] hover:text-portfolio-highlight transition-colors rounded-full size-10 flex items-center justify-center border border-[#f9f8e2] hover:border-portfolio-highlight">
+    <>
+      <nav className="w-full px-8 py-4 font-sans bg-portfolio-bg z-50 sticky top-0">
+        <div className="max-w-[90%] mx-auto flex justify-between items-center">
+          <div className="flex space-x-12 items-center">
+            <div className="flex items-center">
+              {isAboutOpen ? (
+                <button 
+                  onClick={toggleAbout}
+                  className="text-portfolio-text hover:text-portfolio-highlight transition-colors rounded-full size-10 flex items-center justify-center border border-portfolio-text hover:border-portfolio-highlight mr-4"
+                >
                   <X size={24} />
-                </SheetClose>
-              </div>
-              <AboutContent />
-            </SheetContent>
-          </Sheet>
-          <Link to="/" className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors">
-            Work
-          </Link>
-          <Link to="/contact" className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors">
-            Contact
-          </Link>
+                </button>
+              ) : (
+                <button 
+                  onClick={toggleAbout}
+                  className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors"
+                >
+                  About
+                </button>
+              )}
+            </div>
+            <Link to="/" className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors">
+              Work
+            </Link>
+            <Link to="/contact" className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors">
+              Contact
+            </Link>
+          </div>
+          <div>
+            <AnimatedEye />
+          </div>
         </div>
-        <div>
-          <AnimatedEye />
+      </nav>
+
+      {/* About Section */}
+      <div 
+        className="w-full bg-[#283618] overflow-hidden transition-all duration-500 ease-in-out"
+        style={{ 
+          height: isAboutOpen ? '80vh' : '0',
+          opacity: isAboutOpen ? 1 : 0
+        }}
+      >
+        <div className="max-w-[90%] mx-auto relative h-full">
+          <div className="pt-24 px-4 h-full overflow-hidden">
+            <AboutContent />
+          </div>
         </div>
       </div>
-    </nav>
+    </>
   );
 };
 
 const AboutContent = () => {
-  return <div className="max-w-[90%] mx-auto flex flex-col gap-16 items-start">
+  return (
+    <div className="max-w-[90%] mx-auto flex flex-col gap-16 items-start about-content overflow-auto h-full">
       <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
         <div className="w-full md:w-1/3">
           <div className="rounded-full overflow-hidden w-80 h-80 mx-auto">
@@ -142,7 +160,8 @@ const AboutContent = () => {
           </div>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
 
 const ServiceItem = ({ name }: { name: string }) => {

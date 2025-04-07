@@ -1,9 +1,16 @@
-
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+}
+
+/* Hide scrollbars everywhere */
+* {
+  -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;  /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari, Opera */
 }
 
 .logo {
@@ -42,13 +49,25 @@
   color: #84806E;
 }
 
-/* Add styles to handle the About section pushing content down */
-.about-open .main-content {
-  margin-top: 70vh; /* Adjust this value based on the height of your About section */
-  transition: margin-top 0.5s ease-in-out;
+/* Navbar and About section styles */
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: #F5F6E8;
 }
 
-.main-content {
-  transition: margin-top 0.5s ease-in-out;
-  margin-top: 0;
+/* Body styles when About is open */
+body.about-open {
+  overflow: hidden !important;
+  height: 100vh;
+}
+
+/* Prevent content shift when scrollbar disappears */
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
 }
