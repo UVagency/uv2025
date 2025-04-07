@@ -1,0 +1,65 @@
+
+{
+  "id": "enjoy-the-unexpected",
+  "name": "ENJOY THE UNEXPECTED",
+  "year": "2023",
+  "categories": ["PROMO"],
+  "description": "Una campaña promocional que invita a los consumidores a descubrir sorpresas inesperadas en cada interacción con la marca.",
+  "client": "Heineken",
+  "fullDescription": "Creamos una campaña inmersiva para Heineken que desafía las expectativas tradicionales. A través de instalaciones interactivas y experiencias digitales únicas, invitamos a los consumidores a descubrir elementos sorprendentes que rompen con lo cotidiano.",
+  "images": [
+    "/images/enjoy-the-unexpected/main.png",
+    "/images/enjoy-the-unexpected/secondary.png",
+    "/images/enjoy-the-unexpected/detail-1.png",
+    "/images/enjoy-the-unexpected/detail-2.png"
+  ],
+  "thumbnails": [
+    "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=180",
+    "https://images.unsplash.com/photo-1481162324536-ecd186aaa0d6?q=80&w=180"
+  ],
+  "emojis": ["🎲", "🎯", "🎪", "🎭", "✨"],
+  "carouselSpeed": 10,
+  "gallery": {
+    "featureText": "Con una mezcla de <em>realidad aumentada</em> y <em>experiencias físicas</em>, creamos momentos inesperados que sorprenden y cautivan al consumidor.",
+    "sections": [
+      {
+        "type": "banner",
+        "image": "/images/enjoy-the-unexpected/banner.png",
+        "badge": {
+          "text": "SORPRESAS",
+          "position": "top-right"
+        }
+      },
+      {
+        "type": "textSection",
+        "content": "Para esta campaña, desarrollamos una serie de instalaciones interactivas en los puntos de venta que reaccionaban de forma inesperada a las acciones de los consumidores."
+      },
+      {
+        "type": "imageGrid",
+        "columns": 4,
+        "images": [
+          {
+            "src": "/images/enjoy-the-unexpected/grid-1.png",
+            "alt": "Experiencia interactiva 1"
+          },
+          {
+            "src": "/images/enjoy-the-unexpected/grid-2.png",
+            "alt": "Experiencia interactiva 2",
+            "badge": {
+              "text": "INTERACTIVE",
+              "position": "bottom-right"
+            }
+          },
+          {
+            "src": "/images/enjoy-the-unexpected/grid-3.png",
+            "alt": "Experiencia interactiva 3"
+          },
+          {
+            "src": "/images/enjoy-the-unexpected/grid-4.png",
+            "alt": "Experiencia interactiva 4"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,4 +1,20 @@
+import { lazy } from 'react';
+import enjoyTheUnexpected from './projects/enjoy-the-unexpected.json';
+import festivalSeason from './projects/festival-season.json';
+import mergui from './projects/mergui.json';
+
+export interface GallerySection {
+  type: 'banner' | 'textSection' | 'imageGrid' | 'mixedGrid';
+  [key: string]: any;
+}
+
+export interface ProjectGallery {
+  featureText: string;
+  sections: GallerySection[];
+}
+
 export interface ProjectData {
+  id: string;
   name: string;
   year: string;
   categories: string[];
@@ -7,32 +23,19 @@ export interface ProjectData {
   client?: string;
   songTitle?: string;
   images: string[];
-  thumbnails: string[]; // Make thumbnails required
+  thumbnails: string[]; 
   comingSoon?: boolean;
   awardWinning?: boolean;
   emojis?: string[];
+  carouselSpeed?: number;
+  gallery?: ProjectGallery;
 }
 
-// Sample project data - in a real application, this would come from a database or API
+// Cargar proyectos desde archivos JSON
 const projectsData: Record<string, ProjectData> = {
-  "festival-season": {
-    name: "FESTIVAL SEASON",
-    year: "2025",
-    categories: ["CONTENT CREATION"],
-    description: "Una experiencia inmersiva que transporta a los espectadores a un entorno de verano tropical lleno de sol y playa.",
-    client: "Tiendas Paris",
-    images: [
-      "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
-      "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
-      "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png"
-    ],
-    comingSoon: true,
-    thumbnails: [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=180",
-      "https://images.unsplash.com/photo-1520454974749-611b7248ffdb?q=80&w=180"
-    ],
-    emojis: ["☀️", "🌊", "🏄‍♂️", "🌴", "🕶️"]
-  },
+  "enjoy-the-unexpected": enjoyTheUnexpected as ProjectData,
+  "festival-season": festivalSeason as ProjectData,
+  "mergui": mergui as ProjectData,
   "lolla-vibes": {
     name: "LOLLA VIBES",
     year: "2025",
@@ -48,7 +51,8 @@ const projectsData: Record<string, ProjectData> = {
       "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=180",
       "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=180"
     ],
-    emojis: ["🌮", "🌶️", "🍹", "🪅", "🎭"]
+    emojis: ["🌮", "🌶️", "🍹", "🪅", "🎭"],
+    id: "lolla-vibes"
   },
   "we-make-your-day": {
     name: "WE MAKE YOUR DAY",

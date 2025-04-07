@@ -1,0 +1,56 @@
+
+{
+  "id": "festival-season",
+  "name": "FESTIVAL SEASON",
+  "year": "2025",
+  "categories": ["CONTENT CREATION"],
+  "description": "Una experiencia inmersiva que transporta a los espectadores a un entorno de verano tropical lleno de sol y playa.",
+  "client": "Tiendas Paris",
+  "images": [
+    "/images/festival-season/main.png",
+    "/images/festival-season/secondary.png",
+    "/images/festival-season/detail-1.png"
+  ],
+  "comingSoon": true,
+  "thumbnails": [
+    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=180",
+    "https://images.unsplash.com/photo-1520454974749-611b7248ffdb?q=80&w=180"
+  ],
+  "emojis": ["☀️", "🌊", "🏄‍♂️", "🌴", "🕶️"],
+  "carouselSpeed": 30,
+  "gallery": {
+    "featureText": "Capturando la esencia del <em>verano</em> y la <em>libertad</em>, creamos contenido que transporta al espectador a un oasis de sol y diversión.",
+    "sections": [
+      {
+        "type": "banner",
+        "image": "/images/festival-season/banner.png",
+        "badge": {
+          "text": "VERANO 2025",
+          "position": "bottom-left"
+        }
+      },
+      {
+        "type": "textSection",
+        "content": "Para Festival Season, desarrollamos una campaña completa que abarca desde contenido digital para redes sociales hasta experiencias en tienda."
+      },
+      {
+        "type": "imageGrid",
+        "columns": 3,
+        "images": [
+          {
+            "src": "/images/festival-season/grid-1.png",
+            "alt": "Concepto de verano 1"
+          },
+          {
+            "src": "/images/festival-season/grid-2.png",
+            "alt": "Concepto de verano 2"
+          },
+          {
+            "src": "/images/festival-season/grid-3.png",
+            "alt": "Concepto de verano 3"
+          }
+        ]
+      }
+    ]
+  }
+}
