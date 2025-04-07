@@ -8,13 +8,13 @@
   "client": "Mergui",
   "songTitle": "Falling",
   "images": [
-    "/images/mergui/main.png",
-    "/images/mergui/secondary.png",
-    "/images/mergui/detail-1.png"
+    "/projects/maybelline/pTOzcX80S4q4zFpvKirLC78AA0.jpg",
+    "/projects/maybelline/ultdt0NOY7PS38zo2l7weOcDY.jpg",
+    "/projects/maybelline/amtp0iTx3ebD4XvsY7tkYrfM8M.jpg"
   ],
   "thumbnails": [
-    "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=180",
-    "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=180"
+    "/projects/maybelline_profile.png",
+    "/projects/maybelline/at4tkyn8JSAH9YhsWWrT3En4XK0.gif"
   ],
   "emojis": ["🎵", "🎤", "✨", "🌃", "🔥"],
   "carouselSpeed": 50,
@@ -23,7 +23,7 @@
     "sections": [
       {
         "type": "banner",
-        "image": "/images/mergui/banner.png",
+        "image": "/projects/maybelline/OGQxT7PkuA2HF9acNPQE5FOOJc.gif",
         "badge": {
           "text": "NEW SINGLE",
           "position": "center"
@@ -36,7 +36,7 @@
       {
         "type": "mixedGrid",
         "portraitImage": {
-          "src": "/images/mergui/portrait.png",
+          "src": "/projects/maybelline_profile.png",
           "alt": "Mergui - Retrato",
           "badge": {
             "text": "ARTIST",
@@ -45,19 +45,19 @@
         },
         "gridImages": [
           {
-            "src": "/images/mergui/grid-1.png",
+            "src": "/projects/maybelline/pTOzcX80S4q4zFpvKirLC78AA0.jpg",
             "alt": "Proceso creativo 1"
           },
           {
-            "src": "/images/mergui/grid-2.png",
+            "src": "/projects/maybelline/ultdt0NOY7PS38zo2l7weOcDY.jpg",
             "alt": "Proceso creativo 2"
           },
           {
-            "src": "/images/mergui/grid-3.png",
+            "src": "/projects/maybelline/amtp0iTx3ebD4XvsY7tkYrfM8M.jpg",
             "alt": "Proceso creativo 3"
           },
           {
-            "src": "/images/mergui/grid-4.png",
+            "src": "/projects/maybelline/at4tkyn8JSAH9YhsWWrT3En4XK0.gif",
             "alt": "Proceso creativo 4"
           }
         ]

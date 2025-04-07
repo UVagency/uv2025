@@ -8,14 +8,14 @@
   "client": "Heineken",
   "fullDescription": "Creamos una campaña inmersiva para Heineken que desafía las expectativas tradicionales. A través de instalaciones interactivas y experiencias digitales únicas, invitamos a los consumidores a descubrir elementos sorprendentes que rompen con lo cotidiano.",
   "images": [
-    "/images/enjoy-the-unexpected/main.png",
-    "/images/enjoy-the-unexpected/secondary.png",
-    "/images/enjoy-the-unexpected/detail-1.png",
-    "/images/enjoy-the-unexpected/detail-2.png"
+    "/projects/heineken/Ma4L9dfBXx6JRJ2XBWXq8kfrcVU.jpg",
+    "/projects/heineken/l7wXFwyvNdRE2nC495vWUrbDE.jpg",
+    "/projects/heineken/474dSWSLCCuoJlnV6VwAeM2SQRE.jpg",
+    "/projects/heineken/a1I9N5CoXfF6eI3floJINyLzl6s.jpg"
   ],
   "thumbnails": [
-    "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=180",
-    "https://images.unsplash.com/photo-1481162324536-ecd186aaa0d6?q=80&w=180"
+    "/projects/heineken_profile.png",
+    "/projects/heineken/thb9mPzo81EbJ49Ok7VpWNtheA.jpg"
   ],
   "emojis": ["🎲", "🎯", "🎪", "🎭", "✨"],
   "carouselSpeed": 10,
@@ -24,7 +24,7 @@
     "sections": [
       {
         "type": "banner",
-        "image": "/images/enjoy-the-unexpected/banner.png",
+        "image": "/projects/heineken/1Ehltid6EQTBlyE0CxMeRRms8.jpg",
         "badge": {
           "text": "SORPRESAS",
           "position": "top-right"
@@ -39,11 +39,11 @@
         "columns": 4,
         "images": [
           {
-            "src": "/images/enjoy-the-unexpected/grid-1.png",
+            "src": "/projects/heineken/cGhtDiCoCLErCCMOEnRDZUnmoY.jpg",
             "alt": "Experiencia interactiva 1"
           },
           {
-            "src": "/images/enjoy-the-unexpected/grid-2.png",
+            "src": "/projects/heineken/f2GjFaNoz5YryJtRYBqVd9MX9hU.jpg",
             "alt": "Experiencia interactiva 2",
             "badge": {
               "text": "INTERACTIVE",
@@ -51,11 +51,11 @@
             }
           },
           {
-            "src": "/images/enjoy-the-unexpected/grid-3.png",
+            "src": "/projects/heineken/qkUCZi5AQhfRwCtDI3yVy8egJFs.jpg",
             "alt": "Experiencia interactiva 3"
           },
           {
-            "src": "/images/enjoy-the-unexpected/grid-4.png",
+            "src": "/projects/heineken/60Ukrd1QsZSPhuhRqaC5vVthP1A.jpg",
             "alt": "Experiencia interactiva 4"
           }
         ]
