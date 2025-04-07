@@ -28,30 +28,29 @@ const Navbar = () => {
     <>
       <nav className="w-full px-8 py-4 font-sans bg-portfolio-bg z-50 sticky top-0">
         <div className="max-w-[90%] mx-auto flex justify-between items-center">
-          <div className="flex space-x-12 items-center">
-            <div className="flex items-center">
-              {isAboutOpen ? (
-                <button 
-                  onClick={toggleAbout}
-                  className="text-portfolio-text hover:text-portfolio-highlight transition-colors rounded-full size-10 flex items-center justify-center border border-portfolio-text hover:border-portfolio-highlight mr-4"
-                >
-                  <X size={24} />
-                </button>
-              ) : (
-                <button 
-                  onClick={toggleAbout}
-                  className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors"
-                >
-                  About
-                </button>
-              )}
+          <div className="flex items-center gap-8">
+            <div className="relative flex items-center">
+              <button 
+                onClick={toggleAbout}
+                className={`absolute text-portfolio-text hover:text-portfolio-highlight transition-all duration-500 ease-in-out rounded-full size-8 flex items-center justify-center border border-portfolio-text hover:border-portfolio-highlight ${isAboutOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
+              >
+                <X size={20} />
+              </button>
+              <button 
+                onClick={toggleAbout}
+                className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-500 ease-in-out ${isAboutOpen ? 'text-portfolio-highlight underline underline-offset-8 translate-x-12' : 'translate-x-0'}`}
+              >
+                About
+              </button>
             </div>
-            <Link to="/" className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors">
-              Work
-            </Link>
-            <Link to="/contact" className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors">
-              Contact
-            </Link>
+            <div className={`flex items-center gap-8 transition-transform duration-500 ease-in-out ${isAboutOpen ? 'translate-x-14' : 'translate-x-0'}`}>
+              <Link to="/" className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors">
+                Work
+              </Link>
+              <Link to="/contact" className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors">
+                Contact
+              </Link>
+            </div>
           </div>
           <div>
             <AnimatedEye />
@@ -79,16 +78,16 @@ const Navbar = () => {
 
 const AboutContent = () => {
   return (
-    <div className="max-w-[90%] mx-auto flex flex-col items-center text-center">
-      <div className="w-full flex flex-col items-center gap-8">
-        <div className="w-64 h-64 rounded-full overflow-hidden bg-[#f9f8e2] mb-4">
+    <div className="max-w-[90%] mx-auto flex flex-col items-center md:items-start">
+      <div className="w-full flex flex-col md:flex-row md:gap-16 items-center md:items-start">
+        <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden bg-[#f9f8e2] mb-4 md:mb-0 md:w-1/3">
           <img 
             alt="Award trophy" 
             className="w-full h-full object-cover" 
             src="/lovable-uploads/af5c0765-b397-4bf4-b0db-667ed840a472.png" 
           />
         </div>
-        <div className="text-[#f9f8e2] max-w-3xl">
+        <div className="text-[#f9f8e2] md:w-2/3 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl mb-6">
             <span className="italic text-portfolio-highlight">UV</span>, founded by{" "}
             <span className="italic text-portfolio-highlight">Mookie Tenembaun</span>,
@@ -112,7 +111,7 @@ const AboutContent = () => {
       </div>
       
       {/* Values Section */}
-      <div className="w-full mt-16">
+      <div className="w-full mt-16 text-center md:text-left">
         <h2 className="text-3xl md:text-4xl font-bold text-portfolio-highlight mb-8">Values</h2>
         <p className="text-2xl md:text-3xl leading-relaxed text-[#f9f8e2] opacity-80">
           UV is Zero Bullshit <EyeOfCuriosity /> Crazy High Standards <EyeOfCuriosity /><br/>
@@ -124,10 +123,10 @@ const AboutContent = () => {
       </div>
       
       {/* Services Section */}
-      <div className="w-full mt-16">
+      <div className="w-full mt-16 text-center md:text-left">
         <h2 className="text-3xl md:text-4xl font-bold text-portfolio-highlight mb-8">Our Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 md:gap-x-8">
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center md:items-start gap-4">
             <ServiceItem name="Advertising" />
             <ServiceItem name="Art Direction" />
             <ServiceItem name="Animation" />
@@ -138,7 +137,7 @@ const AboutContent = () => {
             <ServiceItem name="Concepts" />
             <ServiceItem name="Commercials" />
           </div>
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center md:items-start gap-4">
             <ServiceItem name="Digital" />
             <ServiceItem name="Design" />
             <ServiceItem name="Environmental" />
@@ -149,7 +148,7 @@ const AboutContent = () => {
             <ServiceItem name="Installation" />
             <ServiceItem name="Interactive" />
           </div>
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center md:items-start gap-4">
             <ServiceItem name="Naming" />
             <ServiceItem name="Mural Design" />
             <ServiceItem name="Packaging" />
@@ -169,7 +168,7 @@ const AboutContent = () => {
 
 const ServiceItem = ({ name }: { name: string }) => {
   return (
-    <div className="flex items-center gap-3 justify-center">
+    <div className="flex items-center gap-3 justify-center md:justify-start">
       <EyeOfCuriosity />
       <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">{name}</span>
     </div>
