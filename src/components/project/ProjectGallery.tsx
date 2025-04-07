@@ -25,24 +25,41 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project }) => {
     "/lovable-uploads/34e302e2-f607-4404-8b61-61850043a158.png" // La imagen de referencia
   ];
 
-  // Autoplay plugin configuration with pause on hover
+  // Duplicamos las imágenes para crear el efecto continuo
+  const duplicatedImages = [...placeholders, ...placeholders];
+
+  // Autoplay plugin configuration with pause on hover and continuous movement
   const autoplayOptions = {
-    delay: 3000,
+    delay: 0, // Sin delay para movimiento continuo
+    stopOnInteraction: false, // No detener al interactuar
+    stopOnMouseEnter: true, // Solo detener cuando el mouse está encima
     rootNode: (emblaRoot: any) => emblaRoot.parentElement,
   };
 
-  // Use autoplay plugin with Embla Carousel
+  // Use autoplay plugin with Embla Carousel with continuous movement settings
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: true,
       align: "start",
-      skipSnaps: false,
+      skipSnaps: true, // Permitir deslizamiento suave sin "snapping"
+      dragFree: true, // Movimiento libre sin restricciones
+      containScroll: false, // Sin contener el desplazamiento
+      speed: 10, // Velocidad más lenta para movimiento continuo
     },
     [Autoplay(autoplayOptions)]
   );
 
   useEffect(() => {
     if (emblaApi) {
+      // Configurar velocidad y comportamiento continuo
+      emblaApi.on('init', () => {
+        // Iniciar el desplazamiento continuo
+        const autoplay = emblaApi.plugins().autoplay;
+        if (autoplay) {
+          autoplay.play();
+        }
+      });
+      
       // Pause on hover functionality
       const handleMouseEnter = () => {
         emblaApi.plugins().autoplay?.stop();
@@ -69,11 +86,17 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project }) => {
 
   return (
     <div className="mb-16">
-      {/* Carousel de imágenes como en la referencia */}
+      {/* Carousel de imágenes como en la referencia - con movimiento continuo */}
       <div className="mb-12">
         <div className="embla w-full overflow-hidden" ref={emblaRef}>
-          <div className="flex">
-            {placeholders.slice(0, 5).map((image, index) => (
+          <div 
+            className="flex animate-marquee" 
+            style={{ 
+              animation: 'scroll 30s linear infinite',
+              animationPlayState: 'running',
+            }}
+          >
+            {duplicatedImages.map((image, index) => (
               <div 
                 key={index} 
                 className="flex-[0_0_430px] mx-2"
@@ -93,6 +116,15 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project }) => {
             ))}
           </div>
         </div>
+        <style jsx>{`
+          @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .embla:hover .animate-marquee {
+            animation-play-state: paused;
+          }
+        `}</style>
       </div>
 
       {/* Texto destacado con el estilo exacto de la referencia */}
