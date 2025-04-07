@@ -18,7 +18,7 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ project }) => {
   };
   
   return (
-    <div className="border-b border-portfolio-divider pb-6 mb-12">
+    <div className="border-b border-portfolio-divider pb-6 mb-8">
       {/* Header Row - All elements in one line */}
       <div className="flex items-center gap-4 flex-wrap">
         <button 
