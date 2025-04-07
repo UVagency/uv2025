@@ -56,7 +56,7 @@ const BrandCarousel = () => {
                   <img 
                     src={brand.logoUrl} 
                     alt={`${brand.name} logo`} 
-                    className="max-h-full max-w-full object-contain"
+                    className="max-h-full max-w-full object-contain filter brightness-0 invert sepia-[.25] saturate-[1.5] hue-rotate-[40deg]"
                   />
                 </div>
               </CarouselItem>
