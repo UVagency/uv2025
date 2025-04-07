@@ -1,14 +1,12 @@
 
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import { ProjectData } from '@/data/projectsData';
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import useEmblaCarousel from 'embla-carousel-react';
-import Autoplay from 'embla-carousel-autoplay';
-import { 
-  Carousel, 
-  CarouselContent, 
-  CarouselItem,
-} from "@/components/ui/carousel";
+import ProjectImageCarousel from './gallery/ProjectImageCarousel';
+import ProjectFeatureText from './gallery/ProjectFeatureText';
+import ProjectBanner from './gallery/ProjectBanner';
+import ProjectImageGrid from './gallery/ProjectImageGrid';
+import ProjectTextSection from './gallery/ProjectTextSection';
+import ProjectMixedGrid from './gallery/ProjectMixedGrid';
 
 interface ProjectGalleryProps {
   project: ProjectData;
@@ -25,212 +23,98 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project }) => {
     "/lovable-uploads/34e302e2-f607-4404-8b61-61850043a158.png" // La imagen de referencia
   ];
 
-  // Use autoplay plugin with Embla Carousel with continuous movement settings
-  const autoplayRef = useRef(
-    Autoplay({ 
-      delay: 0,
-      stopOnInteraction: false,
-      stopOnMouseEnter: true,
-      rootNode: (emblaRoot) => emblaRoot.parentElement,
-    })
-  );
-
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    {
-      loop: true,
-      align: "start",
-      skipSnaps: true,
-      dragFree: true,
-      containScroll: false,
-    },
-    [autoplayRef.current]
-  );
-
-  useEffect(() => {
-    if (emblaApi) {
-      const onPointerDown = () => {
-        autoplayRef.current.stop();
-      };
-
-      const onPointerUp = () => {
-        autoplayRef.current.play();
-      };
-
-      emblaApi.on('pointerDown', onPointerDown);
-      emblaApi.on('pointerUp', onPointerUp);
-      
-      return () => {
-        emblaApi.off('pointerDown', onPointerDown);
-        emblaApi.off('pointerUp', onPointerUp);
-      };
-    }
-  }, [emblaApi]);
-
   return (
     <div className="mb-16">
       {/* Carousel de imágenes como en la referencia - con movimiento continuo */}
-      <div className="mb-12">
-        <div className="embla w-full overflow-hidden" ref={emblaRef}>
-          <div className="flex">
-            {placeholders.map((image, index) => (
-              <div 
-                key={index} 
-                className="flex-[0_0_430px] mx-2 min-w-0"
-              >
-                <div className="overflow-hidden rounded-md">
-                  <AspectRatio ratio={430/240}>
-                    <img
-                      src={image}
-                      alt={`${project.name} - Slide ${index}`}
-                      className="w-full h-full object-cover"
-                      width={430}
-                      height={240}
-                      loading="eager"
-                    />
-                  </AspectRatio>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      <ProjectImageCarousel images={placeholders} projectName={project.name} />
 
       {/* Texto destacado con el estilo exacto de la referencia */}
-      <div className="bg-portfolio-bg px-4 py-8 sm:px-8">
-        <p className="text-[2.25rem] md:text-[3rem] leading-[1.2] font-light text-portfolio-text/90 max-w-6xl">
-          <span className="font-normal">Adding a punch of spicy vibes to <em className="not-italic font-normal">five short spots</em> for <em className="not-italic font-semibold">Doritos USA</em>,</span> we crafted five
-          wacky cutout collages to represent each unique flavor.
-        </p>
-      </div>
+      <ProjectFeatureText>
+        <span className="font-normal">Adding a punch of spicy vibes to <em className="not-italic font-normal">five short spots</em> for <em className="not-italic font-semibold">Doritos USA</em>,</span> we crafted five
+        wacky cutout collages to represent each unique flavor.
+      </ProjectFeatureText>
 
       {/* Banner principal - imagen destacada a todo lo ancho */}
-      <div className="mb-6 overflow-hidden rounded-lg">
-        <AspectRatio ratio={21/9}>
-          <img 
-            src={placeholders[0]} 
-            alt={`${project.name} - Banner`}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute top-4 left-4 bg-portfolio-highlight text-portfolio-text px-4 py-1 text-sm font-bold">
-            NEXT FRIDAY
-          </div>
-        </AspectRatio>
+      <div className="mb-6">
+        <ProjectBanner 
+          image={placeholders[0]} 
+          alt={`${project.name} - Banner`}
+          badge={{ text: "NEXT FRIDAY" }}
+        />
       </div>
 
       {/* Fila de miniaturas - 4 imágenes en fila */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-        {[1, 2, 3, 4].map((index) => (
-          <div key={`row1-${index}`} className="overflow-hidden rounded-md">
-            <AspectRatio ratio={16/9}>
-              <img 
-                src={placeholders[index % placeholders.length]} 
-                alt={`${project.name} - Thumbnail ${index}`}
-                className="w-full h-full object-cover"
-              />
-              {index === 2 && (
-                <div className="absolute bottom-2 right-2 bg-portfolio-highlight text-portfolio-text px-2 py-1 text-xs">
-                  next episode
-                </div>
-              )}
-            </AspectRatio>
-          </div>
-        ))}
+      <div className="mb-8">
+        <ProjectImageGrid 
+          columns={4}
+          images={[1, 2, 3, 4].map((index) => ({
+            src: placeholders[index % placeholders.length],
+            alt: `${project.name} - Thumbnail ${index}`,
+            badge: index === 2 ? { text: "next episode", position: "bottom-right" } : undefined
+          }))}
+        />
       </div>
 
       {/* Banner secundario - imagen grande */}
-      <div className="mb-8 overflow-hidden rounded-lg">
-        <AspectRatio ratio={16/9}>
-          <img 
-            src={placeholders[2]} 
-            alt={`${project.name} - Main Feature`}
-            className="w-full h-full object-cover"
+      <div className="mb-8">
+        <ProjectBanner 
+          image={placeholders[2]} 
+          alt={`${project.name} - Main Feature`}
+          ratio={16/9}
+          badge={{ 
+            text: "", 
+            position: "center" 
+          }}
           />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center">
-              <h2 className="text-4xl font-bold text-white mb-1">{project.name}</h2>
-              <p className="text-white text-lg">GRAPHIC PACKAGE</p>
-            </div>
-          </div>
-        </AspectRatio>
       </div>
 
       {/* Texto explicativo secundario */}
-      <div className="text-3xl mb-8 text-portfolio-text/80 font-light">
+      <ProjectTextSection>
         An iconic {project.categories[0].toLowerCase()} deserves an iconic graphics package. Drawing inspiration from {project.emojis ? project.emojis.join(' and ') : 'various elements'}, we designed a graphic language featuring bold colors, halftone patterns, and sleek vector-style neon looks.
-      </div>
+      </ProjectTextSection>
 
       {/* Grid variado de imágenes */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 mb-8">
-        {/* Imagen columna izquierda */}
-        <div className="lg:col-span-4 overflow-hidden rounded-md">
-          <AspectRatio ratio={9/16}>
-            <img 
-              src={placeholders[3]} 
-              alt={`${project.name} - Portrait 1`}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute bottom-3 left-3 bg-portfolio-highlight text-portfolio-text px-2 py-1 text-xs">
-              How to get this
+      <ProjectMixedGrid 
+        portraitImage={{
+          src: placeholders[3],
+          alt: `${project.name} - Portrait 1`,
+          badge: { text: "How to get this", position: "bottom-left" }
+        }}
+        gridImages={[...Array(8)].map((_, index) => ({
+          src: placeholders[(index + 4) % placeholders.length],
+          alt: `${project.name} - Grid ${index + 1}`,
+          ratio: index % 3 === 0 ? 16/9 : 1,
+          overlay: index === 0 ? (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="text-2xl font-bold text-portfolio-highlight">DIVA</span>
             </div>
-          </AspectRatio>
-        </div>
-
-        {/* Grid de 2x4 en el centro y derecha */}
-        <div className="lg:col-span-8 grid grid-cols-2 grid-rows-2 sm:grid-rows-4 gap-4">
-          {[...Array(8)].map((_, index) => (
-            <div key={`grid-${index}`} className="overflow-hidden rounded-md">
-              <AspectRatio ratio={index % 3 === 0 ? 16/9 : 1}>
-                <img 
-                  src={placeholders[(index + 4) % placeholders.length]} 
-                  alt={`${project.name} - Grid ${index + 1}`}
-                  className="w-full h-full object-cover"
-                />
-                {index === 0 && (
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-portfolio-highlight">DIVA</span>
-                  </div>
-                )}
-                {index === 4 && (
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="grid grid-cols-4 gap-1">
-                      {['A','B','C','D','E','F','G','H','N','E','X','T'].map((letter, i) => (
-                        <span key={i} className="bg-portfolio-tag-bg text-white w-6 h-6 flex items-center justify-center text-xs">
-                          {letter}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                {index === 6 && (
-                  <div className="absolute bottom-2 left-2 bg-portfolio-highlight text-portfolio-text px-2 py-1 text-xs">
-                    ON GUEST
-                  </div>
-                )}
-              </AspectRatio>
+          ) : index === 4 ? (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="grid grid-cols-4 gap-1">
+                {['A','B','C','D','E','F','G','H','N','E','X','T'].map((letter, i) => (
+                  <span key={i} className="bg-portfolio-tag-bg text-white w-6 h-6 flex items-center justify-center text-xs">
+                    {letter}
+                  </span>
+                ))}
+              </div>
             </div>
-          ))}
-        </div>
-      </div>
+          ) : index === 6 ? (
+            <div className="absolute bottom-2 left-2 bg-portfolio-highlight text-portfolio-text px-2 py-1 text-xs">
+              ON GUEST
+            </div>
+          ) : undefined
+        }))}
+      />
 
       {/* Fila final de imágenes - 3 imágenes en fila */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        {[1, 2, 3].map((index) => (
-          <div key={`final-${index}`} className="overflow-hidden rounded-md">
-            <AspectRatio ratio={16/9}>
-              <img 
-                src={placeholders[(index + 7) % placeholders.length]} 
-                alt={`${project.name} - Final ${index}`}
-                className="w-full h-full object-cover"
-              />
-              {index === 0 && (
-                <div className="absolute bottom-3 right-3 bg-portfolio-highlight text-portfolio-text px-3 py-1">
-                  TONIGHT
-                </div>
-              )}
-            </AspectRatio>
-          </div>
-        ))}
-      </div>
+      <ProjectImageGrid 
+        columns={3}
+        images={[1, 2, 3].map((index) => ({
+          src: placeholders[(index + 7) % placeholders.length],
+          alt: `${project.name} - Final ${index}`,
+          badge: index === 0 ? { text: "TONIGHT", position: "bottom-right" } : undefined
+        }))}
+      />
     </div>
   );
 };
