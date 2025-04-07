@@ -22,20 +22,18 @@ const brands: Brand[] = [
 const BrandCarousel = () => {
   const options = {
     loop: true,
-    dragFree: true,
+    dragFree: false,
     containScroll: "trimSnaps" as const,
     align: "start" as const,
     slidesToScroll: 1,
     inViewThreshold: 0,
-    speed: 50,
   };
 
   // Configuración del plugin AutoScroll con valores más suaves
   const autoScrollPlugin = AutoScroll({
-    delay: 0,
+    delay: 400,
     stopOnInteraction: false,
     playOnInit: true,
-    speed: 0.5,
     rootNode: (emblaRoot) => emblaRoot.parentElement,
   });
 
@@ -60,7 +58,7 @@ const BrandCarousel = () => {
                   <img
                     src={brand.logoUrl}
                     alt={`${brand.name} logo`}
-                    className="max-h-full max-w-full object-contain filter brightness-0 invert sepia-[.25] saturate-[1.5] hue-rotate-[40deg]"
+                    className="max-h-full max-w-full object-contain"
                   />
                 </div>
               </CarouselItem>
