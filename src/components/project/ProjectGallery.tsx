@@ -1,13 +1,13 @@
 
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { ProjectData } from '@/data/projectsData';
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 import { 
   Carousel, 
   CarouselContent, 
   CarouselItem,
-  CarouselPrevious,
-  CarouselNext
 } from "@/components/ui/carousel";
 
 interface ProjectGalleryProps {
@@ -25,35 +25,74 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project }) => {
     "/lovable-uploads/34e302e2-f607-4404-8b61-61850043a158.png" // La imagen de referencia
   ];
 
+  // Autoplay plugin configuration with pause on hover
+  const autoplayOptions = {
+    delay: 3000,
+    rootNode: (emblaRoot: any) => emblaRoot.parentElement,
+  };
+
+  // Use autoplay plugin with Embla Carousel
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    {
+      loop: true,
+      align: "start",
+      skipSnaps: false,
+    },
+    [Autoplay(autoplayOptions)]
+  );
+
+  useEffect(() => {
+    if (emblaApi) {
+      // Pause on hover functionality
+      const handleMouseEnter = () => {
+        emblaApi.plugins().autoplay?.stop();
+      };
+      
+      const handleMouseLeave = () => {
+        emblaApi.plugins().autoplay?.play();
+      };
+      
+      // Get the carousel container
+      const carousel = document.querySelector('.embla');
+      
+      if (carousel) {
+        carousel.addEventListener('mouseenter', handleMouseEnter);
+        carousel.addEventListener('mouseleave', handleMouseLeave);
+        
+        return () => {
+          carousel.removeEventListener('mouseenter', handleMouseEnter);
+          carousel.removeEventListener('mouseleave', handleMouseLeave);
+        };
+      }
+    }
+  }, [emblaApi]);
+
   return (
     <div className="mb-16">
       {/* Carousel de imágenes como en la referencia */}
       <div className="mb-12">
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full"
-        >
-          <CarouselContent>
+        <div className="embla w-full overflow-hidden" ref={emblaRef}>
+          <div className="flex">
             {placeholders.slice(0, 5).map((image, index) => (
-              <CarouselItem key={index} className="basis-1/5 md:basis-1/5">
+              <div 
+                key={index} 
+                className="flex-[0_0_430px] mx-2"
+              >
                 <div className="overflow-hidden rounded-md">
-                  <AspectRatio ratio={1/1}>
+                  <AspectRatio ratio={430/240}>
                     <img
                       src={image}
                       alt={`${project.name} - Slide ${index}`}
                       className="w-full h-full object-cover"
+                      width={430}
+                      height={240}
                     />
                   </AspectRatio>
                 </div>
-              </CarouselItem>
+              </div>
             ))}
-          </CarouselContent>
-          <CarouselPrevious className="left-2" />
-          <CarouselNext className="right-2" />
-        </Carousel>
+          </div>
+        </div>
       </div>
 
       {/* Texto destacado con el estilo exacto de la referencia */}
