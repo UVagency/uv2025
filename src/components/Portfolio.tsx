@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { DiamondIcon } from "./DiamondIcon";
 import { AwardIcon } from "./AwardIcon";
@@ -14,18 +13,6 @@ interface Project {
 }
 
 const projects: Project[] = [
-  { 
-    name: "CLOSER TO THE SUN", 
-    year: "2024", 
-    categories: ["IMMERSIVE"],
-    emojis: ["☀️", "🌊", "🏄‍♂️", "🌴", "🕶️"]
-  },
-  { 
-    name: "SABOR DE BARRIO", 
-    year: "2024", 
-    categories: ["INTEGRATED"],
-    emojis: ["🌮", "🌶️", "🍹", "🪅", "🎭"]
-  },
   { 
     name: "WE MAKE YOUR DAY", 
     year: "2024", 
