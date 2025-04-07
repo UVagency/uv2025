@@ -7,14 +7,14 @@
   "description": "Una experiencia inmersiva que transporta a los espectadores a un entorno de verano tropical lleno de sol y playa.",
   "client": "Tiendas Paris",
   "images": [
-    "/images/festival-season/main.png",
-    "/images/festival-season/secondary.png",
-    "/images/festival-season/detail-1.png"
+    "/projects/loreal/IMG_5464.jpg",
+    "/projects/loreal/IMG_5495.jpg",
+    "/projects/loreal/IMG_5605.jpg"
   ],
   "comingSoon": true,
   "thumbnails": [
-    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=180",
-    "https://images.unsplash.com/photo-1520454974749-611b7248ffdb?q=80&w=180"
+    "/projects/loreal_profile.png",
+    "/projects/loreal/IMG_5624.jpg"
   ],
   "emojis": ["☀️", "🌊", "🏄‍♂️", "🌴", "🕶️"],
   "carouselSpeed": 30,
@@ -23,7 +23,7 @@
     "sections": [
       {
         "type": "banner",
-        "image": "/images/festival-season/banner.png",
+        "image": "/projects/loreal/IMG_5739.jpg",
         "badge": {
           "text": "VERANO 2025",
           "position": "bottom-left"
@@ -38,15 +38,15 @@
         "columns": 3,
         "images": [
           {
-            "src": "/images/festival-season/grid-1.png",
+            "src": "/projects/loreal/IMG_5704.jpg",
             "alt": "Concepto de verano 1"
           },
           {
-            "src": "/images/festival-season/grid-2.png",
+            "src": "/projects/loreal/IMG_6113-2.jpg",
             "alt": "Concepto de verano 2"
           },
           {
-            "src": "/images/festival-season/grid-3.png",
+            "src": "/projects/loreal/IMG_5624.jpg",
             "alt": "Concepto de verano 3"
           }
         ]
