@@ -1,7 +1,7 @@
-
 import { lazy } from 'react';
 import enjoyTheUnexpected from './projects/enjoy-the-unexpected.json';
 import festivalSeason from './projects/festival-season.json';
+import mergui from './projects/mergui.json';
 
 export interface GallerySection {
   type: 'banner' | 'textSection' | 'imageGrid' | 'mixedGrid';
@@ -88,8 +88,6 @@ const projectsData: Record<string, ProjectData> = {
     ],
     emojis: ["🏙️", "🎧", "🎵", "🎤", "🥁"]
   },
-  // This is already loaded from JSON above, so removing the duplicate entry
-  // "enjoy-the-unexpected": { ... },
   "a-great-first-day": {
     id: "a-great-first-day",
     name: "A GREAT FIRST DAY",

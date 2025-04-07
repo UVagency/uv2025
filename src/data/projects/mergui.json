@@ -1,0 +1,62 @@
+
+{
+  "id": "mergui",
+  "name": "MERGUI",
+  "year": "2024",
+  "categories": ["LAUNCH"],
+  "description": "A captivating promotional campaign featuring emerging artist MERGUI, highlighting his unique sound and visual aesthetic.",
+  "client": "Soundcore by Anker",
+  "songTitle": "Falling",
+  "images": [
+    "/projects/loreal/IMG_5464.jpg",
+    "/projects/loreal/IMG_5495.jpg",
+    "/projects/loreal/IMG_5605.jpg",
+    "/projects/loreal/IMG_5624.jpg"
+  ],
+  "thumbnails": [
+    "/projects/loreal/IMG_5704.jpg", 
+    "/projects/loreal/IMG_5739.jpg"
+  ],
+  "emojis": ["🎵", "🎸", "🎤", "✨", "🌟"],
+  "carouselSpeed": 50,
+  "gallery": {
+    "featureText": "Launching the <em>newest sensation</em> in the music industry with a <em class='font-semibold'>vibrant visual campaign</em> that captures MERGUI's energy and talent.",
+    "sections": [
+      {
+        "type": "banner",
+        "image": "/projects/loreal/IMG_6113-2.jpg",
+        "alt": "MERGUI - Main Banner",
+        "badge": {
+          "text": "NEW ARTIST",
+          "position": "bottom-right"
+        }
+      },
+      {
+        "type": "textSection",
+        "content": "The campaign combines striking visuals with MERGUI's unique sound to create an unforgettable launch experience that resonates with fans and new listeners alike."
+      },
+      {
+        "type": "imageGrid",
+        "columns": 3,
+        "images": [
+          {
+            "src": "/projects/loreal/IMG_5464.jpg",
+            "alt": "MERGUI - Performance"
+          },
+          {
+            "src": "/projects/loreal/IMG_5495.jpg",
+            "alt": "MERGUI - Studio Session"
+          },
+          {
+            "src": "/projects/loreal/IMG_5605.jpg",
+            "alt": "MERGUI - Behind the Scenes",
+            "badge": {
+              "text": "EXCLUSIVE",
+              "position": "bottom-left"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
