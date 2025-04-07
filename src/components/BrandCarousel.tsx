@@ -11,11 +11,11 @@ interface Brand {
 const brands: Brand[] = [
   { name: "Philips", logoUrl: "/client-logos/philips.svg" },
   { name: "PepsiCo", logoUrl: "/client-logos/pepsico.svg" },
-  { name: "Royal Canin", logoUrl: "/client-logos/royalcanin.svg" },
   { name: "Little Caesars", logoUrl: "/client-logos/littlecaesars.svg" },
   { name: "Me-Elecmetal", logoUrl: "/client-logos/melecmetal.svg" },
   { name: "Ball", logoUrl: "/client-logos/ball.svg" },
   { name: "Heineken", logoUrl: "/client-logos/heineken.svg" },
+  { name: "Royal Canin", logoUrl: "/client-logos/royalcanin.svg" },
   { name: "Edusoft", logoUrl: "/client-logos/edusoft.svg" }
 ];
 
@@ -31,7 +31,7 @@ const BrandCarousel = () => {
 
   // Configuración del plugin AutoScroll con valores más suaves
   const autoScrollPlugin = AutoScroll({
-    delay: 400,
+    delay: 1700,
     stopOnInteraction: false,
     playOnInit: true,
     rootNode: (emblaRoot) => emblaRoot.parentElement,
@@ -52,7 +52,7 @@ const BrandCarousel = () => {
             {extendedBrands.map((brand, index) => (
               <CarouselItem
                 key={index}
-                className="md:basis-1/4 lg:basis-1/6 px-4"
+                className="md:basis-1/4 lg:basis-1/5 px-4"
               >
                 <div className="h-16 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
                   <img
