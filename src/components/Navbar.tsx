@@ -1,20 +1,32 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Sheet, SheetContent, SheetTrigger } from '../components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from '../components/ui/sheet';
 import AnimatedEye from './hero/AnimatedEye';
+import { X } from 'lucide-react';
 
 const Navbar = () => {
-  return <nav className="w-full px-8 py-4 font-sans bg-portfolio-bg z-50 relative">
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
+
+  const handleAboutToggle = (open: boolean) => {
+    setIsAboutOpen(open);
+  };
+
+  return (
+    <nav className={`w-full px-8 py-4 font-sans bg-portfolio-bg z-50 relative transition-all duration-300 ${isAboutOpen ? 'translate-x-12' : ''}`}>
       <div className="max-w-[90%] mx-auto flex justify-between items-center">
         <div className="flex space-x-12">
-          <Sheet>
+          <Sheet open={isAboutOpen} onOpenChange={handleAboutToggle}>
             <SheetTrigger asChild>
-              <button className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors">
+              <button className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors ${isAboutOpen ? 'text-portfolio-highlight' : ''}`}>
                 About
               </button>
             </SheetTrigger>
             <SheetContent side="top" className="w-full max-w-full h-screen bg-[#283618] pt-20 px-4 overflow-auto">
+              <div className="absolute top-4 left-8">
+                <SheetClose className="text-[#f9f8e2] hover:text-portfolio-highlight transition-colors rounded-full size-10 flex items-center justify-center border border-[#f9f8e2] hover:border-portfolio-highlight">
+                  <X size={24} />
+                </SheetClose>
+              </div>
               <AboutContent />
             </SheetContent>
           </Sheet>
@@ -29,10 +41,10 @@ const Navbar = () => {
           <AnimatedEye />
         </div>
       </div>
-    </nav>;
+    </nav>
+  );
 };
 
-// Contenido del About que se mostrará en el Sheet
 const AboutContent = () => {
   return <div className="max-w-[90%] mx-auto flex flex-col gap-16 items-start">
       <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
@@ -118,7 +130,6 @@ const AboutContent = () => {
     </div>;
 };
 
-// Service item component for consistent styling
 const ServiceItem = ({ name }: { name: string }) => {
   return (
     <div className="flex items-center gap-3">
@@ -128,9 +139,7 @@ const ServiceItem = ({ name }: { name: string }) => {
   );
 };
 
-// Eye of Curiosity component - a smaller version of AnimatedEye for inline text with random colors
 const EyeOfCuriosity = () => {
-  // Color palette for the eyes
   const colorPalette = [
     { bg: 'bg-portfolio-highlight', iris: 'bg-portfolio-text' },      // Default colors
     { bg: 'bg-white', iris: 'bg-portfolio-accent' },                  // White with turquoise
@@ -140,7 +149,6 @@ const EyeOfCuriosity = () => {
     { bg: 'bg-portfolio-text-secondary', iris: 'bg-portfolio-highlight' }, // Gray with yellow
   ];
 
-  // Pick a random color scheme
   const [colorScheme, setColorScheme] = useState(() => {
     return colorPalette[Math.floor(Math.random() * colorPalette.length)];
   });
@@ -148,9 +156,7 @@ const EyeOfCuriosity = () => {
   return (
     <span className="inline-flex items-center justify-center mx-2 transform scale-75">
       <div className="relative w-[28px] h-[28px]">
-        {/* Eye outer */}
         <div className={`absolute inset-0 rounded-full ${colorScheme.bg} border border-portfolio-text overflow-hidden`}>
-          {/* Iris */}
           <div 
             className={`absolute left-1/2 top-1/2 w-[18px] h-[18px] rounded-full ${colorScheme.iris} 
                      transition-all duration-300`}
@@ -158,14 +164,12 @@ const EyeOfCuriosity = () => {
               transform: 'translate(-50%, -50%)',
             }}
           >
-            {/* Pupil */}
             <div 
               className="absolute left-1/2 top-1/2 w-[10px] h-[10px] rounded-full bg-portfolio-bg transition-all duration-300"
               style={{ 
                 transform: 'translate(-50%, -50%)',
               }}
             >
-              {/* Light reflection */}
               <div className="absolute top-1 left-1 w-[3px] h-[3px] rounded-full bg-white opacity-80"></div>
             </div>
           </div>

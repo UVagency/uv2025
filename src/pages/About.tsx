@@ -1,15 +1,9 @@
 
-import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
 
 const About = () => {
-  const navigate = useNavigate();
-  
-  useEffect(() => {
-    // Redirect to home page, since About is now a slide-down panel
-    navigate('/');
-  }, [navigate]);
-  
+  // About page content is now handled by the panel in the Navbar
+  // This component is kept for compatibility with existing routes
   return null;
 };
 
