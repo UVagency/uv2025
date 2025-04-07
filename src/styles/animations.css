@@ -91,7 +91,18 @@
   animation: pulse 4s ease-in-out infinite;
 }
 
-/* Animation for Flickity */
-.flickity-slider > * {
-  transition: opacity 0.2s ease-in-out;
+/* Animation for carousel progress */
+@keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.carousel-progress-bar {
+  animation: progress var(--carousel-duration) linear;
+  height: 3px;
+  background-color: var(--lightolive);
 }

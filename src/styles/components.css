@@ -29,26 +29,11 @@
   }
 }
 
-/* Brand Carousel Custom Styles */
-.brand-carousel .flickity-slider {
-  display: flex;
-  align-items: center;
-}
-
-/* Fix height for brand carousel cells */
-.brand-carousel .carousel-cell {
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Make sure carousel images look good */
-.carousel-cell {
-  margin-right: 10px;
-}
-
-/* Customize Flickity appearance */
+/* Project Images Carousel Custom Styles */
 .project-images-carousel {
-  margin-bottom: 20px;
+  @apply mb-6;
+}
+
+.project-images-carousel .embla__slide {
+  @apply flex items-center justify-center;
 }

@@ -1,8 +1,10 @@
 
-import React from 'react';
-import Flickity from 'react-flickity-component';
+import React, { useCallback, useEffect } from 'react';
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import 'flickity/css/flickity.css';
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { useCarousel } from "@/components/ui/carousel/carousel-context";
+import useEmblaCarousel from "embla-carousel-react";
+import AutoScroll from "embla-carousel-autoplay";
 
 interface ProjectImageCarouselProps {
   images: string[];
@@ -15,60 +17,49 @@ const ProjectImageCarousel: React.FC<ProjectImageCarouselProps> = ({
   projectName,
   carouselSpeed = 30 // Default value of 30
 }) => {
-  // Calculate autoplay speed: lower carouselSpeed value means slower carousel
-  // We invert the relationship: higher input number = faster carousel
-  // With a base of 8000ms for the slowest speed (value of 1)
-  const autoPlaySpeed = carouselSpeed > 0 ? 8000 / carouselSpeed : false;
+  // Calculate autoplay delay: higher carouselSpeed value means faster carousel
+  // Convert the carouselSpeed (1-100) to delay in ms (5000ms-1000ms)
+  const delayMs = carouselSpeed > 0 ? Math.max(5000 - (carouselSpeed * 40), 1000) : 5000;
   
-  // Store the slideshow duration as a CSS variable for the dot animation
-  React.useEffect(() => {
-    if (autoPlaySpeed) {
-      document.documentElement.style.setProperty('--duration', `${autoPlaySpeed}ms`);
-    }
-  }, [autoPlaySpeed]);
+  // Store the slideshow duration as a CSS variable for animations
+  useEffect(() => {
+    document.documentElement.style.setProperty('--carousel-duration', `${delayMs}ms`);
+  }, [delayMs]);
 
-  const flickityOptions = {
-    autoPlay: autoPlaySpeed,
-    wrapAround: true,
-    contain: true,
-    prevNextButtons: true,
-    pageDots: true,
-    freeScroll: true,
-    cellAlign: 'center',
-    pauseAutoPlayOnHover: true,
-    draggable: true,
-    selectedAttraction: 0.01,
-    friction: 0.15
+  const options = {
+    loop: true,
+    align: "center",
+    containScroll: "trimSnaps",
   };
+
+  const autoScrollPlugin = AutoScroll({ delay: delayMs, stopOnInteraction: false });
 
   return (
     <div className="mb-12">
-      <Flickity
+      <Carousel
+        opts={options}
+        plugins={[autoScrollPlugin]}
         className="project-images-carousel"
-        options={flickityOptions}
-        reloadOnUpdate
-        static
       >
-        {images.map((image, index) => (
-          <div 
-            key={index} 
-            className="w-[430px] mx-2 carousel-cell"
-          >
-            <div className="overflow-hidden rounded-md">
-              <AspectRatio ratio={430/240}>
-                <img
-                  src={image}
-                  alt={`${projectName} - Slide ${index}`}
-                  className="w-full h-full object-cover"
-                  width={430}
-                  height={240}
-                  loading="eager"
-                />
-              </AspectRatio>
-            </div>
-          </div>
-        ))}
-      </Flickity>
+        <CarouselContent>
+          {images.map((image, index) => (
+            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 pl-4">
+              <div className="overflow-hidden rounded-md">
+                <AspectRatio ratio={430/240}>
+                  <img
+                    src={image}
+                    alt={`${projectName} - Slide ${index}`}
+                    className="w-full h-full object-cover"
+                    width={430}
+                    height={240}
+                    loading="eager"
+                  />
+                </AspectRatio>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
     </div>
   );
 };
