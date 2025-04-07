@@ -34,6 +34,19 @@
   @apply mb-6;
 }
 
+.brand-carousel .embla__container {
+  animation: scrollX 30s linear infinite;
+}
+
+@keyframes scrollX {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* Project Images Carousel Custom Styles */
 .project-images-carousel {
   @apply mb-6;

@@ -28,17 +28,18 @@ const BrandCarousel = () => {
     align: "start" as const,
     slidesToScroll: 1,
     inViewThreshold: 0,
-    speed: 20
   };
 
-  // The AutoScroll plugin accepts these properties:
-  // delay, stopOnInteraction, playOnInit
-  // 'speed' doesn't exist in the type, so we'll remove it
-  const autoScrollPlugin = AutoScroll({ 
-    delay: 0, 
-    stopOnInteraction: true,
-    playOnInit: true
+  // Configuración correcta del plugin AutoScroll según la documentación
+  const autoScrollPlugin = AutoScroll({
+    delay: 0,
+    stopOnInteraction: false,
+    playOnInit: true,
+    rootNode: (emblaRoot) => emblaRoot.parentElement,
   });
+
+  // Duplicamos las marcas para crear un efecto de desplazamiento continuo
+  const extendedBrands = [...brands, ...brands];
 
   return (
     <div className="py-16 bg-portfolio-bg overflow-hidden">
@@ -49,7 +50,7 @@ const BrandCarousel = () => {
           className="brand-carousel"
         >
           <CarouselContent>
-            {brands.map((brand, index) => (
+            {extendedBrands.map((brand, index) => (
               <CarouselItem
                 key={index}
                 className="md:basis-1/4 lg:basis-1/6 px-4"
