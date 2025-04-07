@@ -25,61 +25,44 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project }) => {
     "/lovable-uploads/34e302e2-f607-4404-8b61-61850043a158.png" // La imagen de referencia
   ];
 
-  // Duplicamos las imágenes para crear el efecto continuo
-  const duplicatedImages = [...placeholders, ...placeholders];
-
-  // Autoplay plugin configuration with pause on hover and continuous movement
-  const autoplayOptions = {
-    delay: 0, // Sin delay para movimiento continuo
-    stopOnInteraction: false, // No detener al interactuar
-    stopOnMouseEnter: true, // Solo detener cuando el mouse está encima
-    rootNode: (emblaRoot: any) => emblaRoot.parentElement,
-  };
-
   // Use autoplay plugin with Embla Carousel with continuous movement settings
+  const autoplayRef = useRef(
+    Autoplay({ 
+      delay: 0,
+      stopOnInteraction: false,
+      stopOnMouseEnter: true,
+      rootNode: (emblaRoot) => emblaRoot.parentElement,
+    })
+  );
+
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: true,
       align: "start",
-      skipSnaps: true, // Permitir deslizamiento suave sin "snapping"
-      dragFree: true, // Movimiento libre sin restricciones
-      containScroll: false, // Sin contener el desplazamiento
+      skipSnaps: true,
+      dragFree: true,
+      containScroll: false,
     },
-    [Autoplay(autoplayOptions)]
+    [autoplayRef.current]
   );
 
   useEffect(() => {
     if (emblaApi) {
-      // Configurar velocidad y comportamiento continuo
-      emblaApi.on('init', () => {
-        // Iniciar el desplazamiento continuo
-        const autoplay = emblaApi.plugins().autoplay;
-        if (autoplay) {
-          autoplay.play();
-        }
-      });
-      
-      // Pause on hover functionality
-      const handleMouseEnter = () => {
-        emblaApi.plugins().autoplay?.stop();
+      const onPointerDown = () => {
+        autoplayRef.current.stop();
       };
-      
-      const handleMouseLeave = () => {
-        emblaApi.plugins().autoplay?.play();
+
+      const onPointerUp = () => {
+        autoplayRef.current.play();
       };
+
+      emblaApi.on('pointerDown', onPointerDown);
+      emblaApi.on('pointerUp', onPointerUp);
       
-      // Get the carousel container
-      const carousel = document.querySelector('.embla');
-      
-      if (carousel) {
-        carousel.addEventListener('mouseenter', handleMouseEnter);
-        carousel.addEventListener('mouseleave', handleMouseLeave);
-        
-        return () => {
-          carousel.removeEventListener('mouseenter', handleMouseEnter);
-          carousel.removeEventListener('mouseleave', handleMouseLeave);
-        };
-      }
+      return () => {
+        emblaApi.off('pointerDown', onPointerDown);
+        emblaApi.off('pointerUp', onPointerUp);
+      };
     }
   }, [emblaApi]);
 
@@ -88,17 +71,11 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project }) => {
       {/* Carousel de imágenes como en la referencia - con movimiento continuo */}
       <div className="mb-12">
         <div className="embla w-full overflow-hidden" ref={emblaRef}>
-          <div 
-            className="flex animate-marquee" 
-            style={{ 
-              animation: 'scroll 30s linear infinite',
-              animationPlayState: 'running',
-            }}
-          >
-            {duplicatedImages.map((image, index) => (
+          <div className="flex">
+            {placeholders.map((image, index) => (
               <div 
                 key={index} 
-                className="flex-[0_0_430px] mx-2"
+                className="flex-[0_0_430px] mx-2 min-w-0"
               >
                 <div className="overflow-hidden rounded-md">
                   <AspectRatio ratio={430/240}>
@@ -108,6 +85,7 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project }) => {
                       className="w-full h-full object-cover"
                       width={430}
                       height={240}
+                      loading="eager"
                     />
                   </AspectRatio>
                 </div>
@@ -115,17 +93,6 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project }) => {
             ))}
           </div>
         </div>
-        <style>
-          {`
-          @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
-          .embla:hover .animate-marquee {
-            animation-play-state: paused;
-          }
-          `}
-        </style>
       </div>
 
       {/* Texto destacado con el estilo exacto de la referencia */}
