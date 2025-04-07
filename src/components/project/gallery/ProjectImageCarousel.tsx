@@ -20,12 +20,19 @@ const ProjectImageCarousel: React.FC<ProjectImageCarouselProps> = ({
   // With a base of 8000ms for the slowest speed (value of 1)
   const autoPlaySpeed = carouselSpeed > 0 ? 8000 / carouselSpeed : false;
   
+  // Store the slideshow duration as a CSS variable for the dot animation
+  React.useEffect(() => {
+    if (autoPlaySpeed) {
+      document.documentElement.style.setProperty('--duration', `${autoPlaySpeed}ms`);
+    }
+  }, [autoPlaySpeed]);
+
   const flickityOptions = {
     autoPlay: autoPlaySpeed,
     wrapAround: true,
     contain: true,
-    prevNextButtons: false,
-    pageDots: false,
+    prevNextButtons: true,
+    pageDots: true,
     freeScroll: true,
     cellAlign: 'center',
     pauseAutoPlayOnHover: true,
