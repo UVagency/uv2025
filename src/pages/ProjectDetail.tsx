@@ -20,7 +20,8 @@ const ProjectDetail = () => {
 
   // Set carousel speed based on project - for example, different speeds for different projects
   // You can modify this logic based on your requirements
-  const carouselSpeed = project.name === "MERGUI" ? 50 : 30;
+  const carouselSpeed = project.name === "MERGUI" ? 50 : 
+                       project.name === "ENJOY THE UNEXPECTED" ? 10 : 30;
 
   return (
     <div className="fixed inset-0 z-50 bg-portfolio-bg overflow-y-auto">
