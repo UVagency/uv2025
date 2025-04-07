@@ -1,3 +1,4 @@
+
 import { lazy } from 'react';
 import enjoyTheUnexpected from './projects/enjoy-the-unexpected.json';
 import festivalSeason from './projects/festival-season.json';
@@ -37,6 +38,7 @@ const projectsData: Record<string, ProjectData> = {
   "festival-season": festivalSeason as ProjectData,
   "mergui": mergui as ProjectData,
   "lolla-vibes": {
+    id: "lolla-vibes",
     name: "LOLLA VIBES",
     year: "2025",
     categories: ["IMMERSIVE"],
@@ -51,10 +53,10 @@ const projectsData: Record<string, ProjectData> = {
       "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=180",
       "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=180"
     ],
-    emojis: ["🌮", "🌶️", "🍹", "🪅", "🎭"],
-    id: "lolla-vibes"
+    emojis: ["🌮", "🌶️", "🍹", "🪅", "🎭"]
   },
   "we-make-your-day": {
+    id: "we-make-your-day",
     name: "WE MAKE YOUR DAY",
     year: "2024",
     categories: ["INTEGRATED"],
@@ -71,6 +73,7 @@ const projectsData: Record<string, ProjectData> = {
     emojis: ["🎁", "🎉", "🎊", "🎈", "🥳"]
   },
   "urban-beat": {
+    id: "urban-beat",
     name: "URBAN BEAT",
     year: "2023",
     categories: ["INTEGRATED"],
@@ -86,23 +89,10 @@ const projectsData: Record<string, ProjectData> = {
     ],
     emojis: ["🏙️", "🎧", "🎵", "🎤", "🥁"]
   },
-  "enjoy-the-unexpected": {
-    name: "ENJOY THE UNEXPECTED",
-    year: "2023",
-    categories: ["PROMO"],
-    client: "Heineken",
-    description: "Una campaña promocional que invita a los consumidores a descubrir sorpresas inesperadas en cada interacción con la marca.",
-    images: [
-      "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
-      "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png"
-    ],
-    thumbnails: [
-      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=180",
-      "https://images.unsplash.com/photo-1481162324536-ecd186aaa0d6?q=80&w=180"
-    ],
-    emojis: ["🎲", "🎯", "🎪", "🎭", "✨"]
-  },
+  // This is already loaded from JSON above, so removing the duplicate entry
+  // "enjoy-the-unexpected": { ... },
   "a-great-first-day": {
+    id: "a-great-first-day",
     name: "A GREAT FIRST DAY",
     year: "2023",
     categories: ["PROMO"],
@@ -119,6 +109,7 @@ const projectsData: Record<string, ProjectData> = {
     emojis: ["🌅", "🚀", "📝", "🌱", "🎯"]
   },
   "turn-up-the-volume": {
+    id: "turn-up-the-volume",
     name: "TURN UP THE VOLUME",
     year: "2023",
     categories: ["LAUNCH"],
@@ -135,6 +126,7 @@ const projectsData: Record<string, ProjectData> = {
     emojis: ["🔊", "📢", "🎸", "🎺", "🔥"]
   },
   "fly-your-way": {
+    id: "fly-your-way",
     name: "FLY YOUR WAY",
     year: "2022",
     categories: ["MEDIA"],
@@ -151,11 +143,12 @@ const projectsData: Record<string, ProjectData> = {
     awardWinning: true,
     emojis: ["✈️", "🛫", "🌍", "☁️", "🧳"]
   },
-  "Lolla": {
-    name: "LOLLA VIBES",
+  "closer-to-sun": {
+    id: "closer-to-sun",
+    name: "CLOSER TO THE SUN",
     year: "2025",
     categories: ["IMMERSIVE"],
-    description: "At Lolla 2025, we want you to feel the music like never before: vibrating with you in every jump, every chorus, every magical moment. Because good vibes aren’t just heard—they’re lived!",
+    description: "At Lolla 2025, we want you to feel the music like never before: vibrating with you in every jump, every chorus, every magical moment. Because good vibes aren't just heard—they're lived!",
     client: "Soundcore by Anker",
     images: [
       "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png",
