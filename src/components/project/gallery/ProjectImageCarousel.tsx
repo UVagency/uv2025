@@ -1,9 +1,7 @@
 
-import React, { useCallback, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import { useCarousel } from "@/components/ui/carousel/carousel-context";
-import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-autoplay";
 
 interface ProjectImageCarouselProps {
@@ -28,8 +26,8 @@ const ProjectImageCarousel: React.FC<ProjectImageCarouselProps> = ({
 
   const options = {
     loop: true,
-    align: "center",
-    containScroll: "trimSnaps",
+    align: "center" as const,
+    containScroll: "trimSnaps" as const,
   };
 
   const autoScrollPlugin = AutoScroll({ delay: delayMs, stopOnInteraction: false });

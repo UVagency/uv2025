@@ -1,7 +1,7 @@
 
 import React from "react";
-import Flickity from 'react-flickity-component';
-import 'flickity/css/flickity.css';
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import AutoScroll from "embla-carousel-autoplay";
 
 interface Brand {
   name: string;
@@ -20,43 +20,41 @@ const brands: Brand[] = [
   { name: "Edusoft", logoUrl: "/client-logos/edusoft.svg" }
 ];
 
-// Flickity options
-const flickityOptions = {
-  autoPlay: 2000,
-  wrapAround: true,
-  contain: true,
-  prevNextButtons: false,
-  pageDots: false,
-  freeScroll: true,
-  cellAlign: 'left',
-  pauseAutoPlayOnHover: true
-};
-
 const BrandCarousel = () => {
+  const options = {
+    loop: true,
+    dragFree: true,
+    containScroll: "trimSnaps" as const,
+    align: "start" as const
+  };
+
+  const autoScrollPlugin = AutoScroll({ delay: 2000, stopOnInteraction: false });
+
   return (
     <div className="py-16 bg-portfolio-bg overflow-hidden">
       <div className="max-w-[90%] mx-auto">
-        <Flickity
-          className="brand-carousel" // This element is used as the Flickity element
-          options={flickityOptions}
-          reloadOnUpdate
-          static
+        <Carousel
+          opts={options}
+          plugins={[autoScrollPlugin]}
+          className="brand-carousel"
         >
-          {brands.map((brand, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center w-1/3 md:w-1/4 lg:w-1/6 px-4"
-            >
-              <div className="h-16 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
-                <img
-                  src={brand.logoUrl}
-                  alt={`${brand.name} logo`}
-                  className="max-h-full max-w-full object-contain filter brightness-0 invert sepia-[.25] saturate-[1.5] hue-rotate-[40deg]"
-                />
-              </div>
-            </div>
-          ))}
-        </Flickity>
+          <CarouselContent>
+            {brands.map((brand, index) => (
+              <CarouselItem
+                key={index}
+                className="md:basis-1/4 lg:basis-1/6 px-4"
+              >
+                <div className="h-16 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
+                  <img
+                    src={brand.logoUrl}
+                    alt={`${brand.name} logo`}
+                    className="max-h-full max-w-full object-contain filter brightness-0 invert sepia-[.25] saturate-[1.5] hue-rotate-[40deg]"
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
       </div>
     </div>
   );
