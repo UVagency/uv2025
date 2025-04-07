@@ -25,10 +25,18 @@ const BrandCarousel = () => {
     loop: true,
     dragFree: true,
     containScroll: "trimSnaps" as const,
-    align: "start" as const
+    align: "start" as const,
+    slidesToScroll: 1,
+    inViewThreshold: 0,
+    speed: 20
   };
 
-  const autoScrollPlugin = AutoScroll({ delay: 2000, stopOnInteraction: false });
+  const autoScrollPlugin = AutoScroll({ 
+    delay: 0, 
+    stopOnInteraction: true,
+    playOnInit: true, 
+    speed: 0.5 
+  });
 
   return (
     <div className="py-16 bg-portfolio-bg overflow-hidden">

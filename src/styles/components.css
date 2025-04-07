@@ -29,6 +29,11 @@
   }
 }
 
+/* Brand Carousel Custom Styles */
+.brand-carousel {
+  @apply mb-6;
+}
+
 /* Project Images Carousel Custom Styles */
 .project-images-carousel {
   @apply mb-6;
