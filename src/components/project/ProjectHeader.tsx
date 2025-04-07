@@ -17,17 +17,19 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ project }) => {
   
   return (
     <div className="border-b border-portfolio-divider pb-6 mb-12">
-      <div className="flex items-center mb-6">
-        <button 
-          onClick={handleClose}
-          className="w-10 h-10 rounded-full bg-transparent border border-portfolio-text flex items-center justify-center text-portfolio-text hover:bg-portfolio-text hover:text-portfolio-bg transition-colors mr-4"
-        >
-          <X size={18} />
-        </button>
+      <div className="flex flex-col space-y-4">
+        <div className="flex items-center">
+          <button 
+            onClick={handleClose}
+            className="w-10 h-10 rounded-full bg-transparent border border-portfolio-text flex items-center justify-center text-portfolio-text hover:bg-portfolio-text hover:text-portfolio-bg transition-colors mr-4"
+          >
+            <X size={18} />
+          </button>
+          
+          <h1 className="text-7xl font-bold text-portfolio-text">{project.name}</h1>
+        </div>
         
-        <h1 className="text-7xl font-bold text-portfolio-text">{project.name}</h1>
-        
-        <div className="flex items-center ml-auto gap-2">
+        <div className="flex flex-wrap gap-2 items-center">
           <span className="project-year-tag text-base px-6 py-2 rounded-full">
             {project.year}
           </span>
@@ -52,7 +54,7 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ project }) => {
         </div>
       </div>
       
-      <p className="text-4xl text-portfolio-text/90 font-light leading-tight max-w-4xl">
+      <p className="text-4xl text-portfolio-text/90 font-light leading-tight max-w-4xl mt-6">
         {project.description}
       </p>
       
