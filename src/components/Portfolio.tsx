@@ -80,13 +80,11 @@ const Portfolio = () => {
             onClick={() => handleProjectClick(project.name)}
           >
             <div className="portfolio-divider"></div>
-            
-            {/* Normal state */}
-            <div className="py-4 flex items-center">
-              <div className="text-4xl font-bold text-portfolio-text mr-4 group-hover:text-portfolio-highlight">
+            <div className="flex items-center overflow-hidden">
+              <div className="text-4xl font-bold text-portfolio-text group-hover:text-portfolio-highlight whitespace-nowrap">
                 {project.name}
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 ml-4 whitespace-nowrap">
                 <span className="project-year-tag group-hover:project-year-tag-highlight group-hover:bg-portfolio-highlight group-hover:text-portfolio-text">
                   {project.year}
                 </span>
@@ -109,9 +107,8 @@ const Portfolio = () => {
                   </div>
                 )}
                 
-                {/* Emojis con animación mejorada */}
                 {hoveredProject === project.name && project.emojis && (
-                  <div className="flex ml-4 animate-fade-in">
+                  <div className="flex ml-4 animate-fade-in overflow-hidden">
                     {project.emojis.map((emoji, index) => (
                       <span 
                         key={index} 
