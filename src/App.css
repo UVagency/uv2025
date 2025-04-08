@@ -65,6 +65,12 @@ body.about-open {
   height: 100vh;
 }
 
+/* Body styles when Contact is open */
+body.contact-open {
+  overflow: hidden !important;
+  height: 100vh;
+}
+
 /* Prevent content shift when scrollbar disappears */
 html {
   scroll-behavior: smooth;

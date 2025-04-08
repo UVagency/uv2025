@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '../components/ui/sheet';
 import AnimatedEye from './hero/AnimatedEye';
 import { X } from 'lucide-react';
+import Footer from './Footer';
 
 const Navbar = () => {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   const toggleAbout = () => {
     setIsAboutOpen(!isAboutOpen);
-    // Toggle body class and overflow
+    setIsContactOpen(false); // Close contact when opening about
     if (!isAboutOpen) {
       document.body.classList.add('about-open');
     } else {
@@ -17,16 +19,27 @@ const Navbar = () => {
     }
   };
 
+  const toggleContact = () => {
+    setIsContactOpen(!isContactOpen);
+    setIsAboutOpen(false); // Close about when opening contact
+    if (!isContactOpen) {
+      document.body.classList.add('contact-open');
+    } else {
+      document.body.classList.remove('contact-open');
+    }
+  };
+
   // Cleanup effect
   useEffect(() => {
     return () => {
       document.body.classList.remove('about-open');
+      document.body.classList.remove('contact-open');
     };
   }, []);
 
   return (
     <>
-      <nav className="w-full px-8 py-4 font-sans bg-portfolio-bg z-50 sticky top-0">
+      <nav className="w-full px-8 py-4 font-sans bg-portfolio-bg z-50 sticky top-0 overflow-x-hidden">
         <div className="max-w-[90%] mx-auto flex justify-between items-center">
           <div className="flex items-center gap-8">
             <div className="relative flex items-center">
@@ -47,9 +60,20 @@ const Navbar = () => {
               <Link to="/" className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors">
                 Work
               </Link>
-              <Link to="/contact" className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors">
-                Contact
-              </Link>
+              <div className="relative flex items-center">
+                <button 
+                  onClick={toggleContact}
+                  className={`absolute text-portfolio-text hover:text-portfolio-highlight transition-all duration-500 ease-in-out rounded-full size-8 flex items-center justify-center border border-portfolio-text hover:border-portfolio-highlight ${isContactOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
+                >
+                  <X size={20} />
+                </button>
+                <button 
+                  onClick={toggleContact}
+                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-500 ease-in-out ${isContactOpen ? 'text-portfolio-highlight underline underline-offset-8 translate-x-12' : 'translate-x-0'}`}
+                >
+                  Contact
+                </button>
+              </div>
             </div>
           </div>
           <div>
@@ -69,6 +93,22 @@ const Navbar = () => {
         <div className="max-w-[90%] mx-auto relative h-full">
           <div className="pt-24 px-4 h-full overflow-hidden">
             <AboutContent />
+          </div>
+        </div>
+      </div>
+
+      {/* Contact Section */}
+      <div 
+        className={`fixed bottom-0 left-0 w-full bg-portfolio-about-bg overflow-hidden z-40 transition-all ${isContactOpen ? 'duration-500' : 'duration-300'}`}
+        style={{ 
+          height: isContactOpen ? '80vh' : '0',
+          transform: `translateY(${isContactOpen ? '0' : '100%'})`,
+          opacity: 1
+        }}
+      >
+        <div className="max-w-[90%] mx-auto relative h-full">
+          <div className="pt-24 px-4 h-full overflow-hidden">
+            <Footer />
           </div>
         </div>
       </div>
