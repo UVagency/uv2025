@@ -24,32 +24,44 @@ const projects: Project[] = [
     name: "URBAN BEAT", 
     year: "2023", 
     categories: ["INTEGRATED"],
+    comingSoon: true,
     emojis: ["🏙️", "🎧", "🎵", "🎤", "🥁"]
   },
   { 
     name: "ENJOY THE UNEXPECTED", 
     year: "2023", 
     categories: ["PROMO"],
+    comingSoon: true,
     emojis: ["🎲", "🎯", "🎪", "🎭", "✨"]
   },
   { 
     name: "A GREAT FIRST DAY", 
     year: "2023", 
     categories: ["PROMO"],
+    comingSoon: true,
     emojis: ["🌅", "🚀", "📝", "🌱", "🎯"]
   },
   { 
     name: "TURN UP THE VOLUME", 
     year: "2023", 
     categories: ["LAUNCH"],
+    comingSoon: true,
     emojis: ["🔊", "📢", "🎸", "🎺", "🔥"]
   },
   { 
     name: "FLY YOUR WAY", 
     year: "2022", 
     categories: ["MEDIA"], 
+    comingSoon: true,
     awardWinning: true,
     emojis: ["✈️", "🛫", "🌍", "☁️", "🧳"]
+  },
+  { 
+    name: "I FEEL UNIQUE", 
+    year: "2013", 
+    categories: ["FILM"], 
+    comingSoon: true,
+    emojis: ["🥰", "✨", "🌟"]
   },
 ];
 
