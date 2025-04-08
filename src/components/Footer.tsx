@@ -1,4 +1,3 @@
-
 import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -35,10 +34,10 @@ const Footer = () => {
 
         {/* Social Media Links */}
         <div className="flex flex-col space-y-4">
-          <Link to="https://www.instagram.com/agencyuv" className="text-xl uppercase underline hover:text-portfolio-highlight transition-colors">
+          <Link to="https://www.instagram.com/agencyuv" target="_blank" rel="noopener noreferrer" className="text-xl uppercase underline hover:text-portfolio-highlight transition-colors">
             Instagram
           </Link>
-          <Link to="https://www.linkedin.com/company/uvagency" className="text-xl uppercase underline hover:text-portfolio-highlight transition-colors">
+          <Link to="https://www.linkedin.com/company/uvagency" target="_blank" rel="noopener noreferrer" className="text-xl uppercase underline hover:text-portfolio-highlight transition-colors">
             LinkedIn
           </Link>
         </div>
@@ -53,7 +52,7 @@ const Footer = () => {
         </div>
         <div className="flex items-center">
           <span>code by </span>
-          <a href="https://jassu.xyz" className="ml-1 text-white hover:text-portfolio-highlight">Jassu</a>
+          <a href="https://jassu.xyz" target="_blank" rel="noopener noreferrer" className="ml-1 text-white hover:text-portfolio-highlight">Jassu</a>
         </div>
       </div>
     </footer>
