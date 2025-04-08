@@ -129,20 +129,18 @@ const AboutContent = () => {
         </div>
         <div className="text-[#f9f8e2] md:w-2/3 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl mb-6">
-            <span className="italic text-portfolio-highlight">UV</span>, founded by{" "}
-            <span className="italic text-portfolio-highlight">Mookie Tenembaun</span>,
+            <span className="italic text-portfolio-highlight">The Integrated Marketing Agency</span>
           </h1>
           <p className="text-2xl md:text-3xl leading-relaxed mb-8">
-            is a motion studio driven by design & creative thinking.
+            that champions brands through <span className="italic">advertising</span>, creates <span className="italic">events</span> that move people and turn them into customers, and drives results through smart<span className="italic"> media</span>.
           </p>
           <p className="text-2xl md:text-3xl leading-relaxed mb-6">
-            We specialize in crafting <span className="italic">graphics packages</span> for films & series,{" "}
-            building <span className="italic">design systems</span> for brands, creating stunning{" "}
-            <span className="italic">explainers</span> and mind-blowing <span className="italic">Music Videos</span>.
+            We specialize in <span className="italic">strategy, creativity, content, media and experiences</span>- all connected to help brands{" "}
+            <span className="italic">grow, inspire,</span> and stay <span className="italic">relevant</span> in a constantly shifting world.
           </p>
           <p className="text-2xl md:text-3xl leading-relaxed mb-6">
-            We're grateful to be working with top brands, production houses, ad agencies and music labels to create{" "}
-            <span className="italic">unique & fresh</span> moving content.
+            We're grateful to be working with top brands and passionate teams to create work that{" "}
+            <span className="italic">resonates - emotionally</span> and <span className="italic">measurably</span>.
           </p>
           <p className="text-2xl md:text-3xl leading-relaxed">
             We love what we do and we know that <span className="italic">hard work pays off</span>.
