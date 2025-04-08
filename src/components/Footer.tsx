@@ -53,7 +53,7 @@ const Footer = () => {
         </div>
         <div className="flex items-center">
           <span>code by </span>
-          <a href="https://jassu.xyz" className="ml-1 text-white hover:text-portfolio-highlight">JASSU</a>
+          <a href="https://jassu.xyz" className="ml-1 text-white hover:text-portfolio-highlight">Jassu</a>
         </div>
       </div>
     </footer>
