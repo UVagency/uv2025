@@ -38,9 +38,7 @@ const Highlights = () => {
     <div className="max-w-[90%] mx-auto px-4 mb-16 font-sans">
       <div className="flex items-center mb-8">
         <h2 className="text-xl uppercase font-bold text-portfolio-text mr-2">Highlights</h2>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="16,12 8,4 8,20" fill="#d4d118" />
-        </svg>
+        <span>📌</span>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
