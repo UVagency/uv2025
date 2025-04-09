@@ -1,4 +1,3 @@
-
 import { useNavigate } from "react-router-dom";
 
 interface HighlightProject {
@@ -55,7 +54,7 @@ const Highlights = () => {
               />
             </div>
             
-            <div className="flex items-start">
+            <div className="flex flex-col items-start">
               <h3 className="text-5xl font-bold text-portfolio-text mr-2 group-hover:text-portfolio-highlight">
                 {project.name}
               </h3>
@@ -63,7 +62,6 @@ const Highlights = () => {
                 <span className="project-year-tag group-hover:project-year-tag-highlight">
                   {project.year}
                 </span>
-                
                 {project.categories.map((category) => (
                   <span key={category} className="project-category-tag group-hover:project-category-tag-highlight">
                     {category}
