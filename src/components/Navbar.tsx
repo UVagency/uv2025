@@ -147,10 +147,10 @@ const AboutContent = () => {
           </p>
         </div>
       </div>
-      
+
       {/* Values Section */}
       <div className="w-full mt-16 text-center md:text-left">
-        <h2 className="text-3xl md:text-4xl font-bold text-portfolio-highlight mb-8">Values</h2>
+        <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Values</h2>
         <p className="text-2xl md:text-3xl leading-relaxed text-[#f9f8e2] opacity-80">
           UV is Zero Bullshit <EyeOfCuriosity /> Crazy High Standards <EyeOfCuriosity /><br/>
           Endless Passion <EyeOfCuriosity /> Celebrating Emotion <EyeOfCuriosity /> Taking<br/>
@@ -162,12 +162,11 @@ const AboutContent = () => {
       
       {/* Services Section */}
       <div className="w-full mt-16 text-center md:text-left">
-        <h2 className="text-3xl md:text-4xl font-bold text-portfolio-highlight mb-8">Our Services</h2>
+        <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Our Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 md:gap-x-8">
-          <div className="flex flex-col items-center md:items-start gap-4">
+          <div className="flex flex-col items-center md:items-start gap-2">
             <ServiceItem name="Advertising" />
             <ServiceItem name="Art Direction" />
-            <ServiceItem name="Animation" />
             <ServiceItem name="Branding" />
             <ServiceItem name="Brand Strategy" />
             <ServiceItem name="Consultancy" />
@@ -175,22 +174,17 @@ const AboutContent = () => {
             <ServiceItem name="Concepts" />
             <ServiceItem name="Commercials" />
           </div>
-          <div className="flex flex-col items-center md:items-start gap-4">
+          <div className="flex flex-col items-center md:items-start gap-2">
             <ServiceItem name="Digital" />
             <ServiceItem name="Design" />
-            <ServiceItem name="Environmental" />
             <ServiceItem name="Exhibition" />
             <ServiceItem name="Film & Video" />
             <ServiceItem name="Identity" />
-            <ServiceItem name="Illustration" />
             <ServiceItem name="Installation" />
             <ServiceItem name="Interactive" />
           </div>
-          <div className="flex flex-col items-center md:items-start gap-4">
+          <div className="flex flex-col items-center md:items-start gap-2">
             <ServiceItem name="Naming" />
-            <ServiceItem name="Mural Design" />
-            <ServiceItem name="Packaging" />
-            <ServiceItem name="Photography" />
             <ServiceItem name="Print / OOH" />
             <ServiceItem name="Social Strategy" />
             <ServiceItem name="Social Content" />
@@ -198,6 +192,28 @@ const AboutContent = () => {
             <ServiceItem name="Target Audience" />
             <ServiceItem name="Website Design" />
           </div>
+        </div>
+      </div>
+
+      {/* Awards & Festivals Section */}
+      <div className="w-full mt-16 text-center md:text-left">
+        <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Awards & Festivals 🏆</h2>
+        <div className="text-[#f9f8e2]">
+          <p>2025 AWWWARDS Honorable Mention</p>
+          <p>2025 THE FWA Website Of The Day</p>
+          <p>2025 CSS DESIGN AWARDS Website Of The Day</p>
+          {/* ... more awards ... */}
+        </div>
+      </div>
+
+      {/* Press Section */}
+      <div className="w-full mt-16 text-center md:text-left">
+        <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Press 🎉</h2>
+        <div className="text-[#f9f8e2]">
+          <p>2025 BRANDS IN MOTION</p>
+          <p>2025 I LOVE CREATIVES</p>
+          <p>2025 FONTS IN USE</p>
+          {/* ... more press ... */}
         </div>
       </div>
     </div>
