@@ -84,14 +84,14 @@ const Navbar = () => {
 
       {/* About Section */}
       <div 
-        className="w-full bg-[#283618] overflow-hidden transition-all duration-500 ease-in-out"
+        className="w-full bg-[#283618] overflow-y-auto transition-all duration-500 ease-in-out"
         style={{ 
-          height: isAboutOpen ? '80vh' : '0',
+          height: isAboutOpen ? '100vh' : '0',
           opacity: isAboutOpen ? 1 : 0
         }}
       >
         <div className="max-w-[90%] mx-auto relative h-full">
-          <div className="pt-24 px-4 h-full overflow-hidden">
+          <div className="pt-24 px-4 h-full overflow-y-auto">
             <AboutContent />
           </div>
         </div>
@@ -120,18 +120,18 @@ const AboutContent = () => {
   return (
     <div className="max-w-[90%] mx-auto flex flex-col items-center md:items-start">
       <div className="w-full flex flex-col md:flex-row md:gap-16 items-center md:items-start">
-        <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden bg-[#f9f8e2] mb-4 md:mb-0 md:w-1/3">
+        <div className="w-32 h-32 overflow-hidden">
           <img 
-            alt="Award trophy" 
-            className="w-full h-full object-cover" 
-            src="/lovable-uploads/af5c0765-b397-4bf4-b0db-667ed840a472.png" 
+            alt="UV Logo" 
+            className="w-full h-full object-cover rounded-full" 
+            src="/public/images/uv_logo.png" 
           />
         </div>
         <div className="text-[#f9f8e2] md:w-2/3 text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl mb-6">
+          <h1 className="text-4xl md:text-4xl mb-6">
             <span className="italic text-portfolio-highlight">The Integrated Marketing Agency</span>
           </h1>
-          <p className="text-2xl md:text-3xl leading-relaxed mb-8">
+          <p className="text-2xl md:text-3xl leading-relaxed mb-6">
             that champions brands through <span className="italic">advertising</span>, creates <span className="italic">events</span> that move people and turn them into customers, and drives results through smart<span className="italic"> media</span>.
           </p>
           <p className="text-2xl md:text-3xl leading-relaxed mb-6">

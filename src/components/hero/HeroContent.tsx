@@ -36,13 +36,15 @@ export const HeroContent = () => {
         <div className="text-left">
           <h1 className="text-[clamp(2rem,5vw,3.5rem)] leading-[1.2] text-portfolio-text">
             <BreathingUVLogo />{" "}
-            <span className="font-normal italic">es una</span>{" "}
-            <span className="font-black">agencia creativa independiente.</span>{" "}
-            <span className="font-normal italic">Creamos</span>{" "}
-            <span className="font-black">experiencias innovadoras</span>{" "}
-            <span className="font-normal italic">para</span>{" "}
-            <span className="font-black">marcas audaces</span>{" "}
-            <span className="font-normal italic">en</span>
+            <span className="font-normal italic">is</span>{" "}
+            <span className="font-black">the integrated marketing agency</span>{" "}
+            <span className="font-normal italic">Advertising that</span>{" "}
+            <span className="font-black">champions your brand</span>{". "}
+            <span className="font-normal italic">Campaigns that move people and</span>{" "}
+            <span className="font-black">create customers</span>{". "}
+            <span className="font-normal italic">Media that</span>{" "}
+            <span className="font-black">drives results</span>{". "}
+            <span className="font-normal italic">One agency, all in.</span>
             {showHashtags && (
               <>
                 {" "}
