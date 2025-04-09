@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { AwardIcon } from "./AwardIcon";
 import { useNavigate } from "react-router-dom";
 
 interface Project {
@@ -128,7 +127,6 @@ const Portfolio = () => {
 
                 {project.awardWinning && (
                   <div className="relative inline-block hidden sm:block">
-                    <AwardIcon />
                   </div>
                 )}
                 

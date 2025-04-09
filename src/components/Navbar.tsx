@@ -152,11 +152,11 @@ const AboutContent = () => {
       <div className="w-full mt-16 text-center md:text-left">
         <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Values<span> 🥰</span></h2>
         <p className="text-2xl md:text-3xl leading-relaxed text-[#f9f8e2] opacity-80">
-          UV is Zero Bullshit <EyeOfCuriosity /> Crazy High Standards <EyeOfCuriosity /><br/>
-          Endless Passion <EyeOfCuriosity /> Celebrating Emotion <EyeOfCuriosity /> Taking<br/>
-          Risks <EyeOfCuriosity /> Trusting Our Instincts <EyeOfCuriosity /> Being Human <EyeOfCuriosity /><br/>
-          Making Work That's Human <EyeOfCuriosity /> Taking Work Seriously<br/>
-          <EyeOfCuriosity /> Not Taking Ourselves Too Seriously
+          UV is Zero Bullshit <span><EyeOfCuriosity /></span> Crazy High Standards <span><EyeOfCuriosity /></span><br/>
+          Endless Passion <span><EyeOfCuriosity /></span> Celebrating Emotion <span><EyeOfCuriosity /></span> Taking<br/>
+          Risks <span><EyeOfCuriosity /></span> Trusting Our Instincts <span><EyeOfCuriosity /></span> Being Human <span><EyeOfCuriosity /></span><br/>
+          Making Work That's Human <span><EyeOfCuriosity /></span> Taking Work Seriously<br/>
+          <span><EyeOfCuriosity /></span> Not Taking Ourselves Too Seriously
         </p>
       </div>
       

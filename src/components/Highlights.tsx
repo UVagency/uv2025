@@ -1,6 +1,5 @@
 
 import { useNavigate } from "react-router-dom";
-import { DiamondIcon } from "./DiamondIcon";
 
 interface HighlightProject {
   name: string;
