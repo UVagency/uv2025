@@ -42,38 +42,12 @@ const Navbar = () => {
       <nav className="w-full px-8 py-4 font-sans bg-portfolio-bg z-50 sticky top-0 overflow-x-hidden">
         <div className="max-w-[90%] mx-auto flex justify-between items-center">
           <div className="flex items-center gap-8">
-            <div className="relative flex items-center">
-              <button 
-                onClick={toggleAbout}
-                className={`absolute text-portfolio-text hover:text-portfolio-highlight transition-all duration-500 ease-in-out rounded-full size-8 flex items-center justify-center border border-portfolio-text hover:border-portfolio-highlight ${isAboutOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
-              >
-                <X size={20} />
-              </button>
-              <button 
-                onClick={toggleAbout}
-                className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-500 ease-in-out ${isAboutOpen ? 'text-portfolio-highlight underline underline-offset-8 translate-x-12' : 'translate-x-0'}`}
-              >
-                About
-              </button>
-            </div>
+            <NavButton onClick={toggleAbout} isOpen={isAboutOpen} label="About" />
             <div className={`flex items-center gap-8 transition-transform duration-500 ease-in-out ${isAboutOpen ? 'translate-x-14' : 'translate-x-0'}`}>
               <Link to="/" className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors">
                 Work
               </Link>
-              <div className="relative flex items-center">
-                <button 
-                  onClick={toggleContact}
-                  className={`absolute text-portfolio-text hover:text-portfolio-highlight transition-all duration-500 ease-in-out rounded-full size-8 flex items-center justify-center border border-portfolio-text hover:border-portfolio-highlight ${isContactOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
-                >
-                  <X size={20} />
-                </button>
-                <button 
-                  onClick={toggleContact}
-                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-500 ease-in-out ${isContactOpen ? 'text-portfolio-highlight underline underline-offset-8 translate-x-12' : 'translate-x-0'}`}
-                >
-                  Contact
-                </button>
-              </div>
+              <NavButton onClick={toggleContact} isOpen={isContactOpen} label="Contact" />
             </div>
           </div>
           <div>
@@ -124,7 +98,7 @@ const AboutContent = () => {
           <img 
             alt="UV Logo" 
             className="w-full h-full object-cover rounded-full" 
-            src="/public/images/uv_logo.png" 
+            src="/images/uv_logo.png" 
           />
         </div>
         <div className="text-[#f9f8e2] md:w-2/3 text-center md:text-left">
@@ -257,5 +231,22 @@ const EyeOfCuriosity = () => {
     </span>
   );
 };
+
+const NavButton = ({ onClick, isOpen, label }) => (
+  <div className="relative flex items-center">
+    <button 
+      onClick={onClick}
+      className={`absolute text-portfolio-text hover:text-portfolio-highlight transition-all duration-500 ease-in-out rounded-full size-8 flex items-center justify-center border border-portfolio-text hover:border-portfolio-highlight ${isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
+    >
+      <X size={20} />
+    </button>
+    <button 
+      onClick={onClick}
+      className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-500 ease-in-out ${isOpen ? 'text-portfolio-highlight underline underline-offset-8 translate-x-12' : 'translate-x-0'}`}
+    >
+      {label}
+    </button>
+  </div>
+);
 
 export default Navbar;
