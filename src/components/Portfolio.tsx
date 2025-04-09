@@ -93,26 +93,40 @@ const Portfolio = () => {
           >
             <div className="portfolio-divider"></div>
             <div className="flex items-center overflow-hidden">
-              <div className="text-4xl font-bold text-portfolio-text group-hover:text-portfolio-highlight whitespace-nowrap">
+              <div className="sm:hidden text-2xl font-bold text-portfolio-text whitespace-nowrap overflow-hidden text-ellipsis flex-1">
                 {project.name}
               </div>
+              <div className="hidden sm:block text-4xl font-bold text-portfolio-text group-hover:text-portfolio-highlight whitespace-nowrap">
+                {project.name}
+              </div>
+
               <div className="flex items-center gap-2 ml-4 whitespace-nowrap">
-                <span className="project-year-tag group-hover:project-year-tag-highlight group-hover:bg-portfolio-highlight group-hover:text-portfolio-text">
-                  {project.year}
-                </span>
-                
-                {project.categories.map((category) => (
-                  <span key={category} className="project-category-tag group-hover:project-category-tag-highlight">
-                    {category}
+                <div className="hidden sm:flex items-center gap-2">
+                  <span className="project-year-tag group-hover:project-year-tag-highlight group-hover:bg-portfolio-highlight group-hover:text-portfolio-text">
+                    {project.year}
                   </span>
-                ))}
-                
-                {project.comingSoon && (
-                  <span className="project-coming-soon-tag">
-                    COMING SOOOOOON
-                  </span>
-                )}
-                
+                  
+                  {project.categories.map((category) => (
+                    <span key={category} className="project-category-tag group-hover:project-category-tag-highlight">
+                      {category}
+                    </span>
+                  ))}
+                  
+                  {project.comingSoon && (
+                    <span className="project-coming-soon-tag">
+                      COMING SOOOOOON
+                    </span>
+                  )}
+                </div>
+
+                <div className="sm:hidden flex items-center">
+                  {project.categories.map((category) => (
+                    <span key={category} className="text-xs project-category-tag">
+                      {category}
+                    </span>
+                  ))}
+                </div>
+
                 {project.awardWinning && (
                   <div className="relative inline-block">
                     <AwardIcon />
@@ -120,7 +134,7 @@ const Portfolio = () => {
                 )}
                 
                 {hoveredProject === project.name && project.emojis && (
-                  <div className="flex ml-4 animate-fade-in overflow-hidden">
+                  <div className="hidden sm:flex ml-4 animate-fade-in overflow-hidden">
                     {project.emojis.map((emoji, index) => (
                       <span 
                         key={index} 
