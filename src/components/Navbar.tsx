@@ -205,17 +205,6 @@ const AboutContent = () => {
           {/* ... more awards ... */}
         </div>
       </div>
-
-      {/* Press Section */}
-      <div className="w-full mt-16 text-center md:text-left">
-        <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Press 🎉</h2>
-        <div className="text-[#f9f8e2]">
-          <p>2025 BRANDS IN MOTION</p>
-          <p>2025 I LOVE CREATIVES</p>
-          <p>2025 FONTS IN USE</p>
-          {/* ... more press ... */}
-        </div>
-      </div>
     </div>
   );
 };
