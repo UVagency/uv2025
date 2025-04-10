@@ -13,6 +13,16 @@
   display: none !important; /* Chrome, Safari, Opera */
 }
 
+/* Hide scrollbar for specific elements */
+.hideScrollbar {
+  -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;  /* Firefox */
+}
+
+.hideScrollbar::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari and Opera */
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

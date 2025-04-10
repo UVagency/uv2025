@@ -58,14 +58,15 @@ const Navbar = () => {
 
       {/* About Section */}
       <div 
-        className="w-full bg-[#283618] overflow-y-auto transition-all duration-500 ease-in-out"
+        className="w-full bg-[#283618] transition-all duration-500 ease-in-out hideScrollbar"
         style={{ 
           height: isAboutOpen ? '100vh' : '0',
-          opacity: isAboutOpen ? 1 : 0
+          opacity: isAboutOpen ? 1 : 0,
+          overflowY: isAboutOpen ? 'scroll' : 'hidden'
         }}
       >
         <div className="max-w-[90%] mx-auto relative h-full">
-          <div className="pt-24 px-4 h-full overflow-y-auto">
+          <div className="pt-24 pb-32 px-4 h-full hideScrollbar">
             <AboutContent />
           </div>
         </div>
@@ -86,13 +87,19 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        div::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </>
   );
 };
 
 const AboutContent = () => {
   return (
-    <div className="max-w-[90%] mx-auto flex flex-col items-center md:items-start">
+    <div className="max-w-[90%] mx-auto flex flex-col items-center md:items-start pb-16">
       <div className="w-full flex flex-col md:flex-row md:gap-16 items-center md:items-start">
         <div className="w-32 h-32 overflow-hidden">
           <img 
@@ -180,46 +187,39 @@ const AboutContent = () => {
         <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Our Services<span> 🧰</span></h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 md:gap-x-8">
           <div className="flex flex-col items-center md:items-start gap-2">
-            <ServiceItem name="Advertising" />
-            <ServiceItem name="Art Direction" />
-            <ServiceItem name="Branding" />
             <ServiceItem name="Brand Strategy" />
+            <ServiceItem name="Advertising" />
+            <ServiceItem name="Branding" />
             <ServiceItem name="Consultancy" />
-            <ServiceItem name="Copywriting" />
             <ServiceItem name="Concepts" />
             <ServiceItem name="Commercials" />
           </div>
           <div className="flex flex-col items-center md:items-start gap-2">
             <ServiceItem name="Digital" />
-            <ServiceItem name="Design" />
             <ServiceItem name="Exhibition" />
             <ServiceItem name="Film & Video" />
-            <ServiceItem name="Identity" />
             <ServiceItem name="Installation" />
             <ServiceItem name="Interactive" />
+            <ServiceItem name="Naming" />
           </div>
           <div className="flex flex-col items-center md:items-start gap-2">
-            <ServiceItem name="Naming" />
             <ServiceItem name="Print / OOH" />
             <ServiceItem name="Social Strategy" />
             <ServiceItem name="Social Content" />
-            <ServiceItem name="Strategy" />
             <ServiceItem name="Target Audience" />
-            <ServiceItem name="Website Design" />
           </div>
         </div>
       </div>
 
       {/* Awards & Festivals Section */}
-      <div className="w-full mt-16 text-center md:text-left">
+      {/*<div className="w-full mt-16 text-center md:text-left">
         <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Awards & Festivals 🏆</h2>
         <div className="text-[#f9f8e2]">
           <p>2025 AWWWARDS Honorable Mention</p>
           <p>2025 THE FWA Website Of The Day</p>
           <p>2025 CSS DESIGN AWARDS Website Of The Day</p>
-          {/* ... more awards ... */}
         </div>
-      </div>
+      </div>*/}
     </div>
   );
 };
