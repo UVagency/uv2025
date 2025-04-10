@@ -13,14 +13,14 @@ const highlights: HighlightProject[] = [
     name: "NEW CLIENTS",
     year: "2025",
     categories: ["WELCOME"],
-    imageUrl: "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png",
+    imageUrl: "images/portada_higlight1.jpg",
     slug: "soundcore"
   },
   {
     name: "CLOSER TO THE SUN",
     year: "2024",
     categories: ["IMMERSIVE"],
-    imageUrl: "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png",
+    imageUrl: "images/portada_higlight1.jpg",
     slug: "soundcore"
   }
 ];
