@@ -123,19 +123,60 @@ const AboutContent = () => {
       </div>
 
       {/* Values Section */}
-      <div className="w-full mt-16 text-center md:text-left">
+      <div className="w-full mt-16 text-center md:text-left md:pl-48">
         <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Values<span> 🥰</span></h2>
-        <p className="text-2xl md:text-3xl leading-relaxed text-[#f9f8e2] opacity-80">
-          UV is Zero Bullshit <span><EyeOfCuriosity /></span> Crazy High Standards <span><EyeOfCuriosity /></span><br/>
-          Endless Passion <span><EyeOfCuriosity /></span> Celebrating Emotion <span><EyeOfCuriosity /></span> Taking<br/>
-          Risks <span><EyeOfCuriosity /></span> Trusting Our Instincts <span><EyeOfCuriosity /></span> Being Human <span><EyeOfCuriosity /></span><br/>
-          Making Work That's Human <span><EyeOfCuriosity /></span> Taking Work Seriously<br/>
-          <span><EyeOfCuriosity /></span> Not Taking Ourselves Too Seriously
-        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 md:gap-x-8">
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <div className="flex items-center gap-3 justify-center md:justify-start">
+              <EyeOfCuriosity />
+              <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">UV is Zero Bullshit</span>
+            </div>
+            <div className="flex items-center gap-3 justify-center md:justify-start">
+              <EyeOfCuriosity />
+              <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">Crazy High Standards</span>
+            </div>
+            <div className="flex items-center gap-3 justify-center md:justify-start">
+              <EyeOfCuriosity />
+              <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">Endless Passion</span>
+            </div>
+            <div className="flex items-center gap-3 justify-center md:justify-start">
+              <EyeOfCuriosity />
+              <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">Celebrating Emotion</span>
+            </div>
+          </div>
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <div className="flex items-center gap-3 justify-center md:justify-start">
+              <EyeOfCuriosity />
+              <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">Taking Risks</span>
+            </div>
+            <div className="flex items-center gap-3 justify-center md:justify-start">
+              <EyeOfCuriosity />
+              <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">Trusting Our Instincts</span>
+            </div>
+            <div className="flex items-center gap-3 justify-center md:justify-start">
+              <EyeOfCuriosity />
+              <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">Being Human</span>
+            </div>
+            <div className="flex items-center gap-3 justify-center md:justify-start">
+              <EyeOfCuriosity />
+              <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">Making Work That's Human</span>
+            </div>
+          </div>
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <div className="flex items-center gap-3 justify-center md:justify-start">
+              <EyeOfCuriosity />
+              <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">Taking Work Seriously</span>
+            </div>
+            <div className="flex items-center gap-3 justify-center md:justify-start">
+              <EyeOfCuriosity />
+              <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">Not Taking Ourselves Too Seriously</span>
+            </div>
+          </div>
+        </div>
       </div>
       
       {/* Services Section */}
-      <div className="w-full mt-16 text-center md:text-left">
+      <div className="w-full mt-16 text-center md:text-left md:pl-48">
         <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Our Services<span> 🧰</span></h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 md:gap-x-8">
           <div className="flex flex-col items-center md:items-start gap-2">

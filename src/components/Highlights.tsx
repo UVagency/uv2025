@@ -46,11 +46,11 @@ const Highlights = () => {
             onClick={() => handleProjectClick(project.slug)}
             className="cursor-pointer group"
           >
-            <div className="relative w-full h-80 overflow-hidden rounded-md mb-4">
+            <div className="relative w-full overflow-hidden rounded-md mb-4">
               <img 
                 src={project.imageUrl} 
                 alt={project.name}
-                className="w-full h-full object-cover" 
+                className="w-full object-contain" 
               />
             </div>
             
