@@ -10,8 +10,11 @@ const Navbar = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   const toggleAbout = () => {
+    if (isContactOpen) {
+      setIsContactOpen(false);
+      document.body.classList.remove('contact-open');
+    }
     setIsAboutOpen(!isAboutOpen);
-    setIsContactOpen(false); // Close contact when opening about
     if (!isAboutOpen) {
       document.body.classList.add('about-open');
     } else {
@@ -20,8 +23,11 @@ const Navbar = () => {
   };
 
   const toggleContact = () => {
+    if (isAboutOpen) {
+      setIsAboutOpen(false);
+      document.body.classList.remove('about-open');
+    }
     setIsContactOpen(!isContactOpen);
-    setIsAboutOpen(false); // Close about when opening contact
     if (!isContactOpen) {
       document.body.classList.add('contact-open');
     } else {
@@ -42,12 +48,30 @@ const Navbar = () => {
       <nav className="w-full px-8 py-4 font-sans bg-portfolio-bg z-50 sticky top-0 overflow-x-hidden">
         <div className="max-w-[90%] mx-auto flex justify-between items-center">
           <div className="flex items-center gap-8">
-            <NavButton onClick={toggleAbout} isOpen={isAboutOpen} label="About" />
-            <div className={`flex items-center gap-8 transition-transform duration-500 ease-in-out ${isAboutOpen ? 'translate-x-14' : 'translate-x-0'}`}>
-              <Link to="/" className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors">
-                Work
-              </Link>
-              <NavButton onClick={toggleContact} isOpen={isContactOpen} label="Contact" />
+            <div className="relative flex items-center">
+              <button 
+                onClick={isContactOpen ? toggleContact : toggleAbout}
+                className={`absolute left-0 text-portfolio-text hover:text-portfolio-highlight transition-all duration-500 ease-in-out rounded-full size-8 flex items-center justify-center border border-portfolio-text hover:border-portfolio-highlight ${(isAboutOpen || isContactOpen) ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
+              >
+                <X size={20} />
+              </button>
+              <div className={`flex items-center gap-8 transition-transform duration-500 ease-in-out ${(isAboutOpen || isContactOpen) ? 'translate-x-12' : ''}`}>
+                <button 
+                  onClick={toggleAbout}
+                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-500 ease-in-out ${isAboutOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
+                >
+                  About
+                </button>
+                <Link to="/" className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors">
+                  Work
+                </Link>
+                <button 
+                  onClick={toggleContact}
+                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-500 ease-in-out ${isContactOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
+                >
+                  Contact
+                </button>
+              </div>
             </div>
           </div>
           <div>
@@ -272,7 +296,7 @@ const NavButton = ({ onClick, isOpen, label }) => (
     </button>
     <button 
       onClick={onClick}
-      className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-500 ease-in-out ${isOpen ? 'text-portfolio-highlight underline underline-offset-8 translate-x-12' : 'translate-x-0'}`}
+      className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-500 ease-in-out ${isOpen ? 'text-portfolio-highlight underline underline-offset-8 translate-x-12' : ''}`}
     >
       {label}
     </button>
