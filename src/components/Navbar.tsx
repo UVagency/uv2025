@@ -87,12 +87,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        div::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
     </>
   );
 };
