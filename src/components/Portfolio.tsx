@@ -11,6 +11,13 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    name: "SABOR DE BARRIO",
+    year: "2024",
+    categories: ["INTEGRATED"],
+    comingSoon: true,
+    emojis: ["🍴", "🍷", "🍽️", "🍴", "🍷"]
+  },
   { 
     name: "WE MAKE YOUR DAY", 
     year: "2024", 
