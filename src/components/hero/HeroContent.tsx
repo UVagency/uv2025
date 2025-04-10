@@ -31,21 +31,26 @@ export const HeroContent = () => {
   }, [currentWordIndex, showMainText, words]);
 
   return (
-    <div className="w-full">
+    <div className="w-full min-h-[calc(100vh-4rem)] flex flex-col justify-center">
       <div className={`transition-all duration-500 ${showMainText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="text-left">
-          <h1 className="text-[clamp(2rem,5vw,3.5rem)] leading-[1.2] text-portfolio-text">
-            <BreathingUVLogo />{" "}
+          <h1 className="text-[clamp(5rem,6vw,4.5rem)] leading-[1.2] text-portfolio-text">
+            <span className="text-portfolio-accent font-bold">UV</span>{" "}          
             <span className="font-normal italic">is</span>{" "}
-            <span className="font-black">the integrated marketing agency</span>{" "}
-            <span className="font-normal italic">Advertising that</span>{" "}
-            <span className="font-black">champions your brand</span>{". "}
-            <span className="font-normal italic">Campaigns that move people and</span>{" "}
-            <span className="font-black">create customers</span>{". "}
-            <span className="font-normal italic">Media that</span>{" "}
-            <span className="font-black">drives results</span>{". "}
-            <span className="font-normal italic">One agency, all in.</span>
-            {showHashtags && (
+            <span className="font-normal italic">the integrated marketing agency</span>{". "}
+            <span className="text-[#EBA3A9] italic hover:underline">Advertising</span>{" "}
+            <span className="font-normal italic">that champions your brand</span>{", "}
+            <span className="text-portfolio-muted-purple italic hover:underline">campaigns</span>{" "}
+            <span className="font-normal italic">that move people and</span>{" "}
+            <span className="font-normal italic underline">create customers</span>{". "}
+            <span className="text-portfolio-highlight italic hover:underline">Media</span>{" "}
+            <span className="font-normal italic">that drives results</span>{". "}
+            <br />
+            <Link to="/about" className="text-portfolio-accent font-bold hover:underline">
+              <span className="text-portfolio-accent italic hover:underline">One agency, all in.</span>
+            </Link>
+            
+            {/*showHashtags && (
               <>
                 {" "}
                 <Link to="/services/marketing" className="text-[#EBA3A9] font-bold hover:underline">
@@ -66,7 +71,7 @@ export const HeroContent = () => {
                 <span>.</span>
               </>
             )}
-            {!showHashtags && <span className="animate-pulse">|</span>}
+            {!showHashtags && <span className="animate-pulse">|</span>*/}
           </h1>
         </div>
       </div>
