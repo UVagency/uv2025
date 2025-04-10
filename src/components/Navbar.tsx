@@ -235,12 +235,7 @@ const ServiceItem = ({ name }: { name: string }) => {
 
 const EyeOfCuriosity = () => {
   const colorPalette = [
-    { bg: 'bg-portfolio-highlight', iris: 'bg-portfolio-text' },      // Default colors
-    { bg: 'bg-white', iris: 'bg-portfolio-accent' },                  // White with turquoise
     { bg: 'bg-portfolio-accent', iris: 'bg-portfolio-text' },         // Turquoise with dark green
-    { bg: 'bg-portfolio-soft-pink', iris: 'bg-portfolio-text' },      // Soft pink with dark green
-    { bg: 'bg-portfolio-muted-purple', iris: 'bg-white' },            // Muted purple with white
-    { bg: 'bg-portfolio-text-secondary', iris: 'bg-portfolio-highlight' }, // Gray with yellow
   ];
 
   const [colorScheme, setColorScheme] = useState(() => {
