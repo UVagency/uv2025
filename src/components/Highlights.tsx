@@ -1,35 +1,15 @@
 import { useNavigate } from "react-router-dom";
+import projectsData, { ProjectData } from "../data/projectsData";
+import { highlightIds } from "../data/highlightsConfig";
 
-interface HighlightProject {
-  name: string;
-  year: string;
-  categories: string[];
-  imageUrl: string;
-  slug: string;
-}
-
-const highlights: HighlightProject[] = [
-  {
-    name: "NEW CLIENTS",
-    year: "2025",
-    categories: ["WELCOME"],
-    imageUrl: "images/portada_higlight1.jpg",
-    slug: "soundcore"
-  },
-  {
-    name: "CLOSER TO THE SUN",
-    year: "2024",
-    categories: ["IMMERSIVE"],
-    imageUrl: "images/portada_higlight1.jpg",
-    slug: "soundcore"
-  }
-];
+// Seleccionar los proyectos destacados del projectsData
+const highlightedProjects = highlightIds.map(id => projectsData[id]);
 
 const Highlights = () => {
   const navigate = useNavigate();
   
-  const handleProjectClick = (projectSlug: string) => {
-    navigate(`/project/${projectSlug}`);
+  const handleProjectClick = (projectId: string) => {
+    navigate(`/project/${projectId}`);
   };
 
   return (
@@ -40,15 +20,15 @@ const Highlights = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {highlights.map((project) => (
+        {highlightedProjects.map((project) => (
           <div 
-            key={project.name} 
-            onClick={() => handleProjectClick(project.slug)}
+            key={project.id} 
+            onClick={() => handleProjectClick(project.id)}
             className="cursor-pointer group"
           >
             <div className="relative w-full overflow-hidden rounded-md mb-4">
               <img 
-                src={project.imageUrl} 
+                src={project.thumbnails[0]} 
                 alt={project.name}
                 className="w-full object-contain" 
               />
