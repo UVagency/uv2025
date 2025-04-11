@@ -9,6 +9,17 @@ const Navbar = () => {
   const [isInfoOpen, setIsInfoOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
 
+  useEffect(() => {
+    const handleToggleInfo = () => {
+      toggleInfo();
+    };
+
+    window.addEventListener('toggleInfo', handleToggleInfo);
+    return () => {
+      window.removeEventListener('toggleInfo', handleToggleInfo);
+    };
+  }, []);
+
   const toggleInfo = () => {
     if (isContactOpen) {
       setIsContactOpen(false);

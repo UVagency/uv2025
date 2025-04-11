@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 export const HeroContent = () => {
   const [showMainText, setShowMainText] = useState(false);
@@ -9,6 +8,12 @@ export const HeroContent = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [showHashtags, setShowHashtags] = useState(true);
   
+  const handleInfoClick = () => {
+    // Dispatch a custom event that Navbar will listen to
+    const event = new CustomEvent('toggleInfo');
+    window.dispatchEvent(event);
+  };
+
   useEffect(() => {
     const timer = setTimeout(() => setShowMainText(true), 300);
     return () => clearTimeout(timer);
@@ -30,7 +35,7 @@ export const HeroContent = () => {
   }, [currentWordIndex, showMainText, words]);
 
   return (
-    <div className="w-full flex flex-col justify-start pt-12">
+    <div className="w-full flex flex-col justify-start pt-16 md:pt-20">
       <div className={`max-w-[95%] md:max-w-[85%] lg:max-w-[75%] xl:max-w-[70%] mx-auto transition-all duration-500 ${showMainText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="text-left">
           <h1 className="text-[clamp(2rem,4vw,3rem)] sm:text-[clamp(2.5rem,5vw,4rem)] md:text-[clamp(3rem,5vw,5rem)] lg:text-[clamp(4rem,5vw,6rem)] leading-[1.2] text-portfolio-text">
@@ -45,9 +50,9 @@ export const HeroContent = () => {
             <span className="font-normal italic">and drives results through smart</span>{" "}
             <span className="text-portfolio-highlight italic hover:underline">media</span>{"."}
             <br className="hidden md:block" />
-            <Link to="/info" className="text-portfolio-accent font-bold hover:underline inline-block mt-2 md:mt-0">
+            <button onClick={handleInfoClick} className="text-portfolio-accent font-bold hover:underline inline-block mt-2 md:mt-0">
               <span className="text-portfolio-accent italic hover:underline">One agency, all in.</span>
-            </Link>
+            </button>
             
             {/*showHashtags && (
               <>
