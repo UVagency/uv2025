@@ -34,16 +34,16 @@ export const HeroContent = () => {
       <div className={`max-w-[95%] md:max-w-[85%] lg:max-w-[75%] xl:max-w-[70%] mx-auto transition-all duration-500 ${showMainText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="text-left">
           <h1 className="text-[clamp(2rem,4vw,3rem)] sm:text-[clamp(2.5rem,5vw,4rem)] md:text-[clamp(3rem,5vw,5rem)] lg:text-[clamp(4rem,5vw,6rem)] leading-[1.2] text-portfolio-text">
-            <span className="text-portfolio-accent font-bold">UV</span>{" "}          
+            <span className="text-portfolio-accent font-bold">UV</span>{" "}
             <span className="font-normal italic">is</span>{" "}
-            <span className="font-normal italic">the integrated marketing agency</span>{". "}
-            <span className="text-[#EBA3A9] italic hover:underline">Advertising</span>{" "}
-            <span className="font-normal italic">that champions your brand</span>{", "}
-            <span className="text-portfolio-muted-purple italic hover:underline">campaigns</span>{" "}
+            <span className="font-normal italic">the integrated marketing agency that champions your brand through</span>{" "}
+            <span className="text-[#EBA3A9] italic hover:underline">advertising</span>{", "}
+            <span className="font-normal italic">creates</span>{" "}
+            <span className="text-portfolio-muted-purple italic hover:underline">events</span>{" "}
             <span className="font-normal italic">that move people and</span>{" "}
-            <span className="font-normal italic underline">create customers</span>{". "}
-            <span className="text-portfolio-highlight italic hover:underline">Media</span>{" "}
-            <span className="font-normal italic">that drives results</span>{". "}
+            <span className="font-normal italic underline">create customers</span>{", "}
+            <span className="font-normal italic">and drives results through smart</span>{" "}
+            <span className="text-portfolio-highlight italic hover:underline">media</span>{"."}
             <br className="hidden md:block" />
             <Link to="/info" className="text-portfolio-accent font-bold hover:underline inline-block mt-2 md:mt-0">
               <span className="text-portfolio-accent italic hover:underline">One agency, all in.</span>
