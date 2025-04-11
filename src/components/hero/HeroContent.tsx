@@ -38,7 +38,7 @@ export const HeroContent = () => {
             <span className="font-normal italic">is</span>{" "}
             <span className="font-normal italic">the integrated marketing agency that champions your brand through</span>{" "}
             <span className="text-[#EBA3A9] italic hover:underline">advertising</span>{", "}
-            <span className="font-normal italic">creates</span>{" "}
+            <span className="font-normal italic">engineers</span>{" "}
             <span className="text-portfolio-muted-purple italic hover:underline">events</span>{" "}
             <span className="font-normal italic">that move people and</span>{" "}
             <span className="font-normal italic underline">create customers</span>{", "}
