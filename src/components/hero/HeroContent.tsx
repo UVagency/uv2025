@@ -1,14 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import BreathingUVLogo from "./BreathingUVLogo";
 
 export const HeroContent = () => {
   const [showMainText, setShowMainText] = useState(false);
   const [typedText, setTypedText] = useState("");
-  const fullText = "United Visions es una agencia creativa independiente. Creamos experiencias innovadoras para marcas audaces en";
+  const fullText = "United Visions is the integrated marketing agency that champions your brand, campaigns that move people and create customers, media that drives results. One agency, all in.";
   const words = fullText.split(" ");
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [showHashtags, setShowHashtags] = useState(false);
+  const [showHashtags, setShowHashtags] = useState(true);
   
   useEffect(() => {
     const timer = setTimeout(() => setShowMainText(true), 300);
@@ -34,7 +33,7 @@ export const HeroContent = () => {
     <div className="w-full min-h-[calc(100vh-4rem)] flex flex-col justify-center">
       <div className={`transition-all duration-500 ${showMainText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="text-left">
-          <h1 className="text-[clamp(5rem,6vw,4.5rem)] leading-[1.2] text-portfolio-text">
+          <h1 className="text-[clamp(6rem,6vw,4.5rem)] leading-[1.2] text-portfolio-text">
             <span className="text-portfolio-accent font-bold">UV</span>{" "}          
             <span className="font-normal italic">is</span>{" "}
             <span className="font-normal italic">the integrated marketing agency</span>{". "}
