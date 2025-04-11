@@ -2,8 +2,8 @@ import React from 'react';
 import { ProjectData } from '@/data/projectsData';
 import { X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { Badge } from '@/components/ui/badge';
-import { AwardIcon } from '@/components/AwardIcon';
+//import { Badge } from '@/components/ui/badge';
+//import { AwardIcon } from '@/components/AwardIcon';
 
 interface ProjectHeaderProps {
   project: ProjectData;

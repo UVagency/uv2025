@@ -6,26 +6,26 @@ import { X } from 'lucide-react';
 import Footer from './Footer';
 
 const Navbar = () => {
-  const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const [isInfoOpen, setIsInfoOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
 
-  const toggleAbout = () => {
+  const toggleInfo = () => {
     if (isContactOpen) {
       setIsContactOpen(false);
       document.body.classList.remove('contact-open');
     }
-    setIsAboutOpen(!isAboutOpen);
-    if (!isAboutOpen) {
-      document.body.classList.add('about-open');
+    setIsInfoOpen(!isInfoOpen);
+    if (!isInfoOpen) {
+      document.body.classList.add('info-open');
     } else {
-      document.body.classList.remove('about-open');
+      document.body.classList.remove('info-open');
     }
   };
 
   const toggleContact = () => {
-    if (isAboutOpen) {
-      setIsAboutOpen(false);
-      document.body.classList.remove('about-open');
+    if (isInfoOpen) {
+      setIsInfoOpen(false);
+      document.body.classList.remove('info-open');
     }
     setIsContactOpen(!isContactOpen);
     if (!isContactOpen) {
@@ -38,7 +38,7 @@ const Navbar = () => {
   // Cleanup effect
   useEffect(() => {
     return () => {
-      document.body.classList.remove('about-open');
+      document.body.classList.remove('info-open');
       document.body.classList.remove('contact-open');
     };
   }, []);
@@ -50,17 +50,17 @@ const Navbar = () => {
           <div className="flex items-center gap-8">
             <div className="relative flex items-center">
               <button 
-                onClick={isContactOpen ? toggleContact : toggleAbout}
-                className={`absolute left-0 text-portfolio-text hover:text-portfolio-highlight transition-all duration-500 ease-in-out rounded-full size-8 flex items-center justify-center border border-portfolio-text hover:border-portfolio-highlight ${(isAboutOpen || isContactOpen) ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
+                onClick={isContactOpen ? toggleContact : toggleInfo}
+                className={`absolute left-0 text-portfolio-text hover:text-portfolio-highlight transition-all duration-500 ease-in-out rounded-full size-8 flex items-center justify-center border border-portfolio-text hover:border-portfolio-highlight ${(isInfoOpen || isContactOpen) ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
               >
                 <X size={20} />
               </button>
-              <div className={`flex items-center gap-8 transition-transform duration-500 ease-in-out ${(isAboutOpen || isContactOpen) ? 'translate-x-12' : ''}`}>
+              <div className={`flex items-center gap-8 transition-transform duration-500 ease-in-out ${(isInfoOpen || isContactOpen) ? 'translate-x-12' : ''}`}>
                 <button 
-                  onClick={toggleAbout}
-                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-500 ease-in-out ${isAboutOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
+                  onClick={toggleInfo}
+                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-500 ease-in-out ${isInfoOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
                 >
-                  About
+                  INFO
                 </button>
                 <Link to="/" className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors">
                   Work
@@ -80,18 +80,18 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* About Section */}
+      {/* Info Section */}
       <div 
         className="w-full bg-[#283618] transition-all duration-500 ease-in-out hideScrollbar"
         style={{ 
-          height: isAboutOpen ? '100vh' : '0',
-          opacity: isAboutOpen ? 1 : 0,
-          overflowY: isAboutOpen ? 'scroll' : 'hidden'
+          height: isInfoOpen ? '100vh' : '0',
+          opacity: isInfoOpen ? 1 : 0,
+          overflowY: isInfoOpen ? 'scroll' : 'hidden'
         }}
       >
         <div className="max-w-[90%] mx-auto relative h-full">
           <div className="pt-24 pb-32 px-4 h-full hideScrollbar">
-            <AboutContent />
+            <InfoContent />
           </div>
         </div>
       </div>
@@ -115,7 +115,7 @@ const Navbar = () => {
   );
 };
 
-const AboutContent = () => {
+const InfoContent = () => {
   return (
     <div className="max-w-[90%] mx-auto flex flex-col items-center md:items-start pb-16">
       <div className="w-full flex flex-col md:flex-row md:gap-16 items-center md:items-start">
