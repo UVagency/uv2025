@@ -30,10 +30,10 @@ export const HeroContent = () => {
   }, [currentWordIndex, showMainText, words]);
 
   return (
-    <div className="w-full min-h-[calc(100vh-4rem)] flex flex-col justify-center">
-      <div className={`transition-all duration-500 ${showMainText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+    <div className="w-full flex flex-col justify-start pt-12">
+      <div className={`max-w-[95%] md:max-w-[85%] lg:max-w-[75%] xl:max-w-[70%] mx-auto transition-all duration-500 ${showMainText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="text-left">
-          <h1 className="text-[clamp(6rem,6vw,4.5rem)] leading-[1.2] text-portfolio-text">
+          <h1 className="text-[clamp(2rem,4vw,3rem)] sm:text-[clamp(2.5rem,5vw,4rem)] md:text-[clamp(3rem,5vw,5rem)] lg:text-[clamp(4rem,5vw,6rem)] leading-[1.2] text-portfolio-text">
             <span className="text-portfolio-accent font-bold">UV</span>{" "}          
             <span className="font-normal italic">is</span>{" "}
             <span className="font-normal italic">the integrated marketing agency</span>{". "}
@@ -44,8 +44,8 @@ export const HeroContent = () => {
             <span className="font-normal italic underline">create customers</span>{". "}
             <span className="text-portfolio-highlight italic hover:underline">Media</span>{" "}
             <span className="font-normal italic">that drives results</span>{". "}
-            <br />
-            <Link to="/about" className="text-portfolio-accent font-bold hover:underline">
+            <br className="hidden md:block" />
+            <Link to="/info" className="text-portfolio-accent font-bold hover:underline inline-block mt-2 md:mt-0">
               <span className="text-portfolio-accent italic hover:underline">One agency, all in.</span>
             </Link>
             

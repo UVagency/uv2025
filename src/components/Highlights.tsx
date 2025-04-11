@@ -33,7 +33,7 @@ const Highlights = () => {
   };
 
   return (
-    <div className="max-w-[90%] mx-auto px-4 mb-16 font-sans">
+    <div className="max-w-[90%] mx-auto px-4 mb-12 md:mb-24 font-sans">
       <div className="flex items-center mb-8">
         <h2 className="text-xl uppercase font-bold text-portfolio-text mr-2">Highlights</h2>
         <span>📌</span>
