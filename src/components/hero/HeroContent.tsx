@@ -45,7 +45,7 @@ export const HeroContent = () => {
             <span className="text-[#EBA3A9] italic hover:underline">advertising</span>{", "}
             <span className="font-normal italic">engineers</span>{" "}
             <span className="text-portfolio-muted-purple italic hover:underline">events</span>{" "}
-            <span className="font-normal italic">that move people and</span>{" "}
+            <span className="font-normal italic">that move people to</span>{" "}
             <span className="font-normal italic underline">create customers</span>{", "}
             <span className="font-normal italic">and drives results through smart</span>{" "}
             <span className="text-portfolio-highlight italic hover:underline">media</span>{"."}

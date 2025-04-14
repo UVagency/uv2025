@@ -35,7 +35,6 @@ export interface ProjectData {
 const projectsData: Record<string, ProjectData> = {
   "enjoy-the-unexpected": enjoyTheUnexpected as ProjectData,
   "festival-season": festivalSeason as ProjectData,
-  "mergui": mergui as ProjectData,
   "lolla-vibes": {
     id: "lolla-vibes",
     name: "LOLLA VIBES",
