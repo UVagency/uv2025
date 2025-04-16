@@ -142,7 +142,7 @@ const InfoContent = () => {
             <span className="italic text-portfolio-highlight">The Integrated Marketing Agency</span>
           </h1>
           <p className="text-2xl md:text-3xl leading-relaxed mb-6">
-            that champions brands through <span className="italic">advertising</span>, creates <span className="italic">events</span> that move people and turn them into customers, and drives results through smart<span className="italic"> media</span>.
+            that champions brands through <span className="italic">advertising</span>, engineers<span className="italic">events</span> that move people to create customers, and drives results through smart<span className="italic"> media</span>.
           </p>
           <p className="text-2xl md:text-3xl leading-relaxed mb-6">
             We specialize in <span className="italic">strategy, creativity, content, media and experiences</span>- all connected to help brands{" "}
