@@ -1,0 +1,62 @@
+{
+  "id": "fly-your-way",
+  "name": "FLY YOUR WAY",
+  "year": "2022",
+  "categories": ["MEDIA"],
+  "description": "Una campaña para una aerolínea que enfatiza la libertad y personalización en los viajes aéreos.",
+  "client": "JetSmart",
+  "fullDescription": "Desarrollamos para JetSmart una campaña integral que celebra la libertad de viajar según las propias reglas. A través de contenido digital, activaciones en aeropuertos y una sólida estrategia de medios, invitamos a los viajeros a personalizar cada aspecto de su experiencia de vuelo.",
+  "images": [
+    "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
+    "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png"
+  ],
+  "thumbnails": [
+    "https://images.unsplash.com/photo-1520437358207-323b43b50729?q=80&w=180",
+    "https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?q=80&w=180"
+  ],
+  "awardWinning": true,
+  "emojis": ["✈️", "🛫", "🌍", "☁️", "🧳"],
+  "gallery": {
+    "featureText": "Con 'Fly Your Way' transformamos la experiencia de vuelo en una expresión de <em>libertad personal</em> y <em>autonomía</em> para miles de viajeros.",
+    "sections": [
+      {
+        "type": "banner",
+        "image": "/projects/heineken/1Ehltid6EQTBlyE0CxMeRRms8.jpg",
+        "badge": {
+          "text": "LIBERTAD",
+          "position": "top-right"
+        }
+      },
+      {
+        "type": "textSection",
+        "content": "Para esta campaña premiada, redefinimos la experiencia de viaje aéreo, poniendo el control en manos de los pasajeros y permitiéndoles personalizar cada aspecto de su vuelo según sus necesidades y preferencias."
+      },
+      {
+        "type": "imageGrid",
+        "columns": 4,
+        "images": [
+          {
+            "src": "/projects/heineken/cGhtDiCoCLErCCMOEnRDZUnmoY.jpg",
+            "alt": "Experiencia de vuelo personalizada 1"
+          },
+          {
+            "src": "/projects/heineken/f2GjFaNoz5YryJtRYBqVd9MX9hU.jpg",
+            "alt": "Experiencia de vuelo personalizada 2",
+            "badge": {
+              "text": "PREMIO",
+              "position": "bottom-right"
+            }
+          },
+          {
+            "src": "/projects/heineken/qkUCZi5AQhfRwCtDI3yVy8egJFs.jpg",
+            "alt": "Experiencia de vuelo personalizada 3"
+          },
+          {
+            "src": "/projects/heineken/60Ukrd1QsZSPhuhRqaC5vVthP1A.jpg",
+            "alt": "Experiencia de vuelo personalizada 4"
+          }
+        ]
+      }
+    ]
+  }
+} 

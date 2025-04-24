@@ -1,0 +1,61 @@
+{
+  "id": "a-great-first-day",
+  "name": "A GREAT FIRST DAY",
+  "year": "2023",
+  "categories": ["PROMO"],
+  "description": "Una campaña motivacional centrada en el primer día de grandes proyectos, nuevos comienzos y oportunidades.",
+  "client": "Mattel",
+  "fullDescription": "Creamos para Mattel una campaña inspiracional que celebra los nuevos comienzos y primeras experiencias. A través de historias personales, activaciones en punto de venta y contenido digital, invitamos a las personas a dar el primer paso hacia sus sueños con entusiasmo y confianza.",
+  "images": [
+    "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
+    "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png"
+  ],
+  "thumbnails": [
+    "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=180",
+    "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=180"
+  ],
+  "emojis": ["🌅", "🚀", "📝", "🌱", "🎯"],
+  "gallery": {
+    "featureText": "Con 'A Great First Day' logramos inspirar a miles de personas a dar el primer paso hacia sus <em>sueños</em> con <em>confianza</em> y entusiasmo.",
+    "sections": [
+      {
+        "type": "banner",
+        "image": "/projects/heineken/1Ehltid6EQTBlyE0CxMeRRms8.jpg",
+        "badge": {
+          "text": "INICIO",
+          "position": "bottom-left"
+        }
+      },
+      {
+        "type": "textSection",
+        "content": "Para esta campaña, recopilamos historias reales de primeros días memorables y las transformamos en experiencias inspiradoras que motivaran a otros a dar ese primer paso decisivo."
+      },
+      {
+        "type": "imageGrid",
+        "columns": 4,
+        "images": [
+          {
+            "src": "/projects/heineken/cGhtDiCoCLErCCMOEnRDZUnmoY.jpg",
+            "alt": "Historia inspiradora 1"
+          },
+          {
+            "src": "/projects/heineken/f2GjFaNoz5YryJtRYBqVd9MX9hU.jpg",
+            "alt": "Historia inspiradora 2",
+            "badge": {
+              "text": "MOTIVACIÓN",
+              "position": "bottom-right"
+            }
+          },
+          {
+            "src": "/projects/heineken/qkUCZi5AQhfRwCtDI3yVy8egJFs.jpg",
+            "alt": "Historia inspiradora 3"
+          },
+          {
+            "src": "/projects/heineken/60Ukrd1QsZSPhuhRqaC5vVthP1A.jpg",
+            "alt": "Historia inspiradora 4"
+          }
+        ]
+      }
+    ]
+  }
+} 

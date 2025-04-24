@@ -1,0 +1,61 @@
+{
+  "id": "we-make-your-day",
+  "name": "WE MAKE YOUR DAY",
+  "year": "2024",
+  "categories": ["INTEGRATED"],
+  "description": "Una campaña interactiva diseñada para sorprender y alegrar el día de las personas con experiencias inesperadas.",
+  "client": "Krispy Kreme",
+  "fullDescription": "Desarrollamos una campaña integral para Krispy Kreme que transforma momentos ordinarios en experiencias memorables. A través de intervenciones sorpresa, acciones en punto de venta y contenido digital, llevamos sonrisas a las personas en su día a día.",
+  "images": [
+    "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
+    "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png"
+  ],
+  "thumbnails": [
+    "https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=180",
+    "https://images.unsplash.com/photo-1531686264889-56fdcabd163f?q=80&w=180"
+  ],
+  "emojis": ["🎁", "🎉", "🎊", "🎈", "🥳"],
+  "gallery": {
+    "featureText": "Con la campaña 'We Make Your Day', conseguimos transformar momentos cotidianos en <em>experiencias inolvidables</em> para miles de personas.",
+    "sections": [
+      {
+        "type": "banner",
+        "image": "/projects/heineken/1Ehltid6EQTBlyE0CxMeRRms8.jpg",
+        "badge": {
+          "text": "ALEGRÍA",
+          "position": "bottom-left"
+        }
+      },
+      {
+        "type": "textSection",
+        "content": "Para esta campaña, diseñamos una serie de intervenciones sorpresa en diversos puntos de la ciudad, llevando momentos de felicidad inesperada a personas en su rutina diaria."
+      },
+      {
+        "type": "imageGrid",
+        "columns": 4,
+        "images": [
+          {
+            "src": "/projects/heineken/cGhtDiCoCLErCCMOEnRDZUnmoY.jpg",
+            "alt": "Intervención sorpresa 1"
+          },
+          {
+            "src": "/projects/heineken/f2GjFaNoz5YryJtRYBqVd9MX9hU.jpg",
+            "alt": "Intervención sorpresa 2",
+            "badge": {
+              "text": "SORPRESA",
+              "position": "bottom-right"
+            }
+          },
+          {
+            "src": "/projects/heineken/qkUCZi5AQhfRwCtDI3yVy8egJFs.jpg",
+            "alt": "Intervención sorpresa 3"
+          },
+          {
+            "src": "/projects/heineken/60Ukrd1QsZSPhuhRqaC5vVthP1A.jpg",
+            "alt": "Intervención sorpresa 4"
+          }
+        ]
+      }
+    ]
+  }
+} 

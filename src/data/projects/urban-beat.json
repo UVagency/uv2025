@@ -1,0 +1,61 @@
+{
+  "id": "urban-beat",
+  "name": "URBAN BEAT",
+  "year": "2023",
+  "categories": ["INTEGRATED"],
+  "description": "Una serie de experiencias urbanas que fusionan música, arte callejero y cultura urbana en un ambiente dinámico.",
+  "client": "Ball Corporation",
+  "fullDescription": "Desarrollamos para Ball Corporation una plataforma experiencial que celebra la fusión entre la música urbana y el arte callejero. A través de intervenciones en espacios públicos, conciertos íntimos y contenido digital, conectamos con la audiencia joven en su propio territorio.",
+  "images": [
+    "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
+    "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png"
+  ],
+  "thumbnails": [
+    "https://images.unsplash.com/photo-1501386761578-eac5c94b8034?q=80&w=180",
+    "https://images.unsplash.com/photo-1570499998979-115dbcd8e4f8?q=80&w=180"
+  ],
+  "emojis": ["🏙️", "🎧", "🎵", "🎤", "🥁"],
+  "gallery": {
+    "featureText": "Con Urban Beat logramos crear un puente entre la <em>cultura urbana</em> y las <em>marcas</em>, generando un diálogo auténtico con la audiencia joven.",
+    "sections": [
+      {
+        "type": "banner",
+        "image": "/projects/heineken/1Ehltid6EQTBlyE0CxMeRRms8.jpg",
+        "badge": {
+          "text": "RITMO",
+          "position": "top-right"
+        }
+      },
+      {
+        "type": "textSection",
+        "content": "Para este proyecto, transformamos espacios urbanos en escenarios para la expresión artística, combinando música, arte callejero y cultura urbana en un ambiente dinámico y energético."
+      },
+      {
+        "type": "imageGrid",
+        "columns": 4,
+        "images": [
+          {
+            "src": "/projects/heineken/cGhtDiCoCLErCCMOEnRDZUnmoY.jpg",
+            "alt": "Intervención urbana 1"
+          },
+          {
+            "src": "/projects/heineken/f2GjFaNoz5YryJtRYBqVd9MX9hU.jpg",
+            "alt": "Intervención urbana 2",
+            "badge": {
+              "text": "URBANO",
+              "position": "bottom-right"
+            }
+          },
+          {
+            "src": "/projects/heineken/qkUCZi5AQhfRwCtDI3yVy8egJFs.jpg",
+            "alt": "Intervención urbana 3"
+          },
+          {
+            "src": "/projects/heineken/60Ukrd1QsZSPhuhRqaC5vVthP1A.jpg",
+            "alt": "Intervención urbana 4"
+          }
+        ]
+      }
+    ]
+  }
+} 
