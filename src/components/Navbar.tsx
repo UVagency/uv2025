@@ -28,6 +28,7 @@ const Navbar = () => {
     setIsInfoOpen(!isInfoOpen);
     if (!isInfoOpen) {
       document.body.classList.add('info-open');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       document.body.classList.remove('info-open');
     }

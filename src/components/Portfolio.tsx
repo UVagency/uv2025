@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 interface Project {
   name: string;
@@ -73,11 +73,36 @@ const projects: Project[] = [
 const Portfolio = () => {
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
   const navigate = useNavigate();
+  const location = useLocation();
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const [shouldScroll, setShouldScroll] = useState(false);
+
+  useEffect(() => {
+    // Verificar si venimos de una página de proyecto
+    if (location.state?.fromProject) {
+      setShouldScroll(true);
+    }
+  }, [location]);
+
+  useEffect(() => {
+    // Efecto separado para manejar el scroll
+    if (shouldScroll && projectsRef.current) {
+      const projectsSection = projectsRef.current;
+      const offset = projectsSection.offsetTop - 100;
+      window.scrollTo({
+        top: offset,
+        behavior: 'smooth'
+      });
+      setShouldScroll(false);
+    }
+  }, [shouldScroll]);
 
   const handleProjectClick = (projectName: string) => {
-    // Convertir el nombre del proyecto a un formato de URL adecuado
     const projectId = projectName.toLowerCase().replace(/\s+/g, '-');
-    navigate(`/project/${projectId}`);
+    navigate(`/project/${projectId}`, { 
+      state: { fromProject: true },
+      replace: true // Usar replace para evitar entradas en el historial
+    });
   };
 
   return (
@@ -87,7 +112,7 @@ const Portfolio = () => {
         <span>💎</span>
       </div>
 
-      <div className="space-y-4">
+      <div ref={projectsRef} className="space-y-4">
         {projects.map((project, index) => (
           <div 
             key={project.name} 
