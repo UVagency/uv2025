@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ProjectData } from '@/data/projectsData';
 import { X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -15,6 +15,17 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ project }) => {
   const handleClose = () => {
     navigate('/');
   };
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        handleClose();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
   
   return (
     <div className="max-w-[90%] mx-auto">

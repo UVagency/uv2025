@@ -17,7 +17,7 @@ interface BadgeProps {
 
 interface ImageItem {
   src: string;
-  alt?: string;
+  alt: string;
   badge?: BadgeProps;
   overlay?: React.ReactNode;
   ratio?: number;
