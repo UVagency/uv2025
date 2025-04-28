@@ -3,7 +3,7 @@
   "name": "ENJOY THE UNEXPECTED",
   "year": "2023",
   "categories": ["PROMO"],
-  "description": "With the activation of the 'Enjoy the unexpected' promotion, we were able to position the country's point of sale as the stars of the year.",
+  "description": "Through the activation of the 'Enjoy the Unexpected' promotion, we positioned the country's points of sale as the stars of the year.",
   "client": "Heineken",
   "fullDescription": "Creamos una campaña inmersiva para Heineken que desafía las expectativas tradicionales. A través de instalaciones interactivas y experiencias digitales únicas, invitamos a los consumidores a descubrir elementos sorprendentes que rompen con lo cotidiano.",
   "videoUrl": "https://vimeo.com/1079510908",
@@ -17,22 +17,20 @@
     "/projects/heineken_profile.png",
     "/projects/heineken/thb9mPzo81EbJ49Ok7VpWNtheA.jpg"
   ],
-  "emojis": ["🎲", "🎯", "🎪", "🎭", "✨"],
   "carouselSpeed": 10,
   "gallery": {
-    "featureText": "Este es e texto del carrusel",
+    "featureText": "'The 'Enjoy the Unexpected' campaign exceeded all our expectations, not only in terms of reach and engagement, but also in creating memorable experiences that strengthened our connection with consumers at every touchpoint.'",
     "sections": [
       {
         "type": "banner",
         "image": "/projects/heineken/1Ehltid6EQTBlyE0CxMeRRms8.jpg",
         "badge": {
-          "text": "SORPRESAS",
           "position": "top-right"
         }
       },
       {
         "type": "textSection",
-        "content": "From February to May, we reached 98% of the target audience on social media with a frequency of 3.5 per week. The campaign impressions on all digital media totaled 45,017,984. We had 16,563,829 views with an average CTR of 0.41%. The investment strategy included social media, programmatic, and YouTube on a case-by-case basis.\n\nThe activation of the store had better results than planned:\n+1,000 customers\n+USD 35,000 in billing\n+3,500 Heineken products sold\n+2,500 drafts redeemed\n+160,000 people participated in the Green Store\n\nWe closed this spectacular campaign with a big event. We invited more than 2,000 people to enjoy the UEFA Champions League final in the best Heineken style."
+        "content": "From February to May, we reached 98% of the target audience on social media, with an average frequency of 3.5 exposures per week. Campaign impressions across all digital media totaled 45,017,984. We achieved 16,563,829 views with an average CTR of 0.41%. The investment strategy included social media, programmatic advertising, and YouTube, applied on a case-by-case basis.\n\nThe in-store activation outperformed expectations:\n+1,000 customers\n+USD 35,000 in revenue\n+3,500 Heineken products sold\n+2,500 drafts redeemed\n+160,000 participants at the Green Store\n\nWe wrapped up this spectacular campaign with a major event, where we invited over 2,000 guests to enjoy the UEFA Champions League final, Heineken-style."
       },
       {
         "type": "imageGrid",
@@ -46,7 +44,6 @@
             "src": "/projects/heineken/f2GjFaNoz5YryJtRYBqVd9MX9hU.jpg",
             "alt": "Experiencia interactiva 2",
             "badge": {
-              "text": "INTERACTIVE",
               "position": "bottom-right"
             }
           },

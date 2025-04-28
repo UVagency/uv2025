@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface ProjectTextSectionProps {
@@ -11,7 +10,7 @@ const ProjectTextSection: React.FC<ProjectTextSectionProps> = ({
   className = ""
 }) => {
   return (
-    <div className={`text-3xl mb-8 text-portfolio-text/80 font-light ${className}`}>
+    <div className={`text-3xl mb-8 text-portfolio-text/80 font-light whitespace-pre-line ${className}`}>
       {children}
     </div>
   );
