@@ -74,7 +74,38 @@ const Navbar = () => {
                 >
                   INFO
                 </button>
-                <Link to="/" className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors">
+                <Link 
+                  to="/#highlights" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.getElementById('highlights');
+                    if (element) {
+                      const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                      const startPosition = window.pageYOffset;
+                      const distance = targetPosition - startPosition;
+                      const duration = 1000; // 1 second
+                      let start = null;
+
+                      function animation(currentTime) {
+                        if (start === null) start = currentTime;
+                        const timeElapsed = currentTime - start;
+                        const progress = Math.min(timeElapsed / duration, 1);
+                        const easeInOutCubic = progress < 0.5
+                          ? 4 * progress * progress * progress
+                          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+                        window.scrollTo(0, startPosition + distance * easeInOutCubic);
+
+                        if (timeElapsed < duration) {
+                          requestAnimationFrame(animation);
+                        }
+                      }
+
+                      requestAnimationFrame(animation);
+                    }
+                  }}
+                  className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors"
+                >
                   Work
                 </Link>
                 <button 
@@ -219,9 +250,9 @@ const InfoContent = () => {
           <div className="flex flex-col items-center md:items-start gap-2">
             <ServiceItem name="Brand Strategy" />
             <ServiceItem name="Advertising" />
-            <ServiceItem name="Branding" />
-            <ServiceItem name="Consultancy" />
-            <ServiceItem name="Concepts" />
+            <ServiceItem name="Visual Branding" />
+            <ServiceItem name="UX/UI Design" />
+            <ServiceItem name="Motion Design" />
             <ServiceItem name="Commercials" />
           </div>
           <div className="flex flex-col items-center md:items-start gap-2">

@@ -42,13 +42,13 @@ export const HeroContent = () => {
             <span className="text-portfolio-accent font-bold">UV</span>{" "}
             <span className="font-normal italic">is</span>{" "}
             <span className="font-normal italic">the integrated marketing agency that champions your brand through</span>{" "}
-            <span className="text-[#EBA3A9] italic hover:underline">advertising</span>{", "}
-            <span className="font-normal italic">engineers</span>{" "}
-            <span className="text-portfolio-muted-purple italic hover:underline">events</span>{" "}
+            <span className="text-[#EBA3A9] italic hover:underline">Omnichannel Campaigns</span>{", "}
+            <span className="font-normal italic">designs</span>{" "}
+            <span className="text-portfolio-muted-purple italic hover:underline">IRL Events</span>{" "}
             <span className="font-normal italic">that move people to</span>{" "}
             <span className="font-normal italic underline">create customers</span>{", "}
-            <span className="font-normal italic">and drives results through smart</span>{" "}
-            <span className="text-portfolio-highlight italic hover:underline">media</span>{"."}
+            <span className="font-normal italic">and drives results through</span>{" "}
+            <span className="text-portfolio-highlight italic hover:underline">Smart Media</span>{"."}
             <br className="hidden md:block" />
             <button onClick={handleInfoClick} className="text-portfolio-accent font-bold hover:underline inline-block mt-2 md:mt-0">
               <span className="text-portfolio-accent italic hover:underline">One agency, all in.</span>
