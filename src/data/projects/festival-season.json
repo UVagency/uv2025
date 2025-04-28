@@ -1,4 +1,3 @@
-
 {
   "id": "festival-season",
   "name": "FESTIVAL SEASON",
@@ -6,6 +5,8 @@
   "categories": ["CONTENT CREATION"],
   "description": "Una experiencia inmersiva que transporta a los espectadores a un entorno de verano tropical lleno de sol y playa.",
   "client": "Tiendas Paris",
+  "fullDescription": "Desarrollamos para Tiendas Paris una campaña integral que celebra la temporada de festivales. A través de experiencias inmersivas, contenido digital y activaciones en vivo, conectamos a los usuarios con la música y la cultura festivalera.",
+  "videoUrl": "https://vimeo.com/123456789",
   "images": [
     "/projects/loreal/IMG_5464.jpg",
     "/projects/loreal/IMG_5495.jpg",

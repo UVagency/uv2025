@@ -69,6 +69,7 @@ export interface ProjectData {
   fullDescription?: string;
   client?: string;
   songTitle?: string;
+  videoUrl?: string;
   images: string[];
   thumbnails: string[]; 
   comingSoon?: boolean;

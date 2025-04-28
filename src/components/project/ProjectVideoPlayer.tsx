@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { ProjectData } from '@/data/projectsData';
@@ -7,23 +6,33 @@ interface ProjectVideoPlayerProps {
   project: ProjectData;
 }
 
+const getVimeoId = (url: string) => {
+  const match = url.match(/vimeo\.com\/(\d+)/);
+  return match ? match[1] : null;
+};
+
 const ProjectVideoPlayer: React.FC<ProjectVideoPlayerProps> = ({ project }) => {
-  // Esta es una URL de video placeholder, en producción se usaría la del proyecto
-  const videoUrl = "https://assets.mixkit.co/videos/preview/mixkit-set-of-plateaus-seen-from-the-heights-in-a-sunset-26070-large.mp4";
-  
+  if (!project.videoUrl) return null;
+  const vimeoId = getVimeoId(project.videoUrl);
+  if (!vimeoId) return null;
+
+  // Personaliza el color con tu color de marca (hex sin #)
+  const color = "EBA3A9";
+
   return (
     <div className="mb-16 overflow-hidden rounded-lg bg-black">
       <AspectRatio ratio={16/9}>
-        <video 
-          className="w-full h-full object-cover"
-          controls
-          autoPlay={false}
-          playsInline
-          poster={project.images[0]}
-        >
-          <source src={videoUrl} type="video/mp4" />
-          Tu navegador no soporta videos HTML5.
-        </video>
+        <iframe
+          src={`https://player.vimeo.com/video/${vimeoId}?color=${color}&title=0&byline=0&portrait=0`}
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowFullScreen
+          className="w-full h-full"
+          style={{ background: "black" }}
+          title="Vimeo video player"
+        />
       </AspectRatio>
     </div>
   );
