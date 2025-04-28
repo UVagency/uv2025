@@ -20,7 +20,7 @@
   "emojis": ["🎲", "🎯", "🎪", "🎭", "✨"],
   "carouselSpeed": 10,
   "gallery": {
-    "featureText": "With the activation of the 'Enjoy the unexpected' promotion, we were able to position the country's point of sale as the <em>stars of the year</em>.",
+    "featureText": "Este es e texto del carrusel",
     "sections": [
       {
         "type": "banner",
@@ -32,7 +32,7 @@
       },
       {
         "type": "textSection",
-        "content": "Para esta campaña, desarrollamos una serie de instalaciones interactivas en los puntos de venta que reaccionaban de forma inesperada a las acciones de los consumidores."
+        "content": "From February to May, we reached 98% of the target audience on social media with a frequency of 3.5 per week. The campaign impressions on all digital media totaled 45,017,984. We had 16,563,829 views with an average CTR of 0.41%. The investment strategy included social media, programmatic, and YouTube on a case-by-case basis.\n\nThe activation of the store had better results than planned:\n+1,000 customers\n+USD 35,000 in billing\n+3,500 Heineken products sold\n+2,500 drafts redeemed\n+160,000 people participated in the Green Store\n\nWe closed this spectacular campaign with a big event. We invited more than 2,000 people to enjoy the UEFA Champions League final in the best Heineken style."
       },
       {
         "type": "imageGrid",
