@@ -57,6 +57,8 @@ export type GallerySection = BannerSection | TextSection | ImageGridSection | Mi
 
 export interface ProjectGallery {
   featureText: string;
+  featureTextAuthor?: string;
+  featureTextRole?: string;
   sections: GallerySection[];
 }
 

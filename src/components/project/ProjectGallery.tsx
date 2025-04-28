@@ -124,7 +124,10 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project, carouselSpeed 
         carouselSpeed={effectiveCarouselSpeed}
       />
 
-      <ProjectFeatureText>
+      <ProjectFeatureText
+        author={project.gallery.featureTextAuthor}
+        role={project.gallery.featureTextRole}
+      >
         <div dangerouslySetInnerHTML={{ __html: project.gallery.featureText }} />
       </ProjectFeatureText>
 
