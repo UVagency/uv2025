@@ -46,13 +46,19 @@ const Footer = () => {
       {/* Credits */}
       <div className="max-w-[90%] mx-auto mt-16 flex flex-col md:flex-row md:items-center text-sm text-gray-400 space-y-2 md:space-y-0">
         <div className="flex items-center">
-          <span>website design with  💖  by </span>
+          <span>with  💖  by </span>
           <a href="#" className="ml-1 text-white hover:text-portfolio-highlight">UV</a>
           <span className="mx-2 text-portfolio-highlight">✦</span>
         </div>
         <div className="flex items-center">
-          <span>code by </span>
-          <a href="https://jassu.xyz" target="_blank" rel="noopener noreferrer" className="ml-1 text-white hover:text-portfolio-highlight">Jassu</a>
+          <span>partners </span>
+          <a href="https://www.linkedin.com/in/gastonsilberman/" target="_blank" rel="noopener noreferrer" className="ml-1 text-white hover:text-portfolio-highlight">Gastón Silberman</a>,
+          <a href="https://www.linkedin.com/in/ebrenman/" target="_blank" rel="noopener noreferrer" className="ml-1 text-white hover:text-portfolio-highlight">Esteban Brenman</a>, y
+          <a href="https://www.linkedin.com/in/javierseverini/" target="_blank" rel="noopener noreferrer" className="ml-1 text-white hover:text-portfolio-highlight">Javier Severini</a>
+        </div>
+        <div className="flex items-center">
+          <span>&nbsp;founded by</span>
+          <a href="https://en.wikipedia.org/wiki/Mookie_Tenembaum" target="_blank" rel="noopener noreferrer" className="ml-1 text-white hover:text-portfolio-highlight">Mookie</a>
         </div>
       </div>
     </footer>
