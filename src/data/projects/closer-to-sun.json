@@ -6,57 +6,50 @@
   "description": "At Lolla 2025, we want you to feel the music like never before: vibrating with you in every jump, every chorus, every magical moment. Because good vibes aren't just heard—they're lived!",
   "client": "Soundcore by Anker",
   "fullDescription": "Creamos para Soundcore by Anker una experiencia inmersiva para Lollapalooza 2025 que redefine la manera en que el público siente la música. A través de tecnología innovadora, instalaciones interactivas y activaciones en vivo, acercamos a los asistentes a una experiencia sensorial completa donde la música se vuelve tangible.",
-  "videoUrl": "https://vimeo.com/123456789",
+  "videoUrl": "https://vimeo.com/1079780986",
   "images": [
-    "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png",
-    "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png"
+    "/projects/loreal/IMG_5464.jpg",
+    "/projects/loreal/IMG_5495.jpg",
+    "/projects/loreal/IMG_5605.jpg"
   ],
+  "comingSoon": true,
   "thumbnails": [
-    "/projects/heineken_profile.png", 
-    "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=180"
+    "/projects/loreal_profile.png",
+    "/projects/loreal/IMG_5624.jpg"
   ],
-  "emojis": ["💻", "🎨", "🌐", "✨", "🚀"],
+  "emojis": ["☀️", "🌊", "🏄‍♂️", "🌴", "🕶️"],
+  "carouselSpeed": 30,
   "gallery": {
-    "featureText": "Con 'Closer to the Sun' transformamos la experiencia musical en algo que va más allá del <em>oído</em>, creando conexiones que se <em>sienten</em> en todo el cuerpo.",
+    "featureText": "Capturando la esencia del <em>verano</em> y la <em>libertad</em>, creamos contenido que transporta al espectador a un oasis de sol y diversión.",
     "sections": [
       {
         "type": "banner",
-        "image": "/projects/heineken/1Ehltid6EQTBlyE0CxMeRRms8.jpg",
+        "image": "/projects/loreal/IMG_5739.jpg",
         "badge": {
-          "text": "VIBRACIÓN",
-          "position": "bottom-right"
         }
       },
       {
         "type": "textSection",
-        "content": "Para este proyecto, desarrollamos tecnología que traduce las ondas sonoras en vibraciones tangibles, permitiendo que el público sienta la música con todo su cuerpo, creando una experiencia inmersiva sin precedentes."
+        "content": "Para Festival Season, desarrollamos una campaña completa que abarca desde contenido digital para redes sociales hasta experiencias en tienda."
       },
       {
         "type": "imageGrid",
-        "columns": 4,
+        "columns": 3,
         "images": [
           {
-            "src": "/projects/heineken/cGhtDiCoCLErCCMOEnRDZUnmoY.jpg",
-            "alt": "Experiencia inmersiva 1"
+            "src": "/projects/loreal/IMG_5704.jpg",
+            "alt": "Concepto de verano 1"
           },
           {
-            "src": "/projects/heineken/f2GjFaNoz5YryJtRYBqVd9MX9hU.jpg",
-            "alt": "Experiencia inmersiva 2",
-            "badge": {
-              "text": "INMERSIVO",
-              "position": "bottom-right"
-            }
+            "src": "/projects/loreal/IMG_6113-2.jpg",
+            "alt": "Concepto de verano 2"
           },
           {
-            "src": "/projects/heineken/qkUCZi5AQhfRwCtDI3yVy8egJFs.jpg",
-            "alt": "Experiencia inmersiva 3"
-          },
-          {
-            "src": "/projects/heineken/60Ukrd1QsZSPhuhRqaC5vVthP1A.jpg",
-            "alt": "Experiencia inmersiva 4"
+            "src": "/projects/loreal/IMG_5624.jpg",
+            "alt": "Concepto de verano 3"
           }
         ]
       }
     ]
   }
-} 
+}

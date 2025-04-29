@@ -68,6 +68,20 @@ const projects: Project[] = [
     comingSoon: true,
     emojis: ["🥰", "✨", "🌟"]
   },
+  { 
+    name: "FESTIVAL SEASON", 
+    year: "2025", 
+    categories: ["CONTENT CREATION"], 
+    comingSoon: true,
+    emojis: ["🥰", "✨", "🌟"]
+  },
+  { 
+    name: "LOLLA VIBES", 
+    year: "2025", 
+    categories: ["IMMERSIVE"], 
+    comingSoon: true,
+    emojis: ["🥰", "✨", "🌟"]
+  },
 ];
 
 const Portfolio = () => {
@@ -112,7 +126,7 @@ const Portfolio = () => {
         <span>💎</span>
       </div>
 
-      <div ref={projectsRef} className="space-y-4">
+      <div ref={projectsRef} className="space-y-8">
         {projects.map((project, index) => (
           <div 
             key={project.name} 
