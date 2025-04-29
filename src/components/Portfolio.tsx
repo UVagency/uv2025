@@ -121,12 +121,12 @@ const Portfolio = () => {
 
   return (
     <div className="max-w-[90%] mx-auto px-4 py-0 font-sans">
-      <div className="flex items-center mb-8">
+      <div className="flex items-center mb-0">
         <h2 className="text-xl uppercase font-bold text-portfolio-text mr-2">Selected Projects</h2>
         <span>💎</span>
       </div>
 
-      <div ref={projectsRef} className="space-y-8 py-8">
+      <div ref={projectsRef} className="space-y-10 py-8">
         {projects.map((project, index) => (
           <div 
             key={project.name} 
@@ -158,7 +158,7 @@ const Portfolio = () => {
                   
                   {project.comingSoon && (
                     <span className="project-coming-soon-tag">
-                      COMING SOOOOOON
+                      COMING SOOOOON
                     </span>
                   )}
                 </div>
