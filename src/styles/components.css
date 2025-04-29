@@ -20,7 +20,7 @@
   }
   
   .portfolio-divider {
-    @apply border-t border-portfolio-divider my-4;
+    @apply border-t border-portfolio-divider my-1;
   }
   
   .project-item {
