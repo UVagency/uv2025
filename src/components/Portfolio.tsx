@@ -126,7 +126,7 @@ const Portfolio = () => {
         <span>💎</span>
       </div>
 
-      <div ref={projectsRef} className="space-y-10 py-8">
+      <div ref={projectsRef} className="space-y-4 py-8">
         {projects.map((project, index) => (
           <div 
             key={project.name} 
@@ -135,7 +135,7 @@ const Portfolio = () => {
             onMouseLeave={() => setHoveredProject(null)}
             onClick={() => handleProjectClick(project.name)}
           >
-            <div className="portfolio-divider"></div>
+            {index !== 0 && <div className="portfolio-divider"></div>}
             <div className="flex items-center overflow-hidden">
               <div className="sm:hidden text-lg font-bold text-portfolio-text whitespace-nowrap overflow-hidden text-ellipsis flex-1">
                 {project.name}
