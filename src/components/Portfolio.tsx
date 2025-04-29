@@ -126,7 +126,7 @@ const Portfolio = () => {
         <span>💎</span>
       </div>
 
-      <div ref={projectsRef} className="space-y-8">
+      <div ref={projectsRef} className="space-y-8 py-8">
         {projects.map((project, index) => (
           <div 
             key={project.name} 

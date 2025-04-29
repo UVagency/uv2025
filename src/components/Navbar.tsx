@@ -227,7 +227,7 @@ const InfoContent = () => {
             </div>
             <div className="flex items-center gap-3 justify-center md:justify-start">
               <EyeOfCuriosity />
-              <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">Making Work That's Human</span>
+              <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">Making Work That's Humane</span>
             </div>
           </div>
           <div className="flex flex-col items-center md:items-start gap-2">
