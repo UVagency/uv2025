@@ -13,49 +13,49 @@ interface Project {
 const projects: Project[] = [
   {
     name: "SABOR DE BARRIO",
-    year: "2024",
+    year: "DELICIOSA",
     categories: ["INTEGRATED"],
     comingSoon: true,
     emojis: ["🍴", "🍷", "🍽️", "🍴", "🍷"]
   },
   { 
     name: "WE MAKE YOUR DAY", 
-    year: "2024", 
+    year: "KRISPY KREME", 
     categories: ["INTEGRATED"], 
     comingSoon: true,
     emojis: ["🎁", "🎉", "🎊", "🎈", "🥳"]
   },
   { 
     name: "URBAN BEAT", 
-    year: "2023", 
+    year: "BALL CORPORATION", 
     categories: ["INTEGRATED"],
     comingSoon: true,
     emojis: ["🏙️", "🎧", "🎵", "🎤", "🥁"]
   },
   { 
     name: "ENJOY THE UNEXPECTED", 
-    year: "2023", 
+    year: "HEINEKEN", 
     categories: ["PROMO"],
     comingSoon: true,
     emojis: ["🎲", "🎯", "🎪", "🎭", "✨"]
   },
   { 
     name: "A GREAT FIRST DAY", 
-    year: "2023", 
+    year: "MATTEL", 
     categories: ["PROMO"],
     comingSoon: true,
     emojis: ["🌅", "🚀", "📝", "🌱", "🎯"]
   },
   { 
     name: "TURN UP THE VOLUME", 
-    year: "2023", 
+    year: "MAYBELLINE NEW YORK", 
     categories: ["LAUNCH"],
     comingSoon: true,
     emojis: ["🔊", "📢", "🎸", "🎺", "🔥"]
   },
   { 
     name: "FLY YOUR WAY", 
-    year: "2022", 
+    year: "JETSMART", 
     categories: ["MEDIA"], 
     comingSoon: true,
     awardWinning: true,
@@ -63,21 +63,21 @@ const projects: Project[] = [
   },
   { 
     name: "I FEEL UNIQUE", 
-    year: "2013", 
+    year: "L'ORÉAL PARIS", 
     categories: ["FILM"], 
     comingSoon: true,
     emojis: ["🥰", "✨", "🌟"]
   },
   { 
     name: "FESTIVAL SEASON", 
-    year: "2025", 
+    year: "TIENDAS PARIS", 
     categories: ["CONTENT CREATION"], 
     comingSoon: true,
     emojis: ["🥰", "✨", "🌟"]
   },
   { 
     name: "LOLLA VIBES", 
-    year: "2025", 
+    year: "SOUNDCORE BY ANKER", 
     categories: ["IMMERSIVE"], 
     comingSoon: true,
     emojis: ["🥰", "✨", "🌟"]
