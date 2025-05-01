@@ -11,9 +11,9 @@ const Index = () => {
       <Navbar />
       <div className="main-content">
         <Hero />
+        <BrandCarousel />
         <Highlights />
         <Portfolio />
-        <BrandCarousel />
         <Footer />
       </div>
     </div>

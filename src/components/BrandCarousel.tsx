@@ -42,7 +42,7 @@ const BrandCarousel = () => {
 
   return (
     <div className="py-16 bg-portfolio-bg overflow-hidden">
-      <div className="max-w-[90%] mx-auto">
+      <div className="max-w-[108%] mx-auto">
         <Carousel
           opts={options}
           plugins={[autoScrollPlugin]}
@@ -54,11 +54,14 @@ const BrandCarousel = () => {
                 key={index}
                 className="md:basis-1/4 lg:basis-1/5 px-4"
               >
-                <div className="h-16 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
+                <div
+                  style={{ width: 432, aspectRatio: '5 / 1' }}
+                  className="flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity"
+                >
                   <img
                     src={brand.logoUrl}
                     alt={`${brand.name} logo`}
-                    className="max-h-full max-w-full object-contain"
+                    className="max-h-full max-w-full object-contain hover:brightness-0 hover:saturate-100 hover:[filter:invert(77%)_sepia(13%)_saturate(1162%)_hue-rotate(132deg)_brightness(95%)_contrast(92%)] transition-all duration-300"
                   />
                 </div>
               </CarouselItem>
