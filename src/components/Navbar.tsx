@@ -272,6 +272,25 @@ const InfoContent = () => {
         </div>
       </div>
 
+      {/* Products Section */}
+      <div className="w-full mt-16 text-center md:text-left md:pl-48">
+        <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Our Products<span> 🧰</span></h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 md:gap-x-8">
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <ServiceItem name="Sense" />
+            <ServiceItem name="Grateful" />
+          </div>
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <ServiceItem name="Tril" />
+            <ServiceItem name="Cualquier Verdura" />
+          </div>
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <ServiceItem name="Guía Óleo" />
+            <ServiceItem name="Producto " />
+          </div>
+        </div>
+      </div>
+
       {/* Awards & Festivals Section */}
       {/*<div className="w-full mt-16 text-center md:text-left">
         <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Awards & Festivals 🏆</h2>
