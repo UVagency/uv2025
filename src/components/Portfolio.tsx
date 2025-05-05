@@ -7,7 +7,6 @@ interface Project {
   categories: string[];
   comingSoon?: boolean;
   awardWinning?: boolean;
-  emojis?: string[]; // Nueva propiedad para los emojis
 }
 
 const projects: Project[] = [
@@ -16,42 +15,36 @@ const projects: Project[] = [
     year: "DELICIOSA",
     categories: ["INTEGRATED"],
     comingSoon: true,
-    emojis: ["🍴", "🍷", "🍽️", "🍴", "🍷"]
   },
   { 
     name: "WE MAKE YOUR DAY", 
     year: "KRISPY KREME", 
     categories: ["INTEGRATED"], 
     comingSoon: true,
-    emojis: ["🎁", "🎉", "🎊", "🎈", "🥳"]
   },
   { 
     name: "URBAN BEAT", 
     year: "BALL CORPORATION", 
     categories: ["INTEGRATED"],
     comingSoon: true,
-    emojis: ["🏙️", "🎧", "🎵", "🎤", "🥁"]
   },
   { 
     name: "ENJOY THE UNEXPECTED", 
     year: "HEINEKEN", 
     categories: ["PROMO"],
     comingSoon: true,
-    emojis: ["🎲", "🎯", "🎪", "🎭", "✨"]
   },
   { 
     name: "A GREAT FIRST DAY", 
     year: "MATTEL", 
     categories: ["PROMO"],
     comingSoon: true,
-    emojis: ["🌅", "🚀", "📝", "🌱", "🎯"]
   },
   { 
     name: "TURN UP THE VOLUME", 
     year: "MAYBELLINE NEW YORK", 
     categories: ["LAUNCH"],
     comingSoon: true,
-    emojis: ["🔊", "📢", "🎸", "🎺", "🔥"]
   },
   { 
     name: "FLY YOUR WAY", 
@@ -59,28 +52,24 @@ const projects: Project[] = [
     categories: ["MEDIA"], 
     comingSoon: true,
     awardWinning: true,
-    emojis: ["✈️", "🛫", "🌍", "☁️", "🧳"]
   },
   { 
     name: "I FEEL UNIQUE", 
     year: "L'ORÉAL PARIS", 
     categories: ["FILM"], 
     comingSoon: true,
-    emojis: ["🥰", "✨", "🌟"]
   },
   { 
     name: "FESTIVAL SEASON", 
     year: "TIENDAS PARIS", 
     categories: ["CONTENT CREATION"], 
     comingSoon: true,
-    emojis: ["🥰", "✨", "🌟"]
   },
   { 
     name: "LOLLA VIBES", 
     year: "SOUNDCORE BY ANKER", 
     categories: ["IMMERSIVE"], 
     comingSoon: true,
-    emojis: ["🥰", "✨", "🌟"]
   },
 ];
 
@@ -173,23 +162,6 @@ const Portfolio = () => {
 
                 {project.awardWinning && (
                   <div className="relative inline-block hidden sm:block">
-                  </div>
-                )}
-                
-                {hoveredProject === project.name && project.emojis && (
-                  <div className="hidden sm:flex ml-4 animate-fade-in overflow-hidden">
-                    {project.emojis.map((emoji, index) => (
-                      <span 
-                        key={index} 
-                        className="text-4xl mx-1 animate-float" 
-                        style={{ 
-                          animationDelay: `${index * 0.15}s`,
-                          animationDuration: '2s'
-                        }}
-                      >
-                        {emoji}
-                      </span>
-                    ))}
                   </div>
                 )}
               </div>
