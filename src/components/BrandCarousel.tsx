@@ -13,6 +13,7 @@ const brands: Brand[] = [
   { name: "L'Oréal Paris", logoUrl: "/client-logos/loreal.svg" },
   { name: "Me-Elecmetal", logoUrl: "/client-logos/melecmetal.svg" },
   { name: "Little Caesars", logoUrl: "/client-logos/littlecaesars.svg" },
+  { name: "Procter & Gamble", logoUrl: "/client-logos/prochile.svg" },
   { name: "Ball", logoUrl: "/client-logos/ball.svg" },
   { name: "Heineken", logoUrl: "/client-logos/heineken.svg" },
   { name: "Chancaca Deliciosa", logoUrl: "/client-logos/deliciosa.svg" },
