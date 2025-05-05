@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ProjectDetail from "./pages/ProjectDetail";
+import './styles/carousel.css';
 
 // Create a client instance outside of the component
 const queryClient = new QueryClient();
