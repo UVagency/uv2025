@@ -250,18 +250,13 @@ const InfoContent = () => {
           <div className="flex flex-col items-center md:items-start gap-2">
             <ServiceItem name="Brand Strategy" />
             <ServiceItem name="Advertising" />
-            <ServiceItem name="Visual Branding" />
-            <ServiceItem name="UX/UI Design" />
-            <ServiceItem name="Motion Design" />
             <ServiceItem name="Commercials" />
           </div>
           <div className="flex flex-col items-center md:items-start gap-2">
             <ServiceItem name="Digital" />
             <ServiceItem name="Exhibition" />
             <ServiceItem name="Film & Video" />
-            <ServiceItem name="Installation" />
             <ServiceItem name="Interactive" />
-            <ServiceItem name="Naming" />
           </div>
           <div className="flex flex-col items-center md:items-start gap-2">
             <ServiceItem name="Print / OOH" />
