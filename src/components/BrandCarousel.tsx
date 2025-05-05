@@ -8,12 +8,14 @@ interface Brand {
 // Brand list with client logos from client-logos directory
 const brands: Brand[] = [
   { name: "Philips", logoUrl: "/client-logos/philips.svg" },
+  { name: "Gobierno de Chile", logoUrl: "/client-logos/gobiernochile.svg" },
   { name: "PepsiCo", logoUrl: "/client-logos/pepsico.svg" },
+  { name: "L'Oréal Paris", logoUrl: "/client-logos/loreal.svg" },
+  { name: "Me-Elecmetal", logoUrl: "/client-logos/melecmetal.svg" },
   { name: "Little Caesars", logoUrl: "/client-logos/littlecaesars.svg" },
-  { name: "Me-Elecmetal", logoUrl: "/client-logos/melecmetal.svg" },  
-  { name: "Chancaca Deliciosa", logoUrl: "/client-logos/chancaca.svg" },
   { name: "Ball", logoUrl: "/client-logos/ball.svg" },
   { name: "Heineken", logoUrl: "/client-logos/heineken.svg" },
+  { name: "Chancaca Deliciosa", logoUrl: "/client-logos/deliciosa.svg" },
   { name: "Royal Canin", logoUrl: "/client-logos/royalcanin.svg" },
   { name: "Edusoft", logoUrl: "/client-logos/edusoft.svg" },
   { name: "Krispy Kreme", logoUrl: "/client-logos/krispy_kreme.svg" }
