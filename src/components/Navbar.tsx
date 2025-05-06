@@ -193,52 +193,46 @@ const InfoContent = () => {
       {/* Values Section */}
       <div className="w-full mt-16 text-center md:text-left md:pl-48">
         <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Values<span> 🥰</span></h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 md:gap-x-8">
-          <div className="flex flex-col items-center md:items-start gap-2">
-            <div className="flex items-center gap-3 justify-center md:justify-start">
-              <EyeOfCuriosity />
-              <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">UV is Zero Bullshit</span>
-            </div>
-            <div className="flex items-center gap-3 justify-center md:justify-start">
-              <EyeOfCuriosity />
-              <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">Crazy High Standards</span>
-            </div>
-            <div className="flex items-center gap-3 justify-center md:justify-start">
-              <EyeOfCuriosity />
-              <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">Endless Passion</span>
-            </div>
-            <div className="flex items-center gap-3 justify-center md:justify-start">
-              <EyeOfCuriosity />
-              <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">Celebrating Emotion</span>
-            </div>
+        <div className="text-[#f9f8e2] space-y-6">
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">UV is Zero Bullshit</p>
+            <p className="text-sm opacity-80 inline">Direct and honest communication in everything we do</p>
           </div>
-          <div className="flex flex-col items-center md:items-start gap-2">
-            <div className="flex items-center gap-3 justify-center md:justify-start">
-              <EyeOfCuriosity />
-              <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">Taking Risks</span>
-            </div>
-            <div className="flex items-center gap-3 justify-center md:justify-start">
-              <EyeOfCuriosity />
-              <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">Trusting Our Instincts</span>
-            </div>
-            <div className="flex items-center gap-3 justify-center md:justify-start">
-              <EyeOfCuriosity />
-              <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">Being Human</span>
-            </div>
-            <div className="flex items-center gap-3 justify-center md:justify-start">
-              <EyeOfCuriosity />
-              <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">Making Work That's Humane</span>
-            </div>
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">Crazy High Standards</p>
+            <p className="text-sm opacity-80 inline">Excellence is not an option, it's our standard</p>
           </div>
-          <div className="flex flex-col items-center md:items-start gap-2">
-            <div className="flex items-center gap-3 justify-center md:justify-start">
-              <EyeOfCuriosity />
-              <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">Taking Work Seriously</span>
-            </div>
-            <div className="flex items-center gap-3 justify-center md:justify-start">
-              <EyeOfCuriosity />
-              <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">Not Taking Ourselves Too Seriously</span>
-            </div>
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">Endless Passion</p>
+            <p className="text-sm opacity-80 inline">We pour our hearts into every project</p>
+          </div>
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">Celebrating Emotion</p>
+            <p className="text-sm opacity-80 inline">We believe in the power of emotional connections</p>
+          </div>
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">Taking Risks</p>
+            <p className="text-sm opacity-80 inline">Bold moves lead to breakthrough results</p>
+          </div>
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">Trusting Our Instincts</p>
+            <p className="text-sm opacity-80 inline">Experience and intuition guide our decisions</p>
+          </div>
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">Being Human</p>
+            <p className="text-sm opacity-80 inline">Authenticity is at the core of our work</p>
+          </div>
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">Making Work That's Humane</p>
+            <p className="text-sm opacity-80 inline">We create with empathy and understanding</p>
+          </div>
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">Taking Work Seriously</p>
+            <p className="text-sm opacity-80 inline">Professional excellence in every detail</p>
+          </div>
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">Not Taking Ourselves Too Seriously</p>
+            <p className="text-sm opacity-80 inline">We maintain a light heart while doing serious work</p>
           </div>
         </div>
       </div>
@@ -246,23 +240,50 @@ const InfoContent = () => {
       {/* Services Section */}
       <div className="w-full mt-16 text-center md:text-left md:pl-48">
         <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Our Services<span> 🧰</span></h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 md:gap-x-8">
-          <div className="flex flex-col items-center md:items-start gap-2">
-            <ServiceItem name="Brand Strategy" />
-            <ServiceItem name="Advertising" />
-            <ServiceItem name="Commercials" />
+        <div className="text-[#f9f8e2] space-y-6">
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">Brand Strategy</p>
+            <p className="text-sm opacity-80 inline">Strategic brand development and positioning</p>
           </div>
-          <div className="flex flex-col items-center md:items-start gap-2">
-            <ServiceItem name="Digital" />
-            <ServiceItem name="Exhibition" />
-            <ServiceItem name="Film & Video" />
-            <ServiceItem name="Interactive" />
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">Advertising</p>
+            <p className="text-sm opacity-80 inline">Creative and effective advertising campaigns</p>
           </div>
-          <div className="flex flex-col items-center md:items-start gap-2">
-            <ServiceItem name="Print / OOH" />
-            <ServiceItem name="Social Strategy" />
-            <ServiceItem name="Social Content" />
-            <ServiceItem name="Target Audience" />
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">Commercials</p>
+            <p className="text-sm opacity-80 inline">High-impact video and TV commercials</p>
+          </div>
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">Digital</p>
+            <p className="text-sm opacity-80 inline">Comprehensive digital marketing solutions</p>
+          </div>
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">Exhibition</p>
+            <p className="text-sm opacity-80 inline">Immersive exhibition and event experiences</p>
+          </div>
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">Film & Video</p>
+            <p className="text-sm opacity-80 inline">Professional video production and storytelling</p>
+          </div>
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">Interactive</p>
+            <p className="text-sm opacity-80 inline">Engaging interactive digital experiences</p>
+          </div>
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">Print / OOH</p>
+            <p className="text-sm opacity-80 inline">Traditional and out-of-home advertising</p>
+          </div>
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">Social Strategy</p>
+            <p className="text-sm opacity-80 inline">Strategic social media planning and execution</p>
+          </div>
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">Social Content</p>
+            <p className="text-sm opacity-80 inline">Engaging social media content creation</p>
+          </div>
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">Target Audience</p>
+            <p className="text-sm opacity-80 inline">Precise audience targeting and engagement</p>
           </div>
         </div>
       </div>
@@ -270,31 +291,31 @@ const InfoContent = () => {
       {/* Products Section */}
       <div className="w-full mt-16 text-center md:text-left md:pl-48">
         <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Our Products<span> 🧰</span></h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 md:gap-x-8">
-          <div className="flex flex-col items-center md:items-start gap-2">
-            <ServiceItem name="Sense" />
-            <ServiceItem name="Grateful" />
+        <div className="text-[#f9f8e2] space-y-6">
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">Sense</p>
+            <p className="text-sm opacity-80 inline">Physical presence to digital insights</p>
           </div>
-          <div className="flex flex-col items-center md:items-start gap-2">
-            <ServiceItem name="Tril" />
-            <ServiceItem name="Cualquier Verdura" />
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">Grateful</p>
+            <p className="text-sm opacity-80 inline">Empower your businesses with crypto payments that are fast, secure, and cost-effective, so you keep more of what you earn.</p>
           </div>
-          <div className="flex flex-col items-center md:items-start gap-2">
-            <ServiceItem name="Guía Óleo" />
-            <ServiceItem name="Producto " />
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">Tril</p>
+            <p className="text-sm opacity-80 inline">A social platform for discovering and sharing personalized recommendations in music, movies, books, and more — connecting users through cultural taste and trusted suggestions.</p>
           </div>
         </div>
       </div>
 
       {/* Awards & Festivals Section */}
-      {/*<div className="w-full mt-16 text-center md:text-left">
+      <div className="w-full mt-16 text-center md:text-left md:pl-48">
         <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Awards & Festivals 🏆</h2>
         <div className="text-[#f9f8e2]">
           <p>2025 AWWWARDS Honorable Mention</p>
           <p>2025 THE FWA Website Of The Day</p>
           <p>2025 CSS DESIGN AWARDS Website Of The Day</p>
         </div>
-      </div>*/}
+      </div>}
     </div>
   );
 };
