@@ -231,7 +231,7 @@ const InfoContent = () => {
       
       {/* Services Section */}
       <div className="w-full mt-16 text-center md:text-left md:pl-48">
-        <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Our Services<span> 🧰</span></h2>
+        <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Our Services<span> 🤝</span></h2>
         <div className="text-[#f9f8e2] space-y-6">
   <div>
     <p className="text-lg font-semibold inline-block mr-2">Brand Building</p>
@@ -258,7 +258,7 @@ const InfoContent = () => {
 
       {/* Products Section */}
       <div className="w-full mt-16 text-center md:text-left md:pl-48">
-        <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Our Products<span> 🧰</span></h2>
+        <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Our Products<span> 🛠️</span></h2>
         <div className="text-[#f9f8e2] space-y-6">
           <div>
             <p className="text-lg font-semibold inline-block mr-2">Sense</p>

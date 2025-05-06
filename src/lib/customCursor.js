@@ -2,6 +2,14 @@
  * Custom cursor implementation that follows the mouse and changes state on hover
  */
 export function initCustomCursor() {
+  // Check if device is mobile
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+  
+  // Don't initialize custom cursor on mobile devices
+  if (isMobile) {
+    return;
+  }
+
   // Create cursor element if it doesn't exist
   if (!document.querySelector('.custom-cursor')) {
     const cursor = document.createElement('div');

@@ -50,11 +50,8 @@ export const HeroContent = () => {
               <span className="font-normal italic">through</span>
             </span>{" "}
             <span>
-              <span className="text-[#EBA3A9] italic hover:underline">Omnichannel</span>
+              <span className="text-[#EBA3A9] italic hover:underline">Omnichannel Campaigns</span>
             </span>{" "}
-            <span>
-              <span className="text-[#EBA3A9] italic hover:underline">Campaigns</span>
-            </span>,{" "}
             <span>
               <span className="font-normal italic">crafts</span>
             </span>{" "}

@@ -124,6 +124,21 @@
   }
 }
 
+/* Hide custom cursor on mobile devices */
+@media (max-width: 768px) {
+  * {
+    cursor: auto !important;
+  }
+  
+  body {
+    cursor: auto !important;
+  }
+  
+  .custom-cursor {
+    display: none !important;
+  }
+}
+
 /* Custom cursor implementation */
 .custom-cursor {
   position: fixed;
