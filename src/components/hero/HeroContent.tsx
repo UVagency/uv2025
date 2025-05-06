@@ -22,7 +22,7 @@ export const HeroContent = () => {
 
   return (
     <div className="w-full flex flex-col justify-start pt-8 md:pt-12">
-      <div className={`max-w-[95%] md:max-w-[85%] lg:max-w-[75%] xl:max-w-[70%] mx-auto transition-all duration-500 ${showMainText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <div className={`max-w-[100%] md:max-w-[85%] lg:max-w-[80%] xl:max-w-[70%] mx-auto transition-all duration-500 ${showMainText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="text-left">
           <h1 className="text-[clamp(1.5rem,3vw,2.5rem)] sm:text-[clamp(2rem,4vw,3rem)] md:text-[clamp(2.5rem,4vw,4rem)] lg:text-[clamp(3rem,4vw,5rem)] leading-[1.2] text-portfolio-text">
             <span>
@@ -50,10 +50,10 @@ export const HeroContent = () => {
               <span className="font-normal italic">through</span>
             </span>{" "}
             <span>
-              <span className="text-[#EBA3A9] italic hover:underline">Omnichannel Campaigns</span>
+              <span className="text-[#EBA3A9] italic hover:underline">Omnichannel</span>
             </span>{" "}
             <span>
-              <span className="font-normal italic">crafts</span>
+              <span className="font-normal italic">campaigns, crafts</span>
             </span>{" "}
             <span>
               <span className="text-portfolio-muted-purple italic hover:underline">Events</span>
