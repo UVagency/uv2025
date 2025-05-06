@@ -203,14 +203,6 @@ const InfoContent = () => {
             <p className="text-sm opacity-80 inline">Excellence is not an option, it's our standard</p>
           </div>
           <div>
-            <p className="text-lg font-semibold inline-block mr-2">Endless Passion</p>
-            <p className="text-sm opacity-80 inline">We pour our hearts into every project</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Celebrating Emotion</p>
-            <p className="text-sm opacity-80 inline">We believe in the power of emotional connections</p>
-          </div>
-          <div>
             <p className="text-lg font-semibold inline-block mr-2">Taking Risks</p>
             <p className="text-sm opacity-80 inline">Bold moves lead to breakthrough results</p>
           </div>
@@ -241,51 +233,27 @@ const InfoContent = () => {
       <div className="w-full mt-16 text-center md:text-left md:pl-48">
         <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Our Services<span> 🧰</span></h2>
         <div className="text-[#f9f8e2] space-y-6">
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Brand Strategy</p>
-            <p className="text-sm opacity-80 inline">Strategic brand development and positioning</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Advertising</p>
-            <p className="text-sm opacity-80 inline">Creative and effective advertising campaigns</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Commercials</p>
-            <p className="text-sm opacity-80 inline">High-impact video and TV commercials</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Digital</p>
-            <p className="text-sm opacity-80 inline">Comprehensive digital marketing solutions</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Exhibition</p>
-            <p className="text-sm opacity-80 inline">Immersive exhibition and event experiences</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Film & Video</p>
-            <p className="text-sm opacity-80 inline">Professional video production and storytelling</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Interactive</p>
-            <p className="text-sm opacity-80 inline">Engaging interactive digital experiences</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Print / OOH</p>
-            <p className="text-sm opacity-80 inline">Traditional and out-of-home advertising</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Social Strategy</p>
-            <p className="text-sm opacity-80 inline">Strategic social media planning and execution</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Social Content</p>
-            <p className="text-sm opacity-80 inline">Engaging social media content creation</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Target Audience</p>
-            <p className="text-sm opacity-80 inline">Precise audience targeting and engagement</p>
-          </div>
-        </div>
+  <div>
+    <p className="text-lg font-semibold inline-block mr-2">Brand Building</p>
+    <p className="text-sm opacity-80 inline">Developing and positioning brands with clarity and impact</p>
+  </div>
+  <div>
+    <p className="text-lg font-semibold inline-block mr-2">Advertising</p>
+    <p className="text-sm opacity-80 inline">Crafting creative and results-driven campaigns</p>
+  </div>
+  <div>
+    <p className="text-lg font-semibold inline-block mr-2">Exhibition</p>
+    <p className="text-sm opacity-80 inline">Designing immersive event and brand experiences</p>
+  </div>
+  <div>
+    <p className="text-lg font-semibold inline-block mr-2">Target Audience</p>
+    <p className="text-sm opacity-80 inline">Engaging the right people with precision</p>
+  </div>
+  <div>
+    <p className="text-lg font-semibold inline-block mr-2">Social Strategy & Content</p>
+    <p className="text-sm opacity-80 inline">Planning and producing content that connects</p>
+  </div>
+</div>
       </div>
 
       {/* Products Section */}
@@ -315,7 +283,7 @@ const InfoContent = () => {
           <p>2025 THE FWA Website Of The Day</p>
           <p>2025 CSS DESIGN AWARDS Website Of The Day</p>
         </div>
-      </div>}
+      </div>
     </div>
   );
 };
