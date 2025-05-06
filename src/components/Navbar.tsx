@@ -57,20 +57,20 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full px-8 py-4 font-sans bg-portfolio-bg z-50 sticky top-0 overflow-x-hidden">
+      <nav className="w-full px-4 py-2 font-sans bg-portfolio-bg z-50 sticky top-0 overflow-x-hidden">
         <div className="max-w-[90%] mx-auto flex justify-between items-center">
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-4 md:gap-8">
             <div className="relative flex items-center">
               <button 
                 onClick={isContactOpen ? toggleContact : toggleInfo}
-                className={`absolute left-0 text-portfolio-text hover:text-portfolio-highlight transition-all duration-500 ease-in-out rounded-full size-8 flex items-center justify-center border border-portfolio-text hover:border-portfolio-highlight ${(isInfoOpen || isContactOpen) ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
+                className={`absolute left-0 text-portfolio-text hover:text-portfolio-highlight transition-all duration-500 ease-in-out rounded-full size-6 md:size-8 flex items-center justify-center border border-portfolio-text hover:border-portfolio-highlight ${(isInfoOpen || isContactOpen) ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
               >
-                <X size={20} />
+                <X size={16} className="md:w-5 md:h-5" />
               </button>
-              <div className={`flex items-center gap-8 transition-transform duration-500 ease-in-out ${(isInfoOpen || isContactOpen) ? 'translate-x-12' : ''}`}>
+              <div className={`flex items-center gap-4 md:gap-8 transition-transform duration-500 ease-in-out ${(isInfoOpen || isContactOpen) ? 'translate-x-8 md:translate-x-12' : ''}`}>
                 <button 
                   onClick={toggleInfo}
-                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-500 ease-in-out ${isInfoOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
+                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-500 ease-in-out text-sm md:text-base ${isInfoOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
                 >
                   INFO
                 </button>
@@ -83,7 +83,7 @@ const Navbar = () => {
                       const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
                       const startPosition = window.pageYOffset;
                       const distance = targetPosition - startPosition;
-                      const duration = 1000; // 1 second
+                      const duration = 1000;
                       let start = null;
 
                       function animation(currentTime) {
@@ -104,13 +104,13 @@ const Navbar = () => {
                       requestAnimationFrame(animation);
                     }
                   }}
-                  className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors"
+                  className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors text-sm md:text-base"
                 >
                   Work
                 </Link>
                 <button 
                   onClick={toggleContact}
-                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-500 ease-in-out ${isContactOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
+                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-500 ease-in-out text-sm md:text-base ${isContactOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
                 >
                   Contact
                 </button>
