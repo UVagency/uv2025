@@ -53,7 +53,7 @@ const Footer = () => {
         <div className="flex items-center">
           <span>partners </span>
           <a href="https://www.linkedin.com/in/gastonsilberman/" target="_blank" rel="noopener noreferrer" className="ml-1 text-white hover:text-portfolio-highlight">Gastón Silberman</a>,
-          <a href="https://www.linkedin.com/in/ebrenman/" target="_blank" rel="noopener noreferrer" className="ml-1 text-white hover:text-portfolio-highlight">Esteban Brenman</a>, y
+          <a href="https://www.linkedin.com/in/ebrenman/" target="_blank" rel="noopener noreferrer" className="ml-1 text-white hover:text-portfolio-highlight">Esteban Brenman</a>, and
           <a href="https://www.linkedin.com/in/javierseverini/" target="_blank" rel="noopener noreferrer" className="ml-1 text-white hover:text-portfolio-highlight">Javier Severini</a>
         </div>
         <div className="flex items-center">
