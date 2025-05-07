@@ -195,16 +195,16 @@ const InfoContent = () => {
         <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Values<span> 🥰</span></h2>
         <div className="text-[#f9f8e2] space-y-6">
           <div>
-            <p className="text-lg font-semibold inline-block mr-2">UV is Zero Bullshit</p>
-            <p className="text-sm opacity-80 inline">Direct and honest communication in everything we do</p>
+            <p className="text-lg font-semibold inline-block mr-2">Taking Work Seriously</p>
+            <p className="text-sm opacity-80 inline">Excellence in every detail, consistently.</p>
           </div>
           <div>
-            <p className="text-lg font-semibold inline-block mr-2">Crazy High Standards</p>
+            <p className="text-lg font-semibold inline-block mr-2">High Standards</p>
             <p className="text-sm opacity-80 inline">Excellence is not an option, it's our standard</p>
           </div>
           <div>
-            <p className="text-lg font-semibold inline-block mr-2">Taking Risks</p>
-            <p className="text-sm opacity-80 inline">Bold moves lead to breakthrough results</p>
+            <p className="text-lg font-semibold inline-block mr-2">Zero Bullshit</p>
+            <p className="text-sm opacity-80 inline">We communicate clearly and honestly—with our clients and with each other.</p>
           </div>
           <div>
             <p className="text-lg font-semibold inline-block mr-2">Trusting Our Instincts</p>
@@ -217,14 +217,6 @@ const InfoContent = () => {
           <div>
             <p className="text-lg font-semibold inline-block mr-2">Making Work That's Humane</p>
             <p className="text-sm opacity-80 inline">We create with empathy and understanding</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Taking Work Seriously</p>
-            <p className="text-sm opacity-80 inline">Professional excellence in every detail</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Not Taking Ourselves Too Seriously</p>
-            <p className="text-sm opacity-80 inline">We maintain a light heart while doing serious work</p>
           </div>
         </div>
       </div>

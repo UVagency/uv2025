@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
         <div className="flex items-center">
           <span>&nbsp;founded by</span>
-          <a href="https://en.wikipedia.org/wiki/Mookie_Tenembaum" target="_blank" rel="noopener noreferrer" className="ml-1 text-white hover:text-portfolio-highlight">Mookie</a>
+          <a href="https://en.wikipedia.org/wiki/Mookie_Tenembaum" target="_blank" rel="noopener noreferrer" className="ml-1 text-white hover:text-portfolio-highlight">Mookie & Hebe.</a>
         </div>
       </div>
     </footer>
