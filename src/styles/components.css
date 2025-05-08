@@ -20,11 +20,14 @@
   }
   
   .portfolio-divider {
-    @apply border-t border-portfolio-divider my-1;
+    @apply border-t border-portfolio-divider;
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
   }
   
   .project-item {
-    @apply relative;
+    @apply relative flex flex-col justify-center;
+    min-height: 108px;
   }
 }
 

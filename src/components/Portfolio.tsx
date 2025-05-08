@@ -115,58 +115,60 @@ const Portfolio = () => {
         <span>💎</span>
       </div>
 
-      <div ref={projectsRef} className="space-y-4 py-8">
+      <div ref={projectsRef} className="space-y-0 py-8">
         {projects.map((project, index) => (
-          <div 
-            key={project.name} 
-            className="project-item group cursor-pointer"
-            onMouseEnter={() => setHoveredProject(project.name)}
-            onMouseLeave={() => setHoveredProject(null)}
-            onClick={() => handleProjectClick(project.name)}
-          >
+          <>
             {index !== 0 && <div className="portfolio-divider"></div>}
-            <div className="flex items-center overflow-hidden">
-              <div className="sm:hidden text-lg font-bold text-portfolio-text whitespace-nowrap overflow-hidden text-ellipsis flex-1">
-                {project.name}
-              </div>
-              <div className="hidden sm:block text-4xl font-bold text-portfolio-text group-hover:text-portfolio-highlight whitespace-nowrap">
-                {project.name}
-              </div>
+            <div 
+              key={project.name} 
+              className="project-item group cursor-pointer"
+              onMouseEnter={() => setHoveredProject(project.name)}
+              onMouseLeave={() => setHoveredProject(null)}
+              onClick={() => handleProjectClick(project.name)}
+            >
+              <div className="flex items-center overflow-hidden">
+                <div className="sm:hidden text-lg font-bold text-portfolio-text whitespace-nowrap overflow-hidden text-ellipsis flex-1">
+                  {project.name}
+                </div>
+                <div className="hidden sm:block text-4xl font-bold text-portfolio-text group-hover:text-portfolio-highlight whitespace-nowrap">
+                  {project.name}
+                </div>
 
-              <div className="flex items-center gap-1 sm:gap-2 ml-2 sm:ml-4 whitespace-nowrap">
-                <div className="hidden sm:flex items-center gap-2">
-                  <span className="project-year-tag group-hover:project-year-tag-highlight group-hover:bg-portfolio-highlight group-hover:text-portfolio-text">
-                    {project.year}
-                  </span>
-                  
-                  {project.categories.map((category) => (
-                    <span key={category} className="project-category-tag group-hover:project-category-tag-highlight">
-                      {category}
+                <div className="flex items-center gap-1 sm:gap-2 ml-2 sm:ml-4 whitespace-nowrap">
+                  <div className="hidden sm:flex items-center gap-2">
+                    <span className="project-year-tag group-hover:project-year-tag-highlight group-hover:bg-portfolio-highlight group-hover:text-portfolio-text">
+                      {project.year}
                     </span>
-                  ))}
-                  
-                  {project.comingSoon && (
-                    <span className="project-coming-soon-tag">
-                      COMING SOOOOON
-                    </span>
+                    
+                    {project.categories.map((category) => (
+                      <span key={category} className="project-category-tag group-hover:project-category-tag-highlight">
+                        {category}
+                      </span>
+                    ))}
+                    
+                    {project.comingSoon && (
+                      <span className="project-coming-soon-tag">
+                        COMING SOOOOON
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="sm:hidden flex items-center gap-1">
+                    {project.categories.map((category) => (
+                      <span key={category} className="text-[10px] project-coming-soon-tag">
+                        {category}
+                      </span>
+                    ))}
+                  </div>
+
+                  {project.awardWinning && (
+                    <div className="relative inline-block hidden sm:block">
+                    </div>
                   )}
                 </div>
-
-                <div className="sm:hidden flex items-center gap-1">
-                  {project.categories.map((category) => (
-                    <span key={category} className="text-[10px] project-coming-soon-tag">
-                      {category}
-                    </span>
-                  ))}
-                </div>
-
-                {project.awardWinning && (
-                  <div className="relative inline-block hidden sm:block">
-                  </div>
-                )}
               </div>
             </div>
-          </div>
+          </>
         ))}
       </div>
     </div>
