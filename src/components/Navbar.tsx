@@ -195,28 +195,32 @@ const InfoContent = () => {
         <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Values<span> 🥰</span></h2>
         <div className="text-[#f9f8e2] space-y-6">
           <div>
-            <p className="text-lg font-semibold inline-block mr-2">Taking Work Seriously</p>
-            <p className="text-sm opacity-80 inline">Excellence in every detail, consistently.</p>
+            <p className="text-lg font-semibold inline-block mr-2">🤝 Co-Creation Over Ego</p>
+            <p className="text-sm opacity-80 inline">The best work happens when we build together. We collaborate with clients and teammates as partners, listening actively and shaping ideas collectively.</p>
           </div>
           <div>
-            <p className="text-lg font-semibold inline-block mr-2">High Standards</p>
-            <p className="text-sm opacity-80 inline">Excellence is not an option, it's our standard</p>
+            <p className="text-lg font-semibold inline-block mr-2">🧠 Bold Intuition</p>
+            <p className="text-sm opacity-80 inline">We trust our instincts and take calculated risks. Experience, curiosity, and courage guide us to solutions that make a real difference.</p>
           </div>
           <div>
-            <p className="text-lg font-semibold inline-block mr-2">Zero Bullshit</p>
-            <p className="text-sm opacity-80 inline">We communicate clearly and honestly—with our clients and with each other.</p>
+            <p className="text-lg font-semibold inline-block mr-2">🫂 Human-Centered Thinking</p>
+            <p className="text-sm opacity-80 inline">People come first. We design and communicate with empathy, emotional intelligence, and awareness — never losing sight of the human on the other side.</p>
           </div>
           <div>
-            <p className="text-lg font-semibold inline-block mr-2">Trusting Our Instincts</p>
-            <p className="text-sm opacity-80 inline">Experience and intuition guide our decisions</p>
+            <p className="text-lg font-semibold inline-block mr-2">💬 Radical Transparency</p>
+            <p className="text-sm opacity-80 inline">We speak with honesty and clarity — with clients, within our team, always. Open dialogue is how we build trust and move forward, even through tension.</p>
           </div>
           <div>
-            <p className="text-lg font-semibold inline-block mr-2">Being Human</p>
-            <p className="text-sm opacity-80 inline">Authenticity is at the core of our work</p>
+            <p className="text-lg font-semibold inline-block mr-2">🛠️ Excellence in the Details</p>
+            <p className="text-sm opacity-80 inline">We don't do things halfway. Every touchpoint matters — from a campaign to a line of code. We aim for professional excellence, every time.</p>
           </div>
           <div>
-            <p className="text-lg font-semibold inline-block mr-2">Making Work That's Humane</p>
-            <p className="text-sm opacity-80 inline">We create with empathy and understanding</p>
+            <p className="text-lg font-semibold inline-block mr-2">🌍 Multicultural by Design</p>
+            <p className="text-sm opacity-80 inline">We thrive in diverse contexts. Different cultures, languages, and perspectives enrich our creativity and sharpen our thinking. We build for a global world — with local understanding.</p>
+          </div>
+          <div>
+            <p className="text-lg font-semibold inline-block mr-2">⚖️ Balanced Flow</p>
+            <p className="text-sm opacity-80 inline">We believe that giving and receiving are part of the same cycle. Our work is rooted in reciprocity, acknowledgment, and shared growth.</p>
           </div>
         </div>
       </div>
