@@ -9,6 +9,7 @@ import aGreatFirstDay from './projects/a-great-first-day.json';
 import turnUpTheVolume from './projects/turn-up-the-volume.json';
 import flyYourWay from './projects/fly-your-way.json';
 import closerToSun from './projects/closer-to-sun.json';
+import saborDeBarrio from './projects/sabor-de-barrio.json';
 
 interface BadgeProps {
   text: string;
@@ -91,7 +92,8 @@ const projectsData: Record<string, ProjectData> = {
   "a-great-first-day": aGreatFirstDay as ProjectData,
   "turn-up-the-volume": turnUpTheVolume as ProjectData,
   "fly-your-way": flyYourWay as ProjectData,
-  "closer-to-sun": closerToSun as ProjectData
+  "closer-to-sun": closerToSun as ProjectData,
+  "sabor-de-barrio": saborDeBarrio as ProjectData
 };
 
 export default projectsData;
