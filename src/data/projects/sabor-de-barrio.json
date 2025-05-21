@@ -1,0 +1,58 @@
+{
+  "id": "sabor-de-barrio",
+  "name": "SABOR DE BARRIO",
+  "year": "CHANCACA DELICIOSA",
+  "categories": ["BRANDING"],
+  "description": "A brand transformation project that redefined Chancaca Deliciosa's identity, creating a modern and authentic connection with its audience through a fresh visual language and compelling storytelling.",
+  "client": "Chancaca Deliciosa",
+  "fullDescription": "Transform Chancaca Deliciosa's brand identity to better connect with its audience while maintaining its authentic essence. The project involved creating a new visual language, packaging design, and brand strategy that would resonate with modern consumers while honoring the brand's traditional roots.",
+  "videoUrl": "https://vimeo.com/1079782182",
+  "images": [
+    "/projects/chancaca/IMG_1.jpg",
+    "/projects/chancaca/IMG_2.jpg",
+    "/projects/chancaca/IMG_3.jpg"
+  ],
+  "comingSoon": false,
+  "thumbnails": [
+    "/projects/chancaca_profile.png",
+    "/projects/chancaca/IMG_4.jpg"
+  ],
+  "carouselSpeed": 30,
+  "gallery": {
+    "featureText": "The rebranding project successfully modernized Chancaca Deliciosa's image while preserving its authentic essence, creating a stronger emotional connection with consumers.",
+    "sections": [
+      {
+        "type": "banner",
+        "image": "/projects/chancaca/IMG_5.jpg",
+        "badge": {
+        }
+      },
+      {
+        "type": "textSection",
+        "content": "Transform Chancaca Deliciosa's brand identity to better connect with its audience while maintaining its authentic essence. The project involved creating a new visual language, packaging design, and brand strategy that would resonate with modern consumers while honoring the brand's traditional roots."
+      },
+      {
+        "type": "imageGrid",
+        "columns": 3,
+        "images": [
+          {
+            "src": "/projects/chancaca/IMG_6.jpg",
+            "alt": "Brand Identity 1"
+          },
+          {
+            "src": "/projects/chancaca/IMG_7.jpg",
+            "alt": "Brand Identity 2"
+          },
+          {
+            "src": "/projects/chancaca/IMG_8.jpg",
+            "alt": "Brand Identity 3"
+          }
+        ]
+      },
+      {
+        "type": "textSection",
+        "content": "Our team developed a comprehensive brand strategy that included new visual identity, packaging design, and brand guidelines. The new design system reflects the brand's heritage while appealing to contemporary consumers, creating a perfect balance between tradition and modernity."
+      }
+    ]
+  }
+} 
