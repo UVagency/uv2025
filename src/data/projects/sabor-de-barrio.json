@@ -8,14 +8,14 @@
   "fullDescription": "Transform Chancaca Deliciosa's brand identity to better connect with its audience while maintaining its authentic essence. The project involved creating a new visual language, packaging design, and brand strategy that would resonate with modern consumers while honoring the brand's traditional roots.",
   "videoUrl": "https://vimeo.com/1079782182",
   "images": [
-    "/projects/chancaca/IMG_1.jpg",
-    "/projects/chancaca/IMG_2.jpg",
-    "/projects/chancaca/IMG_3.jpg"
+    "/projects/chancaca-deliciosa/IMG_1.jpg",
+    "/projects/chancaca-deliciosa/IMG_2.jpg",
+    "/projects/chancaca-deliciosa/IMG_3.jpg"
   ],
   "comingSoon": false,
   "thumbnails": [
-    "/projects/chancaca_profile.png",
-    "/projects/chancaca/IMG_4.jpg"
+    "/projects/deliciosa_profile.png",
+    "/projects/chancaca-deliciosa/IMG_4.jpg"
   ],
   "carouselSpeed": 30,
   "gallery": {
@@ -23,7 +23,7 @@
     "sections": [
       {
         "type": "banner",
-        "image": "/projects/chancaca/IMG_5.jpg",
+        "image": "/projects/deliciosa_banner.png",
         "badge": {
         }
       },
@@ -36,15 +36,15 @@
         "columns": 3,
         "images": [
           {
-            "src": "/projects/chancaca/IMG_6.jpg",
+            "src": "/projects/chancaca-deliciosa/IMG_6.jpg",
             "alt": "Brand Identity 1"
           },
           {
-            "src": "/projects/chancaca/IMG_7.jpg",
+            "src": "/projects/chancaca-deliciosa/IMG_7.jpg",
             "alt": "Brand Identity 2"
           },
           {
-            "src": "/projects/chancaca/IMG_8.jpg",
+            "src": "/projects/chancaca-deliciosa/IMG_8.jpg",
             "alt": "Brand Identity 3"
           }
         ]
