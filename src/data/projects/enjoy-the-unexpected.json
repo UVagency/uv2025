@@ -5,7 +5,7 @@
   "categories": ["PROMO"],
   "description": "Through the activation of the 'Enjoy the Unexpected' promotion, we positioned the country's points of sale as the stars of the year.",
   "client": "Heineken",
-  "fullDescription": "Creamos una campaña inmersiva para Heineken que desafía las expectativas tradicionales. A través de instalaciones interactivas y experiencias digitales únicas, invitamos a los consumidores a descubrir elementos sorprendentes que rompen con lo cotidiano.",
+  "fullDescription": "We carried out a comprehensive campaign that included promotional activation at point of sale and amplification through digital media. We generated the strategy, planning, and purchase of digital media with two clear objectives: awareness and traffic referral to point of sale.",
   "videoUrl": "https://vimeo.com/1079510908",
   "images": [
     "/projects/heineken/Ma4L9dfBXx6JRJ2XBWXq8kfrcVU.jpg",
@@ -58,6 +58,10 @@
             "alt": "Experiencia interactiva 4"
           }
         ]
+      },
+      {
+        "type": "textSection",
+        "content": "We carried out a comprehensive campaign that included promotional activation at point of sale and amplification through digital media. We generated the strategy, planning, and purchase of digital media with two clear objectives: awareness and traffic referral to point of sale. Heineken + UEFA Champions League: Adapting content received from global to local language -with corresponding approvals- Green Store: Creating original content locally to communicate the brand's e-commerce. To participate, people had to enter the hidden code within the packs on our website, sharing their data with the brand."
       }
     ]
   }

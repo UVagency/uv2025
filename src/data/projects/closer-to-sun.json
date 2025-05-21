@@ -3,24 +3,23 @@
   "name": "CLOSER TO THE SUN",
   "year": "L'ORÉAL",
   "categories": ["IMMERSIVE"],
-  "description": "At Lolla 2025, we want you to feel the music like never before: vibrating with you in every jump, every chorus, every magical moment. Because good vibes aren't just heard—they're lived!",
-  "client": "Soundcore by Anker",
-  "fullDescription": "Creamos para Soundcore by Anker una experiencia inmersiva para Lollapalooza 2025 que redefine la manera en que el público siente la música. A través de tecnología innovadora, instalaciones interactivas y activaciones en vivo, acercamos a los asistentes a una experiencia sensorial completa donde la música se vuelve tangible.",
+  "description": "An immersive brand experience in Valle Nevado that combined luxury, skincare education, and adventure, reinforcing L'Oréal Paris UV Defender's effectiveness in high-exposure environments.",
+  "client": "L'Oréal Paris",
+  "fullDescription": "Successfully introduce L'Oréal Paris' UV Defender to the Chilean market through an exclusive snow event in Valle Nevado. The mission was to create an immersive brand experience that combined luxury, skincare education, and adventure, reinforcing the product's effectiveness in high-exposure environments while positioning UV Defender as an essential skincare solution.",
   "videoUrl": "https://vimeo.com/1079780986",
   "images": [
     "/projects/loreal/IMG_5464.jpg",
     "/projects/loreal/IMG_5495.jpg",
     "/projects/loreal/IMG_5605.jpg"
   ],
-  "comingSoon": true,
+  "comingSoon": false,
   "thumbnails": [
     "/projects/loreal_profile.png",
     "/projects/loreal/IMG_5624.jpg"
   ],
-  "emojis": ["☀️", "🌊", "🏄‍♂️", "🌴", "🕶️"],
-  "carouselSpeed": 30,
+    "carouselSpeed": 30,
   "gallery": {
-    "featureText": "Capturando la esencia del <em>verano</em> y la <em>libertad</em>, creamos contenido que transporta al espectador a un oasis de sol y diversión.",
+    "featureText": "This event marked a milestone for L'Oréal Paris in Chile, elevating UV Defender's positioning and creating an unforgettable brand experience in a unique, high-exposure environment.",
     "sections": [
       {
         "type": "banner",
@@ -30,7 +29,7 @@
       },
       {
         "type": "textSection",
-        "content": "Para Festival Season, desarrollamos una campaña completa que abarca desde contenido digital para redes sociales hasta experiencias en tienda."
+        "content": "Successfully introduce L'Oréal Paris' UV Defender to the Chilean market through an exclusive snow event in Valle Nevado. The mission was to create an immersive brand experience that combined luxury, skincare education, and adventure, reinforcing the product's effectiveness in high-exposure environments while positioning UV Defender as an essential skincare solution."
       },
       {
         "type": "imageGrid",
@@ -49,6 +48,10 @@
             "alt": "Concepto de verano 3"
           }
         ]
+      },
+      {
+        "type": "textSection",
+        "content": "Execution Our team developed a high-impact 360-degree marketing strategy that leveraged influencer engagement, premium activations, and immersive brand experiences. The campaign targeted key opinion leaders, beauty influencers, and lifestyle content creators to generate buzz and organic content."
       }
     ]
   }
