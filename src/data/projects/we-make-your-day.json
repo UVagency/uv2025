@@ -3,9 +3,9 @@
   "name": "WE MAKE YOUR DAY",
   "year": "KRISPY KREME",
   "categories": ["INTEGRATED"],
-  "description": "Una campaña interactiva diseñada para sorprender y alegrar el día de las personas con experiencias inesperadas.",
-  "client": "Krispy Kreme",
-  "fullDescription": "Desarrollamos una campaña integral para Krispy Kreme que transforma momentos ordinarios en experiencias memorables. A través de intervenciones sorpresa, acciones en punto de venta y contenido digital, llevamos sonrisas a las personas en su día a día.",
+  "description": "Discover how we celebrated Krispy Kreme's arrival in the country and captured the hearts of thousands with its incomparable sweetness.",
+  "client": "PREMIER GROUP CHILE",
+  "fullDescription": "Successfully introduce Krispy Kreme to the Chilean market with our \"We Make Your Day\" concept. Our mission was to create genuine excitement and establish the brand as more than just a doughnut shop – making it a new cultural phenomenon in Chile's food scene with the goal of becoming the country's favorite sweet treat destination.",
   "videoUrl": "https://vimeo.com/1079783710",
   "images": [
     "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
@@ -15,9 +15,8 @@
     "https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=180",
     "https://images.unsplash.com/photo-1531686264889-56fdcabd163f?q=80&w=180"
   ],
-  "emojis": ["🎁", "🎉", "🎊", "🎈", "🥳"],
-  "gallery": {
-    "featureText": "Con la campaña 'We Make Your Day', conseguimos transformar momentos cotidianos en <em>experiencias inolvidables</em> para miles de personas.",
+    "gallery": {
+    "featureText": "Our digital strategy amplified the physical event's success, with user-generated content reaching millions across social platforms. This was just the beginning of Krispy Kreme's journey to becoming Chile's favorite sweet destination.",
     "sections": [
       {
         "type": "banner",
@@ -29,7 +28,7 @@
       },
       {
         "type": "textSection",
-        "content": "Para esta campaña, diseñamos una serie de intervenciones sorpresa en diversos puntos de la ciudad, llevando momentos de felicidad inesperada a personas en su rutina diaria."
+        "content": "Marketing results: The campaign achieved remarkable results: 115 traditional media mentions. $70,000 in earned media value. Over 5 million digital impressions. Thousands of customers at launch event. Significant social media engagement"
       },
       {
         "type": "imageGrid",
@@ -56,6 +55,10 @@
             "alt": "Intervención sorpresa 4"
           }
         ]
+      },
+      {
+        "type": "textSection",
+        "content": "Our team orchestrated a comprehensive 360-degree marketing plan that began with a strategic teaser phase, building anticipation through both traditional and digital media. We carefully selected key opinion leaders who aligned with the brand's values to create authentic, engaging content.The launch strategy included: Efficient media investment across multiple channels. Strong community engagement through sampling activities. Strategic influencer partnerships. Traditional media coverage. Digital media campaigns Interactive community events. The launch event was transformed into a celebration of Chilean culture and American tradition coming together, complete with live entertainment, special giveaways, and exclusive launch-day promotions."
       }
     ]
   }
