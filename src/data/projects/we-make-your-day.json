@@ -8,12 +8,9 @@
   "fullDescription": "Successfully introduce Krispy Kreme to the Chilean market with our \"We Make Your Day\" concept. Our mission was to create genuine excitement and establish the brand as more than just a doughnut shop – making it a new cultural phenomenon in Chile's food scene with the goal of becoming the country's favorite sweet treat destination.",
   "videoUrl": "https://vimeo.com/1079783710",
   "images": [
-    "/lovable-uploads/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
-    "/lovable-uploads/630d3839-8c19-4e9a-a57e-198ff13a4be8.png"
-  ],
-  "thumbnails": [
-    "https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=180",
-    "https://images.unsplash.com/photo-1531686264889-56fdcabd163f?q=80&w=180"
+    "/images/we-make-your-day/we-make-your-day-01.jpg",
+    "/images/we-make-your-day/we-make-your-day-02.jpg",
+    "/images/we-make-your-day/we-make-your-day-03.jpg"
   ],
     "gallery": {
     "featureText": "Our digital strategy amplified the physical event's success, with user-generated content reaching millions across social platforms. This was just the beginning of Krispy Kreme's journey to becoming Chile's favorite sweet destination.",
@@ -40,11 +37,7 @@
           },
           {
             "src": "/projects/heineken/f2GjFaNoz5YryJtRYBqVd9MX9hU.jpg",
-            "alt": "Intervención sorpresa 2",
-            "badge": {
-              "text": "SORPRESA",
-              "position": "bottom-right"
-            }
+            "alt": "Intervención sorpresa 2"
           },
           {
             "src": "/projects/heineken/qkUCZi5AQhfRwCtDI3yVy8egJFs.jpg",
@@ -62,4 +55,4 @@
       }
     ]
   }
-} 
+}
