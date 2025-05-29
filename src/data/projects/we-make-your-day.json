@@ -17,11 +17,7 @@
     "sections": [
       {
         "type": "banner",
-        "image": "/projects/heineken/1Ehltid6EQTBlyE0CxMeRRms8.jpg",
-        "badge": {
-          "text": "ALEGRÍA",
-          "position": "bottom-left"
-        }
+        "image": "/images/we-make-your-day/we-make-your-day-04.jpg"
       },
       {
         "type": "textSection",
@@ -32,19 +28,19 @@
         "columns": 4,
         "images": [
           {
-            "src": "/projects/heineken/cGhtDiCoCLErCCMOEnRDZUnmoY.jpg",
+            "src": "/images/we-make-your-day/we-make-your-day-05.jpg",
             "alt": "Intervención sorpresa 1"
           },
           {
-            "src": "/projects/heineken/f2GjFaNoz5YryJtRYBqVd9MX9hU.jpg",
+            "src": "/images/we-make-your-day/we-make-your-day-06.jpg",
             "alt": "Intervención sorpresa 2"
           },
           {
-            "src": "/projects/heineken/qkUCZi5AQhfRwCtDI3yVy8egJFs.jpg",
+            "src": "/images/we-make-your-day/we-make-your-day-07.jpg",
             "alt": "Intervención sorpresa 3"
           },
           {
-            "src": "/projects/heineken/60Ukrd1QsZSPhuhRqaC5vVthP1A.jpg",
+            "src": "/images/we-make-your-day/we-make-your-day-08.jpg",
             "alt": "Intervención sorpresa 4"
           }
         ]
