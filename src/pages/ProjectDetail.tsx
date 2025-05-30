@@ -76,7 +76,7 @@ const ProjectDetail = () => {
             <div className="mb-12">
               {/* Challenge */}
               <div className="mb-8">
-                <h2 className="text-4xl font-bold text-portfolio-text mb-4">Challenge</h2>
+                <h2 className="text-4xl font-bold text-portfolio-text mb-4">Overview</h2>
                 <div className="text-2xl text-portfolio-text/80 font-light whitespace-pre-line">
                   {project.fullDescription}
                 </div>
