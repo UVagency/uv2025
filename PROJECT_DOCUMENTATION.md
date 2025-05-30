@@ -117,7 +117,8 @@ src/
 │   ├── Contact.tsx
 │   ├── Index.tsx
 │   ├── NotFound.tsx
-│   └── ProjectDetail.tsx
+│   ├── ProjectDetail.tsx
+│   └── OurCompany.tsx          # ✨ Nueva página sobre la empresa
 |
 ├── styles/                     # Archivos CSS globales y específicos
 │   ├── animations.css
@@ -147,6 +148,7 @@ Esta carpeta se divide en:
 
 ### `src/pages/`
 Contiene los componentes que actúan como vistas o páginas individuales de la aplicación. Cada archivo representa una ruta principal (ej: `Index.tsx` para la home, `About.tsx` para la página "Acerca de").
+- `OurCompany.tsx`: Una nueva página que detalla información sobre UV, incluyendo su historia, un video, valores, premios y un llamado a la acción para colaborar.
 
 ## ⚙️ Lógica y Utilidades
 

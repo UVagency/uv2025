@@ -9,7 +9,7 @@ import { smoothScrollToElement } from '../lib/scrollUtils';
 import { NAVBAR_CONSTANTS } from '../constants/navbarConstants';
 
 const Navbar = () => {
-  const { isInfoOpen, isContactOpen, toggleInfo, toggleContact } = useNavigation();
+  const { isInfoOpen, isContactOpen, isOurCompanyOpen, toggleInfo, toggleContact, toggleOurCompany } = useNavigation();
 
   const handleWorkClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -23,12 +23,12 @@ const Navbar = () => {
           <div className="flex items-center gap-4 md:gap-8">
             <div className="relative flex items-center">
               <button 
-                onClick={isContactOpen ? toggleContact : toggleInfo}
-                className={`absolute left-0 text-portfolio-text hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out rounded-full size-6 md:size-8 flex items-center justify-center border border-portfolio-text hover:border-portfolio-highlight ${(isInfoOpen || isContactOpen) ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
+                onClick={isContactOpen ? toggleContact : isOurCompanyOpen ? toggleOurCompany : toggleInfo}
+                className={`absolute left-0 text-portfolio-text hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out rounded-full size-6 md:size-8 flex items-center justify-center border border-portfolio-text hover:border-portfolio-highlight ${(isInfoOpen || isContactOpen || isOurCompanyOpen) ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
               >
                 <X size={16} className="md:w-5 md:h-5" />
               </button>
-              <div className={`flex items-center gap-4 md:gap-8 transition-transform duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out ${(isInfoOpen || isContactOpen) ? 'translate-x-8 md:translate-x-12' : ''}`}>
+              <div className={`flex items-center gap-4 md:gap-8 transition-transform duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out ${(isInfoOpen || isContactOpen || isOurCompanyOpen) ? 'translate-x-8 md:translate-x-12' : ''}`}>
                 <button 
                   onClick={toggleInfo}
                   className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-sm md:text-base ${isInfoOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
@@ -41,6 +41,13 @@ const Navbar = () => {
                   className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors text-sm md:text-base"
                 >
                   Work
+                </Link>
+                <Link 
+                  to="/our-company"
+                  onClick={toggleOurCompany}
+                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-sm md:text-base ${isOurCompanyOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
+                >
+                  Our Company
                 </Link>
                 <button 
                   onClick={toggleContact}

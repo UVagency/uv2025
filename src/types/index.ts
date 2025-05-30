@@ -7,8 +7,10 @@ export interface NavItem {
 export interface NavigationState {
   isInfoOpen: boolean;
   isContactOpen: boolean;
+  isOurCompanyOpen: boolean;
   toggleInfo: () => void;
   toggleContact: () => void;
+  toggleOurCompany: () => void;
 }
 
 export interface ColorScheme {

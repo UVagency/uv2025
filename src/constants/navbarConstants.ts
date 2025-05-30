@@ -4,15 +4,18 @@ export const NAVBAR_CONSTANTS = {
   CLASSES: {
     INFO_OPEN: 'info-open',
     CONTACT_OPEN: 'contact-open',
+    OUR_COMPANY_OPEN: 'our-company-open',
   },
   Z_INDEX: {
     NAVBAR: 50,
     CONTACT_SECTION: 40,
+    OUR_COMPANY_SECTION: 40,
   },
 } as const;
 
 export const NAV_ITEMS = [
   { id: 'info', label: 'INFO' },
   { id: 'work', label: 'Work', href: '/#highlights' },
+  { id: 'our-company', label: 'Our Company', href: '/our-company' },
   { id: 'contact', label: 'Contact' },
 ] as const; 
