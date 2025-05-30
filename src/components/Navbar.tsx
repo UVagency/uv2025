@@ -1,116 +1,50 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from '../components/ui/sheet';
-import AnimatedEye from './hero/AnimatedEye';
 import { X } from 'lucide-react';
+import AnimatedEye from './hero/AnimatedEye';
 import Footer from './Footer';
+import InfoSection from './InfoSection';
+import { useNavigation } from '../hooks/useNavigation';
+import { smoothScrollToElement } from '../lib/scrollUtils';
+import { NAVBAR_CONSTANTS } from '../constants/navbarConstants';
 
 const Navbar = () => {
-  const [isInfoOpen, setIsInfoOpen] = useState(false);
-  const [isContactOpen, setIsContactOpen] = useState(false);
+  const { isInfoOpen, isContactOpen, toggleInfo, toggleContact } = useNavigation();
 
-  useEffect(() => {
-    const handleToggleInfo = () => {
-      toggleInfo();
-    };
-
-    window.addEventListener('toggleInfo', handleToggleInfo);
-    return () => {
-      window.removeEventListener('toggleInfo', handleToggleInfo);
-    };
-  }, []);
-
-  const toggleInfo = () => {
-    if (isContactOpen) {
-      setIsContactOpen(false);
-      document.body.classList.remove('contact-open');
-    }
-    setIsInfoOpen(!isInfoOpen);
-    if (!isInfoOpen) {
-      document.body.classList.add('info-open');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      document.body.classList.remove('info-open');
-    }
+  const handleWorkClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    smoothScrollToElement('highlights', NAVBAR_CONSTANTS.SCROLL_DURATION);
   };
-
-  const toggleContact = () => {
-    if (isInfoOpen) {
-      setIsInfoOpen(false);
-      document.body.classList.remove('info-open');
-    }
-    setIsContactOpen(!isContactOpen);
-    if (!isContactOpen) {
-      document.body.classList.add('contact-open');
-    } else {
-      document.body.classList.remove('contact-open');
-    }
-  };
-
-  // Cleanup effect
-  useEffect(() => {
-    return () => {
-      document.body.classList.remove('info-open');
-      document.body.classList.remove('contact-open');
-    };
-  }, []);
 
   return (
     <>
-      <nav className="w-full px-4 py-2 font-sans bg-portfolio-bg z-50 sticky top-0 overflow-x-hidden">
+      <nav className={`w-full px-4 py-2 font-sans bg-portfolio-bg sticky top-0 overflow-x-hidden z-${NAVBAR_CONSTANTS.Z_INDEX.NAVBAR}`}>
         <div className="max-w-[90%] mx-auto flex justify-between items-center">
           <div className="flex items-center gap-4 md:gap-8">
             <div className="relative flex items-center">
               <button 
                 onClick={isContactOpen ? toggleContact : toggleInfo}
-                className={`absolute left-0 text-portfolio-text hover:text-portfolio-highlight transition-all duration-500 ease-in-out rounded-full size-6 md:size-8 flex items-center justify-center border border-portfolio-text hover:border-portfolio-highlight ${(isInfoOpen || isContactOpen) ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
+                className={`absolute left-0 text-portfolio-text hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out rounded-full size-6 md:size-8 flex items-center justify-center border border-portfolio-text hover:border-portfolio-highlight ${(isInfoOpen || isContactOpen) ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
               >
                 <X size={16} className="md:w-5 md:h-5" />
               </button>
-              <div className={`flex items-center gap-4 md:gap-8 transition-transform duration-500 ease-in-out ${(isInfoOpen || isContactOpen) ? 'translate-x-8 md:translate-x-12' : ''}`}>
+              <div className={`flex items-center gap-4 md:gap-8 transition-transform duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out ${(isInfoOpen || isContactOpen) ? 'translate-x-8 md:translate-x-12' : ''}`}>
                 <button 
                   onClick={toggleInfo}
-                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-500 ease-in-out text-sm md:text-base ${isInfoOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
+                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-sm md:text-base ${isInfoOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
                 >
                   INFO
                 </button>
                 <Link 
                   to="/#highlights" 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const element = document.getElementById('highlights');
-                    if (element) {
-                      const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
-                      const startPosition = window.pageYOffset;
-                      const distance = targetPosition - startPosition;
-                      const duration = 1000;
-                      let start = null;
-
-                      function animation(currentTime) {
-                        if (start === null) start = currentTime;
-                        const timeElapsed = currentTime - start;
-                        const progress = Math.min(timeElapsed / duration, 1);
-                        const easeInOutCubic = progress < 0.5
-                          ? 4 * progress * progress * progress
-                          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
-
-                        window.scrollTo(0, startPosition + distance * easeInOutCubic);
-
-                        if (timeElapsed < duration) {
-                          requestAnimationFrame(animation);
-                        }
-                      }
-
-                      requestAnimationFrame(animation);
-                    }
-                  }}
+                  onClick={handleWorkClick}
                   className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors text-sm md:text-base"
                 >
                   Work
                 </Link>
                 <button 
                   onClick={toggleContact}
-                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-500 ease-in-out text-sm md:text-base ${isContactOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
+                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-sm md:text-base ${isContactOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
                 >
                   Contact
                 </button>
@@ -134,14 +68,14 @@ const Navbar = () => {
       >
         <div className="max-w-[90%] mx-auto relative h-full">
           <div className="pt-24 pb-32 px-4 h-full hideScrollbar">
-            <InfoContent />
+            <InfoSection />
           </div>
         </div>
       </div>
 
       {/* Contact Section */}
       <div 
-        className={`fixed bottom-0 left-0 w-full bg-portfolio-about-bg overflow-hidden z-40 transition-all ${isContactOpen ? 'duration-500' : 'duration-300'}`}
+        className={`fixed bottom-0 left-0 w-full bg-portfolio-about-bg overflow-hidden z-${NAVBAR_CONSTANTS.Z_INDEX.CONTACT_SECTION} transition-all ${isContactOpen ? 'duration-500' : 'duration-300'}`}
         style={{ 
           height: isContactOpen ? '80vh' : '0',
           transform: `translateY(${isContactOpen ? '0' : '100%'})`,
@@ -157,192 +91,5 @@ const Navbar = () => {
     </>
   );
 };
-
-const InfoContent = () => {
-  return (
-    <div className="max-w-[90%] mx-auto flex flex-col items-center md:items-start pb-16">
-      <div className="w-full flex flex-col md:flex-row md:gap-16 items-center md:items-start">
-        <div className="w-32 h-32 overflow-hidden">
-          <img 
-            alt="UV Logo" 
-            className="w-full h-full object-cover rounded-full" 
-            src="/images/uv_logo.png" 
-          />
-        </div>
-        <div className="text-[#f9f8e2] md:w-2/3 text-center md:text-left">
-          <h1 className="text-4xl md:text-4xl mb-6">
-            <span className="italic text-portfolio-highlight">One Agency, All In.</span>
-          </h1>
-          <p className="text-2xl md:text-3xl leading-relaxed mb-6">
-            UV is a Full-service in house indepentent agency that champions brands through <span className="italic">advertising</span>, engineers <span className="italic">events</span> that move people to create customers, and drives results through smart<span className="italic"> media</span>.
-          </p>
-          <p className="text-2xl md:text-3xl leading-relaxed mb-6">
-            We specialize in <span className="italic">strategy, creativity, content, media and experiences</span>- all connected to help brands{" "}
-            <span className="italic">grow, inspire,</span> and stay <span className="italic">relevant</span> in a constantly shifting world.
-          </p>
-          <p className="text-2xl md:text-3xl leading-relaxed mb-6">
-            We're grateful to be working with top brands and passionate teams to create work that{" "}
-            <span className="italic">resonates - emotionally</span> and <span className="italic">measurably</span>.
-          </p>
-          <p className="text-2xl md:text-3xl leading-relaxed">
-            We love what we do and we know that <span className="italic">hard work pays off</span>.
-          </p>
-        </div>
-      </div>
-
-      {/* Values Section */}
-      <div className="w-full mt-16 text-center md:text-left md:pl-48">
-        <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Values<span> 🥰</span></h2>
-        <div className="text-[#f9f8e2] space-y-6">
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Multicultural by Design</p>
-            <p className="text-sm opacity-80 inline">We thrive in diverse contexts. Different cultures, languages, and perspectives enrich our creativity and sharpen our thinking. We build for a global world — with local understanding.</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Human-Centered Thinking</p>
-            <p className="text-sm opacity-80 inline">People come first. We design and communicate with empathy, emotional intelligence, and awareness — never losing sight of the human on the other side.</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Radical Transparency</p>
-            <p className="text-sm opacity-80 inline">We speak with honesty and clarity — with clients, within our team, always. Open dialogue is how we build trust and move forward, even through tension.</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Co-Creation</p>
-            <p className="text-sm opacity-80 inline">The best work happens when we build together. We collaborate with clients and teammates as partners, listening actively and shaping ideas collectively.</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Bold Intuition</p>
-            <p className="text-sm opacity-80 inline">We trust our instincts and take calculated risks. Experience, curiosity, and courage guide us to solutions that make a real difference.</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Excellence in the Details</p>
-            <p className="text-sm opacity-80 inline">We don't do things halfway. Every touchpoint matters — from a campaign to a line of code. We aim for professional excellence, every time.</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Balanced Flow</p>
-            <p className="text-sm opacity-80 inline">We believe that giving and receiving are part of the same cycle. Our work is rooted in reciprocity, acknowledgment, and shared growth.</p>
-          </div>
-        </div>
-      </div>
-      
-      {/* Services Section */}
-      <div className="w-full mt-16 text-center md:text-left md:pl-48">
-        <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Our Services<span> 🤝</span></h2>
-        <div className="text-[#f9f8e2] space-y-6">
-  <div>
-    <p className="text-lg font-semibold inline-block mr-2">Brand Building</p>
-    <p className="text-sm opacity-80 inline">Developing and positioning brands with clarity and impact</p>
-  </div>
-  <div>
-    <p className="text-lg font-semibold inline-block mr-2">Advertising</p>
-    <p className="text-sm opacity-80 inline">Crafting creative and results-driven campaigns</p>
-  </div>
-  <div>
-    <p className="text-lg font-semibold inline-block mr-2">Exhibition</p>
-    <p className="text-sm opacity-80 inline">Designing immersive event and brand experiences</p>
-  </div>
-  <div>
-    <p className="text-lg font-semibold inline-block mr-2">Target Audience</p>
-    <p className="text-sm opacity-80 inline">Engaging the right people with precision</p>
-  </div>
-  <div>
-    <p className="text-lg font-semibold inline-block mr-2">Social Strategy & Content</p>
-    <p className="text-sm opacity-80 inline">Planning and producing content that connects</p>
-  </div>
-</div>
-      </div>
-
-      {/* Products Section */}
-      <div className="w-full mt-16 text-center md:text-left md:pl-48">
-        <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Our Products<span> 🛠️</span></h2>
-        <div className="text-[#f9f8e2] space-y-6">
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Sense</p>
-            <p className="text-sm opacity-80 inline">Physical presence to digital insights</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Grateful</p>
-            <p className="text-sm opacity-80 inline">Empower your businesses with crypto payments that are fast, secure, and cost-effective, so you keep more of what you earn.</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Tril</p>
-            <p className="text-sm opacity-80 inline">A social platform for discovering and sharing personalized recommendations in music, movies, books, and more — connecting users through cultural taste and trusted suggestions.</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Awards & Festivals Section */}
-      <div className="w-full mt-16 text-center md:text-left md:pl-48">
-        <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Awards & Festivals 🏆</h2>
-        <div className="text-[#f9f8e2]">
-          <p>2025 AWWWARDS Honorable Mention</p>
-          <p>2025 THE FWA Website Of The Day</p>
-          <p>2025 CSS DESIGN AWARDS Website Of The Day</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const ServiceItem = ({ name }: { name: string }) => {
-  return (
-    <div className="flex items-center gap-3 justify-center md:justify-start">
-      <EyeOfCuriosity />
-      <span className="text-xl md:text-2xl text-[#f9f8e2] opacity-80">{name}</span>
-    </div>
-  );
-};
-
-const EyeOfCuriosity = () => {
-  const colorPalette = [
-    { bg: 'bg-portfolio-accent', iris: 'bg-portfolio-text' },         // Turquoise with dark green
-  ];
-
-  const [colorScheme, setColorScheme] = useState(() => {
-    return colorPalette[Math.floor(Math.random() * colorPalette.length)];
-  });
-
-  return (
-    <span className="inline-flex items-center justify-center mx-2 transform scale-75">
-      <div className="relative w-[28px] h-[28px]">
-        <div className={`absolute inset-0 rounded-full ${colorScheme.bg} border border-portfolio-text overflow-hidden`}>
-          <div 
-            className={`absolute left-1/2 top-1/2 w-[18px] h-[18px] rounded-full ${colorScheme.iris} 
-                     transition-all duration-300`}
-            style={{ 
-              transform: 'translate(-50%, -50%)',
-            }}
-          >
-            <div 
-              className="absolute left-1/2 top-1/2 w-[10px] h-[10px] rounded-full bg-portfolio-bg transition-all duration-300"
-              style={{ 
-                transform: 'translate(-50%, -50%)',
-              }}
-            >
-              <div className="absolute top-1 left-1 w-[3px] h-[3px] rounded-full bg-white opacity-80"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </span>
-  );
-};
-
-const NavButton = ({ onClick, isOpen, label }) => (
-  <div className="relative flex items-center">
-    <button 
-      onClick={onClick}
-      className={`absolute text-portfolio-text hover:text-portfolio-highlight transition-all duration-500 ease-in-out rounded-full size-8 flex items-center justify-center border border-portfolio-text hover:border-portfolio-highlight ${isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
-    >
-      <X size={20} />
-    </button>
-    <button 
-      onClick={onClick}
-      className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-500 ease-in-out ${isOpen ? 'text-portfolio-highlight underline underline-offset-8 translate-x-12' : ''}`}
-    >
-      {label}
-    </button>
-  </div>
-);
 
 export default Navbar;
