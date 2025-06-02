@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import ProjectHeader from "../components/project/ProjectHeader";
-import ProjectGallery from "../components/project/ProjectGallery";
+/*import ProjectGallery from "../components/project/ProjectGallery";*/
 import ProjectVideoPlayer from "../components/project/ProjectVideoPlayer";
 import ProjectNotFound from "../components/project/ProjectNotFound";
 import projectsData, { ProjectData, GallerySection } from "../data/projectsData";
@@ -65,7 +65,9 @@ const ProjectDetail = () => {
         <ProjectHeader project={project} />
         <div className="max-w-[90%] mx-auto">
           {/* 1. Video */}
-          <ProjectVideoPlayer project={project} />
+          <div className="rounded-[5px] overflow-hidden">
+            <ProjectVideoPlayer project={project} />
+          </div>
 
           {/* 2. Main Images */}
           <div className="grid grid-cols-3 gap-4 mb-12">
@@ -74,7 +76,7 @@ const ProjectDetail = () => {
                 key={index}
                 src={image} 
                 alt={`${project.name} - Image ${index + 1}`}
-                className="w-full"
+                className="w-full rounded-[5px]"
               />
             ))}
           </div>
@@ -118,7 +120,7 @@ const ProjectDetail = () => {
                       <img 
                         src={section.image} 
                         alt={section.alt || ''} 
-                        className="w-full mb-8"
+                        className="w-full mb-8 rounded-[5px]"
                       />
                     )}
                     {section.type === 'imageGrid' && (
@@ -128,7 +130,7 @@ const ProjectDetail = () => {
                             key={i}
                             src={img.src} 
                             alt={img.alt} 
-                            className="w-full"
+                            className="w-full rounded-[5px]"
                           />
                         ))}
                       </div>
