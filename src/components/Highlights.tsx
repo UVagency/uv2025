@@ -20,37 +20,42 @@ const Highlights = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {highlightedProjects.map((project) => (
-          <div 
-            key={project.id} 
-            onClick={() => handleProjectClick(project.id)}
-            className="cursor-pointer group"
-          >
-            <div className="relative w-full overflow-hidden rounded-md mb-4">
-              <img 
-                src={project.images[0]}
-                alt={project.name}
-                className="w-full object-contain" 
-              />
-            </div>
-            
-            <div className="flex flex-col items-start">
-              <h3 className="text-5xl font-bold text-portfolio-text mr-2 group-hover:text-portfolio-highlight">
-                {project.name}
-              </h3>
-              <div className="flex flex-wrap gap-2 items-center mt-2">
-                <span className="project-year-tag group-hover:project-year-tag-highlight">
-                  {project.year}
-                </span>
-                {project.categories.map((category) => (
-                  <span key={category} className="project-category-tag group-hover:project-category-tag-highlight">
-                    {category}
+        {highlightedProjects.map((project) => {
+          // Generar el path de la imagen de portada
+          const clientSlug = project.client?.toLowerCase().replace(/ /g, "");
+          const coverImg = `/projects/${project.id}/${clientSlug}profile.png`;
+          return (
+            <div 
+              key={project.id} 
+              onClick={() => handleProjectClick(project.id)}
+              className="cursor-pointer group"
+            >
+              <div className="relative w-full overflow-hidden rounded-md mb-4">
+                <img 
+                  src={coverImg}
+                  alt={project.name}
+                  className="w-full object-contain" 
+                />
+              </div>
+              
+              <div className="flex flex-col items-start">
+                <h3 className="text-5xl font-bold text-portfolio-text mr-2 group-hover:text-portfolio-highlight">
+                  {project.name}
+                </h3>
+                <div className="flex flex-wrap gap-2 items-center mt-2">
+                  <span className="project-year-tag group-hover:project-year-tag-highlight">
+                    {project.year}
                   </span>
-                ))}
+                  {project.categories.map((category) => (
+                    <span key={category} className="project-category-tag group-hover:project-category-tag-highlight">
+                      {category}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
