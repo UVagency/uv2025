@@ -22,8 +22,8 @@ const Highlights = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {highlightedProjects.map((project) => {
           // Generar el path de la imagen de portada
-          const clientSlug = project.client?.toLowerCase().replace(/ /g, "");
-          const coverImg = `/projects/${project.id}/${clientSlug}profile.png`;
+          const clientSlug = project.id?.toLowerCase().replace(/ /g, "");
+          const coverImg = `/projects/${project.id}/${clientSlug}_profile.png`;
           return (
             <div 
               key={project.id} 
