@@ -69,7 +69,9 @@ export interface ProjectData {
   year: string;
   categories: string[];
   description: string;
-  fullDescription?: string;
+  overview: string;
+  execution: string;
+  marketingResults: string;
   client?: string;
   songTitle?: string;
   videoUrl?: string;

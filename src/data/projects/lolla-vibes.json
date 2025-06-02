@@ -5,55 +5,40 @@
   "categories": ["IMMERSIVE"],
   "description": "Una campaña integrada que celebra la rica cultura culinaria de los barrios latinos con sus sabores, colores y tradiciones.",
   "client": "Soundcore by Anker",
-  "fullDescription": "Creamos una experiencia inmersiva para Soundcore by Anker que celebra la fusión entre la música y la gastronomía latina. A través de instalaciones interactivas y experiencias sensoriales, invitamos a los asistentes a disfrutar de la vibra única de Lollapalooza.",
+  "overview": "Creamos una experiencia inmersiva para Soundcore by Anker que celebra la fusión entre la música y la gastronomía latina. A través de instalaciones interactivas y experiencias sensoriales, invitamos a los asistentes a disfrutar de la vibra única de Lollapalooza.",
+  "execution": "Para esta campaña, desarrollamos una serie de experiencias gastronómicas que se sincronizaban con diferentes ritmos musicales, creando una experiencia sensorial completa.",
+  "marketingResults": "Con la activación de Lolla Vibes, logramos fusionar la gastronomía latina con la música de una manera nunca antes vista.",
   "videoUrl": "https://vimeo.com/123456789",
   "images": [
-    "/images/lolla-vibes/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
-    "/images/lolla-vibes/630d3839-8c19-4e9a-a57e-198ff13a4be8.png"
+    "/images/lolla-vibes/lolla-vibes-01.jpg",
+    "/images/lolla-vibes/lolla-vibes-02.jpg",
+    "/images/lolla-vibes/lolla-vibes-03.jpg"
   ],
-  "comingSoon": true,
-  "thumbnails": [
-    "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=180",
-    "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=180"
-  ],
-  "emojis": ["🌮", "🌶️", "🍹", "🪅", "🎭"],
   "gallery": {
-    "featureText": "Con la activación de Lolla Vibes, logramos fusionar la <em>gastronomía latina</em> con la <em>música</em> de una manera nunca antes vista.",
+    "featureText": "Con la activación de Lolla Vibes, logramos fusionar la gastronomía latina con la música de una manera nunca antes vista.",
     "sections": [
       {
         "type": "banner",
-        "image": "/projects/heineken/1Ehltid6EQTBlyE0CxMeRRms8.jpg",
-        "badge": {
-          "text": "SABORES",
-          "position": "top-right"
-        }
-      },
-      {
-        "type": "textSection",
-        "content": "Para esta campaña, desarrollamos una serie de experiencias gastronómicas que se sincronizaban con diferentes ritmos musicales, creando una experiencia sensorial completa."
+        "image": "/images/lolla-vibes/lolla-vibes-04.jpg"
       },
       {
         "type": "imageGrid",
         "columns": 4,
         "images": [
           {
-            "src": "/projects/heineken/cGhtDiCoCLErCCMOEnRDZUnmoY.jpg",
+            "src": "/images/lolla-vibes/lolla-vibes-05.jpg",
             "alt": "Experiencia gastronómica 1"
           },
           {
-            "src": "/projects/heineken/f2GjFaNoz5YryJtRYBqVd9MX9hU.jpg",
-            "alt": "Experiencia gastronómica 2",
-            "badge": {
-              "text": "SABORES",
-              "position": "bottom-right"
-            }
+            "src": "/images/lolla-vibes/lolla-vibes-06.jpg",
+            "alt": "Experiencia gastronómica 2"
           },
           {
-            "src": "/projects/heineken/qkUCZi5AQhfRwCtDI3yVy8egJFs.jpg",
+            "src": "/images/lolla-vibes/lolla-vibes-07.jpg",
             "alt": "Experiencia gastronómica 3"
           },
           {
-            "src": "/projects/heineken/60Ukrd1QsZSPhuhRqaC5vVthP1A.jpg",
+            "src": "/images/lolla-vibes/lolla-vibes-08.jpg",
             "alt": "Experiencia gastronómica 4"
           }
         ]

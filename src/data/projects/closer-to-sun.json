@@ -5,12 +5,14 @@
   "categories": ["IMMERSIVE"],
   "description": "An immersive brand experience in Valle Nevado that combined luxury, skincare education, and adventure, reinforcing L'Oréal Paris UV Defender's effectiveness in high-exposure environments.",
   "client": "L'Oréal Paris",
-  "fullDescription": "Successfully introduce L'Oréal Paris' UV Defender to the Chilean market through an exclusive snow event in Valle Nevado. The mission was to create an immersive brand experience that combined luxury, skincare education, and adventure, reinforcing the product's effectiveness in high-exposure environments while positioning UV Defender as an essential skincare solution.",
+  "overview": "Successfully introduce L'Oréal Paris' UV Defender to the Chilean market through an exclusive snow event in Valle Nevado. The mission was to create an immersive brand experience that combined luxury, skincare education, and adventure, reinforcing the product's effectiveness in high-exposure environments while positioning UV Defender as an essential skincare solution.",
+  "execution": "Our team developed a high-impact 360-degree marketing strategy that leveraged influencer engagement, premium activations, and immersive brand experiences. The campaign targeted key opinion leaders, beauty influencers, and lifestyle content creators to generate buzz and organic content.",
+  "marketingResults": "This event marked a milestone for L'Oréal Paris in Chile, elevating UV Defender's positioning and creating an unforgettable brand experience in a unique, high-exposure environment.",
   "videoUrl": "https://vimeo.com/1079780986",
   "images": [
-    "/projects/loreal/IMG_5464.jpg",
-    "/projects/loreal/IMG_5495.jpg",
-    "/projects/loreal/IMG_5605.jpg"
+    "/images/closer-to-sun/closer-to-sun-01.jpg",
+    "/images/closer-to-sun/closer-to-sun-02.jpg",
+    "/images/closer-to-sun/closer-to-sun-03.jpg"
   ],
   "comingSoon": false,
   "thumbnails": [
@@ -23,35 +25,25 @@
     "sections": [
       {
         "type": "banner",
-        "image": "/projects/loreal/IMG_5739.jpg",
-        "badge": {
-        }
-      },
-      {
-        "type": "textSection",
-        "content": "Successfully introduce L'Oréal Paris' UV Defender to the Chilean market through an exclusive snow event in Valle Nevado. The mission was to create an immersive brand experience that combined luxury, skincare education, and adventure, reinforcing the product's effectiveness in high-exposure environments while positioning UV Defender as an essential skincare solution."
+        "image": "/images/closer-to-sun/closer-to-sun-04.jpg"
       },
       {
         "type": "imageGrid",
         "columns": 3,
         "images": [
           {
-            "src": "/projects/loreal/IMG_5704.jpg",
+            "src": "/images/closer-to-sun/closer-to-sun-05.jpg",
             "alt": "Concepto de verano 1"
           },
           {
-            "src": "/projects/loreal/IMG_6113-2.jpg",
+            "src": "/images/closer-to-sun/closer-to-sun-06.jpg",
             "alt": "Concepto de verano 2"
           },
           {
-            "src": "/projects/loreal/IMG_5624.jpg",
+            "src": "/images/closer-to-sun/closer-to-sun-07.jpg",
             "alt": "Concepto de verano 3"
           }
         ]
-      },
-      {
-        "type": "textSection",
-        "content": "Execution Our team developed a high-impact 360-degree marketing strategy that leveraged influencer engagement, premium activations, and immersive brand experiences. The campaign targeted key opinion leaders, beauty influencers, and lifestyle content creators to generate buzz and organic content."
       }
     ]
   }

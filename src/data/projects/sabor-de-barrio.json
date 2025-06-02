@@ -5,53 +5,39 @@
   "categories": ["INTEGRATED"],
   "description": "Sopaipillas pasadas, made with Chancaca Deliciosa, are an icon of Chile's culinary tradition. Our main objective is to strengthen this bond between the brand and people, generating impact and recall.",
   "client": "Demaria Group",
-  "fullDescription": "We carried out a CSR action and outlined a comprehensive communication strategy with the neighborhood as the main ingredient. We went in search of the best 'sopaipillas pasadas' preparation, together with the local Municipality. The first place in this contest was won by the skilled hands of Mrs. Angélica, and the prize was the refurbishment of her neighborhood's community center. Representatives of the Chancaca Deliciosa brand actively participated in the renovation of this community center, directly benefiting over 2000 neighboring families. We amplified this social action with a press strategy in various media outlets, and also executed an efficient plan of investment in digital media with high-impact content. We celebrated the reopening of the community center with a vibrant carnival on Sopaipilla Pasada Day, with municipal authorities and the entire community participating in activities and surprises.",
+  "overview": "We carried out a CSR action and outlined a comprehensive communication strategy with the neighborhood as the main ingredient. We went in search of the best 'sopaipillas pasadas' preparation, together with the local Municipality. The first place in this contest was won by the skilled hands of Mrs. Angélica, and the prize was the refurbishment of her neighborhood's community center.",
+  "execution": "Representatives of the Chancaca Deliciosa brand actively participated in the renovation of this community center, directly benefiting over 2000 neighboring families. We amplified this social action with a press strategy in various media outlets, and also executed an efficient plan of investment in digital media with high-impact content. We celebrated the reopening of the community center with a vibrant carnival on Sopaipilla Pasada Day, with municipal authorities and the entire community participating in activities and surprises.",
+  "marketingResults": "Our main objective was to strengthen the bond between the Chancaca Deliciosa brand and people, generating impact and recall through a campaign with local taste.",
   "videoUrl": "https://vimeo.com/1079782182",
   "images": [
-    "/projects/chancaca-deliciosa/IMG_1.jpg",
-    "/projects/chancaca-deliciosa/IMG_2.jpg",
-    "/projects/chancaca-deliciosa/IMG_3.jpg"
+    "/images/sabor-de-barrio/sabor-de-barrio-01.jpg",
+    "/images/sabor-de-barrio/sabor-de-barrio-02.jpg",
+    "/images/sabor-de-barrio/sabor-de-barrio-03.jpg"
   ],
-  "comingSoon": false,
-  "thumbnails": [
-    "/projects/deliciosa_profile.png",
-    "/projects/chancaca-deliciosa/IMG_4.jpg"
-  ],
-  "carouselSpeed": 30,
   "gallery": {
     "featureText": "Our main objective was to strengthen the bond between the Chancaca Deliciosa brand and people, generating impact and recall through a campaign with local taste.",
     "sections": [
       {
         "type": "banner",
-        "image": "/projects/deliciosa_banner.png",
-        "badge": {
-        }
-      },
-      {
-        "type": "textSection",
-        "content": "We refurbished the community center of the winning neighborhood of a 'sopaipilla pasada' contest, benefiting over 2000 families and celebrating with a vibrant community carnival. Additionally, we executed an efficient amplification strategy in press and digital channels to maximize the impact of the initiative."
+        "image": "/images/sabor-de-barrio/sabor-de-barrio-04.jpg"
       },
       {
         "type": "imageGrid",
         "columns": 3,
         "images": [
           {
-            "src": "/projects/chancaca-deliciosa/IMG_6.jpg",
+            "src": "/images/sabor-de-barrio/sabor-de-barrio-05.jpg",
             "alt": "Brand Identity 1"
           },
           {
-            "src": "/projects/chancaca-deliciosa/IMG_7.jpg",
+            "src": "/images/sabor-de-barrio/sabor-de-barrio-06.jpg",
             "alt": "Brand Identity 2"
           },
           {
-            "src": "/projects/chancaca-deliciosa/IMG_8.jpg",
+            "src": "/images/sabor-de-barrio/sabor-de-barrio-07.jpg",
             "alt": "Brand Identity 3"
           }
         ]
-      },
-      {
-        "type": "textSection",
-        "content": "We carried out a CSR action and outlined a comprehensive communication strategy with the neighborhood as the main ingredient. We went in search of the best 'sopaipillas pasadas' preparation, together with the local Municipality. The first place in this contest was won by the skilled hands of Mrs. Angélica, and the prize was the refurbishment of her neighborhood's community center. Representatives of the Chancaca Deliciosa brand actively participated in the renovation of this community center, directly benefiting over 2000 neighboring families. We amplified this social action with a press strategy in various media outlets, and also executed an efficient plan of investment in digital media with high-impact content. We celebrated the reopening of the community center with a vibrant carnival on Sopaipilla Pasada Day, with municipal authorities and the entire community participating in activities and surprises."
       }
     ]
   }

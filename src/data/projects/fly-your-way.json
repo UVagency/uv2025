@@ -5,11 +5,14 @@
   "categories": ["MEDIA"],
   "description": "Una campaña para una aerolínea que enfatiza la libertad y personalización en los viajes aéreos.",
   "client": "JetSmart",
-  "fullDescription": "Desarrollamos para JetSmart una campaña integral que celebra la libertad de viajar según las propias reglas. A través de contenido digital, activaciones en aeropuertos y una sólida estrategia de medios, invitamos a los viajeros a personalizar cada aspecto de su experiencia de vuelo.",
+  "overview": "Desarrollamos para JetSmart una campaña integral que celebra la libertad de viajar según las propias reglas. A través de contenido digital, activaciones en aeropuertos y una sólida estrategia de medios, invitamos a los viajeros a personalizar cada aspecto de su experiencia de vuelo.",
+  "execution": "Para esta campaña premiada, redefinimos la experiencia de viaje aéreo, poniendo el control en manos de los pasajeros y permitiéndoles personalizar cada aspecto de su vuelo según sus necesidades y preferencias.",
+  "marketingResults": "Con 'Fly Your Way' transformamos la experiencia de vuelo en una expresión de libertad personal y autonomía para miles de viajeros.",
   "videoUrl": "https://vimeo.com/1079829750",
   "images": [
-    "/images/fly-your-way/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
-    "/images/fly-your-way/630d3839-8c19-4e9a-a57e-198ff13a4be8.png"
+    "/images/fly-your-way/fly-your-way-01.jpg",
+    "/images/fly-your-way/fly-your-way-02.jpg",
+    "/images/fly-your-way/fly-your-way-03.jpg"
   ],
   "thumbnails": [
     "https://images.unsplash.com/photo-1520437358207-323b43b50729?q=80&w=180",
@@ -18,42 +21,30 @@
   "awardWinning": true,
   "emojis": ["✈️", "🛫", "🌍", "☁️", "🧳"],
   "gallery": {
-    "featureText": "Con 'Fly Your Way' transformamos la experiencia de vuelo en una expresión de <em>libertad personal</em> y <em>autonomía</em> para miles de viajeros.",
+    "featureText": "Con 'Fly Your Way' transformamos la experiencia de vuelo en una expresión de libertad personal y autonomía para miles de viajeros.",
     "sections": [
       {
         "type": "banner",
-        "image": "/projects/heineken/1Ehltid6EQTBlyE0CxMeRRms8.jpg",
-        "badge": {
-          "text": "LIBERTAD",
-          "position": "top-right"
-        }
-      },
-      {
-        "type": "textSection",
-        "content": "Para esta campaña premiada, redefinimos la experiencia de viaje aéreo, poniendo el control en manos de los pasajeros y permitiéndoles personalizar cada aspecto de su vuelo según sus necesidades y preferencias."
+        "image": "/images/fly-your-way/fly-your-way-04.jpg"
       },
       {
         "type": "imageGrid",
         "columns": 4,
         "images": [
           {
-            "src": "/projects/heineken/cGhtDiCoCLErCCMOEnRDZUnmoY.jpg",
+            "src": "/images/fly-your-way/fly-your-way-05.jpg",
             "alt": "Experiencia de vuelo personalizada 1"
           },
           {
-            "src": "/projects/heineken/f2GjFaNoz5YryJtRYBqVd9MX9hU.jpg",
-            "alt": "Experiencia de vuelo personalizada 2",
-            "badge": {
-              "text": "PREMIO",
-              "position": "bottom-right"
-            }
+            "src": "/images/fly-your-way/fly-your-way-06.jpg",
+            "alt": "Experiencia de vuelo personalizada 2"
           },
           {
-            "src": "/projects/heineken/qkUCZi5AQhfRwCtDI3yVy8egJFs.jpg",
+            "src": "/images/fly-your-way/fly-your-way-07.jpg",
             "alt": "Experiencia de vuelo personalizada 3"
           },
           {
-            "src": "/projects/heineken/60Ukrd1QsZSPhuhRqaC5vVthP1A.jpg",
+            "src": "/images/fly-your-way/fly-your-way-08.jpg",
             "alt": "Experiencia de vuelo personalizada 4"
           }
         ]

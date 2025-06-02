@@ -5,54 +5,40 @@
   "categories": ["LAUNCH"],
   "description": "Lanzamiento de un producto de audio de alta fidelidad con una campaña que celebra la intensidad del sonido.",
   "client": "Maybelline New York",
-  "fullDescription": "Desarrollamos para Maybelline New York una campaña de lanzamiento que amplifica el mensaje de la marca a través de experiencias sensoriales. Mediante instalaciones interactivas, eventos inmersivos y contenido digital, invitamos al público a experimentar el producto de una manera intensa e inolvidable.",
+  "overview": "Desarrollamos para Maybelline New York una campaña de lanzamiento que amplifica el mensaje de la marca a través de experiencias sensoriales. Mediante instalaciones interactivas, eventos inmersivos y contenido digital, invitamos al público a experimentar el producto de una manera intensa e inolvidable.",
+  "execution": "Para este lanzamiento, creamos una serie de experiencias sensoriales que permitían al público sentir la intensidad del sonido de formas inesperadas, generando una conexión emocional con el producto.",
+  "marketingResults": "Con 'Turn Up The Volume' conseguimos que el público no solo escuchara el producto, sino que lo sintiera con todos sus sentidos.",
   "videoUrl": "https://vimeo.com/1079828442",
   "images": [
-    "/images/turn-up-the-volume/328b3bd3-2f60-41c0-8e3a-77b754e362a6.png",
-    "/images/turn-up-the-volume/630d3839-8c19-4e9a-a57e-198ff13a4be8.png"
+    "/images/turn-up-the-volume/turn-up-the-volume-01.jpg",
+    "/images/turn-up-the-volume/turn-up-the-volume-02.jpg",
+    "/images/turn-up-the-volume/turn-up-the-volume-03.jpg"
   ],
-  "thumbnails": [
-    "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=180",
-    "https://images.unsplash.com/photo-1485579149621-3123dd979885?q=80&w=180"
-  ],
-  "emojis": ["🔊", "📢", "🎸", "🎺", "🔥"],
   "gallery": {
-    "featureText": "Con 'Turn Up The Volume' conseguimos que el público no solo <em>escuchara</em> el producto, sino que lo <em>sintiera</em> con todos sus sentidos.",
+    "featureText": "Con 'Turn Up The Volume' conseguimos que el público no solo escuchara el producto, sino que lo sintiera con todos sus sentidos.",
     "sections": [
       {
         "type": "banner",
-        "image": "/projects/heineken/1Ehltid6EQTBlyE0CxMeRRms8.jpg",
-        "badge": {
-          "text": "VOLUMEN",
-          "position": "top-right"
-        }
-      },
-      {
-        "type": "textSection",
-        "content": "Para este lanzamiento, creamos una serie de experiencias sensoriales que permitían al público sentir la intensidad del sonido de formas inesperadas, generando una conexión emocional con el producto."
+        "image": "/images/turn-up-the-volume/turn-up-the-volume-04.jpg"
       },
       {
         "type": "imageGrid",
         "columns": 4,
         "images": [
           {
-            "src": "/projects/heineken/cGhtDiCoCLErCCMOEnRDZUnmoY.jpg",
+            "src": "/images/turn-up-the-volume/turn-up-the-volume-05.jpg",
             "alt": "Experiencia sensorial 1"
           },
           {
-            "src": "/projects/heineken/f2GjFaNoz5YryJtRYBqVd9MX9hU.jpg",
-            "alt": "Experiencia sensorial 2",
-            "badge": {
-              "text": "INTENSIDAD",
-              "position": "bottom-right"
-            }
+            "src": "/images/turn-up-the-volume/turn-up-the-volume-06.jpg",
+            "alt": "Experiencia sensorial 2"
           },
           {
-            "src": "/projects/heineken/qkUCZi5AQhfRwCtDI3yVy8egJFs.jpg",
+            "src": "/images/turn-up-the-volume/turn-up-the-volume-07.jpg",
             "alt": "Experiencia sensorial 3"
           },
           {
-            "src": "/projects/heineken/60Ukrd1QsZSPhuhRqaC5vVthP1A.jpg",
+            "src": "/images/turn-up-the-volume/turn-up-the-volume-08.jpg",
             "alt": "Experiencia sensorial 4"
           }
         ]

@@ -5,63 +5,43 @@
   "categories": ["PROMO"],
   "description": "Through the activation of the 'Enjoy the Unexpected' promotion, we positioned the country's points of sale as the stars of the year.",
   "client": "Heineken",
-  "fullDescription": "We carried out a comprehensive campaign that included promotional activation at point of sale and amplification through digital media. We generated the strategy, planning, and purchase of digital media with two clear objectives: awareness and traffic referral to point of sale.",
+  "overview": "We carried out a comprehensive campaign that included promotional activation at point of sale and amplification through digital media. We generated the strategy, planning, and purchase of digital media with two clear objectives: awareness and traffic referral to point of sale.",
+  "execution": "From February to May, we reached 98% of the target audience on social media, with an average frequency of 3.5 exposures per week. Campaign impressions across all digital media totaled 45,017,984. We achieved 16,563,829 views with an average CTR of 0.41%. The investment strategy included social media, programmatic advertising, and YouTube, applied on a case-by-case basis.\n\nThe in-store activation outperformed expectations:\n+1,000 customers\n+USD 35,000 in revenue\n+3,500 Heineken products sold\n+2,500 drafts redeemed\n+160,000 participants at the Green Store",
+  "marketingResults": "We wrapped up this spectacular campaign with a major event, where we invited over 2,000 guests to enjoy the UEFA Champions League final, Heineken-style. The campaign exceeded all our expectations, not only in terms of reach and engagement, but also in creating memorable experiences that strengthened our connection with consumers at every touchpoint.",
   "videoUrl": "https://vimeo.com/1079510908",
   "images": [
-    "/projects/heineken/Ma4L9dfBXx6JRJ2XBWXq8kfrcVU.jpg",
-    "/projects/heineken/l7wXFwyvNdRE2nC495vWUrbDE.jpg",
-    "/projects/heineken/474dSWSLCCuoJlnV6VwAeM2SQRE.jpg",
-    "/projects/heineken/a1I9N5CoXfF6eI3floJINyLzl6s.jpg"
+    "/images/enjoy-the-unexpected/enjoy-the-unexpected-01.jpg",
+    "/images/enjoy-the-unexpected/enjoy-the-unexpected-02.jpg",
+    "/images/enjoy-the-unexpected/enjoy-the-unexpected-03.jpg"
   ],
-  "thumbnails": [
-    "/projects/heineken_profile.png",
-    "/projects/heineken/thb9mPzo81EbJ49Ok7VpWNtheA.jpg"
-  ],
-  "carouselSpeed": 10,
   "gallery": {
     "featureText": "The 'Enjoy the Unexpected' campaign exceeded all our expectations, not only in terms of reach and engagement, but also in creating memorable experiences that strengthened our connection with consumers at every touchpoint.",
-    "featureTextAuthor": "Nicolas Benavente",
-    "featureTextRole": "Sub Gerente de Trade Marketing en BDP",
     "sections": [
       {
         "type": "banner",
-        "image": "/projects/heineken/1Ehltid6EQTBlyE0CxMeRRms8.jpg",
-        "badge": {
-          "position": "top-right"
-        }
-      },
-      {
-        "type": "textSection",
-        "content": "From February to May, we reached 98% of the target audience on social media, with an average frequency of 3.5 exposures per week. Campaign impressions across all digital media totaled 45,017,984. We achieved 16,563,829 views with an average CTR of 0.41%. The investment strategy included social media, programmatic advertising, and YouTube, applied on a case-by-case basis.\n\nThe in-store activation outperformed expectations:\n+1,000 customers\n+USD 35,000 in revenue\n+3,500 Heineken products sold\n+2,500 drafts redeemed\n+160,000 participants at the Green Store\n\nWe wrapped up this spectacular campaign with a major event, where we invited over 2,000 guests to enjoy the UEFA Champions League final, Heineken-style."
+        "image": "/images/enjoy-the-unexpected/enjoy-the-unexpected-04.jpg"
       },
       {
         "type": "imageGrid",
         "columns": 4,
         "images": [
           {
-            "src": "/projects/heineken/cGhtDiCoCLErCCMOEnRDZUnmoY.jpg",
+            "src": "/images/enjoy-the-unexpected/enjoy-the-unexpected-05.jpg",
             "alt": "Experiencia interactiva 1"
           },
           {
-            "src": "/projects/heineken/f2GjFaNoz5YryJtRYBqVd9MX9hU.jpg",
-            "alt": "Experiencia interactiva 2",
-            "badge": {
-              "position": "bottom-right"
-            }
+            "src": "/images/enjoy-the-unexpected/enjoy-the-unexpected-06.jpg",
+            "alt": "Experiencia interactiva 2"
           },
           {
-            "src": "/projects/heineken/qkUCZi5AQhfRwCtDI3yVy8egJFs.jpg",
+            "src": "/images/enjoy-the-unexpected/enjoy-the-unexpected-07.jpg",
             "alt": "Experiencia interactiva 3"
           },
           {
-            "src": "/projects/heineken/60Ukrd1QsZSPhuhRqaC5vVthP1A.jpg",
+            "src": "/images/enjoy-the-unexpected/enjoy-the-unexpected-08.jpg",
             "alt": "Experiencia interactiva 4"
           }
         ]
-      },
-      {
-        "type": "textSection",
-        "content": "We carried out a comprehensive campaign that included promotional activation at point of sale and amplification through digital media. We generated the strategy, planning, and purchase of digital media with two clear objectives: awareness and traffic referral to point of sale. Heineken + UEFA Champions League: Adapting content received from global to local language -with corresponding approvals- Green Store: Creating original content locally to communicate the brand's e-commerce. To participate, people had to enter the hidden code within the packs on our website, sharing their data with the brand."
       }
     ]
   }

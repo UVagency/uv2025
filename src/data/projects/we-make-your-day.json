@@ -5,7 +5,9 @@
   "categories": ["INTEGRATED"],
   "description": "Discover how we celebrated Krispy Kreme's arrival in the country and captured the hearts of thousands with its incomparable sweetness.",
   "client": "PREMIER GROUP CHILE",
-  "fullDescription": "Krispy Kreme's Sweet Launch, winning Hearts in Chile.\nSuccessfully introduce Krispy Kreme to the Chilean market with our \"We Make Your Day\" concept. Our mission was to create genuine excitement and establish the brand as more than just a doughnut shop – making it a new cultural phenomenon in Chile's food scene with the goal of becoming the country's favorite sweet treat destination.",
+  "overview": "Krispy Kreme's Sweet Launch, winning Hearts in Chile.\nSuccessfully introduce Krispy Kreme to the Chilean market with our \"We Make Your Day\" concept. Our mission was to create genuine excitement and establish the brand as more than just a doughnut shop – making it a new cultural phenomenon in Chile's food scene with the goal of becoming the country's favorite sweet treat destination.",
+  "execution": "Our team orchestrated a comprehensive 360-degree marketing plan that began with a strategic teaser phase, building anticipation through both traditional and digital media. We carefully selected key opinion leaders who aligned with the brand's values to create authentic, engaging content.\n\nThe launch strategy included:\n\n- Efficient media investment across multiple channels\n- Strong community engagement through sampling activities\n- Strategic influencer partnerships\n- Traditional media coverage\n- Digital media campaigns\n- Interactive community events\n\nThe launch event was transformed into a celebration of Chilean culture and American tradition coming together, complete with live entertainment, special giveaways, and exclusive launch-day promotions.\n\nOur digital strategy amplified the physical event's success, with user-generated content reaching millions across social platforms. This was just the beginning of Krispy Kreme's journey to becoming Chile's favorite sweet destination.",
+  "marketingResults": "- 115 traditional media mentions\n- $70,000 in earned media value\n- Over 5 million digital impressions\n- Thousands of customers at launch event\n- Significant social media engagement",
   "videoUrl": "https://vimeo.com/1079783710",
   "images": [
     "/images/we-make-your-day/we-make-your-day-01.jpg",
@@ -13,19 +15,11 @@
     "/images/we-make-your-day/we-make-your-day-03.jpg"
   ],
   "gallery": {
-    "featureText": "Our digital strategy amplified the physical event's success, with user-generated content reaching millions across social platforms. This was just the beginning of Krispy Kreme's journey to becoming Chile's favorite sweet destination.",
+    "featureText": "Our digital strategy amplified the physical event's success, with user-generated content reaching millions across social platforms. This was just the beginning of Krispy Kreme's journey to becoming Chile's favorite sweet destination. - Mathias Rosenthal, CEO Grupo Premier Chile",
     "sections": [
       {
         "type": "banner",
         "image": "/images/we-make-your-day/we-make-your-day-04.jpg"
-      },
-      {
-        "type": "textSection",
-        "content": "Execution: Our team orchestrated a comprehensive 360-degree marketing plan that began with a strategic teaser phase, building anticipation through both traditional and digital media. We carefully selected key opinion leaders who aligned with the brand's values to create authentic, engaging content.\n\nThe launch strategy included:\n\n- Efficient media investment across multiple channels\n- Strong community engagement through sampling activities\n- Strategic influencer partnerships\n- Traditional media coverage\n- Digital media campaigns\n- Interactive community events\n\nThe launch event was transformed into a celebration of Chilean culture and American tradition coming together, complete with live entertainment, special giveaways, and exclusive launch-day promotions.\n\nOur digital strategy amplified the physical event's success, with user-generated content reaching millions across social platforms. This was just the beginning of Krispy Kreme's journey to becoming Chile's favorite sweet destination."
-      },
-      {
-        "type": "textSection",
-        "content": "Marketing Results: The campaign achieved remarkable results:\n\n- 115 traditional media mentions\n- $70,000 in earned media value\n- Over 5 million digital impressions\n- Thousands of customers at launch event\n- Significant social media engagement"
       },
       {
         "type": "imageGrid",

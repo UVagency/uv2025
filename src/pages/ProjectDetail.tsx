@@ -59,45 +59,54 @@ const ProjectDetail = () => {
 
   const carouselSpeed = project.carouselSpeed;
 
-  const getSectionContent = (type: 'execution' | 'results') => {
-    if (!project.gallery?.sections) return '';
-    
-    const section = project.gallery.sections.find(s => 
-      s.type === 'textSection' && 
-      'content' in s &&
-      s.content.toLowerCase().includes(type)
-    );
-    
-    return section && 'content' in section ? section.content : '';
-  };
-
   return (
     <div className="fixed inset-0 z-50 bg-portfolio-bg overflow-y-auto">
       <div className="w-full mx-auto pt-8 pb-16">
         <ProjectHeader project={project} />
         <div className="max-w-[90%] mx-auto">
+          {/* 1. Video */}
           <ProjectVideoPlayer project={project} />
+
+          {/* 2. Main Images */}
+          <div className="grid grid-cols-3 gap-4 mb-12">
+            {project.images.slice(0, 3).map((image, index) => (
+              <img 
+                key={index}
+                src={image} 
+                alt={`${project.name} - Image ${index + 1}`}
+                className="w-full"
+              />
+            ))}
+          </div>
+
+          {/* 3. Slider (comentado por ahora) */}
+          {/* <ProjectGallery project={project} carouselSpeed={carouselSpeed} /> */}
 
           {project.gallery && (
             <div className="mb-12">
-              {/* Overview */}
+              {/* 4. Quote */}
+              <div className="mb-12 text-2xl text-portfolio-text/80 font-light italic">
+                {project.gallery.featureText}
+              </div>
+
+              {/* 5. Overview */}
               <div className="mb-8">
                 <h2 className="text-4xl font-bold text-portfolio-text mb-4">Overview</h2>
                 <div className="text-2xl text-portfolio-text/80 font-light whitespace-pre-line">
-                  {project.fullDescription}
+                  {project.overview}
                 </div>
               </div>
 
-              {/* Execution Section */}
+              {/* 6. Execution */}
               <div className="mb-8">
                 <h2 className="text-4xl font-bold text-portfolio-text mb-4">Execution</h2>
-                <div>{renderBullets(getSectionContent('execution'))}</div>
+                <div>{renderBullets(project.execution)}</div>
               </div>
 
-              {/* Marketing Results Section */}
+              {/* 7. Marketing Results */}
               <div className="mb-8">
                 <h2 className="text-4xl font-bold text-portfolio-text mb-4">Marketing Results</h2>
-                <div>{renderBullets(getSectionContent('results'))}</div>
+                <div>{renderBullets(project.marketingResults)}</div>
               </div>
 
               {/* Other sections (banners, image grids, etc) */}
@@ -128,8 +137,6 @@ const ProjectDetail = () => {
                 ))}
             </div>
           )}
-
-          <ProjectGallery project={project} carouselSpeed={carouselSpeed} />
         </div>
         <Footer />
       </div>
