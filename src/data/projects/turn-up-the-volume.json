@@ -10,35 +10,35 @@
   "marketingResults": "Con 'Turn Up The Volume' conseguimos que el público no solo escuchara el producto, sino que lo sintiera con todos sus sentidos.",
   "videoUrl": "https://vimeo.com/1079828442",
   "images": [
-    "/images/turn-up-the-volume/turn-up-the-volume-01.jpg",
-    "/images/turn-up-the-volume/turn-up-the-volume-02.jpg",
-    "/images/turn-up-the-volume/turn-up-the-volume-03.jpg"
+    "/projects/turn-up-the-volume/turn-up-the-volume-01.jpg",
+    "/projects/turn-up-the-volume/turn-up-the-volume-02.jpg",
+    "/projects/turn-up-the-volume/turn-up-the-volume-03.jpg"
   ],
   "gallery": {
     "featureText": "Con 'Turn Up The Volume' conseguimos que el público no solo escuchara el producto, sino que lo sintiera con todos sus sentidos.",
     "sections": [
       {
         "type": "banner",
-        "image": "/images/turn-up-the-volume/turn-up-the-volume-04.jpg"
+        "image": "/projects/turn-up-the-volume/turn-up-the-volume-04.jpg"
       },
       {
         "type": "imageGrid",
         "columns": 4,
         "images": [
           {
-            "src": "/images/turn-up-the-volume/turn-up-the-volume-05.jpg",
+            "src": "/projects/turn-up-the-volume/turn-up-the-volume-05.jpg",
             "alt": "Experiencia sensorial 1"
           },
           {
-            "src": "/images/turn-up-the-volume/turn-up-the-volume-06.jpg",
+            "src": "/projects/turn-up-the-volume/turn-up-the-volume-06.jpg",
             "alt": "Experiencia sensorial 2"
           },
           {
-            "src": "/images/turn-up-the-volume/turn-up-the-volume-07.jpg",
+            "src": "/projects/turn-up-the-volume/turn-up-the-volume-07.jpg",
             "alt": "Experiencia sensorial 3"
           },
           {
-            "src": "/images/turn-up-the-volume/turn-up-the-volume-08.jpg",
+            "src": "/projects/turn-up-the-volume/turn-up-the-volume-08.jpg",
             "alt": "Experiencia sensorial 4"
           }
         ]

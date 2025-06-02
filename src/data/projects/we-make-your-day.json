@@ -10,35 +10,35 @@
   "marketingResults": "- 115 traditional media mentions\n- $70,000 in earned media value\n- Over 5 million digital impressions\n- Thousands of customers at launch event\n- Significant social media engagement",
   "videoUrl": "https://vimeo.com/1079783710",
   "images": [
-    "/images/we-make-your-day/we-make-your-day-01.jpg",
-    "/images/we-make-your-day/we-make-your-day-02.jpg",
-    "/images/we-make-your-day/we-make-your-day-03.jpg"
+    "/projects/we-make-your-day/we-make-your-day-01.jpg",
+    "/projects/we-make-your-day/we-make-your-day-02.jpg",
+    "/projects/we-make-your-day/we-make-your-day-03.jpg"
   ],
   "gallery": {
     "featureText": "Our digital strategy amplified the physical event's success, with user-generated content reaching millions across social platforms. This was just the beginning of Krispy Kreme's journey to becoming Chile's favorite sweet destination. - Mathias Rosenthal, CEO Grupo Premier Chile",
     "sections": [
       {
         "type": "banner",
-        "image": "/images/we-make-your-day/we-make-your-day-04.jpg"
+        "image": "/projects/we-make-your-day/we-make-your-day-04.jpg"
       },
       {
         "type": "imageGrid",
         "columns": 4,
         "images": [
           {
-            "src": "/images/we-make-your-day/we-make-your-day-05.jpg",
+            "src": "/projects/we-make-your-day/we-make-your-day-05.jpg",
             "alt": "Intervención sorpresa 1"
           },
           {
-            "src": "/images/we-make-your-day/we-make-your-day-06.jpg",
+            "src": "/projects/we-make-your-day/we-make-your-day-06.jpg",
             "alt": "Intervención sorpresa 2"
           },
           {
-            "src": "/images/we-make-your-day/we-make-your-day-07.jpg",
+            "src": "/projects/we-make-your-day/we-make-your-day-07.jpg",
             "alt": "Intervención sorpresa 3"
           },
           {
-            "src": "/images/we-make-your-day/we-make-your-day-08.jpg",
+            "src": "/projects/we-make-your-day/we-make-your-day-08.jpg",
             "alt": "Intervención sorpresa 4"
           }
         ]

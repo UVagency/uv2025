@@ -10,31 +10,31 @@
   "marketingResults": "Our main objective was to strengthen the bond between the Chancaca Deliciosa brand and people, generating impact and recall through a campaign with local taste.",
   "videoUrl": "https://vimeo.com/1079782182",
   "images": [
-    "/images/sabor-de-barrio/sabor-de-barrio-01.jpg",
-    "/images/sabor-de-barrio/sabor-de-barrio-02.jpg",
-    "/images/sabor-de-barrio/sabor-de-barrio-03.jpg"
+    "/projects/sabor-de-barrio/sabor-de-barrio-01.jpg",
+    "/projects/sabor-de-barrio/sabor-de-barrio-02.jpg",
+    "/projects/sabor-de-barrio/sabor-de-barrio-03.jpg"
   ],
   "gallery": {
     "featureText": "Our main objective was to strengthen the bond between the Chancaca Deliciosa brand and people, generating impact and recall through a campaign with local taste.",
     "sections": [
       {
         "type": "banner",
-        "image": "/images/sabor-de-barrio/sabor-de-barrio-04.jpg"
+        "image": "/projects/sabor-de-barrio/sabor-de-barrio-04.jpg"
       },
       {
         "type": "imageGrid",
         "columns": 3,
         "images": [
           {
-            "src": "/images/sabor-de-barrio/sabor-de-barrio-05.jpg",
+            "src": "/projects/sabor-de-barrio/sabor-de-barrio-05.jpg",
             "alt": "Brand Identity 1"
           },
           {
-            "src": "/images/sabor-de-barrio/sabor-de-barrio-06.jpg",
+            "src": "/projects/sabor-de-barrio/sabor-de-barrio-06.jpg",
             "alt": "Brand Identity 2"
           },
           {
-            "src": "/images/sabor-de-barrio/sabor-de-barrio-07.jpg",
+            "src": "/projects/sabor-de-barrio/sabor-de-barrio-07.jpg",
             "alt": "Brand Identity 3"
           }
         ]

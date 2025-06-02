@@ -10,9 +10,9 @@
   "marketingResults": "Con 'Fly Your Way' transformamos la experiencia de vuelo en una expresión de libertad personal y autonomía para miles de viajeros.",
   "videoUrl": "https://vimeo.com/1079829750",
   "images": [
-    "/images/fly-your-way/fly-your-way-01.jpg",
-    "/images/fly-your-way/fly-your-way-02.jpg",
-    "/images/fly-your-way/fly-your-way-03.jpg"
+    "/projects/fly-your-way/fly-your-way-01.jpg",
+    "/projects/fly-your-way/fly-your-way-02.jpg",
+    "/projects/fly-your-way/fly-your-way-03.jpg"
   ],
   "thumbnails": [
     "https://images.unsplash.com/photo-1520437358207-323b43b50729?q=80&w=180",
@@ -25,26 +25,26 @@
     "sections": [
       {
         "type": "banner",
-        "image": "/images/fly-your-way/fly-your-way-04.jpg"
+        "image": "/projects/fly-your-way/fly-your-way-04.jpg"
       },
       {
         "type": "imageGrid",
         "columns": 4,
         "images": [
           {
-            "src": "/images/fly-your-way/fly-your-way-05.jpg",
+            "src": "/projects/fly-your-way/fly-your-way-05.jpg",
             "alt": "Experiencia de vuelo personalizada 1"
           },
           {
-            "src": "/images/fly-your-way/fly-your-way-06.jpg",
+            "src": "/projects/fly-your-way/fly-your-way-06.jpg",
             "alt": "Experiencia de vuelo personalizada 2"
           },
           {
-            "src": "/images/fly-your-way/fly-your-way-07.jpg",
+            "src": "/projects/fly-your-way/fly-your-way-07.jpg",
             "alt": "Experiencia de vuelo personalizada 3"
           },
           {
-            "src": "/images/fly-your-way/fly-your-way-08.jpg",
+            "src": "/projects/fly-your-way/fly-your-way-08.jpg",
             "alt": "Experiencia de vuelo personalizada 4"
           }
         ]

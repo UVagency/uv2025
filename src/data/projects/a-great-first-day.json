@@ -10,35 +10,35 @@
   "marketingResults": "Con 'A Great First Day' logramos inspirar a miles de personas a dar el primer paso hacia sus sueños con confianza y entusiasmo.",
   "videoUrl": "https://vimeo.com/1079820002",
   "images": [
-    "/images/a-great-first-day/a-great-first-day-01.jpg",
-    "/images/a-great-first-day/a-great-first-day-02.jpg",
-    "/images/a-great-first-day/a-great-first-day-03.jpg"
+    "/projects/a-great-first-day/a-great-first-day-01.jpg",
+    "/projects/a-great-first-day/a-great-first-day-02.jpg",
+    "/projects/a-great-first-day/a-great-first-day-03.jpg"
   ],
   "gallery": {
     "featureText": "Con 'A Great First Day' logramos inspirar a miles de personas a dar el primer paso hacia sus sueños con confianza y entusiasmo.",
     "sections": [
       {
         "type": "banner",
-        "image": "/images/a-great-first-day/a-great-first-day-04.jpg"
+        "image": "/projects/a-great-first-day/a-great-first-day-04.jpg"
       },
       {
         "type": "imageGrid",
         "columns": 4,
         "images": [
           {
-            "src": "/images/a-great-first-day/a-great-first-day-05.jpg",
+            "src": "/projects/a-great-first-day/a-great-first-day-05.jpg",
             "alt": "Historia inspiradora 1"
           },
           {
-            "src": "/images/a-great-first-day/a-great-first-day-06.jpg",
+            "src": "/projects/a-great-first-day/a-great-first-day-06.jpg",
             "alt": "Historia inspiradora 2"
           },
           {
-            "src": "/images/a-great-first-day/a-great-first-day-07.jpg",
+            "src": "/projects/a-great-first-day/a-great-first-day-07.jpg",
             "alt": "Historia inspiradora 3"
           },
           {
-            "src": "/images/a-great-first-day/a-great-first-day-08.jpg",
+            "src": "/projects/a-great-first-day/a-great-first-day-08.jpg",
             "alt": "Historia inspiradora 4"
           }
         ]

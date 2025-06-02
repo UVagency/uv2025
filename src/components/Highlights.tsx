@@ -28,7 +28,7 @@ const Highlights = () => {
           >
             <div className="relative w-full overflow-hidden rounded-md mb-4">
               <img 
-                src={project.images[0]} 
+                src={project.images[0]}
                 alt={project.name}
                 className="w-full object-contain" 
               />

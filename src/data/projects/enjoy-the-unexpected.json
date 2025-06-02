@@ -10,35 +10,35 @@
   "marketingResults": "We wrapped up this spectacular campaign with a major event, where we invited over 2,000 guests to enjoy the UEFA Champions League final, Heineken-style. The campaign exceeded all our expectations, not only in terms of reach and engagement, but also in creating memorable experiences that strengthened our connection with consumers at every touchpoint.",
   "videoUrl": "https://vimeo.com/1079510908",
   "images": [
-    "/images/enjoy-the-unexpected/enjoy-the-unexpected-01.jpg",
-    "/images/enjoy-the-unexpected/enjoy-the-unexpected-02.jpg",
-    "/images/enjoy-the-unexpected/enjoy-the-unexpected-03.jpg"
+    "/projects/enjoy-the-unexpected/enjoy-the-unexpected-01.jpg",
+    "/projects/enjoy-the-unexpected/enjoy-the-unexpected-02.jpg",
+    "/projects/enjoy-the-unexpected/enjoy-the-unexpected-03.jpg"
   ],
   "gallery": {
     "featureText": "The 'Enjoy the Unexpected' campaign exceeded all our expectations, not only in terms of reach and engagement, but also in creating memorable experiences that strengthened our connection with consumers at every touchpoint.",
     "sections": [
       {
         "type": "banner",
-        "image": "/images/enjoy-the-unexpected/enjoy-the-unexpected-04.jpg"
+        "image": "/projects/enjoy-the-unexpected/enjoy-the-unexpected-04.jpg"
       },
       {
         "type": "imageGrid",
         "columns": 4,
         "images": [
           {
-            "src": "/images/enjoy-the-unexpected/enjoy-the-unexpected-05.jpg",
+            "src": "/projects/enjoy-the-unexpected/enjoy-the-unexpected-05.jpg",
             "alt": "Experiencia interactiva 1"
           },
           {
-            "src": "/images/enjoy-the-unexpected/enjoy-the-unexpected-06.jpg",
+            "src": "/projects/enjoy-the-unexpected/enjoy-the-unexpected-06.jpg",
             "alt": "Experiencia interactiva 2"
           },
           {
-            "src": "/images/enjoy-the-unexpected/enjoy-the-unexpected-07.jpg",
+            "src": "/projects/enjoy-the-unexpected/enjoy-the-unexpected-07.jpg",
             "alt": "Experiencia interactiva 3"
           },
           {
-            "src": "/images/enjoy-the-unexpected/enjoy-the-unexpected-08.jpg",
+            "src": "/projects/enjoy-the-unexpected/enjoy-the-unexpected-08.jpg",
             "alt": "Experiencia interactiva 4"
           }
         ]

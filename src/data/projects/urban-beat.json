@@ -10,35 +10,35 @@
   "marketingResults": "Con Urban Beat logramos crear un puente entre la cultura urbana y las marcas, generando un diálogo auténtico con la audiencia joven.",
   "videoUrl": "https://vimeo.com/1079790908",
   "images": [
-    "/images/urban-beat/urban-beat-01.jpg",
-    "/images/urban-beat/urban-beat-02.jpg",
-    "/images/urban-beat/urban-beat-03.jpg"
+    "/projects/urban-beat/urban-beat-01.jpg",
+    "/projects/urban-beat/urban-beat-02.jpg",
+    "/projects/urban-beat/urban-beat-03.jpg"
   ],
   "gallery": {
     "featureText": "Con Urban Beat logramos crear un puente entre la cultura urbana y las marcas, generando un diálogo auténtico con la audiencia joven.",
     "sections": [
       {
         "type": "banner",
-        "image": "/images/urban-beat/urban-beat-04.jpg"
+        "image": "/projects/urban-beat/urban-beat-04.jpg"
       },
       {
         "type": "imageGrid",
         "columns": 4,
         "images": [
           {
-            "src": "/images/urban-beat/urban-beat-05.jpg",
+            "src": "/projects/urban-beat/urban-beat-05.jpg",
             "alt": "Intervención urbana 1"
           },
           {
-            "src": "/images/urban-beat/urban-beat-06.jpg",
+            "src": "/projects/urban-beat/urban-beat-06.jpg",
             "alt": "Intervención urbana 2"
           },
           {
-            "src": "/images/urban-beat/urban-beat-07.jpg",
+            "src": "/projects/urban-beat/urban-beat-07.jpg",
             "alt": "Intervención urbana 3"
           },
           {
-            "src": "/images/urban-beat/urban-beat-08.jpg",
+            "src": "/projects/urban-beat/urban-beat-08.jpg",
             "alt": "Intervención urbana 4"
           }
         ]
