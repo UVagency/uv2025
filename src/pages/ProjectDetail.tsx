@@ -94,9 +94,7 @@ const ProjectDetail = () => {
               {/* 5. Overview */}
               <div className="mb-8">
                 <h2 className="text-4xl font-bold text-portfolio-text mb-4">Overview</h2>
-                <div className="text-2xl text-portfolio-text/80 font-light whitespace-pre-line">
-                  {project.overview}
-                </div>
+                <div>{renderBullets(project.overview)}</div>
               </div>
 
               {/* 6. Execution */}
