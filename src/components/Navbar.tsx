@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { X } from 'lucide-react';
-import AnimatedEye from './hero/AnimatedEye';
 import Footer from './Footer';
 import InfoSection from './InfoSection';
 import { useNavigation } from '../hooks/useNavigation';
@@ -59,7 +58,7 @@ const Navbar = () => {
             </div>
           </div>
           <div>
-            <AnimatedEye />
+            {/* AnimatedEye component removed */}
           </div>
         </div>
       </nav>
