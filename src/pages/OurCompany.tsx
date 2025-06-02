@@ -24,7 +24,7 @@ const OurCompany = () => {
 
   // Datos de ejemplo, idealmente vendrían de un CMS o archivo de datos
   const companyInfo = {
-    name: "United Vision",
+    name: "United Visions",
     year: "1999",
     tagline: "UV is the integrated marketing agency that grows your brand through Omnichannel campaigns, crafts Events that move people to create customers, and delivers results through Smart Media.\nOne agency, all in.",
     description: "UV is a Full-service in house indepentent agency that champions brands through advertising, engineers events that move people to create customers, and drives results through smart media. We specialize in strategy, creativity, content, media and experiences- all connected to help brands grow, inspire, and stay relevant in a constantly shifting world. We're grateful to be working with top brands and passionate teams to create work that resonates - emotionally and measurably. We love what we do and we know that hard work pays off.",
@@ -131,6 +131,33 @@ const OurCompany = () => {
                   <p className="inline">{value.description}</p>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Services Section */}
+          <div className="mb-12">
+            <h2 className="text-4xl font-bold text-portfolio-text mb-8">Our Services <span role="img" aria-label="handshake">🤝</span></h2>
+            <div className="text-2xl text-portfolio-text/80 font-light space-y-6">
+              <div>
+                <p className="font-semibold inline-block mr-2">Brand Building</p>
+                <p className="inline">Developing and positioning brands with clarity and impact</p>
+              </div>
+              <div>
+                <p className="font-semibold inline-block mr-2">Advertising</p>
+                <p className="inline">Crafting creative and results-driven campaigns</p>
+              </div>
+              <div>
+                <p className="font-semibold inline-block mr-2">Exhibition</p>
+                <p className="inline">Designing immersive event and brand experiences</p>
+              </div>
+              <div>
+                <p className="font-semibold inline-block mr-2">Target Audience</p>
+                <p className="inline">Engaging the right people with precision</p>
+              </div>
+              <div>
+                <p className="font-semibold inline-block mr-2">Social Strategy & Content</p>
+                <p className="inline">Planning and producing content that connects</p>
+              </div>
             </div>
           </div>
 
