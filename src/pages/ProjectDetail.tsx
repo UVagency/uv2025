@@ -2,9 +2,8 @@ import { useParams } from "react-router-dom";
 import ProjectHeader from "../components/project/ProjectHeader";
 import ProjectGallery from "../components/project/ProjectGallery";
 import ProjectVideoPlayer from "../components/project/ProjectVideoPlayer";
-import ProjectVideoLink from "../components/project/ProjectVideoLink";
 import ProjectNotFound from "../components/project/ProjectNotFound";
-import projectsData from "../data/projectsData";
+import projectsData, { ProjectData, GallerySection } from "../data/projectsData";
 import Footer from "../components/Footer";
 
 function renderBullets(text: string) {
@@ -52,17 +51,25 @@ function renderBullets(text: string) {
 const ProjectDetail = () => {
   const { projectId } = useParams<{ projectId: string }>();
   
-  // Buscar el proyecto por ID
   const project = projectId ? projectsData[projectId.toLowerCase()] : undefined;
   
   if (!project) {
     return <ProjectNotFound />;
   }
 
-  // Use the project's carousel speed or a default based on project name
-  const carouselSpeed = project.carouselSpeed || 
-                       (project.name === "MERGUI" ? 50 : 
-                       project.name === "ENJOY THE UNEXPECTED" ? 5 : 30);
+  const carouselSpeed = project.carouselSpeed;
+
+  const getSectionContent = (type: 'execution' | 'results') => {
+    if (!project.gallery?.sections) return '';
+    
+    const section = project.gallery.sections.find(s => 
+      s.type === 'textSection' && 
+      'content' in s &&
+      s.content.toLowerCase().includes(type)
+    );
+    
+    return section && 'content' in section ? section.content : '';
+  };
 
   return (
     <div className="fixed inset-0 z-50 bg-portfolio-bg overflow-y-auto">
@@ -71,39 +78,58 @@ const ProjectDetail = () => {
         <div className="max-w-[90%] mx-auto">
           <ProjectVideoPlayer project={project} />
 
-          {/* Secciones de texto personalizadas desde el JSON */}
           {project.gallery && (
             <div className="mb-12">
-              {/* Challenge */}
+              {/* Overview */}
               <div className="mb-8">
                 <h2 className="text-4xl font-bold text-portfolio-text mb-4">Overview</h2>
                 <div className="text-2xl text-portfolio-text/80 font-light whitespace-pre-line">
                   {project.fullDescription}
                 </div>
               </div>
-              {/* Execution */}
-              {project.gallery.sections.find(s => s.type === 'textSection' && !s.content.toLowerCase().includes('marketing results')) && (
-                <div className="mb-8">
-                  <h2 className="text-4xl font-bold text-portfolio-text mb-4">Execution</h2>
-                  <div>
-                    {renderBullets((project.gallery.sections.find(s => s.type === 'textSection' && !s.content.toLowerCase().includes('marketing results')) as any).content)}
+
+              {/* Execution Section */}
+              <div className="mb-8">
+                <h2 className="text-4xl font-bold text-portfolio-text mb-4">Execution</h2>
+                <div>{renderBullets(getSectionContent('execution'))}</div>
+              </div>
+
+              {/* Marketing Results Section */}
+              <div className="mb-8">
+                <h2 className="text-4xl font-bold text-portfolio-text mb-4">Marketing Results</h2>
+                <div>{renderBullets(getSectionContent('results'))}</div>
+              </div>
+
+              {/* Other sections (banners, image grids, etc) */}
+              {project.gallery.sections
+                .filter(section => section.type !== 'textSection')
+                .map((section, index) => (
+                  <div key={index}>
+                    {section.type === 'banner' && (
+                      <img 
+                        src={section.image} 
+                        alt={section.alt || ''} 
+                        className="w-full mb-8"
+                      />
+                    )}
+                    {section.type === 'imageGrid' && (
+                      <div className={`grid grid-cols-${section.columns} gap-${section.gap || 4} mb-8`}>
+                        {section.images.map((img, i) => (
+                          <img 
+                            key={i}
+                            src={img.src} 
+                            alt={img.alt} 
+                            className="w-full"
+                          />
+                        ))}
+                      </div>
+                    )}
                   </div>
-                </div>
-              )}
-              {/* Marketing Results */}
-              {project.gallery.sections.find(s => s.type === 'textSection' && s.content.toLowerCase().includes('marketing results')) && (
-                <div className="mb-8">
-                  <h2 className="text-4xl font-bold text-portfolio-text mb-4">Marketing Results</h2>
-                  <div>
-                    {renderBullets((project.gallery.sections.find(s => s.type === 'textSection' && s.content.toLowerCase().includes('marketing results')) as any).content)}
-                  </div>
-                </div>
-              )}
+                ))}
             </div>
           )}
 
           <ProjectGallery project={project} carouselSpeed={carouselSpeed} />
-          <ProjectVideoLink show={project.name === "MERGUI"} />
         </div>
         <Footer />
       </div>
