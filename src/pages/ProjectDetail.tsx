@@ -76,7 +76,7 @@ const ProjectDetail = () => {
                 key={index}
                 src={image} 
                 alt={`${project.name} - Image ${index + 1}`}
-                className="w-full rounded-[5px]"
+                className="w-full aspect-[16/9] object-cover rounded-[5px]"
               />
             ))}
           </div>
