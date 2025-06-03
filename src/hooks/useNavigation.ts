@@ -18,6 +18,28 @@ export const useNavigation = (): NavigationState => {
     };
   }, []);
 
+  // Agregar efecto para manejar la tecla ESC
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        if (isInfoOpen) {
+          toggleInfo();
+        }
+        if (isContactOpen) {
+          toggleContact();
+        }
+        if (isOurCompanyOpen) {
+          toggleOurCompany();
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isInfoOpen, isContactOpen, isOurCompanyOpen]);
+
   const toggleInfo = () => {
     if (isContactOpen) {
       setIsContactOpen(false);

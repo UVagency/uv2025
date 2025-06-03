@@ -30,27 +30,27 @@ const Navbar = () => {
               <div className={`flex items-center gap-4 md:gap-8 transition-transform duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out ${(isInfoOpen || isContactOpen || isOurCompanyOpen) ? 'translate-x-8 md:translate-x-12' : ''}`}>
                 <button 
                   onClick={toggleInfo}
-                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-sm md:text-base ${isInfoOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
+                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-xl ${isInfoOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
                 >
                   INFO
                 </button>
                 <Link 
                   to="/#highlights" 
                   onClick={handleWorkClick}
-                  className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors text-sm md:text-base"
+                  className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors text-xl"
                 >
                   Work
                 </Link>
                 <Link 
                   to="/our-company"
                   onClick={toggleOurCompany}
-                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-sm md:text-base ${isOurCompanyOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
+                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-xl ${isOurCompanyOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
                 >
                   Our Company
                 </Link>
                 <button 
                   onClick={toggleContact}
-                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-sm md:text-base ${isContactOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
+                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-xl ${isContactOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
                 >
                   Contact
                 </button>
