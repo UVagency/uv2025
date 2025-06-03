@@ -59,7 +59,7 @@ const projects: Project[] = [
     categories: ["FILM"], 
     comingSoon: true,
   },
-  { 
+  /*{ 
     name: "FESTIVAL SEASON", 
     year: "TIENDAS PARIS", 
     categories: ["CONTENT CREATION"], 
@@ -70,7 +70,7 @@ const projects: Project[] = [
     year: "SOUNDCORE BY ANKER", 
     categories: ["IMMERSIVE"], 
     comingSoon: true,
-  },
+  },*/
 ];
 
 const Portfolio = () => {
