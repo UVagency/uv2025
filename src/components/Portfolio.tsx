@@ -44,7 +44,7 @@ const projects: Project[] = [
     name: "TURN UP THE VOLUME", 
     year: "MAYBELLINE NEW YORK", 
     categories: ["LAUNCH"],
-    comingSoon: true,
+    comingSoon: false,
   },
   { 
     name: "FLY YOUR WAY", 
