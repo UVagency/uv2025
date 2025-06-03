@@ -20,7 +20,7 @@ const projects: Project[] = [
     name: "WE MAKE YOUR DAY", 
     year: "KRISPY KREME", 
     categories: ["INTEGRATED"], 
-    comingSoon: true,
+    comingSoon: false,
   },
   { 
     name: "URBAN BEAT", 
