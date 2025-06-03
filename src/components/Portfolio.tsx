@@ -38,7 +38,7 @@ const projects: Project[] = [
     name: "A GREAT FIRST DAY", 
     year: "MATTEL", 
     categories: ["PROMO"],
-    comingSoon: true,
+    comingSoon: false,
   },
   { 
     name: "TURN UP THE VOLUME", 
