@@ -26,13 +26,13 @@ const projects: Project[] = [
     name: "URBAN BEAT", 
     year: "BALL CORPORATION", 
     categories: ["INTEGRATED"],
-    comingSoon: true,
+    comingSoon: false,
   },
   { 
     name: "ENJOY THE UNEXPECTED", 
     year: "HEINEKEN", 
     categories: ["PROMO"],
-    comingSoon: true,
+    comingSoon: false,
   },
   { 
     name: "A GREAT FIRST DAY", 
