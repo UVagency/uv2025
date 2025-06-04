@@ -1,14 +1,14 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
 User-agent: *
 Allow: /
+Allow: /es/
+Allow: /project/
+Allow: /about/
+Allow: /contact/
+Allow: /our-company/
+
+# Sitemaps
+Sitemap: https://uv.agency/sitemap.xml
+Sitemap: https://uv.agency/sitemap-es.xml
+
+# Crawl-delay
+Crawl-delay: 10

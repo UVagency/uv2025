@@ -1,0 +1,18 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self' https://uv.agency; img-src 'self' https://uv.agency data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://uv.agency; style-src 'self' 'unsafe-inline' https://uv.agency; font-src 'self' data: https://uv.agency; connect-src 'self' https://uv.agency; frame-src 'self' https://player.vimeo.com;"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()" 

@@ -1,0 +1,8 @@
+# Language redirects
+/es/* /index.html 200
+/* /index.html 200
+
+# Force HTTPS
+http://uv.agency/* https://uv.agency/:splat 301!
+http://www.uv.agency/* https://uv.agency/:splat 301!
+https://www.uv.agency/* https://uv.agency/:splat 301! 
