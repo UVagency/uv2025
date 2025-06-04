@@ -130,7 +130,7 @@ const Portfolio = () => {
                 <div className="sm:hidden text-lg font-bold text-portfolio-text whitespace-nowrap overflow-hidden text-ellipsis flex-1">
                   {project.name}
                 </div>
-                <div className="hidden sm:block text-4xl font-bold text-portfolio-text group-hover:text-portfolio-highlight whitespace-nowrap">
+                <div className="hidden sm:block text-5xl font-bold text-portfolio-text group-hover:text-portfolio-highlight whitespace-nowrap">
                   {project.name}
                 </div>
 
