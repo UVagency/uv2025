@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -86,11 +86,11 @@
   }
   
   .font-hero {
-    font-family: 'Ubuntu', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 700;
   }
   .font-headline {
-    font-family: 'Ubuntu', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 700;
   }
   .font-subtitle {

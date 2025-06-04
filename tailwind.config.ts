@@ -19,8 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'hero': ['Ubuntu', 'Arial', 'sans-serif'],
-				'headline': ['Ubuntu', 'Arial', 'sans-serif'],
+				'hero': ['Open Sans', 'Arial', 'sans-serif'],
+				'headline': ['Open Sans', 'Arial', 'sans-serif'],
 				'subtitle': ['Open Sans', 'Arial', 'sans-serif'],
 				'body': ['Open Sans', 'Arial', 'sans-serif'],
 			},
