@@ -8,18 +8,21 @@ import Footer from "../components/Footer";
 import { SEO } from "../components/SEO";
 
 function renderBullets(text: string) {
+  if (!text) return null;
+  
   const lines = text.split(/\r?\n/);
   const items: string[] = [];
   const blocks: (string | JSX.Element)[] = [];
   let buffer: string[] = [];
+  let blockKey = 0;
 
-  lines.forEach((line, idx) => {
+  lines.forEach((line) => {
     if (/^[-*]\s+/.test(line)) {
       items.push(line.replace(/^[-*]\s+/, ""));
     } else {
       if (items.length) {
         blocks.push(
-          <ul className="list-disc pl-8 mb-4 text-2xl text-portfolio-text/80 font-light" key={idx + '-ul'}>
+          <ul className="list-disc pl-8 mb-4 text-2xl text-portfolio-text/80 font-light" key={`ul-${blockKey++}`}>
             {items.map((item, i) => <li key={i}>{item}</li>)}
           </ul>
         );
@@ -28,7 +31,7 @@ function renderBullets(text: string) {
       if (line.trim() !== "") buffer.push(line);
       else if (buffer.length) {
         blocks.push(
-          <p className="mb-2 text-2xl text-portfolio-text/80 font-light" key={idx + '-p'}>{buffer.join(" ")}</p>
+          <p className="mb-2 text-2xl text-portfolio-text/80 font-light" key={`p-${blockKey++}`}>{buffer.join(" ")}</p>
         );
         buffer = [];
       }
@@ -36,14 +39,14 @@ function renderBullets(text: string) {
   });
   if (items.length) {
     blocks.push(
-      <ul className="list-disc pl-8 mb-4 text-2xl text-portfolio-text/80 font-light">
+      <ul className="list-disc pl-8 mb-4 text-2xl text-portfolio-text/80 font-light" key={`ul-${blockKey++}`}>
         {items.map((item, i) => <li key={i}>{item}</li>)}
       </ul>
     );
   }
   if (buffer.length) {
     blocks.push(
-      <p className="mb-2 text-2xl text-portfolio-text/80 font-light">{buffer.join(" ")}</p>
+      <p className="mb-2 text-2xl text-portfolio-text/80 font-light" key={`p-${blockKey++}`}>{buffer.join(" ")}</p>
     );
   }
   return blocks;
@@ -52,14 +55,15 @@ function renderBullets(text: string) {
 const ProjectDetail = () => {
   const { projectId } = useParams<{ projectId: string }>();
   
-  const project = projectId ? projectsData[projectId.toLowerCase()] : undefined;
+  // Normalizar el ID del proyecto
+  const normalizedId = projectId?.toLowerCase().replace(/\s+/g, '-');
+  const project = normalizedId ? projectsData[normalizedId] : undefined;
   
   if (!project) {
     return <ProjectNotFound />;
   }
 
   const carouselSpeed = project.carouselSpeed;
-  const publishDate = new Date(project.year).toISOString();
 
   // Keywords in both languages
   const keywords = {
@@ -94,29 +98,32 @@ const ProjectDetail = () => {
         url={`/project/${projectId}`}
         type="article"
         pageType="project"
-        publishDate={publishDate}
-        keywords={keywords.en} // Default to English for now
-        lang="en" // Default to English for now
+        keywords={keywords.en}
+        lang="en"
       />
       <div className="w-full mx-auto pt-8 pb-16">
         <ProjectHeader project={project} />
         <div className="max-w-[90%] mx-auto">
           {/* 1. Video */}
-          <div className="rounded-[5px] overflow-hidden">
-            <ProjectVideoPlayer project={project} />
-          </div>
+          {project.videoUrl && (
+            <div className="rounded-[5px] overflow-hidden">
+              <ProjectVideoPlayer project={project} />
+            </div>
+          )}
 
           {/* 2. Main Images */}
-          <div className="grid grid-cols-3 gap-4 mb-12">
-            {project.images.slice(0, 3).map((image, index) => (
-              <img 
-                key={index}
-                src={image} 
-                alt={`${project.name} - Image ${index + 1}`}
-                className="w-full aspect-[16/9] object-cover rounded-[5px]"
-              />
-            ))}
-          </div>
+          {project.images && project.images.length > 0 && (
+            <div className="grid grid-cols-3 gap-4 mb-12">
+              {project.images.slice(0, 3).map((image, index) => (
+                <img 
+                  key={index}
+                  src={image} 
+                  alt={`${project.name} - Image ${index + 1}`}
+                  className="w-full aspect-[16/9] object-cover rounded-[5px]"
+                />
+              ))}
+            </div>
+          )}
 
           {/* 3. Slider (comentado por ahora) */}
           {/* <ProjectGallery project={project} carouselSpeed={carouselSpeed} /> */}
@@ -124,27 +131,35 @@ const ProjectDetail = () => {
           {project.gallery && (
             <div className="mb-12">
               {/* 4. Quote */}
-              <div className="mb-12 text-2xl text-portfolio-text/80 font-light italic">
-                {project.gallery.featureText}
-              </div>
+              {project.gallery.featureText && (
+                <div className="mb-12 text-2xl text-portfolio-text/80 font-light italic">
+                  {project.gallery.featureText}
+                </div>
+              )}
 
               {/* 5. Overview */}
-              <div className="mb-8">
-                <h2 className="text-4xl font-bold text-portfolio-text mb-4">Overview</h2>
-                <div>{renderBullets(project.overview)}</div>
-              </div>
+              {project.overview && (
+                <div className="mb-8">
+                  <h2 className="text-4xl font-bold text-portfolio-text mb-4">Overview</h2>
+                  <div>{renderBullets(project.overview)}</div>
+                </div>
+              )}
 
               {/* 6. Execution */}
-              <div className="mb-8">
-                <h2 className="text-4xl font-bold text-portfolio-text mb-4">Execution</h2>
-                <div>{renderBullets(project.execution)}</div>
-              </div>
+              {project.execution && (
+                <div className="mb-8">
+                  <h2 className="text-4xl font-bold text-portfolio-text mb-4">Execution</h2>
+                  <div>{renderBullets(project.execution)}</div>
+                </div>
+              )}
 
               {/* 7. Marketing Results */}
-              <div className="mb-8">
-                <h2 className="text-4xl font-bold text-portfolio-text mb-4">Marketing Results</h2>
-                <div>{renderBullets(project.marketingResults)}</div>
-              </div>
+              {project.marketingResults && (
+                <div className="mb-8">
+                  <h2 className="text-4xl font-bold text-portfolio-text mb-4">Marketing Results</h2>
+                  <div>{renderBullets(project.marketingResults)}</div>
+                </div>
+              )}
 
               {/* Other sections (banners, image grids, etc) */}
               {project.gallery.sections
