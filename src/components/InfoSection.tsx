@@ -12,21 +12,21 @@ const InfoSection = () => {
           />
         </div>
         <div className="text-[#f9f8e2] md:w-2/3 text-center md:text-left">
-          <h1 className="text-4xl md:text-4xl mb-6">
+          <h1 className="font-subtitle text-4xl md:text-4xl mb-6">
             <span className="italic text-portfolio-highlight">One Agency, All In.</span>
           </h1>
-          <p className="text-2xl md:text-3xl leading-relaxed mb-6">
+          <p className="font-body text-2xl md:text-3xl leading-relaxed mb-6">
             UV is a Full-service in house indepentent agency that champions brands through <span className="italic">advertising</span>, engineers <span className="italic">events</span> that move people to create customers, and drives results through smart<span className="italic"> media</span>.
           </p>
-          <p className="text-2xl md:text-3xl leading-relaxed mb-6">
+          <p className="font-body text-2xl md:text-3xl leading-relaxed mb-6">
             We specialize in <span className="italic">strategy, creativity, content, media and experiences</span>- all connected to help brands{" "}
             <span className="italic">grow, inspire,</span> and stay <span className="italic">relevant</span> in a constantly shifting world.
           </p>
-          <p className="text-2xl md:text-3xl leading-relaxed mb-6">
+          <p className="font-body text-2xl md:text-3xl leading-relaxed mb-6">
             We're grateful to be working with top brands and passionate teams to create work that{" "}
             <span className="italic">resonates - emotionally</span> and <span className="italic">measurably</span>.
           </p>
-          <p className="text-2xl md:text-3xl leading-relaxed">
+          <p className="font-body text-2xl md:text-3xl leading-relaxed">
             We love what we do and we know that <span className="italic">hard work pays off</span>.
           </p>
         </div>
@@ -34,7 +34,7 @@ const InfoSection = () => {
       
       {/* Services Section */}
       <div className="w-full mt-16 text-center md:text-left md:pl-48">
-        <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Our Services<span> 🤝</span></h2>
+        <h2 className="font-subtitle text-xl uppercase font-bold text-[#f9f8e2] mb-8">Our Services<span> 🤝</span></h2>
         <div className="text-[#f9f8e2] space-y-6">
           <div>
             <p className="text-lg font-semibold inline-block mr-2">Brand Building</p>

@@ -1,35 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&family=Open+Sans:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@font-face {
-    font-family: "TheBasics";
-    font-weight: 400;
-    src: url("../../fonts/TheBasics-Regular.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "TheBasics";
-    font-weight: 500;
-    src: url("../../fonts/TheBasics-Medium.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "TheBasics";
-    font-weight: 700;
-    src: url("../../fonts/TheBasics-Bold.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "TheBasics";
-    font-weight: 900;
-    src: url("../../fonts/TheBasics-Black.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "TheBasicsMono";
-    src: url("../../fonts/TheBasics-Mono.woff2") format("woff2");
-}
 
 @layer base {
   :root {
@@ -108,6 +80,27 @@
     --input: 216 39% 83.1%;
     --ring: 222.2 84% 4.9%;
   }
+
+  body {
+    font-family: 'Open Sans', Arial, sans-serif;
+  }
+  
+  .font-hero {
+    font-family: 'Ubuntu', Arial, sans-serif;
+    font-weight: 700;
+  }
+  .font-headline {
+    font-family: 'Ubuntu', Arial, sans-serif;
+    font-weight: 700;
+  }
+  .font-subtitle {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 700;
+  }
+  .font-body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 400;
+  }
 }
 
 @layer base {
@@ -118,7 +111,6 @@
 
   body {
     @apply bg-portfolio-bg text-portfolio-text;
-    font-family: 'TheBasics', sans-serif;
     cursor: none !important;
     overflow-x: hidden;
   }

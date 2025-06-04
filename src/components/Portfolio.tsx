@@ -43,7 +43,7 @@ const projects: Project[] = [
   { 
     name: "TURN UP THE VOLUME", 
     year: "MAYBELLINE NEW YORK", 
-    categories: ["LAUNCH"],
+    categories: ["OMNICHANNEL"],
     comingSoon: false,
   },
   { 

@@ -37,7 +37,7 @@
 }
 
 .logos-slide img {
-  height: 60px;
+  height: 69px;
   margin: 0 40px;
   flex-shrink: 0;
 }
@@ -63,8 +63,8 @@
 }
 
 .logo-image {
-  max-height: 50px;
-  max-width: 120px;
+  max-height: 57.5px;
+  max-width: 138px;
   width: auto;
   opacity: 0.7;
   transition: all 0.3s ease;
@@ -76,8 +76,8 @@
 }
 
 .logo-melecmetal {
-  width: 120px;
-  height: 40px;
+  width: 138px;
+  height: 46px;
   object-fit: contain;
   object-position: center;
   display: block;
@@ -85,7 +85,7 @@
 }
 
 .logo-philips {
-  max-width: 140px !important;
+  max-width: 161px !important;
 }
 
 /* Mobile styles */
@@ -102,22 +102,22 @@
   }
 
   .logos-slide img {
-    height: 40px;
+    height: 46px;
     margin: 0 20px;
   }
 
   .logo-image {
-    max-height: 30px;
-    max-width: 100px;
+    max-height: 34.5px;
+    max-width: 115px;
   }
 
   .logo-melecmetal {
-    width: 100px;
-    height: 30px;
+    width: 115px;
+    height: 34.5px;
   }
 
   .logo-philips {
-    max-width: 120px !important;
+    max-width: 138px !important;
   }
 
   .logos:before,

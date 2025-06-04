@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -20,8 +19,10 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'sans': ['TheBasics', 'sans-serif'],
-				'mono': ['TheBasicsMono', 'monospace'],
+				'hero': ['Ubuntu', 'Arial', 'sans-serif'],
+				'headline': ['Ubuntu', 'Arial', 'sans-serif'],
+				'subtitle': ['Open Sans', 'Arial', 'sans-serif'],
+				'body': ['Open Sans', 'Arial', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

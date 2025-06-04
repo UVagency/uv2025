@@ -1,12 +1,12 @@
 [build]
   command = "npm run build"
   publish = "dist"
+  base = "."
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+[build.environment]
+  NODE_VERSION = "18"
 
+# Configuración de headers de seguridad
 [[headers]]
   for = "/*"
   [headers.values]
@@ -14,5 +14,55 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Content-Security-Policy = "default-src 'self' https://uv.agency; img-src 'self' https://uv.agency data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://uv.agency; style-src 'self' 'unsafe-inline' https://uv.agency; font-src 'self' data: https://uv.agency; connect-src 'self' https://uv.agency; frame-src 'self' https://player.vimeo.com;"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()" 
+    Content-Security-Policy = "default-src 'self' https://uv.agency; img-src 'self' https://uv.agency data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://uv.agency https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://uv.agency; font-src 'self' data: https://uv.agency; connect-src 'self' https://uv.agency https://vimeo.com https://player.vimeo.com; frame-src 'self' https://player.vimeo.com;"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+# Configuración de caché
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Redirecciones para SEO y rutas
+[[redirects]]
+  from = "/es/*"
+  to = "/:splat"
+  status = 301
+  force = true
+  conditions = {Language = ["es"]}
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Configuración de optimización de imágenes
+[build.processing]
+  skip_processing = false
+[build.processing.html]
+  pretty_urls = true
+[build.processing.css]
+  bundle = true
+  minify = true
+[build.processing.js]
+  bundle = true
+  minify = true
+[build.processing.images]
+  compress = true
+  format = "webp"

@@ -11,11 +11,11 @@ const ProjectFeatureText: React.FC<ProjectFeatureTextProps> = ({ children, autho
     <div className="bg-portfolio-bg px-4 py-16 sm:px-8">
       <figure className="max-w-6xl mx-auto">
         <blockquote>
-          <p className="text-[2.25rem] md:text-[3rem] leading-[1.2] font-light text-portfolio-text/90 italic relative mb-8">
+          <div className="text-[2.25rem] md:text-[3rem] leading-[1.2] font-light text-portfolio-text/90 italic relative mb-8">
             <span className="absolute -left-8 -top-8 text-8xl text-portfolio-accent opacity-100 select-none">"</span>
             {children}
             <span className="absolute bottom-0 right-0 text-8xl text-portfolio-accent opacity-100 translate-x-4 select-none">"</span>
-          </p>
+          </div>
         </blockquote>
         {(author || role) && (
           <figcaption className="text-lg text-portfolio-text/50 font-light mt-4 text-right">

@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { X } from 'lucide-react';
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Footer from '../components/Footer';
 import { SEO } from '../components/SEO';
+import { CompanyVideo, CompanyValues, CompanyAwards } from '../components/lazy';
+
+// Loading component for lazy-loaded sections
+const SectionLoading = () => (
+  <div className="animate-pulse">
+    <div className="h-8 bg-portfolio-text/10 rounded w-1/3 mb-4"></div>
+    <div className="space-y-3">
+      <div className="h-4 bg-portfolio-text/10 rounded w-3/4"></div>
+      <div className="h-4 bg-portfolio-text/10 rounded w-5/6"></div>
+      <div className="h-4 bg-portfolio-text/10 rounded w-2/3"></div>
+    </div>
+  </div>
+);
 
 const OurCompany = () => {
   const navigate = useNavigate();
@@ -96,21 +109,9 @@ const OurCompany = () => {
             </div>
 
             {/* Video Section */}
-            <div className="mb-16 overflow-hidden rounded-lg bg-black">
-              <AspectRatio ratio={16/9}>
-                <iframe
-                  src={companyInfo.videoRecapUrl}
-                  width="100%"
-                  height="100%"
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                  style={{ background: "black" }}
-                  title="UV Company Recap"
-                />
-              </AspectRatio>
-            </div>
+            <Suspense fallback={<SectionLoading />}>
+              <CompanyVideo videoUrl={companyInfo.videoRecapUrl} />
+            </Suspense>
 
             {/* History Section */}
             <div className="mb-12">
@@ -129,17 +130,9 @@ const OurCompany = () => {
             </div>
 
             {/* Values Section */}
-            <div className="mb-12">
-              <h2 className="text-4xl font-bold text-portfolio-text mb-8">Our Values <span role="img" aria-label="love">🥰</span></h2>
-              <div className="text-2xl text-portfolio-text/80 font-light space-y-6">
-                {values.map((value) => (
-                  <div key={value.name}>
-                    <p className="font-semibold inline-block mr-2">{value.name}</p>
-                    <p className="inline">{value.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <Suspense fallback={<SectionLoading />}>
+              <CompanyValues values={values} />
+            </Suspense>
 
             {/* Services Section */}
             <div className="mb-12">
@@ -169,14 +162,9 @@ const OurCompany = () => {
             </div>
 
             {/* Awards Section */}
-            <div className="mb-12">
-              <h2 className="text-4xl font-bold text-portfolio-text mb-8">Awards & Recognition <span role="img" aria-label="trophy">🏆</span></h2>
-              <div className="text-2xl text-portfolio-text/80 font-light">
-                {awards.map((award, index) => (
-                  <p key={index}>{award}</p>
-                ))}
-              </div>
-            </div>
+            <Suspense fallback={<SectionLoading />}>
+              <CompanyAwards awards={awards} />
+            </Suspense>
           </div>
           <Footer />
         </div>

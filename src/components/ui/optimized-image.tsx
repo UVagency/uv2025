@@ -27,19 +27,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   badge,
   overlay
 }) => {
-  // Convert image path to WebP format
-  const getWebPSrc = (originalSrc: string) => {
-    if (originalSrc.startsWith('http')) return originalSrc;
-    const basePath = originalSrc.split('.')[0];
-    return `${basePath}.webp`;
-  };
-
-  // Generate srcset for responsive images
-  const getSrcSet = (originalSrc: string) => {
-    if (originalSrc.startsWith('http')) return undefined;
-    const basePath = originalSrc.split('.')[0];
-    return `${basePath}-small.webp 400w, ${basePath}-medium.webp 800w, ${basePath}-large.webp 1200w`;
-  };
+  // Handle both absolute URLs and relative paths
+  const isExternalUrl = src.startsWith('http');
+  const imagePath = isExternalUrl ? src : src.startsWith('/') ? src : `/${src}`;
 
   const getBadgePosition = (position?: string) => {
     switch(position) {
@@ -52,20 +42,14 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   };
 
   const imageContent = (
-    <picture>
-      <source
-        srcSet={getSrcSet(src)}
-        type="image/webp"
-      />
-      <img
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        loading={priority ? "eager" : "lazy"}
-        className={`w-full h-full object-cover ${className}`}
-      />
-    </picture>
+    <img
+      src={imagePath}
+      alt={alt}
+      width={width}
+      height={height}
+      loading={priority ? "eager" : "lazy"}
+      className={`w-full h-full object-cover ${className}`}
+    />
   );
 
   if (aspectRatio) {
