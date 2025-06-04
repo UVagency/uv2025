@@ -5,6 +5,7 @@ import ProjectVideoPlayer from "../components/project/ProjectVideoPlayer";
 import ProjectNotFound from "../components/project/ProjectNotFound";
 import projectsData, { ProjectData, GallerySection } from "../data/projectsData";
 import Footer from "../components/Footer";
+import { SEO } from "../components/SEO";
 
 function renderBullets(text: string) {
   const lines = text.split(/\r?\n/);
@@ -58,9 +59,45 @@ const ProjectDetail = () => {
   }
 
   const carouselSpeed = project.carouselSpeed;
+  const publishDate = new Date(project.year).toISOString();
+
+  // Keywords in both languages
+  const keywords = {
+    en: [
+      'Project',
+      'Case Study',
+      'Media Experience',
+      project.client,
+      project.year,
+      ...project.categories || []
+    ],
+    es: [
+      'Proyecto',
+      'Caso de Estudio',
+      'Experiencia Mediática',
+      project.client,
+      project.year,
+      ...project.categories || []
+    ]
+  };
 
   return (
     <div className="fixed inset-0 z-50 bg-portfolio-bg overflow-y-auto">
+      <SEO 
+        project={{
+          name: project.name,
+          client: project.client,
+          year: project.year
+        }}
+        description={project.description}
+        image={project.images[0]}
+        url={`/project/${projectId}`}
+        type="article"
+        pageType="project"
+        publishDate={publishDate}
+        keywords={keywords.en} // Default to English for now
+        lang="en" // Default to English for now
+      />
       <div className="w-full mx-auto pt-8 pb-16">
         <ProjectHeader project={project} />
         <div className="max-w-[90%] mx-auto">

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { X } from 'lucide-react';
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Footer from '../components/Footer';
+import { SEO } from '../components/SEO';
 
 const OurCompany = () => {
   const navigate = useNavigate();
@@ -51,127 +52,134 @@ const OurCompany = () => {
   ];
 
   return (
-    <div className="fixed inset-0 z-50 bg-portfolio-bg overflow-y-auto">
-      <div className="w-full mx-auto pt-8 pb-16">
-        {/* Header Section */}
-        <div className="max-w-[90%] mx-auto">
-          <div className="border-b border-portfolio-divider pb-6 mb-8">
-            <div className="flex items-center gap-4 flex-wrap">
-              <button 
-                onClick={handleClose}
-                className="w-10 h-10 rounded-full bg-transparent border border-portfolio-text flex items-center justify-center text-portfolio-text hover:bg-portfolio-text hover:text-portfolio-bg transition-colors"
-              >
-                <X size={18} />
-              </button>
-              
-              <h1 className="text-7xl font-bold text-portfolio-text">{companyInfo.name}</h1>
-              
-              <span className="project-year-tag text-base px-6 py-2 rounded-full bg-portfolio-tag-bg text-portfolio-tag-text">
-                {companyInfo.year}
-              </span>
+    <div className="min-h-screen bg-portfolio-bg">
+      <SEO 
+        title="Our Company | UV Agency"
+        description="Learn about UV Agency's mission, values, and the team behind our innovative media experiences. Discover how we're shaping the future of creative events."
+        pageType="company"
+      />
+      <div className="fixed inset-0 z-50 bg-portfolio-bg overflow-y-auto">
+        <div className="w-full mx-auto pt-8 pb-16">
+          {/* Header Section */}
+          <div className="max-w-[90%] mx-auto">
+            <div className="border-b border-portfolio-divider pb-6 mb-8">
+              <div className="flex items-center gap-4 flex-wrap">
+                <button 
+                  onClick={handleClose}
+                  className="w-10 h-10 rounded-full bg-transparent border border-portfolio-text flex items-center justify-center text-portfolio-text hover:bg-portfolio-text hover:text-portfolio-bg transition-colors"
+                >
+                  <X size={18} />
+                </button>
                 
-              {companyInfo.categories.map((category) => (
-                <span key={category} className="project-category-tag text-base px-6 py-2 border rounded-full">
-                  {category}
+                <h1 className="text-7xl font-bold text-portfolio-text">{companyInfo.name}</h1>
+                
+                <span className="project-year-tag text-base px-6 py-2 rounded-full bg-portfolio-tag-bg text-portfolio-tag-text">
+                  {companyInfo.year}
                 </span>
-              ))}
-            </div>
-            
-            <p className="text-4xl text-portfolio-text/90 font-light leading-tight max-w-4xl mt-6">
-              {companyInfo.tagline}
-            </p>
-            
-            <div className="mt-6 flex flex-wrap gap-4">
-              <div className="text-portfolio-text/70">
-                <span className="font-semibold">Type:</span> {companyInfo.client}
+                  
+                {companyInfo.categories.map((category) => (
+                  <span key={category} className="project-category-tag text-base px-6 py-2 border rounded-full">
+                    {category}
+                  </span>
+                ))}
               </div>
-            </div>
-          </div>
-
-          {/* Video Section */}
-          <div className="mb-16 overflow-hidden rounded-lg bg-black">
-            <AspectRatio ratio={16/9}>
-              <iframe
-                src={companyInfo.videoRecapUrl}
-                width="100%"
-                height="100%"
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-                style={{ background: "black" }}
-                title="UV Company Recap"
-              />
-            </AspectRatio>
-          </div>
-
-          {/* History Section */}
-          <div className="mb-12">
-            <h2 className="text-4xl font-bold text-portfolio-text mb-4">Our Story</h2>
-            <div className="text-2xl text-portfolio-text/80 font-light whitespace-pre-line">
-              {companyInfo.history}
-            </div>
-          </div>
-
-          {/* Description Section */}
-          <div className="mb-12">
-            <h2 className="text-4xl font-bold text-portfolio-text mb-4">About Us</h2>
-            <div className="text-2xl text-portfolio-text/80 font-light whitespace-pre-line">
-              {companyInfo.description}
-            </div>
-          </div>
-
-          {/* Values Section */}
-          <div className="mb-12">
-            <h2 className="text-4xl font-bold text-portfolio-text mb-8">Our Values <span role="img" aria-label="love">🥰</span></h2>
-            <div className="text-2xl text-portfolio-text/80 font-light space-y-6">
-              {values.map((value) => (
-                <div key={value.name}>
-                  <p className="font-semibold inline-block mr-2">{value.name}</p>
-                  <p className="inline">{value.description}</p>
+              
+              <p className="text-4xl text-portfolio-text/90 font-light leading-tight max-w-4xl mt-6">
+                {companyInfo.tagline}
+              </p>
+              
+              <div className="mt-6 flex flex-wrap gap-4">
+                <div className="text-portfolio-text/70">
+                  <span className="font-semibold">Type:</span> {companyInfo.client}
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
 
-          {/* Services Section */}
-          <div className="mb-12">
-            <h2 className="text-4xl font-bold text-portfolio-text mb-8">Our Services <span role="img" aria-label="handshake">🤝</span></h2>
-            <div className="text-2xl text-portfolio-text/80 font-light space-y-6">
-              <div>
-                <p className="font-semibold inline-block mr-2">Brand Building</p>
-                <p className="inline">Developing and positioning brands with clarity and impact</p>
-              </div>
-              <div>
-                <p className="font-semibold inline-block mr-2">Advertising</p>
-                <p className="inline">Crafting creative and results-driven campaigns</p>
-              </div>
-              <div>
-                <p className="font-semibold inline-block mr-2">Exhibition</p>
-                <p className="inline">Designing immersive event and brand experiences</p>
-              </div>
-              <div>
-                <p className="font-semibold inline-block mr-2">Target Audience</p>
-                <p className="inline">Engaging the right people with precision</p>
-              </div>
-              <div>
-                <p className="font-semibold inline-block mr-2">Social Strategy & Content</p>
-                <p className="inline">Planning and producing content that connects</p>
-              </div>
+            {/* Video Section */}
+            <div className="mb-16 overflow-hidden rounded-lg bg-black">
+              <AspectRatio ratio={16/9}>
+                <iframe
+                  src={companyInfo.videoRecapUrl}
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                  style={{ background: "black" }}
+                  title="UV Company Recap"
+                />
+              </AspectRatio>
             </div>
-          </div>
 
-          {/* Awards Section */}
-          <div className="mb-12">
-            <h2 className="text-4xl font-bold text-portfolio-text mb-8">Awards & Recognition <span role="img" aria-label="trophy">🏆</span></h2>
-            <div className="text-2xl text-portfolio-text/80 font-light">
-              {awards.map((award, index) => (
-                <p key={index}>{award}</p>
-              ))}
+            {/* History Section */}
+            <div className="mb-12">
+              <h2 className="text-4xl font-bold text-portfolio-text mb-4">Our Story</h2>
+              <div className="text-2xl text-portfolio-text/80 font-light whitespace-pre-line">
+                {companyInfo.history}
+              </div>
+            </div>
+
+            {/* Description Section */}
+            <div className="mb-12">
+              <h2 className="text-4xl font-bold text-portfolio-text mb-4">About Us</h2>
+              <div className="text-2xl text-portfolio-text/80 font-light whitespace-pre-line">
+                {companyInfo.description}
+              </div>
+            </div>
+
+            {/* Values Section */}
+            <div className="mb-12">
+              <h2 className="text-4xl font-bold text-portfolio-text mb-8">Our Values <span role="img" aria-label="love">🥰</span></h2>
+              <div className="text-2xl text-portfolio-text/80 font-light space-y-6">
+                {values.map((value) => (
+                  <div key={value.name}>
+                    <p className="font-semibold inline-block mr-2">{value.name}</p>
+                    <p className="inline">{value.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Services Section */}
+            <div className="mb-12">
+              <h2 className="text-4xl font-bold text-portfolio-text mb-8">Our Services <span role="img" aria-label="handshake">🤝</span></h2>
+              <div className="text-2xl text-portfolio-text/80 font-light space-y-6">
+                <div>
+                  <p className="font-semibold inline-block mr-2">Brand Building</p>
+                  <p className="inline">Developing and positioning brands with clarity and impact</p>
+                </div>
+                <div>
+                  <p className="font-semibold inline-block mr-2">Advertising</p>
+                  <p className="inline">Crafting creative and results-driven campaigns</p>
+                </div>
+                <div>
+                  <p className="font-semibold inline-block mr-2">Exhibition</p>
+                  <p className="inline">Designing immersive event and brand experiences</p>
+                </div>
+                <div>
+                  <p className="font-semibold inline-block mr-2">Target Audience</p>
+                  <p className="inline">Engaging the right people with precision</p>
+                </div>
+                <div>
+                  <p className="font-semibold inline-block mr-2">Social Strategy & Content</p>
+                  <p className="inline">Planning and producing content that connects</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Awards Section */}
+            <div className="mb-12">
+              <h2 className="text-4xl font-bold text-portfolio-text mb-8">Awards & Recognition <span role="img" aria-label="trophy">🏆</span></h2>
+              <div className="text-2xl text-portfolio-text/80 font-light">
+                {awards.map((award, index) => (
+                  <p key={index}>{award}</p>
+                ))}
+              </div>
             </div>
           </div>
+          <Footer />
         </div>
-        <Footer />
       </div>
     </div>
   );
