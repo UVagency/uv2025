@@ -59,10 +59,20 @@ const OurCompany = () => {
   ];
 
   const awards = [
-    "2025 AWWWARDS Honorable Mention",
-    "2025 THE FWA Website Of The Day",
-    "2025 CSS DESIGN AWARDS Website Of The Day",
+    { name: "New York Festival", detail: "Bronze" },
+    { name: "Cannes Lions", detail: "Shortlist ×2" },
+    { name: "Web Awards", detail: "Gold" },
+    { name: "Lápiz de Oro", detail: "Silver ×3" },
+    { name: "Diente", detail: "Silver, Bronze" },
+    { name: "IAB", detail: "Gold ×3" },
+    { name: "Prix Ars Electronica", detail: "Honorable Mention" },
+    { name: "El Ojo Iberoamérica", detail: "Bronze" },
+    { name: "Amauta", detail: "Silver ×2, Bronze" },
+    { name: "FePI Festival", detail: "Silver" },
+    { name: "FIP Iberoamérica", detail: "Grand Prix, Gold ×5" },
+    { name: "AMDIA", detail: "Silver ×2, Bronze ×3" }
   ];
+  
 
   return (
     <div className="min-h-screen bg-portfolio-bg">
