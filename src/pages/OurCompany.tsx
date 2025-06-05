@@ -45,7 +45,7 @@ const OurCompany = () => {
     history: "Founded with a vision to blend cutting-edge technology with creative storytelling, UV has grown from a small team of passionate individuals into a powerhouse of innovation. Our journey has been marked by a relentless pursuit of excellence, a commitment to our clients' success, and a culture that fosters creativity and collaboration. We've embraced challenges, celebrated milestones, and continuously evolved to meet the ever-changing demands of the digital landscape.",
     videoRecapUrl: "https://player.vimeo.com/video/123456789?color=EBA3A9&title=0&byline=0&portrait=0", // Placeholder video
     categories: ["Advertising", "Media", "Events"],
-    client: "Independent Agency",
+    client: "One Agency, All In. Full Service Independent Agency",
   };
 
   const values = [
