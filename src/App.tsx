@@ -8,14 +8,16 @@ import { HelmetProvider } from 'react-helmet-async';
 import './styles/carousel.css';
 import { SEO } from './components/SEO';
 import ErrorBoundary from './components/ErrorBoundary';
+import Index from './pages/Index';
+import OurCompany from './pages/OurCompany';
+import UnitedMedia from './pages/UnitedMedia';
+import Navbar from './components/Navbar';
 
 // Lazy load components
-const Index = lazy(() => import("./pages/Index"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const ProjectDetail = lazy(() => import("./pages/ProjectDetail"));
-const OurCompany = lazy(() => import("./pages/OurCompany"));
 
 // Create a client instance outside of the component
 const queryClient = new QueryClient();
@@ -73,12 +75,9 @@ const App = () => {
             <Sonner />
             <SEO pageType="home" />
             <BrowserRouter>
+              <Navbar />
               <Routes>
-                <Route path="/" element={
-                  <RouteWrapper>
-                    <Index />
-                  </RouteWrapper>
-                } />            
+                <Route path="/" element={<Index />} />
                 <Route path="/about" element={
                   <RouteWrapper>
                     <About />
@@ -99,6 +98,7 @@ const App = () => {
                     <OurCompany />
                   </RouteWrapper>
                 } />
+                <Route path="/united-media" element={<UnitedMedia />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={
                   <RouteWrapper>
