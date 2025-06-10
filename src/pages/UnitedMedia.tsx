@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { X } from 'lucide-react';
 import Footer from '../components/Footer';
 import { SEO } from '../components/SEO';
-import { CompanyVideo, CompanyValues, CompanyAwards } from '../components/lazy';
+import { CompanyVideo } from '../components/lazy';
 
 // Loading component for lazy-loaded sections
 const SectionLoading = () => (
@@ -37,14 +37,14 @@ const UnitedMedia = () => {
 
   // Datos de ejemplo, idealmente vendrían de un CMS o archivo de datos
   const mediaInfo = {
-    name: "UnitedMedia",
-    year: "2023",
-    tagline: "Connecting brands with people digitally",
+    name: "United Media",
+    year: "Smart Media",
+    tagline: "Connecting brands with people in a phygital world",
     description: "Our UnitedMedia service is designed to enhance your business results in a scalable, effective, and efficient manner. We reach truly relevant clients by enhancing the visibility of your brand, product, or event through Programmatic and Digital PR.",
     history: "Since 2011, we have collaborated with leaders and teams of major global brands to help them achieve their goals and growth challenges by understanding their clients' behavior and connecting them with them.",
     videoRecapUrl: "https://player.vimeo.com/video/123456789?color=EBA3A9&title=0&byline=0&portrait=0", // Placeholder video
-    categories: ["Media", "Digital"],
-    client: "UnitedMedia Service",
+    categories: ["Off-line", "Digital", "Outdoor", "In-Store", "Radio", "TV"],
+    client: "United Media Services",
   };
 
   const values = [
@@ -52,27 +52,12 @@ const UnitedMedia = () => {
     { name: "SXO", description: "Enhance the performance and ROI of the Google Search channel through an integrated strategy between SEO and SEM." },
     { name: "Conversion Boost", description: "Maximize ROI and conversion rates by improving decision-making through experimentation and data with CRO and Data analytics." },
   ];
-
-  const awards = [
-    { name: "New York Festival", detail: "Bronze" },
-    { name: "Cannes Lions", detail: "Shortlist ×2" },
-    { name: "Web Awards", detail: "Gold" },
-    { name: "Lápiz de Oro", detail: "Silver ×3" },
-    { name: "Diente", detail: "Silver, Bronze" },
-    { name: "IAB", detail: "Gold ×3" },
-    { name: "Prix Ars Electrónica", detail: "Honorable Mention" },
-    { name: "El Ojo de Iberoamérica", detail: "Bronze" },
-    { name: "Amauta", detail: "Silver ×2, Bronze" },
-    { name: "FePI Festival", detail: "Silver" },
-    { name: "FIP Iberoamérica", detail: "Grand Prix, Gold ×5" },
-    { name: "AMDIA", detail: "Silver ×2, Bronze ×3" }
-  ];
   
   return (
     <div className="min-h-screen bg-portfolio-bg">
       <SEO 
-        title="UnitedMedia | UV Agency"
-        description="Learn about UV Agency's UnitedMedia service, designed to connect brands with people digitally."
+        title="United Media @ UV Agency"
+        description="Learn about UV Agency's United Media service, designed to connect brands with people in a phygital world."
         pageType="company"
       />
       <div className="fixed inset-0 z-50 bg-portfolio-bg overflow-y-auto">
@@ -117,6 +102,11 @@ const UnitedMedia = () => {
               <CompanyVideo videoUrl={mediaInfo.videoRecapUrl} />
             </Suspense>
 
+            {/* Closing Statement */}
+            <div className="mb-12 text-center">
+              <h2 className="text-4xl font-bold text-portfolio-text mb-4">Maximize the acquisition of new clients by enhancing your media strategy, investment, and team</h2>
+            </div>
+
             {/* History Section */}
             <div className="mb-12">
               <h2 className="text-4xl font-bold text-portfolio-text mb-4">Our Story</h2>
@@ -131,24 +121,6 @@ const UnitedMedia = () => {
               <div className="text-2xl text-portfolio-text/80 font-light whitespace-pre-line">
                 {mediaInfo.description}
               </div>
-            </div>
-
-            {/* Values Section */}
-            <Suspense fallback={<SectionLoading />}>
-              <CompanyValues values={values} />
-            </Suspense>
-
-            {/* Awards Section */}
-            <Suspense fallback={<SectionLoading />}>
-              <CompanyAwards awards={awards} />
-            </Suspense>
-
-            {/* CTA Section */}
-            <div className="mb-12 text-center">
-              <h2 className="text-4xl font-bold text-portfolio-text mb-4">Looking for more leads?</h2>
-              <button className="bg-portfolio-highlight text-white px-6 py-3 rounded-full hover:bg-portfolio-highlight/80 transition-colors">
-                Contact Us
-              </button>
             </div>
 
             {/* Service Blocks */}
@@ -201,11 +173,6 @@ const UnitedMedia = () => {
               </div>
             </div>
 
-            {/* Closing Statement */}
-            <div className="mb-12 text-center">
-              <h2 className="text-4xl font-bold text-portfolio-text mb-4">Maximize the digital acquisition of new clients by enhancing your strategy, investment, and team.</h2>
-            </div>
-
             {/* Certifications and Partners */}
             <div className="mb-12">
               <h2 className="text-4xl font-bold text-portfolio-text mb-8">Certifications and Partners</h2>
@@ -215,6 +182,15 @@ const UnitedMedia = () => {
                 <span className="px-4 py-2 bg-portfolio-tag-bg text-portfolio-tag-text rounded-full">eEcommerce Awards</span>
               </div>
             </div>
+
+            {/* CTA Section */}
+            <div className="mb-12 text-left">
+              <h2 className="text-4xl font-bold text-portfolio-text mb-4">Looking for more leads?</h2>
+              <button className="bg-portfolio-highlight text-white px-6 py-3 rounded-full hover:bg-portfolio-highlight/80 transition-colors">
+                Contact Us
+              </button>
+            </div>
+
           </div>
           <Footer />
         </div>

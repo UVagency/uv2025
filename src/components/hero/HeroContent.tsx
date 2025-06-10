@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export const HeroContent = () => {
   const [showMainText, setShowMainText] = useState(false);
@@ -74,7 +75,7 @@ export const HeroContent = () => {
               <span className="font-normal italic">results through</span>
             </span>{" "}
             <span>
-              <span className="text-portfolio-highlight italic hover:underline">Smart Media.</span>
+              <Link to="/united-media" className="text-portfolio-highlight italic hover:underline">Smart Media.</Link>
             </span>
             <div className="mt-2">
               <button 

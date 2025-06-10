@@ -42,17 +42,17 @@ const Navbar = () => {
                   Work
                 </Link>
                 <Link 
+                  to="/united-media"
+                  className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors text-xl"
+                >
+                  United Media
+                </Link>
+                <Link 
                   to="/our-company"
                   onClick={toggleOurCompany}
                   className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-xl ${isOurCompanyOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
                 >
                   Our Company
-                </Link>
-                <Link 
-                  to="/united-media"
-                  className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors text-xl"
-                >
-                  UnitedMedia
                 </Link>
                 <button 
                   onClick={toggleContact}
