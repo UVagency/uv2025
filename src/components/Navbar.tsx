@@ -48,6 +48,12 @@ const Navbar = () => {
                 >
                   Our Company
                 </Link>
+                <Link 
+                  to="/united-media"
+                  className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors text-xl"
+                >
+                  UnitedMedia
+                </Link>
                 <button 
                   onClick={toggleContact}
                   className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-xl ${isContactOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
