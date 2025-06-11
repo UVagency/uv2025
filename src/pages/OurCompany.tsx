@@ -74,10 +74,10 @@ const OurCompany = () => {
   ];
 
   const coreTeam = [
-    { name: "Lorena Vanesa Cambas", url: "https://www.linkedin.com/in/lorena-vanesa-cambas-5a714a23/", photo: "https://ui-avatars.com/api/?name=Lorena+Vanesa+Cambas&background=random" },
-    { name: "Agustin Herrero", url: "https://www.linkedin.com/in/agustinherrero/", photo: "https://ui-avatars.com/api/?name=Agustin+Herrero&background=random" },
-    { name: "Cristina Recalde", url: "https://www.linkedin.com/in/cristinarecalde/", photo: "https://ui-avatars.com/api/?name=Cristina+Recalde&background=random" },
-    { name: "Javier Severini", url: "https://www.linkedin.com/in/javierseverini/", photo: "https://ui-avatars.com/api/?name=Javier+Severini&background=random" },
+    { name: "Cristina Recalde", title: "Creative Director", url: "https://www.linkedin.com/in/cristinarecalde/", photo: "/images/team/cristinarecalde.jpeg" },
+    { name: "Lorena Cambas", title: "CFO", url: "https://www.linkedin.com/in/lorena-vanesa-cambas-5a714a23/", photo: "/images/team/lorenacambas.jpeg" },
+    { name: "Agustin Herrero", title: "COO", url: "https://www.linkedin.com/in/agustinherrero/", photo: "/images/team/agustinherrero.jpeg" },
+    { name: "Javier Severini", title: "CEO", url: "https://www.linkedin.com/in/javierseverini/", photo: "/images/team/javierseverini.jpeg" },
   ];
   
 
@@ -148,14 +148,14 @@ const OurCompany = () => {
 
             {/* Core Team Management Section */}
             <div className="mb-12">
-              <h2 className="text-4xl font-bold text-portfolio-text mb-4">Core Team Management</h2>
+              <h2 className="text-4xl font-bold text-portfolio-text mb-4">Core Team</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
                 {coreTeam.map((member) => (
                   <div key={member.url} className="flex flex-col items-center bg-portfolio-bg/80 rounded-lg p-4 shadow-md">
                     <img
                       src={member.photo}
                       alt={member.name}
-                      className="w-24 h-24 rounded-full object-cover mb-4 border-2 border-portfolio-divider"
+                      className="w-24 h-24 rounded-full object-cover mb-4 border-2 border-portfolio-accent"
                     />
                     <a
                       href={member.url}
@@ -165,6 +165,7 @@ const OurCompany = () => {
                     >
                       {member.name}
                     </a>
+                    <p className="text-lg text-portfolio-text/70 mt-1">{member.title}</p>
                   </div>
                 ))}
               </div>
