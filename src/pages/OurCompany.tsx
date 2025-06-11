@@ -72,6 +72,13 @@ const OurCompany = () => {
     { name: "FIP Iberoamérica", detail: "Grand Prix, Gold ×5" },
     { name: "AMDIA", detail: "Silver ×2, Bronze ×3" }
   ];
+
+  const coreTeam = [
+    { name: "Lorena Vanesa Cambas", url: "https://www.linkedin.com/in/lorena-vanesa-cambas-5a714a23/", photo: "https://ui-avatars.com/api/?name=Lorena+Vanesa+Cambas&background=random" },
+    { name: "Agustin Herrero", url: "https://www.linkedin.com/in/agustinherrero/", photo: "https://ui-avatars.com/api/?name=Agustin+Herrero&background=random" },
+    { name: "Cristina Recalde", url: "https://www.linkedin.com/in/cristinarecalde/", photo: "https://ui-avatars.com/api/?name=Cristina+Recalde&background=random" },
+    { name: "Javier Severini", url: "https://www.linkedin.com/in/javierseverini/", photo: "https://ui-avatars.com/api/?name=Javier+Severini&background=random" },
+  ];
   
 
   return (
@@ -136,6 +143,30 @@ const OurCompany = () => {
               <h2 className="text-4xl font-bold text-portfolio-text mb-4">About Us</h2>
               <div className="text-2xl text-portfolio-text/80 font-light whitespace-pre-line">
                 {companyInfo.description}
+              </div>
+            </div>
+
+            {/* Core Team Management Section */}
+            <div className="mb-12">
+              <h2 className="text-4xl font-bold text-portfolio-text mb-4">Core Team Management</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                {coreTeam.map((member) => (
+                  <div key={member.url} className="flex flex-col items-center bg-portfolio-bg/80 rounded-lg p-4 shadow-md">
+                    <img
+                      src={member.photo}
+                      alt={member.name}
+                      className="w-24 h-24 rounded-full object-cover mb-4 border-2 border-portfolio-divider"
+                    />
+                    <a
+                      href={member.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xl font-semibold underline hover:text-portfolio-text text-portfolio-text text-center"
+                    >
+                      {member.name}
+                    </a>
+                  </div>
+                ))}
               </div>
             </div>
 
