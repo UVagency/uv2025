@@ -68,7 +68,8 @@ export const useNavigation = (): NavigationState => {
       setIsOurCompanyOpen(false);
       document.body.classList.remove(NAVBAR_CONSTANTS.CLASSES.OUR_COMPANY_OPEN);
     }
-    setIsContactOpen(!isContactOpen);
+    //setIsContactOpen(!isContactOpen);
+    setIsInfoOpen((prev) => !prev);
     if (!isContactOpen) {
       document.body.classList.add(NAVBAR_CONSTANTS.CLASSES.CONTACT_OPEN);
     } else {
@@ -85,7 +86,8 @@ export const useNavigation = (): NavigationState => {
       setIsContactOpen(false);
       document.body.classList.remove(NAVBAR_CONSTANTS.CLASSES.CONTACT_OPEN);
     }
-    setIsOurCompanyOpen(!isOurCompanyOpen);
+    //setIsOurCompanyOpen(!isOurCompanyOpen);
+    setIsInfoOpen((prev) => !prev);
     if (!isOurCompanyOpen) {
       document.body.classList.add(NAVBAR_CONSTANTS.CLASSES.OUR_COMPANY_OPEN);
     } else {
