@@ -151,11 +151,11 @@ const OurCompany = () => {
               <h2 className="text-4xl font-bold text-portfolio-text mb-4">Core Team</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
                 {coreTeam.map((member) => (
-                  <div key={member.url} className="flex flex-col items-center bg-portfolio-bg/80 rounded-lg p-4 shadow-md">
+                  <div key={member.url} className="flex flex-col items-center bg-portfolio-bg/80 rounded-lg p-6 shadow-md">
                     <img
                       src={member.photo}
                       alt={member.name}
-                      className="w-24 h-24 rounded-full object-cover mb-4 border-2 border-portfolio-accent"
+                      className="w-32 h-32 rounded-full object-cover mb-4 border-2 border-portfolio-accent"
                     />
                     <a
                       href={member.url}
