@@ -49,8 +49,7 @@ export const useNavigation = (): NavigationState => {
       setIsOurCompanyOpen(false);
       document.body.classList.remove(NAVBAR_CONSTANTS.CLASSES.OUR_COMPANY_OPEN);
     }
-//    setIsInfoOpen(!isInfoOpen);
-    setIsInfoOpen((prev) => !prev);
+    setIsInfoOpen(!isInfoOpen);
     if (!isInfoOpen) {
       document.body.classList.add(NAVBAR_CONSTANTS.CLASSES.INFO_OPEN);
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -68,8 +67,7 @@ export const useNavigation = (): NavigationState => {
       setIsOurCompanyOpen(false);
       document.body.classList.remove(NAVBAR_CONSTANTS.CLASSES.OUR_COMPANY_OPEN);
     }
-    //setIsContactOpen(!isContactOpen);
-    setIsInfoOpen((prev) => !prev);
+    setIsContactOpen(!isContactOpen);
     if (!isContactOpen) {
       document.body.classList.add(NAVBAR_CONSTANTS.CLASSES.CONTACT_OPEN);
     } else {
@@ -86,8 +84,7 @@ export const useNavigation = (): NavigationState => {
       setIsContactOpen(false);
       document.body.classList.remove(NAVBAR_CONSTANTS.CLASSES.CONTACT_OPEN);
     }
-    //setIsOurCompanyOpen(!isOurCompanyOpen);
-    setIsInfoOpen((prev) => !prev);
+    setIsOurCompanyOpen(!isOurCompanyOpen);
     if (!isOurCompanyOpen) {
       document.body.classList.add(NAVBAR_CONSTANTS.CLASSES.OUR_COMPANY_OPEN);
     } else {

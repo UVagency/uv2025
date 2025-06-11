@@ -56,9 +56,6 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div>
-            {/* AnimatedEye component removed */}
-          </div>
         </div>
       </nav>
 
