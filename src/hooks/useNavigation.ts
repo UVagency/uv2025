@@ -49,7 +49,8 @@ export const useNavigation = (): NavigationState => {
       setIsOurCompanyOpen(false);
       document.body.classList.remove(NAVBAR_CONSTANTS.CLASSES.OUR_COMPANY_OPEN);
     }
-    setIsInfoOpen(!isInfoOpen);
+//    setIsInfoOpen(!isInfoOpen);
+    setIsInfoOpen((prev) => !prev);
     if (!isInfoOpen) {
       document.body.classList.add(NAVBAR_CONSTANTS.CLASSES.INFO_OPEN);
       window.scrollTo({ top: 0, behavior: 'smooth' });
