@@ -35,13 +35,6 @@ const Navbar = () => {
                   INFO
                 </button>
                 <Link 
-                  to="/#highlights" 
-                  onClick={handleWorkClick}
-                  className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors text-xl"
-                >
-                  Work
-                </Link>
-                <Link 
                   to="/united-media"
                   className="text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-colors text-xl"
                 >
