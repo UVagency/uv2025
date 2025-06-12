@@ -53,12 +53,12 @@ const projects: Project[] = [
     comingSoon: true,
     awardWinning: true,
   },
-  { 
+  /*{ 
     name: "I FEEL UNIQUE", 
     year: "L'ORÉAL PARIS", 
     categories: ["FILM"], 
     comingSoon: true,
-  },
+  },*/
   /*{ 
     name: "FESTIVAL SEASON", 
     year: "TIENDAS PARIS", 
