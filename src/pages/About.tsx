@@ -11,7 +11,6 @@ const About = () => {
         description="Discover UV Agency's journey in creating innovative media experiences and events. Learn about our team, values, and commitment to excellence."
         pageType="about"
       />
-      return null;
     </div>
   );
 };
