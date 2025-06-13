@@ -118,7 +118,7 @@ const OurCompany = () => {
                 ))}
               </div>
               
-              <p className="text-base sm:text-2xl md:text-4xl text-portfolio-text/90 font-light leading-tight max-w-4xl mt-3 sm:mt-6">
+              <p className="text-base sm:text-2xl md:text-4xl text-portfolio-text/90 font-light leading-tight mt-3 sm:mt-6">
                 {companyInfo.tagline}
               </p>
               
