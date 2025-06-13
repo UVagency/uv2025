@@ -66,8 +66,9 @@ const UnitedMedia = () => {
           <div className="max-w-[90%] mx-auto">
             <div className="border-b border-portfolio-divider pb-6 mb-8">
               <div className="flex items-center gap-4 flex-wrap">
-                <button 
+                <button
                   onClick={handleClose}
+                  aria-label="Close"
                   className="w-10 h-10 rounded-full bg-transparent border border-portfolio-text flex items-center justify-center text-portfolio-text hover:bg-portfolio-text hover:text-portfolio-bg transition-colors"
                 >
                   <X size={18} />
