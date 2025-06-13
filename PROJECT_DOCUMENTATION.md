@@ -26,6 +26,7 @@ src/
 │   ├── InfoSection.tsx         # Componente extraído del Navbar
 │   ├── Navbar.tsx              # Barra de navegación principal (refactorizada)
 │   ├── Portfolio.tsx
+│   ├── SEO.tsx                 # Componente para manejo de SEO
 │   |
 │   ├── hero/                   # Componentes específicos para la sección Hero
 │   │   ├── AnimatedEye.tsx
@@ -107,6 +108,8 @@ src/
 │   ├── highlightsConfig.ts
 │   ├── projectsData.ts
 │   └── projects/               # Datos detallados de proyectos
+│       ├── closer-to-sun.json
+│       └── united-media.json
 |
 ├── hooks/                      # Hooks personalizados de React
 │   ├── use-mobile.tsx
@@ -114,7 +117,7 @@ src/
 │   └── useNavigation.ts        # Hook para la lógica de navegación del Navbar
 |
 ├── lib/                        # Funciones de utilidad y helpers
-│   ├── customCursor.js
+│   ├── customCursor.js         # Implementación del cursor personalizado
 │   ├── scrollUtils.ts          # Utilidades para scroll suave
 │   └── utils.ts                # Funciones de utilidad generales (cn)
 |
@@ -125,7 +128,7 @@ src/
 │   ├── NotFound.tsx
 │   ├── ProjectDetail.tsx
 │   └── OurCompany.tsx          # Página sobre la empresa
-|
+│
 ├── styles/                     # Archivos CSS globales y específicos
 │   ├── animations.css
 │   ├── base.css
@@ -147,20 +150,25 @@ Es el punto de entrada de la aplicación. Renderiza el componente `App` en el DO
 
 ### `src/components/`
 Esta carpeta se divide en:
-- **Componentes de alto nivel**: Como `Navbar`, `Footer`, `Portfolio`, etc.
+- **Componentes de alto nivel**: Como `Navbar`, `Footer`, `Portfolio`, `SEO`, etc.
 - **`hero/`**: Componentes específicos para la sección "Hero" de la página principal.
 - **`project/`**: Componentes utilizados para mostrar detalles de proyectos, incluyendo una galería modular y flexible.
 - **`ui/`**: Contiene una gran cantidad de componentes de UI reutilizables, muchos de ellos provenientes de la librería ShadCN/UI, junto con componentes personalizados como `EyeOfCuriosity`.
 
 ### `src/pages/`
-Contiene los componentes que actúan como vistas o páginas individuales de la aplicación. Cada archivo representa una ruta principal (ej: `Index.tsx` para la home, `About.tsx` para la página "Acerca de").
-- `OurCompany.tsx`: Una página que detalla información sobre UV, incluyendo su historia, un video, valores, premios y un llamado a la acción para colaborar.
+Contiene los componentes que actúan como vistas o páginas individuales de la aplicación. Cada archivo representa una ruta principal:
+- `Index.tsx`: Página principal con Hero, Highlights y Portfolio
+- `About.tsx`: Sección de información sobre la empresa
+- `Contact.tsx`: Formulario de contacto
+- `ProjectDetail.tsx`: Vista detallada de proyectos individuales
+- `OurCompany.tsx`: Página detallada sobre UV, incluyendo historia, valores, equipo y premios
+- `NotFound.tsx`: Página 404 personalizada
 
 ## ⚙️ Lógica y Utilidades
 
 ### `src/hooks/`
 Aquí se definen hooks personalizados para encapsular lógica de estado y efectos secundarios reutilizables. 
-- `useNavigation.ts`: Maneja el estado de apertura/cierre de las secciones "Info" y "Contact" del `Navbar`.
+- `useNavigation.ts`: Maneja el estado de apertura/cierre de las secciones "Info", "Contact" y "OurCompany" del `Navbar`.
 - `use-mobile.tsx`: Detecta si el usuario está en un dispositivo móvil.
 - `use-toast.ts`: Relacionado con el sistema de notificaciones (toasts).
 
@@ -168,7 +176,7 @@ Aquí se definen hooks personalizados para encapsular lógica de estado y efecto
 Contiene funciones de utilidad generales:
 - `utils.ts`: Incluye la función `cn` para combinar clases de Tailwind CSS de forma condicional.
 - `scrollUtils.ts`: Proporciona la función `smoothScrollToElement` para animaciones de scroll suave.
-- `customCursor.js`: Implementa la lógica para un cursor personalizado.
+- `customCursor.js`: Implementa la lógica para un cursor personalizado con estados hover y click.
 
 ### `src/constants/`
 Almacena valores constantes para evitar números mágicos o strings repetidos en el código.
@@ -184,7 +192,7 @@ Define interfaces y tipos de TypeScript para asegurar la consistencia y prevenir
 Contiene los archivos CSS. `index.css` actúa como el archivo principal que importa otros, como `base.css` (estilos base/reset), `components.css` (estilos para componentes específicos), y `animations.css`.
 
 ### `src/animations/`
-- `heroAnimations.ts`: Define la lógica para animaciones complejas, probablemente usando una librería como GSAP o Framer Motion, específicamente para la sección Hero.
+- `heroAnimations.ts`: Define la lógica para animaciones complejas, específicamente para la sección Hero.
 
 ## 📊 Datos
 
@@ -192,6 +200,7 @@ Contiene los archivos CSS. `index.css` actúa como el archivo principal que impo
 Contiene datos estáticos que la aplicación utiliza, como información de proyectos.
 - `projectsData.ts`: Define los datos para los proyectos que se muestran en el portafolio.
 - `highlightsConfig.ts`: Configuración para la sección de destacados.
+- `projects/`: Contiene archivos JSON con datos detallados de cada proyecto.
 
 ## ✨ Mejoras Recientes
 
@@ -202,16 +211,29 @@ El proyecto ha pasado por varias mejoras significativas:
    - Creación de componentes más pequeños y reutilizables (`InfoSection`, `EyeOfCuriosity`)
    - Centralización de constantes (`navbarConstants`)
    - Definición de tipos TypeScript para mejorar la robustez
+   - Mejora en la navegación y estados de secciones
 
 2. **Sistema de Galería Modular**:
    - Implementación de componentes flexibles para la visualización de proyectos
    - Soporte para diferentes tipos de contenido (imágenes, texto, grids mixtos)
    - Componentes reutilizables para banners, carruseles y secciones de texto
+   - Mejoras en la responsividad y animaciones
 
 3. **UI Components**:
    - Integración completa de ShadCN/UI
    - Componentes personalizados adaptados a las necesidades específicas
    - Sistema de diseño consistente
+   - Mejoras en la accesibilidad
+
+4. **SEO y Metadatos**:
+   - Implementación de componente SEO reutilizable
+   - Meta tags dinámicos para cada página
+   - Optimización para motores de búsqueda
+
+5. **Optimización de Rendimiento**:
+   - Lazy loading para componentes pesados
+   - Code splitting por rutas
+   - Optimización de imágenes y assets
 
 ## 🚀 Próximos Pasos
 
@@ -293,20 +315,73 @@ El proyecto ha pasado por varias mejoras significativas:
 
 ### Prioridad Alta
 - [ ] Analytics funcionando y reportando datos
+  - [ ] Configurar Google Analytics 4
+  - [ ] Implementar eventos personalizados
+  - [ ] Verificar tracking de conversiones
 - [x] SEO dinámico implementado para páginas clave
+  - [x] Meta tags dinámicos
+  - [x] Open Graph tags
+  - [x] Twitter Cards
+  - [x] JSON-LD implementado
 - [ ] Optimización de imágenes y lazy loading activado
+  - [ ] Convertir imágenes a WebP
+  - [ ] Implementar srcset para responsive images
+  - [ ] Configurar lazy loading para imágenes fuera de viewport
 - [x] Error Boundaries y monitoreo de errores configurado
+  - [x] Implementación de Error Boundaries
+  - [x] Configuración de Sentry
+  - [x] Logging de errores críticos
 
 ### Prioridad Media
 - [ ] Pruebas E2E básicas pasando para flujos críticos
+  - [ ] Navegación principal
+  - [ ] Visualización de proyectos
+  - [ ] Formularios de contacto
 - [ ] Auditoría de accesibilidad básica realizada
+  - [ ] ARIA labels
+  - [ ] Navegación por teclado
+  - [ ] Compatibilidad con lectores de pantalla
 - [ ] Páginas legales y banner de cookies implementados
+  - [ ] Política de privacidad
+  - [ ] Términos y condiciones
+  - [ ] Banner de cookies con consentimiento
 - [ ] Pipeline de CI/CD configurado
+  - [ ] GitHub Actions o similar
+  - [ ] Tests automatizados
+  - [ ] Despliegue automático
 
 ### Prioridad Baja
 - [x] Documentación técnica completa
+  - [x] Estructura del proyecto
+  - [x] Componentes principales
+  - [x] Guías de desarrollo
 - [ ] Guía de estilo finalizada
+  - [ ] Sistema de diseño
+  - [ ] Guías de uso de componentes
+  - [ ] Patrones de diseño
 - [ ] Plan de mantenimiento establecido
+  - [ ] Frecuencia de actualizaciones
+  - [ ] Proceso de revisión
+  - [ ] Estrategia de versionado
 - [ ] Estrategia de backup implementada
+  - [ ] Frecuencia de backups
+  - [ ] Proceso de restauración
+  - [ ] Almacenamiento seguro
+
+### Nuevas Tareas Identificadas
+- [ ] Optimización de rendimiento móvil
+  - [ ] Revisar Core Web Vitals
+  - [ ] Optimizar First Contentful Paint
+  - [ ] Mejorar Time to Interactive
+- [ ] Internacionalización
+  - [ ] Preparar estructura para múltiples idiomas
+  - [ ] Implementar sistema de traducciones
+  - [ ] Configurar rutas por idioma
+- [ ] Monitoreo de rendimiento
+  - [ ] Configurar métricas de rendimiento
+  - [ ] Implementar alertas
+  - [ ] Dashboard de monitoreo
+
+Este checklist debe ser revisado y actualizado regularmente durante el proceso de desarrollo.
 
 Este documento debe mantenerse actualizado a medida que el proyecto evoluciona. 
