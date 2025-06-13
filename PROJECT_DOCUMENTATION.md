@@ -249,6 +249,11 @@ El proyecto ha pasado por varias mejoras significativas:
    - Detección temprana de errores
    - Mejor autocompletado en IDEs
 
+7. **Limpieza de iframes y compatibilidad moderna**:
+   - Eliminación del atributo obsoleto `allowFullScreen` en iframes
+   - Uso exclusivo de `allow="fullscreen"` y otros permisos modernos
+   - Reducción de advertencias en consola y mejora de compatibilidad con navegadores actuales
+
 ## 🚀 Próximos Pasos
 
 ### 1. Optimización y Rendimiento (Prioridad Alta)
@@ -349,6 +354,7 @@ El proyecto ha pasado por varias mejoras significativas:
   - [x] Implementación de Error Boundaries
   - [x] Configuración de Sentry
   - [x] Logging de errores críticos
+- [x] Limpieza de iframes: solo uso de atributo `allow` en vez de `allowfullscreen` para evitar advertencias y seguir mejores prácticas
 
 ### Prioridad Media
 - [ ] Pruebas E2E básicas pasando para flujos críticos
