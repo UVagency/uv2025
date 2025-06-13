@@ -17,34 +17,34 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`w-full px-4 py-2 font-sans bg-portfolio-bg sticky top-0 overflow-x-hidden z-${NAVBAR_CONSTANTS.Z_INDEX.NAVBAR}`}>
-        <div className="max-w-[90%] mx-auto flex justify-between items-center">
-          <div className="flex items-center gap-4 md:gap-8">
+      <nav className={`w-full px-2 sm:px-4 py-2 font-sans bg-portfolio-bg sticky top-0 overflow-x-hidden z-${NAVBAR_CONSTANTS.Z_INDEX.NAVBAR}`}>
+        <div className="max-w-[95%] sm:max-w-[90%] mx-auto flex justify-between items-center">
+          <div className="flex items-center gap-2 sm:gap-4 md:gap-8">
             <div className="relative flex items-center">
               <button
                 onClick={isContactOpen ? toggleContact : isOurCompanyOpen ? toggleOurCompany : toggleInfo}
                 aria-label="Close"
-                className={`absolute left-0 text-portfolio-text hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out rounded-full size-6 md:size-8 flex items-center justify-center border border-portfolio-text hover:border-portfolio-highlight ${(isInfoOpen || isContactOpen || isOurCompanyOpen) ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
+                className={`absolute left-0 text-portfolio-text hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out rounded-full size-5 sm:size-6 md:size-8 flex items-center justify-center border border-portfolio-text hover:border-portfolio-highlight ${(isInfoOpen || isContactOpen || isOurCompanyOpen) ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
               >
-                <X size={16} className="md:w-5 md:h-5" />
+                <X size={14} className="sm:w-4 sm:h-4 md:w-5 md:h-5" />
               </button>
-              <div className={`flex items-center gap-4 md:gap-8 transition-transform duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out ${(isInfoOpen || isContactOpen || isOurCompanyOpen) ? 'translate-x-8 md:translate-x-12' : ''}`}>
+              <div className={`flex items-center gap-2 sm:gap-4 md:gap-8 transition-transform duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out ${(isInfoOpen || isContactOpen || isOurCompanyOpen) ? 'translate-x-6 sm:translate-x-8 md:translate-x-12' : ''}`}>
                 <button 
                   onClick={toggleInfo}
-                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-xl ${isInfoOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
+                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-base sm:text-lg md:text-xl ${isInfoOpen ? 'text-portfolio-highlight underline underline-offset-4 sm:underline-offset-8' : ''}`}
                 >
                   ABOUT
                 </button>
                 <Link 
                   to="/our-company"
                   onClick={toggleOurCompany}
-                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-xl ${isOurCompanyOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
+                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-base sm:text-lg md:text-xl ${isOurCompanyOpen ? 'text-portfolio-highlight underline underline-offset-4 sm:underline-offset-8' : ''}`}
                 >
                   Our Company
                 </Link>
                 <button 
                   onClick={toggleContact}
-                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-xl ${isContactOpen ? 'text-portfolio-highlight underline underline-offset-8' : ''}`}
+                  className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-base sm:text-lg md:text-xl ${isContactOpen ? 'text-portfolio-highlight underline underline-offset-4 sm:underline-offset-8' : ''}`}
                 >
                   Contact
                 </button>
@@ -63,8 +63,8 @@ const Navbar = () => {
           overflowY: isInfoOpen ? 'scroll' : 'hidden'
         }}
       >
-        <div className="max-w-[90%] mx-auto relative h-full">
-          <div className="pt-24 pb-32 px-4 h-full hideScrollbar">
+        <div className="max-w-[95%] sm:max-w-[90%] mx-auto relative h-full">
+          <div className="pt-16 sm:pt-24 pb-16 sm:pb-32 px-2 sm:px-4 h-full hideScrollbar">
             <InfoSection />
           </div>
         </div>
@@ -79,8 +79,8 @@ const Navbar = () => {
           opacity: 1
         }}
       >
-        <div className="max-w-[90%] mx-auto relative h-full">
-          <div className="pt-24 px-4 h-full overflow-hidden">
+        <div className="max-w-[95%] sm:max-w-[90%] mx-auto relative h-full">
+          <div className="pt-16 sm:pt-24 px-2 sm:px-4 h-full overflow-hidden">
             <Footer />
           </div>
         </div>
