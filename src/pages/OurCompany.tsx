@@ -91,36 +91,36 @@ const OurCompany = () => {
       <div className="fixed inset-0 z-50 bg-portfolio-bg overflow-y-auto">
         <div className="w-full mx-auto pt-8 pb-16">
           {/* Header Section */}
-          <div className="max-w-[90%] mx-auto">
-            <div className="border-b border-portfolio-divider pb-6 mb-8">
-              <div className="flex items-center gap-4 flex-wrap">
+          <div className="max-w-[95%] sm:max-w-[90%] mx-auto">
+            <div className="border-b border-portfolio-divider pb-4 sm:pb-6 mb-4 sm:mb-8">
+              <div className="flex items-center gap-2 sm:gap-4 flex-wrap">
                 <button
                   onClick={handleClose}
                   aria-label="Close"
-                  className="w-10 h-10 rounded-full bg-transparent border border-portfolio-text flex items-center justify-center text-portfolio-text hover:bg-portfolio-text hover:text-portfolio-bg transition-colors"
+                  className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-transparent border border-portfolio-text flex items-center justify-center text-portfolio-text hover:bg-portfolio-text hover:text-portfolio-bg transition-colors"
                 >
-                  <X size={18} />
+                  <X size={16} className="sm:w-5 sm:h-5" />
                 </button>
                 
-                <h1 className="text-7xl font-bold text-portfolio-text">{companyInfo.name}</h1>
+                <h1 className="text-2xl sm:text-4xl md:text-7xl font-bold text-portfolio-text">{companyInfo.name}</h1>
                 
-                <span className="project-year-tag text-base px-6 py-2 rounded-full bg-portfolio-tag-bg text-portfolio-tag-text">
+                <span className="project-year-tag text-xs sm:text-base px-3 sm:px-6 py-1 sm:py-2 rounded-full bg-portfolio-tag-bg text-portfolio-tag-text">
                   {companyInfo.year}
                 </span>
                   
                 {companyInfo.categories.map((category) => (
-                  <span key={category} className="project-category-tag text-base px-6 py-2 border rounded-full">
+                  <span key={category} className="project-category-tag text-xs sm:text-base px-3 sm:px-6 py-1 sm:py-2 border rounded-full">
                     {category}
                   </span>
                 ))}
               </div>
               
-              <p className="text-4xl text-portfolio-text/90 font-light leading-tight max-w-4xl mt-6">
+              <p className="text-base sm:text-2xl md:text-4xl text-portfolio-text/90 font-light leading-tight max-w-4xl mt-3 sm:mt-6">
                 {companyInfo.tagline}
               </p>
               
-              <div className="mt-6 flex flex-wrap gap-4">
-                <div className="text-portfolio-text/70">
+              <div className="mt-4 sm:mt-6 flex flex-wrap gap-2 sm:gap-4">
+                <div className="text-portfolio-text/70 text-xs sm:text-base">
                   <span className="font-semibold">Type:</span> {companyInfo.client}
                 </div>
               </div>
@@ -132,41 +132,41 @@ const OurCompany = () => {
             </Suspense>
 
             {/* History Section */}
-            <div className="mb-12">
-              <h2 className="text-4xl font-bold text-portfolio-text mb-4">Our Story</h2>
-              <div className="text-2xl text-portfolio-text/80 font-light whitespace-pre-line">
+            <div className="mb-6 sm:mb-12">
+              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-3 sm:mb-4">Our Story</h2>
+              <div className="text-lg sm:text-2xl text-portfolio-text/80 font-light whitespace-pre-line">
                 {companyInfo.history}
               </div>
             </div>
 
             {/* Description Section */}
-            <div className="mb-12">
-              <h2 className="text-4xl font-bold text-portfolio-text mb-4">About Us</h2>
-              <div className="text-2xl text-portfolio-text/80 font-light whitespace-pre-line">
+            <div className="mb-6 sm:mb-12">
+              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-3 sm:mb-4">About Us</h2>
+              <div className="text-lg sm:text-2xl text-portfolio-text/80 font-light whitespace-pre-line">
                 {companyInfo.description}
               </div>
             </div>
 
             {/* Core Team Management Section */}
-            <div className="mb-12">
-              <h2 className="text-4xl font-bold text-portfolio-text mb-4">Core Team</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="mb-6 sm:mb-12">
+              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-3 sm:mb-4">Core Team</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8">
                 {coreTeam.map((member) => (
-                  <div key={member.url} className="flex flex-col items-center bg-portfolio-bg/80 rounded-lg p-6 shadow-md">
+                  <div key={member.url} className="flex flex-col items-center bg-portfolio-bg/80 rounded-lg p-4 sm:p-6 shadow-md">
                     <img
                       src={member.photo}
                       alt={member.name}
-                      className="w-32 h-32 rounded-full object-cover mb-4 border-2 border-portfolio-accent"
+                      className="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover mb-3 sm:mb-4 border-2 border-portfolio-accent"
                     />
                     <a
                       href={member.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xl font-semibold underline hover:text-portfolio-text text-portfolio-text text-center"
+                      className="text-base sm:text-xl font-semibold underline hover:text-portfolio-text text-portfolio-text text-center"
                     >
                       {member.name}
                     </a>
-                    <p className="text-lg text-portfolio-text/70 mt-1">{member.title}</p>
+                    <p className="text-sm sm:text-lg text-portfolio-text/70 mt-1">{member.title}</p>
                   </div>
                 ))}
               </div>
@@ -178,9 +178,9 @@ const OurCompany = () => {
             </Suspense>
 
             {/* Services Section */}
-            <div className="mb-12">
-              <h2 className="text-4xl font-bold text-portfolio-text mb-8">Our Services <span role="img" aria-label="handshake">🤝</span></h2>
-              <div className="text-2xl text-portfolio-text/80 font-light space-y-6">
+            <div className="mb-6 sm:mb-12">
+              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-4 sm:mb-8">Our Services <span role="img" aria-label="handshake">🤝</span></h2>
+              <div className="text-lg sm:text-2xl text-portfolio-text/80 font-light space-y-3 sm:space-y-6">
                 <div>
                   <p className="font-semibold inline-block mr-2">Brand Building</p>
                   <p className="inline">Developing and positioning brands with clarity and impact</p>

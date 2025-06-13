@@ -63,36 +63,36 @@ const UnitedMedia = () => {
       <div className="fixed inset-0 z-50 bg-portfolio-bg overflow-y-auto">
         <div className="w-full mx-auto pt-8 pb-16">
           {/* Header Section */}
-          <div className="max-w-[90%] mx-auto">
-            <div className="border-b border-portfolio-divider pb-6 mb-8">
-              <div className="flex items-center gap-4 flex-wrap">
+          <div className="max-w-[95%] sm:max-w-[90%] mx-auto">
+            <div className="border-b border-portfolio-divider pb-4 sm:pb-6 mb-4 sm:mb-8">
+              <div className="flex items-center gap-2 sm:gap-4 flex-wrap">
                 <button
                   onClick={handleClose}
                   aria-label="Close"
-                  className="w-10 h-10 rounded-full bg-transparent border border-portfolio-text flex items-center justify-center text-portfolio-text hover:bg-portfolio-text hover:text-portfolio-bg transition-colors"
+                  className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-transparent border border-portfolio-text flex items-center justify-center text-portfolio-text hover:bg-portfolio-text hover:text-portfolio-bg transition-colors"
                 >
-                  <X size={18} />
+                  <X size={16} className="sm:w-5 sm:h-5" />
                 </button>
                 
-                <h1 className="text-7xl font-bold text-portfolio-text">{mediaInfo.name}</h1>
+                <h1 className="text-2xl sm:text-4xl md:text-7xl font-bold text-portfolio-text">{mediaInfo.name}</h1>
                 
-                <span className="project-year-tag text-base px-6 py-2 rounded-full bg-portfolio-tag-bg text-portfolio-tag-text">
+                <span className="project-year-tag text-xs sm:text-base px-3 sm:px-6 py-1 sm:py-2 rounded-full bg-portfolio-tag-bg text-portfolio-tag-text">
                   {mediaInfo.year}
                 </span>
                   
                 {mediaInfo.categories.map((category) => (
-                  <span key={category} className="project-category-tag text-base px-6 py-2 border rounded-full">
+                  <span key={category} className="project-category-tag text-xs sm:text-base px-3 sm:px-6 py-1 sm:py-2 border rounded-full">
                     {category}
                   </span>
                 ))}
               </div>
               
-              <p className="text-4xl text-portfolio-text/90 font-light leading-tight max-w-4xl mt-6">
+              <p className="text-base sm:text-2xl md:text-4xl text-portfolio-text/90 font-light leading-tight max-w-4xl mt-3 sm:mt-6">
                 {mediaInfo.tagline}
               </p>
               
-              <div className="mt-6 flex flex-wrap gap-4">
-                <div className="text-portfolio-text/70">
+              <div className="mt-4 sm:mt-6 flex flex-wrap gap-2 sm:gap-4">
+                <div className="text-portfolio-text/70 text-xs sm:text-base">
                   <span className="font-semibold">Type:</span> {mediaInfo.client}
                 </div>
               </div>
@@ -104,50 +104,50 @@ const UnitedMedia = () => {
             </Suspense>
 
             {/* Closing Statement */}
-            <div className="mb-12 text-center">
-              <h2 className="text-4xl font-bold text-portfolio-text mb-4">Maximize the acquisition of new clients by enhancing your media strategy, investment, and team</h2>
+            <div className="mb-6 sm:mb-12 text-center">
+              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-3 sm:mb-4">Maximize the acquisition of new clients by enhancing your media strategy, investment, and team</h2>
             </div>
 
             {/* History Section */}
-            <div className="mb-12">
-              <h2 className="text-4xl font-bold text-portfolio-text mb-4">Our Story</h2>
-              <div className="text-2xl text-portfolio-text/80 font-light whitespace-pre-line">
+            <div className="mb-6 sm:mb-12">
+              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-3 sm:mb-4">Our Story</h2>
+              <div className="text-lg sm:text-2xl text-portfolio-text/80 font-light whitespace-pre-line">
                 {mediaInfo.history}
               </div>
             </div>
 
             {/* Description Section */}
-            <div className="mb-12">
-              <h2 className="text-4xl font-bold text-portfolio-text mb-4">About Us</h2>
-              <div className="text-2xl text-portfolio-text/80 font-light whitespace-pre-line">
+            <div className="mb-6 sm:mb-12">
+              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-3 sm:mb-4">About Us</h2>
+              <div className="text-lg sm:text-2xl text-portfolio-text/80 font-light whitespace-pre-line">
                 {mediaInfo.description}
               </div>
             </div>
 
             {/* Service Blocks */}
-            <div className="mb-12">
-              <h2 className="text-4xl font-bold text-portfolio-text mb-8">Our Services</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="p-6 border border-portfolio-divider rounded-lg">
-                  <h3 className="text-2xl font-bold text-portfolio-text mb-4">Targeted Branding</h3>
-                  <p className="text-portfolio-text/80">Reach truly relevant clients by enhancing the visibility of your brand, product, or event through:</p>
-                  <ul className="list-disc pl-5 mt-2">
+            <div className="mb-6 sm:mb-12">
+              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-4 sm:mb-8">Our Services</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
+                <div className="p-4 sm:p-6 border border-portfolio-divider rounded-lg">
+                  <h3 className="text-xl sm:text-2xl font-bold text-portfolio-text mb-3 sm:mb-4">Targeted Branding</h3>
+                  <p className="text-base sm:text-lg text-portfolio-text/80">Reach truly relevant clients by enhancing the visibility of your brand, product, or event through:</p>
+                  <ul className="list-disc pl-5 mt-2 text-base sm:text-lg">
                     <li>Programmatic</li>
                     <li>Digital PR</li>
                   </ul>
                 </div>
-                <div className="p-6 border border-portfolio-divider rounded-lg">
-                  <h3 className="text-2xl font-bold text-portfolio-text mb-4">SXO</h3>
-                  <p className="text-portfolio-text/80">Enhance the performance and ROI of the Google Search channel through an integrated strategy between:</p>
-                  <ul className="list-disc pl-5 mt-2">
+                <div className="p-4 sm:p-6 border border-portfolio-divider rounded-lg">
+                  <h3 className="text-xl sm:text-2xl font-bold text-portfolio-text mb-3 sm:mb-4">SXO</h3>
+                  <p className="text-base sm:text-lg text-portfolio-text/80">Enhance the performance and ROI of the Google Search channel through an integrated strategy between:</p>
+                  <ul className="list-disc pl-5 mt-2 text-base sm:text-lg">
                     <li>SEO</li>
                     <li>SEM</li>
                   </ul>
                 </div>
-                <div className="p-6 border border-portfolio-divider rounded-lg">
-                  <h3 className="text-2xl font-bold text-portfolio-text mb-4">Conversion Boost</h3>
-                  <p className="text-portfolio-text/80">Maximize ROI and conversion rates by improving decision-making through experimentation and data with:</p>
-                  <ul className="list-disc pl-5 mt-2">
+                <div className="p-4 sm:p-6 border border-portfolio-divider rounded-lg">
+                  <h3 className="text-xl sm:text-2xl font-bold text-portfolio-text mb-3 sm:mb-4">Conversion Boost</h3>
+                  <p className="text-base sm:text-lg text-portfolio-text/80">Maximize ROI and conversion rates by improving decision-making through experimentation and data with:</p>
+                  <ul className="list-disc pl-5 mt-2 text-base sm:text-lg">
                     <li>CRO</li>
                     <li>Data analytics</li>
                   </ul>
@@ -156,38 +156,38 @@ const UnitedMedia = () => {
             </div>
 
             {/* Needs Quadrant */}
-            <div className="mb-12">
-              <h2 className="text-4xl font-bold text-portfolio-text mb-8">How to Resolve Your Needs?</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="p-6 border border-portfolio-divider rounded-lg">
-                  <p className="text-portfolio-text/80">1. We increase conversions on your website or app by reaching more potential clients.</p>
+            <div className="mb-6 sm:mb-12">
+              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-4 sm:mb-8">How to Resolve Your Needs?</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
+                <div className="p-4 sm:p-6 border border-portfolio-divider rounded-lg">
+                  <p className="text-base sm:text-lg text-portfolio-text/80">1. We increase conversions on your website or app by reaching more potential clients.</p>
                 </div>
-                <div className="p-6 border border-portfolio-divider rounded-lg">
-                  <p className="text-portfolio-text/80">2. We reduce acquisition costs to maximize the efficiency of digital investments.</p>
+                <div className="p-4 sm:p-6 border border-portfolio-divider rounded-lg">
+                  <p className="text-base sm:text-lg text-portfolio-text/80">2. We reduce acquisition costs to maximize the efficiency of digital investments.</p>
                 </div>
-                <div className="p-6 border border-portfolio-divider rounded-lg">
-                  <p className="text-portfolio-text/80">3. We enhance visibility, trust, and brand recognition among potential clients.</p>
+                <div className="p-4 sm:p-6 border border-portfolio-divider rounded-lg">
+                  <p className="text-base sm:text-lg text-portfolio-text/80">3. We enhance visibility, trust, and brand recognition among potential clients.</p>
                 </div>
-                <div className="p-6 border border-portfolio-divider rounded-lg">
-                  <p className="text-portfolio-text/80">4. We help your clients with a better digital experience and facilitate their path to conversion.</p>
+                <div className="p-4 sm:p-6 border border-portfolio-divider rounded-lg">
+                  <p className="text-base sm:text-lg text-portfolio-text/80">4. We help your clients with a better digital experience and facilitate their path to conversion.</p>
                 </div>
               </div>
             </div>
 
             {/* Certifications and Partners */}
-            <div className="mb-12">
-              <h2 className="text-4xl font-bold text-portfolio-text mb-8">Certifications and Partners</h2>
-              <div className="flex flex-wrap gap-4">
-                <span className="px-4 py-2 bg-portfolio-tag-bg text-portfolio-tag-text rounded-full">Facebook BluePrint</span>
-                <span className="px-4 py-2 bg-portfolio-tag-bg text-portfolio-tag-text rounded-full">Google Partner</span>
-                <span className="px-4 py-2 bg-portfolio-tag-bg text-portfolio-tag-text rounded-full">eEcommerce Awards</span>
+            <div className="mb-6 sm:mb-12">
+              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-4 sm:mb-8">Certifications and Partners</h2>
+              <div className="flex flex-wrap gap-2 sm:gap-4">
+                <span className="px-3 sm:px-4 py-1 sm:py-2 bg-portfolio-tag-bg text-portfolio-tag-text rounded-full text-xs sm:text-base">Facebook BluePrint</span>
+                <span className="px-3 sm:px-4 py-1 sm:py-2 bg-portfolio-tag-bg text-portfolio-tag-text rounded-full text-xs sm:text-base">Google Partner</span>
+                <span className="px-3 sm:px-4 py-1 sm:py-2 bg-portfolio-tag-bg text-portfolio-tag-text rounded-full text-xs sm:text-base">eEcommerce Awards</span>
               </div>
             </div>
 
             {/* CTA Section */}
-            <div className="mb-12 text-left">
-              <h2 className="text-4xl font-bold text-portfolio-text mb-4">Looking for more leads?</h2>
-              <button className="bg-portfolio-highlight text-white px-6 py-3 rounded-full hover:bg-portfolio-highlight/80 transition-colors">
+            <div className="mb-6 sm:mb-12 text-left">
+              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-3 sm:mb-4">Looking for more leads?</h2>
+              <button className="bg-portfolio-highlight text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-portfolio-highlight/80 transition-colors text-sm sm:text-base">
                 Contact Us
               </button>
             </div>
