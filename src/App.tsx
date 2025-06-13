@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -12,6 +12,7 @@ import Index from './pages/Index';
 import OurCompany from './pages/OurCompany';
 import UnitedMedia from './pages/UnitedMedia';
 import Navbar from './components/Navbar';
+import { initAnalytics } from './lib/analytics';
 
 // Lazy load components
 const About = lazy(() => import("./pages/About"));
@@ -66,6 +67,10 @@ const RouteWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => 
 );
 
 const App = () => {
+  useEffect(() => {
+    initAnalytics();
+  }, []);
+
   return (
     <ErrorBoundary>
       <HelmetProvider>
