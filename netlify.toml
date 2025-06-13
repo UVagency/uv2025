@@ -14,7 +14,7 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Content-Security-Policy = "default-src 'self' https://uv.agency; img-src 'self' https://uv.agency data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://uv.agency https://www.googletagmanager.com https://www.google-analytics.com https://assets.apollo.io; style-src 'self' 'unsafe-inline' https://uv.agency https://fonts.googleapis.com; font-src 'self' data: https://uv.agency https://fonts.gstatic.com; connect-src 'self' https://uv.agency https://vimeo.com https://player.vimeo.com https://www.google-analytics.com https://region1.google-analytics.com https://assets.apollo.io; frame-src 'self' https://player.vimeo.com;"
+    Content-Security-Policy = "default-src 'self' https://uv.agency https://agencyuv.com; img-src 'self' https://uv.agency https://agencyuv.com data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://uv.agency https://agencyuv.com https://www.googletagmanager.com https://www.google-analytics.com https://assets.apollo.io; style-src 'self' 'unsafe-inline' https://uv.agency https://agencyuv.com https://fonts.googleapis.com; font-src 'self' data: https://uv.agency https://agencyuv.com https://fonts.gstatic.com; connect-src 'self' https://uv.agency https://agencyuv.com https://vimeo.com https://player.vimeo.com https://www.google-analytics.com https://region1.google-analytics.com https://assets.apollo.io https://aplo-evnt.com; frame-src 'self' https://player.vimeo.com;"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
 
