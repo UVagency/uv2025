@@ -9,12 +9,6 @@ const Hero = () => {
       <div className="max-w-[90%] mx-auto w-full pt-8 md:pt-12">
         {/* Main content */}
         <HeroContent />
-        <button 
-          onClick={handleCtaClick}
-          className="cta-button"
-        >
-          Contact Us
-        </button>
       </div>
     </div>
   );
