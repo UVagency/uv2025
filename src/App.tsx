@@ -12,7 +12,6 @@ import Index from './pages/Index';
 import OurCompany from './pages/OurCompany';
 import UnitedMedia from './pages/UnitedMedia';
 import Navbar from './components/Navbar';
-import AnalyticsTest from './components/AnalyticsTest';
 
 // Lazy load components
 const About = lazy(() => import("./pages/About"));
@@ -107,7 +106,6 @@ const App = () => {
                   </RouteWrapper>
                 } />
               </Routes>
-              <AnalyticsTest />
             </BrowserRouter>
           </TooltipProvider>
         </QueryClientProvider>
