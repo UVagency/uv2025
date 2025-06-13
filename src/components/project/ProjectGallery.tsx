@@ -5,7 +5,7 @@ import ProjectFeatureText from './gallery/ProjectFeatureText';
 import ProjectBanner from './gallery/ProjectBanner';
 import ProjectImageGrid from './gallery/ProjectImageGrid';
 import ProjectTextSection from './gallery/ProjectTextSection';
-import ProjectMixedGrid from './gallery/ProjectMixedGrid';
+import { ImageItem } from '@/types/gallery';
 
 interface ProjectGalleryProps {
   project: ProjectData;
@@ -72,38 +72,6 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project, carouselSpeed 
           An iconic {project.categories[0].toLowerCase()} deserves an iconic graphics package. Drawing inspiration from {project.emojis ? project.emojis.join(' and ') : 'various elements'}, we designed a graphic language featuring bold colors, halftone patterns, and sleek vector-style neon looks.
         </ProjectTextSection>
 
-        <ProjectMixedGrid 
-          portraitImage={{
-            src: placeholders[3],
-            alt: `${project.name} - Portrait 1`,
-            badge: { text: "How to get this", position: "bottom-left" }
-          }}
-          gridImages={[...Array(8)].map((_, index) => ({
-            src: placeholders[(index + 4) % placeholders.length],
-            alt: `${project.name} - Grid ${index + 1}`,
-            ratio: index % 3 === 0 ? 16/9 : 1,
-            overlay: index === 0 ? (
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-2xl font-bold text-portfolio-highlight">DIVA</span>
-              </div>
-            ) : index === 4 ? (
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="grid grid-cols-4 gap-1">
-                  {['A','B','C','D','E','F','G','H','N','E','X','T'].map((letter, i) => (
-                    <span key={i} className="bg-portfolio-tag-bg text-white w-6 h-6 flex items-center justify-center text-xs">
-                      {letter}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ) : index === 6 ? (
-              <div className="absolute bottom-2 left-2 bg-portfolio-highlight text-portfolio-text px-2 py-1 text-xs">
-                ON GUEST
-              </div>
-            ) : undefined
-          }))}
-        />
-
         <ProjectImageGrid 
           columns={3}
           images={[1, 2, 3].map((index) => ({
@@ -160,14 +128,6 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project, carouselSpeed 
                   className={section.className}
                 />
               </div>
-            );
-          case 'mixedGrid':
-            return (
-              <ProjectMixedGrid 
-                key={index}
-                portraitImage={section.portraitImage}
-                gridImages={section.gridImages}
-              />
             );
           default:
             return null;

@@ -1,15 +1,6 @@
 import React from 'react';
 import OptimizedImage from '@/components/ui/optimized-image';
-
-interface ImageItem {
-  src: string;
-  alt: string;
-  badge?: {
-    text: string;
-    position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center';
-  };
-  overlay?: React.ReactNode;
-}
+import { ImageItem } from '@/types/gallery';
 
 interface ProjectImageGridProps {
   images: ImageItem[];

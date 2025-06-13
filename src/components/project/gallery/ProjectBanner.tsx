@@ -1,14 +1,12 @@
 import React from 'react';
 import OptimizedImage from '@/components/ui/optimized-image';
+import { BadgeProps } from '@/types/gallery';
 
 interface ProjectBannerProps {
   image: string;
   alt: string;
   ratio?: number;
-  badge?: {
-    text: string;
-    position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center';
-  };
+  badge?: BadgeProps;
 }
 
 const ProjectBanner: React.FC<ProjectBannerProps> = ({
