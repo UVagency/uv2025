@@ -30,7 +30,7 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ project }) => {
   return (
     <div className="max-w-[98vw] sm:max-w-[90%] mx-auto">
       <div className="border-b border-portfolio-divider pb-4 sm:pb-6 mb-4 sm:mb-8">
-        <div className="w-full flex flex-col items-center md:items-start text-center md:text-left">
+        <div className="w-full flex flex-col items-start text-left">
           <div className="inline-flex flex-wrap items-center gap-2 sm:gap-4 mb-2 sm:mb-0">
             <button
               onClick={handleClose}
@@ -61,11 +61,11 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ project }) => {
               </div>
             )}
           </div>
-          <p className="w-full max-w-[95vw] sm:max-w-full mx-auto text-base sm:text-2xl md:text-4xl text-portfolio-text/90 font-light leading-tight mt-3 sm:mt-6">
+          <p className="w-full max-w-[95vw] sm:max-w-full mx-auto text-base sm:text-2xl md:text-4xl text-portfolio-text/90 font-light leading-tight mt-3 sm:mt-6 text-left">
             {project.description}
           </p>
         </div>
-        <div className="mt-4 sm:mt-6 flex flex-wrap gap-2 sm:gap-4 justify-center md:justify-start">
+        <div className="mt-4 sm:mt-6 flex flex-wrap gap-2 sm:gap-4 justify-start">
           {project.client && (
             <div className="text-portfolio-text/70 text-xs sm:text-base">
               <span className="font-semibold">Client:</span> {project.client}

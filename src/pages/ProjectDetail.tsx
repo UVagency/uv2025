@@ -123,7 +123,23 @@ const ProjectDetail = () => {
             {project.marketingResults && (
               <div className="mb-6 sm:mb-8">
                 <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-3 sm:mb-4">Marketing Results</h2>
-                <div>{renderBullets(project.marketingResults)}</div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {project.marketingResults.split('\n').map((line, index) => {
+                    if (line.trim().startsWith('-')) {
+                      const result = line.replace(/^-\s*/, '');
+                      return (
+                        <div key={index} className="bg-portfolio-bg border border-portfolio-accent/20 rounded-lg p-4 hover:border-portfolio-accent/40 transition-colors">
+                          <p className="text-lg sm:text-xl text-portfolio-text/90 font-light">{result}</p>
+                        </div>
+                      );
+                    }
+                    return (
+                      <p key={index} className="text-lg sm:text-2xl text-portfolio-text/80 font-light col-span-full mb-4">
+                        {line}
+                      </p>
+                    );
+                  })}
+                </div>
               </div>
             )}
           </div>
