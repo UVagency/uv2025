@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import projectsData, { ProjectData } from "../data/projectsData";
 import { highlightIds } from "../data/highlightsConfig";
+import OptimizedImage from "@/components/ui/optimized-image";
 
 // Seleccionar los proyectos destacados del projectsData
 const highlightedProjects = highlightIds.map(id => projectsData[id]);
@@ -31,10 +32,11 @@ const Highlights = () => {
               className="cursor-pointer group"
             >
               <div className="relative w-full overflow-hidden rounded-md mb-4">
-                <img 
+                <OptimizedImage
                   src={coverImg}
                   alt={project.name}
-                  className="w-full object-contain" 
+                  className="w-full object-contain"
+                  wrapperClassName=""
                 />
               </div>
               
