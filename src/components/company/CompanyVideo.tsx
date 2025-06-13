@@ -15,7 +15,6 @@ const CompanyVideo: React.FC<CompanyVideoProps> = ({ videoUrl }) => {
           height="100%"
           frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture"
-          allowFullScreen
           className="w-full h-full"
           style={{ background: "black" }}
           title="UV Company Recap"
