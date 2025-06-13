@@ -6,7 +6,7 @@ const Footer = () => {
   const handleEmailClick = () => {
     trackEvent('EMAIL_CLICK', {
       location: 'footer',
-      email: 'contact@uv.agency' // replace with your actual email
+      email: 'hello@uv.agency'
     });
   };
 
@@ -22,7 +22,7 @@ const Footer = () => {
           <div className="flex items-center space-x-2">
             <Mail className="w-4 h-4 text-portfolio-highlight" />
             <a 
-              href="mailto:contact@uv.agency"
+              href="mailto:hello@uv.agency"
               onClick={handleEmailClick}
               className="uppercase email-link"
             >
@@ -61,7 +61,7 @@ const Footer = () => {
       <div className="max-w-[90%] mx-auto mt-16 flex flex-col md:flex-row md:items-center text-sm text-gray-400 space-y-2 md:space-y-0">
         <div className="flex items-center">
           <span>with  💖  by </span>
-          <a href="#" className="ml-1 text-white hover:text-portfolio-highlight">UV</a>
+          <a href="/our-company" className="ml-1 text-white hover:text-portfolio-highlight">UV</a>
           <span className="mx-2 text-portfolio-highlight">✦</span>
         </div>
         <div className="flex items-center">
