@@ -7,6 +7,7 @@ interface OptimizedImageProps {
   width?: number;
   height?: number;
   className?: string;
+  wrapperClassName?: string;
   priority?: boolean;
   aspectRatio?: number;
   badge?: {
@@ -22,6 +23,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   width,
   height,
   className = "",
+  wrapperClassName = "overflow-hidden rounded-md",
   priority = false,
   aspectRatio,
   badge,
@@ -68,7 +70,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   if (aspectRatio) {
     return (
-      <div className="overflow-hidden rounded-md">
+      <div className={wrapperClassName}>
         <AspectRatio ratio={aspectRatio}>
           {imageContent}
           {badge && (
@@ -83,7 +85,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   }
 
   return (
-    <div className="overflow-hidden rounded-md">
+    <div className={wrapperClassName}>
       {imageContent}
       {badge && (
         <div className={`absolute ${getBadgePosition(badge.position)} bg-portfolio-highlight text-portfolio-text px-2 py-1 text-xs`}>

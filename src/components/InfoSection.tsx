@@ -1,14 +1,16 @@
 import React from 'react';
+import OptimizedImage from '@/components/ui/optimized-image';
 
 const InfoSection = () => {
   return (
     <div className="max-w-[90%] mx-auto flex flex-col items-center md:items-start pb-16">
       <div className="w-full flex flex-col md:flex-row md:gap-16 items-center md:items-start">
         <div className="w-32 h-32 overflow-hidden">
-          <img 
-            alt="UV Logo" 
-            className="w-full h-full object-cover rounded-full" 
-            src="/images/uv_logo.png" 
+          <OptimizedImage
+            alt="UV Logo"
+            src="/images/uv_logo.png"
+            className="w-full h-full object-cover rounded-full"
+            wrapperClassName="overflow-hidden rounded-full"
           />
         </div>
         <div className="text-[#f9f8e2] md:w-2/3 text-center md:text-left">
