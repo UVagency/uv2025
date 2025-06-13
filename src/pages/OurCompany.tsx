@@ -5,6 +5,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Footer from '../components/Footer';
 import { SEO } from '../components/SEO';
 import { CompanyVideo, CompanyValues, CompanyAwards } from '../components/lazy';
+import { useNavigation } from '../hooks/useNavigation';
 
 // Loading component for lazy-loaded sections
 const SectionLoading = () => (
@@ -20,8 +21,10 @@ const SectionLoading = () => (
 
 const OurCompany = () => {
   const navigate = useNavigate();
+  const { toggleOurCompany } = useNavigation();
   
   const handleClose = () => {
+    toggleOurCompany();
     navigate('/');
   };
 
