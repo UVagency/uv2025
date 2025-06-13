@@ -6,6 +6,7 @@ import ProjectBanner from './gallery/ProjectBanner';
 import ProjectImageGrid from './gallery/ProjectImageGrid';
 import ProjectTextSection from './gallery/ProjectTextSection';
 import { ImageItem } from '@/types/gallery';
+import { trackEvent, GA_EVENTS, GA_PARAMS } from '@/lib/analytics';
 
 interface ProjectGalleryProps {
   project: ProjectData;
@@ -22,6 +23,13 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project, carouselSpeed 
     "https://images.unsplash.com/photo-1608501078713-8e445a709b39?q=80&w=800",
     "https://images.unsplash.com/photo-1517697471339-4aa32003c11a?q=80&w=800"
   ];
+
+  const handleProjectClick = () => {
+    trackEvent('PROJECT_CLICK', {
+      [GA_PARAMS.PROJECT_ID]: project.id,
+      [GA_PARAMS.PROJECT_NAME]: project.name
+    });
+  };
 
   if (!project.gallery) {
     return (

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { ProjectData } from '@/data/projectsData';
+import { trackVideoEngagement } from '@/lib/analytics';
 
 interface ProjectVideoPlayerProps {
   project: ProjectData;
@@ -12,6 +13,14 @@ const getVimeoId = (url: string) => {
 };
 
 const ProjectVideoPlayer: React.FC<ProjectVideoPlayerProps> = ({ project }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      trackVideoEngagement(videoRef.current);
+    }
+  }, []);
+
   if (!project.videoUrl) return null;
   const vimeoId = getVimeoId(project.videoUrl);
   if (!vimeoId) return null;

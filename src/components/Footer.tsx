@@ -1,7 +1,15 @@
 import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import { trackEvent, GA_EVENTS } from '@/lib/analytics';
 
 const Footer = () => {
+  const handleEmailClick = () => {
+    trackEvent('EMAIL_CLICK', {
+      location: 'footer',
+      email: 'contact@uv.agency' // replace with your actual email
+    });
+  };
+
   return (
     <footer className="bg-portfolio-about-bg text-white py-16">
       <div className="max-w-[90%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -13,7 +21,13 @@ const Footer = () => {
           </div>
           <div className="flex items-center space-x-2">
             <Mail className="w-4 h-4 text-portfolio-highlight" />
-            <a href="mailto:hi@uv.agency" className="uppercase">hi@uv.agency</a>
+            <a 
+              href="mailto:contact@uv.agency"
+              onClick={handleEmailClick}
+              className="uppercase email-link"
+            >
+              contact@uv.agency
+            </a>
           </div>
         </div>
 
