@@ -41,7 +41,7 @@ const ProjectImageCarousel: React.FC<ProjectImageCarouselProps> = ({
               <OptimizedImage
                 src={image}
                 alt={`${projectName} - Slide ${index}`}
-                aspectRatio={21/9}
+                aspectRatio={1}
                 priority={index < 3} // Load first 3 images eagerly
                 className="object-contain bg-portfolio-bg"
               />
