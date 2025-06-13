@@ -40,7 +40,7 @@ const ProjectImageGrid: React.FC<ProjectImageGridProps> = ({
           key={`img-${index}`}
           src={image.src}
           alt={image.alt}
-          aspectRatio={16/9}
+          aspectRatio={1/1}
           badge={image.badge}
           overlay={image.overlay}
         />
