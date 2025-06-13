@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-portfolio-bg">
+    <div className="min-h-[100dvh] bg-portfolio-bg">
       <div className="main-content">
         <Hero />
         <BrandCarousel />

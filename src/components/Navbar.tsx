@@ -56,8 +56,8 @@ const Navbar = () => {
       {/* Info Section */}
       <div 
         className="w-full bg-[#283618] transition-all duration-500 ease-in-out hideScrollbar"
-        style={{ 
-          height: isInfoOpen ? '100vh' : '0',
+        style={{
+          height: isInfoOpen ? '100dvh' : '0',
           opacity: isInfoOpen ? 1 : 0,
           overflowY: isInfoOpen ? 'scroll' : 'hidden'
         }}
@@ -72,8 +72,8 @@ const Navbar = () => {
       {/* Contact Section */}
       <div 
         className={`fixed bottom-0 left-0 w-full bg-portfolio-about-bg overflow-hidden z-${NAVBAR_CONSTANTS.Z_INDEX.CONTACT_SECTION} transition-all ${isContactOpen ? 'duration-500' : 'duration-300'}`}
-        style={{ 
-          height: isContactOpen ? '80vh' : '0',
+        style={{
+          height: isContactOpen ? '80dvh' : '0',
           transform: `translateY(${isContactOpen ? '0' : '100%'})`,
           opacity: 1
         }}

@@ -114,14 +114,14 @@
     opacity: 0;
   }
   to {
-    max-height: calc(100vh - 77px);
+    max-height: calc(100dvh - 77px);
     opacity: 1;
   }
 }
 
 @keyframes slideUpOut {
   from {
-    max-height: calc(100vh - 77px);
+    max-height: calc(100dvh - 77px);
     opacity: 1;
   }
   to {

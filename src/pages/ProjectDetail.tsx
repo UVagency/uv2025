@@ -73,7 +73,7 @@ const ProjectDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-portfolio-bg">
+    <div className="min-h-[100dvh] bg-portfolio-bg">
       <SEO 
         title={`${project.name} | UV Agency`}
         description={project.description}
@@ -85,10 +85,10 @@ const ProjectDetail = () => {
         }}
       />
       <div className="fixed inset-0 z-50 bg-portfolio-bg overflow-y-auto">
-        <div className="w-full mx-auto pt-8 pb-16">
+        <div className="w-full mx-auto pt-8 pb-16 md:pt-12 md:pb-24 px-4 sm:px-8">
           <ProjectHeader project={project} />
 
-          <div className="max-w-[90%] mx-auto">
+          <div className="max-w-[95%] md:max-w-[90%] lg:max-w-5xl mx-auto">
             {/* Video Section */}
             {project.videoUrl && (
               <Suspense fallback={<SectionLoading />}>

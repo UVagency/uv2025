@@ -72,13 +72,13 @@ nav {
 /* Body styles when About is open */
 body.about-open {
   overflow: hidden !important;
-  height: 100vh;
+  height: 100dvh;
 }
 
 /* Body styles when Contact is open */
 body.contact-open {
   overflow: hidden !important;
-  height: 100vh;
+  height: 100dvh;
 }
 
 /* Prevent content shift when scrollbar disappears */

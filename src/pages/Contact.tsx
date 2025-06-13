@@ -3,7 +3,7 @@ import { SEO } from '../components/SEO';
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-portfolio-bg">
+    <div className="min-h-[100dvh] bg-portfolio-bg">
       <SEO 
         title="Contact UV Agency | Get in Touch"
         description="Get in touch with UV Agency for your next media experience project. We're here to help bring your creative vision to life."

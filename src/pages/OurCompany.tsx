@@ -82,7 +82,7 @@ const OurCompany = () => {
   
 
   return (
-    <div className="min-h-screen bg-portfolio-bg">
+    <div className="min-h-[100dvh] bg-portfolio-bg">
       <SEO 
         title="Our Company | UV Agency"
         description="Learn about UV Agency's mission, values, and the team behind our innovative media experiences. Discover how we're shaping the future of creative events."

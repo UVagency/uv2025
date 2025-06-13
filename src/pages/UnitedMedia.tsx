@@ -54,7 +54,7 @@ const UnitedMedia = () => {
   ];
   
   return (
-    <div className="min-h-screen bg-portfolio-bg">
+    <div className="min-h-[100dvh] bg-portfolio-bg">
       <SEO 
         title="United Media @ UV Agency"
         description="Learn about UV Agency's United Media service, designed to connect brands with people in a phygital world."
