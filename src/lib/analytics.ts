@@ -18,7 +18,10 @@ export const GA_EVENTS = {
   EMAIL_CLICK: 'email_click',
   CONTACT_FORM_SUBMIT: 'contact_form_submit',
   VIDEO_PLAY: 'video_play',
-  VIDEO_COMPLETE: 'video_complete'
+  VIDEO_COMPLETE: 'video_complete',
+  // Test events
+  TEST_EVENT: 'test_event',
+  TEST_CLICK: 'test_click'
 } as const;
 
 // Event parameters
