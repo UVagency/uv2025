@@ -14,6 +14,10 @@ interface OptimizedImageProps {
     position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center';
   };
   overlay?: React.ReactNode;
+  sizes?: string;
+  quality?: number;
+  format?: 'webp' | 'avif' | 'jpeg' | 'png';
+  responsive?: boolean;
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -25,7 +29,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   priority = false,
   aspectRatio,
   badge,
-  overlay
+  overlay,
+  sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
+  quality = 80,
+  format = 'webp',
+  responsive = true
 }) => {
   // Handle both absolute URLs and relative paths
   const isExternalUrl = src.startsWith('http');
@@ -41,9 +49,31 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     }
   };
 
+  const getOptimizedUrl = (url: string, width?: number) => {
+    if (!isExternalUrl) return url;
+    
+    const params = new URLSearchParams();
+    if (width) params.append('w', width.toString());
+    params.append('format', format);
+    params.append('quality', quality.toString());
+    
+    return `${url}?${params.toString()}`;
+  };
+
+  const generateSrcSet = (url: string) => {
+    if (!responsive) return undefined;
+    
+    const widths = [480, 800, 1200, 1600];
+    return widths
+      .map(width => `${getOptimizedUrl(url, width)} ${width}w`)
+      .join(', ');
+  };
+
   const imageContent = (
     <img
-      src={imagePath}
+      src={getOptimizedUrl(imagePath, width)}
+      srcSet={generateSrcSet(imagePath)}
+      sizes={sizes}
       alt={alt}
       width={width}
       height={height}
