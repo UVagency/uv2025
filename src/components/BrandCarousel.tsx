@@ -1,5 +1,4 @@
 import React from "react";
-import OptimizedImage from "@/components/ui/optimized-image";
 
 interface Brand {
   name: string;
@@ -38,11 +37,10 @@ const BrandCarousel = () => {
           <div className="logos-slide">
             {extendedBrands.map((brand, index) => (
               <div key={index} className="logo-container">
-                <OptimizedImage
+                <img
                   src={brand.logoUrl}
                   alt={`${brand.name} logo`}
                   className={`logo-image${brand.name === "Me-Elecmetal" ? " logo-melecmetal" : ""}${brand.name === "Philips" ? " logo-philips" : ""}`}
-                  wrapperClassName=""
                 />
               </div>
             ))}
