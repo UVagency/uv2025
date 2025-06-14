@@ -7,6 +7,7 @@ interface OptimizedImageProps {
   width?: number;
   height?: number;
   className?: string;
+  wrapperClassName?: string;
   priority?: boolean;
   aspectRatio?: number;
   badge?: {
@@ -26,6 +27,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   width,
   height,
   className = "",
+  wrapperClassName = "overflow-hidden rounded-md",
   priority = false,
   aspectRatio,
   badge,
@@ -35,9 +37,23 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   format = 'webp',
   responsive = true
 }) => {
-  // Handle both absolute URLs and relative paths
-  const isExternalUrl = src.startsWith('http');
-  const imagePath = isExternalUrl ? src : src.startsWith('/') ? src : `/${src}`;
+  const cdn = import.meta.env.VITE_IMG_CDN ?? '';
+  const isExternalUrl = /^https?:\/\//.test(src);
+  let imagePath = src;
+
+  if (!isExternalUrl) {
+    const normalized = src.startsWith('/') ? src : `/${src}`;
+    imagePath = `${cdn}${normalized}`;
+
+    if (width || height) {
+      const url = new URL(imagePath);
+      if (width) url.searchParams.set('w', String(width));
+      if (height) url.searchParams.set('h', String(height));
+      url.searchParams.set('fit', 'cover');
+      url.searchParams.set('format', 'auto');
+      imagePath = url.toString();
+    }
+  }
 
   const getBadgePosition = (position?: string) => {
     switch(position) {
@@ -84,7 +100,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   if (aspectRatio) {
     return (
-      <div className="overflow-hidden rounded-md">
+      <div className={wrapperClassName}>
         <AspectRatio ratio={aspectRatio}>
           {imageContent}
           {badge && (
@@ -99,7 +115,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   }
 
   return (
-    <div className="overflow-hidden rounded-md">
+    <div className={wrapperClassName}>
       {imageContent}
       {badge && (
         <div className={`absolute ${getBadgePosition(badge.position)} bg-portfolio-highlight text-portfolio-text px-2 py-1 text-xs`}>
