@@ -26,7 +26,7 @@ const Footer = () => {
               onClick={handleEmailClick}
               className="uppercase email-link"
             >
-              contact@uv.agency
+              hello@uv.agency
             </a>
           </div>
         </div>
