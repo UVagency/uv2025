@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`w-full px-0 sm:px-4 py-2 font-sans bg-portfolio-bg sticky top-0 overflow-x-hidden z-${NAVBAR_CONSTANTS.Z_INDEX.NAVBAR}`}>
+      <nav className={`w-full px-0 sm:px-4 py-2 bg-portfolio-bg sticky top-0 overflow-x-hidden z-${NAVBAR_CONSTANTS.Z_INDEX.NAVBAR}`}>
         <div className="w-full sm:max-w-[90%] mx-auto flex justify-between items-center px-4 sm:px-0">
           <div className="w-full flex items-center justify-between gap-2 sm:gap-4 md:gap-8">
             <div className="relative flex items-center w-full">

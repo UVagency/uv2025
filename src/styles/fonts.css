@@ -1,3 +1,4 @@
+/* Define Open Sans as the only font */
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
@@ -11,4 +12,13 @@
   font-weight: 700;
   src: url('./fonts/open-sans-v43-latin-700.woff2') format('woff2');
   font-display: swap;
+}
+
+/* Force Open Sans as the only font */
+:root {
+  font-family: 'Open Sans' !important;
+}
+
+* {
+  font-family: inherit !important;
 } 

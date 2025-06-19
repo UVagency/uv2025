@@ -81,29 +81,14 @@
     --ring: 222.2 84% 4.9%;
   }
 
-  body {
-    font-family: 'Open Sans', Arial, sans-serif;
+  /* Ensure font is applied to all elements */
+  :root,
+  *,
+  *::before,
+  *::after {
+    font-family: 'Open Sans' !important;
   }
-  
-  .font-hero {
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-weight: 700;
-  }
-  .font-headline {
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-weight: 700;
-  }
-  .font-subtitle {
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-weight: 700;
-  }
-  .font-body {
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-weight: 400;
-  }
-}
 
-@layer base {
   * {
     @apply border-border;
     cursor: none !important;
@@ -111,8 +96,25 @@
 
   body {
     @apply bg-portfolio-bg text-portfolio-text;
-    cursor: none !important;
     overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .font-hero {
+    @apply font-bold;
+  }
+  
+  .font-headline {
+    @apply font-bold;
+  }
+  
+  .font-subtitle {
+    @apply font-bold;
+  }
+  
+  .font-body {
+    @apply font-normal;
   }
 }
 

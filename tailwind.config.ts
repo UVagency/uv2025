@@ -10,6 +10,9 @@ export default {
 	],
 	prefix: "",
 	theme: {
+		fontFamily: {
+			sans: ['Open Sans'],
+		},
 		container: {
 			center: true,
 			padding: '2rem',
@@ -18,12 +21,6 @@ export default {
 			}
 		},
 		extend: {
-			fontFamily: {
-				'hero': ['Open Sans', 'Arial', 'sans-serif'],
-				'headline': ['Open Sans', 'Arial', 'sans-serif'],
-				'subtitle': ['Open Sans', 'Arial', 'sans-serif'],
-				'body': ['Open Sans', 'Arial', 'sans-serif'],
-			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
