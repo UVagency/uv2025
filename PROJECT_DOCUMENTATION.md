@@ -134,6 +134,8 @@ src/
 │   ├── base.css
 │   ├── carousel.css
 │   ├── components.css
+│   ├── fonts/                  # Tipografías en formato WOFF2
+│   ├── fonts.css               # Carga y forzado de la fuente global
 │   └── index.css               # Estilos principales, importa otros CSS
 |
 └── types/                      # Definiciones de tipos TypeScript
@@ -253,6 +255,19 @@ El proyecto ha pasado por varias mejoras significativas:
    - Eliminación del atributo obsoleto `allowFullScreen` en iframes
    - Uso exclusivo de `allow="fullscreen"` y otros permisos modernos
    - Reducción de advertencias en consola y mejora de compatibilidad con navegadores actuales
+
+8. **Tipografía unificada y auto hospedada**:
+   - Inclusión de `Open Sans` en formato WOFF2 dentro del repositorio
+   - Se fuerza su uso global mediante `fonts.css` y `base.css`
+   - Eliminación de dependencias externas para fuentes
+
+9. **Actualización de contacto en el Footer**:
+   - Nuevo correo principal `hello@uv.agency`
+   - Evento de analytics para clics en el enlace de correo
+
+10. **Optimización de imágenes**:
+   - Sustitución de archivos JPEG por versiones comprimidas
+   - Reducción significativa del peso en las galerías de proyectos
 
 ## 🚀 Próximos Pasos
 
