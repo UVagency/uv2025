@@ -130,8 +130,7 @@ src/
 │   └── OurCompany.tsx          # Página sobre la empresa
 │
 ├── styles/                     # Archivos CSS globales y específicos
-│   ├── animations.css
-│   ├── base.css
+│   ├── base.css                # Estilos base y cursor personalizado
 │   ├── carousel.css
 │   ├── components.css
 │   ├── fonts/                  # Tipografías en formato WOFF2
@@ -191,7 +190,7 @@ Define interfaces y tipos de TypeScript para asegurar la consistencia y prevenir
 ## 🎨 Estilos y Animaciones
 
 ### `src/styles/`
-Contiene los archivos CSS. `index.css` actúa como el archivo principal que importa otros, como `base.css` (estilos base/reset), `components.css` (estilos para componentes específicos), y `animations.css`.
+Contiene los archivos CSS. `index.css` importa `fonts.css`, `base.css` y `components.css`. Las animaciones base (como el fade-in) se definen ahora en `tailwind.config.ts`.
 
 ### `src/animations/`
 - `heroAnimations.ts`: Define la lógica para animaciones complejas, específicamente para la sección Hero.
@@ -268,6 +267,12 @@ El proyecto ha pasado por varias mejoras significativas:
 10. **Optimización de imágenes**:
    - Sustitución de archivos JPEG por versiones comprimidas
    - Reducción significativa del peso en las galerías de proyectos
+11. **Simplificación de estilos y Tailwind**:
+   - Consolidación del cursor personalizado en `base.css` y eliminación de duplicados en `App.css`.
+   - `animations.css` se eliminó; la animación `fade-in` ahora se define en `tailwind.config.ts`.
+   - Ajuste de `content` en `tailwind.config.ts` a `index.html` y `src/**/*`.
+   - `components.json` apunta a `src/styles/index.css`.
+   - Nuevos parámetros `PROJECT_CATEGORY` y `PROJECT_CLIENT` en `analytics.ts`.
 
 ## 🚀 Próximos Pasos
 
