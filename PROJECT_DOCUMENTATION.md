@@ -192,6 +192,21 @@ Define interfaces y tipos de TypeScript para asegurar la consistencia y prevenir
 ### `src/styles/`
 Contiene los archivos CSS. `index.css` importa `fonts.css`, `base.css` y `components.css`. Las animaciones base (como el fade-in) se definen ahora en `tailwind.config.ts`.
 
+#### Tipografía
+El proyecto utiliza **Open Sans** como única fuente tipográfica. Los archivos WOFF2 se encuentran en `src/styles/fonts/` y se cargan mediante `fonts.css`, que además fuerza su uso global.
+
+#### Paleta de Colores
+Los colores principales se definen en `tailwind.config.ts` bajo la clave `portfolio` y en variables CSS dentro de `base.css`:
+
+- `bg` (`#F5F6E8`): fondo cálido y suave.
+- `text` (`#3D4A28`): verde oliva profundo utilizado para textos.
+- `tag-bg` (`#3D4A28`) y `tag-text` (`#ffffff`): estilos de las etiquetas de año.
+- `divider` (`#84806E`): gris oliva para divisores.
+- `highlight` (`#EACB5D`): amarillo suave para resaltar información.
+- `accent` (`#6BD8D7`): turquesa característico de UV.
+- `text-secondary` (`#84806E`): tono secundario para textos menos destacados.
+- `muted-purple` (`#A493A4`) y `soft-pink` (`#EBA3A9`): colores de acento adicionales usados en la sección Hero.
+
 ### `src/animations/`
 - `heroAnimations.ts`: Define la lógica para animaciones complejas, específicamente para la sección Hero.
 
