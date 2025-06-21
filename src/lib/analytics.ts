@@ -33,6 +33,8 @@ export const GA_PARAMS = {
   // Project parameters
   PROJECT_ID: 'project_id',
   PROJECT_NAME: 'project_name',
+  PROJECT_CATEGORY: 'project_category',
+  PROJECT_CLIENT: 'project_client',
   
   // Video parameters
   VIDEO_ID: 'video_id',
