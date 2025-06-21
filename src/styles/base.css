@@ -81,13 +81,6 @@
     --ring: 222.2 84% 4.9%;
   }
 
-  /* Ensure font is applied to all elements */
-  :root,
-  *,
-  *::before,
-  *::after {
-    font-family: 'Open Sans' !important;
-  }
 
   * {
     @apply border-border;
