@@ -60,42 +60,6 @@ const InfoSection = () => {
           </div>
         </div>
       </div>
-
-      {/* Careers Section */}
-      <div className="w-full mt-16 text-center md:text-left md:pl-48">
-        <h2 className="text-xl uppercase font-bold text-[#f9f8e2] mb-8">Careers<span> 🚀</span></h2>
-        <p className="text-lg text-[#f9f8e2] mb-8 italic">Your next adventure starts here.</p>
-        <div className="text-[#f9f8e2] space-y-6">
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Strategic Sales Executive</p>
-            <p className="text-sm opacity-80 inline">Drive growth through strategic partnerships and sales initiatives</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Senior Strategy Director</p>
-            <p className="text-sm opacity-80 inline">Lead strategic initiatives and shape the future of our agency</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Media Planner</p>
-            <p className="text-sm opacity-80 inline">Develop and execute strategic media plans across multiple channels</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Senior Producer</p>
-            <p className="text-sm opacity-80 inline">Oversee production of high-impact creative campaigns and content</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">AI Technical Director</p>
-            <p className="text-sm opacity-80 inline">Lead the integration of AI technologies into creative solutions</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">Data Scientist</p>
-            <p className="text-sm opacity-80 inline">Transform data into actionable insights for campaign optimization</p>
-          </div>
-          <div>
-            <p className="text-lg font-semibold inline-block mr-2">AI Creative Tech</p>
-            <p className="text-sm opacity-80 inline">Pioneer innovative AI-driven creative solutions and experiences</p>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
