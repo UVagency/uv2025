@@ -33,7 +33,7 @@ const Navbar = () => {
                   onClick={toggleInfo}
                   className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-base sm:text-lg md:text-xl ${isInfoOpen ? 'text-portfolio-highlight underline underline-offset-4 sm:underline-offset-8' : ''}`}
                 >
-                  ABOUT
+                  INFO
                 </button>
                 <Link 
                   to="/our-company"
