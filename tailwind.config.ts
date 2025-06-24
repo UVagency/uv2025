@@ -64,21 +64,20 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				'portfolio': {
-					'bg': '#F5F6E8',           // Mantiene el fondo original
-					'text': '#2C3E3D',         // Más oscuro para mejor contraste con el accent
-					'tag-bg': '#6BD8D7',       // Accent color para tags
-					'tag-text': '#ffffff',     // White text para contraste en tags
-					'divider': '#AACFCF',      // Turquesa grisáceo suave
-					'highlight': '#B1EBEA',    // Highlight más relacionado con la marca
+					'bg': '#F5F6E8',           // Fondo cálido y suave
+					'text': '#2C3E3D',         // Texto principal, más oscuro para mejor contraste
+					'tag-bg': '#6BD8D7',       // Etiquetas con fondo accent
+					'tag-text': '#ffffff',     // Texto blanco para contraste
+					'divider': '#A5D4D3',      // Turquesa más suave para líneas/divisiones
+					'highlight': '#6BD8D7',    // Igual al accent, elimina el amarillo
 					'white-tag-bg': '#ffffff', // White
 					'white-tag-text': '#2C3E3D', // Texto principal
 					'about-bg': '#2C3E3D',     // Fondo oscuro para secciones destacadas
 					'footer-text': '#F5F6E8',  // Mismo que bg
-					'footer-muted': '#AACFCF', // Divider color para footer
-					'accent': '#6BD8D7',       // UV turquoise (sin cambios)
-					'text-secondary': '#587574', // Neutro relacionado al accent
-					'muted-purple': '#C0B7C1', // Desaturado
-					'soft-pink': '#EACB5D',    // Opcional, solo si convive bien
+					'footer-muted': '#A5D4D3', // Divider color para footer
+					'accent': '#6BD8D7',       // Color principal y único color de destaque
+					'text-secondary': '#587574', // Gris verdoso para textos secundarios
+					'muted-purple': '#93D8D7', // Muy tenue, reemplazo
 				}
 			},
 			borderRadius: {
