@@ -82,6 +82,16 @@ const OurCompany = () => {
     { name: "Agustin Herrero", title: "COO", url: "https://www.linkedin.com/in/agustinherrero/", photo: "/images/team/agustinherrero.jpeg" },
     { name: "Javier Severini", title: "CEO", url: "https://www.linkedin.com/in/javierseverini/", photo: "/images/team/javierseverini.jpeg" },
   ];
+
+  const careers = [
+    { title: "Strategic Sales Executive", description: "Drive growth through strategic partnerships and sales initiatives" },
+    { title: "Senior Strategy Director", description: "Lead strategic initiatives and shape the future of our agency" },
+    { title: "Media Planner", description: "Develop and execute strategic media plans across multiple channels" },
+    { title: "Senior Producer", description: "Oversee production of high-impact creative campaigns and content" },
+    { title: "AI Technical Director", description: "Lead the integration of AI technologies into creative solutions" },
+    { title: "Data Scientist", description: "Transform data into actionable insights for campaign optimization" },
+    { title: "AI Creative Tech", description: "Pioneer innovative AI-driven creative solutions and experiences" },
+  ];
   
 
   return (
@@ -204,6 +214,20 @@ const OurCompany = () => {
                   <p className="font-semibold inline-block mr-2">Social Strategy & Content</p>
                   <p className="inline">Planning and producing content that connects</p>
                 </div>
+              </div>
+            </div>
+
+            {/* Careers Section */}
+            <div className="mb-6 sm:mb-12">
+              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-3 sm:mb-4">Careers <span role="img" aria-label="rocket">🚀</span></h2>
+              <p className="text-lg sm:text-2xl text-portfolio-text/80 font-light mb-4 sm:mb-8">Your next adventure starts here.</p>
+              <div className="text-lg sm:text-2xl text-portfolio-text/80 font-light space-y-3 sm:space-y-6">
+                {careers.map((career, index) => (
+                  <div key={index}>
+                    <p className="font-semibold inline-block mr-2">{career.title}</p>
+                    <p className="inline">{career.description}</p>
+                  </div>
+                ))}
               </div>
             </div>
 
