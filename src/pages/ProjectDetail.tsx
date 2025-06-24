@@ -128,7 +128,7 @@ const ProjectDetail = () => {
                     if (line.trim().startsWith('-')) {
                       const result = line.replace(/^-\s*/, '');
                       return (
-                        <div key={index} className="bg-portfolio-bg border border-portfolio-accent/20 rounded-lg p-4 hover:border-portfolio-accent/40 transition-colors">
+                        <div key={index} className="border-2 border-portfolio-accent rounded-lg p-4 hover:border-portfolio-accent/80 transition-colors bg-portfolio-bg shadow-sm">
                           <p className="text-lg sm:text-xl text-portfolio-text/90 font-light">{result}</p>
                         </div>
                       );

@@ -56,7 +56,7 @@ const Navbar = () => {
 
       {/* Info Section */}
       <div 
-        className="w-full bg-[#283618] transition-all duration-500 ease-in-out hideScrollbar"
+        className="w-full bg-portfolio-about-bg transition-all duration-500 ease-in-out hideScrollbar"
         style={{ 
           height: isInfoOpen ? '100vh' : '0',
           opacity: isInfoOpen ? 1 : 0,

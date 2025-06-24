@@ -1,6 +1,6 @@
 @layer components {
   .project-year-tag {
-    @apply bg-portfolio-tag-bg text-white px-4 py-1 rounded-full inline-block;
+    @apply bg-portfolio-tag-bg text-portfolio-tag-text px-4 py-1 rounded-full inline-block;
   }
   
   .project-year-tag-highlight {

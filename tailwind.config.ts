@@ -64,21 +64,21 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				'portfolio': {
-					'bg': '#F5F6E8',           // Soft warm cream (updated)
-					'text': '#3D4A28',         // Deep olive green (updated)
-					'tag-bg': '#3D4A28',       // Deep olive green for tags (updated)
-					'tag-text': '#ffffff',     // White text for tags
-					'divider': '#84806E',      // Grayish olive (updated)
-					'highlight': '#EACB5D',    // Soft muted yellow (updated)
+					'bg': '#F5F6E8',           // Mantiene el fondo original
+					'text': '#2C3E3D',         // Más oscuro para mejor contraste con el accent
+					'tag-bg': '#6BD8D7',       // Accent color para tags
+					'tag-text': '#ffffff',     // White text para contraste en tags
+					'divider': '#AACFCF',      // Turquesa grisáceo suave
+					'highlight': '#B1EBEA',    // Highlight más relacionado con la marca
 					'white-tag-bg': '#ffffff', // White
-					'white-tag-text': '#3D4A28', // Deep olive green (updated)
-					'about-bg': '#3D4A28',     // Deep olive green (same as text, updated)
-					'footer-text': '#F5F6E8',  // Same as bg (updated)
-					'footer-muted': '#84806E', // Grayish olive (updated)
-					'accent': '#6BD8D7',       // UV turquoise (same)
-					'text-secondary': '#84806E', // Grayish olive for secondary text (updated)
-					'muted-purple': '#A493A4', // Soft lavender gray (new)
-					'soft-pink': '#EBA3A9',    // Warm dusty pink (new)
+					'white-tag-text': '#2C3E3D', // Texto principal
+					'about-bg': '#2C3E3D',     // Fondo oscuro para secciones destacadas
+					'footer-text': '#F5F6E8',  // Mismo que bg
+					'footer-muted': '#AACFCF', // Divider color para footer
+					'accent': '#6BD8D7',       // UV turquoise (sin cambios)
+					'text-secondary': '#587574', // Neutro relacionado al accent
+					'muted-purple': '#C0B7C1', // Desaturado
+					'soft-pink': '#EACB5D',    // Opcional, solo si convive bien
 				}
 			},
 			borderRadius: {
