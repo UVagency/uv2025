@@ -221,7 +221,7 @@ const OurCompany = () => {
             <div className="mb-6 sm:mb-12">
               <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-3 sm:mb-4">Careers <span role="img" aria-label="rocket">🚀</span></h2>
               <p className="text-lg sm:text-2xl text-portfolio-text/80 font-light mb-4 sm:mb-8">Your next adventure starts here.</p>
-              <div className="text-lg sm:text-2xl text-portfolio-text/80 font-light space-y-3 sm:space-y-6">
+              <div className="text-lg sm:text-xl text-portfolio-text/80 font-light space-y-3 sm:space-y-6">
                 {careers.map((career, index) => (
                   <div key={index}>
                     <p className="font-semibold inline-block mr-2">{career.title}</p>
