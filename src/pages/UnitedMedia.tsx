@@ -44,7 +44,7 @@ const UnitedMedia = () => {
     history: "Since 2011, we have collaborated with leaders and teams of major global brands to help them achieve their goals and growth challenges by understanding their clients' behavior and connecting them with them.",
     videoRecapUrl: "https://vimeo.com/1079829750&title=0&byline=0&portrait=0", // Placeholder video
     categories: ["Off-line", "Digital", "Outdoor", "In-Store", "Radio", "TV"],
-    client: "United Media Services",
+    client: "United Media Services. One Agency, All In.",
   };
 
   const values = [
