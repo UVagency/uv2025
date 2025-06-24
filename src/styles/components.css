@@ -29,6 +29,10 @@
     @apply relative flex flex-col justify-center;
     min-height: 108px;
   }
+  
+  .smart-media-text {
+    @apply text-portfolio-smart-media italic hover:underline;
+  }
 }
 
 /* Brand Carousel Custom Styles */

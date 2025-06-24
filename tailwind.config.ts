@@ -78,6 +78,7 @@ export default {
 					'accent': '#6BD8D7',       // Color principal y único color de destaque
 					'text-secondary': '#587574', // Gris verdoso para textos secundarios
 					'muted-purple': '#93D8D7', // Muy tenue, reemplazo
+					'smart-media': '#EACB5D',  // Color específico para Smart Media
 				}
 			},
 			borderRadius: {

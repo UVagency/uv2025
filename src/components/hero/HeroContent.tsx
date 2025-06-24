@@ -75,7 +75,7 @@ export const HeroContent = () => {
               <span className="font-normal italic">results through</span>
             </span>{" "}
             <span>
-              <Link to="/united-media" className="text-portfolio-highlight italic hover:underline">Smart Media.</Link>
+              <Link to="/united-media" className="smart-media-text">Smart Media.</Link>
             </span>
             <div className="mt-2">
               <button 
