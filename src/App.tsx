@@ -24,7 +24,7 @@ const queryClient = new QueryClient();
 
 // Loading component
 const LoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center bg-background">
+  <div className="min-h-screen flex items-center justify-center bg-portfolio-bg">
     <div className="text-center">
       <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
       <p className="text-lg text-muted-foreground">Loading...</p>
@@ -36,7 +36,7 @@ const LoadingFallback = () => (
 const RouteErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <ErrorBoundary
     fallback={
-      <div className="min-h-screen flex items-center justify-center bg-background p-4">
+      <div className="min-h-screen flex items-center justify-center bg-portfolio-bg p-4">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Page Error</h1>
           <p className="text-xl text-muted-foreground mb-4">
