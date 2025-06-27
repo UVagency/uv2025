@@ -32,7 +32,7 @@ const ProjectVideoPlayer: React.FC<ProjectVideoPlayerProps> = ({ project }) => {
     <div className="mb-16 overflow-hidden rounded-lg bg-black">
       <AspectRatio ratio={16/9}>
         <iframe
-          src={`https://player.vimeo.com/video/${vimeoId}?color=${color}&title=0&byline=0&portrait=0`}
+          src={`https://player.vimeo.com/video/${vimeoId}?color=${color}&title=0&byline=0&portrait=0&autoplay=1`}
           width="100%"
           height="100%"
           frameBorder="0"
