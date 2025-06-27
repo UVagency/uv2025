@@ -19,6 +19,12 @@ interface VimeoPlayerProps {
   muted?: boolean;
   /** Custom color for the player controls (hex without #) */
   color?: string;
+  /** Whether to hide social interaction buttons (like, watch later, share) */
+  hideInteractionButtons?: boolean;
+  /** Whether to allow picture-in-picture */
+  allowPictureInPicture?: boolean;
+  /** Whether to enable Do Not Track */
+  doNotTrack?: boolean;
   /** Custom aspect ratio */
   aspectRatio?: number;
   /** Additional CSS classes for the container */
@@ -39,13 +45,16 @@ const getVimeoId = (url: string): string | null => {
 
 const VimeoPlayer: React.FC<VimeoPlayerProps> = ({
   videoUrl,
-  title = "Vimeo video player",
-  showTitle = false,
+  title = "UV video player",
+  showTitle = true,
   showByline = false,
   showPortrait = false,
   autoplay = true,
   muted = false,
   color = "6BD8D7", // Default portfolio accent color
+  hideInteractionButtons = true,
+  allowPictureInPicture = true,
+  doNotTrack = false,
   aspectRatio = 16/9,
   className = "mb-16 overflow-hidden rounded-lg bg-black",
   enableAnalytics = true,
@@ -109,6 +118,22 @@ const VimeoPlayer: React.FC<VimeoPlayerProps> = ({
   
   if (muted) {
     embedUrl.searchParams.set('muted', '1');
+  }
+  
+  // Hide social interaction buttons (like, watch later, share)
+  if (hideInteractionButtons) {
+    embedUrl.searchParams.set('badge', '0');
+    embedUrl.searchParams.set('cards', '0');
+  }
+  
+  // Picture-in-picture control
+  if (!allowPictureInPicture) {
+    embedUrl.searchParams.set('pip', '0');
+  }
+  
+  // Do not track
+  if (doNotTrack) {
+    embedUrl.searchParams.set('dnt', '1');
   }
 
   return (
