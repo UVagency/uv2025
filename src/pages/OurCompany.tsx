@@ -180,9 +180,9 @@ const OurCompany = () => {
             </Suspense>
 
             {/* Services Section */}
-            <div className="mb-6 sm:mb-12">
-              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-4 sm:mb-8">Our Services <span role="img" aria-label="handshake">🤝</span></h2>
-              <div className="text-lg sm:text-2xl text-portfolio-text/80 font-light space-y-3 sm:space-y-6">
+            <div className="mb-12">
+              <h2 className="text-4xl font-bold text-portfolio-text mb-8">Our Services <span role="img" aria-label="handshake">🤝</span></h2>
+              <div className="text-2xl text-portfolio-text/80 font-light space-y-6">
                 <div>
                   <p className="font-semibold inline-block mr-2">Brand Building</p>
                   <p className="inline">Developing and positioning brands with clarity and impact</p>
