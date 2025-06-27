@@ -13,7 +13,7 @@ interface VimeoPlayerProps {
   showByline?: boolean;
   /** Whether to show the user portrait in the player */
   showPortrait?: boolean;
-  /** Whether to autoplay the video */
+  /** Whether to autoplay the video (default: true) */
   autoplay?: boolean;
   /** Whether to mute the video (recommended for autoplay) */
   muted?: boolean;
@@ -23,7 +23,7 @@ interface VimeoPlayerProps {
   aspectRatio?: number;
   /** Additional CSS classes for the container */
   className?: string;
-  /** Whether to enable analytics tracking */
+  /** Whether to enable analytics tracking (default: true) */
   enableAnalytics?: boolean;
   /** Custom analytics data */
   analyticsData?: {
@@ -43,12 +43,12 @@ const VimeoPlayer: React.FC<VimeoPlayerProps> = ({
   showTitle = false,
   showByline = false,
   showPortrait = false,
-  autoplay = false,
+  autoplay = true,
   muted = false,
   color = "6BD8D7", // Default portfolio accent color
   aspectRatio = 16/9,
   className = "mb-16 overflow-hidden rounded-lg bg-black",
-  enableAnalytics = false,
+  enableAnalytics = true,
   analyticsData,
 }) => {
   const iframeRef = useRef<HTMLIFrameElement>(null);
