@@ -17,6 +17,8 @@ interface VimeoPlayerProps {
   autoplay?: boolean;
   /** Whether to mute the video (recommended for autoplay) */
   muted?: boolean;
+  /** Whether to loop the video instead of showing end screen */
+  loop?: boolean;
   /** Custom color for the player controls (hex without #) */
   color?: string;
   /** Whether to hide social interaction buttons (like, watch later, share) */
@@ -51,6 +53,7 @@ const VimeoPlayer: React.FC<VimeoPlayerProps> = ({
   showPortrait = false,
   autoplay = true,
   muted = false,
+  loop = true,
   color = "6BD8D7", // Default portfolio accent color
   hideInteractionButtons = true,
   allowPictureInPicture = true,
@@ -118,6 +121,12 @@ const VimeoPlayer: React.FC<VimeoPlayerProps> = ({
   
   if (muted) {
     embedUrl.searchParams.set('muted', '1');
+  }
+  
+  // Loop video instead of showing end screen
+  if (loop) {
+    embedUrl.searchParams.set('loop', '1');
+    embedUrl.searchParams.set('autopause', '0');
   }
   
   // Hide social interaction buttons (like, watch later, share)
