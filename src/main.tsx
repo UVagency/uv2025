@@ -24,6 +24,27 @@ if (typeof window !== 'undefined') {
   });
 }
 
+// Suppress development tool errors in production
+if (import.meta.env.PROD) {
+  const originalError = console.error;
+  console.error = (...args) => {
+    const message = args[0]?.toString() || '';
+    
+    // Filter out browser extension and development tool errors
+    if (
+      message.includes('WebSocket connection to') ||
+      message.includes('inject.bundle.js') ||
+      message.includes('localhost:8098') ||
+      message.includes('message port closed before a response was received')
+    ) {
+      return; // Suppress these errors
+    }
+    
+    // Log all other errors normally
+    originalError.apply(console, args);
+  };
+}
+
 root.render(
   <React.StrictMode>
     <App />

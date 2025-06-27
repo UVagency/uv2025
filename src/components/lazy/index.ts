@@ -6,6 +6,9 @@ export const ProjectVideoPlayer = lazy(() => import('../project/ProjectVideoPlay
 export const ProjectImageCarousel = lazy(() => import('../project/gallery/ProjectImageCarousel'));
 export const ProjectImageGrid = lazy(() => import('../project/gallery/ProjectImageGrid'));
 
+// Video Components
+export const VimeoPlayer = lazy(() => import('../ui/VimeoPlayer'));
+
 // Our Company Components
 export const CompanyVideo = lazy(() => import('../company/CompanyVideo'));
 export const CompanyValues = lazy(() => import('../company/CompanyValues'));
