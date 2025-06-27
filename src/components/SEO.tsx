@@ -29,7 +29,7 @@ const defaultDescription = {
   es: 'United Visions 2025 UV Agencia Experiencias Mediáticas y Eventos'
 };
 
-const defaultImage = '/images/uv_logo.png';
+  const defaultImage = '/images/uv_logo.webp';
 const defaultUrl = 'https://uv.agency';
 const defaultKeywords = {
   en: [

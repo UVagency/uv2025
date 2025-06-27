@@ -10,31 +10,31 @@
   "marketingResults": "Our main objective was to strengthen the bond between the Chancaca Deliciosa brand and people, generating impact and recall through a campaign with local taste.\n- +80% Coverage of target audience\n- +3MM Reach with UGC\n- 115 Traditional media mentions\n- 70K USD in earned media value\n- +5,000,000 Digital reach\n- +78% Digital coverage\n- +1,000 Attendees at event",
   "videoUrl": "https://vimeo.com/1079782182",
   "images": [
-    "/projects/sabor-de-barrio/sabor-de-barrio-01.jpg",
-    "/projects/sabor-de-barrio/sabor-de-barrio-02.jpg",
-    "/projects/sabor-de-barrio/sabor-de-barrio-03.jpg"
+    "/projects/sabor-de-barrio/sabor-de-barrio-01.webp",
+    "/projects/sabor-de-barrio/sabor-de-barrio-02.webp",
+    "/projects/sabor-de-barrio/sabor-de-barrio-03.webp"
   ],
   "gallery": {
     "featureText": "Our main objective was to strengthen the bond between the Chancaca Deliciosa brand and people, generating impact and recall through a campaign with local taste.",
     "sections": [
       {
         "type": "banner",
-        "image": "/projects/sabor-de-barrio/sabor-de-barrio-04.jpg"
+        "image": "/projects/sabor-de-barrio/sabor-de-barrio-04.webp"
       },
       {
         "type": "imageGrid",
         "columns": 3,
         "images": [
           {
-            "src": "/projects/sabor-de-barrio/sabor-de-barrio-05.jpg",
+            "src": "/projects/sabor-de-barrio/sabor-de-barrio-05.webp",
             "alt": "Brand Identity 1"
           },
           {
-            "src": "/projects/sabor-de-barrio/sabor-de-barrio-06.jpg",
+            "src": "/projects/sabor-de-barrio/sabor-de-barrio-06.webp",
             "alt": "Brand Identity 2"
           },
           {
-            "src": "/projects/sabor-de-barrio/sabor-de-barrio-07.jpg",
+            "src": "/projects/sabor-de-barrio/sabor-de-barrio-07.webp",
             "alt": "Brand Identity 3"
           }
         ]

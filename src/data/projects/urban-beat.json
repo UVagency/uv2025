@@ -10,35 +10,35 @@
   "marketingResults": "The QUIEROLATA hit was heard by more than 5 million people. In the press, we received coverage in 37 media outlets from different countries, with an Ad Value of over $83,000. Furthermore, QUIEROLATA's followers on social media increased by over 300%, turning this hit into a true statement, a movement, a change, and a demonstration that the can is the most sustainable container.",
   "videoUrl": "https://vimeo.com/1079790908",
   "images": [
-    "/projects/urban-beat/urban-beat-01.jpg",
-    "/projects/urban-beat/urban-beat-02.jpg",
-    "/projects/urban-beat/urban-beat-03.jpg"
+    "/projects/urban-beat/urban-beat-01.webp",
+    "/projects/urban-beat/urban-beat-02.webp",
+    "/projects/urban-beat/urban-beat-03.webp"
   ],
   "gallery": {
     "featureText": "Through Urban Beat, we transformed the sound of cans into a powerful movement, bridging sustainability with urban culture and reaching millions with the message that cans are 100% recyclable. - Fabio Mincarelli Monfrin, Communications Director South America Ball Corporation -",
     "sections": [
       {
         "type": "banner",
-        "image": "/projects/urban-beat/urban-beat-04.jpg"
+        "image": "/projects/urban-beat/urban-beat-04.webp"
       },
       {
         "type": "imageGrid",
         "columns": 4,
         "images": [
           {
-            "src": "/projects/urban-beat/urban-beat-05.jpg",
+            "src": "/projects/urban-beat/urban-beat-05.webp",
             "alt": "Intervención urbana 1"
           },
           {
-            "src": "/projects/urban-beat/urban-beat-06.jpg",
+            "src": "/projects/urban-beat/urban-beat-06.webp",
             "alt": "Intervención urbana 2"
           },
           {
-            "src": "/projects/urban-beat/urban-beat-07.jpg",
+            "src": "/projects/urban-beat/urban-beat-07.webp",
             "alt": "Intervención urbana 3"
           },
           {
-            "src": "/projects/urban-beat/urban-beat-08.jpg",
+            "src": "/projects/urban-beat/urban-beat-08.webp",
             "alt": "Intervención urbana 4"
           }
         ]

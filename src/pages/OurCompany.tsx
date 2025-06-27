@@ -77,10 +77,10 @@ const OurCompany = () => {
   ];
 
   const coreTeam = [
-    { name: "Cristina Recalde", title: "CD", url: "https://www.linkedin.com/in/cristinarecalde/", photo: "/images/team/cristinarecalde.jpeg" },
-    { name: "Lorena Cambas", title: "CFO", url: "https://www.linkedin.com/in/lorena-vanesa-cambas-5a714a23/", photo: "/images/team/lorenacambas.jpeg" },
-    { name: "Agustin Herrero", title: "COO", url: "https://www.linkedin.com/in/agustinherrero/", photo: "/images/team/agustinherrero.jpeg" },
-    { name: "Javier Severini", title: "CEO", url: "https://www.linkedin.com/in/javierseverini/", photo: "/images/team/javierseverini.jpeg" },
+    { name: "Cristina Recalde", title: "CD", url: "https://www.linkedin.com/in/cristinarecalde/", photo: "/images/team/cristinarecalde.webp" },
+    { name: "Lorena Cambas", title: "CFO", url: "https://www.linkedin.com/in/lorena-vanesa-cambas-5a714a23/", photo: "/images/team/lorenacambas.webp" },
+    { name: "Agustin Herrero", title: "COO", url: "https://www.linkedin.com/in/agustinherrero/", photo: "/images/team/agustinherrero.webp" },
+    { name: "Javier Severini", title: "CEO", url: "https://www.linkedin.com/in/javierseverini/", photo: "/images/team/javierseverini.webp" },
   ];
 
   return (

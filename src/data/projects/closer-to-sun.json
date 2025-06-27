@@ -10,9 +10,9 @@
   "marketingResults": "This event marked a milestone for L'Oréal Paris in Chile, elevating UV Defender's positioning and creating an unforgettable brand experience in a unique, high-exposure environment.\n- 100+ media mentions across traditional and digital channels\n- Over $85,000 in earned media value\n- More than 6 million digital impressions\n- High engagement on influencer content\n- Increased brand affinity within beauty community",
   "videoUrl": "https://vimeo.com/1079780986",
   "images": [
-    "/projects/closer-to-sun/closer-to-sun-01.jpg",
-    "/projects/closer-to-sun/closer-to-sun-02.jpg",
-    "/projects/closer-to-sun/closer-to-sun-03.jpg"
+    "/projects/closer-to-sun/closer-to-sun-01.webp",
+    "/projects/closer-to-sun/closer-to-sun-02.webp",
+    "/projects/closer-to-sun/closer-to-sun-03.webp"
   ],
   "comingSoon": false,
   "carouselSpeed": 30,
@@ -21,22 +21,22 @@
     "sections": [
       {
         "type": "banner",
-        "image": "/projects/closer-to-sun/closer-to-sun-04.jpg"
+        "image": "/projects/closer-to-sun/closer-to-sun-04.webp"
       },
       {
         "type": "imageGrid",
         "columns": 3,
         "images": [
           {
-            "src": "/projects/closer-to-sun/closer-to-sun-05.jpg",
+            "src": "/projects/closer-to-sun/closer-to-sun-05.webp",
             "alt": "Concepto de verano 1"
           },
           {
-            "src": "/projects/closer-to-sun/closer-to-sun-06.jpg",
+            "src": "/projects/closer-to-sun/closer-to-sun-06.webp",
             "alt": "Concepto de verano 2"
           },
           {
-            "src": "/projects/closer-to-sun/closer-to-sun-07.jpg",
+            "src": "/projects/closer-to-sun/closer-to-sun-07.webp",
             "alt": "Concepto de verano 3"
           }
         ]

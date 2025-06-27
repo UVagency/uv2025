@@ -24,7 +24,7 @@ const Highlights = () => {
         {highlightedProjects.map((project) => {
           // Generar el path de la imagen de portada
           const clientSlug = project.id?.toLowerCase().replace(/ /g, "");
-          const coverImg = `/projects/${project.id}/${clientSlug}_profile.png`;
+          const coverImg = `/projects/${project.id}/${clientSlug}_profile.webp`;
           return (
             <div 
               key={project.id} 

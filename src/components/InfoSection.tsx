@@ -8,7 +8,7 @@ const InfoSection = () => {
         <div className="w-32 h-32 overflow-hidden">
           <OptimizedImage
             alt="UV Logo"
-            src="/images/uv_logo.png"
+            src="/images/uv_logo.webp"
             className="w-full h-full object-cover rounded-full"
             wrapperClassName="overflow-hidden rounded-full"
           />

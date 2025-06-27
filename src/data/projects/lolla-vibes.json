@@ -10,35 +10,35 @@
   "marketingResults": "Con la activación de Lolla Vibes, logramos fusionar la gastronomía latina con la música de una manera nunca antes vista.",
   "videoUrl": "https://vimeo.com/123456789",
   "images": [
-    "/projects/lolla-vibes/lolla-vibes-01.jpg",
-    "/projects/lolla-vibes/lolla-vibes-02.jpg",
-    "/projects/lolla-vibes/lolla-vibes-03.jpg"
+    "/projects/lolla-vibes/lolla-vibes-01.webp",
+    "/projects/lolla-vibes/lolla-vibes-02.webp",
+    "/projects/lolla-vibes/lolla-vibes-03.webp"
   ],
   "gallery": {
     "featureText": "Con la activación de Lolla Vibes, logramos fusionar la gastronomía latina con la música de una manera nunca antes vista.",
     "sections": [
       {
         "type": "banner",
-        "image": "/projects/lolla-vibes/lolla-vibes-04.jpg"
+        "image": "/projects/lolla-vibes/lolla-vibes-04.webp"
       },
       {
         "type": "imageGrid",
         "columns": 4,
         "images": [
           {
-            "src": "/projects/lolla-vibes/lolla-vibes-05.jpg",
+            "src": "/projects/lolla-vibes/lolla-vibes-05.webp",
             "alt": "Experiencia gastronómica 1"
           },
           {
-            "src": "/projects/lolla-vibes/lolla-vibes-06.jpg",
+            "src": "/projects/lolla-vibes/lolla-vibes-06.webp",
             "alt": "Experiencia gastronómica 2"
           },
           {
-            "src": "/projects/lolla-vibes/lolla-vibes-07.jpg",
+            "src": "/projects/lolla-vibes/lolla-vibes-07.webp",
             "alt": "Experiencia gastronómica 3"
           },
           {
-            "src": "/projects/lolla-vibes/lolla-vibes-08.jpg",
+            "src": "/projects/lolla-vibes/lolla-vibes-08.webp",
             "alt": "Experiencia gastronómica 4"
           }
         ]
