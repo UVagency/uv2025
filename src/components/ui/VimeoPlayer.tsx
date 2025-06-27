@@ -15,7 +15,7 @@ interface VimeoPlayerProps {
   showPortrait?: boolean;
   /** Whether to autoplay the video (default: true) */
   autoplay?: boolean;
-  /** Whether to mute the video (recommended for autoplay) */
+  /** Whether to mute the video. If not specified, will auto-detect based on browser policies */
   muted?: boolean;
   /** Whether to loop the video instead of showing end screen */
   loop?: boolean;
@@ -52,7 +52,7 @@ const VimeoPlayer: React.FC<VimeoPlayerProps> = ({
   showByline = false,
   showPortrait = false,
   autoplay = true,
-  muted = false,
+  muted, // Will be auto-detected if not specified
   loop = true,
   color = "6BD8D7", // Default portfolio accent color
   hideInteractionButtons = true,
@@ -66,6 +66,30 @@ const VimeoPlayer: React.FC<VimeoPlayerProps> = ({
   const iframeRef = useRef<HTMLIFrameElement>(null);
   
   const vimeoId = getVimeoId(videoUrl);
+  
+  // Auto-detect muted state based on browser autoplay policies
+  const shouldMute = muted !== undefined 
+    ? muted 
+    : !sessionStorage.getItem('userHasInteracted');
+  
+  useEffect(() => {
+    // Mark that user has interacted with the site
+    const markInteraction = () => {
+      sessionStorage.setItem('userHasInteracted', 'true');
+    };
+    
+    // Listen for any user interaction
+    const events = ['click', 'scroll', 'keydown', 'touchstart'];
+    events.forEach(event => {
+      document.addEventListener(event, markInteraction, { once: true });
+    });
+    
+    return () => {
+      events.forEach(event => {
+        document.removeEventListener(event, markInteraction);
+      });
+    };
+  }, []);
   
   useEffect(() => {
     // Only enable analytics if requested and we have a valid iframe
@@ -119,7 +143,7 @@ const VimeoPlayer: React.FC<VimeoPlayerProps> = ({
     embedUrl.searchParams.set('autoplay', '1');
   }
   
-  if (muted) {
+  if (shouldMute) {
     embedUrl.searchParams.set('muted', '1');
   }
   
