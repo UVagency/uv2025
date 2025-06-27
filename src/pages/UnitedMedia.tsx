@@ -42,7 +42,7 @@ const UnitedMedia = () => {
     tagline: "Connecting brands with people in a phygital world",
     description: "Our UnitedMedia service is designed to enhance your business results in a scalable, effective, and efficient manner. We reach truly relevant clients by enhancing the visibility of your brand, product, or event through Programmatic and Digital PR.",
     history: "Since 2011, we have collaborated with leaders and teams of major global brands to help them achieve their goals and growth challenges by understanding their clients' behavior and connecting them with them.",
-    videoRecapUrl: "https://vimeo.com/1079829750&title=0&byline=0&portrait=0", // Placeholder video
+    videoRecapUrl: "https://vimeo.com/1079829750", // Placeholder video
     categories: ["Off-line", "Digital", "Outdoor", "In-Store", "Radio", "TV"],
     client: "United Media Services. One Agency, All In.",
   };
