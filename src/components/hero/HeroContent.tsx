@@ -83,7 +83,7 @@ export const HeroContent = () => {
                 onClick={handleInfoClick} 
                 className={`transition-all duration-300 ${showOneAgency ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
               >
-                <strong><span className="text-portfolio-accent italic hover:underline">One agency, all in.</span></strong>
+                <strong><span className="text-portfolio-accent hover:underline">One agency, all in.</span></strong>
               </button>
             </div>
           </h1>
