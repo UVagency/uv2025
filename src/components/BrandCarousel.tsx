@@ -17,7 +17,7 @@ const brands: Brand[] = [
   /*{ name: "Igenix", logoUrl: "/client-logos/igenix.svg" },*/
   { name: "Inaba", logoUrl: "/client-logos/inaba.svg" },
   { name: "Churu", logoUrl: "/client-logos/churu.svg" },
-  { name: "Keds", logoUrl: "/client-logos/keds.svg" },
+  /*{ name: "Keds", logoUrl: "/client-logos/keds.svg" },*/
   { name: "Krispy Kreme", logoUrl: "/client-logos/krispy_kreme.svg" },
   { name: "KSB", logoUrl: "/client-logos/ksb.svg" },
   { name: "Little Caesars", logoUrl: "/client-logos/littlecaesars.svg" },
