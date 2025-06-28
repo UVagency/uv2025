@@ -88,6 +88,23 @@
   max-width: 161px !important;
 }
 
+.logo-merrell {
+  max-width: 250px; /* antes: 170px */
+  max-height: 120px; /* antes: 80px */
+  height: auto;
+}
+
+.logo-keds {
+  max-width: 160px;
+  max-height: 90px;
+  width: auto;
+  height: 90px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  margin: 0 auto;
+}
+
 /* Mobile styles */
 @media (max-width: 768px) {
   .logos {
@@ -118,6 +135,18 @@
 
   .logo-philips {
     max-width: 138px !important;
+  }
+
+  .logo-merrell {
+    max-width: 130px;
+    max-height: 50px;
+    height: 40px;
+  }
+
+  .logo-keds {
+    max-width: 85px;
+    max-height: 34.5px;
+    height: 24px;
   }
 
   .logos:before,
