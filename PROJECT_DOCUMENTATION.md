@@ -4,6 +4,9 @@
 
 Este documento proporciona una visión general de la estructura del proyecto, sus componentes principales y cómo están organizados. El objetivo es facilitar la comprensión del código y la colaboración entre desarrolladores.
 
+### Gestor de Paquetes
+Este proyecto utiliza `npm` como gestor de dependencias. Ejecuta `npm install` para instalar todas las dependencias antes de iniciar el desarrollo.
+
 ## 📁 Estructura General del Directorio `src`
 
 La carpeta `src` es el corazón de la aplicación y contiene todo el código fuente. Su estructura está diseñada para ser modular y escalable.
