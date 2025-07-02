@@ -6,6 +6,19 @@ Allow: /about/
 Allow: /contact/
 Allow: /our-company/
 
+# AI Bot specific directives
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: AnthropicBot
+Allow: /
+
 # Sitemaps
 Sitemap: https://uv.agency/sitemap.xml
 Sitemap: https://uv.agency/sitemap-es.xml
