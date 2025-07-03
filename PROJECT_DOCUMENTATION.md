@@ -1,4 +1,4 @@
-# 📄 Documentación del Proyecto UV2025
+# 📄 Documentación del Proyecto UV2025 (Actualizada)
 
 ## 🌟 Introducción
 
@@ -23,37 +23,41 @@ src/
 |
 ├── components/                 # Componentes reutilizables de la interfaz de usuario
 │   ├── BrandCarousel.tsx
+│   ├── ContactForm.tsx
+│   ├── ErrorBoundary.tsx
 │   ├── Footer.tsx
 │   ├── Hero.tsx
 │   ├── Highlights.tsx
-│   ├── InfoSection.tsx         # Componente extraído del Navbar
-│   ├── Navbar.tsx              # Barra de navegación principal (refactorizada)
+│   ├── InfoSection.tsx
+│   ├── Navbar.tsx
 │   ├── Portfolio.tsx
-│   ├── SEO.tsx                 # Componente para manejo de SEO
-│   |
+│   ├── SEO.tsx
+│   ├── company/                # Componentes para la sección "Nuestra Empresa"
+│   │   ├── CompanyAwards.tsx
+│   │   ├── CompanyValues.tsx
+│   │   └── CompanyVideo.tsx
 │   ├── hero/                   # Componentes específicos para la sección Hero
-│   │   ├── AnimatedEye.tsx
-│   │   ├── BreathingUVLogo.tsx
 │   │   ├── HeroBackgroundAnimations.tsx
 │   │   ├── HeroContent.tsx
 │   │   └── ScrollIndicator.tsx
-│   |
+│   ├── lazy/                   # Lazy loading de páginas
+│   │   └── index.ts
 │   ├── project/                # Componentes para la visualización de proyectos
+│   │   ├── ProjectCard.tsx
 │   │   ├── ProjectGallery.tsx
 │   │   ├── ProjectHeader.tsx
 │   │   ├── ProjectNotFound.tsx
-│   │   ├── ProjectVideoLink.tsx
+│   │   ├── ProjectVideo.tsx
 │   │   ├── ProjectVideoPlayer.tsx
 │   │   └── gallery/            # Componentes específicos para la galería de proyectos
-│   │       ├── ProjectImageCarousel.tsx
-│   │       ├── ProjectFeatureText.tsx
 │   │       ├── ProjectBanner.tsx
+│   │       ├── ProjectFeatureText.tsx
+│   │       ├── ProjectImageCarousel.tsx
 │   │       ├── ProjectImageGrid.tsx
-│   │       ├── ProjectTextSection.tsx
-│   │       └── ProjectMixedGrid.tsx
-│   |
+│   │       └── ProjectTextSection.tsx
 │   └── ui/                     # Componentes de UI genéricos (ShadCN/UI + custom)
-│       ├── EyeOfCuriosity.tsx  # Componente de UI extraído del Navbar
+│       ├── EyeOfCuriosity.tsx
+│       ├── VimeoPlayer.tsx
 │       ├── accordion.tsx
 │       ├── alert-dialog.tsx
 │       ├── alert.tsx
@@ -80,6 +84,7 @@ src/
 │       ├── label.tsx
 │       ├── menubar.tsx
 │       ├── navigation-menu.tsx
+│       ├── optimized-image.tsx
 │       ├── pagination.tsx
 │       ├── popover.tsx
 │       ├── progress.tsx
@@ -105,272 +110,140 @@ src/
 │       └── use-toast.ts
 |
 ├── constants/                  # Constantes utilizadas en la aplicación
-│   └── navbarConstants.ts      # Constantes específicas del Navbar
+│   └── navbarConstants.ts
 |
 ├── data/                       # Datos estáticos o mock data
 │   ├── highlightsConfig.ts
 │   ├── projectsData.ts
-│   └── projects/               # Datos detallados de proyectos
+│   └── projects/               # Datos detallados de proyectos (JSON)
+│       ├── a-great-first-day.json
 │       ├── closer-to-sun.json
-│       └── united-media.json
+│       ├── enjoy-the-unexpected.json
+│       ├── festival-season.json
+│       ├── fly-your-way.json
+│       ├── lolla-vibes.json
+│       ├── sabor-de-barrio.json
+│       ├── turn-up-the-volume.json
+│       ├── urban-beat.json
+│       └── we-make-your-day.json
 |
 ├── hooks/                      # Hooks personalizados de React
 │   ├── use-mobile.tsx
 │   ├── use-toast.ts
-│   └── useNavigation.ts        # Hook para la lógica de navegación del Navbar
+│   └── useNavigation.ts
 |
 ├── lib/                        # Funciones de utilidad y helpers
-│   ├── customCursor.js         # Implementación del cursor personalizado
-│   ├── scrollUtils.ts          # Utilidades para scroll suave
-│   └── utils.ts                # Funciones de utilidad generales (cn)
+│   ├── analytics.ts
+│   ├── customCursor.js
+│   ├── scrollUtils.ts
+│   ├── utils.test.ts
+│   └── utils.ts
 |
 ├── pages/                      # Componentes que representan las páginas de la aplicación
 │   ├── About.tsx
 │   ├── Contact.tsx
 │   ├── Index.tsx
 │   ├── NotFound.tsx
+│   ├── OurCompany.tsx
 │   ├── ProjectDetail.tsx
-│   └── OurCompany.tsx          # Página sobre la empresa
-│
+│   └── UnitedMedia.tsx
+|
 ├── styles/                     # Archivos CSS globales y específicos
-│   ├── base.css                # Estilos base y cursor personalizado
+│   ├── base.css
 │   ├── carousel.css
 │   ├── components.css
-│   ├── fonts/                  # Tipografías en formato WOFF2
-│   ├── fonts.css               # Carga y forzado de la fuente global
-│   └── index.css               # Estilos principales, importa otros CSS
+│   ├── fonts/
+│   │   ├── open-sans-v43-latin-700.woff2
+│   │   └── open-sans-v43-latin-regular.woff2
+│   ├── fonts.css
+│   └── index.css
 |
 └── types/                      # Definiciones de tipos TypeScript
-    └── index.ts                # Tipos principales y compartidos
+    ├── gallery.ts
+    └── index.ts
 ```
 
 ## 🧬 Componentes Principales
 
-### `App.tsx`
-Es el componente raíz que envuelve toda la aplicación. Configura los providers principales como `QueryClientProvider` (para React Query), `TooltipProvider`, y el sistema de routing con `BrowserRouter`.
-
-### `main.tsx`
-Es el punto de entrada de la aplicación. Renderiza el componente `App` en el DOM y también inicializa el `customCursor`.
-
-### `src/components/`
-Esta carpeta se divide en:
-- **Componentes de alto nivel**: Como `Navbar`, `Footer`, `Portfolio`, `SEO`, etc.
-- **`hero/`**: Componentes específicos para la sección "Hero" de la página principal.
-- **`project/`**: Componentes utilizados para mostrar detalles de proyectos, incluyendo una galería modular y flexible.
-- **`ui/`**: Contiene una gran cantidad de componentes de UI reutilizables, muchos de ellos provenientes de la librería ShadCN/UI, junto con componentes personalizados como `EyeOfCuriosity`.
-
-### `src/pages/`
-Contiene los componentes que actúan como vistas o páginas individuales de la aplicación. Cada archivo representa una ruta principal:
-- `Index.tsx`: Página principal con Hero, Highlights y Portfolio
-- `About.tsx`: Sección de información sobre la empresa
-- `Contact.tsx`: Formulario de contacto
-- `ProjectDetail.tsx`: Vista detallada de proyectos individuales
-- `OurCompany.tsx`: Página detallada sobre UV, incluyendo historia, valores, equipo y premios
-- `NotFound.tsx`: Página 404 personalizada
-
-## ⚙️ Lógica y Utilidades
-
-### `src/hooks/`
-Aquí se definen hooks personalizados para encapsular lógica de estado y efectos secundarios reutilizables. 
-- `useNavigation.ts`: Maneja el estado de apertura/cierre de las secciones "Info", "Contact" y "OurCompany" del `Navbar`.
-- `use-mobile.tsx`: Detecta si el usuario está en un dispositivo móvil.
-- `use-toast.ts`: Relacionado con el sistema de notificaciones (toasts).
-
-### `src/lib/`
-Contiene funciones de utilidad generales:
-- `utils.ts`: Incluye la función `cn` para combinar clases de Tailwind CSS de forma condicional.
-- `scrollUtils.ts`: Proporciona la función `smoothScrollToElement` para animaciones de scroll suave.
-- `customCursor.js`: Implementa la lógica para un cursor personalizado con estados hover y click.
-
-### `src/constants/`
-Almacena valores constantes para evitar números mágicos o strings repetidos en el código.
-- `navbarConstants.ts`: Guarda constantes relacionadas con el `Navbar`, como duraciones de animación y nombres de clases.
-
-### `src/types/`
-Define interfaces y tipos de TypeScript para asegurar la consistencia y prevenir errores en tiempo de desarrollo.
-- `index.ts`: Contiene tipos compartidos como `NavigationState`, `NavItem`, etc.
+- **App.tsx**: Componente raíz que envuelve toda la aplicación y configura los providers principales.
+- **main.tsx**: Punto de entrada de la aplicación. Renderiza el componente `App` y también inicializa el cursor personalizado.
+- **components/**: Contiene componentes de alto nivel, específicos de secciones (hero, project, company), y una amplia librería de UI (ShadCN/UI + custom).
+- **pages/**: Componentes que actúan como vistas o páginas individuales de la aplicación.
+- **data/**: Datos estáticos y mock data, incluyendo archivos JSON para cada proyecto.
+- **hooks/**: Hooks personalizados para lógica de navegación, mobile detection y toasts.
+- **lib/**: Funciones utilitarias, helpers y lógica de analytics.
+- **constants/**: Constantes centralizadas, como las del Navbar.
+- **types/**: Tipos TypeScript compartidos y específicos.
 
 ## 🎨 Estilos y Animaciones
 
-### `src/styles/`
-Contiene los archivos CSS. `index.css` importa `fonts.css`, `base.css` y `components.css`. Las animaciones base (como el fade-in) se definen ahora en `tailwind.config.ts`.
+- **Tipografía**: El proyecto utiliza **Open Sans** como única fuente tipográfica, auto-hospedada en `src/styles/fonts/` y forzada globalmente en `fonts.css`.
+- **Paleta de Colores**: Definida en `tailwind.config.ts` bajo la clave `portfolio` y en variables CSS en `base.css`. El color turquesa principal es `#6BD8D7` (`portfolio-accent`).
+- **Animaciones**: Las animaciones base (como `fade-in`) se definen en `tailwind.config.ts`. El cursor personalizado está implementado en `base.css` y la lógica en `lib/customCursor.js`.
+- **Estilos globales**: `index.css` importa `fonts.css`, `base.css` y `components.css`.
 
-#### Tipografía
-El proyecto utiliza **Open Sans** como única fuente tipográfica. Los archivos WOFF2 se encuentran en `src/styles/fonts/` y se cargan mediante `fonts.css`, que además fuerza su uso global.
+## ⚙️ Lógica y Utilidades
 
-#### Paleta de Colores
-Los colores principales se definen en `tailwind.config.ts` bajo la clave `portfolio` y en variables CSS dentro de `base.css`:
-
-- `bg` (`#F5F6E8`): fondo cálido y suave.
-- `text` (`#3D4A28`): verde oliva profundo utilizado para textos.
-- `tag-bg` (`#3D4A28`) y `tag-text` (`#ffffff`): estilos de las etiquetas de año.
-- `divider` (`#84806E`): gris oliva para divisores.
-- `highlight` (`#EACB5D`): amarillo suave para resaltar información.
-- `accent` (`#6BD8D7`): turquesa característico de UV.
-- `text-secondary` (`#84806E`): tono secundario para textos menos destacados.
-- `muted-purple` (`#A493A4`) y `soft-pink` (`#EBA3A9`): colores de acento adicionales usados en la sección Hero.
-
-### `src/animations/`
-- `heroAnimations.ts`: Define la lógica para animaciones complejas, específicamente para la sección Hero.
+- **hooks/**: Incluye lógica de navegación (`useNavigation.ts`), detección de mobile (`use-mobile.tsx`) y sistema de toasts (`use-toast.ts`).
+- **lib/**: Incluye helpers generales (`utils.ts`), utilidades de scroll suave (`scrollUtils.ts`), lógica de analytics y el cursor personalizado.
+- **constants/**: Centraliza valores como animaciones y clases del Navbar.
+- **types/**: Define interfaces y tipos TypeScript para navegación, proyectos, etc.
 
 ## 📊 Datos
 
-### `src/data/`
-Contiene datos estáticos que la aplicación utiliza, como información de proyectos.
-- `projectsData.ts`: Define los datos para los proyectos que se muestran en el portafolio.
-- `highlightsConfig.ts`: Configuración para la sección de destacados.
-- `projects/`: Contiene archivos JSON con datos detallados de cada proyecto.
+- **data/**: Contiene la configuración de highlights, datos de proyectos y archivos JSON detallados para cada proyecto.
 
 ## ✨ Mejoras Recientes
 
-El proyecto ha pasado por varias mejoras significativas:
-
-1. **Refactorización del Navbar**:
-   - Extracción de lógica a hooks personalizados (`useNavigation`)
-   - Creación de componentes más pequeños y reutilizables (`InfoSection`, `EyeOfCuriosity`)
-   - Centralización de constantes (`navbarConstants`)
-   - Definición de tipos TypeScript para mejorar la robustez
-   - Mejora en la navegación y estados de secciones
-   - Reducción del 80% en líneas de código (349 → 70 líneas)
-
-2. **Sistema de Galería Modular**:
-   - Implementación de componentes flexibles para la visualización de proyectos
-   - Soporte para diferentes tipos de contenido (imágenes, texto, grids mixtos)
-   - Componentes reutilizables para banners, carruseles y secciones de texto
-   - Mejoras en la responsividad y animaciones
-   - Integración con sistema de analytics para tracking de interacciones
-
-3. **UI Components**:
-   - Integración completa de ShadCN/UI
-   - Componentes personalizados adaptados a las necesidades específicas
-   - Sistema de diseño consistente
-   - Mejoras en la accesibilidad
-   - Nuevos componentes: Sidebar, Resizable, InputOTP, Menubar
-
-4. **SEO y Metadatos**:
-   - Implementación de componente SEO reutilizable
-   - Meta tags dinámicos para cada página
-   - Optimización para motores de búsqueda
-   - Implementación de sitemap.xml y robots.txt
-   - JSON-LD para rich snippets
-
-5. **Optimización de Rendimiento**:
-   - Lazy loading para componentes pesados
-   - Code splitting por rutas
-   - Optimización de imágenes y assets
-   - Eliminación de React.StrictMode duplicado
-   - Mejor gestión de efectos y estados
-
-6. **TypeScript y Seguridad**:
-   - Interfaces TypeScript mejoradas
-   - Mejor type safety en componentes
-   - Constantes tipadas con `as const`
-   - Detección temprana de errores
-   - Mejor autocompletado en IDEs
-
-7. **Limpieza de iframes y compatibilidad moderna**:
-   - Eliminación del atributo obsoleto `allowFullScreen` en iframes
-   - Uso exclusivo de `allow="fullscreen"` y otros permisos modernos
-   - Reducción de advertencias en consola y mejora de compatibilidad con navegadores actuales
-
-8. **Tipografía unificada y auto hospedada**:
-   - Inclusión de `Open Sans` en formato WOFF2 dentro del repositorio
-   - Se fuerza su uso global mediante `fonts.css` y `base.css`
-   - Eliminación de dependencias externas para fuentes
-
-9. **Actualización de contacto en el Footer**:
-   - Nuevo correo principal `hello@uv.agency`
-   - Evento de analytics para clics en el enlace de correo
-
-10. **Optimización de imágenes**:
-   - Sustitución de archivos JPEG por versiones comprimidas
-   - Reducción significativa del peso en las galerías de proyectos
-11. **Simplificación de estilos y Tailwind**:
-   - Consolidación del cursor personalizado en `base.css` y eliminación de duplicados en `App.css`.
-   - `animations.css` se eliminó; la animación `fade-in` ahora se define en `tailwind.config.ts`.
-   - Ajuste de `content` en `tailwind.config.ts` a `index.html` y `src/**/*`.
-   - `components.json` apunta a `src/styles/index.css`.
-   - Nuevos parámetros `PROJECT_CATEGORY` y `PROJECT_CLIENT` en `analytics.ts`.
+1. **Refactorización del Navbar**: Extracción de lógica a hooks personalizados, componentes reutilizables, centralización de constantes y mejora de navegación.
+2. **Sistema de Galería Modular**: Componentes flexibles para visualización de proyectos, soporte para distintos tipos de contenido y mejoras de responsividad.
+3. **UI Components**: Integración de ShadCN/UI, componentes personalizados, mejoras de accesibilidad y nuevos componentes como Sidebar y Resizable.
+4. **SEO y Metadatos**: Componente SEO reutilizable, meta tags dinámicos, sitemap.xml, robots.txt y JSON-LD para rich snippets.
+5. **Optimización de Rendimiento**: Lazy loading, code splitting, optimización de imágenes y mejor gestión de efectos.
+6. **TypeScript y Seguridad**: Mejoras en interfaces, type safety, constantes tipadas y detección temprana de errores.
+7. **Limpieza de iframes y compatibilidad moderna**: Uso de atributos modernos y reducción de advertencias.
+8. **Tipografía unificada y auto hospedada**: Open Sans en WOFF2, forzada globalmente y sin dependencias externas.
+9. **Actualización de contacto en el Footer**: Nuevo correo principal y evento de analytics para clics.
+10. **Optimización de imágenes**: Uso de WebP y reducción de peso en galerías.
+11. **Simplificación de estilos y Tailwind**: Consolidación de estilos, animaciones en Tailwind y parámetros nuevos en analytics.
 
 ## 🚀 Próximos Pasos
 
 ### 1. Optimización y Rendimiento (Prioridad Alta)
 - [x] Implementar lazy loading para componentes pesados
-  - Aplicar React.lazy() para ProjectDetail, OurCompany
-  - Agregar Suspense boundaries con fallbacks apropiados
-- [ ] Optimizar imágenes
-  - Implementar next-gen formats (WebP)
-  - Agregar srcset para responsive images
-  - Implementar lazy loading para imágenes fuera de viewport
+- [ ] Optimizar imágenes (WebP, srcset, lazy loading)
 - [x] Implementar code splitting
-  - Separar rutas en chunks independientes
-  - Optimizar bundle size
 
 ### 2. SEO y Metadatos (Prioridad Alta)
 - [x] Implementar meta tags dinámicos
-  - React Helmet o similar
-  - Open Graph tags
-  - Twitter Cards
 - [x] Implementar sitemap.xml
 - [x] Optimizar robots.txt
 - [x] Agregar JSON-LD para rich snippets
 
 ### 3. Analytics y Monitoreo (Prioridad Alta)
 - [ ] Implementar Google Analytics 4
-  - Configurar eventos personalizados
-  - Implementar ecommerce tracking
-- [x] Agregar error tracking
-  - Implementar Sentry o similar
-  - Configurar error boundaries
+- [x] Agregar error tracking (Sentry)
 - [x] Implementar tracking de eventos básicos
-  - Tracking de clicks en proyectos
-  - Tracking de navegación
-  - Tracking de interacciones con galería
 
 ### 4. Testing y Calidad (Prioridad Media)
-- [ ] Implementar test suite
-  - Unit tests con Vitest
-  - Integration tests
-  - E2E tests con Cypress
+- [ ] Implementar test suite (Vitest, integración, E2E)
 - [ ] Implementar accessibility testing
-  - ARIA labels
-  - Keyboard navigation
-  - Screen reader compatibility
 
 ### 5. Seguridad (Prioridad Media)
-- [ ] Implementar CSP (Content Security Policy)
-- [ ] Configurar CORS
-- [ ] Implementar security headers
-  - X-Frame-Options
-  - X-Content-Type-Options
-  - Referrer-Policy
+- [ ] Implementar CSP, CORS y security headers
 
 ### 6. Documentación (Prioridad Baja)
 - [x] Crear documentación técnica
-  - API documentation
-  - Component documentation
-  - Setup instructions
 - [ ] Crear guía de estilo
-  - Design system documentation
-  - Component usage guidelines
 
 ### 7. Deployment y CI/CD (Prioridad Media)
 - [ ] Configurar pipeline de CI/CD
-  - GitHub Actions o similar
-  - Automated testing
-  - Automated deployment
 - [ ] Implementar staging environment
 - [ ] Configurar rollback strategy
 
 ### 8. Post-Lanzamiento (Prioridad Baja)
 - [ ] Monitoreo de performance
-  - Core Web Vitals
-  - Server response times
-  - Error rates
 - [ ] Análisis de uso
-  - User engagement
-  - Conversion rates
-  - Bounce rates
 
 ## 📋 Checklist Pre-Lanzamiento
 
