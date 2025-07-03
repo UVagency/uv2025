@@ -207,6 +207,23 @@ src/
 10. **Optimización de imágenes**: Uso de WebP y reducción de peso en galerías.
 11. **Simplificación de estilos y Tailwind**: Consolidación de estilos, animaciones en Tailwind y parámetros nuevos en analytics.
 
+## 🖼️ Optimización de Imágenes (Actualización 2024)
+
+- **Formato WebP universal:** Todas las imágenes de proyectos y assets principales están en formato `.webp`. Se eliminaron los archivos JPEG/PNG redundantes y se actualizaron todas las referencias en el código y HTML para que apunten solo a `.webp`.
+- **Lazy loading:** Todas las imágenes relevantes usan lazy loading por defecto gracias al componente `OptimizedImage`, que aplica `loading="lazy"` salvo para imágenes críticas (banners, slides iniciales).
+- **Imágenes responsive (`srcSet`):** El componente `OptimizedImage` genera automáticamente un `srcSet` con varias resoluciones (480, 800, 1200, 1600px) y un atributo `sizes` adaptado a breakpoints, sirviendo la mejor versión según el dispositivo.
+- **Referencias actualizadas:** No quedan referencias a imágenes JPEG o PNG en el código, HTML ni datos. Todo apunta a `.webp`.
+- **SVGs y logotipos:** Los SVGs (por ejemplo, en BrandCarousel) no requieren lazy loading ni srcSet por su bajo peso y naturaleza vectorial.
+
+### Ejemplo de uso de OptimizedImage
+```tsx
+<OptimizedImage
+  src="/projects/ejemplo/ejemplo_profile.webp"
+  alt="Ejemplo Proyecto"
+  aspectRatio={16/9}
+/>
+```
+
 ## 🚀 Próximos Pasos
 
 ### 1. Optimización y Rendimiento (Prioridad Alta)
@@ -221,7 +238,7 @@ src/
 - [x] Agregar JSON-LD para rich snippets
 
 ### 3. Analytics y Monitoreo (Prioridad Alta)
-- [ ] Implementar Google Analytics 4
+- [x] Implementar Google Analytics 4
 - [x] Agregar error tracking (Sentry)
 - [x] Implementar tracking de eventos básicos
 
@@ -230,7 +247,7 @@ src/
 - [ ] Implementar accessibility testing
 
 ### 5. Seguridad (Prioridad Media)
-- [ ] Implementar CSP, CORS y security headers
+- [x] Implementar CSP, CORS y security headers
 
 ### 6. Documentación (Prioridad Baja)
 - [x] Crear documentación técnica
@@ -245,27 +262,18 @@ src/
 - [ ] Monitoreo de performance
 - [ ] Análisis de uso
 
-## 📋 Checklist Pre-Lanzamiento
+## 📋 Checklist Pre-Lanzamiento (Actualización)
 
 ### Prioridad Alta
-- [ ] Analytics funcionando y reportando datos
-  - [ ] Configurar Google Analytics 4
-  - [ ] Implementar eventos personalizados
-  - [ ] Verificar tracking de conversiones
+- [x] Analytics funcionando y reportando datos
 - [x] SEO dinámico implementado para páginas clave
-  - [x] Meta tags dinámicos
-  - [x] Open Graph tags
-  - [x] Twitter Cards
-  - [x] JSON-LD implementado
-- [ ] Optimización de imágenes y lazy loading activado
-  - [ ] Convertir imágenes a WebP
-  - [ ] Implementar srcset para responsive images
-  - [ ] Configurar lazy loading para imágenes fuera de viewport
+- [x] Optimización de imágenes y lazy loading activado
+  - [x] Todas las imágenes convertidas a WebP
+  - [x] Referencias actualizadas a .webp
+  - [x] Lazy loading implementado en toda la UI
+  - [x] srcSet responsive implementado
 - [x] Error Boundaries y monitoreo de errores configurado
-  - [x] Implementación de Error Boundaries
-  - [x] Configuración de Sentry
-  - [x] Logging de errores críticos
-- [x] Limpieza de iframes: solo uso de atributo `allow` en vez de `allowfullscreen` para evitar advertencias y seguir mejores prácticas
+- [x] Limpieza de iframes: solo uso de atributo `allow` en vez de `allowfullscreen`
 
 ### Prioridad Media
 - [ ] Pruebas E2E básicas pasando para flujos críticos
@@ -319,4 +327,38 @@ src/
 
 Este checklist debe ser revisado y actualizado regularmente durante el proceso de desarrollo.
 
-Este documento debe mantenerse actualizado a medida que el proyecto evoluciona. 
+Este documento debe mantenerse actualizado a medida que el proyecto evoluciona.
+
+## 🛡️ Seguridad (Actualización 2024)
+
+- **CSP (Content Security Policy):** Implementada en `netlify.toml` para restringir orígenes de scripts, imágenes, estilos, fuentes y frames. Permite solo recursos propios y de servicios explícitamente listados (Google Analytics, Vimeo, Apollo, etc.).
+- **CORS:** Habilitado con `Access-Control-Allow-Origin: *` y métodos/headers seguros para permitir requests cross-origin donde sea necesario (por ejemplo, para assets públicos o APIs externas).
+- **Security Headers:**
+  - `X-Frame-Options: DENY` (previene clickjacking)
+  - `X-XSS-Protection: 1; mode=block` (protección básica XSS)
+  - `X-Content-Type-Options: nosniff` (previene sniffing de tipos MIME)
+  - `Referrer-Policy: strict-origin-when-cross-origin` (protege privacidad de referers)
+  - `Permissions-Policy` (deshabilita cámara, micrófono, geolocalización)
+  - `Strict-Transport-Security` (fuerza HTTPS)
+  - `Cross-Origin-Opener-Policy: same-origin` (protege contextos de navegación)
+- **Headers de caché:** configurados para assets, imágenes, JS y CSS para optimizar performance y seguridad.
+
+### Ejemplo de configuración en `netlify.toml`
+```toml
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self' ..."
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type, Authorization"
+```
+
+- **Resultado:** El sitio cumple con las mejores prácticas modernas de seguridad web para proyectos estáticos y SPA en Netlify. 
