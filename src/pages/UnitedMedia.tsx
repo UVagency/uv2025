@@ -1,9 +1,12 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { X } from 'lucide-react';
+import { X, ArrowRight, BarChart3, Users, TrendingUp, Target, Award, PlayCircle, Eye, MousePointer, DollarSign } from 'lucide-react';
 import Footer from '../components/Footer';
 import { SEO } from '../components/SEO';
 import { CompanyVideo } from '../components/lazy';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import OptimizedImage from "@/components/ui/optimized-image";
 
 // Loading component for lazy-loaded sections
 const SectionLoading = () => (
@@ -17,8 +20,76 @@ const SectionLoading = () => (
   </div>
 );
 
+// Casos de éxito específicos de United Media
+const successStories = [
+  {
+    id: "ecommerce-fashion",
+    title: "E-commerce Fashion Brand",
+    client: "Luxury Fashion Retailer",
+    industry: "Fashion & Retail",
+    challenge: "Low online conversion rate and high cart abandonment",
+    solution: "Complete digital transformation with GA4, enhanced ecommerce tracking, and personalized campaigns",
+    results: {
+      roas: "+350%",
+      conversion: "+185%",
+      revenue: "$2.8M",
+      period: "6 months"
+    },
+    metrics: [
+      { label: "ROAS Increase", value: "350%", icon: DollarSign },
+      { label: "Conversion Rate", value: "+185%", icon: TrendingUp },
+      { label: "Revenue Generated", value: "$2.8M", icon: BarChart3 }
+    ],
+    image: "/projects/enjoy-the-unexpected/enjoy-the-unexpected_profile.webp",
+    tags: ["E-commerce", "GA4", "Google Ads"]
+  },
+  {
+    id: "b2b-saas",
+    title: "B2B SaaS Platform",
+    client: "Tech Startup",
+    industry: "Software & Technology",
+    challenge: "Inefficient lead generation and poor attribution tracking",
+    solution: "Advanced analytics setup, lead scoring, and multi-touch attribution model",
+    results: {
+      leads: "+420%",
+      quality: "+230%",
+      cost: "-65%",
+      period: "4 months"
+    },
+    metrics: [
+      { label: "Quality Leads", value: "+420%", icon: Users },
+      { label: "Lead Quality Score", value: "+230%", icon: Target },
+      { label: "Cost per Lead", value: "-65%", icon: TrendingUp }
+    ],
+    image: "/projects/closer-to-sun/closer-to-sun_profile.webp",
+    tags: ["B2B", "Lead Generation", "Attribution"]
+  },
+  {
+    id: "local-restaurant",
+    title: "Restaurant Chain Expansion",
+    client: "Regional Restaurant Group",
+    industry: "Food & Beverage",
+    challenge: "Expanding to new markets with limited brand awareness",
+    solution: "Local SEO optimization, geo-targeted campaigns, and social media strategy",
+    results: {
+      locations: "12 new",
+      awareness: "+280%",
+      footfall: "+150%",
+      period: "8 months"
+    },
+    metrics: [
+      { label: "New Locations", value: "12", icon: Target },
+      { label: "Brand Awareness", value: "+280%", icon: Eye },
+      { label: "Foot Traffic", value: "+150%", icon: Users }
+    ],
+    image: "/projects/sabor-de-barrio/sabor-de-barrio_profile.webp",
+    tags: ["Local SEO", "Geo-targeting", "Social Media"]
+  }
+];
+
 const UnitedMedia = () => {
   const navigate = useNavigate();
+  const [selectedStory, setSelectedStory] = useState<string | null>(null);
   
   const handleClose = () => {
     navigate('/');
@@ -155,6 +226,129 @@ const UnitedMedia = () => {
               </div>
             </div>
 
+            {/* Technology Stack Section */}
+            <div className="mb-6 sm:mb-12">
+              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-4 sm:mb-8">
+                Our Technology Stack
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                {['Google Analytics 4', 'Google Ads', 'Facebook Ads Manager', 'SEMrush', 'Hotjar', 'Google Tag Manager'].map(tool => (
+                  <div key={tool} className="p-4 border border-portfolio-divider rounded-lg text-center hover:border-portfolio-accent transition-colors">
+                    <span className="text-portfolio-text font-medium text-sm">{tool}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Success Stories Section */}
+            <div className="mb-6 sm:mb-12">
+              <div className="flex items-center mb-8">
+                <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mr-2">Success Stories</h2>
+                <Award className="w-6 h-6 text-portfolio-accent" />
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {successStories.map((story) => (
+                  <div 
+                    key={story.id}
+                    className="cursor-pointer group"
+                    onClick={() => setSelectedStory(selectedStory === story.id ? null : story.id)}
+                  >
+                    <div className="relative w-full overflow-hidden rounded-lg mb-4">
+                      <OptimizedImage
+                        src={story.image}
+                        alt={story.title}
+                        aspectRatio={16/9}
+                        className="w-full object-cover transition-transform group-hover:scale-105"
+                        wrapperClassName=""
+                      />
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <PlayCircle className="w-12 h-12 text-white" />
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <div className="flex flex-wrap gap-2">
+                        {story.tags.map((tag) => (
+                          <span key={tag} className="text-xs px-2 py-1 bg-portfolio-accent/20 text-portfolio-accent rounded">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      
+                      <h3 className="font-bold text-lg text-portfolio-text group-hover:text-portfolio-accent transition-colors">
+                        {story.title}
+                      </h3>
+                      
+                      <p className="text-sm text-portfolio-text/70">
+                        {story.industry} • {story.results.period}
+                      </p>
+                      
+                      <div className="grid grid-cols-3 gap-2 pt-2">
+                        {story.metrics.map((metric, idx) => (
+                          <div key={idx} className="text-center">
+                            <metric.icon className="w-4 h-4 mx-auto mb-1 text-portfolio-accent" />
+                            <div className="text-sm font-bold text-portfolio-text">{metric.value}</div>
+                            <div className="text-xs text-portfolio-text/60">{metric.label}</div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Expanded Details */}
+                    {selectedStory === story.id && (
+                      <div className="mt-4 p-4 bg-portfolio-text/5 rounded-lg border border-portfolio-text/10">
+                        <div className="space-y-3">
+                          <div>
+                            <h4 className="font-semibold text-portfolio-text mb-1">Challenge</h4>
+                            <p className="text-sm text-portfolio-text/70">{story.challenge}</p>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-portfolio-text mb-1">Solution</h4>
+                            <p className="text-sm text-portfolio-text/70">{story.solution}</p>
+                          </div>
+                          <div className="pt-2 border-t border-portfolio-text/10">
+                            <h4 className="font-semibold text-portfolio-text mb-2">Key Results</h4>
+                            <div className="grid grid-cols-2 gap-2 text-sm">
+                              {Object.entries(story.results).map(([key, value]) => (
+                                <div key={key} className="flex justify-between">
+                                  <span className="text-portfolio-text/70 capitalize">{key}:</span>
+                                  <span className="font-semibold text-portfolio-text">{value}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Methodology Section */}
+            <div className="mb-6 sm:mb-12">
+              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-4 sm:mb-8">
+                Our Methodology
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                {[
+                  { step: "01", title: "Analyze", desc: "Deep dive into your current performance and market position" },
+                  { step: "02", title: "Strategy", desc: "Design integrated campaigns across all relevant channels" },
+                  { step: "03", title: "Execute", desc: "Launch optimized campaigns with continuous monitoring" },
+                  { step: "04", title: "Optimize", desc: "Data-driven improvements for maximum ROI" }
+                ].map(item => (
+                  <div key={item.step} className="text-center">
+                    <div className="w-16 h-16 bg-portfolio-accent text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                      {item.step}
+                    </div>
+                    <h3 className="text-xl font-bold text-portfolio-text mb-2">{item.title}</h3>
+                    <p className="text-portfolio-text/80">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* Needs Quadrant */}
             <div className="mb-6 sm:mb-12">
               <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-4 sm:mb-8">How to Resolve Your Needs?</h2>
@@ -174,22 +368,55 @@ const UnitedMedia = () => {
               </div>
             </div>
 
-            {/* Certifications and Partners */}
+            {/* Partners and Certifications Section */}
             <div className="mb-6 sm:mb-12">
-              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-4 sm:mb-8">Certifications and Partners</h2>
-              <div className="flex flex-wrap gap-2 sm:gap-4">
-                <span className="px-3 sm:px-4 py-1 sm:py-2 bg-portfolio-tag-bg text-portfolio-tag-text rounded-full text-xs sm:text-base">Facebook BluePrint</span>
-                <span className="px-3 sm:px-4 py-1 sm:py-2 bg-portfolio-tag-bg text-portfolio-tag-text rounded-full text-xs sm:text-base">Google Partner</span>
-                <span className="px-3 sm:px-4 py-1 sm:py-2 bg-portfolio-tag-bg text-portfolio-tag-text rounded-full text-xs sm:text-base">eEcommerce Awards</span>
+              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-4 sm:mb-8">
+                Our Partners & Certifications
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
+                <div className="flex flex-col items-center p-4 border border-portfolio-divider rounded-lg hover:border-portfolio-accent transition-colors">
+                  <div className="w-16 h-16 bg-blue-600 rounded-lg mb-2 flex items-center justify-center text-white font-bold">
+                    META
+                  </div>
+                  <span className="text-sm text-portfolio-text text-center">Business Partner</span>
+                </div>
+                <div className="flex flex-col items-center p-4 border border-portfolio-divider rounded-lg hover:border-portfolio-accent transition-colors">
+                  <div className="w-16 h-16 bg-green-600 rounded-lg mb-2 flex items-center justify-center text-white font-bold text-2xl">
+                    G
+                  </div>
+                  <span className="text-sm text-portfolio-text text-center">Google Partner</span>
+                </div>
+                <div className="flex flex-col items-center p-4 border border-portfolio-divider rounded-lg hover:border-portfolio-accent transition-colors">
+                  <div className="w-16 h-16 bg-red-600 rounded-lg mb-2 flex items-center justify-center text-white font-bold">
+                    YT
+                  </div>
+                  <span className="text-sm text-portfolio-text text-center">YouTube Certified</span>
+                </div>
+                <div className="flex flex-col items-center p-4 border border-portfolio-divider rounded-lg hover:border-portfolio-accent transition-colors">
+                  <div className="w-16 h-16 bg-purple-600 rounded-lg mb-2 flex items-center justify-center text-white font-bold">
+                    HJ
+                  </div>
+                  <span className="text-sm text-portfolio-text text-center">Hotjar Partner</span>
+                </div>
               </div>
             </div>
 
-            {/* CTA Section */}
-            <div className="mb-6 sm:mb-12 text-left">
-              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-3 sm:mb-4">Looking for more leads?</h2>
-              <button className="bg-portfolio-highlight text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-portfolio-highlight/80 transition-colors text-sm sm:text-base">
-                Contact Us
-              </button>
+            {/* Enhanced CTA Section */}
+            <div className="mb-6 sm:mb-12 text-center bg-portfolio-accent/10 p-8 rounded-lg">
+              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-3 sm:mb-4">
+                Ready to scale your digital growth?
+              </h2>
+              <p className="text-lg text-portfolio-text/80 mb-6">
+                Get a free audit of your current digital strategy and discover opportunities for growth.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-portfolio-accent text-white px-6 py-3 rounded-full hover:bg-portfolio-accent/80 transition-colors font-medium">
+                  Get Free Audit
+                </button>
+                <button className="border-2 border-portfolio-accent text-portfolio-accent px-6 py-3 rounded-full hover:bg-portfolio-accent hover:text-white transition-colors font-medium">
+                  Schedule a Call
+                </button>
+              </div>
             </div>
 
           </div>
