@@ -20,70 +20,112 @@ const SectionLoading = () => (
   </div>
 );
 
-// Casos de éxito específicos de United Media
+// Casos de éxito específicos de United Media - Inspirados en metodología Metrix Digital
 const successStories = [
   {
-    id: "ecommerce-fashion",
-    title: "E-commerce Fashion Brand",
-    client: "Luxury Fashion Retailer",
-    industry: "Fashion & Retail",
-    challenge: "Low online conversion rate and high cart abandonment",
-    solution: "Complete digital transformation with GA4, enhanced ecommerce tracking, and personalized campaigns",
+    id: "agricultural-machinery",
+    title: "Optimización UX para Maquinaria Agrícola",
+    client: "Distribuidora Agrícola Nacional",
+    industry: "Agricultura & Maquinaria",
+    challenge: "Incrementar la tasa de conversión del sitio mediante la identificación de obstáculos en la experiencia del usuario y la implementación de soluciones efectivas para la generación de leads.",
+    solution: "Empleamos metodología 360° para recopilar datos desde diversas perspectivas. Análisis cuantitativo con GA4 identificó cuellos de botella en páginas de producto. Análisis cualitativo mediante entrevistas a clientes reveló fricciones específicas. Implementamos A/B testing durante 7 semanas en VWO.",
+    methodology: [
+      "Análisis Cuantitativo: Identificación de cuellos de botella con GA4 y mapas de calor",
+      "Análisis Cualitativo: Entrevistas con muestra representativa de clientes",
+      "Levantamiento de Insights: Identificación de problemas UX en formularios principales",
+      "A/B Testing: Implementación en VWO durante 7 semanas en móvil y desktop"
+    ],
     results: {
-      roas: "+350%",
-      conversion: "+185%",
-      revenue: "$2.8M",
-      period: "6 months"
+      conversion: "+14.64%",
+      mobile_leads: "+6.3%",
+      desktop_leads: "+26.1%",
+      period: "7 semanas"
     },
+    detailed_results: [
+      { metric: "Tasa de conversión general", value: "+14.64%", description: "Aumento en leads para ambos dispositivos" },
+      { metric: "Leads móviles", value: "+6.3%", description: "Mejora en conversión móvil" },
+      { metric: "Leads desktop", value: "+26.1%", description: "Incremento significativo en desktop" },
+      { metric: "Descargas de folleto móvil", value: "+67%", description: "Mayor engagement en contenido" },
+      { metric: "Descargas de folleto desktop", value: "+60%", description: "Incremento en material descargado" }
+    ],
     metrics: [
-      { label: "ROAS Increase", value: "350%", icon: DollarSign },
-      { label: "Conversion Rate", value: "+185%", icon: TrendingUp },
-      { label: "Revenue Generated", value: "$2.8M", icon: BarChart3 }
+      { label: "Conversión General", value: "+14.64%", icon: TrendingUp },
+      { label: "Leads Desktop", value: "+26.1%", icon: Target },
+      { label: "Descargas Folleto", value: "+67%", icon: BarChart3 }
     ],
     image: "/projects/enjoy-the-unexpected/enjoy-the-unexpected_profile.webp",
-    tags: ["E-commerce", "GA4", "Google Ads"]
+    tags: ["CRO", "A/B Testing", "UX Optimization", "GA4"],
+    impact: "Crecimiento significativo de ventas, reducción del costo por lead y optimización del ROI en campañas de marketing digital."
   },
   {
-    id: "b2b-saas",
-    title: "B2B SaaS Platform",
-    client: "Tech Startup",
-    industry: "Software & Technology",
-    challenge: "Inefficient lead generation and poor attribution tracking",
-    solution: "Advanced analytics setup, lead scoring, and multi-touch attribution model",
+    id: "fintech-conversion",
+    title: "Optimización de Conversión para Fintech",
+    client: "Plataforma de Inversiones Digitales",
+    industry: "Fintech & Servicios Financieros",
+    challenge: "Baja tasa de registro de usuarios y alta fricción en el proceso de onboarding. Los usuarios abandonaban el proceso en el paso de verificación de identidad.",
+    solution: "Implementamos metodología de optimización integral: análisis de funnel con GA4 y Hotjar, identificación de puntos de fricción mediante session recordings, rediseño del flujo de onboarding con micro-interacciones y testing multivariado.",
+    methodology: [
+      "Análisis de Funnel: Identificación de drop-off points con GA4 y Hotjar",
+      "Session Recordings: Análisis cualitativo de comportamiento de usuarios",
+      "Rediseño UX: Simplificación del proceso de verificación de identidad",
+      "Testing Multivariado: Pruebas de diferentes variaciones del flujo"
+    ],
     results: {
-      leads: "+420%",
-      quality: "+230%",
-      cost: "-65%",
-      period: "4 months"
+      registration: "+89%",
+      onboarding_completion: "+156%",
+      time_to_first_investment: "-45%",
+      period: "3 meses"
     },
+    detailed_results: [
+      { metric: "Tasa de registro", value: "+89%", description: "Incremento en nuevos usuarios registrados" },
+      { metric: "Completación onboarding", value: "+156%", description: "Más usuarios completando verificación" },
+      { metric: "Tiempo primera inversión", value: "-45%", description: "Reducción en tiempo hasta primera transacción" },
+      { metric: "Retención día 30", value: "+73%", description: "Mayor retención de usuarios activos" },
+      { metric: "Valor promedio inversión", value: "+34%", description: "Incremento en ticket promedio" }
+    ],
     metrics: [
-      { label: "Quality Leads", value: "+420%", icon: Users },
-      { label: "Lead Quality Score", value: "+230%", icon: Target },
-      { label: "Cost per Lead", value: "-65%", icon: TrendingUp }
+      { label: "Tasa Registro", value: "+89%", icon: Users },
+      { label: "Onboarding", value: "+156%", icon: Target },
+      { label: "Tiempo Inversión", value: "-45%", icon: TrendingUp }
     ],
     image: "/projects/closer-to-sun/closer-to-sun_profile.webp",
-    tags: ["B2B", "Lead Generation", "Attribution"]
+    tags: ["Fintech", "Conversion Optimization", "User Onboarding", "Hotjar"],
+    impact: "Transformación digital completa que resultó en mayor adquisición de usuarios y incremento significativo en el valor de vida del cliente."
   },
   {
-    id: "local-restaurant",
-    title: "Restaurant Chain Expansion",
-    client: "Regional Restaurant Group",
-    industry: "Food & Beverage",
-    challenge: "Expanding to new markets with limited brand awareness",
-    solution: "Local SEO optimization, geo-targeted campaigns, and social media strategy",
+    id: "retail-omnichannel",
+    title: "Estrategia Omnicanal para Retail",
+    client: "Cadena de Tiendas de Moda",
+    industry: "Retail & Moda",
+    challenge: "Desconexión entre canales online y offline, baja atribución de ventas cross-channel y experiencia fragmentada del cliente entre tienda física y e-commerce.",
+    solution: "Implementamos estrategia omnicanal integral con Customer Data Platform, attribution modeling avanzado, integración de inventarios en tiempo real y personalización basada en comportamiento cross-channel usando GA4 y herramientas de marketing automation.",
+    methodology: [
+      "Customer Data Platform: Unificación de datos de todos los touchpoints",
+      "Attribution Modeling: Implementación de modelos de atribución cross-channel",
+      "Inventory Integration: Sincronización en tiempo real entre canales",
+      "Personalization Engine: Recomendaciones basadas en comportamiento omnicanal"
+    ],
     results: {
-      locations: "12 new",
-      awareness: "+280%",
-      footfall: "+150%",
-      period: "8 months"
+      cross_channel_sales: "+234%",
+      customer_lifetime_value: "+187%",
+      inventory_turnover: "+45%",
+      period: "6 meses"
     },
+    detailed_results: [
+      { metric: "Ventas cross-channel", value: "+234%", description: "Incremento en ventas atribuibles a múltiples canales" },
+      { metric: "Customer Lifetime Value", value: "+187%", description: "Aumento en valor de vida del cliente" },
+      { metric: "Rotación de inventario", value: "+45%", description: "Mejor gestión de stock entre canales" },
+      { metric: "Tasa de conversión omnicanal", value: "+156%", description: "Mejora en conversión cross-channel" },
+      { metric: "Satisfacción del cliente", value: "+92%", description: "Incremento en NPS y satisfacción" }
+    ],
     metrics: [
-      { label: "New Locations", value: "12", icon: Target },
-      { label: "Brand Awareness", value: "+280%", icon: Eye },
-      { label: "Foot Traffic", value: "+150%", icon: Users }
+      { label: "Ventas Cross-Channel", value: "+234%", icon: DollarSign },
+      { label: "Customer LTV", value: "+187%", icon: TrendingUp },
+      { label: "Rotación Inventario", value: "+45%", icon: BarChart3 }
     ],
     image: "/projects/sabor-de-barrio/sabor-de-barrio_profile.webp",
-    tags: ["Local SEO", "Geo-targeting", "Social Media"]
+    tags: ["Omnichannel", "CDP", "Attribution", "Personalization"],
+    impact: "Transformación completa de la experiencia del cliente, generando mayor lealtad, incremento en ventas y optimización operacional significativa."
   }
 ];
 
@@ -297,27 +339,91 @@ const UnitedMedia = () => {
 
                     {/* Expanded Details */}
                     {selectedStory === story.id && (
-                      <div className="mt-4 p-4 bg-portfolio-text/5 rounded-lg border border-portfolio-text/10">
-                        <div className="space-y-3">
+                      <div className="mt-4 p-6 bg-portfolio-text/5 rounded-lg border border-portfolio-text/10">
+                        <div className="space-y-6">
+                          {/* Desafío */}
                           <div>
-                            <h4 className="font-semibold text-portfolio-text mb-1">Challenge</h4>
-                            <p className="text-sm text-portfolio-text/70">{story.challenge}</p>
+                            <h4 className="font-bold text-portfolio-text mb-3 flex items-center">
+                              <Target className="w-4 h-4 mr-2 text-portfolio-accent" />
+                              Desafío
+                            </h4>
+                            <p className="text-sm text-portfolio-text/80 leading-relaxed">{story.challenge}</p>
                           </div>
+                          
+                          {/* Solución */}
                           <div>
-                            <h4 className="font-semibold text-portfolio-text mb-1">Solution</h4>
-                            <p className="text-sm text-portfolio-text/70">{story.solution}</p>
+                            <h4 className="font-bold text-portfolio-text mb-3 flex items-center">
+                              <TrendingUp className="w-4 h-4 mr-2 text-portfolio-accent" />
+                              ¿Qué hicimos?
+                            </h4>
+                            <p className="text-sm text-portfolio-text/80 leading-relaxed mb-3">{story.solution}</p>
                           </div>
-                          <div className="pt-2 border-t border-portfolio-text/10">
-                            <h4 className="font-semibold text-portfolio-text mb-2">Key Results</h4>
-                            <div className="grid grid-cols-2 gap-2 text-sm">
-                              {Object.entries(story.results).map(([key, value]) => (
-                                <div key={key} className="flex justify-between">
-                                  <span className="text-portfolio-text/70 capitalize">{key}:</span>
-                                  <span className="font-semibold text-portfolio-text">{value}</span>
-                                </div>
-                              ))}
+
+                          {/* Metodología */}
+                          {story.methodology && (
+                            <div>
+                              <h4 className="font-bold text-portfolio-text mb-3 flex items-center">
+                                <BarChart3 className="w-4 h-4 mr-2 text-portfolio-accent" />
+                                ¿Cómo lo abordamos?
+                              </h4>
+                              <div className="space-y-2">
+                                {story.methodology.map((step, idx) => (
+                                  <div key={idx} className="flex items-start">
+                                    <div className="w-6 h-6 bg-portfolio-accent text-portfolio-bg rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5 flex-shrink-0">
+                                      {idx + 1}
+                                    </div>
+                                    <p className="text-sm text-portfolio-text/80">{step}</p>
+                                  </div>
+                                ))}
+                              </div>
                             </div>
+                          )}
+
+                          {/* Resultados Detallados */}
+                          <div className="pt-4 border-t border-portfolio-text/10">
+                            <h4 className="font-bold text-portfolio-text mb-3 flex items-center">
+                              <Award className="w-4 h-4 mr-2 text-portfolio-accent" />
+                              Resultados
+                            </h4>
+                            
+                            {story.detailed_results ? (
+                              <div className="space-y-3">
+                                {story.detailed_results.map((result, idx) => (
+                                  <div key={idx} className="flex items-center justify-between p-3 bg-portfolio-accent/5 rounded-lg">
+                                    <div className="flex-1">
+                                      <div className="font-semibold text-portfolio-text text-sm">{result.metric}</div>
+                                      <div className="text-xs text-portfolio-text/70">{result.description}</div>
+                                    </div>
+                                    <div className="text-lg font-bold text-portfolio-accent ml-4">
+                                      {result.value}
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                            ) : (
+                              <div className="grid grid-cols-2 gap-2 text-sm">
+                                {Object.entries(story.results).map(([key, value]) => (
+                                  <div key={key} className="flex justify-between p-2 bg-portfolio-accent/5 rounded">
+                                    <span className="text-portfolio-text/70 capitalize">{key}:</span>
+                                    <span className="font-semibold text-portfolio-text">{value}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            )}
                           </div>
+
+                          {/* Impacto */}
+                          {story.impact && (
+                            <div className="pt-4 border-t border-portfolio-text/10">
+                              <h4 className="font-bold text-portfolio-text mb-3 flex items-center">
+                                <DollarSign className="w-4 h-4 mr-2 text-portfolio-accent" />
+                                Impacto
+                              </h4>
+                              <p className="text-sm text-portfolio-text/80 leading-relaxed italic">
+                                {story.impact}
+                              </p>
+                            </div>
+                          )}
                         </div>
                       </div>
                     )}
