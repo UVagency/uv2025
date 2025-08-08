@@ -11,6 +11,12 @@ interface Project {
 
 const projects: Project[] = [
   {
+    name: "EXPOMASCOTAS",
+    year: "INABA CHURU",
+    categories: ["INTEGRATED"],
+    comingSoon: true,
+  },
+  {
     name: "SABOR DE BARRIO",
     year: "DELICIOSA",
     categories: ["INTEGRATED"],
@@ -50,7 +56,7 @@ const projects: Project[] = [
     name: "FLY YOUR WAY", 
     year: "JETSMART", 
     categories: ["MEDIA"], 
-    comingSoon: true,
+    comingSoon: false,
     awardWinning: true,
   },
   /*{ 
