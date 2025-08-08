@@ -107,6 +107,11 @@ const Portfolio = () => {
   }, [shouldScroll]);
 
   const handleProjectClick = (projectName: string) => {
+    const project = projects.find(p => p.name === projectName);
+    if (project?.comingSoon) {
+      return; // No navegar si el proyecto está en coming soon
+    }
+    
     const projectId = projectName.toLowerCase().replace(/\s+/g, '-');
     navigate(`/project/${projectId}`, { 
       state: { fromProject: true },
@@ -126,7 +131,7 @@ const Portfolio = () => {
           <React.Fragment key={project.name}>
             {index !== 0 && <div className="portfolio-divider"></div>}
             <div 
-              className="project-item group cursor-pointer"
+              className={`project-item group ${project.comingSoon ? 'cursor-default' : 'cursor-pointer'}`}
               onMouseEnter={() => setHoveredProject(project.name)}
               onMouseLeave={() => setHoveredProject(null)}
               onClick={() => handleProjectClick(project.name)}
