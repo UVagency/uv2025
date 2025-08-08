@@ -1,5 +1,6 @@
 import { lazy } from 'react';
 import React from 'react';
+import expomascotas from './projects/expomascotas.json';
 import enjoyTheUnexpected from './projects/enjoy-the-unexpected.json';
 import festivalSeason from './projects/festival-season.json';
 import lollaVibes from './projects/lolla-vibes.json';
@@ -86,6 +87,7 @@ export interface ProjectData {
 
 // Cargar proyectos desde archivos JSON
 const projectsData: Record<string, ProjectData> = {
+  "expomascotas": expomascotas as ProjectData,
   "enjoy-the-unexpected": enjoyTheUnexpected as ProjectData,
   "festival-season": festivalSeason as ProjectData,
   "lolla-vibes": lollaVibes as ProjectData,

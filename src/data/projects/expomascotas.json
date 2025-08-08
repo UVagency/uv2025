@@ -1,0 +1,48 @@
+{
+  "id": "expomascotas",
+  "name": "EXPOMASCOTAS",
+  "year": "INABA CHURU",
+  "categories": ["INTEGRATED"],
+  "description": "As the world's number one cat snack brand, Inaba Churu needed a memorable presence at the most important fair in their category, Expo Mascotas. We took on the challenge of designing an imposing space, the largest stand at the fair with over 500 products on display and interactive dynamics with the public.",
+  "client": "Inaba Churu",
+  "overview": "We created a unique, vibrant, and full-of-life experience that captured everyone's attention. When creativity, execution, and passion come together, results exceed all expectations.\n\nThis was Inaba's first time participating as a Japanese office at Expo Mascotas, bringing together the entire Inaba Chile team with visits from Inaba Japan. The experience was designed to showcase Expo Mascotas with maximum energy and impact.\n\nThe campaign focused on strengthening Inaba's presence in Chile after more than 6 years in the market, participating as a distributor with more than six brands present in Chile.",
+  "execution": "We designed and executed the largest stand at Expo Mascotas, featuring over 500 products on display and creating interactive dynamics with the public. The space was designed to be imposing and memorable, perfectly representing Inaba's position as the world's leading cat snack brand.\n\nThe stand featured:\n- The largest exhibition space at the fair\n- Over 500 products strategically displayed\n- Interactive dynamics with visitors\n- Vibrant and energetic design that captured all attention\n- Integration of the entire Inaba Chile team with support from Inaba Japan\n\nThe experience was designed to showcase the brand's commitment to the Chilean market and strengthen relationships with distributors and clients. The stand became the center of attention at the fair, generating significant impact among visitors and industry professionals.",
+  "marketingResults": "The Expomascotas campaign achieved outstanding results, establishing Inaba as a dominant presence at the most important pet industry fair in Chile.\n\nKey achievements:\n- Largest and most impactful stand at Expo Mascotas\n- Over 500 products successfully displayed and promoted\n- Strong engagement with distributors and clients\n- Significant brand awareness increase in the Chilean market\n- Strengthened relationships with commercial partners\n- Successful integration of Japanese and Chilean teams\n- Created lasting impressions among industry professionals and consumers\n\nThe campaign successfully positioned Inaba Churu as a leading brand in the Chilean pet market, generating excitement and anticipation for future growth opportunities with partners like Ludipec.",
+  "videoUrl": "https://vimeo.com/1108180470",
+  "images": [
+    "/projects/expomascotas/expomascotas-01.webp",
+    "/projects/expomascotas/expomascotas-02.webp",
+    "/projects/expomascotas/expomascotas-03.webp"
+  ],
+  "gallery": {
+    "featureText": "We created a unique, vibrant, and full-of-life experience that captured everyone's attention. When creativity, execution, and passion come together, results exceed all expectations. - Inaba Chile Team -",
+    "sections": [
+      {
+        "type": "banner",
+        "image": "/projects/expomascotas/expomascotas-04.webp"
+      },
+      {
+        "type": "imageGrid",
+        "columns": 4,
+        "images": [
+          {
+            "src": "/projects/expomascotas/expomascotas-05.webp",
+            "alt": "Stand principal de Inaba"
+          },
+          {
+            "src": "/projects/expomascotas/expomascotas-06.webp",
+            "alt": "Exhibición de productos"
+          },
+          {
+            "src": "/projects/expomascotas/expomascotas-07.webp",
+            "alt": "Interacción con visitantes"
+          },
+          {
+            "src": "/projects/expomascotas/expomascotas-08.webp",
+            "alt": "Experiencia vibrante"
+          }
+        ]
+      }
+    ]
+  }
+}
