@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 interface Project {
@@ -123,10 +123,9 @@ const Portfolio = () => {
 
       <div ref={projectsRef} className="space-y-0 py-8">
         {projects.map((project, index) => (
-          <>
+          <React.Fragment key={project.name}>
             {index !== 0 && <div className="portfolio-divider"></div>}
             <div 
-              key={project.name} 
               className="project-item group cursor-pointer"
               onMouseEnter={() => setHoveredProject(project.name)}
               onMouseLeave={() => setHoveredProject(null)}
@@ -174,7 +173,7 @@ const Portfolio = () => {
                 </div>
               </div>
             </div>
-          </>
+          </React.Fragment>
         ))}
       </div>
     </div>
