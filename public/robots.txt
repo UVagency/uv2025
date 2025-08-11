@@ -21,7 +21,6 @@ Allow: /
 
 # Sitemaps
 Sitemap: https://uv.agency/sitemap.xml
-Sitemap: https://uv.agency/sitemap-es.xml
 
 # Crawl-delay
 Crawl-delay: 10
