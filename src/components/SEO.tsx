@@ -25,11 +25,11 @@ const defaultTitle = {
 };
 
 const defaultDescription = {
-  en: 'UV Agency - The integrated marketing agency that grows your brand through Omnichannel campaigns, crafts Events that move people to create customers, and delivers results through Smart Media. One agency, all in.',
-  es: 'UV Agency - La agencia de marketing integrado que hace crecer tu marca a través de campañas Omnicanal, Eventos que mueven a las personas para crear clientes y entrega resultados a través de inversión en medios inteligente. One Agency, All In.'
+  en: 'UV Agency - Integrated Marketing Agency. Full-service independent agency specializing in omnichannel campaigns, events, and smart media.',
+  es: 'UV Agency - Agencia de Marketing Integrado. Agencia independiente especializada en campañas omnicanal, eventos y medios inteligentes.'
 };
 
-  const defaultImage = '/images/uv_logo.webp';
+const defaultImage = '/images/uv_logo.webp';
 const defaultUrl = 'https://uv.agency';
 const defaultKeywords = {
   en: [
@@ -71,7 +71,7 @@ export const SEO = ({
   lang = 'en'
 }: SEOProps) => {
   const seoTitle = project 
-    ? `${project.name} | ${project.client} ${project.year} | UV Agency`
+    ? `${project.name} - ${project.client} ${project.year} - UV Agency`
     : title || defaultTitle[lang];
   
   const seoDescription = description || defaultDescription[lang];
@@ -179,8 +179,8 @@ export const SEO = ({
 
       {/* Twitter Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@agencyuv" />
-      <meta name="twitter:creator" content="@agencyuv" />
+      <meta name="twitter:site" content="@oneagencyallin" />
+      <meta name="twitter:creator" content="@oneagencyallin" />
       <meta name="twitter:title" content={seoTitle} />
       <meta name="twitter:description" content={seoDescription} />
       <meta name="twitter:image" content={seoImage} />
