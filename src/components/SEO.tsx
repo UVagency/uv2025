@@ -25,8 +25,8 @@ const defaultTitle = {
 };
 
 const defaultDescription = {
-  en: 'United Visions 2025 UV Agency Media Experiences Events',
-  es: 'United Visions 2025 UV Agencia Experiencias Mediáticas y Eventos'
+  en: 'UV Agency - The integrated marketing agency that grows your brand through Omnichannel campaigns, crafts Events that move people to create customers, and delivers results through Smart Media. One agency, all in.',
+  es: 'UV Agency - La agencia de marketing integrado que hace crecer tu marca a través de campañas Omnicanal, Eventos que mueven a las personas para crear clientes y entrega resultados a través de inversión en medios inteligente. One Agency, All In.'
 };
 
   const defaultImage = '/images/uv_logo.webp';
