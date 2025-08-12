@@ -112,9 +112,9 @@ export const SEO = ({
           '@type': 'Organization',
           sameAs: [
             'https://x.com/oneagencyallin',
-            'https://linkedin.com/company/uv-agency',
+            'https://www.linkedin.com/company/uvagency',
             'https://instagram.com/agencyuv',
-            'https://facebook.com/agencyuv'
+            'https://facebook.com/oneagencyallin'
           ]
         };
       case 'project':
