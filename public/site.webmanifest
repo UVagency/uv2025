@@ -1,0 +1,15 @@
+{
+  "name": "UV 2025 Agency Media Experiences",
+  "short_name": "UV Agency",
+  "description": "United Visions 2025 UV Agency Media Experiences Events",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon"
+    }
+  ],
+  "theme_color": "#6BD8D7",
+  "background_color": "#ffffff",
+  "display": "standalone"
+} 
