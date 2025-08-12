@@ -111,7 +111,7 @@ export const SEO = ({
           ...baseSchema,
           '@type': 'Organization',
           sameAs: [
-            'https://twitter.com/agencyuv',
+            'https://x.com/oneagencyallin',
             'https://linkedin.com/company/uv-agency',
             'https://instagram.com/agencyuv',
             'https://facebook.com/agencyuv'
