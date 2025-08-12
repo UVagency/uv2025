@@ -20,8 +20,8 @@ interface SEOProps {
 }
 
 const defaultTitle = {
-  en: 'UV Agency | Integrated Marketing Agency',
-  es: 'UV Agencia | Agencia de Marketing Integrado'
+  en: 'UV Agency - Integrated Marketing Agency',
+  es: 'UV Agency - Agencia de Marketing Integrado'
 };
 
 const defaultDescription = {
@@ -34,7 +34,7 @@ const defaultUrl = 'https://uv.agency';
 const defaultKeywords = {
   en: [
     'UV Agency',
-    'Media Experiences',
+    'Media Agency',
     'Creative Agency',
     'Digital Marketing',
     'Brand Strategy',
@@ -44,8 +44,8 @@ const defaultKeywords = {
     'Content Creation'
   ],
   es: [
-    'UV Agencia',
-    'Experiencias Mediáticas',
+    'UV Agency',
+    'Planificación y compra de medios',
     'Agencia Creativa',
     'Marketing Digital',
     'Estrategia de Marca',
