@@ -20,8 +20,8 @@ interface SEOProps {
 }
 
 const defaultTitle = {
-  en: 'UV 2025 Agency Media Experiences',
-  es: 'UV 2025 Agencia Experiencias Mediáticas'
+  en: 'UV Agency | Integrated Marketing Agency',
+  es: 'UV Agencia | Agencia de Marketing Integrado'
 };
 
 const defaultDescription = {
