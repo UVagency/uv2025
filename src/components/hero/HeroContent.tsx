@@ -51,13 +51,13 @@ export const HeroContent = () => {
               <span className="font-normal italic">through</span>
             </span>{" "}
             <span>
-              <span className="text-portfolio-accent italic hover:underline">Omnichannel</span>
+              <span className="text-[#EBA3A9] italic hover:underline">Omnichannel</span>
             </span>{" "}
             <span>
               <span className="font-normal italic">campaigns, crafts</span>
             </span>{" "}
             <span>
-              <span className="text-portfolio-accent italic hover:underline">Events</span>
+              <span className="text-portfolio-muted-purple italic hover:underline">Events</span>
             </span>{" "}
             <span>
               <span className="font-normal italic">that move</span>
