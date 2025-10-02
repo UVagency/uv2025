@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { X } from 'lucide-react';
 import Footer from '../components/Footer';
 import { SEO } from '../components/SEO';
-import YouTubePlayer from '../components/ui/YouTubePlayer';
+import GoogleDrivePlayer from '../components/ui/GoogleDrivePlayer';
 import { useNavigation } from '../hooks/useNavigation';
 import AuthGuard from '../components/AuthGuard';
 
@@ -39,7 +39,7 @@ const PrivateVideo = () => {
   const videoInfo = {
     title: "FALABELLA Fashion Live 2025",
     description: "Exclusive fashion event presentation",
-      videoUrl: "https://www.youtube.com/watch?v=IjbJ2DNCSvU",
+      videoUrl: "https://drive.google.com/file/d/1a0_V3Yt6wX4QnpY1lun0FQzwQvIrr6j_/view?usp=sharing",
     year: "2025",
     category: "Fashion Event",
     client: "Falabella"
@@ -86,18 +86,10 @@ const PrivateVideo = () => {
 
             {/* Video Section */}
             <Suspense fallback={<VideoLoading />}>
-              <YouTubePlayer
+              <GoogleDrivePlayer
                 videoUrl={videoInfo.videoUrl}
                 title={videoInfo.title}
-                autoplay={false}
-                controls={true}
-                loop={false}
                 className="mb-16 overflow-hidden rounded-lg bg-black"
-                enableAnalytics={true}
-                analyticsData={{
-                  videoId: 'falabella-fashion-live-2025',
-                  videoTitle: videoInfo.title
-                }}
               />
             </Suspense>
 
