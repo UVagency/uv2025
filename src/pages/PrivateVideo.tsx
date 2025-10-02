@@ -19,10 +19,10 @@ const PrivateVideo = () => {
   const navigate = useNavigate();
   const { toggleOurCompany } = useNavigation();
   
-  const handleClose = () => {
+  const handleClose = React.useCallback(() => {
     toggleOurCompany();
     navigate('/');
-  };
+  }, [toggleOurCompany, navigate]);
 
   React.useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -33,7 +33,7 @@ const PrivateVideo = () => {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
+  }, [handleClose]);
 
   // Video information
   const videoInfo = {
@@ -51,7 +51,7 @@ const PrivateVideo = () => {
         <SEO 
           title="FALABELLA Fashion Live 2025 | UV Agency"
           description="Exclusive fashion event presentation by UV Agency for Falabella."
-          pageType="private"
+          pageType="project"
         />
         <div className="fixed inset-0 z-50 bg-portfolio-bg overflow-y-auto">
         <div className="w-full mx-auto pt-8 pb-16">
