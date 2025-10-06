@@ -14,7 +14,7 @@ const projects: Project[] = [
     name: "EXPOMASCOTAS",
     year: "INABA CHURU",
     categories: ["INTEGRATED"],
-    comingSoon: true,
+    comingSoon: false,
   },
   {
     name: "SABOR DE BARRIO",
