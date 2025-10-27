@@ -78,8 +78,8 @@ const OurCompany = () => {
 
   const coreTeam = [
     { name: "Cristina Recalde", title: "CD", url: "https://www.linkedin.com/in/cristinarecalde/", photo: "/images/team/cristinarecalde.webp" },
-    { name: "Cristopher Arias", title: "UX Lead", url: "https://www.linkedin.com/in/cristopherfuentesarias/", photo: "/images/team/cristopherfuentesarias.webp" },
-    { name: "Fernanda Lebrón", title: "UM Lead", url: "https://www.linkedin.com/in/fernanda-lebr%C3%B3n-0325b5107/", photo: "/images/team/fernandalebron.webp" },
+    { name: "Cristopher Arias", title: "Head UX", url: "https://www.linkedin.com/in/cristopherfuentesarias/", photo: "/images/team/cristopherfuentesarias.webp" },
+    { name: "Fernanda Lebrón", title: "Head UM", url: "https://www.linkedin.com/in/fernanda-lebr%C3%B3n-0325b5107/", photo: "/images/team/fernandalebron.webp" },
     { name: "Lorena Cambas", title: "CFO", url: "https://www.linkedin.com/in/lorena-vanesa-cambas-5a714a23/", photo: "/images/team/lorenacambas.webp" },
     { name: "Agustin Herrero", title: "COO", url: "https://www.linkedin.com/in/agustinherrero/", photo: "/images/team/agustinherrero.webp" },
     { name: "Javier Severini", title: "CEO", url: "https://www.linkedin.com/in/javierseverini/", photo: "/images/team/javierseverini.webp" },
