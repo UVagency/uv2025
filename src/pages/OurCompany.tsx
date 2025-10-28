@@ -79,8 +79,8 @@ const OurCompany = () => {
   const coreTeam = [
     { name: "Cristi Recalde", title: "CD", url: "https://www.linkedin.com/in/cristinarecalde/", photo: "/images/team/cristinarecalde.webp" },
     { name: "Cami Águila Duarte", title: "Head of Operations", url: "https://www.linkedin.com/in/camila-javiera-%C3%A1guila-duarte/", photo: "/images/team/camiaguiladuarte.webp" },
-    { name: "Cris Arias", title: "Head UX", url: "https://www.linkedin.com/in/cristopherfuentesarias/", photo: "/images/team/cristopherfuentesarias.webp" },
-    { name: "Fer Lebrón", title: "Head UM", url: "https://www.linkedin.com/in/fernanda-lebr%C3%B3n-0325b5107/", photo: "/images/team/fernandalebron.webp" },
+    { name: "Cris Arias", title: "Head of UX", url: "https://www.linkedin.com/in/cristopherfuentesarias/", photo: "/images/team/cristopherfuentesarias.webp" },
+    { name: "Fer Lebrón", title: "Head of UM", url: "https://www.linkedin.com/in/fernanda-lebr%C3%B3n-0325b5107/", photo: "/images/team/fernandalebron.webp" },
     { name: "Lore Cambas", title: "CFO", url: "https://www.linkedin.com/in/lorena-vanesa-cambas-5a714a23/", photo: "/images/team/lorenacambas.webp" },
     { name: "Agus Herrero", title: "COO", url: "https://www.linkedin.com/in/agustinherrero/", photo: "/images/team/agustinherrero.webp" },
     { name: "Javi Severini", title: "CEO", url: "https://www.linkedin.com/in/javierseverini/", photo: "/images/team/javierseverini.webp" },
