@@ -33,7 +33,7 @@ export const HeroContent = () => {
               <span className="font-normal italic">is the</span>
             </span>{" "}
             <span>
-              <span className="font-normal italic">integrated</span>
+              <span className="font-normal italic">integrated marketing</span>
             </span>{" "}
             <span>
               <span className="font-normal italic">marketing</span>
