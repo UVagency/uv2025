@@ -25,30 +25,24 @@ export const HeroContent = () => {
     <div className="w-full flex flex-col justify-start pt-8 md:pt-10">
       <div className={`max-w-[95%] md:max-w-[95%] lg:max-w-[95%] xl:max-w-[95%] mx-auto transition-all duration-500 ${showMainText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="text-left">
-          <h1 className="font-hero text-[clamp(1.5rem,2.5vw,2rem)] md:text-[clamp(1.75rem,3vw,2.5rem)] lg:text-[clamp(2rem,3.5vw,3rem)] leading-[1.4] text-portfolio-text">
-            <div className="mb-6">
-              <span className="font-normal">
-                You know that nothing replaces real human connection.
-              </span>
-            </div>
+          <div className="font-headline text-5xl font-bold text-portfolio-text space-y-6">
+            <p className="mb-6">
+              YOU KNOW THAT NOTHING REPLACES REAL HUMAN CONNECTION.
+            </p>
             
-            <div className="mb-6">
-              <span className="font-normal">
-                Since 1999, we've helped brands find meaning in constant change — where data brings clarity and empathy creates connection.
-              </span>
-            </div>
+            <p className="mb-6">
+              SINCE 1999, WE'VE HELPED BRANDS FIND MEANING IN CONSTANT CHANGE, WHERE DATA BRINGS CLARITY AND EMPATHY CREATES CONNECTION.
+            </p>
 
-            <div className="mb-8">
-              <span className="font-normal">
-                Modern is not about chasing new — it's about making new make sense.
-              </span>
-            </div>
+            <p className="mb-8">
+              MODERN IS NOT ABOUT CHASING NEW, IT'S ABOUT MAKING NEW MAKE SENSE.
+            </p>
 
-            <div className="mt-4 flex items-center gap-3">
+            <div className="flex items-center gap-3 mt-16 md:mt-20">
               <div className={`w-12 h-12 md:w-16 md:h-16 flex-shrink-0 transition-all duration-300 ${showOneAgency ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
                 <OptimizedImage
                   src="/images/uv_logo.webp"
-                  alt="UV Logo"
+                  alt="United Visions"
                   className="w-full h-full object-cover rounded-full"
                   wrapperClassName="rounded-full overflow-hidden"
                 />
@@ -60,7 +54,7 @@ export const HeroContent = () => {
                 <strong><span className="text-portfolio-accent hover:underline">One agency, all in.</span></strong>
               </button>
             </div>
-          </h1>
+          </div>
         </div>
       </div>
     </div>
