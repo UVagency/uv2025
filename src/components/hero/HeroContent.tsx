@@ -25,7 +25,7 @@ export const HeroContent = () => {
     <div className="w-full flex flex-col justify-start pt-8 md:pt-10">
       <div className={`max-w-[98%] md:max-w-[98%] lg:max-w-[98%] xl:max-w-[98%] mx-auto transition-all duration-500 ${showMainText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="text-left">
-          <div className="font-headline text-5xl font-bold text-portfolio-text space-y-6">
+          <div className="font-headline text-2xl md:text-4xl lg:text-5xl font-bold text-portfolio-text space-y-6">
             <p className="mb-6">
               You know that nothing replaces real human connection.
             </p>
