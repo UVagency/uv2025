@@ -108,12 +108,10 @@ const projects: Project[] = [
 
 const Portfolio = () => {
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const navigate = useNavigate();
   const location = useLocation();
   const projectsRef = useRef<HTMLDivElement>(null);
   const [shouldScroll, setShouldScroll] = useState(false);
-  const previewRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Verificar si venimos de una página de proyecto
@@ -134,21 +132,6 @@ const Portfolio = () => {
       setShouldScroll(false);
     }
   }, [shouldScroll]);
-
-  // Efecto para rastrear la posición del mouse
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
-    if (hoveredProject) {
-      window.addEventListener('mousemove', handleMouseMove);
-    }
-
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, [hoveredProject]);
 
   const handleProjectClick = (projectName: string) => {
     const project = projects.find(p => p.name === projectName);
@@ -231,7 +214,6 @@ const Portfolio = () => {
         ))}
       </div>
 
-<<<<<<< HEAD
       {/* Imagen banner fija a la derecha */}
       {hoveredProjectData?.bannerImage && (
         <div
@@ -251,32 +233,10 @@ const Portfolio = () => {
               height: '320px',
               backgroundColor: '#000',
               animation: hoveredProject ? 'slideInRight 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)' : 'none',
-=======
-      {/* Imagen banner que sigue el cursor */}
-      {hoveredProjectData?.bannerImage && (
-        <div
-          ref={previewRef}
-          className="fixed pointer-events-none z-50"
-          style={{
-            left: `${mousePosition.x + 30}px`,
-            top: `${mousePosition.y - 125}px`,
-            opacity: hoveredProject ? 1 : 0,
-            transition: 'opacity 0.3s ease-out',
-          }}
-        >
-          <div 
-            className="relative overflow-hidden rounded-xl shadow-2xl"
-            style={{
-              width: '450px',
-              height: '280px',
-              backgroundColor: '#000',
-              animation: 'scaleIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)',
->>>>>>> a77acb5bffa617111ebaaa98c0a525ef74f9b1c3
             }}
           >
             <img
               src={hoveredProjectData.bannerImage}
-<<<<<<< HEAD
               alt={`${hoveredProjectData.name} preview`}
               className="w-full h-full object-cover"
               style={{
@@ -316,38 +276,11 @@ const Portfolio = () => {
                 {hoveredProjectData.year}
               </p>
             </div>
-=======
-              alt={`${hoveredProjectData.name} banner`}
-              className="w-full h-full object-cover"
-              style={{
-                filter: 'brightness(0.95)',
-              }}
-            />
-            {/* Borde con gradiente turquesa */}
-            <div 
-              className="absolute inset-0 rounded-xl"
-              style={{
-                background: 'linear-gradient(135deg, transparent 0%, rgba(107, 216, 215, 0.3) 50%, transparent 100%)',
-                border: '2px solid',
-                borderColor: '#6BD8D7',
-                boxShadow: '0 0 20px rgba(107, 216, 215, 0.4)',
-              }}
-            />
-            {/* Efecto de brillo en la esquina */}
-            <div 
-              className="absolute top-0 right-0 w-32 h-32 rounded-full"
-              style={{
-                background: 'radial-gradient(circle, rgba(107, 216, 215, 0.2) 0%, transparent 70%)',
-                filter: 'blur(20px)',
-              }}
-            />
->>>>>>> a77acb5bffa617111ebaaa98c0a525ef74f9b1c3
           </div>
         </div>
       )}
 
       <style>{`
-<<<<<<< HEAD
         @keyframes slideInRight {
           from {
             opacity: 0;
@@ -367,22 +300,12 @@ const Portfolio = () => {
           50% {
             opacity: 0.6;
             transform: scale(1.1);
-=======
-        @keyframes scaleIn {
-          from {
-            opacity: 0;
-            transform: scale(0.85) rotate(-2deg);
-          }
-          to {
-            opacity: 1;
-            transform: scale(1) rotate(0deg);
           }
         }
         
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
           .fixed.pointer-events-none {
             display: none !important;
->>>>>>> a77acb5bffa617111ebaaa98c0a525ef74f9b1c3
           }
         }
       `}</style>
