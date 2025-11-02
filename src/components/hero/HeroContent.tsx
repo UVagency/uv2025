@@ -27,15 +27,15 @@ export const HeroContent = () => {
         <div className="text-left">
           <div className="font-headline text-5xl font-bold text-portfolio-text space-y-6">
             <p className="mb-6">
-              YOU KNOW THAT NOTHING REPLACES REAL HUMAN CONNECTION.
+              You know that nothing replaces real human connection.
             </p>
             
             <p className="mb-6">
-              SINCE 1999, WE'VE HELPED BRANDS FIND MEANING IN CONSTANT CHANGE, WHERE DATA BRINGS CLARITY AND EMPATHY SHAPES RELATIONSHIPS.
+              Since 1990, we've helped brands find meaning in constant change, where data brings clarity and empathy shapes relationships.
             </p>
 
             <p className="mb-8">
-              MODERN IS NOT ABOUT CHASING NEW, IT'S ABOUT MAKING NEW MAKE SENSE.
+              Modern is not about chasing new, it's about making new make sense.
             </p>
 
             <div className="flex items-center gap-3 mt-16 md:mt-20">
