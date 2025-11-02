@@ -23,7 +23,7 @@ export const HeroContent = () => {
 
   return (
     <div className="w-full flex flex-col justify-start pt-8 md:pt-10">
-      <div className={`max-w-[95%] md:max-w-[95%] lg:max-w-[95%] xl:max-w-[95%] mx-auto transition-all duration-500 ${showMainText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <div className={`max-w-[96%] md:max-w-[96%] lg:max-w-[96%] xl:max-w-[96%] mx-auto transition-all duration-500 ${showMainText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="text-left">
           <div className="font-headline text-5xl font-bold text-portfolio-text space-y-6">
             <p className="mb-6">
@@ -31,7 +31,7 @@ export const HeroContent = () => {
             </p>
             
             <p className="mb-6">
-              SINCE 1999, WE'VE HELPED BRANDS FIND MEANING IN CONSTANT CHANGE, WHERE DATA BRINGS CLARITY AND EMPATHY CREATES CONNECTION.
+              SINCE 1999, WE'VE HELPED BRANDS FIND MEANING IN CONSTANT CHANGE, WHERE DATA BRINGS CLARITY AND EMPATHY SHAPES RELATIONSHIPS.
             </p>
 
             <p className="mb-8">
