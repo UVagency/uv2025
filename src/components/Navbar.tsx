@@ -18,9 +18,9 @@ const Navbar = () => {
   return (
     <>
       <nav className={`w-full px-0 sm:px-4 py-2 bg-portfolio-bg sticky top-0 overflow-x-hidden z-${NAVBAR_CONSTANTS.Z_INDEX.NAVBAR}`}>
-        <div className="w-full sm:max-w-[90%] mx-auto flex justify-between items-center px-4 sm:px-0">
-          <div className="w-full flex items-center justify-between gap-2 sm:gap-4 md:gap-8">
-            <div className="relative flex items-center w-full">
+        <div className="w-full sm:max-w-[90%] mx-auto flex items-center px-4 sm:px-0">
+          <div className="flex items-center gap-2 sm:gap-4 md:gap-8">
+            <div className="relative flex items-center">
               <button
                 onClick={isContactOpen ? toggleContact : isOurCompanyOpen ? toggleOurCompany : toggleInfo}
                 aria-label="Close"
@@ -28,7 +28,7 @@ const Navbar = () => {
               >
                 <X size={14} className="sm:w-4 sm:h-4 md:w-5 md:h-5" />
               </button>
-              <div className={`flex items-center justify-between w-full gap-2 sm:gap-4 md:gap-8 transition-transform duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out ${(isInfoOpen || isContactOpen || isOurCompanyOpen) ? 'translate-x-6 sm:translate-x-8 md:translate-x-12' : ''}`}>
+              <div className={`flex items-center gap-2 sm:gap-4 md:gap-8 transition-transform duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out ${(isInfoOpen || isContactOpen || isOurCompanyOpen) ? 'translate-x-6 sm:translate-x-8 md:translate-x-12' : ''}`}>
                 <button 
                   onClick={toggleInfo}
                   className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-base sm:text-lg md:text-xl ${isInfoOpen ? 'text-portfolio-highlight underline underline-offset-4 sm:underline-offset-8' : ''}`}
