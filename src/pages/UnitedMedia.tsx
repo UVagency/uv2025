@@ -1,5 +1,6 @@
 import React, { Suspense, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { X, ArrowRight, BarChart3, Users, TrendingUp, Target, Award, PlayCircle, Eye, MousePointer, DollarSign } from 'lucide-react';
 import Footer from '../components/Footer';
 import { SEO } from '../components/SEO';
@@ -173,6 +174,11 @@ const UnitedMedia = () => {
         description="Learn about UV Agency's United Media service, designed to connect brands with people in a phygital world."
         pageType="company"
       />
+      {/* Evitar indexación en buscadores */}
+      <Helmet>
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="googlebot" content="noindex, nofollow" />
+      </Helmet>
       <div className="fixed inset-0 z-50 bg-portfolio-bg overflow-y-auto">
         <div className="w-full mx-auto pt-8 pb-16">
           {/* Header Section */}

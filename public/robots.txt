@@ -5,19 +5,24 @@ Allow: /project/
 Allow: /about/
 Allow: /contact/
 Allow: /our-company/
+Disallow: /united-media
 
 # AI Bot specific directives
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /united-media
 
 User-agent: GPTBot
 Allow: /
+Disallow: /united-media
 
 User-agent: CCBot
 Allow: /
+Disallow: /united-media
 
 User-agent: AnthropicBot
 Allow: /
+Disallow: /united-media
 
 # Sitemaps
 Sitemap: https://uv.agency/sitemap.xml
