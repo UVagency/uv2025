@@ -8,24 +8,37 @@ interface Project {
   categories: string[];
   comingSoon?: boolean;
   awardWinning?: boolean;
-  bannerImage?: string;
+  images?: string[];
 }
 
-// Función para obtener la imagen banner de un proyecto
-const getBannerImage = (projectName: string): string | undefined => {
+// Función para obtener todas las imágenes de un proyecto
+const getAllProjectImages = (projectName: string): string[] => {
   const projectId = projectName.toLowerCase().replace(/\s+/g, '-');
   const projectData = projectsData[projectId];
+  const images: string[] = [];
   
-  if (projectData?.gallery?.sections) {
-    const bannerSection = projectData.gallery.sections.find(
-      (section) => section.type === 'banner'
-    );
-    if (bannerSection && bannerSection.type === 'banner') {
-      return bannerSection.image;
-    }
+  if (!projectData) return images;
+  
+  // Agregar imágenes del array principal
+  if (projectData.images) {
+    images.push(...projectData.images);
   }
   
-  return undefined;
+  // Agregar imágenes de las secciones de la galería
+  if (projectData.gallery?.sections) {
+    projectData.gallery.sections.forEach((section) => {
+      if (section.type === 'banner') {
+        images.push(section.image);
+      } else if (section.type === 'imageGrid') {
+        section.images.forEach((img) => images.push(img.src));
+      } else if (section.type === 'mixedGrid') {
+        images.push(section.portraitImage.src);
+        section.gridImages.forEach((img) => images.push(img.src));
+      }
+    });
+  }
+  
+  return images;
 };
 
 const projects: Project[] = [
@@ -34,49 +47,49 @@ const projects: Project[] = [
     year: "INABA CHURU",
     categories: ["INTEGRATED"],
     comingSoon: false,
-    bannerImage: getBannerImage("EXPOMASCOTAS"),
+    images: getAllProjectImages("EXPOMASCOTAS"),
   },
   {
     name: "SABOR DE BARRIO",
     year: "DELICIOSA",
     categories: ["INTEGRATED"],
     comingSoon: false,
-    bannerImage: getBannerImage("SABOR DE BARRIO"),
+    images: getAllProjectImages("SABOR DE BARRIO"),
   },
   { 
     name: "WE MAKE YOUR DAY", 
     year: "KRISPY KREME", 
     categories: ["INTEGRATED"], 
     comingSoon: false,
-    bannerImage: getBannerImage("WE MAKE YOUR DAY"),
+    images: getAllProjectImages("WE MAKE YOUR DAY"),
   },
   { 
     name: "URBAN BEAT", 
     year: "BALL CORPORATION", 
     categories: ["INTEGRATED"],
     comingSoon: false,
-    bannerImage: getBannerImage("URBAN BEAT"),
+    images: getAllProjectImages("URBAN BEAT"),
   },
   { 
     name: "ENJOY THE UNEXPECTED", 
     year: "HEINEKEN", 
     categories: ["PROMO"],
     comingSoon: false,
-    bannerImage: getBannerImage("ENJOY THE UNEXPECTED"),
+    images: getAllProjectImages("ENJOY THE UNEXPECTED"),
   },
   { 
     name: "A GREAT FIRST DAY", 
     year: "MATTEL", 
     categories: ["PROMO"],
     comingSoon: false,
-    bannerImage: getBannerImage("A GREAT FIRST DAY"),
+    images: getAllProjectImages("A GREAT FIRST DAY"),
   },
   { 
     name: "TURN UP THE VOLUME", 
     year: "MAYBELLINE NEW YORK", 
     categories: ["OMNICHANNEL"],
     comingSoon: false,
-    bannerImage: getBannerImage("TURN UP THE VOLUME"),
+    images: getAllProjectImages("TURN UP THE VOLUME"),
   },
   { 
     name: "FLY YOUR WAY", 
@@ -84,7 +97,7 @@ const projects: Project[] = [
     categories: ["MEDIA"], 
     comingSoon: false,
     awardWinning: true,
-    bannerImage: getBannerImage("FLY YOUR WAY"),
+    images: getAllProjectImages("FLY YOUR WAY"),
   },
   /*{ 
     name: "I FEEL UNIQUE", 
@@ -146,11 +159,6 @@ const Portfolio = () => {
     });
   };
 
-  // Obtener la imagen del proyecto en hover
-  const hoveredProjectData = hoveredProject 
-    ? projects.find(p => p.name === hoveredProject)
-    : null;
-
   return (
     <div className="max-w-[90%] mx-auto px-4 py-0">
       <div className="flex items-center mb-0">
@@ -208,107 +216,35 @@ const Portfolio = () => {
                     </div>
                   )}
                 </div>
+
+                {/* Thumbnails inline en hover - después de las categorías */}
+                {project.images && project.images.length > 0 && hoveredProject === project.name && (
+                  <div className="hidden lg:flex ml-4 gap-2 overflow-x-auto">
+                    {project.images.map((image, idx) => (
+                      <div 
+                        key={idx}
+                        className="flex-shrink-0"
+                        style={{
+                          width: '80px',
+                          height: '80px',
+                        }}
+                      >
+                        <img
+                          src={image}
+                          alt={`${project.name} ${idx + 1}`}
+                          loading="eager"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </React.Fragment>
         ))}
       </div>
 
-      {/* Imagen banner fija a la derecha */}
-      {hoveredProjectData?.bannerImage && (
-        <div
-          className="fixed pointer-events-none z-50 hidden lg:block"
-          style={{
-            right: '8%',
-            top: '50%',
-            transform: 'translateY(-50%)',
-            opacity: hoveredProject ? 1 : 0,
-            transition: 'opacity 0.4s ease-out',
-          }}
-        >
-          <div 
-            className="relative overflow-hidden rounded-2xl shadow-2xl"
-            style={{
-              width: '500px',
-              height: '320px',
-              backgroundColor: '#000',
-              animation: hoveredProject ? 'slideInRight 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)' : 'none',
-            }}
-          >
-            <img
-              src={hoveredProjectData.bannerImage}
-              alt={`${hoveredProjectData.name} preview`}
-              className="w-full h-full object-cover"
-              style={{
-                filter: 'brightness(0.95) contrast(1.05)',
-              }}
-            />
-            {/* Borde con gradiente turquesa usando portfolio-accent */}
-            <div 
-              className="absolute inset-0 rounded-2xl border-portfolio-accent"
-              style={{
-                background: 'linear-gradient(135deg, transparent 0%, rgba(107, 216, 215, 0.25) 50%, transparent 100%)',
-                border: '3px solid',
-                borderColor: '#6BD8D7',
-                boxShadow: '0 0 30px rgba(107, 216, 215, 0.5), inset 0 0 20px rgba(107, 216, 215, 0.1)',
-              }}
-            />
-            {/* Efecto de brillo animado */}
-            <div 
-              className="absolute top-0 right-0 w-40 h-40 rounded-full"
-              style={{
-                background: 'radial-gradient(circle, rgba(107, 216, 215, 0.3) 0%, transparent 70%)',
-                filter: 'blur(30px)',
-                animation: 'pulse 2s ease-in-out infinite',
-              }}
-            />
-            {/* Overlay con nombre del proyecto */}
-            <div 
-              className="absolute bottom-0 left-0 right-0 p-6"
-              style={{
-                background: 'linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%)',
-              }}
-            >
-              <h3 className="text-white text-xl font-bold tracking-wider">
-                {hoveredProjectData.name}
-              </h3>
-              <p className="text-portfolio-accent text-sm mt-1">
-                {hoveredProjectData.year}
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
-
-      <style>{`
-        @keyframes slideInRight {
-          from {
-            opacity: 0;
-            transform: translateY(-50%) translateX(50px) scale(0.9) rotate(3deg);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(-50%) translateX(0) scale(1) rotate(0deg);
-          }
-        }
-        
-        @keyframes pulse {
-          0%, 100% {
-            opacity: 0.3;
-            transform: scale(1);
-          }
-          50% {
-            opacity: 0.6;
-            transform: scale(1.1);
-          }
-        }
-        
-        @media (max-width: 1024px) {
-          .fixed.pointer-events-none {
-            display: none !important;
-          }
-        }
-      `}</style>
     </div>
   );
 };
