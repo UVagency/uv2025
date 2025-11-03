@@ -31,7 +31,7 @@ export const HeroContent = () => {
             </p>
             
             <p className="mb-6">
-              Since 1999, we've helped brands find meaning in constant change, where data brings clarity and empathy shapes relationships.
+              Since 1999, we've helped brands find meaning in constant change, bringing reason and feeling back together.
             </p>
 
             <p className="mb-8">
