@@ -219,7 +219,7 @@ const Portfolio = () => {
 
                 {/* Thumbnails inline en hover - después de las categorías */}
                 {project.images && project.images.length > 0 && hoveredProject === project.name && (
-                  <div className="hidden lg:flex ml-4 gap-2 overflow-x-auto">
+                  <div className="hidden lg:flex ml-4 gap-2 overflow-hidden flex-1">
                     {project.images.map((image, idx) => (
                       <div 
                         key={idx}
