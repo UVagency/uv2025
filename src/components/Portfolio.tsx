@@ -42,13 +42,13 @@ const getAllProjectImages = (projectName: string): string[] => {
 };
 
 const projects: Project[] = [
-  {
+  /*{
     name: "EXPOMASCOTAS",
     year: "INABA CHURU",
     categories: ["INTEGRATED"],
     comingSoon: false,
     images: getAllProjectImages("EXPOMASCOTAS"),
-  },
+  },*/
   {
     name: "SABOR DE BARRIO",
     year: "DELICIOSA",
