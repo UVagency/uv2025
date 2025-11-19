@@ -9,8 +9,6 @@ import './styles/carousel.css';
 import { SEO } from './components/SEO';
 import ErrorBoundary from './components/ErrorBoundary';
 import Index from './pages/Index';
-import OurCompany from './pages/OurCompany';
-import UnitedMedia from './pages/UnitedMedia';
 import Navbar from './components/Navbar';
 
 // Lazy load components
@@ -19,6 +17,8 @@ const Contact = lazy(() => import("./pages/Contact"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const ProjectDetail = lazy(() => import("./pages/ProjectDetail"));
 const PrivateVideo = lazy(() => import("./pages/PrivateVideo"));
+const OurCompany = lazy(() => import("./pages/OurCompany"));
+const UnitedMedia = lazy(() => import("./pages/UnitedMedia"));
 
 // Create a client instance outside of the component
 const queryClient = new QueryClient();
@@ -99,7 +99,11 @@ const App = () => {
                     <OurCompany />
                   </RouteWrapper>
                 } />
-                <Route path="/united-media" element={<UnitedMedia />} />
+                <Route path="/united-media" element={
+                  <RouteWrapper>
+                    <UnitedMedia />
+                  </RouteWrapper>
+                } />
                 <Route path="/parisExclusive" element={
                   <RouteWrapper>
                     <PrivateVideo />

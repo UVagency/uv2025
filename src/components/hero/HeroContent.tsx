@@ -29,7 +29,7 @@ export const HeroContent = () => {
             <p className="mb-6">
               You know that nothing replaces real human connection.
             </p>
-            
+
             <p className="mb-6">
               Since 1999, we've helped brands find meaning in constant change, bringing reason and feeling back together.
             </p>
@@ -45,10 +45,11 @@ export const HeroContent = () => {
                   alt="United Visions"
                   className="w-full h-full object-cover rounded-full"
                   wrapperClassName="rounded-full overflow-hidden"
+                  priority={true}
                 />
               </div>
-              <button 
-                onClick={handleInfoClick} 
+              <button
+                onClick={handleInfoClick}
                 className={`transition-all duration-300 ${showOneAgency ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
               >
                 <strong><span className="text-portfolio-accent hover:underline">One agency, all in.</span></strong>
