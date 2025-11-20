@@ -20,20 +20,20 @@ interface SEOProps {
 }
 
 const defaultTitle = {
-  en: 'UV Agency - Integrated Marketing Agency',
-  es: 'UV Agency - Agencia de Marketing Integrado'
+  en: 'UV United Visions - One Agency, All In.',
+  es: 'UV United Visions - One Agency, All In.'
 };
 
 const defaultDescription = {
-  en: 'UV Agency - Integrated Marketing Agency. Full-service independent agency specializing in omnichannel campaigns, events, and smart media.',
-  es: 'UV Agency - Agencia de Marketing Integrado. Agencia independiente especializada en campañas omnicanal, eventos y medios inteligentes.'
+  en: 'UV United Visions - Full-service independent agency. Nothing replaces real human connection.',
+  es: 'UV United Visions - Nada reemplaza la conexión humana real.'
 };
 
 const defaultImage = '/images/uv_logo.webp';
 const defaultUrl = 'https://uv.agency';
 const defaultKeywords = {
   en: [
-    'UV Agency',
+    'UV United Visions',
     'Media Agency',
     'Creative Agency',
     'Digital Marketing',
@@ -44,7 +44,7 @@ const defaultKeywords = {
     'Content Creation'
   ],
   es: [
-    'UV Agency',
+    'UV United Visions',
     'Planificación y compra de medios',
     'Agencia Creativa',
     'Marketing Digital',
@@ -65,19 +65,19 @@ export const SEO = ({
   project,
   pageType = 'home',
   keywords,
-  author = 'UV Agency',
+  author = 'UV United Visions',
   publishDate,
   modifiedDate = new Date().toISOString(),
   lang = 'en'
 }: SEOProps) => {
-  const seoTitle = project 
-    ? `${project.name} - ${project.client} ${project.year} - UV Agency`
+  const seoTitle = project
+    ? `${project.name} - ${project.client} ${project.year} - UV United Visions`
     : title || defaultTitle[lang];
-  
+
   const seoDescription = description || defaultDescription[lang];
   const seoImage = image ? `${defaultUrl}${image}` : `${defaultUrl}${defaultImage}`;
   const seoUrl = url ? `${defaultUrl}${url}` : defaultUrl;
-  const seoKeywords = project 
+  const seoKeywords = project
     ? [...(keywords || defaultKeywords[lang]), project.name, project.client, project.year]
     : keywords || defaultKeywords[lang];
 
@@ -99,7 +99,7 @@ export const SEO = ({
       inLanguage: lang === 'en' ? 'en-US' : 'es-ES',
       publisher: {
         '@type': 'Organization',
-        name: 'UV Agency',
+        name: 'UV United Visions',
         url: defaultUrl,
         logo: seoImage
       }
@@ -123,7 +123,7 @@ export const SEO = ({
           '@type': 'CreativeWork',
           author: {
             '@type': 'Organization',
-            name: 'UV Agency',
+            name: 'UV United Visions',
             url: defaultUrl
           },
           client: project?.client,
