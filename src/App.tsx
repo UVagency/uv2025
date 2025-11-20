@@ -6,7 +6,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import './styles/carousel.css';
-import { SEO } from './components/SEO';
 import ErrorBoundary from './components/ErrorBoundary';
 import Index from './pages/Index';
 import Navbar from './components/Navbar';
@@ -74,7 +73,6 @@ const App = () => {
           <TooltipProvider>
 
             <Sonner />
-            <SEO pageType="home" />
             <BrowserRouter>
               <Navbar />
               <Routes>
