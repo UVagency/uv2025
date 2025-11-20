@@ -7,32 +7,32 @@ interface Brand {
 
 // Brand list with client logos from client-logos directory
 const brands: Brand[] = [
-  { name: "Ball", logoUrl: "/client-logos/ball.svg" },
-  { name: "Barbie", logoUrl: "/client-logos/barbie.svg" },
-  { name: "Deliciosa", logoUrl: "/client-logos/deliciosa.svg" },
-  { name: "Anker", logoUrl: "/client-logos/anker.svg" },
-  /*{ name: "Edusoft", logoUrl: "/client-logos/edusoft.svg" },*/
-  { name: "Gobierno de Chile", logoUrl: "/client-logos/gobiernochile.svg" },
-  { name: "Heineken", logoUrl: "/client-logos/heineken.svg" },
-  /*{ name: "Igenix", logoUrl: "/client-logos/igenix.svg" },*/
-  { name: "Inaba", logoUrl: "/client-logos/inaba.svg" },
-  { name: "Churu", logoUrl: "/client-logos/churu.svg" },
-  /*{ name: "Keds", logoUrl: "/client-logos/keds.svg" },*/
-  { name: "Krispy Kreme", logoUrl: "/client-logos/krispy_kreme.svg" },
-  { name: "KSB", logoUrl: "/client-logos/ksb.svg" },
-  { name: "Little Caesars", logoUrl: "/client-logos/littlecaesars.svg" },
-  { name: "Loreal", logoUrl: "/client-logos/loreal.svg" },
-  { name: "Me-Elecmetal", logoUrl: "/client-logos/melecmetal.svg" },
-  { name: "Merrell", logoUrl: "/client-logos/merrell.svg" },
-  { name: "On", logoUrl: "/client-logos/on.svg" },
-  { name: "Paris Cencosud", logoUrl: "/client-logos/pariscencosud.svg" },
-  { name: "Pepsico", logoUrl: "/client-logos/pepsico.svg" },
-  { name: "Philips", logoUrl: "/client-logos/philips.svg" },
-  { name: "ProChile", logoUrl: "/client-logos/prochile.svg" },
-  { name: "Soundcore", logoUrl: "/client-logos/soundcore.svg" },
-  { name: "Royal Canin", logoUrl: "/client-logos/royalcanin.svg" },
-  { name: "Tierra Hotels", logoUrl: "/client-logos/tierrahotels.svg" },
-  { name: "Under Armour", logoUrl: "/client-logos/underarmour.svg" }
+  { name: "Ball", logoUrl: "/images/client-logos/ball.svg" },
+  { name: "Barbie", logoUrl: "/images/client-logos/barbie.svg" },
+  { name: "Deliciosa", logoUrl: "/images/client-logos/deliciosa.svg" },
+  { name: "Anker", logoUrl: "/images/client-logos/anker.svg" },
+  /*{ name: "Edusoft", logoUrl: "/images/client-logos/edusoft.svg" },*/
+  { name: "Gobierno de Chile", logoUrl: "/images/client-logos/gobiernochile.svg" },
+  { name: "Heineken", logoUrl: "/images/client-logos/heineken.svg" },
+  /*{ name: "Igenix", logoUrl: "/images/client-logos/igenix.svg" },*/
+  { name: "Inaba", logoUrl: "/images/client-logos/inaba.svg" },
+  { name: "Churu", logoUrl: "/images/client-logos/churu.svg" },
+  /*{ name: "Keds", logoUrl: "/images/client-logos/keds.svg" },*/
+  { name: "Krispy Kreme", logoUrl: "/images/client-logos/krispy_kreme.svg" },
+  { name: "KSB", logoUrl: "/images/client-logos/ksb.svg" },
+  { name: "Little Caesars", logoUrl: "/images/client-logos/littlecaesars.svg" },
+  { name: "Loreal", logoUrl: "/images/client-logos/loreal.svg" },
+  { name: "Me-Elecmetal", logoUrl: "/images/client-logos/melecmetal.svg" },
+  { name: "Merrell", logoUrl: "/images/client-logos/merrell.svg" },
+  { name: "On", logoUrl: "/images/client-logos/on.svg" },
+  { name: "Paris Cencosud", logoUrl: "/images/client-logos/pariscencosud.svg" },
+  { name: "Pepsico", logoUrl: "/images/client-logos/pepsico.svg" },
+  { name: "Philips", logoUrl: "/images/client-logos/philips.svg" },
+  { name: "ProChile", logoUrl: "/images/client-logos/prochile.svg" },
+  { name: "Soundcore", logoUrl: "/images/client-logos/soundcore.svg" },
+  { name: "Royal Canin", logoUrl: "/images/client-logos/royalcanin.svg" },
+  { name: "Tierra Hotels", logoUrl: "/images/client-logos/tierrahotels.svg" },
+  { name: "Under Armour", logoUrl: "/images/client-logos/underarmour.svg" }
 ];
 
 const extendedBrands = [...brands, ...brands, ...brands];
