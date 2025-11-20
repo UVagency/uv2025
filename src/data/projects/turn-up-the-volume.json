@@ -10,35 +10,35 @@
   "marketingResults": "- Over 3.8 million people of interest reached\n- More than 80,000 interactions across all posts\n- 300,000+ total video views\n- 100,000+ visits to the campaign's landing page",
   "videoUrl": "https://vimeo.com/1079828442",
   "images": [
-    "/projects/turn-up-the-volume/turn-up-the-volume-01.webp",
-    "/projects/turn-up-the-volume/turn-up-the-volume-02.webp",
-    "/projects/turn-up-the-volume/turn-up-the-volume-03.webp"
+    "/images/projects/turn-up-the-volume/turn-up-the-volume-01.webp",
+    "/images/projects/turn-up-the-volume/turn-up-the-volume-02.webp",
+    "/images/projects/turn-up-the-volume/turn-up-the-volume-03.webp"
   ],
   "gallery": {
     "featureText": "We transformed the relaunch of Maybelline's Colossal mascara into a multi-channel experience that connected with consumers through music, influencers, and interactive content, achieving unprecedented engagement across Central America.",
     "sections": [
       {
         "type": "banner",
-        "image": "/projects/turn-up-the-volume/turn-up-the-volume-04.webp"
+        "image": "/images/projects/turn-up-the-volume/turn-up-the-volume-04.webp"
       },
       {
         "type": "imageGrid",
         "columns": 4,
         "images": [
           {
-            "src": "/projects/turn-up-the-volume/turn-up-the-volume-05.webp",
+            "src": "/images/projects/turn-up-the-volume/turn-up-the-volume-05.webp",
             "alt": "Experiencia sensorial 1"
           },
           {
-            "src": "/projects/turn-up-the-volume/turn-up-the-volume-06.webp",
+            "src": "/images/projects/turn-up-the-volume/turn-up-the-volume-06.webp",
             "alt": "Experiencia sensorial 2"
           },
           {
-            "src": "/projects/turn-up-the-volume/turn-up-the-volume-07.webp",
+            "src": "/images/projects/turn-up-the-volume/turn-up-the-volume-07.webp",
             "alt": "Experiencia sensorial 3"
           },
           {
-            "src": "/projects/turn-up-the-volume/turn-up-the-volume-08.webp",
+            "src": "/images/projects/turn-up-the-volume/turn-up-the-volume-08.webp",
             "alt": "Experiencia sensorial 4"
           }
         ]

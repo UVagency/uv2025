@@ -10,14 +10,14 @@
   "marketingResults": "Capturando la esencia del verano y la libertad, creamos contenido que transporta al espectador a un oasis de sol y diversión.",
   "videoUrl": "https://vimeo.com/123456789",
   "images": [
-    "/projects/festival-season/festival-season-01.webp",
-    "/projects/festival-season/festival-season-02.webp",
-    "/projects/festival-season/festival-season-03.webp"
+    "/images/projects/festival-season/festival-season-01.webp",
+    "/images/projects/festival-season/festival-season-02.webp",
+    "/images/projects/festival-season/festival-season-03.webp"
   ],
   "comingSoon": true,
   "thumbnails": [
-    "/projects/loreal_profile.webp",
-    "/projects/loreal/IMG_5624.webp"
+    "/images/projects/loreal_profile.webp",
+    "/images/projects/loreal/IMG_5624.webp"
   ],
   "emojis": ["☀️", "🌊", "🏄‍♂️", "🌴", "🕶️"],
   "carouselSpeed": 30,
@@ -26,22 +26,22 @@
     "sections": [
       {
         "type": "banner",
-        "image": "/projects/festival-season/festival-season-04.webp"
+        "image": "/images/projects/festival-season/festival-season-04.webp"
       },
       {
         "type": "imageGrid",
         "columns": 3,
         "images": [
           {
-            "src": "/projects/festival-season/festival-season-05.webp",
+            "src": "/images/projects/festival-season/festival-season-05.webp",
             "alt": "Concepto de verano 1"
           },
           {
-            "src": "/projects/festival-season/festival-season-06.webp",
+            "src": "/images/projects/festival-season/festival-season-06.webp",
             "alt": "Concepto de verano 2"
           },
           {
-            "src": "/projects/festival-season/festival-season-07.webp",
+            "src": "/images/projects/festival-season/festival-season-07.webp",
             "alt": "Concepto de verano 3"
           }
         ]

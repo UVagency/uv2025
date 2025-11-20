@@ -10,35 +10,35 @@
   "marketingResults": "- 115 traditional media mentions\n- $70,000 in earned media value\n- Over 5 million digital impressions\n- Thousands of customers at launch event\n- Significant social media engagement",
   "videoUrl": "https://vimeo.com/1079783710",
   "images": [
-    "/projects/we-make-your-day/we-make-your-day-01.webp",
-    "/projects/we-make-your-day/we-make-your-day-02.webp",
-    "/projects/we-make-your-day/we-make-your-day-03.webp"
+    "/images/projects/we-make-your-day/we-make-your-day-01.webp",
+    "/images/projects/we-make-your-day/we-make-your-day-02.webp",
+    "/images/projects/we-make-your-day/we-make-your-day-03.webp"
   ],
   "gallery": {
     "featureText": "Our digital strategy amplified the physical event's success, with user-generated content reaching millions across social platforms. This was just the beginning of Krispy Kreme's journey to becoming Chile's favorite sweet destination. - Mathias Rosenthal, CEO Grupo Premier Chile",
     "sections": [
       {
         "type": "banner",
-        "image": "/projects/we-make-your-day/we-make-your-day-04.webp"
+        "image": "/images/projects/we-make-your-day/we-make-your-day-04.webp"
       },
       {
         "type": "imageGrid",
         "columns": 4,
         "images": [
           {
-            "src": "/projects/we-make-your-day/we-make-your-day-05.webp",
+            "src": "/images/projects/we-make-your-day/we-make-your-day-05.webp",
             "alt": "Intervención sorpresa 1"
           },
           {
-            "src": "/projects/we-make-your-day/we-make-your-day-06.webp",
+            "src": "/images/projects/we-make-your-day/we-make-your-day-06.webp",
             "alt": "Intervención sorpresa 2"
           },
           {
-            "src": "/projects/we-make-your-day/we-make-your-day-07.webp",
+            "src": "/images/projects/we-make-your-day/we-make-your-day-07.webp",
             "alt": "Intervención sorpresa 3"
           },
           {
-            "src": "/projects/we-make-your-day/we-make-your-day-08.webp",
+            "src": "/images/projects/we-make-your-day/we-make-your-day-08.webp",
             "alt": "Intervención sorpresa 4"
           }
         ]

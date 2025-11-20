@@ -10,35 +10,35 @@
   "marketingResults": "The Expomascotas campaign achieved outstanding results, establishing Inaba as a dominant presence at the most important pet industry fair in Chile.\n\nKey achievements:\n- Largest and most impactful stand at Expo Mascotas\n- Over 500 products successfully displayed and promoted\n- Strong engagement with distributors and clients\n- Significant brand awareness increase in the Chilean market\n- Strengthened relationships with commercial partners\n- Successful integration of Japanese and Chilean teams\n- Created lasting impressions among industry professionals and consumers\n\nThe campaign successfully positioned Inaba Churu as a leading brand in the Chilean pet market, generating excitement and anticipation for future growth opportunities with partners like Ludipec.",
   "videoUrl": "https://vimeo.com/1124820924",
   "images": [
-    "/projects/expomascotas/expomascotas-01.webp",
-    "/projects/expomascotas/expomascotas-02.webp",
-    "/projects/expomascotas/expomascotas-03.webp"
+    "/images/projects/expomascotas/expomascotas-01.webp",
+    "/images/projects/expomascotas/expomascotas-02.webp",
+    "/images/projects/expomascotas/expomascotas-03.webp"
   ],
   "gallery": {
     "featureText": "We created a unique, vibrant, and full-of-life experience that captured everyone's attention. When creativity, execution, and passion come together, results exceed all expectations. - Inaba Chile Team -",
     "sections": [
       {
         "type": "banner",
-        "image": "/projects/expomascotas/expomascotas-04.webp"
+        "image": "/images/projects/expomascotas/expomascotas-04.webp"
       },
       {
         "type": "imageGrid",
         "columns": 4,
         "images": [
           {
-            "src": "/projects/expomascotas/expomascotas-05.webp",
+            "src": "/images/projects/expomascotas/expomascotas-05.webp",
             "alt": "Stand principal de Inaba"
           },
           {
-            "src": "/projects/expomascotas/expomascotas-06.webp",
+            "src": "/images/projects/expomascotas/expomascotas-06.webp",
             "alt": "Exhibición de productos"
           },
           {
-            "src": "/projects/expomascotas/expomascotas-07.webp",
+            "src": "/images/projects/expomascotas/expomascotas-07.webp",
             "alt": "Interacción con visitantes"
           },
           {
-            "src": "/projects/expomascotas/expomascotas-08.webp",
+            "src": "/images/projects/expomascotas/expomascotas-08.webp",
             "alt": "Experiencia vibrante"
           }
         ]

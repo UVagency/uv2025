@@ -10,9 +10,9 @@
   "marketingResults": "After three months of the campaign, we greatly exceeded the brand's objectives of 3,000 TRPs and 60% coverage. This allowed us to effectively connect JetSmart, the new low-cost airline in the country, with the audience eagerly waiting for it to fly smarter together.\nKey Achievements:\n- 63% increase in brand awareness\n- 4,190 TRPs\n- 76.4% Cob1+\n- 57.3% Cob3+\n- Over 200% CTR vs. Benchmark\n- 50% reduction in CPM costs compared to direct negotiation\n- Over 5.5 million total impressions",
   "videoUrl": "https://vimeo.com/1079829750",
   "images": [
-    "/projects/fly-your-way/fly-your-way-01.webp",
-    "/projects/fly-your-way/fly-your-way-02.webp",
-    "/projects/fly-your-way/fly-your-way-03.webp"
+    "/images/projects/fly-your-way/fly-your-way-01.webp",
+    "/images/projects/fly-your-way/fly-your-way-02.webp",
+    "/images/projects/fly-your-way/fly-your-way-03.webp"
   ],
   "thumbnails": [
     "https://images.unsplash.com/photo-1520437358207-323b43b50729?q=80&w=180",
@@ -23,26 +23,26 @@
     "sections": [
       {
         "type": "banner",
-        "image": "/projects/fly-your-way/fly-your-way-04.webp"
+        "image": "/images/projects/fly-your-way/fly-your-way-04.webp"
       },
       {
         "type": "imageGrid",
         "columns": 4,
         "images": [
           {
-            "src": "/projects/fly-your-way/fly-your-way-05.webp",
+            "src": "/images/projects/fly-your-way/fly-your-way-05.webp",
             "alt": "Experiencia de vuelo personalizada 1"
           },
           {
-            "src": "/projects/fly-your-way/fly-your-way-06.webp",
+            "src": "/images/projects/fly-your-way/fly-your-way-06.webp",
             "alt": "Experiencia de vuelo personalizada 2"
           },
           {
-            "src": "/projects/fly-your-way/fly-your-way-07.webp",
+            "src": "/images/projects/fly-your-way/fly-your-way-07.webp",
             "alt": "Experiencia de vuelo personalizada 3"
           },
           {
-            "src": "/projects/fly-your-way/fly-your-way-08.webp",
+            "src": "/images/projects/fly-your-way/fly-your-way-08.webp",
             "alt": "Experiencia de vuelo personalizada 4"
           }
         ]

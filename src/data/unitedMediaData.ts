@@ -32,7 +32,7 @@ export const successStories = [
       { label: "Leads Desktop", value: "+26.1%", icon: Target },
       { label: "Descargas Folleto", value: "+67%", icon: BarChart3 }
     ],
-    image: "/projects/enjoy-the-unexpected/enjoy-the-unexpected_profile.webp",
+    image: "/images/projects/enjoy-the-unexpected/enjoy-the-unexpected_profile.webp",
     tags: ["CRO", "A/B Testing", "UX Optimization", "GA4"],
     impact: "Crecimiento significativo de ventas, reducción del costo por lead y optimización del ROI en campañas de marketing digital."
   },
@@ -67,7 +67,7 @@ export const successStories = [
       { label: "Onboarding", value: "+156%", icon: Target },
       { label: "Tiempo Inversión", value: "-45%", icon: TrendingUp }
     ],
-    image: "/projects/closer-to-sun/closer-to-sun_profile.webp",
+    image: "/images/projects/closer-to-sun/closer-to-sun_profile.webp",
     tags: ["Fintech", "Conversion Optimization", "User Onboarding", "Hotjar"],
     impact: "Transformación digital completa que resultó en mayor adquisición de usuarios y incremento significativo en el valor de vida del cliente."
   },
@@ -102,7 +102,7 @@ export const successStories = [
       { label: "Customer LTV", value: "+187%", icon: TrendingUp },
       { label: "Rotación Inventario", value: "+45%", icon: BarChart3 }
     ],
-    image: "/projects/sabor-de-barrio/sabor-de-barrio_profile.webp",
+    image: "/images/projects/sabor-de-barrio/sabor-de-barrio_profile.webp",
     tags: ["Omnichannel", "CDP", "Attribution", "Personalization"],
     impact: "Transformación completa de la experiencia del cliente, generando mayor lealtad, incremento en ventas y optimización operacional significativa."
   }

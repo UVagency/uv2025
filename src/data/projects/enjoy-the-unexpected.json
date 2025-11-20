@@ -10,35 +10,35 @@
   "marketingResults": "From February to May, we reached 98% of the target audience on social media with a frequency of 3.5 per week. The campaign impressions on all digital media totaled 45,017,984. We had 16,563,829 views with an average CTR of 0.41%. The investment strategy included social media, programmatic, and YouTube on a case-by-case basis.\nThe activation of the store had better results than planned:\n- +USD 35,000 in sales\n- +5,000 gift packs sold\n- +14,200 redeemed codes\n- +3,500 Heineken products sold\n- +160,000 participants in the Green Store\nWe closed this spectacular campaign with a big event. We invited more than 2,000 people to enjoy the UEFA Champions League final in the best Heineken style.",
   "videoUrl": "https://vimeo.com/1079510908",
   "images": [
-    "/projects/enjoy-the-unexpected/enjoy-the-unexpected-01.webp",
-    "/projects/enjoy-the-unexpected/enjoy-the-unexpected-02.webp",
-    "/projects/enjoy-the-unexpected/enjoy-the-unexpected-03.webp"
+    "/images/projects/enjoy-the-unexpected/enjoy-the-unexpected-01.webp",
+    "/images/projects/enjoy-the-unexpected/enjoy-the-unexpected-02.webp",
+    "/images/projects/enjoy-the-unexpected/enjoy-the-unexpected-03.webp"
   ],
   "gallery": {
     "featureText": "The 'Enjoy the Unexpected' campaign exceeded all our expectations, not only in terms of reach and engagement, but also in creating memorable experiences that strengthened our connection with consumers at every touchpoint.",
     "sections": [
       {
         "type": "banner",
-        "image": "/projects/enjoy-the-unexpected/enjoy-the-unexpected-04.webp"
+        "image": "/images/projects/enjoy-the-unexpected/enjoy-the-unexpected-04.webp"
       },
       {
         "type": "imageGrid",
         "columns": 4,
         "images": [
           {
-            "src": "/projects/enjoy-the-unexpected/enjoy-the-unexpected-05.webp",
+            "src": "/images/projects/enjoy-the-unexpected/enjoy-the-unexpected-05.webp",
             "alt": "Experiencia interactiva 1"
           },
           {
-            "src": "/projects/enjoy-the-unexpected/enjoy-the-unexpected-06.webp",
+            "src": "/images/projects/enjoy-the-unexpected/enjoy-the-unexpected-06.webp",
             "alt": "Experiencia interactiva 2"
           },
           {
-            "src": "/projects/enjoy-the-unexpected/enjoy-the-unexpected-07.webp",
+            "src": "/images/projects/enjoy-the-unexpected/enjoy-the-unexpected-07.webp",
             "alt": "Experiencia interactiva 3"
           },
           {
-            "src": "/projects/enjoy-the-unexpected/enjoy-the-unexpected-08.webp",
+            "src": "/images/projects/enjoy-the-unexpected/enjoy-the-unexpected-08.webp",
             "alt": "Experiencia interactiva 4"
           }
         ]
