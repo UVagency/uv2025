@@ -21,9 +21,10 @@ const ProjectVideo = ({ videoUrl, title }: ProjectVideoProps) => {
       src={videoUrl}
       title={title}
       controls
+      muted
       className="w-full"
     />
   );
 };
 
-export default ProjectVideo; 
+export default ProjectVideo;

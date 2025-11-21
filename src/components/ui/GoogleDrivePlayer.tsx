@@ -23,12 +23,12 @@ const GoogleDrivePlayer: React.FC<GoogleDrivePlayerProps> = ({
   videoUrl,
   title = "Google Drive video player",
   className = "mb-16 overflow-hidden rounded-lg bg-black",
-  aspectRatio = 16/9,
+  aspectRatio = 16 / 9,
 }) => {
   const iframeRef = useRef<HTMLIFrameElement>(null);
-  
+
   const fileId = getGoogleDriveId(videoUrl);
-  
+
   if (!fileId) {
     console.warn('GoogleDrivePlayer: Invalid Google Drive URL provided:', videoUrl);
     return (
@@ -42,8 +42,8 @@ const GoogleDrivePlayer: React.FC<GoogleDrivePlayerProps> = ({
     );
   }
 
-  // Build the embed URL for Google Drive
-  const embedUrl = `https://drive.google.com/file/d/${fileId}/preview`;
+  // Build the embed URL for Google Drive with mute parameter
+  const embedUrl = `https://drive.google.com/file/d/${fileId}/preview?mute=1`;
 
   return (
     <div className={className}>
