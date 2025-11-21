@@ -8,7 +8,7 @@ const highlightedProjects = highlightIds.map(id => projectsData[id]);
 
 const Highlights = () => {
   const navigate = useNavigate();
-  
+
   const handleProjectClick = (projectId: string) => {
     navigate(`/project/${projectId}`);
   };
@@ -24,10 +24,10 @@ const Highlights = () => {
         {highlightedProjects.map((project) => {
           // Generar el path de la imagen de portada
           const clientSlug = project.id?.toLowerCase().replace(/ /g, "");
-          const coverImg = `/projects/${project.id}/${clientSlug}_profile.webp`;
+          const coverImg = `/images/projects/${project.id}/${clientSlug}_profile.webp`;
           return (
-            <div 
-              key={project.id} 
+            <div
+              key={project.id}
               onClick={() => handleProjectClick(project.id)}
               className="cursor-pointer group"
             >
@@ -39,7 +39,7 @@ const Highlights = () => {
                   wrapperClassName=""
                 />
               </div>
-              
+
               <div className="flex flex-col items-start">
                 <h3 className="font-headline text-5xl font-bold text-portfolio-text mr-2 group-hover:text-portfolio-highlight">
                   {project.name}
