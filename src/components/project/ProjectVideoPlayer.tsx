@@ -14,6 +14,8 @@ const ProjectVideoPlayer: React.FC<ProjectVideoPlayerProps> = ({ project }) => {
       videoUrl={project.videoUrl}
       title="Vimeo video player"
       color="EBA3A9"
+      autoplay={true}
+      muted={true}
       analyticsData={{
         videoId: project.id || 'project-video',
         videoTitle: project.name || 'Project Video'
