@@ -43,15 +43,21 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   if (!isExternalUrl) {
     const normalized = src.startsWith('/') ? src : `/${src}`;
-    imagePath = `${cdn}${normalized}`;
-
-    if (width || height) {
-      const url = new URL(imagePath);
-      if (width) url.searchParams.set('w', String(width));
-      if (height) url.searchParams.set('h', String(height));
-      url.searchParams.set('fit', 'cover');
-      url.searchParams.set('format', 'auto');
-      imagePath = url.toString();
+    // Solo usar CDN si está explícitamente configurado y es una URL válida
+    if (cdn && cdn.startsWith('http')) {
+      imagePath = `${cdn}${normalized}`;
+      
+      if (width || height) {
+        const url = new URL(imagePath);
+        if (width) url.searchParams.set('w', String(width));
+        if (height) url.searchParams.set('h', String(height));
+        url.searchParams.set('fit', 'cover');
+        url.searchParams.set('format', 'auto');
+        imagePath = url.toString();
+      }
+    } else {
+      // Usar rutas relativas directamente (sin CDN)
+      imagePath = normalized;
     }
   }
 
