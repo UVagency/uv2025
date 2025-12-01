@@ -69,12 +69,8 @@ const UnitedMedia = () => {
         type="website"
       />
       <Helmet>
-        <meta property="og:title" content="United Media Strategy & Buying @ UV" />
-        <meta property="og:description" content="Bold ideas executed by seasoned media humans who drive real business outcomes" />
         <meta property="og:url" content="https://www.uv.agency/um" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:title" content="United Media Strategy & Buying @ UV" />
-        <meta name="twitter:description" content="Bold ideas executed by seasoned media humans who drive real business outcomes" />
+        <link rel="canonical" href="https://www.uv.agency/um" />
       </Helmet>
 
       <div className="fixed inset-0 z-50 bg-portfolio-bg overflow-y-auto">
