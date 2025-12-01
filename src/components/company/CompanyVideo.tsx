@@ -11,6 +11,7 @@ const CompanyVideo: React.FC<CompanyVideoProps> = ({ videoUrl }) => {
       videoUrl={videoUrl}
       title="UV Company Recap"
       showTitle={true}
+      muted={true}
       color="6BD8D7"
     />
   );

@@ -1,34 +1,22 @@
-import React, { Suspense, useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { X, ArrowRight, BarChart3, Users, TrendingUp, Target, Award, PlayCircle, Eye, MousePointer, DollarSign } from 'lucide-react';
+import { X } from 'lucide-react';
 import Footer from '../components/Footer';
 import { SEO } from '../components/SEO';
-import { CompanyVideo } from '../components/lazy';
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import OptimizedImage from "@/components/ui/optimized-image";
-import { successStories, mediaInfo } from '@/data/unitedMediaData';
-
-// Loading component for lazy-loaded sections
-const SectionLoading = () => (
-  <div className="animate-pulse">
-    <div className="h-8 bg-portfolio-text/10 rounded w-1/3 mb-4"></div>
-    <div className="space-y-3">
-      <div className="h-4 bg-portfolio-text/10 rounded w-3/4"></div>
-      <div className="h-4 bg-portfolio-text/10 rounded w-5/6"></div>
-      <div className="h-4 bg-portfolio-text/10 rounded w-2/3"></div>
-    </div>
-  </div>
-);
+import BrandCarousel from "../components/BrandCarousel";
+import MediaMethodWheel from "../components/company/MediaMethodWheel";
+import CompanyVideo from "../components/company/CompanyVideo";
+import { mediaInfo } from "@/data/unitedMediaData";
 
 const UnitedMedia = () => {
   const navigate = useNavigate();
-  const [selectedStory, setSelectedStory] = useState<string | null>(null);
 
-  const handleClose = () => {
+  const handleClose = React.useCallback(() => {
     navigate('/');
-  };
+  }, [navigate]);
 
   React.useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -39,374 +27,331 @@ const UnitedMedia = () => {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
+  }, [handleClose]);
 
+  const [activeMethod, setActiveMethod] = React.useState<'who' | 'what' | 'so-what' | 'whats-next' | 'how'>('who');
+
+  const methodViews = {
+    'who': {
+      eyebrow: 'Who are we trying to move and what moves them',
+      title: 'Strategy Starts with the Audience',
+      body: `We begin with people, not platforms. Our media principles are rooted in behavior, not just demographics, and act as filters to ensure a brand shows up in ways that matter. Every brief starts by asking: who are we trying to move, and what moves them?`,
+    },
+    'what': {
+      eyebrow: 'What is the role media plays in creating impact?',
+      title: 'Creativity Fuels the Media Engine',
+      body: `Media is more than a delivery system, it's an amplifier. We build the stage for creative to thrive, selecting unexpected formats and emerging platforms that spark conversation and cultural resonance. At United Media, media and creative aren't siloed — they speak fluently.`,
+    },
+    'so-what': {
+      eyebrow: 'So what impact did it have on the business?',
+      title: 'Tech-Forward, Platform-Agnostic',
+      body: `We're fluent in every tool, but beholden to none. Our tech stack is custom-built to the business and deep marketplace knowledge lets us choose the best partners for the job — unlocking value others miss and maximizing accountability across every tactic.`,
+    },
+    'whats-next': {
+      eyebrow: "What are we doing with what we've learned?",
+      title: 'Always On. Always Optimizing.',
+      body: `Testing isn’t a task, it’s a mindset. We establish the framework upfront to measure what matters most, and then adapt in real-time to what’s working. Our goal isn’t just media efficiency — it’s delivering business outcomes with clarity and speed.`,
+    },
+    'how': {
+      eyebrow: 'How do we activate across the full funnel?',
+      title: 'Omni-Channel. No Smoke, No Mirrors.',
+      body: `We plan holistically across the full funnel — because real people don’t live in silos. That means no brand vs. performance trade-offs, and no murky models. Every investment is transparent, every channel earns its place, and every dollar is treated like it’s our own.`,
+    },
+  } as const;
 
   return (
     <div className="min-h-screen bg-portfolio-bg">
       <SEO
-        title="United Media @ UV Agency"
-        description="Learn about UV Agency's United Media service, designed to connect brands with people in a phygital world."
+        title="United Media Strategy & Buying @ UV"
+        description="United Media is UV's media practice: bold ideas, executed with the craft and clarity of seasoned marketplace operators driving business outcomes."
         pageType="company"
       />
-      {/* Evitar indexación en buscadores */}
       <Helmet>
-        <meta name="robots" content="noindex, nofollow" />
-        <meta name="googlebot" content="noindex, nofollow" />
+        <title>United Media Strategy & Buying @ UV</title>
       </Helmet>
+
       <div className="fixed inset-0 z-50 bg-portfolio-bg overflow-y-auto">
         <div className="w-full mx-auto pt-8 pb-16">
-          {/* Header Section */}
           <div className="max-w-[95%] sm:max-w-[90%] mx-auto">
-            <div className="border-b border-portfolio-divider pb-4 sm:pb-6 mb-4 sm:mb-8">
-              <div className="flex items-center gap-2 sm:gap-4 flex-wrap">
-                <button
-                  onClick={handleClose}
-                  aria-label="Close"
-                  className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-transparent border border-portfolio-text flex items-center justify-center text-portfolio-text hover:bg-portfolio-text hover:text-portfolio-bg transition-colors"
-                >
-                  <X size={16} className="sm:w-5 sm:h-5" />
-                </button>
-
-                <h1 className="text-2xl sm:text-4xl md:text-7xl font-bold text-portfolio-text">{mediaInfo.name}</h1>
-
-                <span className="project-year-tag text-xs sm:text-base px-3 sm:px-6 py-1 sm:py-2 rounded-full bg-portfolio-tag-bg text-portfolio-tag-text">
-                  {mediaInfo.year}
-                </span>
-
-                {mediaInfo.categories.map((category) => (
-                  <span key={category} className="project-category-tag text-xs sm:text-base px-3 sm:px-6 py-1 sm:py-2 border rounded-full">
-                    {category}
-                  </span>
-                ))}
-              </div>
-
-              <p className="text-base sm:text-2xl md:text-4xl text-portfolio-text/90 font-light leading-tight max-w-4xl mt-3 sm:mt-6">
-                {mediaInfo.tagline}
-              </p>
-
-              <div className="mt-4 sm:mt-6 flex flex-wrap gap-2 sm:gap-4">
-                <div className="text-portfolio-text/70 text-xs sm:text-base">
-                  <span className="font-semibold">Type:</span> {mediaInfo.client}
-                </div>
-              </div>
-            </div>
-
-            {/* Video Section */}
-            <Suspense fallback={<SectionLoading />}>
-              <CompanyVideo videoUrl={mediaInfo.videoRecapUrl} />
-            </Suspense>
-
-            {/* Closing Statement */}
-            <div className="mb-6 sm:mb-12 text-center">
-              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-3 sm:mb-4">Maximize the acquisition of new clients by enhancing your media strategy, investment, and team</h2>
-            </div>
-
-            {/* History Section */}
-            <div className="mb-6 sm:mb-12">
-              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-3 sm:mb-4">Our Story</h2>
-              <div className="text-lg sm:text-2xl text-portfolio-text/80 font-light whitespace-pre-line">
-                {mediaInfo.history}
-              </div>
-            </div>
-
-            {/* Description Section */}
-            <div className="mb-6 sm:mb-12">
-              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-3 sm:mb-4">About Us</h2>
-              <div className="text-lg sm:text-2xl text-portfolio-text/80 font-light whitespace-pre-line">
-                {mediaInfo.description}
-              </div>
-            </div>
-
-            {/* Service Blocks */}
-            <div className="mb-6 sm:mb-12">
-              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-4 sm:mb-8">Our Services</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
-                <div className="p-4 sm:p-6 border-2 border-portfolio-accent rounded-lg hover:border-portfolio-accent/80 transition-colors bg-portfolio-bg shadow-sm">
-                  <h3 className="text-xl sm:text-2xl font-bold text-portfolio-text mb-3 sm:mb-4">Targeted Branding</h3>
-                  <p className="text-base sm:text-lg text-portfolio-text/80">Reach truly relevant clients by enhancing the visibility of your brand, product, or event through:</p>
-                  <ul className="list-disc pl-5 mt-2 text-base sm:text-lg">
-                    <li>Programmatic</li>
-                    <li>Digital PR</li>
-                  </ul>
-                </div>
-                <div className="p-4 sm:p-6 border-2 border-portfolio-accent rounded-lg hover:border-portfolio-accent/80 transition-colors bg-portfolio-bg shadow-sm">
-                  <h3 className="text-xl sm:text-2xl font-bold text-portfolio-text mb-3 sm:mb-4">SXO</h3>
-                  <p className="text-base sm:text-lg text-portfolio-text/80">Enhance the performance and ROI of the Google Search channel through an integrated strategy between:</p>
-                  <ul className="list-disc pl-5 mt-2 text-base sm:text-lg">
-                    <li>SEO</li>
-                    <li>SEM</li>
-                  </ul>
-                </div>
-                <div className="p-4 sm:p-6 border-2 border-portfolio-accent rounded-lg hover:border-portfolio-accent/80 transition-colors bg-portfolio-bg shadow-sm">
-                  <h3 className="text-xl sm:text-2xl font-bold text-portfolio-text mb-3 sm:mb-4">Conversion Boost</h3>
-                  <p className="text-base sm:text-lg text-portfolio-text/80">Maximize ROI and conversion rates by improving decision-making through experimentation and data with:</p>
-                  <ul className="list-disc pl-5 mt-2 text-base sm:text-lg">
-                    <li>CRO</li>
-                    <li>Data analytics</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Technology Stack Section */}
-            <div className="mb-6 sm:mb-12">
-              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-4 sm:mb-8">
-                Our Technology Stack
-              </h2>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                {['Google Analytics 4', 'Google Ads', 'Facebook Ads Manager', 'SEMrush', 'Hotjar', 'Google Tag Manager'].map(tool => (
-                  <div key={tool} className="p-4 border border-portfolio-divider rounded-lg text-center hover:border-portfolio-accent transition-colors">
-                    <span className="text-portfolio-text font-medium text-sm">{tool}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Success Stories Section */}
-            <div className="mb-6 sm:mb-12">
-              <div className="flex items-center mb-8">
-                <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mr-2">Success Stories</h2>
-                <Award className="w-6 h-6 text-portfolio-accent" />
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {successStories.map((story) => (
-                  <div
-                    key={story.id}
-                    className="cursor-pointer group"
-                    onClick={() => setSelectedStory(selectedStory === story.id ? null : story.id)}
+            {/* Header / Hero */}
+            <div className="border-b border-portfolio-divider pb-4 sm:pb-6 mb-6 sm:mb-10">
+              <div className="w-full flex flex-col items-start text-left">
+                <div className="inline-flex flex-wrap items-center gap-2 sm:gap-4 mb-2 sm:mb-0">
+                  <button
+                    onClick={handleClose}
+                    aria-label="Close"
+                    className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-transparent border border-portfolio-text flex items-center justify-center text-portfolio-text hover:bg-portfolio-text hover:text-portfolio-bg transition-colors"
                   >
-                    <div className="relative w-full overflow-hidden rounded-lg mb-4">
-                      <OptimizedImage
-                        src={story.image}
-                        alt={story.title}
-                        aspectRatio={16 / 9}
-                        className="w-full object-cover transition-transform group-hover:scale-105"
-                        wrapperClassName=""
-                      />
-                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <PlayCircle className="w-12 h-12 text-white" />
-                      </div>
+                    <X size={16} className="sm:w-5 sm:h-5" />
+                  </button>
+                  <h1 className="text-2xl sm:text-4xl md:text-7xl font-bold text-portfolio-text leading-tight break-words max-w-[90vw] sm:max-w-full">
+                    United Media
+                  </h1>
+                  <span className="project-year-tag text-xs sm:text-base px-3 sm:px-6 py-1 sm:py-2 rounded-full bg-portfolio-tag-bg text-portfolio-tag-text">
+                    Smart Media
+                  </span>
+                  <span className="project-category-tag text-xs sm:text-base px-3 sm:px-6 py-1 sm:py-2 border rounded-full">
+                    Media Strategy
+                  </span>
+                  <span className="project-category-tag text-xs sm:text-base px-3 sm:px-6 py-1 sm:py-2 border rounded-full">
+                    Planning &amp; Buying
+                  </span>
+                </div>
+                <p className="w-full max-w-[95vw] sm:max-w-full mx-auto text-base sm:text-2xl md:text-4xl text-portfolio-text/90 font-light leading-tight mt-3 sm:mt-6 text-left">
+                Breaking convention and buying with intention
+                </p>
+                <div className="mt-4 sm:mt-6 flex flex-wrap gap-2 sm:gap-4 justify-start">
+                  <div className="text-portfolio-text/70 text-xs sm:text-base">
+                    <span className="font-semibold">Bold ideas, executed with the craft and clarity of seasoned marketplace operators driving business outcomes.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Video Recap Section */}
+            <section className="mb-10 sm:mb-16">
+              <CompanyVideo videoUrl={mediaInfo.videoRecapUrl} />
+            </section>
+
+            {/* The United Media Method / Strategy Starts with the Audience */}
+            <section className="mb-10 sm:mb-16">
+              <div className="grid lg:grid-cols-2 gap-10 items-center">
+                <div>
+                  <MediaMethodWheel
+                    activeSegmentId={activeMethod}
+                    onSegmentChange={setActiveMethod}
+                  />
+                </div>
+                <div>
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-portfolio-text mb-3 sm:mb-4">
+                    The United Media Method
+                  </h2>
+                  {/* Contenido dinámico con altura mínima fija para evitar saltos al hacer hover */}
+                  <div className="min-h-[220px] sm:min-h-[250px] md:min-h-[260px]">
+                    <p className="text-xs sm:text-sm uppercase tracking-[0.16em] text-portfolio-text/70 mb-3">
+                      {methodViews[activeMethod].eyebrow}
+                    </p>
+                    <h3 className="text-lg sm:text-2xl md:text-3xl font-semibold text-portfolio-text mb-3">
+                      {methodViews[activeMethod].title}
+                    </h3>
+                    <p className="text-base sm:text-lg text-portfolio-text/80 max-w-3xl">
+                      {methodViews[activeMethod].body}
+                    </p>
+                  </div>
+                  <div className="mt-6 text-sm sm:text-base text-portfolio-text">
+                    <div className="inline-flex flex-wrap gap-x-8 gap-y-2 font-semibold">
+                      <span>Faster Process</span>
+                      <span>Smarter Spend</span>
+                      <span>Accelerated Path of Outcomes</span>
                     </div>
-
-                    <div className="space-y-3">
-                      <div className="flex flex-wrap gap-2">
-                        {story.tags.map((tag) => (
-                          <span key={tag} className="text-xs px-2 py-1 bg-portfolio-accent/20 text-portfolio-accent rounded">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-
-                      <h3 className="font-bold text-lg text-portfolio-text group-hover:text-portfolio-accent transition-colors">
-                        {story.title}
-                      </h3>
-
-                      <p className="text-sm text-portfolio-text/70">
-                        {story.industry} • {story.results.period}
-                      </p>
-
-                      <div className="grid grid-cols-3 gap-2 pt-2">
-                        {story.metrics.map((metric, idx) => (
-                          <div key={idx} className="text-center">
-                            <metric.icon className="w-4 h-4 mx-auto mb-1 text-portfolio-accent" />
-                            <div className="text-sm font-bold text-portfolio-text">{metric.value}</div>
-                            <div className="text-xs text-portfolio-text/60">{metric.label}</div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Expanded Details */}
-                    {selectedStory === story.id && (
-                      <div className="mt-4 p-6 bg-portfolio-text/5 rounded-lg border border-portfolio-text/10">
-                        <div className="space-y-6">
-                          {/* Desafío */}
-                          <div>
-                            <h4 className="font-bold text-portfolio-text mb-3 flex items-center">
-                              <Target className="w-4 h-4 mr-2 text-portfolio-accent" />
-                              Desafío
-                            </h4>
-                            <p className="text-sm text-portfolio-text/80 leading-relaxed">{story.challenge}</p>
-                          </div>
-
-                          {/* Solución */}
-                          <div>
-                            <h4 className="font-bold text-portfolio-text mb-3 flex items-center">
-                              <TrendingUp className="w-4 h-4 mr-2 text-portfolio-accent" />
-                              ¿Qué hicimos?
-                            </h4>
-                            <p className="text-sm text-portfolio-text/80 leading-relaxed mb-3">{story.solution}</p>
-                          </div>
-
-                          {/* Metodología */}
-                          {story.methodology && (
-                            <div>
-                              <h4 className="font-bold text-portfolio-text mb-3 flex items-center">
-                                <BarChart3 className="w-4 h-4 mr-2 text-portfolio-accent" />
-                                ¿Cómo lo abordamos?
-                              </h4>
-                              <div className="space-y-2">
-                                {story.methodology.map((step, idx) => (
-                                  <div key={idx} className="flex items-start">
-                                    <div className="w-6 h-6 bg-portfolio-accent text-portfolio-bg rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5 flex-shrink-0">
-                                      {idx + 1}
-                                    </div>
-                                    <p className="text-sm text-portfolio-text/80">{step}</p>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                          )}
-
-                          {/* Resultados Detallados */}
-                          <div className="pt-4 border-t border-portfolio-text/10">
-                            <h4 className="font-bold text-portfolio-text mb-3 flex items-center">
-                              <Award className="w-4 h-4 mr-2 text-portfolio-accent" />
-                              Resultados
-                            </h4>
-
-                            {story.detailed_results ? (
-                              <div className="space-y-3">
-                                {story.detailed_results.map((result, idx) => (
-                                  <div key={idx} className="flex items-center justify-between p-3 bg-portfolio-accent/5 rounded-lg">
-                                    <div className="flex-1">
-                                      <div className="font-semibold text-portfolio-text text-sm">{result.metric}</div>
-                                      <div className="text-xs text-portfolio-text/70">{result.description}</div>
-                                    </div>
-                                    <div className="text-lg font-bold text-portfolio-accent ml-4">
-                                      {result.value}
-                                    </div>
-                                  </div>
-                                ))}
-                              </div>
-                            ) : (
-                              <div className="grid grid-cols-2 gap-2 text-sm">
-                                {Object.entries(story.results).map(([key, value]) => (
-                                  <div key={key} className="flex justify-between p-2 bg-portfolio-accent/5 rounded">
-                                    <span className="text-portfolio-text/70 capitalize">{key}:</span>
-                                    <span className="font-semibold text-portfolio-text">{value}</span>
-                                  </div>
-                                ))}
-                              </div>
-                            )}
-                          </div>
-
-                          {/* Impacto */}
-                          {story.impact && (
-                            <div className="pt-4 border-t border-portfolio-text/10">
-                              <h4 className="font-bold text-portfolio-text mb-3 flex items-center">
-                                <DollarSign className="w-4 h-4 mr-2 text-portfolio-accent" />
-                                Impacto
-                              </h4>
-                              <p className="text-sm text-portfolio-text/80 leading-relaxed italic">
-                                {story.impact}
-                              </p>
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                    )}
                   </div>
-                ))}
+                </div>
               </div>
-            </div>
+            </section>
 
-            {/* Methodology Section */}
-            <div className="mb-6 sm:mb-12">
-              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-4 sm:mb-8">
-                Our Methodology
+            {/* Planning & Buying Capabilities */}
+            <section className="mb-10 sm:mb-16">
+              <div className="grid gap-8 lg:gap-12 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,2fr)] items-start">
+                {/* Título grande a la izquierda */}
+                <div>
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-portfolio-text leading-tight">
+                    Planning &amp; Buying Capabilities
+                  </h2>
+                </div>
+
+                {/* Listado de capacidades a la derecha, siguiendo la estructura de la referencia */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-6 text-sm sm:text-base">
+                  {/* Video */}
+                  <div>
+                    <p className="uppercase tracking-[0.14em] text-portfolio-text font-semibold mb-1">
+                      Video
+                    </p>
+                    <p className="text-portfolio-text/80 flex flex-wrap gap-x-3 gap-y-1">
+                      <span>Linear</span>
+                      <span>OLV</span>
+                      <span>CTV/OTT</span>
+                      <span>Local/National</span>
+                    </p>
+                  </div>
+
+                  {/* Social */}
+                  <div>
+                    <p className="uppercase tracking-[0.14em] text-portfolio-text font-semibold mb-1">
+                      Social
+                    </p>
+                    <p className="text-portfolio-text/80 flex flex-wrap gap-x-3 gap-y-1">
+                      <span>Paid</span>
+                      <span>Organic</span>
+                      <span>Creator</span>
+                      <span>Influencer</span>
+                    </p>
+                  </div>
+
+                  {/* Audio */}
+                  <div>
+                    <p className="uppercase tracking-[0.14em] text-portfolio-text font-semibold mb-1">
+                      Audio
+                    </p>
+                    <p className="text-portfolio-text/80 flex flex-wrap gap-x-3 gap-y-1">
+                      <span>Terrestrial</span>
+                      <span>Streaming</span>
+                      <span>Podcasts</span>
+                      <span>Local/National</span>
+                    </p>
+                  </div>
+
+                  {/* OOH */}
+                  <div>
+                    <p className="uppercase tracking-[0.14em] text-portfolio-text font-semibold mb-1">
+                      OOH
+                    </p>
+                    <p className="text-portfolio-text/80 flex flex-wrap gap-x-3 gap-y-1">
+                      <span>Traditional</span>
+                      <span>Digital</span>
+                      <span>Guerilla</span>
+                    </p>
+                  </div>
+
+                  {/* Specialties */}
+                  <div>
+                    <p className="uppercase tracking-[0.14em] text-portfolio-text font-semibold mb-1">
+                      Specialties
+                    </p>
+                    <p className="text-portfolio-text/80 flex flex-wrap gap-x-3 gap-y-1">
+                      <span>B2B</span>
+                      <span>Partnerships</span>
+                      <span>Mar Tech</span>
+                    </p>
+                  </div>
+
+                  {/* Display */}
+                  <div>
+                    <p className="uppercase tracking-[0.14em] text-portfolio-text font-semibold mb-1">
+                      Display
+                    </p>
+                    <p className="text-portfolio-text/80 flex flex-wrap gap-x-3 gap-y-1">
+                      <span>Site Direct</span>
+                      <span>Programmatic</span>
+                      <span>Native</span>
+                    </p>
+                  </div>
+
+                  {/* Search */}
+                  <div>
+                    <p className="uppercase tracking-[0.14em] text-portfolio-text font-semibold mb-1">
+                      Search
+                    </p>
+                    <p className="text-portfolio-text/80 flex flex-wrap gap-x-3 gap-y-1">
+                      <span>SEM</span>
+                      <span>SEO</span>
+                      <span>AEO</span>
+                      <span>GEO</span>
+                    </p>
+                  </div>
+
+                  {/* Print */}
+                  <div>
+                    <p className="uppercase tracking-[0.14em] text-portfolio-text font-semibold mb-1">
+                      Print
+                    </p>
+                    <p className="text-portfolio-text/80 flex flex-wrap gap-x-3 gap-y-1">
+                      <span>Direct Mail</span>
+                      <span>Premium Publications</span>
+                      <span>Local/National</span>
+                    </p>
+                  </div>
+
+                  {/* Analytics & Measurement */}
+                  <div>
+                    <p className="uppercase tracking-[0.14em] text-portfolio-text font-semibold mb-1">
+                      Analytics &amp; Measurement
+                    </p>
+                    <p className="text-portfolio-text/80 flex flex-wrap gap-x-3 gap-y-1">
+                      <span>Funnel Metrics</span>
+                      <span>Campaign Reporting</span>
+                      <span>Dashboards</span>
+                      <span>Business Intelligence</span>
+                      <span>Attribution</span>
+                      <span>Cross-Channel</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Clients Section */}
+            <section className="mb-10 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-portfolio-text mb-3 sm:mb-4">
+                We&apos;ve planned &amp; purchased media for these brands
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                {[
-                  { step: "01", title: "Analyze", desc: "Deep dive into your current performance and market position" },
-                  { step: "02", title: "Strategy", desc: "Design integrated campaigns across all relevant channels" },
-                  { step: "03", title: "Execute", desc: "Launch optimized campaigns with continuous monitoring" },
-                  { step: "04", title: "Optimize", desc: "Data-driven improvements for maximum ROI" }
-                ].map(item => (
-                  <div key={item.step} className="text-center">
-                    <div className="w-16 h-16 bg-portfolio-accent text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                      {item.step}
-                    </div>
-                    <h3 className="text-xl font-bold text-portfolio-text mb-2">{item.title}</h3>
-                    <p className="text-portfolio-text/80">{item.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Needs Quadrant */}
-            <div className="mb-6 sm:mb-12">
-              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-4 sm:mb-8">How to Resolve Your Needs?</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
-                <div className="p-4 sm:p-6 border-2 border-portfolio-accent rounded-lg hover:border-portfolio-accent/80 transition-colors bg-portfolio-bg shadow-sm">
-                  <p className="text-base sm:text-lg text-portfolio-text/80">1. We increase conversions on your website or app by reaching more potential clients.</p>
-                </div>
-                <div className="p-4 sm:p-6 border-2 border-portfolio-accent rounded-lg hover:border-portfolio-accent/80 transition-colors bg-portfolio-bg shadow-sm">
-                  <p className="text-base sm:text-lg text-portfolio-text/80">2. We reduce acquisition costs to maximize the efficiency of digital investments.</p>
-                </div>
-                <div className="p-4 sm:p-6 border-2 border-portfolio-accent rounded-lg hover:border-portfolio-accent/80 transition-colors bg-portfolio-bg shadow-sm">
-                  <p className="text-base sm:text-lg text-portfolio-text/80">3. We enhance visibility, trust, and brand recognition among potential clients.</p>
-                </div>
-                <div className="p-4 sm:p-6 border-2 border-portfolio-accent rounded-lg hover:border-portfolio-accent/80 transition-colors bg-portfolio-bg shadow-sm">
-                  <p className="text-base sm:text-lg text-portfolio-text/80">4. We help your clients with a better digital experience and facilitate their path to conversion.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Partners and Certifications Section */}
-            <div className="mb-6 sm:mb-12">
-              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-4 sm:mb-8">
-                Our Partners & Certifications
-              </h2>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
-                <div className="flex flex-col items-center p-4 border border-portfolio-divider rounded-lg hover:border-portfolio-accent transition-colors">
-                  <div className="w-16 h-16 bg-blue-600 rounded-lg mb-2 flex items-center justify-center text-white font-bold">
-                    META
-                  </div>
-                  <span className="text-sm text-portfolio-text text-center">Business Partner</span>
-                </div>
-                <div className="flex flex-col items-center p-4 border border-portfolio-divider rounded-lg hover:border-portfolio-accent transition-colors">
-                  <div className="w-16 h-16 bg-green-600 rounded-lg mb-2 flex items-center justify-center text-white font-bold text-2xl">
-                    G
-                  </div>
-                  <span className="text-sm text-portfolio-text text-center">Google Partner</span>
-                </div>
-                <div className="flex flex-col items-center p-4 border border-portfolio-divider rounded-lg hover:border-portfolio-accent transition-colors">
-                  <div className="w-16 h-16 bg-red-600 rounded-lg mb-2 flex items-center justify-center text-white font-bold">
-                    YT
-                  </div>
-                  <span className="text-sm text-portfolio-text text-center">YouTube Certified</span>
-                </div>
-                <div className="flex flex-col items-center p-4 border border-portfolio-divider rounded-lg hover:border-portfolio-accent transition-colors">
-                  <div className="w-16 h-16 bg-purple-600 rounded-lg mb-2 flex items-center justify-center text-white font-bold">
-                    HJ
-                  </div>
-                  <span className="text-sm text-portfolio-text text-center">Hotjar Partner</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Enhanced CTA Section */}
-            <div className="mb-6 sm:mb-12 text-center bg-portfolio-accent/10 p-8 rounded-lg">
-              <h2 className="text-2xl sm:text-4xl font-bold text-portfolio-text mb-3 sm:mb-4">
-                Ready to scale your digital growth?
-              </h2>
-              <p className="text-lg text-portfolio-text/80 mb-6">
-                Get a free audit of your current digital strategy and discover opportunities for growth.
+              <p className="text-base sm:text-lg text-portfolio-text/80 mb-6 max-w-3xl">
+                From global brands to regional leaders, United Media connects ambitious clients with the audiences that
+                matter most.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-portfolio-accent text-white px-6 py-3 rounded-full hover:bg-portfolio-accent/80 transition-colors font-medium">
-                  Get Free Audit
-                </button>
-                <button className="border-2 border-portfolio-accent text-portfolio-accent px-6 py-3 rounded-full hover:bg-portfolio-accent hover:text-white transition-colors font-medium">
-                  Schedule a Call
-                </button>
+              {/* Reutilizamos el carrusel de marcas de la home */}
+              <div className="-mx-[5%] sm:-mx-[10%]">
+                <BrandCarousel />
               </div>
-            </div>
+            </section>
 
+            {/* Testimonials Section */}
+            <section className="mb-10 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-portfolio-text mb-6">
+                What our clients say
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="p-6 border border-portfolio-divider rounded-lg bg-portfolio-bg">
+                  <p className="text-sm sm:text-base text-portfolio-text/80 italic mb-4">
+                    “They are uniquely positioned in the space of media-meets-innovation-meets-tech. They bring
+                    something very special to the practice of connecting with today&apos;s consumer.”
+                  </p>
+                  <p className="text-sm font-semibold text-portfolio-text">
+                    Former CMO, Global Industrial Brand
+                  </p>
+                </div>
+                <div className="p-6 border border-portfolio-divider rounded-lg bg-portfolio-bg">
+                  <p className="text-sm sm:text-base text-portfolio-text/80 italic mb-4">
+                    “Working with every member of the team felt like being part of one organization, all moving toward a
+                    shared goal. From creative conversations to plan refinement and optimizations, every step was
+                    collaborative.”
+                  </p>
+                  <p className="text-sm font-semibold text-portfolio-text">
+                    Senior Brand Director, Consumer Health Brand
+                  </p>
+                </div>
+                <div className="p-6 border border-portfolio-divider rounded-lg bg-portfolio-bg">
+                  <p className="text-sm sm:text-base text-portfolio-text/80 italic mb-4">
+                    “Their expertise and creativity helped us evolve our audience strategy and connect brand and
+                    performance, giving our teams clear visibility into growth.”
+                  </p>
+                  <p className="text-sm font-semibold text-portfolio-text">
+                    CMO, Financial Services Company
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Contact / CTA Section */}
+            <section className="mb-10 sm:mb-16 text-center bg-portfolio-accent/10 p-8 rounded-lg">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-portfolio-text mb-3 sm:mb-4">
+                Let&apos;s talk media
+              </h2>
+              <p className="text-base sm:text-lg text-portfolio-text/80 max-w-2xl mx-auto mb-6">
+                Ready to rethink how your brand shows up in the world? Connect with United Media to design a media
+                ecosystem built around the audiences that matter most.
+              </p>
+              <Button
+                variant="default"
+                className="bg-portfolio-accent text-white hover:bg-portfolio-accent/80 rounded-full px-8 py-3 text-sm sm:text-base font-medium"
+                onClick={() => {
+                  window.location.href = 'mailto:hello@uv.agency';
+                }}
+              >
+                Contact us
+              </Button>
+            </section>
           </div>
+
           <Footer />
         </div>
       </div>
@@ -414,4 +359,6 @@ const UnitedMedia = () => {
   );
 };
 
-export default UnitedMedia; 
+export default UnitedMedia;
+
+
