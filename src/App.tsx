@@ -97,7 +97,7 @@ const App = () => {
                     <OurCompany />
                   </RouteWrapper>
                 } />
-                <Route path="/united-media" element={
+                <Route path="/um" element={
                   <RouteWrapper>
                     <UnitedMedia />
                   </RouteWrapper>

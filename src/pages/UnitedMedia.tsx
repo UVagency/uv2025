@@ -35,12 +35,12 @@ const UnitedMedia = () => {
     'who': {
       eyebrow: 'Who are we trying to move and what moves them',
       title: 'Strategy Starts with the Audience',
-      body: `We begin with people, not platforms. Our media principles are rooted in behavior, not just demographics, and act as filters to ensure a brand shows up in ways that matter. Every brief starts by asking: who are we trying to move, and what moves them?`,
+      body: `We begin with people, not platforms. Our UM principles are rooted in behavior, not just demographics, and act as filters to ensure a brand shows up in ways that matter. Every brief starts by asking: who are we trying to move, and what moves them?`,
     },
     'what': {
       eyebrow: 'What is the role media plays in creating impact?',
       title: 'Creativity Fuels the Media Engine',
-      body: `Media is more than a delivery system, it's an amplifier. We build the stage for creative to thrive, selecting unexpected formats and emerging platforms that spark conversation and cultural resonance. At United Media, media and creative aren't siloed — they speak fluently.`,
+      body: `UM is more than a delivery system, it's an amplifier. We build the stage for creative to thrive, selecting unexpected formats and emerging platforms that spark conversation and cultural resonance. At UM, media and creative aren't siloed — they speak fluently.`,
     },
     'so-what': {
       eyebrow: 'So what impact did it have on the business?',
@@ -124,7 +124,7 @@ const UnitedMedia = () => {
                 </div>
                 <div>
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-portfolio-text mb-3 sm:mb-4">
-                    The United Media Method
+                    The UM Method
                   </h2>
                   {/* Contenido dinámico con altura mínima fija para evitar saltos al hacer hover */}
                   <div className="min-h-[220px] sm:min-h-[250px] md:min-h-[260px]">

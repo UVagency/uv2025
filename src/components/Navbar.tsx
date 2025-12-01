@@ -44,7 +44,7 @@ const Navbar = () => {
                   Our Company
                 </Link>
                 <Link
-                  to="/united-media"
+                  to="/um"
                   onClick={() => {
                     if (isInfoOpen) toggleInfo();
                     if (isContactOpen) toggleContact();
