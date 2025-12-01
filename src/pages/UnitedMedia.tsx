@@ -268,8 +268,6 @@ const UnitedMedia = () => {
                       <span>Funnel Metrics</span>
                       <span>Campaign Reporting</span>
                       <span>Dashboards</span>
-                      <span>Business Intelligence</span>
-                      <span>Attribution</span>
                       <span>Cross-Channel</span>
                     </p>
                   </div>
