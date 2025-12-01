@@ -45,7 +45,7 @@ const UnitedMedia = () => {
     'so-what': {
       eyebrow: 'So what impact did it have on the business?',
       title: 'Tech-Forward, Platform-Agnostic',
-      body: `We're fluent in every tool, but beholden to none. Our tech stack is custom-built to the business and deep marketplace knowledge lets us choose the best partners for the job — unlocking value others miss and maximizing accountability across every tactic.`,
+      body: `We're fluent in every tool, but beholden to none. Our tech stack is custom-built to the business and deep media knowledge lets us choose the best partners for the job — unlocking value others miss and maximizing accountability across every tactic.`,
     },
     'whats-next': {
       eyebrow: "What are we doing with what we've learned?",
@@ -63,7 +63,7 @@ const UnitedMedia = () => {
     <div className="min-h-screen bg-portfolio-bg">
       <SEO
         title="United Media Strategy & Buying @ UV"
-        description="Breaking convention and buying with intention. Bold ideas, executed with the craft and clarity of seasoned marketplace operators driving business outcomes."
+        description="Bold ideas executed by seasoned media humans who drive real business outcomes"
         url="/um"
         pageType="company"
       />
@@ -100,7 +100,7 @@ const UnitedMedia = () => {
                 </p>
                 <div className="mt-4 sm:mt-6 flex flex-wrap gap-2 sm:gap-4 justify-start">
                   <div className="text-portfolio-text/70 text-xs sm:text-base">
-                    <span className="font-semibold">Bold ideas, executed with the craft and clarity of seasoned marketplace operators driving business outcomes.</span>
+                    <span className="font-semibold">Bold ideas, executed with the craft and clarity of seasoned media professionals driving business outcomes.</span>
                   </div>
                 </div>
               </div>
