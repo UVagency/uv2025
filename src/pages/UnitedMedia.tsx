@@ -278,10 +278,11 @@ const UnitedMedia = () => {
             {/* Clients Section */}
             <section className="mb-10 sm:mb-16">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-portfolio-text mb-3 sm:mb-4">
-                We&apos;ve planned &amp; purchased media for these brands
+                We&apos;ve planned &amp; purchased over $10M of media for these brands
+
               </h2>
               <p className="text-base sm:text-lg text-portfolio-text/80 mb-6 max-w-3xl">
-                From global brands to regional leaders, United Media connects ambitious clients with the audiences that
+                From global brands to regional leaders, United Media connects ambitious brands with the audiences that
                 matter most.
               </p>
               {/* Reutilizamos el carrusel de marcas de la home */}
