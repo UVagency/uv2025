@@ -78,6 +78,15 @@ const segments: Segment[] = [
   },
 ];
 
+// Mapa de segmentos adyacentes (en orden circular)
+const adjacentSegments: Record<SegmentId, SegmentId[]> = {
+  'who': ['how', 'what'],
+  'what': ['who', 'so-what'],
+  'so-what': ['what', 'whats-next'],
+  'whats-next': ['so-what', 'how'],
+  'how': ['whats-next', 'who'],
+};
+
 const MediaMethodWheel: React.FC<MediaMethodWheelProps> = ({
   activeSegmentId,
   onSegmentChange,
@@ -100,13 +109,20 @@ const MediaMethodWheel: React.FC<MediaMethodWheelProps> = ({
         {/* Segments */}
         {segments.map((segment) => {
           const isActive = segment.id === activeSegmentId;
+          const isAdjacent = adjacentSegments[activeSegmentId]?.includes(segment.id);
+          
+          let fillClass = 'fill-portfolio-text';
+          if (isActive) {
+            fillClass = 'fill-portfolio-accent';
+          } else if (isAdjacent) {
+            fillClass = 'fill-portfolio-text-secondary';
+          }
+          
           return (
             <path
               key={segment.id}
               d={createWedgePath(segment.startAngle, segment.endAngle)}
-              className={`cursor-pointer transition-colors duration-200 ${
-                isActive ? 'fill-portfolio-bg' : 'fill-portfolio-text-secondary'
-              }`}
+              className={`cursor-pointer transition-colors duration-200 ${fillClass}`}
               onMouseEnter={() => onSegmentChange?.(segment.id)}
             />
           );
@@ -135,6 +151,14 @@ const MediaMethodWheel: React.FC<MediaMethodWheelProps> = ({
           const { x, y } = polarToCartesian(labelRadius, midAngle);
 
           const isActive = segment.id === activeSegmentId;
+          const isAdjacent = adjacentSegments[activeSegmentId]?.includes(segment.id);
+          
+          let textClass = 'fill-portfolio-accent';
+          if (isActive) {
+            textClass = 'fill-portfolio-bg';
+          } else if (isAdjacent) {
+            textClass = 'fill-portfolio-accent/60';
+          }
 
           return (
             <text
@@ -144,7 +168,7 @@ const MediaMethodWheel: React.FC<MediaMethodWheelProps> = ({
               textAnchor="middle"
               fontSize="18"
               fontWeight="bold"
-              className={isActive ? 'fill-portfolio-accent' : 'fill-portfolio-bg'}
+              className={textClass}
             >
               {segment.label}
             </text>
