@@ -281,7 +281,7 @@ const UnitedMedia = () => {
                 We&apos;ve planned &amp; purchased over $10M of media for these brands
 
               </h2>
-              <p className="text-base sm:text-lg text-portfolio-text/80 mb-6 max-w-3xl">
+              <p className="text-base sm:text-lg text-portfolio-text/80 mb-6 max-w-5xl">
                 From global brands to regional leaders, United Media connects ambitious brands with the audiences that
                 matter most.
               </p>
