@@ -63,12 +63,10 @@ const UnitedMedia = () => {
     <div className="min-h-screen bg-portfolio-bg">
       <SEO
         title="United Media Strategy & Buying @ UV"
-        description="United Media is UV's media practice: bold ideas, executed with the craft and clarity of seasoned marketplace operators driving business outcomes."
+        description="Breaking convention and buying with intention. Bold ideas, executed with the craft and clarity of seasoned marketplace operators driving business outcomes."
+        url="/um"
         pageType="company"
       />
-      <Helmet>
-        <title>United Media Strategy & Buying @ UV</title>
-      </Helmet>
 
       <div className="fixed inset-0 z-50 bg-portfolio-bg overflow-y-auto">
         <div className="w-full mx-auto pt-8 pb-16">
