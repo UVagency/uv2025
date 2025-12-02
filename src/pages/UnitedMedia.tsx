@@ -29,7 +29,7 @@ const UnitedMedia = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [handleClose]);
 
-  const [activeMethod, setActiveMethod] = React.useState<'who' | 'what' | 'so-what' | 'whats-next' | 'how'>('who');
+  const [activeMethod, setActiveMethod] = React.useState<'who' | 'what' | 'so-what' | 'whats-next' | 'how'>('how');
 
   const methodViews = {
     'who': {
@@ -101,7 +101,7 @@ const UnitedMedia = () => {
                   </span>
                 </div>
                 <p className="w-full max-w-[95vw] sm:max-w-full mx-auto text-base sm:text-2xl md:text-4xl text-portfolio-text/90 font-light leading-tight mt-3 sm:mt-6 text-left">
-                Breaking convention and buying with intention
+                  Breaking convention and buying with intention
                 </p>
                 <div className="mt-4 sm:mt-6 flex flex-wrap gap-2 sm:gap-4 justify-start">
                   <div className="text-portfolio-text/70 text-xs sm:text-base">
