@@ -92,7 +92,7 @@ const MediaMethodWheel: React.FC<MediaMethodWheelProps> = ({
   onSegmentChange,
 }) => {
   return (
-    <div className="w-full max-w-xl mx-auto">
+    <div className="w-full max-w-xl">
       <svg
         viewBox="0 0 400 400"
         role="img"
@@ -110,14 +110,14 @@ const MediaMethodWheel: React.FC<MediaMethodWheelProps> = ({
         {segments.map((segment) => {
           const isActive = segment.id === activeSegmentId;
           const isAdjacent = adjacentSegments[activeSegmentId]?.includes(segment.id);
-          
+
           let fillClass = 'fill-portfolio-text';
           if (isActive) {
             fillClass = 'fill-portfolio-accent';
           } else if (isAdjacent) {
             fillClass = 'fill-portfolio-text-secondary';
           }
-          
+
           return (
             <path
               key={segment.id}
@@ -152,7 +152,7 @@ const MediaMethodWheel: React.FC<MediaMethodWheelProps> = ({
 
           const isActive = segment.id === activeSegmentId;
           const isAdjacent = adjacentSegments[activeSegmentId]?.includes(segment.id);
-          
+
           let textClass = 'fill-portfolio-accent';
           if (isActive) {
             textClass = 'fill-portfolio-bg';

@@ -118,7 +118,7 @@ const UnitedMedia = () => {
 
             {/* The United Media Method / Strategy Starts with the Audience */}
             <section className="mb-10 sm:mb-16">
-              <div className="grid lg:grid-cols-2 gap-10 items-center">
+              <div className="grid gap-8 lg:gap-12 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,2fr)] items-center">
                 <div>
                   <MediaMethodWheel
                     activeSegmentId={activeMethod}
@@ -157,7 +157,7 @@ const UnitedMedia = () => {
               <div className="grid gap-8 lg:gap-12 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,2fr)] items-start">
                 {/* Título grande a la izquierda */}
                 <div>
-                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-portfolio-text leading-tight">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-portfolio-text leading-tight">
                     Planning &amp; Buying Capabilities
                   </h2>
                 </div>
