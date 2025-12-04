@@ -1,20 +1,18 @@
-import React from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import React, { useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { X } from 'lucide-react';
 import Footer from '../components/Footer';
 import { SEO } from '../components/SEO';
 import { Button } from "@/components/ui/button";
-import OptimizedImage from "@/components/ui/optimized-image";
 import BrandCarousel from "../components/BrandCarousel";
-import MediaMethodWheel from "../components/company/MediaMethodWheel";
 import CompanyVideo from "../components/company/CompanyVideo";
-import { mediaInfo } from "@/data/unitedMediaData";
+import EventsMethodWheel from "../components/company/EventsMethodWheel";
 
-const UnitedMedia = () => {
+const Events = () => {
   const navigate = useNavigate();
 
-  const handleClose = React.useCallback(() => {
+  const handleClose = useCallback(() => {
     navigate('/');
   }, [navigate]);
 
@@ -29,48 +27,47 @@ const UnitedMedia = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [handleClose]);
 
-  const [activeMethod, setActiveMethod] = React.useState<'who' | 'what' | 'so-what' | 'whats-next' | 'how'>('how');
+  const [activeMethod, setActiveMethod] = React.useState<'strategy' | 'conceptualization' | 'execution' | 'measurement'>('strategy');
 
   const methodViews = {
-    'who': {
-      eyebrow: 'Who are we trying to move and what moves them',
+    'strategy': {
+      eyebrow: 'How do we design events that move people?',
       title: 'Strategy Starts with the Audience',
-      body: `We begin with people, not platforms. Our UM principles are rooted in behavior, not just demographics, and act as filters to ensure a brand shows up in ways that matter. Every brief starts by asking: who are we trying to move, and what moves them?`,
+      body: `We begin with people, not venues. Our event strategy is rooted in understanding behavior, motivations, and what truly moves audiences. Every event brief starts by asking: who are we trying to move, and what experience will create lasting impact?`,
     },
-    'what': {
-      eyebrow: 'What is the role media plays in creating impact?',
-      title: 'Creativity Fuels the Media Engine',
-      body: `UM is more than a delivery system, it's an amplifier. We build the stage for creative to thrive, selecting unexpected formats and emerging platforms that spark conversation and cultural resonance. At UM, media and creative aren't siloed — they speak fluently.`,
+    'conceptualization': {
+      eyebrow: 'How do we bring ideas to life?',
+      title: 'Conceptualization That Inspires',
+      body: `We transform strategic insights into compelling event concepts. Our conceptualization process combines creative vision with practical execution, ensuring every idea is both inspiring and achievable. We craft narratives that resonate and experiences that matter.`,
     },
-    'so-what': {
-      eyebrow: 'So what impact did it have on the business?',
-      title: 'Tech-Forward, Platform-Agnostic',
-      body: `We're fluent in every tool, but beholden to none. Our tech stack is custom-built to the business and deep media knowledge lets us choose the best partners for the job — unlocking value others miss and maximizing accountability across every tactic.`,
+    'execution': {
+      eyebrow: 'What does flawless execution look like?',
+      title: 'End-to-End Execution Excellence',
+      body: `From concept to completion, we handle every detail. Our execution capabilities span venue selection, technical setup, content creation, and seamless coordination. We ensure every element works in harmony to create unforgettable moments.`,
     },
-    'whats-next': {
-      eyebrow: "What are we doing with what we've learned?",
-      title: 'Always On. Always Optimizing.',
-      body: `Testing isn’t a task, it’s a mindset. We establish the framework upfront to measure what matters most, and then adapt in real-time to what’s working. Our goal isn’t just media efficiency — it’s delivering business outcomes with clarity and speed.`,
-    },
-    'how': {
-      eyebrow: 'How do we activate across the full funnel?',
-      title: 'Omni-Channel. No Smoke, No Mirrors.',
-      body: `We plan holistically across the full funnel — because real people don’t live in silos. That means no brand vs. performance trade-offs, and no murky models. Every investment is transparent, every channel earns its place, and every dollar is treated like it’s our own.`,
+    'measurement': {
+      eyebrow: 'What impact did the event have on the business?',
+      title: 'Data-Driven Event Intelligence',
+      body: `We measure what matters. From attendance metrics to brand sentiment, engagement rates to conversion tracking, we provide clear visibility into event performance and ROI. Every event is an opportunity to learn and optimize.`,
     },
   } as const;
+
+  const eventInfo = {
+    videoRecapUrl: "https://vimeo.com/1138099986",
+  };
 
   return (
     <div className="min-h-screen bg-portfolio-bg">
       <SEO
-        title="United Media Strategy & Buying @ UV"
-        description="Bold ideas executed by seasoned media humans who drive real business outcomes"
-        url="/um"
+        title="United Experiences - Live Experiences @ UV"
+        description="United Experiences: Crafting experiences that move people to create customers. From brand activations to physical experiences that connect brands with people in real life."
+        url="/events"
         pageType="company"
         type="website"
       />
       <Helmet>
-        <meta property="og:url" content="https://www.uv.agency/um" />
-        <link rel="canonical" href="https://www.uv.agency/um" />
+        <meta property="og:url" content="https://www.uv.agency/events" />
+        <link rel="canonical" href="https://www.uv.agency/events" />
       </Helmet>
 
       <div className="fixed inset-0 z-50 bg-portfolio-bg overflow-y-auto">
@@ -88,24 +85,24 @@ const UnitedMedia = () => {
                     <X size={16} className="sm:w-5 sm:h-5" />
                   </button>
                   <h1 className="text-2xl sm:text-4xl md:text-7xl font-bold text-portfolio-text leading-tight break-words max-w-[90vw] sm:max-w-full">
-                    United Media
+                    United Experiences
                   </h1>
                   <span className="project-year-tag text-xs sm:text-base px-3 sm:px-6 py-1 sm:py-2 rounded-full bg-portfolio-tag-bg text-portfolio-tag-text">
-                    Smart Media
+                    Live Experiences
                   </span>
                   <span className="project-category-tag text-xs sm:text-base px-3 sm:px-6 py-1 sm:py-2 border rounded-full">
-                    Media Strategy
+                    Brand Experiences
                   </span>
                   <span className="project-category-tag text-xs sm:text-base px-3 sm:px-6 py-1 sm:py-2 border rounded-full">
-                    Planning &amp; Buying
+                    Physical Activation
                   </span>
                 </div>
                 <p className="w-full max-w-[95vw] sm:max-w-full mx-auto text-base sm:text-2xl md:text-4xl text-portfolio-text/90 font-light leading-tight mt-3 sm:mt-6 text-left">
-                  Breaking convention and buying with intention
+                  Events that move people to create customers
                 </p>
                 <div className="mt-4 sm:mt-6 flex flex-wrap gap-2 sm:gap-4 justify-start">
                   <div className="text-portfolio-text/70 text-xs sm:text-base">
-                    <span className="font-semibold">Bold ideas, executed with the craft and clarity of seasoned media professionals driving business outcomes.</span>
+                    <span className="font-semibold">Crafting experiences that connect brands with people in real life</span>
                   </div>
                 </div>
               </div>
@@ -113,23 +110,23 @@ const UnitedMedia = () => {
 
             {/* Video Recap Section */}
             <section className="mb-10 sm:mb-16">
-              <CompanyVideo videoUrl={mediaInfo.videoRecapUrl} />
+              <CompanyVideo videoUrl={eventInfo.videoRecapUrl} />
             </section>
 
-            {/* The United Media Method / Strategy Starts with the Audience */}
+            {/* The UX Method */}
             <section className="mb-10 sm:mb-16">
               <div className="grid gap-8 lg:gap-12 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,2fr)] items-center">
                 <div>
-                  <MediaMethodWheel
+                  <EventsMethodWheel
                     activeSegmentId={activeMethod}
                     onSegmentChange={setActiveMethod}
                   />
                 </div>
                 <div>
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-portfolio-text mb-3 sm:mb-4">
-                    The UM Method
+                    The UX Method
                   </h2>
-                  {/* Contenido dinámico con altura mínima fija para evitar saltos al hacer hover */}
+                  {/* Contenido dinámico con altura mínima fija para evitar saltos */}
                   <div className="min-h-[220px] sm:min-h-[250px] md:min-h-[260px]">
                     <p className="text-xs sm:text-sm uppercase tracking-[0.16em] text-portfolio-text/70 mb-3">
                       {methodViews[activeMethod].eyebrow}
@@ -143,74 +140,123 @@ const UnitedMedia = () => {
                   </div>
                   <div className="mt-6 text-sm sm:text-base text-portfolio-text">
                     <div className="inline-flex flex-wrap gap-x-8 gap-y-2 font-semibold">
-                      <span>Faster Process</span>
-                      <span>Smarter Spend</span>
-                      <span>Accelerated Path of Outcomes</span>
+                      <span>Strategic Planning</span>
+                      <span>Flawless Execution</span>
+                      <span>Measurable Impact</span>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
 
-            {/* Planning & Buying Capabilities */}
+            {/* Event Capabilities */}
             <section className="mb-10 sm:mb-16">
               <div className="grid gap-8 lg:gap-12 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,2fr)] items-start">
                 {/* Título grande a la izquierda */}
                 <div>
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-portfolio-text leading-tight">
-                    Planning &amp; Buying Capabilities
+                    Event Capabilities
                   </h2>
                 </div>
 
-                {/* Listado de capacidades a la derecha, siguiendo la estructura de la referencia */}
+                {/* Listado de capacidades a la derecha */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-6 text-sm sm:text-base">
-                  {/* Video */}
+                  {/* Brand Activations */}
                   <div>
                     <p className="uppercase tracking-[0.14em] text-portfolio-text font-semibold mb-1">
-                      Video
+                      Brand Activations
                     </p>
                     <p className="text-portfolio-text/80 flex flex-wrap gap-x-3 gap-y-1">
-                      <span>Linear</span>
-                      <span>OLV</span>
-                      <span>CTV/OTT</span>
-                      <span>Local/National</span>
+                      <span>Product Launches</span>
+                      <span>Pop-Ups</span>
+                      <span>Experiential</span>
+                      <span>Sampling</span>
                     </p>
                   </div>
 
-                  {/* Social */}
+                  {/* Event Production */}
                   <div>
                     <p className="uppercase tracking-[0.14em] text-portfolio-text font-semibold mb-1">
-                      Social
+                      Event Production
                     </p>
                     <p className="text-portfolio-text/80 flex flex-wrap gap-x-3 gap-y-1">
-                      <span>Paid</span>
-                      <span>Organic</span>
-                      <span>Creator</span>
+                      <span>Corporate Events</span>
+                      <span>Conferences</span>
+                      <span>Trade Shows</span>
+                      <span>Festivals</span>
                     </p>
                   </div>
 
-                  {/* Audio */}
+                  {/* Live Experiences */}
                   <div>
                     <p className="uppercase tracking-[0.14em] text-portfolio-text font-semibold mb-1">
-                      Audio
+                      Live Experiences
                     </p>
                     <p className="text-portfolio-text/80 flex flex-wrap gap-x-3 gap-y-1">
-                      <span>Terrestrial</span>
-                      <span>Streaming</span>
-                      <span>Podcasts</span>
-                      <span>Local/National</span>
+                      <span>Entertainment</span>
+                      <span>Music Events</span>
+                      <span>Sports Activation</span>
+                      <span>Cultural</span>
                     </p>
                   </div>
 
-                  {/* OOH */}
+                  {/* Experiential Marketing */}
                   <div>
                     <p className="uppercase tracking-[0.14em] text-portfolio-text font-semibold mb-1">
-                      OOH
+                      Experiential Marketing
                     </p>
                     <p className="text-portfolio-text/80 flex flex-wrap gap-x-3 gap-y-1">
-                      <span>Traditional</span>
-                      <span>Digital</span>
-                      <span>Guerilla</span>
+                      <span>Immersive</span>
+                      <span>Interactive</span>
+                      <span>Multi-Sensory</span>
+                    </p>
+                  </div>
+
+                  {/* Venue & Logistics */}
+                  <div>
+                    <p className="uppercase tracking-[0.14em] text-portfolio-text font-semibold mb-1">
+                      Venue &amp; Logistics
+                    </p>
+                    <p className="text-portfolio-text/80 flex flex-wrap gap-x-3 gap-y-1">
+                      <span>Venue Selection</span>
+                      <span>Catering</span>
+                      <span>Transportation</span>
+                    </p>
+                  </div>
+
+                  {/* Technical Production */}
+                  <div>
+                    <p className="uppercase tracking-[0.14em] text-portfolio-text font-semibold mb-1">
+                      Technical Production
+                    </p>
+                    <p className="text-portfolio-text/80 flex flex-wrap gap-x-3 gap-y-1">
+                      <span>AV Equipment</span>
+                      <span>Lighting</span>
+                      <span>Staging</span>
+                    </p>
+                  </div>
+
+                  {/* Content & Creative */}
+                  <div>
+                    <p className="uppercase tracking-[0.14em] text-portfolio-text font-semibold mb-1">
+                      Content &amp; Creative
+                    </p>
+                    <p className="text-portfolio-text/80 flex flex-wrap gap-x-3 gap-y-1">
+                      <span>Event Design</span>
+                      <span>Branding</span>
+                      <span>Content Creation</span>
+                    </p>
+                  </div>
+
+                  {/* Measurement & Analytics */}
+                  <div>
+                    <p className="uppercase tracking-[0.14em] text-portfolio-text font-semibold mb-1">
+                      Measurement &amp; Analytics
+                    </p>
+                    <p className="text-portfolio-text/80 flex flex-wrap gap-x-3 gap-y-1">
+                      <span>Attendance Tracking</span>
+                      <span>Engagement Metrics</span>
+                      <span>ROI Analysis</span>
                     </p>
                   </div>
 
@@ -220,103 +266,10 @@ const UnitedMedia = () => {
                       Specialties
                     </p>
                     <p className="text-portfolio-text/80 flex flex-wrap gap-x-3 gap-y-1">
-                      <span>B2B</span>
-                      <span>Partnerships</span>
-                      <span>Mar Tech</span>
+                      <span>B2B Events</span>
+                      <span>Consumer Events</span>
+                      <span>Hybrid Events</span>
                     </p>
-                  </div>
-
-                  {/* Display */}
-                  <div>
-                    <p className="uppercase tracking-[0.14em] text-portfolio-text font-semibold mb-1">
-                      Display
-                    </p>
-                    <p className="text-portfolio-text/80 flex flex-wrap gap-x-3 gap-y-1">
-                      <span>Site Direct</span>
-                      <span>Programmatic</span>
-                      <span>Native</span>
-                    </p>
-                  </div>
-
-                  {/* Search */}
-                  <div>
-                    <p className="uppercase tracking-[0.14em] text-portfolio-text font-semibold mb-1">
-                      Search
-                    </p>
-                    <p className="text-portfolio-text/80 flex flex-wrap gap-x-3 gap-y-1">
-                      <span>SEM</span>
-                      <span>SEO</span>
-                      <span>AEO</span>
-                      <span>GEO</span>
-                    </p>
-                  </div>
-
-                  {/* Print */}
-                  <div>
-                    <p className="uppercase tracking-[0.14em] text-portfolio-text font-semibold mb-1">
-                      Print
-                    </p>
-                    <p className="text-portfolio-text/80 flex flex-wrap gap-x-3 gap-y-1">
-                      <span>Direct Mail</span>
-                      <span>Premium Publications</span>
-                      <span>Local/National</span>
-                    </p>
-                  </div>
-
-                  {/* Analytics & Measurement */}
-                  <div>
-                    <p className="uppercase tracking-[0.14em] text-portfolio-text font-semibold mb-1">
-                      Analytics &amp; Measurement
-                    </p>
-                    <p className="text-portfolio-text/80 flex flex-wrap gap-x-3 gap-y-1">
-                      <span>Funnel Metrics</span>
-                      <span>Campaign Reporting</span>
-                      <span>Dashboards</span>
-                      <span>Cross-Channel</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Influencer Marketing Section */}
-            <section className="mb-10 sm:mb-16">
-              <div className="grid gap-8 lg:gap-12 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,2fr)] items-start">
-                {/* Título grande a la izquierda */}
-                <div>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-portfolio-text leading-tight">
-                    Influencer Marketing
-                  </h2>
-                </div>
-
-                {/* Contenido a la derecha */}
-                <div>
-                  <p className="text-base sm:text-lg text-portfolio-text/80 mb-6">
-                    We excel at connecting brands with the right creators. Our influencer marketing expertise spans strategy, creator selection, campaign management, and performance tracking. We identify authentic voices that resonate with your audience and drive meaningful engagement.
-                  </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm sm:text-base">
-                    <div>
-                      <p className="uppercase tracking-[0.14em] text-portfolio-text font-semibold mb-2">
-                        Our Approach
-                      </p>
-                      <ul className="text-portfolio-text/80 space-y-1">
-                        <li>• Strategic Creator Identification</li>
-                        <li>• Authentic Partnership Development</li>
-                        <li>• Multi-Platform Campaign Execution</li>
-                        <li>• Content Strategy & Amplification</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <p className="uppercase tracking-[0.14em] text-portfolio-text font-semibold mb-2">
-                        What We Deliver
-                      </p>
-                      <ul className="text-portfolio-text/80 space-y-1">
-                        <li>• Measurable Brand Awareness</li>
-                        <li>• Authentic Engagement</li>
-                        <li>• Content That Converts</li>
-                        <li>• Clear ROI & Performance Metrics</li>
-                      </ul>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -325,12 +278,10 @@ const UnitedMedia = () => {
             {/* Clients Section */}
             <section className="mb-10 sm:mb-16">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-portfolio-text mb-3 sm:mb-4">
-                We&apos;ve planned &amp; purchased over $10M of media for these brands
-
+                We&apos;ve created events for these brands
               </h2>
               <p className="text-base sm:text-lg text-portfolio-text/80 mb-6 max-w-5xl">
-                From global brands to regional leaders, United Media connects ambitious brands with the audiences that
-                matter most.
+                From global brands to regional leaders, United Experiences connects ambitious brands with audiences through memorable experiences.
               </p>
               {/* Reutilizamos el carrusel de marcas de la home */}
               <div className="-mx-[5%] sm:-mx-[10%]">
@@ -346,30 +297,26 @@ const UnitedMedia = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="p-6 border border-portfolio-divider rounded-lg bg-portfolio-bg">
                   <p className="text-sm sm:text-base text-portfolio-text/80 italic mb-4">
-                    “They are uniquely positioned in the space of media-meets-innovation-meets-tech. They bring
-                    something very special to the practice of connecting with today&apos;s consumer.”
+                    &quot;They transformed our product launch into an unforgettable experience. The attention to detail and strategic approach exceeded all expectations.&quot;
                   </p>
                   <p className="text-sm font-semibold text-portfolio-text">
-                    Former CMO, Global Industrial Brand
+                    Marketing Director, Global Beauty Brand
                   </p>
                 </div>
                 <div className="p-6 border border-portfolio-divider rounded-lg bg-portfolio-bg">
                   <p className="text-sm sm:text-base text-portfolio-text/80 italic mb-4">
-                    “Working with every member of the team felt like being part of one organization, all moving toward a
-                    shared goal. From creative conversations to plan refinement and optimizations, every step was
-                    collaborative.”
+                    &quot;UV Events doesn&apos;t just execute events—they create moments that move people. Every touchpoint was designed with intention, and the results speak for themselves.&quot;
                   </p>
                   <p className="text-sm font-semibold text-portfolio-text">
-                    Senior Brand Director, Consumer Health Brand
+                    Brand Manager, Consumer Goods Company
                   </p>
                 </div>
                 <div className="p-6 border border-portfolio-divider rounded-lg bg-portfolio-bg">
                   <p className="text-sm sm:text-base text-portfolio-text/80 italic mb-4">
-                    “Their expertise and creativity helped us evolve our audience strategy and connect brand and
-                    performance, giving our teams clear visibility into growth.”
+                    &quot;From concept to execution, their team was collaborative, creative, and results-driven. The event generated significant brand awareness and measurable business impact.&quot;
                   </p>
                   <p className="text-sm font-semibold text-portfolio-text">
-                    CMO, Financial Services Company
+                    CMO, Retail Company
                   </p>
                 </div>
               </div>
@@ -378,11 +325,10 @@ const UnitedMedia = () => {
             {/* Contact / CTA Section */}
             <section className="mb-10 sm:mb-16 text-center bg-portfolio-accent/10 p-8 rounded-lg">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-portfolio-text mb-3 sm:mb-4">
-                Let&apos;s talk media
+                Let&apos;s create events that move people
               </h2>
               <p className="text-base sm:text-lg text-portfolio-text/80 max-w-2xl mx-auto mb-6">
-                Ready to rethink how your brand shows up in the world? Connect with United Media to design a media
-                ecosystem built around the audiences that matter most.
+                Ready to craft experiences that connect your brand with people in real life? Connect with UX to create moments that drive real business outcomes.
               </p>
               <Button
                 variant="default"
@@ -403,6 +349,4 @@ const UnitedMedia = () => {
   );
 };
 
-export default UnitedMedia;
-
-
+export default Events;

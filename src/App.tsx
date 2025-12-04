@@ -18,6 +18,7 @@ const ProjectDetail = lazy(() => import("./pages/ProjectDetail"));
 const PrivateVideo = lazy(() => import("./pages/PrivateVideo"));
 const OurCompany = lazy(() => import("./pages/OurCompany"));
 const UnitedMedia = lazy(() => import("./pages/UnitedMedia"));
+const Events = lazy(() => import("./pages/Events"));
 
 // Create a client instance outside of the component
 const queryClient = new QueryClient();
@@ -100,6 +101,11 @@ const App = () => {
                 <Route path="/um" element={
                   <RouteWrapper>
                     <UnitedMedia />
+                  </RouteWrapper>
+                } />
+                <Route path="/events" element={
+                  <RouteWrapper>
+                    <Events />
                   </RouteWrapper>
                 } />
                 <Route path="/parisExclusive" element={
