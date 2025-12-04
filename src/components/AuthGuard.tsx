@@ -20,10 +20,11 @@ const AuthGuard: React.FC<AuthGuardProps> = ({ children }) => {
   });
   const [error, setError] = useState('');
 
-  // Credenciales de acceso (en un proyecto real, esto debería estar en variables de entorno)
+  // Credenciales de acceso desde variables de entorno
+  // En producción, estas deben configurarse en Netlify como environment variables
   const validCredentials = {
-    username: 'uv',
-    password: 'paris2025!'
+    username: import.meta.env.VITE_AUTH_USERNAME || 'uv',
+    password: import.meta.env.VITE_AUTH_PASSWORD || ''
   };
 
   useEffect(() => {

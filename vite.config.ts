@@ -8,14 +8,13 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
     headers: mode === 'production' ? {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      // En producción, CORS debe ser restringido al dominio específico
+      // Se configura mejor en netlify.toml para producción
       "Cross-Origin-Opener-Policy": "same-origin",
       "Cross-Origin-Embedder-Policy": "require-corp",
       "Cross-Origin-Resource-Policy": "same-origin",
     } : {
-      // Headers más permisivos para desarrollo
+      // Headers permisivos solo para desarrollo local
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type, Authorization",

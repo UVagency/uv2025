@@ -7,6 +7,7 @@ import ProjectImageGrid from './gallery/ProjectImageGrid';
 import ProjectTextSection from './gallery/ProjectTextSection';
 import { ImageItem } from '@/types/gallery';
 import { trackEvent, GA_EVENTS, GA_PARAMS } from '@/lib/analytics';
+import { sanitizeHtml } from '@/lib/sanitizeHtml';
 
 interface ProjectGalleryProps {
   project: ProjectData;
@@ -104,7 +105,7 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project, carouselSpeed 
         author={project.gallery.featureTextAuthor}
         role={project.gallery.featureTextRole}
       >
-        <div dangerouslySetInnerHTML={{ __html: project.gallery.featureText }} />
+        <div dangerouslySetInnerHTML={{ __html: sanitizeHtml(project.gallery.featureText) }} />
       </ProjectFeatureText>
 
       {project.gallery.sections.map((section, index) => {
