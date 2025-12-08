@@ -39,7 +39,7 @@ const Highlights = () => {
                   fit="contain"
                   wrapperClassName=""
                   sizes="(max-width: 768px) 92vw, 45vw"
-                  srcSetWidths={[350, 700, 900, 1200]}
+                  srcSetWidths={[350, 500, 600, 700, 800, 900, 1200]}
                 />
               </div>
 
