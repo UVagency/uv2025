@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import projectsData, { ProjectData } from "../data/projectsData";
+import { projectsList } from "../data/projectsList";
 import { highlightIds } from "../data/highlightsConfig";
 import OptimizedImage from "@/components/ui/optimized-image";
 
-// Seleccionar los proyectos destacados del projectsData
-const highlightedProjects = highlightIds.map(id => projectsData[id]);
+// Seleccionar los proyectos destacados del projectsList
+const highlightedProjects = highlightIds.map(id => projectsList.find(p => p.id === id)).filter(Boolean);
 
 const Highlights = () => {
   const navigate = useNavigate();

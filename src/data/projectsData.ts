@@ -1,23 +1,13 @@
 import { lazy } from 'react';
 import React from 'react';
-import expomascotas from './projects/expomascotas.json';
-import enjoyTheUnexpected from './projects/enjoy-the-unexpected.json';
-import festivalSeason from './projects/festival-season.json';
-import lollaVibes from './projects/lolla-vibes.json';
-import weMakeYourDay from './projects/we-make-your-day.json';
-import urbanBeat from './projects/urban-beat.json';
-import aGreatFirstDay from './projects/a-great-first-day.json';
-import turnUpTheVolume from './projects/turn-up-the-volume.json';
-import flyYourWay from './projects/fly-your-way.json';
-import closerToSun from './projects/closer-to-sun.json';
-import saborDeBarrio from './projects/sabor-de-barrio.json';
+// Defines interfaces but does NOT import data statically.
 
-interface BadgeProps {
+export interface BadgeProps {
   text: string;
   position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center';
 }
 
-interface ImageItem {
+export interface ImageItem {
   src: string;
   alt: string;
   badge?: BadgeProps;
@@ -78,7 +68,7 @@ export interface ProjectData {
   songTitle?: string;
   videoUrl?: string;
   images: string[];
-  thumbnails: string[];
+  thumbnails?: string[];
   comingSoon?: boolean;
   awardWinning?: boolean;
   emojis?: string[];
@@ -87,18 +77,25 @@ export interface ProjectData {
 }
 
 // Cargar proyectos desde archivos JSON
-const projectsData: Record<string, ProjectData> = {
-  "expomascotas": expomascotas as ProjectData,
-  "enjoy-the-unexpected": enjoyTheUnexpected as ProjectData,
-  "festival-season": festivalSeason as ProjectData,
-  "lolla-vibes": lollaVibes as ProjectData,
-  "we-make-your-day": weMakeYourDay as ProjectData,
-  "urban-beat": urbanBeat as ProjectData,
-  "a-great-first-day": aGreatFirstDay as ProjectData,
-  "turn-up-the-volume": turnUpTheVolume as ProjectData,
-  "fly-your-way": flyYourWay as ProjectData,
-  "closer-to-sun": closerToSun as ProjectData,
-  "sabor-de-barrio": saborDeBarrio as ProjectData
+// Cargar proyectos desde archivos JSON
+const projectImports: Record<string, () => Promise<any>> = {
+  "expomascotas": () => import('./projects/expomascotas.json'),
+  "enjoy-the-unexpected": () => import('./projects/enjoy-the-unexpected.json'),
+  "festival-season": () => import('./projects/festival-season.json'),
+  "lolla-vibes": () => import('./projects/lolla-vibes.json'),
+  "we-make-your-day": () => import('./projects/we-make-your-day.json'),
+  "urban-beat": () => import('./projects/urban-beat.json'),
+  "a-great-first-day": () => import('./projects/a-great-first-day.json'),
+  "turn-up-the-volume": () => import('./projects/turn-up-the-volume.json'),
+  "fly-your-way": () => import('./projects/fly-your-way.json'),
+  "closer-to-sun": () => import('./projects/closer-to-sun.json'),
+  "sabor-de-barrio": () => import('./projects/sabor-de-barrio.json')
 };
 
-export default projectsData;
+export const getProjectData = async (id: string): Promise<ProjectData | null> => {
+  const loader = projectImports[id];
+  if (!loader) return null;
+  const module = await loader();
+  return module.default || module;
+};
+

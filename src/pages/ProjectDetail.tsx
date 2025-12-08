@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { useParams } from "react-router-dom";
 import ProjectHeader from "../components/project/ProjectHeader";
 import ProjectNotFound from "../components/project/ProjectNotFound";
-import projectsData, { ProjectData, GallerySection } from "../data/projectsData";
+import { getProjectData, ProjectData } from "../data/projectsData";
 import Footer from "../components/Footer";
 import { SEO } from "../components/SEO";
 import { ProjectGallery, ProjectVideoPlayer } from "../components/lazy";
@@ -19,9 +19,17 @@ const SectionLoading = () => (
   </div>
 );
 
+// Full Page Loading
+const PageLoading = () => (
+  <div className="min-h-screen bg-portfolio-bg flex items-center justify-center">
+    <div className="w-16 h-16 border-4 border-portfolio-text border-t-transparent rounded-full animate-spin"></div>
+  </div>
+);
+
 function renderBullets(text: string) {
+  // ... same as before
   if (!text) return null;
-  
+
   const lines = text.split(/\r?\n/);
   const items: string[] = [];
   const blocks: (string | JSX.Element)[] = [];
@@ -66,7 +74,25 @@ function renderBullets(text: string) {
 
 const ProjectDetail = () => {
   const { projectId } = useParams();
-  const project = projectId ? projectsData[projectId] : undefined;
+  const [project, setProject] = React.useState<ProjectData | null | undefined>(undefined);
+  const [loading, setLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    if (projectId) {
+      setLoading(true);
+      getProjectData(projectId)
+        .then(data => {
+          setProject(data);
+          setLoading(false);
+        })
+        .catch(() => {
+          setProject(null);
+          setLoading(false);
+        });
+    }
+  }, [projectId]);
+
+  if (loading) return <PageLoading />;
 
   if (!project) {
     return <ProjectNotFound />;
@@ -74,7 +100,7 @@ const ProjectDetail = () => {
 
   return (
     <div className="min-h-screen bg-portfolio-bg">
-      <SEO 
+      <SEO
         title={`${project.name} | UV Agency`}
         description={project.description}
         pageType="project"
