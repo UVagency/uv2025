@@ -52,6 +52,7 @@ const BrandCarousel = () => {
                   className={`logo-image${brand.name === "Me-Elecmetal" ? " logo-melecmetal" : ""}${brand.name === "Philips" ? " logo-philips" : ""}`}
                   wrapperClassName=""
                   responsive={false}
+                  fit="contain"
                   priority={index < brands.length}
                 />
               </div>
