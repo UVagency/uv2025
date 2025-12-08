@@ -14,7 +14,7 @@ import saborDeBarrio from './projects/sabor-de-barrio.json';
 
 interface BadgeProps {
   text: string;
-  position?: string;
+  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center';
 }
 
 interface ImageItem {
@@ -32,6 +32,7 @@ export interface BannerSection {
   ratio?: number;
   badge?: BadgeProps;
   className?: string;
+  fit?: 'contain' | 'cover' | 'fill';
 }
 
 export interface TextSection {
@@ -77,7 +78,7 @@ export interface ProjectData {
   songTitle?: string;
   videoUrl?: string;
   images: string[];
-  thumbnails: string[]; 
+  thumbnails: string[];
   comingSoon?: boolean;
   awardWinning?: boolean;
   emojis?: string[];

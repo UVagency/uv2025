@@ -2,7 +2,9 @@
   "id": "enjoy-the-unexpected",
   "name": "ENJOY THE UNEXPECTED",
   "year": "HEINEKEN",
-  "categories": ["PROMO"],
+  "categories": [
+    "PROMO"
+  ],
   "description": "Through the activation of 'Enjoy the Unexpected', we positioned the country's points of sale as the stars of the year.",
   "client": "Heineken",
   "overview": "Travel from POS to the UEFA Champions League final.\nFor all fans of the tournament, the ultimate prize is to see the final of the competition in person. We made this a reality not only for the winners but also for their companions.\n\nThe objectives for this campaign were to continue positioning Heineken alongside the UEFA Champions League, increase share of shelf and brand visibility and encourage product purchase through the development of a promotion.",
@@ -19,7 +21,8 @@
     "sections": [
       {
         "type": "banner",
-        "image": "/images/projects/enjoy-the-unexpected/enjoy-the-unexpected-04.webp"
+        "image": "/images/projects/enjoy-the-unexpected/enjoy-the-unexpected-04.webp",
+        "fit": "contain"
       },
       {
         "type": "imageGrid",

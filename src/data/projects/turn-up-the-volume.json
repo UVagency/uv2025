@@ -2,7 +2,12 @@
   "id": "turn-up-the-volume",
   "name": "TURN UP THE VOLUME",
   "year": "MAYBELLINE NEW YORK",
-  "categories": ["OMNICHANNEL","DIGITAL","CONTENT CREATION","SOCIAL MEDIA"],
+  "categories": [
+    "OMNICHANNEL",
+    "DIGITAL",
+    "CONTENT CREATION",
+    "SOCIAL MEDIA"
+  ],
   "description": "Maybelline New York's Colossal family is a mascara icon — and we're turning up the volume like never before.",
   "client": "Maybelline New York",
   "overview": "We carried out the integrated communication campaign for the relaunch in Central America of the Colossal family of Maybelline New York, a success among mascara.\n\nThe objectives set by L'Oréal Central America were the following:\n\n- Boost the conversation with the brand's target audience.\n- Generate original omni-channel content.",
@@ -19,7 +24,8 @@
     "sections": [
       {
         "type": "banner",
-        "image": "/images/projects/turn-up-the-volume/turn-up-the-volume-04.webp"
+        "image": "/images/projects/turn-up-the-volume/turn-up-the-volume-04.webp",
+        "fit": "contain"
       },
       {
         "type": "imageGrid",
@@ -45,4 +51,4 @@
       }
     ]
   }
-} 
+}

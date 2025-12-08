@@ -7,13 +7,15 @@ interface ProjectBannerProps {
   alt: string;
   ratio?: number;
   badge?: BadgeProps;
+  fit?: 'contain' | 'cover' | 'fill';
 }
 
 const ProjectBanner: React.FC<ProjectBannerProps> = ({
   image,
   alt,
-  ratio = 21/9,
-  badge
+  ratio = 21 / 9,
+  badge,
+  fit
 }) => {
   return (
     <OptimizedImage
@@ -21,6 +23,7 @@ const ProjectBanner: React.FC<ProjectBannerProps> = ({
       alt={alt}
       aspectRatio={ratio}
       badge={badge}
+      fit={fit}
       priority={true} // Banner images are usually above the fold
     />
   );

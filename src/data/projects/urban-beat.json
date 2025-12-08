@@ -2,7 +2,9 @@
   "id": "urban-beat",
   "name": "URBAN BEAT",
   "year": "BALL CORPORATION",
-  "categories": ["INTEGRATED"],
+  "categories": [
+    "INTEGRATED"
+  ],
   "description": "The urban beat song we produced and promoted to raise awareness that the can is the most sustainable packaging in the world.",
   "client": "Ball Corporation",
   "overview": "Make can recycling become an unstoppable trend by creating an engaging campaign that would reach millions of people and increase awareness about can sustainability.",
@@ -19,7 +21,8 @@
     "sections": [
       {
         "type": "banner",
-        "image": "/images/projects/urban-beat/urban-beat-04.webp"
+        "image": "/images/projects/urban-beat/urban-beat-04.webp",
+        "fit": "contain"
       },
       {
         "type": "imageGrid",
@@ -45,4 +48,4 @@
       }
     ]
   }
-} 
+}

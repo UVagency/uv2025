@@ -1,6 +1,6 @@
 export interface BadgeProps {
   text: string;
-  position?: string;
+  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center';
 }
 
 export interface ImageItem {

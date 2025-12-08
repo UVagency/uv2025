@@ -16,10 +16,10 @@ interface ProjectGalleryProps {
 
 const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project, carouselSpeed }) => {
   const effectiveCarouselSpeed = project.carouselSpeed || carouselSpeed || 30;
-  
+
   const placeholders = [
     ...project.images,
-    "https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?q=80&w=800", 
+    "https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?q=80&w=800",
     "https://images.unsplash.com/photo-1507290439931-a861b5a38200?q=80&w=800",
     "https://images.unsplash.com/photo-1608501078713-8e445a709b39?q=80&w=800",
     "https://images.unsplash.com/photo-1517697471339-4aa32003c11a?q=80&w=800"
@@ -35,9 +35,9 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project, carouselSpeed 
   if (!project.gallery) {
     return (
       <div className="mb-16">
-        <ProjectImageCarousel 
-          images={placeholders} 
-          projectName={project.name} 
+        <ProjectImageCarousel
+          images={placeholders}
+          projectName={project.name}
           carouselSpeed={effectiveCarouselSpeed}
         />
 
@@ -47,15 +47,15 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project, carouselSpeed 
         </ProjectFeatureText>
 
         <div className="mb-6">
-          <ProjectBanner 
-            image={placeholders[0]} 
+          <ProjectBanner
+            image={placeholders[0]}
             alt={`${project.name} - Banner`}
             badge={{ text: "NEXT FRIDAY" }}
           />
         </div>
 
         <div className="mb-8">
-          <ProjectImageGrid 
+          <ProjectImageGrid
             columns={4}
             images={[1, 2, 3, 4].map((index) => ({
               src: placeholders[index % placeholders.length],
@@ -66,13 +66,13 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project, carouselSpeed 
         </div>
 
         <div className="mb-8">
-          <ProjectBanner 
-            image={placeholders[2]} 
+          <ProjectBanner
+            image={placeholders[2]}
             alt={`${project.name} - Main Feature`}
-            ratio={16/9}
-            badge={{ 
-              text: "", 
-              position: "center" 
+            ratio={16 / 9}
+            badge={{
+              text: "",
+              position: "center"
             }}
           />
         </div>
@@ -81,7 +81,7 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project, carouselSpeed 
           An iconic {project.categories[0].toLowerCase()} deserves an iconic graphics package. Drawing inspiration from {project.emojis ? project.emojis.join(' and ') : 'various elements'}, we designed a graphic language featuring bold colors, halftone patterns, and sleek vector-style neon looks.
         </ProjectTextSection>
 
-        <ProjectImageGrid 
+        <ProjectImageGrid
           columns={3}
           images={[1, 2, 3].map((index) => ({
             src: placeholders[(index + 7) % placeholders.length],
@@ -95,9 +95,9 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project, carouselSpeed 
 
   return (
     <div className="mb-16">
-      <ProjectImageCarousel 
-        images={project.images.length > 0 ? project.images : placeholders} 
-        projectName={project.name} 
+      <ProjectImageCarousel
+        images={project.images.length > 0 ? project.images : placeholders}
+        projectName={project.name}
         carouselSpeed={effectiveCarouselSpeed}
       />
 
@@ -113,11 +113,12 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project, carouselSpeed 
           case 'banner':
             return (
               <div className="mb-6" key={index}>
-                <ProjectBanner 
-                  image={section.image} 
+                <ProjectBanner
+                  image={section.image}
                   alt={`${project.name} - ${section.alt || 'Banner'}`}
-                  ratio={section.ratio || 21/9}
+                  ratio={section.ratio || 21 / 9}
                   badge={section.badge}
+                  fit={section.fit}
                 />
               </div>
             );
@@ -130,7 +131,7 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project, carouselSpeed 
           case 'imageGrid':
             return (
               <div className="mb-8" key={index}>
-                <ProjectImageGrid 
+                <ProjectImageGrid
                   columns={section.columns || 4}
                   images={section.images}
                   gap={section.gap}
