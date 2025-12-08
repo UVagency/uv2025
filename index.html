@@ -8,14 +8,7 @@
     <meta name="author" content="UV Agency" />
     <meta name="keywords" content="portfolio, projects, agency, media, experiences, phygital, UV" />
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HQ5XF6P8EH"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-HQ5XF6P8EH');
-    </script>
+
 
     <meta property="og:title" content="Portfolio Projects" />
     <meta property="og:description" content="United Visions 2026 UV Agency Media Experiences Events" />
@@ -35,18 +28,38 @@
 
     <!-- Apollo.io Tracking -->
     <script>
-    function initApollo(){
-      var n=Math.random().toString(36).substring(7),
-      o=document.createElement("script");
-      o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,
-      o.async=!0,
-      o.defer=!0,
-      o.onload=function(){
-        window.trackingFunctions.onLoad({appId:"663d43ae4d562101c795b683"})
-      },
-      document.head.appendChild(o)
+    // Apollo Tracking - Deferred
+    function initApollo() {
+        var n=Math.random().toString(36).substring(7),
+        o=document.createElement("script");
+        o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,
+        o.async=!0,
+        o.defer=!0,
+        o.onload=function(){
+            if(window.trackingFunctions){
+                window.trackingFunctions.onLoad({appId:"663d43ae4d562101c795b683"})
+            }
+        },
+        document.head.appendChild(o)
     }
-    initApollo();
+
+    // Defer Apollo init
+    (function() {
+        var apolloLoaded = false;
+        function loadApollo() {
+            if (apolloLoaded) return;
+            apolloLoaded = true;
+            initApollo();
+        }
+        
+        window.addEventListener('load', function() {
+            setTimeout(loadApollo, 3500); // Slight offset from GTM
+        });
+        
+        ['click', 'scroll', 'mousemove', 'touchstart'].forEach(function(event) {
+            window.addEventListener(event, loadApollo, { once: true, passive: true });
+        });
+    })();
     </script>
   </head>
 
