@@ -38,6 +38,8 @@ const Highlights = () => {
                   className="w-full"
                   fit="contain"
                   wrapperClassName=""
+                  sizes="(max-width: 768px) 92vw, 45vw"
+                  srcSetWidths={[350, 700, 900, 1200]}
                 />
               </div>
 

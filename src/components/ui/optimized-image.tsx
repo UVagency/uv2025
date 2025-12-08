@@ -16,6 +16,7 @@ interface OptimizedImageProps {
   };
   overlay?: React.ReactNode;
   sizes?: string;
+  srcSetWidths?: number[];
   quality?: number;
   format?: 'webp' | 'avif' | 'jpeg' | 'png' | 'auto';
   responsive?: boolean;
@@ -45,6 +46,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   badge,
   overlay,
   sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
+  srcSetWidths,
   quality = 75,
   format = 'auto',
   responsive = true,
@@ -86,7 +88,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const generateSrcSet = (imageSrc: string): string | undefined => {
     if (!responsive || !isNetlify) return undefined;
 
-    const widths = [480, 800, 1200, 1600, 1920];
+    const widths = srcSetWidths || [480, 800, 1200, 1600, 1920];
     return widths
       .map(w => `${getNetlifyImageUrl(imageSrc, w, height, format)} ${w}w`)
       .join(', ');
