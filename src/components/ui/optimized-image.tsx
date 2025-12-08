@@ -17,10 +17,22 @@ interface OptimizedImageProps {
   overlay?: React.ReactNode;
   sizes?: string;
   quality?: number;
-  format?: 'webp' | 'avif' | 'jpeg' | 'png';
+  format?: 'webp' | 'avif' | 'jpeg' | 'png' | 'auto';
   responsive?: boolean;
+  fit?: 'contain' | 'cover' | 'fill';
 }
 
+/**
+ * Componente de imagen optimizada que usa Netlify Image CDN para transformaciones automáticas.
+ * 
+ * En producción (Netlify), las imágenes se optimizan automáticamente mediante:
+ * - Conversión automática a AVIF/WebP según el navegador (content negotiation)
+ * - Redimensionamiento según parámetros w/h
+ * - Optimización de calidad
+ * - Caché en edge para mejor rendimiento
+ * 
+ * En desarrollo local, usa las imágenes directamente sin transformación.
+ */
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
@@ -33,33 +45,77 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   badge,
   overlay,
   sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
-  quality = 80,
-  format = 'webp',
-  responsive = true
+  quality = 75,
+  format = 'auto',
+  responsive = true,
+  fit = 'cover'
 }) => {
-  const cdn = import.meta.env.VITE_IMG_CDN ?? '';
   const isExternalUrl = /^https?:\/\//.test(src);
-  let imagePath = src;
+  const isNetlify = import.meta.env.PROD && typeof window !== 'undefined' && 
+    (window.location.hostname.includes('netlify.app') || 
+     window.location.hostname.includes('netlify.com') ||
+     window.location.hostname === 'uv.agency' ||
+     window.location.hostname === 'www.uv.agency');
 
-  if (!isExternalUrl) {
-    const normalized = src.startsWith('/') ? src : `/${src}`;
-    // Solo usar CDN si está explícitamente configurado y es una URL válida
-    if (cdn && cdn.startsWith('http')) {
-      imagePath = `${cdn}${normalized}`;
-      
-      if (width || height) {
-        const url = new URL(imagePath);
-        if (width) url.searchParams.set('w', String(width));
-        if (height) url.searchParams.set('h', String(height));
-        url.searchParams.set('fit', 'cover');
-        url.searchParams.set('format', 'auto');
-        imagePath = url.toString();
-      }
-    } else {
-      // Usar rutas relativas directamente (sin CDN)
-      imagePath = normalized;
+  /**
+   * Genera la URL optimizada usando Netlify Image CDN
+   */
+  const getNetlifyImageUrl = (
+    imageSrc: string, 
+    imgWidth?: number, 
+    imgHeight?: number,
+    imgFormat?: string
+  ): string => {
+    const params = new URLSearchParams();
+    params.set('url', imageSrc);
+    
+    if (imgWidth) params.set('w', String(imgWidth));
+    if (imgHeight) params.set('h', String(imgHeight));
+    if (fit) params.set('fit', fit);
+    if (imgFormat && imgFormat !== 'auto') {
+      params.set('fm', imgFormat);
     }
-  }
+    if (quality) params.set('q', String(quality));
+    
+    return `/.netlify/images?${params.toString()}`;
+  };
+
+  /**
+   * Genera srcSet para imágenes responsivas usando Netlify Image CDN
+   */
+  const generateSrcSet = (imageSrc: string): string | undefined => {
+    if (!responsive || !isNetlify) return undefined;
+    
+    const widths = [480, 800, 1200, 1600, 1920];
+    return widths
+      .map(w => `${getNetlifyImageUrl(imageSrc, w, height, format)} ${w}w`)
+      .join(', ');
+  };
+
+  /**
+   * Obtiene la URL final de la imagen
+   */
+  const getImageUrl = (): string => {
+    if (isExternalUrl) {
+      // Para imágenes externas, usar Netlify Image CDN si está configurado
+      // o la URL original si no está en Netlify
+      if (isNetlify) {
+        return getNetlifyImageUrl(src, width, height, format);
+      }
+      return src;
+    }
+    
+    // Para imágenes locales
+    const normalized = src.startsWith('/') ? src : `/${src}`;
+    
+    if (isNetlify) {
+      // Usar Netlify Image CDN en producción
+      return getNetlifyImageUrl(normalized, width, height, format);
+    }
+    
+    // En desarrollo, usar la ruta directa
+    return normalized;
+  };
 
   const getBadgePosition = (position?: string) => {
     switch(position) {
@@ -71,36 +127,20 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     }
   };
 
-  const getOptimizedUrl = (url: string, width?: number) => {
-    if (!isExternalUrl) return url;
-    
-    const params = new URLSearchParams();
-    if (width) params.append('w', width.toString());
-    params.append('format', format);
-    params.append('quality', quality.toString());
-    
-    return `${url}?${params.toString()}`;
-  };
-
-  const generateSrcSet = (url: string) => {
-    if (!responsive) return undefined;
-    
-    const widths = [480, 800, 1200, 1600];
-    return widths
-      .map(width => `${getOptimizedUrl(url, width)} ${width}w`)
-      .join(', ');
-  };
+  const imageUrl = getImageUrl();
+  const srcSet = generateSrcSet(isExternalUrl ? src : (src.startsWith('/') ? src : `/${src}`));
 
   const imageContent = (
     <img
-      src={getOptimizedUrl(imagePath, width)}
-      srcSet={generateSrcSet(imagePath)}
+      src={imageUrl}
+      srcSet={srcSet}
       sizes={sizes}
       alt={alt}
       width={width}
       height={height}
       loading={priority ? "eager" : "lazy"}
       className={`w-full h-full object-cover ${className}`}
+      decoding="async"
     />
   );
 

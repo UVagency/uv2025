@@ -64,6 +64,12 @@
   status = 200
 
 # Configuración de optimización de imágenes
+# Netlify Image CDN está habilitado automáticamente y se usa mediante el componente OptimizedImage
+# Las imágenes se optimizan en tiempo real con:
+# - Conversión automática a AVIF/WebP según el navegador
+# - Redimensionamiento según parámetros
+# - Caché en edge para mejor rendimiento
+# Para imágenes remotas, agregar configuración en [images] remote_images si es necesario
 [build.processing]
   skip_processing = false
 [build.processing.html]

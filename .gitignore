@@ -41,3 +41,4 @@ nerdearla-design-consistency-analysis.md
 .env.production.local
 .env*
 !.env.example
+*.md
