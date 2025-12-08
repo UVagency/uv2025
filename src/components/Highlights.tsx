@@ -35,7 +35,8 @@ const Highlights = () => {
                 <OptimizedImage
                   src={coverImg}
                   alt={project.name}
-                  className="w-full object-contain"
+                  className="w-full"
+                  fit="contain"
                   wrapperClassName=""
                 />
               </div>
