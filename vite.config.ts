@@ -20,13 +20,52 @@ export default defineConfig(({ mode }) => ({
       "Access-Control-Allow-Headers": "Content-Type, Authorization",
     },
   },
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      name: 'inline-css',
+      apply: 'build',
+      enforce: 'post',
+      generateBundle(_, bundle) {
+        const cssFile = Object.keys(bundle).find(key => key.endsWith('.css'));
+        const htmlFile = Object.keys(bundle).find(key => key.endsWith('.html'));
+
+        if (!cssFile || !htmlFile) return;
+
+        const cssAsset = bundle[cssFile];
+        const htmlAsset = bundle[htmlFile];
+
+        if (cssAsset.type !== 'asset' || htmlAsset.type !== 'asset') return;
+
+        const cssContent = cssAsset.source;
+        const htmlContent = htmlAsset.source as string;
+
+        // Inject style tag and remove the link tag
+        // Vite injects the link tag automatically, so we just append style to head if we can't find the link easily (or replacing </head> is safer)
+        // Actually, preventing the link tag emission is harder without intercepting.
+        // Easiest is to replace the link tag if we can check how vite emits it, but vite emits it in transformIndexHtml or a specific plugin.
+        // POST-enforce: The HTML file in bundle ALREADY has the link tag injected by Vite's HTML plugin.
+        // We can regex replace it.
+
+        const newHtml = htmlContent.replace(
+          /<link rel="stylesheet".*?href="\/assets\/.*?\.css">/,
+          `<style>${cssContent}</style>`
+        );
+
+        htmlAsset.source = newHtml;
+
+        // Optional: remove the CSS file from output if truly inlined
+        // delete bundle[cssFile]; 
+      }
+    }
+  ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
   },
   build: {
+    cssCodeSplit: false, // Ensure single CSS file for easier inlining
     rollupOptions: {
       output: {
         manualChunks: {
