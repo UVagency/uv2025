@@ -16,7 +16,7 @@ export const NAVBAR_CONSTANTS = {
 export const NAV_ITEMS = [
   { id: 'info', label: 'INFO' },
   { id: 'work', label: 'Work', href: '/#highlights' },
-  { id: 'our-company', label: 'Our Company', href: '/our-company' },
+  { id: 'our-company', label: 'UV', href: '/our-company' },
   { id: 'media', label: 'MEDIA', href: '/um' },
   { id: 'events', label: 'Events', href: '/events' },
   { id: 'contact', label: 'Contact' },
