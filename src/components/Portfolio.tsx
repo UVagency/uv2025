@@ -42,6 +42,9 @@ const projects: Project[] = orderedNames.map(name => {
   };
 }).filter(Boolean) as Project[];
 
+// Utility to calculate sum of gaps
+const calculateGap = (count: number, gapSize: number) => Math.max(0, count - 1) * gapSize;
+
 const Portfolio = () => {
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
   const navigate = useNavigate();
@@ -71,78 +74,85 @@ const Portfolio = () => {
     }
   }, [shouldScroll]);
 
-  // Calcular cuántas categorías caben sin truncarse
+  // Calcular cuántas categorías caben sin truncarse con ResizeObserver
   useEffect(() => {
-    const calculateVisibleCategories = () => {
-      const newVisibleCategories: VisibleCategories = {};
+    const observers: ResizeObserver[] = [];
 
-      projects.forEach((project) => {
-        const container = containerRefs.current[project.name];
-        if (!container) {
-          newVisibleCategories[project.name] = project.categories.length;
-          return;
+    const calculateForProject = (projectName: string) => {
+      const container = containerRefs.current[projectName];
+      if (!container) return;
+
+      const title = container.querySelector('.project-title-ref') as HTMLElement;
+      const shadowContainer = container.querySelector('.shadow-pills-container') as HTMLElement;
+      const thumbnails = container.querySelector('.project-thumbnails-ref') as HTMLElement;
+
+      if (!title || !shadowContainer) return;
+
+      // Medir anchos base
+      const parentWidth = container.clientWidth;
+      const titleWidth = title.offsetWidth;
+      const thumbnailsWidth = thumbnails ? thumbnails.offsetWidth : 0;
+
+      // Margen de seguridad y gaps entre título y pills (aprox 60px para estar seguros: gap, margin, padding)
+      const safetyMargin = 60;
+
+      const availableWidth = parentWidth - titleWidth - thumbnailsWidth - safetyMargin;
+
+      // Obtener anchos de los items desde el shadow container
+      const items = Array.from(shadowContainer.children) as HTMLElement[];
+      const yearTag = items[0]; // El primer item es siempre el año
+
+      if (!yearTag) return;
+
+      let usedWidth = yearTag.offsetWidth;
+      const gap = 8; // gap-2 = 8px
+      let visibleCount = 0;
+
+      // Items de categorías empiezan en índice 1 (0 es año)
+      // La lista de categorías en 'projects' no incluye el año, pero el shadow container sí.
+      // projects[...].categories mapea a items[1...n]
+
+      const categoryItems = items.slice(1); // Excluir año
+
+      for (let i = 0; i < categoryItems.length; i++) {
+        const itemWidth = categoryItems[i].offsetWidth;
+        // Sumar gap antes del item si ya hay contenido (el año siempre está)
+        const requiredWidth = usedWidth + gap + itemWidth;
+
+        if (requiredWidth <= availableWidth) {
+          usedWidth = requiredWidth;
+          visibleCount++;
+        } else {
+          break;
         }
+      }
 
-        // Obtener el contenedor de pastillas
-        const pillsContainer = container.querySelector('.pills-container') as HTMLElement;
-        if (!pillsContainer) {
-          newVisibleCategories[project.name] = project.categories.length;
-          return;
-        }
-
-        // Verificar si hay desbordamiento
-        const isOverflowing = pillsContainer.scrollWidth > pillsContainer.clientWidth;
-
-        if (!isOverflowing) {
-          // Si no hay desbordamiento, mostrar todas las categorías
-          newVisibleCategories[project.name] = project.categories.length;
-          return;
-        }
-
-        // Si hay desbordamiento, calcular cuántas caben
-        const categoryPills = pillsContainer.querySelectorAll('.category-pill') as NodeListOf<HTMLElement>;
-        const availableWidth = pillsContainer.clientWidth;
-
-        // Obtener el ancho de la pill de año (primera pill)
-        const yearPill = pillsContainer.querySelector('.project-year-tag') as HTMLElement;
-        let usedWidth = yearPill ? yearPill.offsetWidth : 0;
-
-        const gap = 8; // gap-2 en tailwind
-        let visibleCount = 0;
-
-        // Iterar sobre las pastillas de categorías
-        for (let i = 0; i < categoryPills.length; i++) {
-          const pillWidth = categoryPills[i].offsetWidth;
-          const requiredWidth = usedWidth + gap + pillWidth;
-
-          if (requiredWidth <= availableWidth) {
-            usedWidth = requiredWidth;
-            visibleCount++;
-          } else {
-            break;
-          }
-        }
-
-        newVisibleCategories[project.name] = visibleCount;
+      setVisibleCategories(prev => {
+        if (prev[projectName] === visibleCount) return prev;
+        return { ...prev, [projectName]: visibleCount };
       });
-
-      setVisibleCategories(newVisibleCategories);
     };
 
-    // Calcular después del render inicial y dar tiempo a que las fuentes se carguen
-    const timer = setTimeout(calculateVisibleCategories, 200);
+    // Crear Observer para cada fila de proyecto
+    projects.forEach(project => {
+      const container = containerRefs.current[project.name];
+      if (container) {
+        const observer = new ResizeObserver(() => {
+          // Usar requestAnimationFrame para evitar loops de resize limit
+          requestAnimationFrame(() => calculateForProject(project.name));
+        });
+        observer.observe(container);
+        observers.push(observer);
 
-    // Recalcular al cambiar el tamaño de la ventana
-    const handleResize = () => {
-      setTimeout(calculateVisibleCategories, 100);
-    };
-    window.addEventListener('resize', handleResize);
+        // Ejecución inicial
+        calculateForProject(project.name);
+      }
+    });
 
     return () => {
-      clearTimeout(timer);
-      window.removeEventListener('resize', handleResize);
+      observers.forEach(obs => obs.disconnect());
     };
-  }, [projects]);
+  }, [projects, hoveredProject]);
 
   const handleProjectClick = (projectName: string) => {
     const project = projects.find(p => p.name === projectName);
@@ -179,53 +189,63 @@ const Portfolio = () => {
                 <div className="sm:hidden text-lg font-bold text-portfolio-text whitespace-nowrap overflow-hidden text-ellipsis flex-1">
                   {project.name}
                 </div>
-                <div className="hidden sm:block text-5xl font-bold text-portfolio-text group-hover:text-portfolio-highlight whitespace-nowrap flex-shrink-0">
+                <div className="hidden sm:block text-5xl font-bold text-portfolio-text group-hover:text-portfolio-highlight whitespace-nowrap flex-shrink-0 project-title-ref">
                   {project.name}
                 </div>
 
-                <div className="flex items-center gap-1 sm:gap-2 ml-2 sm:ml-4 whitespace-nowrap min-w-0 overflow-hidden">
-                  <div className="hidden sm:flex items-center gap-2 pills-container overflow-hidden min-w-0">
-                    <span className="project-year-tag group-hover:project-year-tag-highlight group-hover:bg-portfolio-highlight group-hover:text-portfolio-text">
-                      {project.year}
-                    </span>
+                <div className="hidden sm:flex items-center gap-2 pills-container overflow-hidden min-w-0">
+                  <span className="project-year-tag group-hover:project-year-tag-highlight group-hover:bg-portfolio-highlight group-hover:text-portfolio-text">
+                    {project.year}
+                  </span>
 
-                    {project.categories.map((category, index) => {
-                      const maxVisible = visibleCategories[project.name] ?? project.categories.length;
-                      const isVisible = index < maxVisible;
-                      return (
-                        <span
-                          key={category}
-                          className={`project-category-tag category-pill group-hover:project-category-tag-highlight ${!isVisible ? 'hidden' : ''}`}
-                        >
-                          {category}
-                        </span>
-                      );
-                    })}
-
-                    {project.comingSoon && (
-                      <span className="project-coming-soon-tag">
-                        COMING SOOOOON
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="sm:hidden flex items-center gap-1">
-                    {project.categories.map((category) => (
-                      <span key={category} className="text-[10px] project-coming-soon-tag">
+                  {project.categories.map((category, index) => {
+                    const maxVisible = visibleCategories[project.name] ?? project.categories.length;
+                    const isVisible = index < maxVisible;
+                    return (
+                      <span
+                        key={category}
+                        className={`project-category-tag category-pill group-hover:project-category-tag-highlight ${!isVisible ? 'hidden' : ''}`}
+                      >
                         {category}
                       </span>
-                    ))}
-                  </div>
+                    );
+                  })}
 
-                  {project.awardWinning && (
-                    <div className="relative inline-block hidden sm:block">
-                    </div>
+                  {project.comingSoon && (
+                    <span className="project-coming-soon-tag">
+                      COMING SOOOOON
+                    </span>
                   )}
                 </div>
 
+                {/* Shadow Container para calculos: Invisible y no afecta layout */}
+                <div className="shadow-pills-container absolute top-0 left-0 invisible pointer-events-none flex items-center gap-2" aria-hidden="true" style={{ height: 0, overflow: 'hidden' }}>
+                  <span className="project-year-tag font-bold whitespace-nowrap inline-block px-4 py-1 rounded-full border border-transparent">
+                    {project.year}
+                  </span>
+                  {project.categories.map((category) => (
+                    <span key={category} className="project-category-tag whitespace-nowrap inline-block px-4 py-1 rounded-full border">
+                      {category}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="sm:hidden flex items-center gap-1">
+                  {project.categories.map((category) => (
+                    <span key={category} className="text-[10px] project-coming-soon-tag">
+                      {category}
+                    </span>
+                  ))}
+                </div>
+
+                {project.awardWinning && (
+                  <div className="relative inline-block hidden sm:block">
+                  </div>
+                )}
+
                 {/* Thumbnails inline en hover - después de las categorías */}
                 {project.images && project.images.length > 0 && hoveredProject === project.name && (
-                  <div className="hidden lg:flex ml-4 gap-2 overflow-hidden flex-1">
+                  <div className="hidden lg:flex ml-4 gap-2 overflow-hidden flex-1 project-thumbnails-ref">
                     {project.images.map((image, idx) => (
                       <div
                         key={idx}
@@ -251,7 +271,7 @@ const Portfolio = () => {
         ))}
       </div>
 
-    </div>
+    </div >
   );
 };
 
