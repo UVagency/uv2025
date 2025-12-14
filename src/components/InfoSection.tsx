@@ -9,6 +9,9 @@ const InfoSection = () => {
           <OptimizedImage
             alt="UV Logo"
             src="/images/uv_logo.webp"
+            width={128}
+            height={128}
+            aspectRatio={1}
             className="w-full h-full object-cover rounded-full"
             wrapperClassName="overflow-hidden rounded-full"
           />
