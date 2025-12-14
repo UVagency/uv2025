@@ -5,11 +5,7 @@ export const HeroContent = () => {
   const [showMainText, setShowMainText] = useState(false);
   const [showOneAgency, setShowOneAgency] = useState(false);
 
-  const handleInfoClick = () => {
-    // Dispatch a custom event that Navbar will listen to
-    const event = new CustomEvent('toggleInfo');
-    window.dispatchEvent(event);
-  };
+
 
   useEffect(() => {
     const timer = setTimeout(() => setShowMainText(true), 100);
@@ -48,12 +44,11 @@ export const HeroContent = () => {
                   priority={true}
                 />
               </div>
-              <button
-                onClick={handleInfoClick}
+              <div
                 className={`transition-all duration-300 ${showOneAgency ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
               >
-                <strong><span className="text-portfolio-accent hover:underline">One agency, all in.</span></strong>
-              </button>
+                <strong><span className="text-portfolio-accent">One agency, all in.</span></strong>
+              </div>
             </div>
           </div>
         </div>
