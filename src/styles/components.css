@@ -8,7 +8,7 @@
   }
   
   .project-category-tag {
-    @apply bg-transparent text-portfolio-text border border-portfolio-text px-4 py-1 rounded-full inline-block transition-colors;
+    @apply bg-transparent text-portfolio-text border border-portfolio-text px-4 py-1 rounded-full inline-block transition-colors whitespace-nowrap flex-shrink-0;
   }
   
   .project-category-tag-highlight {
