@@ -70,8 +70,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
     // Si tenemos aspectRatio pero no dimensiones, calcularlas
     if (aspectRatio) {
-      // Usar un ancho base de 1920px para imágenes full-width (típico para pantallas modernas)
-      const baseWidth = width || 1920;
+      // Para imágenes con aspectRatio, usar un ancho más conservador
+      // 1280px es suficiente para la mayoría de casos (grid items, cards, etc.)
+      // y permite mejor calidad al evitar upscaling innecesario
+      const baseWidth = width || 1280;
       const calculatedHeight = Math.round(baseWidth / aspectRatio);
       return { calculatedWidth: baseWidth, calculatedHeight };
     }
@@ -119,7 +121,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const generateSrcSet = (imageSrc: string, calcHeight?: number): string | undefined => {
     if (!responsive || !isNetlify) return undefined;
 
-    const widths = srcSetWidths || [480, 800, 1200, 1600, 1920];
+    // Usar widths más conservadores que eviten upscaling innecesario
+    // Para grids y cards, raramente se necesita más de 1280px
+    const widths = srcSetWidths || [480, 800, 1200, 1280];
     return widths
       .map(w => {
         // Si tenemos aspectRatio, calcular altura proporcional para cada ancho
