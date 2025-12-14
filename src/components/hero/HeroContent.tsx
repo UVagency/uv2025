@@ -39,6 +39,9 @@ export const HeroContent = () => {
                 <OptimizedImage
                   src="/images/uv_logo.webp"
                   alt="United Visions"
+                  width={64}
+                  height={64}
+                  aspectRatio={1}
                   className="w-full h-full object-cover rounded-full"
                   wrapperClassName="rounded-full overflow-hidden"
                   priority={true}
