@@ -60,6 +60,37 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       window.location.hostname === 'www.uv.agency');
 
   /**
+   * Calcula dimensiones apropiadas cuando solo se provee aspectRatio
+   */
+  const calculateDimensions = (): { calculatedWidth?: number; calculatedHeight?: number } => {
+    // Si ya tenemos width y height, usarlos directamente
+    if (width && height) {
+      return { calculatedWidth: width, calculatedHeight: height };
+    }
+
+    // Si tenemos aspectRatio pero no dimensiones, calcularlas
+    if (aspectRatio) {
+      // Usar un ancho base de 1920px para imágenes full-width (típico para pantallas modernas)
+      const baseWidth = width || 1920;
+      const calculatedHeight = Math.round(baseWidth / aspectRatio);
+      return { calculatedWidth: baseWidth, calculatedHeight };
+    }
+
+    // Si solo tenemos width, usarlo
+    if (width) {
+      return { calculatedWidth: width, calculatedHeight: height };
+    }
+
+    // Si solo tenemos height, usarlo
+    if (height) {
+      return { calculatedWidth: width, calculatedHeight: height };
+    }
+
+    // Sin dimensiones específicas, dejar que Netlify use el original
+    return { calculatedWidth: undefined, calculatedHeight: undefined };
+  };
+
+  /**
    * Genera la URL optimizada usando Netlify Image CDN
    */
   const getNetlifyImageUrl = (
@@ -85,24 +116,30 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   /**
    * Genera srcSet para imágenes responsivas usando Netlify Image CDN
    */
-  const generateSrcSet = (imageSrc: string): string | undefined => {
+  const generateSrcSet = (imageSrc: string, calcHeight?: number): string | undefined => {
     if (!responsive || !isNetlify) return undefined;
 
     const widths = srcSetWidths || [480, 800, 1200, 1600, 1920];
     return widths
-      .map(w => `${getNetlifyImageUrl(imageSrc, w, height, format)} ${w}w`)
+      .map(w => {
+        // Si tenemos aspectRatio, calcular altura proporcional para cada ancho
+        const proportionalHeight = aspectRatio && calcHeight
+          ? Math.round(w / aspectRatio)
+          : calcHeight;
+        return `${getNetlifyImageUrl(imageSrc, w, proportionalHeight, format)} ${w}w`;
+      })
       .join(', ');
   };
 
   /**
    * Obtiene la URL final de la imagen
    */
-  const getImageUrl = (): string => {
+  const getImageUrl = (calcWidth?: number, calcHeight?: number): string => {
     if (isExternalUrl) {
       // Para imágenes externas, usar Netlify Image CDN si está configurado
       // o la URL original si no está en Netlify
       if (isNetlify) {
-        return getNetlifyImageUrl(src, width, height, format);
+        return getNetlifyImageUrl(src, calcWidth, calcHeight, format);
       }
       return src;
     }
@@ -112,7 +149,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
     if (isNetlify) {
       // Usar Netlify Image CDN en producción
-      return getNetlifyImageUrl(normalized, width, height, format);
+      return getNetlifyImageUrl(normalized, calcWidth, calcHeight, format);
     }
 
     // En desarrollo, usar la ruta directa
@@ -129,8 +166,14 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     }
   };
 
-  const imageUrl = getImageUrl();
-  const srcSet = generateSrcSet(isExternalUrl ? src : (src.startsWith('/') ? src : `/${src}`));
+  // Calcular dimensiones apropiadas
+  const { calculatedWidth, calculatedHeight } = calculateDimensions();
+
+  const imageUrl = getImageUrl(calculatedWidth, calculatedHeight);
+  const srcSet = generateSrcSet(
+    isExternalUrl ? src : (src.startsWith('/') ? src : `/${src}`),
+    calculatedHeight
+  );
 
   const imageContent = (
     <img
