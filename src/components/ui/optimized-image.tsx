@@ -118,12 +118,17 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   /**
    * Genera srcSet para imágenes responsivas usando Netlify Image CDN
    */
-  const generateSrcSet = (imageSrc: string, calcHeight?: number): string | undefined => {
+  const generateSrcSet = (imageSrc: string, calcHeight?: number, calcWidth?: number): string | undefined => {
     if (!responsive || !isNetlify) return undefined;
 
-    // Usar widths más conservadores que eviten upscaling innecesario
-    // Para grids y cards, raramente se necesita más de 1280px
-    const widths = srcSetWidths || [480, 800, 1200, 1280];
+    // Usar widths apropiados según el tamaño calculado
+    // Para banners full-width (calcWidth >= 2000), usar resoluciones altas
+    // Para grids y cards (calcWidth < 2000), usar resoluciones conservadoras
+    const defaultWidths = calcWidth && calcWidth >= 2000
+      ? [640, 1024, 1920, 2560]
+      : [480, 800, 1200, 1280];
+
+    const widths = srcSetWidths || defaultWidths;
     return widths
       .map(w => {
         // Si tenemos aspectRatio, calcular altura proporcional para cada ancho
@@ -176,7 +181,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const imageUrl = getImageUrl(calculatedWidth, calculatedHeight);
   const srcSet = generateSrcSet(
     isExternalUrl ? src : (src.startsWith('/') ? src : `/${src}`),
-    calculatedHeight
+    calculatedHeight,
+    calculatedWidth
   );
 
   const imageContent = (
