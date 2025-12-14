@@ -11,6 +11,10 @@ interface Project {
   images?: string[];
 }
 
+interface VisibleCategories {
+  [key: string]: number; // proyecto -> número de categorías visibles
+}
+
 // Map external projectsList to component structure if needed, or use directly
 const getProject = (name: string) => projectsList.find(p => p.name.toUpperCase() === name.toUpperCase());
 
@@ -44,6 +48,8 @@ const Portfolio = () => {
   const location = useLocation();
   const projectsRef = useRef<HTMLDivElement>(null);
   const [shouldScroll, setShouldScroll] = useState(false);
+  const [visibleCategories, setVisibleCategories] = useState<VisibleCategories>({});
+  const containerRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
   useEffect(() => {
     // Verificar si venimos de una página de proyecto
@@ -64,6 +70,79 @@ const Portfolio = () => {
       setShouldScroll(false);
     }
   }, [shouldScroll]);
+
+  // Calcular cuántas categorías caben sin truncarse
+  useEffect(() => {
+    const calculateVisibleCategories = () => {
+      const newVisibleCategories: VisibleCategories = {};
+
+      projects.forEach((project) => {
+        const container = containerRefs.current[project.name];
+        if (!container) {
+          newVisibleCategories[project.name] = project.categories.length;
+          return;
+        }
+
+        // Obtener el contenedor de pastillas
+        const pillsContainer = container.querySelector('.pills-container') as HTMLElement;
+        if (!pillsContainer) {
+          newVisibleCategories[project.name] = project.categories.length;
+          return;
+        }
+
+        // Verificar si hay desbordamiento
+        const isOverflowing = pillsContainer.scrollWidth > pillsContainer.clientWidth;
+
+        if (!isOverflowing) {
+          // Si no hay desbordamiento, mostrar todas las categorías
+          newVisibleCategories[project.name] = project.categories.length;
+          return;
+        }
+
+        // Si hay desbordamiento, calcular cuántas caben
+        const categoryPills = pillsContainer.querySelectorAll('.category-pill') as NodeListOf<HTMLElement>;
+        const availableWidth = pillsContainer.clientWidth;
+
+        // Obtener el ancho de la pill de año (primera pill)
+        const yearPill = pillsContainer.querySelector('.project-year-tag') as HTMLElement;
+        let usedWidth = yearPill ? yearPill.offsetWidth : 0;
+
+        const gap = 8; // gap-2 en tailwind
+        let visibleCount = 0;
+
+        // Iterar sobre las pastillas de categorías
+        for (let i = 0; i < categoryPills.length; i++) {
+          const pillWidth = categoryPills[i].offsetWidth;
+          const requiredWidth = usedWidth + gap + pillWidth;
+
+          if (requiredWidth <= availableWidth) {
+            usedWidth = requiredWidth;
+            visibleCount++;
+          } else {
+            break;
+          }
+        }
+
+        newVisibleCategories[project.name] = visibleCount;
+      });
+
+      setVisibleCategories(newVisibleCategories);
+    };
+
+    // Calcular después del render inicial y dar tiempo a que las fuentes se carguen
+    const timer = setTimeout(calculateVisibleCategories, 200);
+
+    // Recalcular al cambiar el tamaño de la ventana
+    const handleResize = () => {
+      setTimeout(calculateVisibleCategories, 100);
+    };
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [projects]);
 
   const handleProjectClick = (projectName: string) => {
     const project = projects.find(p => p.name === projectName);
@@ -90,6 +169,7 @@ const Portfolio = () => {
           <React.Fragment key={project.name}>
             {index !== 0 && <div className="portfolio-divider"></div>}
             <div
+              ref={(el) => (containerRefs.current[project.name] = el)}
               className={`project-item group ${project.comingSoon ? 'cursor-default' : 'cursor-pointer'}`}
               onMouseEnter={() => setHoveredProject(project.name)}
               onMouseLeave={() => setHoveredProject(null)}
@@ -104,16 +184,23 @@ const Portfolio = () => {
                 </div>
 
                 <div className="flex items-center gap-1 sm:gap-2 ml-2 sm:ml-4 whitespace-nowrap">
-                  <div className="hidden sm:flex items-center gap-2">
+                  <div className="hidden sm:flex items-center gap-2 pills-container overflow-hidden">
                     <span className="project-year-tag group-hover:project-year-tag-highlight group-hover:bg-portfolio-highlight group-hover:text-portfolio-text">
                       {project.year}
                     </span>
 
-                    {project.categories.map((category) => (
-                      <span key={category} className="project-category-tag group-hover:project-category-tag-highlight">
-                        {category}
-                      </span>
-                    ))}
+                    {project.categories.map((category, index) => {
+                      const maxVisible = visibleCategories[project.name] ?? project.categories.length;
+                      const isVisible = index < maxVisible;
+                      return (
+                        <span
+                          key={category}
+                          className={`project-category-tag category-pill group-hover:project-category-tag-highlight ${!isVisible ? 'hidden' : ''}`}
+                        >
+                          {category}
+                        </span>
+                      );
+                    })}
 
                     {project.comingSoon && (
                       <span className="project-coming-soon-tag">
