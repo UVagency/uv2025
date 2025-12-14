@@ -2,20 +2,29 @@
  * Custom cursor implementation that follows the mouse and changes state on hover
  * Optimized for performance - no delay, instant follow
  */
+let isInitialized = false;
+
 export function initCustomCursor() {
-  // Check if device is mobile
-  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+  if (isInitialized) return;
+
+  // Check if device is mobile (User Agent only)
+  // We rely on CSS media queries to hide it on small screens (e.g. resized desktop window)
+  const isMobileUA = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   
-  // Don't initialize custom cursor on mobile devices
-  if (isMobile) {
+  // Don't initialize custom cursor on mobile devices (touch only)
+  if (isMobileUA) {
     return;
   }
+
+  isInitialized = true;
 
   // Create cursor element if it doesn't exist
   let cursor = document.querySelector('.custom-cursor');
   if (!cursor) {
     cursor = document.createElement('div');
     cursor.classList.add('custom-cursor');
+    // Ensure pointer-events is none
+    cursor.style.pointerEvents = 'none';
     document.body.appendChild(cursor);
   }
 
@@ -25,10 +34,16 @@ export function initCustomCursor() {
   let isHovering = false;
 
   // Show cursor when it's loaded
-  window.addEventListener('load', () => {
+  const showCursor = () => {
     cursor.style.display = 'block';
     isVisible = true;
-  });
+  };
+
+  if (document.readyState === 'complete') {
+    showCursor();
+  } else {
+    window.addEventListener('load', showCursor);
+  }
 
   // Update cursor position on move - direct follow without delay
   document.addEventListener('mousemove', (e) => {
