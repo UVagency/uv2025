@@ -179,12 +179,12 @@ const Portfolio = () => {
                 <div className="sm:hidden text-lg font-bold text-portfolio-text whitespace-nowrap overflow-hidden text-ellipsis flex-1">
                   {project.name}
                 </div>
-                <div className="hidden sm:block text-5xl font-bold text-portfolio-text group-hover:text-portfolio-highlight whitespace-nowrap">
+                <div className="hidden sm:block text-5xl font-bold text-portfolio-text group-hover:text-portfolio-highlight whitespace-nowrap flex-shrink-0">
                   {project.name}
                 </div>
 
-                <div className="flex items-center gap-1 sm:gap-2 ml-2 sm:ml-4 whitespace-nowrap">
-                  <div className="hidden sm:flex items-center gap-2 pills-container overflow-hidden">
+                <div className="flex items-center gap-1 sm:gap-2 ml-2 sm:ml-4 whitespace-nowrap min-w-0 overflow-hidden">
+                  <div className="hidden sm:flex items-center gap-2 pills-container overflow-hidden min-w-0">
                     <span className="project-year-tag group-hover:project-year-tag-highlight group-hover:bg-portfolio-highlight group-hover:text-portfolio-text">
                       {project.year}
                     </span>
