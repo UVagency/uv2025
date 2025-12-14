@@ -21,6 +21,7 @@ const ProjectBanner: React.FC<ProjectBannerProps> = ({
     <OptimizedImage
       src={image}
       alt={alt}
+      width={2560} // High resolution for full-width banners
       aspectRatio={ratio}
       badge={badge}
       fit={fit}
