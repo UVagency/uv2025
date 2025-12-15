@@ -204,7 +204,7 @@ const Portfolio = () => {
                     return (
                       <span
                         key={category}
-                        className={`project-category-tag category-pill group-hover:project-category-tag-highlight ${!isVisible ? 'hidden' : ''}`}
+                        className={`project-category-tag category-pill group-hover:project-category-tag-highlight whitespace-nowrap flex-shrink-0 ${!isVisible ? 'hidden' : ''}`}
                       >
                         {category}
                       </span>

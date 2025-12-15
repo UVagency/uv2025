@@ -1,35 +1,35 @@
 @layer components {
   .project-year-tag {
-    @apply bg-portfolio-tag-bg text-portfolio-tag-text px-4 py-1 rounded-full inline-block;
+    @apply bg-portfolio-tag-bg text-portfolio-tag-text px-4 py-1 rounded-full inline-block whitespace-nowrap flex-shrink-0;
   }
-  
+
   .project-year-tag-highlight {
-    @apply bg-portfolio-highlight text-portfolio-text px-4 py-1 rounded-full inline-block;
+    @apply bg-portfolio-highlight text-portfolio-text px-4 py-1 rounded-full inline-block whitespace-nowrap flex-shrink-0;
   }
-  
+
   .project-category-tag {
     @apply bg-transparent text-portfolio-text border border-portfolio-text px-4 py-1 rounded-full inline-block transition-colors whitespace-nowrap flex-shrink-0;
   }
-  
+
   .project-category-tag-highlight {
-    @apply bg-transparent text-portfolio-highlight border border-portfolio-highlight px-4 py-1 rounded-full inline-block;
+    @apply bg-transparent text-portfolio-highlight border border-portfolio-highlight px-4 py-1 rounded-full inline-block whitespace-nowrap flex-shrink-0;
   }
-  
+
   .project-coming-soon-tag {
-    @apply bg-portfolio-highlight text-portfolio-text px-4 py-1 rounded-full inline-block;
+    @apply bg-portfolio-highlight text-portfolio-text px-4 py-1 rounded-full inline-block whitespace-nowrap flex-shrink-0;
   }
-  
+
   .portfolio-divider {
     @apply border-t border-portfolio-divider;
     margin-top: 0.6rem;
     margin-bottom: 0.6rem;
   }
-  
+
   .project-item {
     @apply relative flex flex-col justify-center;
     min-height: 108px;
   }
-  
+
   .smart-media-text {
     @apply text-portfolio-smart-media italic hover:underline;
   }
