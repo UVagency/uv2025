@@ -9,14 +9,14 @@ interface ProjectImageGridProps {
   className?: string;
 }
 
-const ProjectImageGrid: React.FC<ProjectImageGridProps> = ({ 
-  images, 
-  columns, 
+const ProjectImageGrid: React.FC<ProjectImageGridProps> = ({
+  images,
+  columns,
   gap = 4,
   className = ""
 }) => {
   const getColumnsClass = () => {
-    switch(columns) {
+    switch (columns) {
       case 2: return 'sm:grid-cols-2';
       case 3: return 'sm:grid-cols-3';
       case 4: return 'sm:grid-cols-2 lg:grid-cols-4';
@@ -31,8 +31,9 @@ const ProjectImageGrid: React.FC<ProjectImageGridProps> = ({
           key={`img-${index}`}
           src={image.src}
           alt={image.alt}
-          aspectRatio={1/1}
+          aspectRatio={1 / 1}
           overlay={image.overlay}
+          className={image.className}
         />
       ))}
     </div>

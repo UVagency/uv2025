@@ -2,7 +2,9 @@
   "id": "closer-to-sun",
   "name": "CLOSER TO THE SUN",
   "year": "L'ORÉAL",
-  "categories": ["IMMERSIVE"],
+  "categories": [
+    "IMMERSIVE"
+  ],
   "description": "An immersive brand experience in Valle Nevado that combined luxury, skincare education, and adventure, reinforcing L'Oréal Paris UV Defender's effectiveness in high-exposure environments.",
   "client": "L'Oréal Paris",
   "overview": "Successfully introduce L'Oréal Paris' UV Defender to the Chilean market through an exclusive snow event in Valle Nevado. The mission was to create an immersive brand experience that combined luxury, skincare education, and adventure, reinforcing the product's effectiveness in high-exposure environments while positioning UV Defender as an essential skincare solution.",
@@ -12,7 +14,16 @@
   "images": [
     "/images/projects/closer-to-sun/closer-to-sun-01.webp",
     "/images/projects/closer-to-sun/closer-to-sun-02.webp",
-    "/images/projects/closer-to-sun/closer-to-sun-03.webp"
+    {
+      "src": "/images/projects/closer-to-sun/closer-to-sun-03.webp",
+      "alt": "Closer to Sun Event 2",
+      "className": "object-top"
+    },
+    {
+      "src": "/images/projects/closer-to-sun/closer-to-sun-04.webp",
+      "alt": "Closer to Sun Event 3",
+      "className": "object-top"
+    }
   ],
   "comingSoon": false,
   "carouselSpeed": 30,
@@ -37,7 +48,8 @@
           },
           {
             "src": "/images/projects/closer-to-sun/closer-to-sun-07.webp",
-            "alt": "Concepto de verano 3"
+            "alt": "Concepto de verano 3",
+            "className": "object-top"
           }
         ]
       }
