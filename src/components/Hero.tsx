@@ -1,4 +1,4 @@
-import { HeroContent } from "./hero/HeroContent";
+import { HeroInteractiveFlow } from "./hero/HeroInteractiveFlow";
 import { trackEvent, GA_EVENTS } from '@/lib/analytics';
 
 const Hero = () => {
@@ -7,8 +7,8 @@ const Hero = () => {
   return (
     <div className="relative bg-portfolio-bg overflow-hidden flex items-start mb-16 md:mb-24">
       <div className="max-w-[90%] mx-auto w-full pt-8 md:pt-12">
-        {/* Main content */}
-        <HeroContent />
+        {/* Interactive Flow Hero */}
+        <HeroInteractiveFlow />
       </div>
     </div>
   );
