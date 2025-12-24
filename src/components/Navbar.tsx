@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <>
       <nav className={`w-full px-0 sm:px-4 py-2 bg-portfolio-bg sticky top-0 overflow-x-hidden z-${NAVBAR_CONSTANTS.Z_INDEX.NAVBAR}`}>
-        <div className="w-full max-w-[90%] mx-auto flex items-center">
+        <div className="w-full px-4 sm:px-6 md:px-8 mx-auto flex items-center">
           <div className="flex items-center gap-2 sm:gap-4 md:gap-8">
             <div className="relative flex items-center">
               <button

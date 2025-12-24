@@ -22,19 +22,19 @@ export const HeroContent = () => {
 
     <div className="w-full flex flex-col justify-start pt-8 md:pt-10">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-x-6">
-        <div className="md:col-span-8 lg:col-span-8 text-portfolio-text space-y-6">
-          <h1 className="font-headline text-3xl md:text-5xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight">
-            You know that nothing replaces real human connection.
+        <div className="md:col-span-7 lg:col-span-7 text-portfolio-text space-y-6">
+          <h1 className="font-headline text-3xl md:text-5xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight max-w-[10em] lg:max-w-[9em]">
+            Nothing replaces real human connection.
           </h1>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-x-6">
-            <div className="md:col-span-10 lg:col-span-10 space-y-6">
+            <div className="md:col-span-12 lg:col-span-12 space-y-6 max-w-lg">
               <p className="font-body text-xl md:text-2xl text-portfolio-text/80 font-normal leading-relaxed">
                 Since 1999, we've helped brands find meaning in constant change, bringing reason and feeling back together.
               </p>
 
               <p className="font-body text-xl md:text-2xl text-portfolio-text/80 font-normal leading-relaxed">
-                Modern is not about chasing new, it's about making new make sense.
+                Modern isn't about chasing the new. It’s about making the new make sense.
               </p>
 
               <div className={`transition-all duration-300 ${showOneAgency ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
@@ -46,7 +46,7 @@ export const HeroContent = () => {
         </div>
 
         {/* Animated Logo Section */}
-        <div className="hidden md:flex md:col-span-4 lg:col-span-4 items-center justify-start lg:pl-12 relative -mt-8">
+        <div className="hidden md:flex md:col-span-5 lg:col-span-5 items-center justify-start lg:pl-0 relative -mt-8">
           <HeroLogo />
         </div>
       </div>
