@@ -22,7 +22,7 @@ const SectionLoading = () => (
 const OurCompany = () => {
   const navigate = useNavigate();
   const { toggleOurCompany } = useNavigation();
-  
+
   const handleClose = () => {
     toggleOurCompany();
     navigate('/');
@@ -45,7 +45,7 @@ const OurCompany = () => {
     year: "1999",
     tagline: "UV is the integrated marketing agency that grows your brand through Omnichannel campaigns, crafts Events that move people to create customers, and delivers results through Smart Media.\nOne agency, all in.",
     description: "UV is a Full-service in house independent agency that champions brands through advertising, engineers events that move people to create customers, and drives results through smart media. We specialize in strategy, creativity, content, media and experiences- all connected to help brands grow, inspire, and stay relevant in a constantly shifting world. We're grateful to be working with top brands and passionate teams to create work that resonates - emotionally and measurably. We love what we do and we know that hard work pays off.",
-    history: "Founded with a vision to blend cutting-edge technology with creative storytelling, UV has grown from a small team of passionate individuals into a powerhouse of innovation. Our journey has been marked by a relentless pursuit of excellence, a commitment to our clients' success, and a culture that fosters creativity and collaboration. We've embraced challenges, celebrated milestones, and continuously evolved to meet the ever-changing demands of the digital landscape.",
+    history: "Founded with a vision to blend cutting-edge technology with creative storytelling, UV has grown from a small team of passionate individuals into a powerhouse of innovation. Our journey has been marked by a relentless pursuit of excellence, a commitment to our clients' success, and a culture that fosters creativity and collaboration. We've embraced challenges, celebrated milestones, and continuously evolved to meet the ever-changing demands of integrated communication.",
     videoRecapUrl: "https://vimeo.com/1096947347",
     categories: ["Advertising", "Media", "Events"],
     client: "One Agency, All In. Full Service Independent Agency",
@@ -88,7 +88,7 @@ const OurCompany = () => {
 
   return (
     <div className="min-h-screen bg-portfolio-bg">
-      <SEO 
+      <SEO
         title="Our Company | UV Agency"
         description="Learn about UV Agency's mission, values, and the team behind our innovative media experiences. Discover how we're shaping the future of creative events."
         pageType="company"
@@ -106,24 +106,24 @@ const OurCompany = () => {
                 >
                   <X size={16} className="sm:w-5 sm:h-5" />
                 </button>
-                
-                <h1 className="text-2xl sm:text-4xl md:text-7xl font-bold text-portfolio-text">{companyInfo.name}</h1>
-                
+
+                <h1 className="text-2xl sm:text-4xl md:text-7xl font-bold text-portfolio-text tracking-[-0.02em]">{companyInfo.name}</h1>
+
                 <span className="project-year-tag text-xs sm:text-base px-3 sm:px-6 py-1 sm:py-2 rounded-full bg-portfolio-tag-bg text-portfolio-tag-text">
                   {companyInfo.year}
                 </span>
-                  
+
                 {companyInfo.categories.map((category) => (
                   <span key={category} className="project-category-tag text-xs sm:text-base px-3 sm:px-6 py-1 sm:py-2 border rounded-full">
                     {category}
                   </span>
                 ))}
               </div>
-              
+
               <p className="text-base sm:text-2xl md:text-4xl text-portfolio-text/90 font-light leading-tight mt-3 sm:mt-6">
                 {companyInfo.tagline}
               </p>
-              
+
               <div className="mt-4 sm:mt-6 flex flex-wrap gap-2 sm:gap-4">
                 <div className="text-portfolio-text/70 text-xs sm:text-base">
                   <span className="font-semibold">Type:</span> {companyInfo.client}

@@ -87,7 +87,7 @@ const UnitedMedia = () => {
                   >
                     <X size={16} className="sm:w-5 sm:h-5" />
                   </button>
-                  <h1 className="text-2xl sm:text-4xl md:text-7xl font-bold text-portfolio-text leading-tight break-words max-w-[90vw] sm:max-w-full">
+                  <h1 className="text-2xl sm:text-4xl md:text-7xl font-bold text-portfolio-text leading-tight break-words max-w-[90vw] sm:max-w-full tracking-[-0.02em]">
                     United Media
                   </h1>
                   <span className="project-year-tag text-xs sm:text-base px-3 sm:px-6 py-1 sm:py-2 rounded-full bg-portfolio-tag-bg text-portfolio-tag-text">

@@ -193,7 +193,7 @@ const Portfolio = () => {
                   {project.name}
                 </div>
 
-                <div className="hidden sm:flex items-center gap-2 pills-container overflow-hidden min-w-0">
+                <div className="hidden sm:flex items-center gap-2 pills-container overflow-hidden min-w-0 ml-[10px]">
                   <span className="project-year-tag group-hover:project-year-tag-highlight group-hover:bg-portfolio-highlight group-hover:text-portfolio-text">
                     {project.year}
                   </span>

@@ -157,10 +157,7 @@ export const projectsList: ProjectSummary[] = [
     "name": "TURN UP THE VOLUME",
     "year": "MAYBELLINE NEW YORK",
     "categories": [
-      "OMNICHANNEL",
-      "DIGITAL",
-      "CONTENT CREATION",
-      "SOCIAL MEDIA"
+      "INTEGRATED"
     ],
     "images": [
       "/images/projects/turn-up-the-volume/turn-up-the-volume-01.webp",
