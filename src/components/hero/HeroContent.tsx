@@ -22,9 +22,11 @@ export const HeroContent = () => {
 
     <div className="w-full flex flex-col justify-start pt-8 md:pt-10">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-x-6">
-        <div className="md:col-span-7 lg:col-span-7 text-portfolio-text space-y-6">
+        <div className="md:col-span-7 lg:col-span-7 text-portfolio-text space-y-6 hero-text-container">
           <h1 className="font-headline text-3xl md:text-5xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight max-w-[15em] lg:max-w-[20em]">
-            <span className="whitespace-nowrap">Nothing replaces real</span> <br /> <span className="whitespace-nowrap">human connection.</span>
+            <span className="whitespace-nowrap">
+              Nothing replaces real
+            </span> <br /> <span className="whitespace-nowrap"><span className="brush-underline">human connection.</span></span>
           </h1>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-x-6">
