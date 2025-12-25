@@ -21,6 +21,7 @@ export const HeroBackground = () => {
         const dotBaseSize = 1.5;
         const influenceRadius = 150;
         const dotColor = 'rgba(0, 0, 0, 0.3)'; // Very subtle dark dots
+        const turquoiseColor = '#6BD8D7'; // UV turquoise color
 
         // Dot Interface
         interface Dot {
@@ -30,6 +31,8 @@ export const HeroBackground = () => {
             baseY: number;
             vx: number;
             vy: number;
+            rippleIntensity: number; // For ripple effect
+            ripplePhase: number; // For wave propagation
         }
 
         let dots: Dot[] = [];
@@ -42,7 +45,7 @@ export const HeroBackground = () => {
             // Create grid of dots
             for (let x = 0; x < width; x += spacing) {
                 for (let y = 0; y < height; y += spacing) {
-                    // Add some offset for every other row for honeycomb effect? Or simple grid. 
+                    // Add some offset for every other row for honeycomb effect? Or simple grid.
                     // Simple grid matches the "structured" vibe better.
                     dots.push({
                         x: x,
@@ -51,6 +54,8 @@ export const HeroBackground = () => {
                         baseY: y,
                         vx: 0,
                         vy: 0,
+                        rippleIntensity: 0,
+                        ripplePhase: 0,
                     });
                 }
             }
@@ -76,7 +81,7 @@ export const HeroBackground = () => {
                 const dy = mouseY - dot.y;
                 const distance = Math.sqrt(dx * dx + dy * dy);
 
-                // Interaction: Repel or Attract? 
+                // Interaction: Repel or Attract?
                 // "Connector" implies attraction, but "Order" implies staying in place.
                 // Let's do a gentle attraction (magnetic) like the logo.
                 // But subtle.
@@ -97,6 +102,25 @@ export const HeroBackground = () => {
                     dot.vy += forceDirectionY * force * attractionStrength * 0.1;
                 }
 
+                // Ripple effect logic
+                const rippleRadius = 200; // Maximum distance for ripple effect
+                if (distance < rippleRadius) {
+                    // Calculate ripple intensity based on distance
+                    const normalizedDistance = distance / rippleRadius;
+                    // Create wave effect with phase
+                    const waveEffect = Math.sin(normalizedDistance * Math.PI * 2 - dot.ripplePhase);
+                    const targetIntensity = (1 - normalizedDistance) * Math.max(0, waveEffect);
+
+                    // Smoothly increase ripple intensity
+                    dot.rippleIntensity += (targetIntensity - dot.rippleIntensity) * 0.15;
+                    // Advance phase for wave propagation
+                    dot.ripplePhase += 0.1;
+                } else {
+                    // Fade out ripple when mouse is far
+                    dot.rippleIntensity *= 0.92;
+                    dot.ripplePhase *= 0.95;
+                }
+
                 // Spring back to base
                 const springFactor = 0.05;
                 const dxBase = dot.baseX - dot.x;
@@ -114,11 +138,35 @@ export const HeroBackground = () => {
                 dot.y += dot.vy;
 
                 // Visuals
-                // Draw Dot
+                // Draw Dot with ripple effect
                 ctx.beginPath();
                 ctx.arc(dot.x, dot.y, dotBaseSize, 0, Math.PI * 2);
-                ctx.fillStyle = dotColor;
+
+                // Blend base color with turquoise based on ripple intensity
+                if (dot.rippleIntensity > 0.01) {
+                    // Extract RGB from turquoise color
+                    const turquoiseR = 107;
+                    const turquoiseG = 216;
+                    const turquoiseB = 215;
+
+                    // Calculate gradient color
+                    const intensity = Math.min(1, dot.rippleIntensity);
+                    const alpha = 0.3 + (intensity * 0.7); // From 0.3 to 1.0
+
+                    ctx.fillStyle = `rgba(${turquoiseR}, ${turquoiseG}, ${turquoiseB}, ${alpha})`;
+
+                    // Add glow effect for strong ripples
+                    if (intensity > 0.5) {
+                        ctx.shadowBlur = 10 * intensity;
+                        ctx.shadowColor = turquoiseColor;
+                    }
+                } else {
+                    ctx.fillStyle = dotColor;
+                    ctx.shadowBlur = 0;
+                }
+
                 ctx.fill();
+                ctx.shadowBlur = 0; // Reset shadow
 
                 // Optional: Draw connections if very close to mouse?
                 // Let's keep it minimal as per "Minimal + Premium". Just the grid moving is hypnotic enough.
