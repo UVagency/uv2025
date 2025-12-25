@@ -168,7 +168,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="max-w-[90%] mx-auto px-4 py-0">
+    <div className="max-w-[90%] mx-auto w-full py-0">
       <div className="flex items-center mb-0">
         <h2 className="text-xl uppercase font-bold text-portfolio-text mr-2">Selected Projects</h2>
         <span>💎</span>

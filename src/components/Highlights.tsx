@@ -15,7 +15,7 @@ const Highlights = () => {
   };
 
   return (
-    <div id="highlights" className="max-w-[90%] mx-auto px-4 mb-12 md:mb-24">
+    <div id="highlights" className="max-w-[90%] mx-auto w-full mb-12 md:mb-24">
       <div className="flex items-center mb-8">
         <h2 className="text-xl uppercase font-bold text-portfolio-text mr-2">Highlights</h2>
         <span>📌</span>
@@ -32,7 +32,7 @@ const Highlights = () => {
               onClick={() => handleProjectClick(project.id)}
               className="cursor-pointer group"
             >
-              <InteractiveTilt className="rounded-xl overflow-hidden p-4">
+              <InteractiveTilt className="rounded-xl overflow-hidden">
                 <div className="relative w-full overflow-hidden rounded-md mb-4 shadow-sm">
                   <OptimizedImage
                     src={coverImg}
@@ -44,7 +44,7 @@ const Highlights = () => {
                   />
                 </div>
 
-                <div className="flex flex-col items-start px-2">
+                <div className="flex flex-col items-start">
                   <h3 className="font-headline text-5xl font-bold text-portfolio-text mr-2 group-hover:text-portfolio-highlight">
                     {project.name}
                   </h3>
