@@ -17,7 +17,7 @@ export const HeroBackground = () => {
         let mouseY = -1000;
 
         // Configuration
-        const spacing = 40; // Space between dots
+        const spacing = 35; // Space between dots
         const dotBaseSize = 1.5;
         const influenceRadius = 150;
         const dotColor = 'rgba(0, 0, 0, 0.3)'; // Very subtle dark dots

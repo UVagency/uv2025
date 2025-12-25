@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { projectsList } from "../data/projectsList";
 import { highlightIds } from "../data/highlightsConfig";
 import OptimizedImage from "@/components/ui/optimized-image";
+import { InteractiveTilt } from "./ui/InteractiveTilt";
 
 // Seleccionar los proyectos destacados del projectsList
 const highlightedProjects = highlightIds.map(id => projectsList.find(p => p.id === id)).filter(Boolean);
@@ -31,33 +32,34 @@ const Highlights = () => {
               onClick={() => handleProjectClick(project.id)}
               className="cursor-pointer group"
             >
-              <div className="relative w-full overflow-hidden rounded-md mb-4">
-                <OptimizedImage
-                  src={coverImg}
-                  alt={project.name}
-                  className="w-full"
-                  fit="contain"
-                  wrapperClassName=""
-                  sizes="(max-width: 768px) 92vw, 45vw"
-                  srcSetWidths={[350, 500, 600, 700, 800, 900, 1200]}
-                />
-              </div>
-
-              <div className="flex flex-col items-start">
-                <h3 className="font-headline text-5xl font-bold text-portfolio-text mr-2 group-hover:text-portfolio-highlight">
-                  {project.name}
-                </h3>
-                <div className="flex flex-wrap gap-2 items-center mt-2">
-                  <span className="font-subtitle project-year-tag group-hover:project-year-tag-highlight">
-                    {project.year}
-                  </span>
-                  {project.categories.map((category) => (
-                    <span key={category} className="font-subtitle project-category-tag group-hover:project-category-tag-highlight">
-                      {category}
-                    </span>
-                  ))}
+              <InteractiveTilt className="rounded-xl overflow-hidden p-4">
+                <div className="relative w-full overflow-hidden rounded-md mb-4 shadow-sm">
+                  <OptimizedImage
+                    src={coverImg}
+                    alt={project.name}
+                    className="w-full"
+                    fit="contain"
+                    sizes="(max-width: 768px) 92vw, 45vw"
+                    srcSetWidths={[350, 500, 600, 700, 800, 900, 1200]}
+                  />
                 </div>
-              </div>
+
+                <div className="flex flex-col items-start px-2">
+                  <h3 className="font-headline text-5xl font-bold text-portfolio-text mr-2 group-hover:text-portfolio-highlight">
+                    {project.name}
+                  </h3>
+                  <div className="flex flex-wrap gap-2 items-center mt-2">
+                    <span className="font-subtitle project-year-tag group-hover:project-year-tag-highlight">
+                      {project.year}
+                    </span>
+                    {project.categories.map((category) => (
+                      <span key={category} className="font-subtitle project-category-tag group-hover:project-category-tag-highlight">
+                        {category}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </InteractiveTilt>
             </div>
           );
         })}

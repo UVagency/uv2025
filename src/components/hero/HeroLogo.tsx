@@ -13,20 +13,6 @@ export const HeroLogo = () => {
     useEffect(() => {
         if (!logoRef.current || !shadowRef.current) return;
 
-        // Default state: Micro drift and breathing
-        // Animate logo and shadow together for drift
-        const driftAnimation = animate([logoRef.current, shadowRef.current], {
-            translateX: () => random(-5, 5),
-            translateY: () => random(-5, 5),
-            scale: [0.98, 1.02],
-            easing: "inOutSine",
-            duration: 4000,
-            direction: "alternate",
-            loop: true,
-        });
-
-        animationRef.current = driftAnimation;
-
         const handleMouseMove = (e: MouseEvent) => {
             if (!logoRef.current || !shadowRef.current) return;
 
@@ -50,9 +36,6 @@ export const HeroLogo = () => {
             // We animate the separate shadow element's translation
             const shadowX = -moveX * 2;
             const shadowY = -moveY * 2 + 20; // +20 base offset
-
-            // Pause default animation during interaction
-            if (driftAnimation && driftAnimation.pause) driftAnimation.pause();
 
             // Animate Logo
             animate(logoRef.current, {
@@ -94,11 +77,6 @@ export const HeroLogo = () => {
                 easing: 'outElastic(1, .8)',
                 duration: 1200,
             });
-
-            // Restart drift after interaction ends
-            setTimeout(() => {
-                if (driftAnimation && driftAnimation.play) driftAnimation.play();
-            }, 1200);
         }
 
         window.addEventListener("mousemove", handleMouseMove);
@@ -106,7 +84,6 @@ export const HeroLogo = () => {
 
         return () => {
             window.removeEventListener("mousemove", handleMouseMove);
-            if (driftAnimation && driftAnimation.pause) driftAnimation.pause();
         };
     }, []);
 
