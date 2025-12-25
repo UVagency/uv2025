@@ -81,9 +81,9 @@ export function initCustomCursor() {
     let target = e.target;
     let clickableFound = false;
     
-    // Check up to 3 levels up for clickable elements to avoid deep traversal
+    // Check up to 10 levels up for clickable elements to avoid deep traversal
     let depth = 0;
-    while (target && target !== document && depth < 3) {
+    while (target && target !== document && depth < 10) {
       if (isClickable(target)) {
         clickableFound = true;
         break;
