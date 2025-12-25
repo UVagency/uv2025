@@ -40,7 +40,7 @@ const extendedBrands = [...brands, ...brands, ...brands];
 
 const BrandCarousel = () => {
   return (
-    <div className="my-4 md:my-8 bg-portfolio-bg overflow-hidden">
+    <div className="mb-8 md:mb-12 mt-0 bg-portfolio-bg overflow-hidden">
       <div className="max-w-[90%] mx-auto">
         <div className="logos">
           <div className="logos-slide">

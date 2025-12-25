@@ -194,7 +194,11 @@ export const HeroBackground = () => {
     return (
         <canvas
             ref={canvasRef}
-            className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-60 z-0 mix-blend-multiply"
+            className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-60 z-0 mix-blend-multiply transition-opacity duration-1000"
+            style={{
+                maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
+                WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)'
+            }}
         />
     );
 };
