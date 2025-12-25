@@ -38,7 +38,6 @@
 
 .logos-slide img {
   height: 69px;
-  margin: 0 40px;
   flex-shrink: 0;
 }
 
@@ -53,10 +52,12 @@
 }
 
 .logo-container {
-  display: inline-block;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: opacity 0.1s ease;
   flex-shrink: 0;
+  padding: 0 40px;
 }
 
 
@@ -76,7 +77,6 @@
   object-fit: contain;
   object-position: center;
   display: block;
-  margin: 0 auto;
 }
 
 .logo-philips {
@@ -99,7 +99,6 @@
   object-fit: contain;
   object-position: center;
   display: block;
-  margin: 0 auto;
 }
 
 /* Mobile styles */
@@ -117,7 +116,10 @@
 
   .logos-slide img {
     height: 46px;
-    margin: 0 20px;
+  }
+
+  .logo-container {
+    padding: 0 20px;
   }
 
   .logo-image {
