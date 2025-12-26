@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <div className="relative bg-portfolio-bg overflow-hidden flex flex-col items-start mb-0 min-h-fit">
       <HeroBackground />
-      <div className="max-w-[90%] mx-auto w-full pt-8 md:pt-12 relative z-10">
+      <div className="max-w-[90%] mx-auto w-full pt-4 md:pt-12 relative z-10">
         {/* Main content */}
         <HeroContent />
       </div>
