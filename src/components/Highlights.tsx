@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { projectsList } from "../data/projectsList";
-import { highlightIds } from "../data/highlightsConfig";
+import { highlightIds, highlightImages } from "../data/highlightsConfig";
 import OptimizedImage from "@/components/ui/optimized-image";
 import { InteractiveTilt } from "./ui/InteractiveTilt";
 
@@ -23,9 +23,8 @@ const Highlights = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {highlightedProjects.map((project) => {
-          // Generar el path de la imagen de portada
-          const clientSlug = project.id?.toLowerCase().replace(/ /g, "");
-          const coverImg = `/images/projects/${project.id}/${clientSlug}_profile.webp`;
+          // Usar la imagen configurada para este proyecto, o fallback a la generada automáticamente
+          const coverImg = highlightImages[project.id] || `/images/projects/${project.id}/${project.id.toLowerCase().replace(/ /g, "")}_profile.webp`;
           return (
             <div
               key={project.id}
