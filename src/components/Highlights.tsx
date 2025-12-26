@@ -43,7 +43,8 @@ const Highlights = () => {
                     src={coverImg}
                     alt={project.name}
                     className="w-full"
-                    fit="contain"
+                    fit="cover"
+                    aspectRatio={3/2}
                     sizes="(max-width: 768px) 92vw, 45vw"
                     srcSetWidths={[350, 500, 600, 700, 800, 900, 1200]}
                   />

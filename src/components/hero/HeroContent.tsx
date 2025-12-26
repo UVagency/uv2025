@@ -36,7 +36,8 @@ export const HeroContent = () => {
               </p>
 
               <p className="font-body text-xl md:text-2xl text-portfolio-text/80 font-normal leading-relaxed">
-                Modern isn't about chasing the new. It’s about making the new make sense.
+                Modern isn't about chasing the new.<br />
+                It's about making the new make sense.
               </p>
 
               <div className={`transition-all duration-300 ${showOneAgency ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
