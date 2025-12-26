@@ -33,7 +33,13 @@ const Highlights = () => {
               className="cursor-pointer group"
             >
               <InteractiveTilt className="rounded-xl overflow-hidden">
-                <div className="relative w-full overflow-hidden rounded-md mb-4 shadow-sm">
+                <div 
+                  className="relative w-full overflow-hidden rounded-md mb-4 shadow-sm"
+                  style={{
+                    WebkitBoxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+                    boxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.05)'
+                  }}
+                >
                   <OptimizedImage
                     src={coverImg}
                     alt={project.name}

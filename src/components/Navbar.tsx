@@ -84,7 +84,7 @@ const Navbar = () => {
       >
         <div className="max-w-[95%] sm:max-w-[90%] mx-auto relative h-full">
           <div className="pt-16 sm:pt-24 pb-16 sm:pb-32 px-2 sm:px-4 h-full hideScrollbar">
-            <Suspense fallback={<div className="h-full w-full flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-portfolio-text"></div></div>}>
+            <Suspense fallback={<div className="h-full w-full flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-portfolio-accent"></div></div>}>
               {isInfoOpen && <InfoSection />}
             </Suspense>
           </div>
@@ -102,7 +102,7 @@ const Navbar = () => {
       >
         <div className="max-w-[95%] sm:max-w-[90%] mx-auto relative h-full">
           <div className="pt-16 sm:pt-24 px-2 sm:px-4 h-full overflow-hidden">
-            <Suspense fallback={<div className="h-full w-full flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-portfolio-text"></div></div>}>
+            <Suspense fallback={<div className="h-full w-full flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-portfolio-accent"></div></div>}>
               {isContactOpen && <Footer />}
             </Suspense>
           </div>

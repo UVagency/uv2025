@@ -111,11 +111,27 @@ export const InteractiveTilt = ({
             <div
                 ref={shadowRef}
                 className="absolute inset-4 bg-black rounded-xl blur-2xl opacity-10"
-                style={{ transform: 'translateY(20px)' }}
+                style={{ 
+                    transform: 'translateY(20px) translateZ(0)',
+                    WebkitTransform: 'translateY(20px) translateZ(0)',
+                    willChange: 'transform, opacity',
+                    WebkitBackfaceVisibility: 'hidden',
+                    backfaceVisibility: 'hidden'
+                }}
             />
 
             {/* Content Element */}
-            <div ref={contentRef} className={`relative w-full h-full ${className}`}>
+            <div 
+                ref={contentRef} 
+                className={`relative w-full h-full ${className}`}
+                style={{
+                    willChange: 'transform',
+                    WebkitBackfaceVisibility: 'hidden',
+                    backfaceVisibility: 'hidden',
+                    transform: 'translateZ(0)',
+                    WebkitTransform: 'translateZ(0)'
+                }}
+            >
                 {children}
             </div>
         </div>

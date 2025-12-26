@@ -22,7 +22,7 @@ const SectionLoading = () => (
 // Full Page Loading
 const PageLoading = () => (
   <div className="min-h-screen bg-portfolio-bg flex items-center justify-center">
-    <div className="w-16 h-16 border-4 border-portfolio-text border-t-transparent rounded-full animate-spin"></div>
+    <div className="w-16 h-16 border-4 border-portfolio-accent border-t-transparent rounded-full animate-spin"></div>
   </div>
 );
 

@@ -85,3 +85,17 @@
 .project-images-carousel .embla__slide {
   @apply flex items-center justify-center;
 }
+
+/* Safari compatibility fixes for blur shadows */
+@supports (-webkit-appearance: none) {
+  /* Fix for blur filters in Safari */
+  [class*="blur-"] {
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform, opacity, filter;
+  }
+}

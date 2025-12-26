@@ -93,11 +93,27 @@ export const HeroLogo = () => {
             <div
                 ref={shadowRef}
                 className="absolute left-0 top-0 w-full h-full bg-black rounded-full blur-2xl opacity-10 translate-y-5"
-                style={{ transform: 'translateY(20px)' }}
+                style={{ 
+                    transform: 'translateY(20px) translateZ(0)',
+                    WebkitTransform: 'translateY(20px) translateZ(0)',
+                    willChange: 'transform, opacity',
+                    WebkitBackfaceVisibility: 'hidden',
+                    backfaceVisibility: 'hidden'
+                }}
             />
 
             {/* Logo Element */}
-            <div ref={logoRef} className="relative w-full h-full">
+            <div 
+                ref={logoRef} 
+                className="relative w-full h-full"
+                style={{
+                    willChange: 'transform',
+                    WebkitBackfaceVisibility: 'hidden',
+                    backfaceVisibility: 'hidden',
+                    transform: 'translateZ(0)',
+                    WebkitTransform: 'translateZ(0)'
+                }}
+            >
                 <OptimizedImage
                     src="/images/uv_logo.webp"
                     alt="United Visions"
