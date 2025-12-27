@@ -3,19 +3,21 @@ import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carouse
 import AutoScroll from "embla-carousel-autoplay";
 import OptimizedImage from '@/components/ui/optimized-image';
 
+import { ImageItem } from '@/data/projectsData';
+
 interface ProjectImageCarouselProps {
-  images: string[];
+  images: (string | ImageItem)[];
   projectName: string;
   carouselSpeed?: number;
 }
 
-const ProjectImageCarousel: React.FC<ProjectImageCarouselProps> = ({ 
-  images, 
+const ProjectImageCarousel: React.FC<ProjectImageCarouselProps> = ({
+  images,
   projectName,
   carouselSpeed = 30
 }) => {
   const delayMs = carouselSpeed > 0 ? Math.max(5000 - (carouselSpeed * 40), 1000) : 5000;
-  
+
   useEffect(() => {
     document.documentElement.style.setProperty('--carousel-duration', `${delayMs}ms`);
   }, [delayMs]);
@@ -36,17 +38,24 @@ const ProjectImageCarousel: React.FC<ProjectImageCarouselProps> = ({
         className="project-images-carousel"
       >
         <CarouselContent>
-          {images.map((image, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 pl-4">
-              <OptimizedImage
-                src={image}
-                alt={`${projectName} - Slide ${index}`}
-                aspectRatio={1}
-                priority={index < 3} // Load first 3 images eagerly
-                className="object-contain bg-portfolio-bg"
-              />
-            </CarouselItem>
-          ))}
+          {images.map((image, index) => {
+            const isObject = typeof image === 'object' && image !== null;
+            const imgSrc = isObject ? (image as ImageItem).src : (image as string);
+            const imgAlt = isObject ? (image as ImageItem).alt : `${projectName} - Slide ${index}`;
+            const imgClassName = isObject ? (image as ImageItem).className : "";
+
+            return (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 pl-4">
+                <OptimizedImage
+                  src={imgSrc}
+                  alt={imgAlt}
+                  aspectRatio={1}
+                  priority={index < 3} // Load first 3 images eagerly
+                  className={`object-contain bg-portfolio-bg ${imgClassName}`}
+                />
+              </CarouselItem>
+            );
+          })}
         </CarouselContent>
       </Carousel>
     </div>

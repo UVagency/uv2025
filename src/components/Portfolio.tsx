@@ -20,6 +20,7 @@ const getProject = (name: string) => projectsList.find(p => p.name.toUpperCase()
 
 // Define the order as per original file
 const orderedNames = [
+  "EXPOMASCOTAS",
   "SABOR DE BARRIO",
   "WE MAKE YOUR DAY",
   "URBAN BEAT",
@@ -168,7 +169,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="max-w-[90%] mx-auto px-4 py-0">
+    <div className="max-w-[90%] mx-auto w-full py-0">
       <div className="flex items-center mb-0">
         <h2 className="text-xl uppercase font-bold text-portfolio-text mr-2">Selected Projects</h2>
         <span>💎</span>
@@ -193,7 +194,7 @@ const Portfolio = () => {
                   {project.name}
                 </div>
 
-                <div className="hidden sm:flex items-center gap-2 pills-container overflow-hidden min-w-0">
+                <div className="hidden sm:flex items-center gap-2 pills-container overflow-hidden min-w-0 ml-[10px]">
                   <span className="project-year-tag group-hover:project-year-tag-highlight group-hover:bg-portfolio-highlight group-hover:text-portfolio-text">
                     {project.year}
                   </span>

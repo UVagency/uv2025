@@ -1,6 +1,6 @@
 .logos {
   overflow: hidden;
-  padding: 20px 0;
+  padding: 1.5rem 0;
   background: transparent;
   white-space: nowrap;
   position: relative;
@@ -38,7 +38,6 @@
 
 .logos-slide img {
   height: 69px;
-  margin: 0 40px;
   flex-shrink: 0;
 }
 
@@ -46,21 +45,21 @@
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(calc(-100% / 3));
   }
 }
 
 .logo-container {
-  display: inline-block;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: opacity 0.1s ease;
   flex-shrink: 0;
+  padding: 0 40px;
 }
 
-.logo-container:hover {
-  /* No hover effect */
-}
 
 .logo-image {
   max-height: 57.5px;
@@ -71,9 +70,6 @@
   display: block;
 }
 
-.logo-image:hover {
-  /* No hover effect */
-}
 
 .logo-melecmetal {
   width: 138px;
@@ -81,7 +77,6 @@
   object-fit: contain;
   object-position: center;
   display: block;
-  margin: 0 auto;
 }
 
 .logo-philips {
@@ -89,8 +84,10 @@
 }
 
 .logo-merrell {
-  max-width: 250px; /* antes: 170px */
-  max-height: 120px; /* antes: 80px */
+  max-width: 250px;
+  /* antes: 170px */
+  max-height: 120px;
+  /* antes: 80px */
   height: auto;
 }
 
@@ -102,13 +99,12 @@
   object-fit: contain;
   object-position: center;
   display: block;
-  margin: 0 auto;
 }
 
 /* Mobile styles */
 @media (max-width: 768px) {
   .logos {
-    padding: 15px 0;
+    padding: 1.5rem 0;
     width: 100vw;
     margin-left: -5vw;
   }
@@ -120,7 +116,10 @@
 
   .logos-slide img {
     height: 46px;
-    margin: 0 20px;
+  }
+
+  .logo-container {
+    padding: 0 20px;
   }
 
   .logo-image {
@@ -153,4 +152,4 @@
   .logos:after {
     width: 4vw;
   }
-} 
+}

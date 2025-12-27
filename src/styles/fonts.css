@@ -6,6 +6,7 @@
   src: url('/fonts/open-sans-v43-latin-regular.woff2') format('woff2');
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
@@ -14,11 +15,11 @@
   font-display: swap;
 }
 
-/* Force Open Sans as the only font */
+/* Force Outfit as the only font */
 :root {
-  font-family: 'Open Sans' !important;
+  font-family: 'Outfit', sans-serif !important;
 }
 
 * {
   font-family: inherit !important;
-} 
+}

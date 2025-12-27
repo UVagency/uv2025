@@ -13,6 +13,7 @@ export interface ImageItem {
   badge?: BadgeProps;
   overlay?: React.ReactNode;
   ratio?: number;
+  className?: string;
 }
 
 export interface BannerSection {
@@ -67,7 +68,7 @@ export interface ProjectData {
   client?: string;
   songTitle?: string;
   videoUrl?: string;
-  images: string[];
+  images: (string | ImageItem)[];
   thumbnails?: string[];
   comingSoon?: boolean;
   awardWinning?: boolean;
