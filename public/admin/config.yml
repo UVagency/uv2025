@@ -1,0 +1,104 @@
+# Decap CMS - Configuración Simple (Sin multiidioma)
+# Para habilitar multiidioma más adelante, ver: DECAP_CMS_SETUP.md
+
+backend:
+  name: git-gateway
+  branch: main
+
+# Desarrollo local
+local_backend: true
+
+# Workflow editorial
+publish_mode: editorial_workflow
+
+# Media
+media_folder: "public/images/projects"
+public_folder: "/images/projects"
+
+# Colecciones
+collections:
+  # Proyectos
+  - name: "projects"
+    label: "Projects"
+    label_singular: "Project"
+    folder: "src/data/projects"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    editor:
+      preview: false
+    fields:
+      # Campos básicos
+      - {label: "Project ID", name: "id", widget: "string", hint: "URL-friendly ID (e.g., expomascotas)"}
+      - {label: "Project Name", name: "name", widget: "string"}
+      - {label: "Year / Subtitle", name: "year", widget: "string", hint: "e.g., 2024 or INABA CHURU"}
+
+      # Categorías
+      - label: "Categories"
+        name: "categories"
+        widget: "select"
+        multiple: true
+        options: ["INTEGRATED", "EVENT", "DESIGN", "MUSIC", "FESTIVAL", "DIGITAL"]
+
+      # Contenido
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Client", name: "client", widget: "string", required: false}
+      - {label: "Overview", name: "overview", widget: "markdown"}
+      - {label: "Execution", name: "execution", widget: "markdown"}
+      - {label: "Marketing Results", name: "marketingResults", widget: "markdown"}
+
+      # Media
+      - {label: "Video URL", name: "videoUrl", widget: "string", required: false}
+      - label: "Main Images"
+        name: "images"
+        widget: "list"
+        field: {label: "Image", name: "image", widget: "image"}
+
+      # Opcionales
+      - {label: "Coming Soon", name: "comingSoon", widget: "boolean", default: false, required: false}
+      - {label: "Award Winning", name: "awardWinning", widget: "boolean", default: false, required: false}
+
+      # Galería (opcional)
+      - label: "Gallery"
+        name: "gallery"
+        widget: "object"
+        required: false
+        collapsed: true
+        fields:
+          - {label: "Feature Text", name: "featureText", widget: "text", required: false}
+          - label: "Sections"
+            name: "sections"
+            widget: "list"
+            required: false
+            types:
+              # Banner
+              - label: "Banner"
+                name: "banner"
+                widget: "object"
+                fields:
+                  - {label: "Type", name: "type", widget: "hidden", default: "banner"}
+                  - {label: "Image", name: "image", widget: "image"}
+                  - {label: "Alt", name: "alt", widget: "string", required: false}
+
+              # Image Grid
+              - label: "Image Grid"
+                name: "imageGrid"
+                widget: "object"
+                fields:
+                  - {label: "Type", name: "type", widget: "hidden", default: "imageGrid"}
+                  - {label: "Columns", name: "columns", widget: "number", default: 2, min: 1, max: 4}
+                  - label: "Images"
+                    name: "images"
+                    widget: "list"
+                    fields:
+                      - {label: "Image", name: "src", widget: "image"}
+                      - {label: "Alt", name: "alt", widget: "string"}
+
+              # Text Section
+              - label: "Text"
+                name: "textSection"
+                widget: "object"
+                fields:
+                  - {label: "Type", name: "type", widget: "hidden", default: "textSection"}
+                  - {label: "Content", name: "content", widget: "markdown"}
