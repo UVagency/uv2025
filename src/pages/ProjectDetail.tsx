@@ -122,6 +122,22 @@ const ProjectDetail = () => {
               </Suspense>
             )}
 
+            {/* Custom Embed Section (e.g., Canva) */}
+            {project.embedUrl && (
+              <div className="mb-6 sm:mb-8">
+                <div className="relative w-full overflow-hidden rounded-lg shadow-lg" style={{ paddingTop: '56.25%' }}>
+                  <iframe
+                    loading="lazy"
+                    className="absolute top-0 left-0 w-full h-full border-none p-0 m-0"
+                    src={project.embedUrl}
+                    allowFullScreen
+                    allow="fullscreen"
+                    title={`${project.name} Presentation`}
+                  />
+                </div>
+              </div>
+            )}
+
             {/* Gallery Section */}
             {project.gallery && (
               <Suspense fallback={<SectionLoading />}>

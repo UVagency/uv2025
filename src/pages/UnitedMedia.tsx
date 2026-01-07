@@ -111,9 +111,24 @@ const UnitedMedia = () => {
               </div>
             </div>
 
-            {/* Video Recap Section */}
+            {/* Video Recap Section - HIDDEN
             <section className="mb-10 sm:mb-16">
               <CompanyVideo videoUrl={mediaInfo.videoRecapUrl} />
+            </section>
+            */}
+
+            {/* CTV Max / TNT Presentation */}
+            <section className="mb-10 sm:mb-16">
+              <div className="relative w-full overflow-hidden rounded-lg shadow-lg" style={{ paddingTop: '56.25%' }}>
+                <iframe
+                  loading="lazy"
+                  className="absolute top-0 left-0 w-full h-full border-none p-0 m-0"
+                  src="https://www.canva.com/design/DAG9wpxntX4/QnVMJXnxoMYpiIz_sR_UVw/view?embed"
+                  allowFullScreen
+                  allow="fullscreen"
+                  title="CTV Max/TNT @UV Presentation"
+                />
+              </div>
             </section>
 
             {/* The United Media Method / Strategy Starts with the Audience */}
