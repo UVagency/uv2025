@@ -50,6 +50,21 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# Configuración de funciones para Decap CMS OAuth
+[functions]
+  directory = "netlify/functions"
+
+# Redirecciones para Decap CMS GitHub OAuth
+[[redirects]]
+  from = "/api/auth"
+  to = "/.netlify/functions/auth"
+  status = 200
+
+[[redirects]]
+  from = "/api/callback"
+  to = "/.netlify/functions/callback"
+  status = 200
+
 # Redirecciones para SEO y rutas
 [[redirects]]
   from = "/es/*"

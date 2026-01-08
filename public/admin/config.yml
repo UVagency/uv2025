@@ -2,8 +2,11 @@
 # Para habilitar multiidioma más adelante, ver: DECAP_CMS_SETUP.md
 
 backend:
-  name: git-gateway
+  name: github
+  repo: UVagency/uv2025
   branch: main
+  base_url: https://uv.agency
+  auth_endpoint: api/auth
 
 # Desarrollo local
 local_backend: true

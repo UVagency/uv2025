@@ -1,4 +1,4 @@
-# 🚀 Decap CMS - Inicio Rápido (5 minutos)
+# 🚀 Decap CMS - Inicio Rápido (10 minutos)
 
 ## ¿Qué es esto?
 
@@ -10,29 +10,46 @@ Panel Admin → Editar Proyecto → Guardar → Auto-commit a GitHub → Netlify
 
 ---
 
-## 🎯 Setup en Netlify (3 pasos)
+## 🎯 Setup con GitHub OAuth (4 pasos)
 
-### 1. Habilitar Identity
-
-```
-Netlify Dashboard → Tu sitio → Site settings → Identity
-→ Click "Enable Identity"
-```
-
-### 2. Habilitar Git Gateway
+### 1. Crear GitHub OAuth App
 
 ```
-En la misma página → Services
-→ Click "Enable Git Gateway"
+1. Ve a: https://github.com/settings/developers
+2. OAuth Apps → New OAuth App
+3. Completa:
+   - Application name: UV Agency CMS
+   - Homepage URL: https://uv.agency
+   - Callback URL: https://uv.agency/api/callback
+4. Click "Register application"
+5. Copia el Client ID
+6. Generate a new client secret → Copia el Secret
 ```
 
-### 3. Invitarte a ti mismo
+### 2. Configurar en Netlify
 
 ```
-Identity → Invite users
-→ Ingresa tu email
-→ Revisar bandeja de entrada
-→ Click en link y crear password
+1. Netlify Dashboard → Tu sitio → Site settings
+2. Environment variables → Add a variable
+3. Agregar:
+   - GITHUB_CLIENT_ID = [tu Client ID]
+   - GITHUB_CLIENT_SECRET = [tu Client Secret]
+4. Save
+```
+
+### 3. Rebuild el Sitio
+
+```
+Netlify → Deploys → Trigger deploy → Deploy site
+```
+
+### 4. Dar Acceso a Usuarios
+
+Solo usuarios con acceso al repositorio pueden editar:
+
+```
+GitHub → Repo → Settings → Collaborators
+→ Add people → Email del editor
 ```
 
 **¡Listo!** Ya puedes usar el CMS.
@@ -49,8 +66,9 @@ https://uv.agency/admin
 
 ### Login
 
-1. Click **"Login with Netlify Identity"**
-2. Email y password (del email de invitación)
+1. Click **"Login with GitHub"**
+2. Autorizar la app (primera vez)
+3. ✅ Autenticado!
 
 ### Crear Proyecto
 
@@ -93,24 +111,27 @@ Published → Live en el sitio
 
 ## 🐛 Problemas Comunes
 
-**"Error loading entries"**
-→ Verifica que Git Gateway esté habilitado
+**"GitHub OAuth not configured"**
+→ Verifica que agregaste las variables en Netlify y rebuildeaste
 
 **"Not Found" en /admin**
 → Haz push a GitHub y espera deploy de Netlify
 
-**"Unauthorized"**
-→ Verifica que Identity esté habilitado e invitaste tu email
+**"User not authorized"**
+→ Agrega al usuario como collaborator en GitHub
+
+**"Bad credentials"**
+→ Verifica que el Client Secret sea correcto
 
 ---
 
 ## 📖 Documentación Completa
 
-Ver **[DECAP_CMS_SETUP.md](DECAP_CMS_SETUP.md)** para:
+Ver **[CMS_SETUP_GITHUB_OAUTH.md](CMS_SETUP_GITHUB_OAUTH.md)** para:
+- Configuración detallada
 - Desarrollo local
-- Personalización
-- Multiidioma
-- Troubleshooting avanzado
+- Troubleshooting completo
+- Gestión de permisos
 
 ---
 
