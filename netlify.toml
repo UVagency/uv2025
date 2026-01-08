@@ -7,14 +7,14 @@
   NODE_VERSION = "20"
   NPM_FLAGS = "--legacy-peer-deps"
 
-# Configuración especial de headers para Decap CMS Admin
+# Configuración especial de headers para Sveltia CMS Admin
 # IMPORTANTE: Debe ir ANTES de /* para que se aplique
 [[headers]]
   for = "/admin/"
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
-    # CSP muy permisivo para Decap CMS
+    # CSP permisivo para Sveltia CMS
     Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: blob: https:; font-src 'self' data: https:; connect-src 'self' https: wss: data: blob:; frame-src 'self' https:; media-src 'self' https: data: blob:;"
 
 [[headers]]
@@ -22,7 +22,7 @@
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
-    # CSP muy permisivo para Decap CMS
+    # CSP permisivo para Sveltia CMS
     Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: blob: https:; font-src 'self' data: https:; connect-src 'self' https: wss: data: blob:; frame-src 'self' https:; media-src 'self' https: data: blob:;"
 
 # Configuración de headers de seguridad para el resto del sitio
@@ -67,21 +67,6 @@
   for = "/*.css"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-
-# Configuración de funciones para Decap CMS OAuth
-[functions]
-  directory = "netlify/functions"
-
-# Redirecciones para Decap CMS GitHub OAuth
-[[redirects]]
-  from = "/api/auth"
-  to = "/.netlify/functions/auth"
-  status = 200
-
-[[redirects]]
-  from = "/api/callback"
-  to = "/.netlify/functions/callback"
-  status = 200
 
 # Redirecciones para SEO y rutas
 [[redirects]]

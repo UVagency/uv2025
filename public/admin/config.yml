@@ -1,12 +1,10 @@
-# Decap CMS - Configuración Simple (Sin multiidioma)
-# Para habilitar multiidioma más adelante, ver: DECAP_CMS_SETUP.md
+# Sveltia CMS - Configuración
+# Compatible con Decap CMS pero con mejor UX y performance
 
 backend:
   name: github
   repo: UVagency/uv2025
   branch: main
-  base_url: https://uv.agency
-  auth_endpoint: api/auth
 
 # Desarrollo local
 local_backend: true
