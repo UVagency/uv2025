@@ -68,6 +68,7 @@ export interface ProjectData {
   client?: string;
   songTitle?: string;
   videoUrl?: string;
+  embedUrl?: string;
   images: (string | ImageItem)[];
   thumbnails?: string[];
   comingSoon?: boolean;
