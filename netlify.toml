@@ -8,13 +8,22 @@
   NPM_FLAGS = "--legacy-peer-deps"
 
 # Configuración especial de headers para Decap CMS Admin
+# IMPORTANTE: Debe ir ANTES de /* para que se aplique
+[[headers]]
+  for = "/admin/"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    # CSP muy permisivo para Decap CMS
+    Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: blob: https:; font-src 'self' data: https:; connect-src 'self' https: wss: data: blob:; frame-src 'self' https:; media-src 'self' https: data: blob:;"
+
 [[headers]]
   for = "/admin/*"
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
-    # CSP permisivo para Decap CMS (necesita unpkg.com y GitHub)
-    Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://cdn.jsdelivr.net https://github.com https://api.github.com; style-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net; img-src 'self' data: blob: https:; font-src 'self' data: https:; connect-src 'self' https: wss:; frame-src 'self' https:;"
+    # CSP muy permisivo para Decap CMS
+    Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: blob: https:; font-src 'self' data: https:; connect-src 'self' https: wss: data: blob:; frame-src 'self' https:; media-src 'self' https: data: blob:;"
 
 # Configuración de headers de seguridad para el resto del sitio
 [[headers]]
