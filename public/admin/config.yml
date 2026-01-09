@@ -13,8 +13,8 @@ display_url: https://uv.agency
 # Logo personalizado
 logo_url: /images/uv_logo.webp
 
-# Desarrollo local
-local_backend: true
+# Desarrollo local (deshabilitado en producción)
+# local_backend: true
 
 # Workflow editorial
 publish_mode: editorial_workflow

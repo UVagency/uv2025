@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
   <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet" />
   <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet" />
-  <title>UV Website CMS</title>
+  <title>UV CMS</title>
   <style>
     body {
       margin: 0;
@@ -14,10 +14,26 @@
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
     }
+
+    /* Ocultar branding de Sveltia CMS */
+    [role="banner"] [class*="product-name"],
+    [class*="application-name"],
+    [aria-label*="Sveltia"] {
+      display: none !important;
+    }
+
+    /* Personalizar el texto "Sveltia CMS" si aparece */
+    [role="banner"]::after {
+      content: 'UV CMS';
+      font-weight: 600;
+      font-size: 1.25rem;
+      color: #2C3E3D;
+      margin-left: 0.5rem;
+    }
   </style>
 </head>
 <body>
-  <!-- Sveltia CMS -->
+  <!-- UV CMS - Powered by Sveltia CMS -->
   <script type="module" src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
 </body>
 </html>
