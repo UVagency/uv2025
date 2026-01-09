@@ -7,13 +7,14 @@
   NODE_VERSION = "20"
   NPM_FLAGS = "--legacy-peer-deps"
 
-# Configuración especial de headers para Sveltia CMS Admin
+# Configuración especial de headers para UV Website CMS (Sveltia)
 # IMPORTANTE: Debe ir ANTES de /* para que se aplique
 [[headers]]
   for = "/admin/"
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
+    X-Robots-Tag = "noindex, nofollow, noarchive, nosnippet"
     # CSP permisivo para Sveltia CMS - Incluye todos los dominios necesarios
     Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: https://unpkg.com https://static.cloudflareinsights.com data:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: blob: https:; font-src 'self' data: https:; connect-src 'self' https: wss: https://unpkg.com https://api.github.com https://www.githubstatus.com data: blob:; frame-src 'self' https:; media-src 'self' https: data: blob:;"
 
@@ -22,6 +23,7 @@
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
+    X-Robots-Tag = "noindex, nofollow, noarchive, nosnippet"
     # CSP permisivo para Sveltia CMS - Incluye todos los dominios necesarios
     Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: https://unpkg.com https://static.cloudflareinsights.com data:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: blob: https:; font-src 'self' data: https:; connect-src 'self' https: wss: https://unpkg.com https://api.github.com https://www.githubstatus.com data: blob:; frame-src 'self' https:; media-src 'self' https: data: blob:;"
 

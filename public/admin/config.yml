@@ -1,10 +1,14 @@
-# Sveltia CMS - Configuración
-# Compatible con Decap CMS pero con mejor UX y performance
+# UV Website CMS - Configuración
+# Powered by Sveltia CMS
 
 backend:
   name: github
   repo: UVagency/uv2025
   branch: main
+
+# Información del sitio
+site_url: https://uv.agency
+display_url: https://uv.agency
 
 # Logo personalizado
 logo_url: /images/uv_logo.webp

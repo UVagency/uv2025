@@ -5,23 +5,28 @@ Allow: /project/
 Allow: /about/
 Allow: /contact/
 Allow: /our-company/
+Disallow: /admin/
 Disallow: /united-media
 
 # AI Bot specific directives
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /admin/
 Disallow: /united-media
 
 User-agent: GPTBot
 Allow: /
+Disallow: /admin/
 Disallow: /united-media
 
 User-agent: CCBot
 Allow: /
+Disallow: /admin/
 Disallow: /united-media
 
 User-agent: AnthropicBot
 Allow: /
+Disallow: /admin/
 Disallow: /united-media
 
 # Sitemaps
