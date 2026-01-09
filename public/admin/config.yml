@@ -6,6 +6,9 @@ backend:
   repo: UVagency/uv2025
   branch: main
 
+# Logo personalizado
+logo_url: /images/uv_logo.webp
+
 # Desarrollo local
 local_backend: true
 
