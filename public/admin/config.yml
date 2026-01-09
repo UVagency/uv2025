@@ -5,6 +5,7 @@ backend:
   name: github
   repo: UVagency/uv2025
   branch: main
+  base_url: https://sveltia-cms-auth.services-32b.workers.dev
 
 # Desarrollo local
 local_backend: true
