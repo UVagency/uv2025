@@ -14,16 +14,16 @@
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
-    # CSP permisivo para Sveltia CMS
-    Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: blob: https:; font-src 'self' data: https:; connect-src 'self' https: wss: data: blob:; frame-src 'self' https:; media-src 'self' https: data: blob:;"
+    # CSP permisivo para Sveltia CMS - Incluye todos los dominios necesarios
+    Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: https://unpkg.com https://static.cloudflareinsights.com data:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: blob: https:; font-src 'self' data: https:; connect-src 'self' https: wss: https://unpkg.com https://api.github.com https://www.githubstatus.com data: blob:; frame-src 'self' https:; media-src 'self' https: data: blob:;"
 
 [[headers]]
   for = "/admin/*"
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
-    # CSP permisivo para Sveltia CMS
-    Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: blob: https:; font-src 'self' data: https:; connect-src 'self' https: wss: data: blob:; frame-src 'self' https:; media-src 'self' https: data: blob:;"
+    # CSP permisivo para Sveltia CMS - Incluye todos los dominios necesarios
+    Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: https://unpkg.com https://static.cloudflareinsights.com data:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: blob: https:; font-src 'self' data: https:; connect-src 'self' https: wss: https://unpkg.com https://api.github.com https://www.githubstatus.com data: blob:; frame-src 'self' https:; media-src 'self' https: data: blob:;"
 
 # Configuración de headers de seguridad para el resto del sitio
 [[headers]]
