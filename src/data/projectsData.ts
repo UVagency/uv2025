@@ -68,6 +68,7 @@ export interface ProjectData {
   client?: string;
   songTitle?: string;
   videoUrl?: string;
+  bottomVideoUrl?: string;
   embedUrl?: string;
   images: (string | ImageItem)[];
   thumbnails?: string[];
@@ -75,6 +76,7 @@ export interface ProjectData {
   awardWinning?: boolean;
   emojis?: string[];
   carouselSpeed?: number;
+  hideCarousel?: boolean;
   gallery?: ProjectGallery;
 }
 
@@ -91,7 +93,8 @@ const projectImports: Record<string, () => Promise<any>> = {
   "turn-up-the-volume": () => import('./projects/turn-up-the-volume.json'),
   "fly-your-way": () => import('./projects/fly-your-way.json'),
   "closer-to-sun": () => import('./projects/closer-to-sun.json'),
-  "sabor-de-barrio": () => import('./projects/sabor-de-barrio.json')
+  "sabor-de-barrio": () => import('./projects/sabor-de-barrio.json'),
+  "kombi-kreme": () => import('./projects/kombi-kreme.json')
 };
 
 export const getProjectData = async (id: string): Promise<ProjectData | null> => {

@@ -31,9 +31,9 @@ const ProjectImageGrid: React.FC<ProjectImageGridProps> = ({
           key={`img-${index}`}
           src={image.src}
           alt={image.alt}
-          aspectRatio={1 / 1}
+          aspectRatio={image.ratio || 1}
           overlay={image.overlay}
-          className={image.className}
+          className={`${image.className || ''}`}
         />
       ))}
     </div>

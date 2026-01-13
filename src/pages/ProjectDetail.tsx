@@ -38,6 +38,12 @@ function renderBullets(text: string) {
 
   lines.forEach((line) => {
     if (/^[-*]\s+/.test(line)) {
+      if (buffer.length) {
+        blocks.push(
+          <p className="mb-2 text-lg sm:text-2xl text-portfolio-text/80 font-light" key={`p-${blockKey++}`}>{buffer.join(" ")}</p>
+        );
+        buffer = [];
+      }
       items.push(line.replace(/^[-*]\s+/, ""));
     } else {
       if (items.length) {
@@ -183,6 +189,13 @@ const ProjectDetail = () => {
                   })}
                 </div>
               </div>
+            )}
+
+            {/* Bottom Video Section */}
+            {project.bottomVideoUrl && (
+              <Suspense fallback={<SectionLoading />}>
+                <ProjectVideoPlayer project={{ ...project, videoUrl: project.bottomVideoUrl }} />
+              </Suspense>
             )}
           </div>
           <Footer />

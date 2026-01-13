@@ -118,6 +118,23 @@ export const projectsList: ProjectSummary[] = [
     ]
   },
   {
+    "id": "kombi-kreme",
+    "name": "KOMBI KREME",
+    "year": "KRISPY KREME",
+    "categories": [
+      "DESIGN",
+      "ACTIVATION"
+    ],
+    "images": [
+      "/images/projects/kombi-kreme/kombi-kreme-1.webp",
+      "/images/projects/kombi-kreme/kombi-kreme-2.webp",
+      "/images/projects/kombi-kreme/kombi-kreme-3.webp",
+      "/images/projects/kombi-kreme/kombi-kreme-4.webp",
+      "/images/projects/kombi-kreme/kombi-kreme-5.webp",
+      "/images/projects/kombi-kreme/kombi-kreme-6.webp"
+    ]
+  },
+  {
     "id": "lolla-vibes",
     "name": "LOLLA VIBES",
     "year": "SOUNDCORE BY ANKER",

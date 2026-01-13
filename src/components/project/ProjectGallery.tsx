@@ -95,11 +95,13 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project, carouselSpeed 
 
   return (
     <div className="mb-16">
-      <ProjectImageCarousel
-        images={project.images.length > 0 ? project.images : placeholders}
-        projectName={project.name}
-        carouselSpeed={effectiveCarouselSpeed}
-      />
+      {!project.hideCarousel && (
+        <ProjectImageCarousel
+          images={project.images.length > 0 ? project.images : placeholders}
+          projectName={project.name}
+          carouselSpeed={effectiveCarouselSpeed}
+        />
+      )}
 
       <ProjectFeatureText
         author={project.gallery.featureTextAuthor}

@@ -1,0 +1,71 @@
+{
+    "id": "kombi-kreme",
+    "name": "Kombi Kreme",
+    "year": "KRISPY KREME",
+    "categories": [
+        "DESIGN",
+        "ACTIVATION"
+    ],
+    "description": "Transforming a vintage icon into a mobile factory of joy. A sampling activation that drove sweetness to every corner of the city.",
+    "client": "PREMIER GROUP CHILE",
+    "overview": "To celebrate reaching 100,000 followers on Instagram and Krispy Kreme's second anniversary in Chile, we proposed a special activation. Bringing joy to everyone is part of our brand essence, so we decided to activate our 'Kombi Kreme' to deliver sweetness across the city.",
+    "execution": "The execution focused on transforming a classic Kombi van into a mobile brand experience. We created detailed vehicle graphics, promotional materials, and a cohesive visual language that extended across digital and physical touchpoints.\n\nKey elements included:\n- Custom vehicle wrap design\n- Event branding and signage\n- Digital assets for social media\n- Promotional merchandise",
+    "marketingResults": "The Kombi Kreme campaign successfully engaged the local community and generated significant buzz for the anniversary celebration. The mobile activation allowed the brand to reach new audiences and strengthen its connection with existing fans.\n\n- +2,000 people reached with redeemable coupons for free doughnuts\n- 0 to 100,000 followers achieved in record time",
+    "videoUrl": "https://vimeo.com/1154104989",
+    "bottomVideoUrl": "https://vimeo.com/1154100823",
+    "hideCarousel": true,
+    "images": [
+        "/images/projects/kombi-kreme/kombi-kreme-1.webp",
+        "/images/projects/kombi-kreme/kombi-kreme-2.webp",
+        "/images/projects/kombi-kreme/kombi-kreme-3.webp",
+        "/images/projects/kombi-kreme/kombi-kreme-4.webp",
+        "/images/projects/kombi-kreme/kombi-kreme-5.webp",
+        "/images/projects/kombi-kreme/kombi-kreme-6.webp"
+    ],
+    "gallery": {
+        "featureText": "More than just delivery, we spread joy. The Kombi Kreme roamed the streets broadcasting compliments to passersby and surprising them with free doughnuts, turning everyday moments into sweet memories.",
+        "sections": [
+            {
+                "type": "banner",
+                "image": "/images/projects/kombi-kreme/kombi-kreme-1.webp"
+            },
+            {
+                "type": "imageGrid",
+                "columns": 3,
+                "images": [
+                    {
+                        "src": "/images/projects/kombi-kreme/kombi-kreme-2.webp",
+                        "alt": "Kombi Kreme Design Detail - 1",
+                        "ratio": 1.5
+                    },
+                    {
+                        "src": "/images/projects/kombi-kreme/kombi-kreme-3.webp",
+                        "alt": "Kombi Kreme Design Detail - 2",
+                        "ratio": 1.5
+                    },
+                    {
+                        "src": "/images/projects/kombi-kreme/kombi-kreme-4.webp",
+                        "alt": "Kombi Kreme Design Detail - 3",
+                        "ratio": 1.5
+                    }
+                ]
+            },
+            {
+                "type": "imageGrid",
+                "columns": 2,
+                "images": [
+                    {
+                        "src": "/images/projects/kombi-kreme/kombi-kreme-5.webp",
+                        "alt": "Kombi Kreme Design Detail - 4",
+                        "ratio": 1.78
+                    },
+                    {
+                        "src": "/images/projects/kombi-kreme/kombi-kreme-6.webp",
+                        "alt": "Kombi Kreme Design Detail - 5",
+                        "ratio": 1.78
+                    }
+                ]
+            }
+        ]
+    }
+}
