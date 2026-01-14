@@ -45,7 +45,7 @@ const OurCompany = () => {
     year: "1999",
     tagline: "UV is the integrated marketing agency that grows your brand through omnichannel campaigns, crafts events that move people to create customers, and delivers results through smart media.\nOne agency, all in.",
     description: "We specialize in strategy, creativity, content, media and experiences- all connected to help brands grow, inspire, and stay relevant in a constantly shifting world. We're grateful to be working with top brands and passionate teams to create work that resonates - emotionally and measurably. We love what we do and we know that hard work pays off.",
-    history: "Founded with a vision to blend cutting-edge technology with creative storytelling, UV has grown from a small team of passionate individuals into a powerhouse of innovation. Our journey has been marked by a relentless pursuit of excellence, a commitment to our clients' success, and a culture that fosters creativity and collaboration. We've embraced challenges, celebrated milestones, and continuously evolved to meet the ever-changing demands of integrated communication.",
+    history: "Founded with a vision to blend cutting-edge technology with creative storytelling, UV has grown from a small team of passionate individuals into a powerhouse of innovation. Our journey has been marked by a relentless pursuit of excellence, a commitment to our clients' success, and a culture that fosters creativity and collaboration.",
     videoRecapUrl: "https://vimeo.com/1096947347",
     categories: ["Advertising", "Media", "Events"],
     client: "One Agency, All In. Full Service Independent Agency",
@@ -77,7 +77,7 @@ const OurCompany = () => {
   ];
 
   const coreTeam = [
-    { name: "Cristina Recalde", title: "CD", url: "https://www.linkedin.com/in/cristinarecalde/", photo: "/images/team/cristinarecalde.webp" },
+    { name: "Cristina Recalde", title: "Creative Director", url: "https://www.linkedin.com/in/cristinarecalde/", photo: "/images/team/cristinarecalde.webp" },
     { name: "Camila Águila", title: "Head of Operations", url: "https://www.linkedin.com/in/camila-javiera-%C3%A1guila-duarte/", photo: "/images/team/camiaguiladuarte.webp" },
     { name: "Cristopher Arias", title: "Head of UX", url: "https://www.linkedin.com/in/cristopherfuentesarias/", photo: "/images/team/cristopherfuentesarias.webp" },
     { name: "Fernanda Lebrón", title: "Head of UM", url: "https://www.linkedin.com/in/fernanda-lebr%C3%B3n-0325b5107/", photo: "/images/team/fernandalebron.webp" },
