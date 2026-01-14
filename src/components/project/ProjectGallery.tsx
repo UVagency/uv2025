@@ -25,6 +25,10 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project, carouselSpeed 
     "https://images.unsplash.com/photo-1517697471339-4aa32003c11a?q=80&w=800"
   ];
 
+  const getImageSrc = (item: string | ImageItem): string => {
+    return typeof item === 'string' ? item : item.src;
+  };
+
   const handleProjectClick = () => {
     trackEvent('PROJECT_CLICK', {
       [GA_PARAMS.PROJECT_ID]: project.id,
@@ -48,7 +52,7 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project, carouselSpeed 
 
         <div className="mb-6">
           <ProjectBanner
-            image={placeholders[0]}
+            image={getImageSrc(placeholders[0])}
             alt={`${project.name} - Banner`}
             badge={{ text: "NEXT FRIDAY" }}
           />
@@ -58,7 +62,7 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project, carouselSpeed 
           <ProjectImageGrid
             columns={4}
             images={[1, 2, 3, 4].map((index) => ({
-              src: placeholders[index % placeholders.length],
+              src: getImageSrc(placeholders[index % placeholders.length]),
               alt: `${project.name} - Thumbnail ${index}`,
               badge: index === 2 ? { text: "next episode", position: "bottom-right" } : undefined
             }))}
@@ -67,7 +71,7 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project, carouselSpeed 
 
         <div className="mb-8">
           <ProjectBanner
-            image={placeholders[2]}
+            image={getImageSrc(placeholders[2])}
             alt={`${project.name} - Main Feature`}
             ratio={16 / 9}
             badge={{
@@ -84,7 +88,7 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project, carouselSpeed 
         <ProjectImageGrid
           columns={3}
           images={[1, 2, 3].map((index) => ({
-            src: placeholders[(index + 7) % placeholders.length],
+            src: getImageSrc(placeholders[(index + 7) % placeholders.length]),
             alt: `${project.name} - Final ${index}`,
             badge: index === 0 ? { text: "TONIGHT", position: "bottom-right" } : undefined
           }))}
