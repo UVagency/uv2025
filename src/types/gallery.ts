@@ -9,4 +9,5 @@ export interface ImageItem {
   badge?: BadgeProps;
   overlay?: React.ReactNode;
   ratio?: number;
+  className?: string;
 } 
