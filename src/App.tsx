@@ -11,7 +11,7 @@ import Index from './pages/Index';
 import Navbar from './components/Navbar';
 
 // Lazy load components
-const About = lazy(() => import("./pages/About"));
+
 const Contact = lazy(() => import("./pages/Contact"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const ProjectDetail = lazy(() => import("./pages/ProjectDetail"));
@@ -78,11 +78,7 @@ const App = () => {
               <Navbar />
               <Routes>
                 <Route path="/" element={<Index />} />
-                <Route path="/about" element={
-                  <RouteWrapper>
-                    <About />
-                  </RouteWrapper>
-                } />
+
                 <Route path="/contact" element={
                   <RouteWrapper>
                     <Contact />
