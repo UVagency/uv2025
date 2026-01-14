@@ -10,21 +10,39 @@ export interface ProjectSummary {
 
 export const projectsList: ProjectSummary[] = [
   {
-    "id": "a-great-first-day",
-    "name": "A GREAT FIRST DAY",
-    "year": "MATTEL",
+    "id": "expomascotas",
+    "name": "EXPOMASCOTAS",
+    "year": "INABA CHURU",
     "categories": [
-      "PROMO"
+      "INTEGRATED"
     ],
     "images": [
-      "/images/projects/a-great-first-day/a-great-first-day-01.webp",
-      "/images/projects/a-great-first-day/a-great-first-day-02.webp",
-      "/images/projects/a-great-first-day/a-great-first-day-03.webp",
-      "/images/projects/a-great-first-day/a-great-first-day-04.webp",
-      "/images/projects/a-great-first-day/a-great-first-day-05.webp",
-      "/images/projects/a-great-first-day/a-great-first-day-06.webp",
-      "/images/projects/a-great-first-day/a-great-first-day-07.webp",
-      "/images/projects/a-great-first-day/a-great-first-day-08.webp"
+      "/images/projects/expomascotas/expomascotas-01.webp",
+      "/images/projects/expomascotas/expomascotas-02.webp",
+      "/images/projects/expomascotas/expomascotas-03.webp",
+      "/images/projects/expomascotas/expomascotas-04.webp",
+      "/images/projects/expomascotas/expomascotas-05.webp",
+      "/images/projects/expomascotas/expomascotas-06.webp",
+      "/images/projects/expomascotas/expomascotas-07.webp",
+      "/images/projects/expomascotas/expomascotas-08.webp"
+    ]
+  },
+  {
+    "id": "we-make-your-day",
+    "name": "WE MAKE YOUR DAY",
+    "year": "KRISPY KREME",
+    "categories": [
+      "INTEGRATED"
+    ],
+    "images": [
+      "/images/projects/we-make-your-day/we-make-your-day-01.webp",
+      "/images/projects/we-make-your-day/we-make-your-day-02.webp",
+      "/images/projects/we-make-your-day/we-make-your-day-03.webp",
+      "/images/projects/we-make-your-day/we-make-your-day-04.webp",
+      "/images/projects/we-make-your-day/we-make-your-day-05.webp",
+      "/images/projects/we-make-your-day/we-make-your-day-06.webp",
+      "/images/projects/we-make-your-day/we-make-your-day-07.webp",
+      "/images/projects/we-make-your-day/we-make-your-day-08.webp"
     ]
   },
   {
@@ -64,92 +82,21 @@ export const projectsList: ProjectSummary[] = [
     ]
   },
   {
-    "id": "expomascotas",
-    "name": "EXPOMASCOTAS",
-    "year": "INABA CHURU",
+    "id": "urban-beat",
+    "name": "URBAN BEAT",
+    "year": "BALL CORPORATION",
     "categories": [
       "INTEGRATED"
     ],
     "images": [
-      "/images/projects/expomascotas/expomascotas-01.webp",
-      "/images/projects/expomascotas/expomascotas-02.webp",
-      "/images/projects/expomascotas/expomascotas-03.webp",
-      "/images/projects/expomascotas/expomascotas-04.webp",
-      "/images/projects/expomascotas/expomascotas-05.webp",
-      "/images/projects/expomascotas/expomascotas-06.webp",
-      "/images/projects/expomascotas/expomascotas-07.webp",
-      "/images/projects/expomascotas/expomascotas-08.webp"
-    ]
-  },
-  {
-    "id": "festival-season",
-    "name": "FESTIVAL SEASON",
-    "year": "TIENDAS PARIS",
-    "categories": [
-      "CONTENT CREATION"
-    ],
-    "comingSoon": true,
-    "images": [
-      "/images/projects/festival-season/festival-season-01.webp",
-      "/images/projects/festival-season/festival-season-02.webp",
-      "/images/projects/festival-season/festival-season-03.webp",
-      "/images/projects/festival-season/festival-season-04.webp",
-      "/images/projects/festival-season/festival-season-05.webp",
-      "/images/projects/festival-season/festival-season-06.webp",
-      "/images/projects/festival-season/festival-season-07.webp"
-    ]
-  },
-  {
-    "id": "fly-your-way",
-    "name": "FLY YOUR WAY",
-    "year": "JETSMART",
-    "categories": [
-      "MEDIA"
-    ],
-    "images": [
-      "/images/projects/fly-your-way/fly-your-way-01.webp",
-      "/images/projects/fly-your-way/fly-your-way-02.webp",
-      "/images/projects/fly-your-way/fly-your-way-03.webp",
-      "/images/projects/fly-your-way/fly-your-way-04.webp",
-      "/images/projects/fly-your-way/fly-your-way-05.webp",
-      "/images/projects/fly-your-way/fly-your-way-06.webp",
-      "/images/projects/fly-your-way/fly-your-way-07.webp",
-      "/images/projects/fly-your-way/fly-your-way-08.webp"
-    ]
-  },
-  {
-    "id": "kombi-kreme",
-    "name": "KOMBI KREME",
-    "year": "KRISPY KREME",
-    "categories": [
-      "DESIGN",
-      "ACTIVATION"
-    ],
-    "images": [
-      "/images/projects/kombi-kreme/kombi-kreme-1.webp",
-      "/images/projects/kombi-kreme/kombi-kreme-2.webp",
-      "/images/projects/kombi-kreme/kombi-kreme-3.webp",
-      "/images/projects/kombi-kreme/kombi-kreme-4.webp",
-      "/images/projects/kombi-kreme/kombi-kreme-5.webp",
-      "/images/projects/kombi-kreme/kombi-kreme-6.webp"
-    ]
-  },
-  {
-    "id": "lolla-vibes",
-    "name": "LOLLA VIBES",
-    "year": "SOUNDCORE BY ANKER",
-    "categories": [
-      "IMMERSIVE"
-    ],
-    "images": [
-      "/images/projects/lolla-vibes/lolla-vibes-01.webp",
-      "/images/projects/lolla-vibes/lolla-vibes-02.webp",
-      "/images/projects/lolla-vibes/lolla-vibes-03.webp",
-      "/images/projects/lolla-vibes/lolla-vibes-04.webp",
-      "/images/projects/lolla-vibes/lolla-vibes-05.webp",
-      "/images/projects/lolla-vibes/lolla-vibes-06.webp",
-      "/images/projects/lolla-vibes/lolla-vibes-07.webp",
-      "/images/projects/lolla-vibes/lolla-vibes-08.webp"
+      "/images/projects/urban-beat/urban-beat-01.webp",
+      "/images/projects/urban-beat/urban-beat-02.webp",
+      "/images/projects/urban-beat/urban-beat-03.webp",
+      "/images/projects/urban-beat/urban-beat-04.webp",
+      "/images/projects/urban-beat/urban-beat-05.webp",
+      "/images/projects/urban-beat/urban-beat-06.webp",
+      "/images/projects/urban-beat/urban-beat-07.webp",
+      "/images/projects/urban-beat/urban-beat-08.webp"
     ]
   },
   {
@@ -167,6 +114,22 @@ export const projectsList: ProjectSummary[] = [
       "/images/projects/sabor-de-barrio/sabor-de-barrio-05.webp",
       "/images/projects/sabor-de-barrio/sabor-de-barrio-06.webp",
       "/images/projects/sabor-de-barrio/sabor-de-barrio-07.webp"
+    ]
+  },
+  {
+    "id": "kombi-kreme",
+    "name": "KOMBI KREME",
+    "year": "KRISPY KREME",
+    "categories": [
+      "SAMPLING",
+    ],
+    "images": [
+      "/images/projects/kombi-kreme/kombi-kreme-1.webp",
+      "/images/projects/kombi-kreme/kombi-kreme-2.webp",
+      "/images/projects/kombi-kreme/kombi-kreme-3.webp",
+      "/images/projects/kombi-kreme/kombi-kreme-4.webp",
+      "/images/projects/kombi-kreme/kombi-kreme-5.webp",
+      "/images/projects/kombi-kreme/kombi-kreme-6.webp"
     ]
   },
   {
@@ -188,39 +151,75 @@ export const projectsList: ProjectSummary[] = [
     ]
   },
   {
-    "id": "urban-beat",
-    "name": "URBAN BEAT",
-    "year": "BALL CORPORATION",
+    "id": "a-great-first-day",
+    "name": "A GREAT FIRST DAY",
+    "year": "MATTEL",
     "categories": [
-      "INTEGRATED"
+      "PROMO"
     ],
     "images": [
-      "/images/projects/urban-beat/urban-beat-01.webp",
-      "/images/projects/urban-beat/urban-beat-02.webp",
-      "/images/projects/urban-beat/urban-beat-03.webp",
-      "/images/projects/urban-beat/urban-beat-04.webp",
-      "/images/projects/urban-beat/urban-beat-05.webp",
-      "/images/projects/urban-beat/urban-beat-06.webp",
-      "/images/projects/urban-beat/urban-beat-07.webp",
-      "/images/projects/urban-beat/urban-beat-08.webp"
+      "/images/projects/a-great-first-day/a-great-first-day-01.webp",
+      "/images/projects/a-great-first-day/a-great-first-day-02.webp",
+      "/images/projects/a-great-first-day/a-great-first-day-03.webp",
+      "/images/projects/a-great-first-day/a-great-first-day-04.webp",
+      "/images/projects/a-great-first-day/a-great-first-day-05.webp",
+      "/images/projects/a-great-first-day/a-great-first-day-06.webp",
+      "/images/projects/a-great-first-day/a-great-first-day-07.webp",
+      "/images/projects/a-great-first-day/a-great-first-day-08.webp"
     ]
   },
   {
-    "id": "we-make-your-day",
-    "name": "WE MAKE YOUR DAY",
-    "year": "KRISPY KREME",
+    "id": "fly-your-way",
+    "name": "FLY YOUR WAY",
+    "year": "JETSMART",
     "categories": [
-      "INTEGRATED"
+      "MEDIA"
     ],
     "images": [
-      "/images/projects/we-make-your-day/we-make-your-day-01.webp",
-      "/images/projects/we-make-your-day/we-make-your-day-02.webp",
-      "/images/projects/we-make-your-day/we-make-your-day-03.webp",
-      "/images/projects/we-make-your-day/we-make-your-day-04.webp",
-      "/images/projects/we-make-your-day/we-make-your-day-05.webp",
-      "/images/projects/we-make-your-day/we-make-your-day-06.webp",
-      "/images/projects/we-make-your-day/we-make-your-day-07.webp",
-      "/images/projects/we-make-your-day/we-make-your-day-08.webp"
+      "/images/projects/fly-your-way/fly-your-way-01.webp",
+      "/images/projects/fly-your-way/fly-your-way-02.webp",
+      "/images/projects/fly-your-way/fly-your-way-03.webp",
+      "/images/projects/fly-your-way/fly-your-way-04.webp",
+      "/images/projects/fly-your-way/fly-your-way-05.webp",
+      "/images/projects/fly-your-way/fly-your-way-06.webp",
+      "/images/projects/fly-your-way/fly-your-way-07.webp",
+      "/images/projects/fly-your-way/fly-your-way-08.webp"
+    ]
+  },
+  {
+    "id": "festival-season",
+    "name": "FESTIVAL SEASON",
+    "year": "TIENDAS PARIS",
+    "categories": [
+      "CONTENT CREATION"
+    ],
+    "comingSoon": true,
+    "images": [
+      "/images/projects/festival-season/festival-season-01.webp",
+      "/images/projects/festival-season/festival-season-02.webp",
+      "/images/projects/festival-season/festival-season-03.webp",
+      "/images/projects/festival-season/festival-season-04.webp",
+      "/images/projects/festival-season/festival-season-05.webp",
+      "/images/projects/festival-season/festival-season-06.webp",
+      "/images/projects/festival-season/festival-season-07.webp"
+    ]
+  },
+  {
+    "id": "lolla-vibes",
+    "name": "LOLLA VIBES",
+    "year": "SOUNDCORE BY ANKER",
+    "categories": [
+      "IMMERSIVE"
+    ],
+    "images": [
+      "/images/projects/lolla-vibes/lolla-vibes-01.webp",
+      "/images/projects/lolla-vibes/lolla-vibes-02.webp",
+      "/images/projects/lolla-vibes/lolla-vibes-03.webp",
+      "/images/projects/lolla-vibes/lolla-vibes-04.webp",
+      "/images/projects/lolla-vibes/lolla-vibes-05.webp",
+      "/images/projects/lolla-vibes/lolla-vibes-06.webp",
+      "/images/projects/lolla-vibes/lolla-vibes-07.webp",
+      "/images/projects/lolla-vibes/lolla-vibes-08.webp"
     ]
   }
 ];

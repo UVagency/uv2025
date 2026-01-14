@@ -20,14 +20,15 @@ const getProject = (name: string) => projectsList.find(p => p.name.toUpperCase()
 
 // Define the order as per original file
 const orderedNames = [
-  "KOMBI KREME",
   "EXPOMASCOTAS",
-  "SABOR DE BARRIO",
   "WE MAKE YOUR DAY",
-  "URBAN BEAT",
+  "CLOSER TO THE SUN",
   "ENJOY THE UNEXPECTED",
-  "A GREAT FIRST DAY",
+  "URBAN BEAT",
+  "SABOR DE BARRIO",
+  "KOMBI KREME",
   "TURN UP THE VOLUME",
+  "A GREAT FIRST DAY",
   "FLY YOUR WAY"
 ];
 
