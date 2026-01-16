@@ -1,6 +1,6 @@
 # CLAUDE.md - UV Agency Portfolio Codebase Guide
 
-**Last Updated:** 2025-12-27
+**Last Updated:** 2026-01-16
 **Repository:** UVagency/uv2025
 **Purpose:** This document provides AI assistants with comprehensive context about the codebase structure, conventions, and workflows.
 
@@ -89,7 +89,6 @@ Routes are defined in `src/App.tsx`:
 
 ```typescript
 / - Home page (Index component, NOT lazy loaded)
-/about - About page
 /contact - Contact page
 /project/:projectId - Dynamic project detail pages
 /our-company - Company information
@@ -275,7 +274,6 @@ uv2025/
 │   │
 │   ├── pages/                     # Route pages
 │   │   ├── Index.tsx              # Home page
-│   │   ├── About.tsx
 │   │   ├── Contact.tsx
 │   │   ├── ProjectDetail.tsx
 │   │   ├── OurCompany.tsx
