@@ -1,0 +1,152 @@
+{
+    "footer": {
+        "contact": "Contacto",
+        "address": "Dirección",
+        "workWithUs": "Trabaja con nosotros",
+        "worldwide": "MUNDIAL",
+        "planetEarth": "PLANETA TIERRA",
+        "withLove": "con 💖 por",
+        "partners": "socios",
+        "foundedBy": "fundada por"
+    },
+    "navbar": {
+        "home": "Inicio",
+        "projects": "Proyectos",
+        "contact": "Contacto",
+        "ourCompany": "Nuestra Empresa",
+        "events": "Eventos",
+        "jobs": "Empleos"
+    },
+    "common": {
+        "loading": "Cargando...",
+        "error": "Error",
+        "pageError": "Error de Página",
+        "returnHome": "Volver al Inicio",
+        "errorLoadingPage": "Hubo un error al cargar esta página."
+    },
+    "language": {
+        "select": "Seleccionar idioma",
+        "english": "English",
+        "spanish": "Español"
+    },
+    "jobs": {
+        "pageTitle": "Carreras en UV",
+        "metaDescription": "Únete al equipo de UV Agency y ayuda a dar forma al futuro de las experiencias creativas. Explora oportunidades profesionales en estrategia, creatividad, contenido, medios y eventos.",
+        "workWithUs": "Trabaja con Nosotros",
+        "year": "1999",
+        "tagline": "Únete al equipo de UV y ayuda a dar forma al futuro de las comunicaciones integradas. Buscamos personas apasionadas que prosperen en un entorno multicultural y creativo.",
+        "description": "Nos especializamos en estrategia, creatividad, contenido, medios y experiencias, todo conectado para ayudar a las marcas a crecer, inspirar y mantenerse relevantes en un mundo en constante cambio. Estamos agradecidos de trabajar con las mejores marcas y equipos apasionados para crear trabajo que resuene, emocional y mediblemente. Amamos lo que hacemos y sabemos que el trabajo duro vale la pena.",
+        "history": "Fundada con la visión de combinar tecnología de vanguardia con narrativa creativa, UV ha crecido de un pequeño equipo de personas apasionadas a una potencia de innovación. Nuestro camino ha estado marcado por una búsqueda incansable de la excelencia, un compromiso con el éxito de nuestros clientes y una cultura que fomenta la creatividad y la colaboración.",
+        "categories": [
+            "Carreras",
+            "Empleos"
+        ],
+        "client": "Una Agencia, Todo Incluido. Agencia Independiente de Servicio Completo",
+        "type": "Tipo:",
+        "openPositions": "Posiciones Abiertas",
+        "applyNow": "Postular Ahora",
+        "ourStory": "Nuestra Historia",
+        "aboutUs": "Sobre Nosotros",
+        "ourServices": "Nuestros Servicios",
+        "ourServicesEmoji": "🤝",
+        "services": {
+            "brandBuilding": {
+                "title": "Construcción de Marca",
+                "description": "Desarrollando y posicionando marcas con claridad e impacto"
+            },
+            "advertising": {
+                "title": "Publicidad",
+                "description": "Creando campañas creativas y orientadas a resultados"
+            },
+            "exhibition": {
+                "title": "Exhibición",
+                "description": "Diseñando experiencias de marca y eventos inmersivos"
+            },
+            "targetAudience": {
+                "title": "Audiencia Objetivo",
+                "description": "Conectando con las personas correctas con precisión"
+            },
+            "socialStrategy": {
+                "title": "Estrategia Social y Contenido",
+                "description": "Planificando y produciendo contenido que conecta"
+            }
+        },
+        "values": [
+            {
+                "name": "Multicultural por Diseño",
+                "description": "Prosperamos en contextos diversos. Diferentes culturas, idiomas y perspectivas enriquecen nuestra creatividad y agudizan nuestro pensamiento. Construimos para un mundo global, con comprensión local."
+            },
+            {
+                "name": "Pensamiento Centrado en el Ser Humano",
+                "description": "Las personas son lo primero. Diseñamos y comunicamos con empatía, inteligencia emocional y conciencia, sin perder de vista al ser humano del otro lado."
+            },
+            {
+                "name": "Transparencia Radical",
+                "description": "Hablamos con honestidad y claridad, con clientes, dentro de nuestro equipo, siempre. El diálogo abierto es cómo construimos confianza y avanzamos, incluso a través de la tensión."
+            },
+            {
+                "name": "Co-Creación",
+                "description": "El mejor trabajo sucede cuando construimos juntos. Colaboramos con clientes y compañeros de equipo como socios, escuchando activamente y dando forma a las ideas colectivamente."
+            },
+            {
+                "name": "Intuición Audaz",
+                "description": "Confiamos en nuestros instintos y tomamos riesgos calculados. La experiencia, la curiosidad y el coraje nos guían hacia soluciones que marcan una diferencia real."
+            },
+            {
+                "name": "Excelencia en los Detalles",
+                "description": "No hacemos las cosas a medias. Cada punto de contacto importa, desde una campaña hasta una línea de código. Aspiramos a la excelencia profesional, siempre."
+            },
+            {
+                "name": "Flujo Equilibrado",
+                "description": "Creemos que dar y recibir son parte del mismo ciclo. Nuestro trabajo está arraigado en la reciprocidad, el reconocimiento y el crecimiento compartido."
+            }
+        ],
+        "listings": {
+            "creative-director": {
+                "type": "Tiempo completo",
+                "location": "Remoto",
+                "description": "Lidera nuestra visión creativa y supervisa el desarrollo de campañas innovadoras. Trabajarás con marcas de primer nivel para crear trabajos que resuenen emocional y mediblemente."
+            },
+            "social-media-manager": {
+                "type": "Tiempo completo",
+                "location": "Híbrido",
+                "description": "Desarrolla y ejecuta estrategias de redes sociales que involucren a las audiencias y fomenten la lealtad a la marca. La experiencia con campañas multiculturales es un plus."
+            },
+            "account-executive": {
+                "type": "Tiempo completo",
+                "location": "En el lugar",
+                "description": "Actúa como el enlace principal entre los clientes y nuestros equipos creativos. Construye relaciones duraderas y garantiza una entrega excepcional del proyecto."
+            },
+            "motion-designer": {
+                "type": "Tiempo completo",
+                "location": "Remoto",
+                "description": "Crea impresionantes gráficos en movimiento y animaciones que den vida a nuestras campañas. Se requiere dominio de After Effects y Cinema 4D."
+            },
+            "event-producer": {
+                "type": "Tiempo completo",
+                "location": "En el lugar",
+                "description": "Diseña y ejecuta experiencias de marca y eventos inmersivos. Desde el concepto hasta la finalización, crearás momentos que muevan a las personas a convertirse en clientes."
+            },
+            "digital-strategist": {
+                "type": "Tiempo completo",
+                "location": "Híbrido",
+                "description": "Desarrolla estrategias digitales basadas en datos que impulsen resultados. Combinarás el pensamiento creativo con conocimientos analíticos para optimizar las campañas."
+            },
+            "copywriter": {
+                "type": "Tiempo completo",
+                "location": "Remoto",
+                "description": "Redacta textos persuasivos que cuenten historias e impulsen la acción. Se valora mucho la experiencia escribiendo para audiencias multiculturales en varios idiomas."
+            },
+            "ux-ui-designer": {
+                "type": "Tiempo completo",
+                "location": "Híbrido",
+                "description": "Diseña experiencias digitales centradas en el ser humano que combinen la estética con la funcionalidad. Trabajarás en sitios web, aplicaciones e instalaciones interactivas."
+            },
+            "influencer-marketing-manager": {
+                "type": "Tiempo completo",
+                "location": "Híbrido",
+                "description": "Lidera la búsqueda de influencers, la estrategia de campañas y la gestión de relaciones para impulsar el conocimiento de marca y el engagement en plataformas sociales."
+            }
+        }
+    }
+}

@@ -1,0 +1,152 @@
+{
+    "footer": {
+        "contact": "Contact",
+        "address": "Address",
+        "workWithUs": "Work with us",
+        "worldwide": "WORLDWIDE",
+        "planetEarth": "PLANET EARTH",
+        "withLove": "with 💖 by",
+        "partners": "partners",
+        "foundedBy": "founded by"
+    },
+    "navbar": {
+        "home": "Home",
+        "projects": "Projects",
+        "contact": "Contact",
+        "ourCompany": "Our Company",
+        "events": "Events",
+        "jobs": "Jobs"
+    },
+    "common": {
+        "loading": "Loading...",
+        "error": "Error",
+        "pageError": "Page Error",
+        "returnHome": "Return to Home",
+        "errorLoadingPage": "There was an error loading this page."
+    },
+    "language": {
+        "select": "Select language",
+        "english": "English",
+        "spanish": "Español"
+    },
+    "jobs": {
+        "pageTitle": "Careers at UV",
+        "metaDescription": "Join UV Agency's team and help shape the future of creative experiences. Explore career opportunities in strategy, creativity, content, media, and events.",
+        "workWithUs": "Work with Us",
+        "year": "1999",
+        "tagline": "Join UV's team and help shape the future of integrated communications. We're looking for passionate individuals who thrive in a multicultural, creative environment.",
+        "description": "We specialize in strategy, creativity, content, media and experiences- all connected to help brands grow, inspire, and stay relevant in a constantly shifting world. We're grateful to be working with top brands and passionate teams to create work that resonates - emotionally and measurably. We love what we do and we know that hard work pays off.",
+        "history": "Founded with a vision to blend cutting-edge technology with creative storytelling, UV has grown from a small team of passionate individuals into a powerhouse of innovation. Our journey has been marked by a relentless pursuit of excellence, a commitment to our clients' success, and a culture that fosters creativity and collaboration.",
+        "categories": [
+            "Careers",
+            "Jobs"
+        ],
+        "client": "One Agency, All In. Full Service Independent Agency",
+        "type": "Type:",
+        "openPositions": "Open Positions",
+        "applyNow": "Apply Now",
+        "ourStory": "Our Story",
+        "aboutUs": "About Us",
+        "ourServices": "Our Services",
+        "ourServicesEmoji": "🤝",
+        "services": {
+            "brandBuilding": {
+                "title": "Brand Building",
+                "description": "Developing and positioning brands with clarity and impact"
+            },
+            "advertising": {
+                "title": "Advertising",
+                "description": "Crafting creative and results-driven campaigns"
+            },
+            "exhibition": {
+                "title": "Exhibition",
+                "description": "Designing immersive event and brand experiences"
+            },
+            "targetAudience": {
+                "title": "Target Audience",
+                "description": "Engaging the right people with precision"
+            },
+            "socialStrategy": {
+                "title": "Social Strategy & Content",
+                "description": "Planning and producing content that connects"
+            }
+        },
+        "values": [
+            {
+                "name": "Multicultural by Design",
+                "description": "We thrive in diverse contexts. Different cultures, languages, and perspectives enrich our creativity and sharpen our thinking. We build for a global world — with local understanding."
+            },
+            {
+                "name": "Human-Centered Thinking",
+                "description": "People come first. We design and communicate with empathy, emotional intelligence, and awareness — never losing sight of the human on the other side."
+            },
+            {
+                "name": "Radical Transparency",
+                "description": "We speak with honesty and clarity — with clients, within our team, always. Open dialogue is how we build trust and move forward, even through tension."
+            },
+            {
+                "name": "Co-Creation",
+                "description": "The best work happens when we build together. We collaborate with clients and teammates as partners, listening actively and shaping ideas collectively."
+            },
+            {
+                "name": "Bold Intuition",
+                "description": "We trust our instincts and take calculated risks. Experience, curiosity, and courage guide us to solutions that make a real difference."
+            },
+            {
+                "name": "Excellence in the Details",
+                "description": "We don't do things halfway. Every touchpoint matters — from a campaign to a line of code. We aim for professional excellence, every time."
+            },
+            {
+                "name": "Balanced Flow",
+                "description": "We believe that giving and receiving are part of the same cycle. Our work is rooted in reciprocity, acknowledgment, and shared growth."
+            }
+        ],
+        "listings": {
+            "creative-director": {
+                "type": "Full-time",
+                "location": "Remote",
+                "description": "Lead our creative vision and oversee the development of groundbreaking campaigns. You'll work with top brands to create work that resonates emotionally and measurably."
+            },
+            "social-media-manager": {
+                "type": "Full-time",
+                "location": "Hybrid",
+                "description": "Develop and execute social media strategies that engage audiences and build brand loyalty. Experience with multicultural campaigns is a plus."
+            },
+            "account-executive": {
+                "type": "Full-time",
+                "location": "On-site",
+                "description": "Serve as the primary liaison between clients and our creative teams. Build lasting relationships and ensure exceptional project delivery."
+            },
+            "motion-designer": {
+                "type": "Full-time",
+                "location": "Remote",
+                "description": "Create stunning motion graphics and animations that bring our campaigns to life. Proficiency in After Effects and Cinema 4D required."
+            },
+            "event-producer": {
+                "type": "Full-time",
+                "location": "On-site",
+                "description": "Design and execute immersive brand experiences and events. From concept to completion, you'll create moments that move people to become customers."
+            },
+            "digital-strategist": {
+                "type": "Full-time",
+                "location": "Hybrid",
+                "description": "Develop data-driven digital strategies that drive results. You'll combine creative thinking with analytical insights to optimize campaigns."
+            },
+            "copywriter": {
+                "type": "Full-time",
+                "location": "Remote",
+                "description": "Craft compelling copy that tells stories and drives action. Experience writing for multicultural audiences in multiple languages is highly valued."
+            },
+            "ux-ui-designer": {
+                "type": "Full-time",
+                "location": "Hybrid",
+                "description": "Design human-centered digital experiences that blend aesthetics with functionality. You'll work on websites, apps, and interactive installations."
+            },
+            "influencer-marketing-manager": {
+                "type": "Full-time",
+                "location": "Hybrid",
+                "description": "Lead influencer outreach, campaign strategy, and relationship management to drive brand awareness and engagement across social platforms."
+            }
+        }
+    }
+}

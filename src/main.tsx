@@ -2,6 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './styles/index.css';
+import './lib/i18n'; // Initialize i18n
 import { initCustomCursor } from './lib/customCursor';
 
 const container = document.getElementById('root');
@@ -12,12 +13,12 @@ const root = createRoot(container);
 if (typeof window !== 'undefined') {
   // Try to initialize as early as possible
   initCustomCursor();
-  
+
   // Also initialize on DOM content loaded as a fallback
   window.addEventListener('DOMContentLoaded', () => {
     initCustomCursor();
   });
-  
+
   // Final fallback on full load
   window.addEventListener('load', () => {
     initCustomCursor();
@@ -29,7 +30,7 @@ if (import.meta.env.PROD) {
   const originalError = console.error;
   console.error = (...args) => {
     const message = args[0]?.toString() || '';
-    
+
     // Filter out browser extension and development tool errors
     if (
       message.includes('WebSocket connection to') ||
@@ -39,7 +40,7 @@ if (import.meta.env.PROD) {
     ) {
       return; // Suppress these errors
     }
-    
+
     // Log all other errors normally
     originalError.apply(console, args);
   };

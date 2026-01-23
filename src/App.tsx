@@ -1,4 +1,5 @@
 import React, { Suspense, lazy, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -19,43 +20,50 @@ const PrivateVideo = lazy(() => import("./pages/PrivateVideo"));
 const OurCompany = lazy(() => import("./pages/OurCompany"));
 const UnitedMedia = lazy(() => import("./pages/UnitedMedia"));
 const Events = lazy(() => import("./pages/Events"));
+const Jobs = lazy(() => import("./pages/Jobs"));
 
 // Create a client instance outside of the component
 const queryClient = new QueryClient();
 
 // Loading component
-const LoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center bg-portfolio-bg">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-portfolio-accent mx-auto mb-4"></div>
-      <p className="text-lg text-muted-foreground">Loading...</p>
+const LoadingFallback = () => {
+  const { t } = useTranslation();
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-portfolio-bg">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-portfolio-accent mx-auto mb-4"></div>
+        <p className="text-lg text-muted-foreground">{t('common.loading')}</p>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 // Custom error boundary for routes
-const RouteErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <ErrorBoundary
-    fallback={
-      <div className="min-h-screen flex items-center justify-center bg-portfolio-bg p-4">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Page Error</h1>
-          <p className="text-xl text-muted-foreground mb-4">
-            There was an error loading this page.
-          </p>
-          <button
-            onClick={() => window.location.href = '/'}
-            className="px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors rounded-full"
-          >
-            Return to Home
-          </button>
+const RouteErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const { t } = useTranslation();
+  return (
+    <ErrorBoundary
+      fallback={
+        <div className="min-h-screen flex items-center justify-center bg-portfolio-bg p-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold mb-4">{t('common.pageError')}</h1>
+            <p className="text-xl text-muted-foreground mb-4">
+              {t('common.errorLoadingPage')}
+            </p>
+            <button
+              onClick={() => window.location.href = '/'}
+              className="px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors rounded-full"
+            >
+              {t('common.returnHome')}
+            </button>
+          </div>
         </div>
-      </div>
-    }
-  >
-    {children}
-  </ErrorBoundary>
-);
+      }
+    >
+      {children}
+    </ErrorBoundary>
+  );
+};
 
 // Wrapper component that combines Suspense and ErrorBoundary
 const RouteWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -102,6 +110,11 @@ const App = () => {
                 <Route path="/events" element={
                   <RouteWrapper>
                     <Events />
+                  </RouteWrapper>
+                } />
+                <Route path="/jobs" element={
+                  <RouteWrapper>
+                    <Jobs />
                   </RouteWrapper>
                 } />
                 <Route path="/parisExclusive" element={
