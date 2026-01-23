@@ -29,6 +29,101 @@
         "english": "English",
         "spanish": "Español"
     },
+    "events": {
+        "pageTitle": "United Experiences - Live Experiences @ UV",
+        "metaDescription": "United Experiences: Crafting experiences that move people to create customers. From brand activations to physical experiences that connect brands with people in real life.",
+        "title": "United Experiences",
+        "liveExperiences": "Live Experiences",
+        "brandExperiences": "Brand Experiences",
+        "physicalActivation": "Physical Activation",
+        "tagline": "Events that move people to create customers",
+        "description": "Crafting experiences that connect brands with people in real life",
+        "theUXMethod": "The UX Method",
+        "strategicPlanning": "Strategic Planning",
+        "flawlessExecution": "Flawless Execution",
+        "measurableImpact": "Measurable Impact",
+        "methodViews": {
+            "strategy": {
+                "eyebrow": "How do we design events that move people?",
+                "title": "Strategy Starts with the Audience",
+                "body": "We begin with people, not venues. Our event strategy is rooted in understanding behavior, motivations, and what truly moves audiences. Every event brief starts by asking: who are we trying to move, and what experience will create lasting impact?"
+            },
+            "conceptualization": {
+                "eyebrow": "How do we bring ideas to life?",
+                "title": "Conceptualization That Inspires",
+                "body": "We transform strategic insights into compelling event concepts. Our conceptualization process combines creative vision with practical execution, ensuring every idea is both inspiring and achievable. We craft narratives that resonate and experiences that matter."
+            },
+            "execution": {
+                "eyebrow": "What does flawless execution look like?",
+                "title": "End-to-End Execution Excellence",
+                "body": "From concept to completion, we handle every detail. Our execution capabilities span venue selection, technical setup, content creation, and seamless coordination. We ensure every element works in harmony to create unforgettable moments."
+            },
+            "measurement": {
+                "eyebrow": "What impact did the event have on the business?",
+                "title": "Data-Driven Event Intelligence",
+                "body": "We measure what matters. From attendance metrics to brand sentiment, engagement rates to conversion tracking, we provide clear visibility into event performance and ROI. Every event is an opportunity to learn and optimize."
+            }
+        },
+        "eventCapabilities": "Event Capabilities",
+        "capabilities": {
+            "brandActivations": {
+                "title": "Brand Activations",
+                "items": ["Product Launches", "Pop-Ups", "Experiential", "Sampling"]
+            },
+            "eventProduction": {
+                "title": "Event Production",
+                "items": ["Corporate Events", "Conferences", "Trade Shows", "Festivals"]
+            },
+            "liveExperiences": {
+                "title": "Live Experiences",
+                "items": ["Entertainment", "Music Events", "Sports Activation", "Cultural"]
+            },
+            "experientialMarketing": {
+                "title": "Experiential Marketing",
+                "items": ["Immersive", "Interactive", "Multi-Sensory"]
+            },
+            "venueLogistics": {
+                "title": "Venue & Logistics",
+                "items": ["Venue Selection", "Catering", "Transportation"]
+            },
+            "technicalProduction": {
+                "title": "Technical Production",
+                "items": ["AV Equipment", "Lighting", "Staging"]
+            },
+            "contentCreative": {
+                "title": "Content & Creative",
+                "items": ["Event Design", "Branding", "Content Creation"]
+            },
+            "measurementAnalytics": {
+                "title": "Measurement & Analytics",
+                "items": ["Attendance Tracking", "Engagement Metrics", "ROI Analysis"]
+            },
+            "specialties": {
+                "title": "Specialties",
+                "items": ["B2B Events", "Consumer Events", "Hybrid Events"]
+            }
+        },
+        "clientsTitle": "We've created events for these brands",
+        "clientsDescription": "From global brands to regional leaders, United Experiences connects ambitious brands with audiences through memorable experiences.",
+        "testimonialsTitle": "What our clients say",
+        "testimonials": [
+            {
+                "quote": "They transformed our product launch into an unforgettable experience. The attention to detail and strategic approach exceeded all expectations.",
+                "attribution": "Marketing Director, Global Beauty Brand"
+            },
+            {
+                "quote": "UV Events doesn't just execute events—they create moments that move people. Every touchpoint was designed with intention, and the results speak for themselves.",
+                "attribution": "Brand Manager, Consumer Goods Company"
+            },
+            {
+                "quote": "From concept to execution, their team was collaborative, creative, and results-driven. The event generated significant brand awareness and measurable business impact.",
+                "attribution": "CMO, Retail Company"
+            }
+        ],
+        "ctaTitle": "Let's create events that move people",
+        "ctaDescription": "Ready to craft experiences that connect your brand with people in real life? Connect with UX to create moments that drive real business outcomes.",
+        "contactUs": "Contact us"
+    },
     "jobs": {
         "pageTitle": "Careers at UV",
         "metaDescription": "Join UV Agency's team and help shape the future of creative experiences. Explore career opportunities in strategy, creativity, content, media, and events.",

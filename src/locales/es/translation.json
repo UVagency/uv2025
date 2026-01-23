@@ -29,6 +29,101 @@
         "english": "English",
         "spanish": "Español"
     },
+    "events": {
+        "pageTitle": "United Experiences - Experiencias en Vivo @ UV",
+        "metaDescription": "United Experiences: Creando experiencias que mueven a las personas para crear clientes. Desde activaciones de marca hasta experiencias físicas que conectan marcas con personas en la vida real.",
+        "title": "United Experiences",
+        "liveExperiences": "Experiencias en Vivo",
+        "brandExperiences": "Experiencias de Marca",
+        "physicalActivation": "Activación Física",
+        "tagline": "Eventos que mueven a las personas para crear clientes",
+        "description": "Creando experiencias que conectan marcas con personas en la vida real",
+        "theUXMethod": "El Método UX",
+        "strategicPlanning": "Planificación Estratégica",
+        "flawlessExecution": "Ejecución Impecable",
+        "measurableImpact": "Impacto Medible",
+        "methodViews": {
+            "strategy": {
+                "eyebrow": "¿Cómo diseñamos eventos que mueven a las personas?",
+                "title": "La Estrategia Comienza con la Audiencia",
+                "body": "Comenzamos con las personas, no con los lugares. Nuestra estrategia de eventos se basa en comprender el comportamiento, las motivaciones y lo que realmente mueve a las audiencias. Cada brief de evento comienza preguntando: ¿a quién intentamos mover y qué experiencia creará un impacto duradero?"
+            },
+            "conceptualization": {
+                "eyebrow": "¿Cómo damos vida a las ideas?",
+                "title": "Conceptualización que Inspira",
+                "body": "Transformamos insights estratégicos en conceptos de eventos convincentes. Nuestro proceso de conceptualización combina visión creativa con ejecución práctica, asegurando que cada idea sea inspiradora y alcanzable. Creamos narrativas que resuenan y experiencias que importan."
+            },
+            "execution": {
+                "eyebrow": "¿Cómo se ve una ejecución impecable?",
+                "title": "Excelencia en la Ejecución de Principio a Fin",
+                "body": "Del concepto a la finalización, manejamos cada detalle. Nuestras capacidades de ejecución abarcan selección de lugares, configuración técnica, creación de contenido y coordinación perfecta. Aseguramos que cada elemento funcione en armonía para crear momentos inolvidables."
+            },
+            "measurement": {
+                "eyebrow": "¿Qué impacto tuvo el evento en el negocio?",
+                "title": "Inteligencia de Eventos Basada en Datos",
+                "body": "Medimos lo que importa. Desde métricas de asistencia hasta sentimiento de marca, tasas de compromiso hasta seguimiento de conversiones, proporcionamos visibilidad clara sobre el rendimiento del evento y el ROI. Cada evento es una oportunidad para aprender y optimizar."
+            }
+        },
+        "eventCapabilities": "Capacidades de Eventos",
+        "capabilities": {
+            "brandActivations": {
+                "title": "Activaciones de Marca",
+                "items": ["Lanzamientos de Producto", "Pop-Ups", "Experiencial", "Muestreo"]
+            },
+            "eventProduction": {
+                "title": "Producción de Eventos",
+                "items": ["Eventos Corporativos", "Conferencias", "Ferias Comerciales", "Festivales"]
+            },
+            "liveExperiences": {
+                "title": "Experiencias en Vivo",
+                "items": ["Entretenimiento", "Eventos Musicales", "Activación Deportiva", "Cultural"]
+            },
+            "experientialMarketing": {
+                "title": "Marketing Experiencial",
+                "items": ["Inmersivo", "Interactivo", "Multi-Sensorial"]
+            },
+            "venueLogistics": {
+                "title": "Lugares y Logística",
+                "items": ["Selección de Lugares", "Catering", "Transporte"]
+            },
+            "technicalProduction": {
+                "title": "Producción Técnica",
+                "items": ["Equipo Audiovisual", "Iluminación", "Escenificación"]
+            },
+            "contentCreative": {
+                "title": "Contenido y Creatividad",
+                "items": ["Diseño de Eventos", "Branding", "Creación de Contenido"]
+            },
+            "measurementAnalytics": {
+                "title": "Medición y Análisis",
+                "items": ["Seguimiento de Asistencia", "Métricas de Compromiso", "Análisis de ROI"]
+            },
+            "specialties": {
+                "title": "Especialidades",
+                "items": ["Eventos B2B", "Eventos de Consumo", "Eventos Híbridos"]
+            }
+        },
+        "clientsTitle": "Hemos creado eventos para estas marcas",
+        "clientsDescription": "Desde marcas globales hasta líderes regionales, United Experiences conecta marcas ambiciosas con audiencias a través de experiencias memorables.",
+        "testimonialsTitle": "Lo que dicen nuestros clientes",
+        "testimonials": [
+            {
+                "quote": "Transformaron el lanzamiento de nuestro producto en una experiencia inolvidable. La atención al detalle y el enfoque estratégico superaron todas las expectativas.",
+                "attribution": "Director de Marketing, Marca Global de Belleza"
+            },
+            {
+                "quote": "UV Events no solo ejecuta eventos, crean momentos que mueven a las personas. Cada punto de contacto fue diseñado con intención, y los resultados hablan por sí mismos.",
+                "attribution": "Gerente de Marca, Empresa de Bienes de Consumo"
+            },
+            {
+                "quote": "Del concepto a la ejecución, su equipo fue colaborativo, creativo y enfocado en resultados. El evento generó un reconocimiento significativo de marca e impacto empresarial medible.",
+                "attribution": "Director de Marketing, Empresa Minorista"
+            }
+        ],
+        "ctaTitle": "Creemos eventos que muevan a las personas",
+        "ctaDescription": "¿Listo para crear experiencias que conecten tu marca con las personas en la vida real? Conéctate con UX para crear momentos que generen resultados empresariales reales.",
+        "contactUs": "Contáctanos"
+    },
     "jobs": {
         "pageTitle": "Carreras en UV",
         "metaDescription": "Únete al equipo de UV Agency y ayuda a dar forma al futuro de las experiencias creativas. Explora oportunidades profesionales en estrategia, creatividad, contenido, medios y eventos.",
