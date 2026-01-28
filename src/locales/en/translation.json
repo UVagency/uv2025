@@ -7,7 +7,19 @@
         "planetEarth": "PLANET EARTH",
         "withLove": "with 💖 by",
         "partners": "partners",
-        "foundedBy": "founded by"
+        "foundedBy": "founded by",
+        "meetWithUs": "Meet with us"
+    },
+    "schedule": {
+        "title": "Schedule a Meeting",
+        "discoveryCall": "Discovery Call",
+        "tagline": "Let's build something extraordinary together. Choose a time that works for you.",
+        "securityCheck": "Security Check",
+        "securityDesc": "To prevent automated spam and ensure a quality discovery call, please confirm you are human.",
+        "iAmHuman": "I AM HUMAN",
+        "widgetLink": "UV Discovery Call - Schedule a meeting",
+        "metaTitle": "Schedule a Meeting | UV Agency",
+        "metaDesc": "Schedule a discovery call with UV Agency."
     },
     "navbar": {
         "home": "Home",
@@ -68,39 +80,78 @@
         "capabilities": {
             "brandActivations": {
                 "title": "Brand Activations",
-                "items": ["Product Launches", "Pop-Ups", "Experiential", "Sampling"]
+                "items": [
+                    "Product Launches",
+                    "Pop-Ups",
+                    "Experiential",
+                    "Sampling"
+                ]
             },
             "eventProduction": {
                 "title": "Event Production",
-                "items": ["Corporate Events", "Conferences", "Trade Shows", "Festivals"]
+                "items": [
+                    "Corporate Events",
+                    "Conferences",
+                    "Trade Shows",
+                    "Festivals"
+                ]
             },
             "liveExperiences": {
                 "title": "Live Experiences",
-                "items": ["Entertainment", "Music Events", "Sports Activation", "Cultural"]
+                "items": [
+                    "Entertainment",
+                    "Music Events",
+                    "Sports Activation",
+                    "Cultural"
+                ]
             },
             "experientialMarketing": {
                 "title": "Experiential Marketing",
-                "items": ["Immersive", "Interactive", "Multi-Sensory"]
+                "items": [
+                    "Immersive",
+                    "Interactive",
+                    "Multi-Sensory"
+                ]
             },
             "venueLogistics": {
                 "title": "Venue & Logistics",
-                "items": ["Venue Selection", "Catering", "Transportation"]
+                "items": [
+                    "Venue Selection",
+                    "Catering",
+                    "Transportation"
+                ]
             },
             "technicalProduction": {
                 "title": "Technical Production",
-                "items": ["AV Equipment", "Lighting", "Staging"]
+                "items": [
+                    "AV Equipment",
+                    "Lighting",
+                    "Staging"
+                ]
             },
             "contentCreative": {
                 "title": "Content & Creative",
-                "items": ["Event Design", "Branding", "Content Creation"]
+                "items": [
+                    "Event Design",
+                    "Branding",
+                    "Content Creation"
+                ]
             },
             "measurementAnalytics": {
                 "title": "Measurement & Analytics",
-                "items": ["Attendance Tracking", "Engagement Metrics", "ROI Analysis"]
+                "items": [
+                    "Attendance Tracking",
+                    "Engagement Metrics",
+                    "ROI Analysis"
+                ]
             },
             "specialties": {
                 "title": "Specialties",
-                "items": ["B2B Events", "Consumer Events", "Hybrid Events"]
+                "items": [
+                    "B2B Events",
+                    "Consumer Events",
+                    "Hybrid Events"
+                ]
             }
         },
         "clientsTitle": "We've created events for these brands",

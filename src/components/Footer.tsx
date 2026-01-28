@@ -23,15 +23,23 @@ const Footer = () => {
             <span className="text-portfolio-highlight mr-2">👋</span>
             <h3 className="text-xl uppercase">{t('footer.contact')}</h3>
           </div>
-          <div className="flex items-center space-x-2">
-            <Mail className="w-4 h-4 text-portfolio-highlight" />
-            <a
-              href="mailto:hello@uv.agency"
-              onClick={handleEmailClick}
-              className="uppercase email-link"
+          <div className="flex flex-col space-y-2">
+            <div className="flex items-center space-x-2">
+              <Mail className="w-4 h-4 text-portfolio-highlight" />
+              <a
+                href="mailto:hello@uv.agency"
+                onClick={handleEmailClick}
+                className="uppercase email-link"
+              >
+                hello@uv.agency
+              </a>
+            </div>
+            <Link
+              to="/schedule"
+              className="text-portfolio-highlight uppercase font-bold text-sm tracking-wider hover:underline"
             >
-              hello@uv.agency
-            </a>
+              {t('footer.meetWithUs')}
+            </Link>
           </div>
         </div>
 
