@@ -60,7 +60,7 @@ export const HeroVideoBackground = ({ videoUrl }: HeroVideoBackgroundProps) => {
 
   return (
     <div
-      className={`absolute inset-0 z-0 overflow-hidden transition-opacity duration-[3000ms] ease-in-out ${
+      className={`absolute inset-0 z-0 overflow-hidden transition-opacity duration-[10000ms] ease-in-out ${
         isReady ? 'opacity-100' : 'opacity-0'
       }`}
     >
