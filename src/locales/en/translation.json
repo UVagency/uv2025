@@ -1,4 +1,20 @@
 {
+    "hero": {
+        "titlePart1": "Nothing replaces real",
+        "titlePart2": "human connection.",
+        "description1": "Since 1999, we've helped brands find meaning in constant change, bringing reason and feeling back together.",
+        "description2Part1": "Modern isn't about chasing the new.",
+        "description2Part2": "It's about making the new make sense.",
+        "unitedVisions": "United Visions",
+        "tagline": "One agency, all in."
+    },
+    "highlights": {
+        "title": "Highlights"
+    },
+    "portfolio": {
+        "title": "Selected Projects",
+        "comingSoon": "COMING SOOOOON"
+    },
     "footer": {
         "contact": "Contact",
         "address": "Address",

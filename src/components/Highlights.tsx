@@ -3,12 +3,14 @@ import { projectsList } from "../data/projectsList";
 import { highlightIds, highlightImages } from "../data/highlightsConfig";
 import OptimizedImage from "@/components/ui/optimized-image";
 import { InteractiveTilt } from "./ui/InteractiveTilt";
+import { useTranslation } from 'react-i18next';
 
 // Seleccionar los proyectos destacados del projectsList
 const highlightedProjects = highlightIds.map(id => projectsList.find(p => p.id === id)).filter(Boolean);
 
 const Highlights = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleProjectClick = (projectId: string) => {
     navigate(`/project/${projectId}`);
@@ -17,7 +19,7 @@ const Highlights = () => {
   return (
     <div id="highlights" className="max-w-[90%] mx-auto w-full mb-12 md:mb-24">
       <div className="flex items-center mb-8">
-        <h2 className="text-xl uppercase font-bold text-portfolio-text mr-2">Highlights</h2>
+        <h2 className="text-xl uppercase font-bold text-portfolio-text mr-2">{t('highlights.title')}</h2>
         <span>📌</span>
       </div>
 

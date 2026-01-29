@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { projectsList } from "../data/projectsList";
+import { useTranslation } from 'react-i18next';
 
 interface Project {
   name: string;
@@ -49,6 +50,7 @@ const projects: Project[] = orderedNames.map(name => {
 const calculateGap = (count: number, gapSize: number) => Math.max(0, count - 1) * gapSize;
 
 const Portfolio = () => {
+  const { t } = useTranslation();
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
   const navigate = useNavigate();
   const location = useLocation();
@@ -173,7 +175,7 @@ const Portfolio = () => {
   return (
     <div className="max-w-[90%] mx-auto w-full py-0">
       <div className="flex items-center mb-0">
-        <h2 className="text-xl uppercase font-bold text-portfolio-text mr-2">Selected Projects</h2>
+        <h2 className="text-xl uppercase font-bold text-portfolio-text mr-2">{t('portfolio.title')}</h2>
         <span>💎</span>
       </div>
 
@@ -216,7 +218,7 @@ const Portfolio = () => {
 
                   {project.comingSoon && (
                     <span className="project-coming-soon-tag">
-                      COMING SOOOOON
+                      {t('portfolio.comingSoon')}
                     </span>
                   )}
                 </div>

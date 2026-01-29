@@ -1,4 +1,20 @@
 {
+    "hero": {
+        "titlePart1": "Nada reemplaza la verdadera",
+        "titlePart2": "conexión humana.",
+        "description1": "Desde 1999, ayudamos a las marcas a encontrar significado en el cambio constante, uniendo razón y emoción.",
+        "description2Part1": "Lo moderno no se trata de perseguir lo nuevo.",
+        "description2Part2": "Se trata de que lo nuevo tenga sentido.",
+        "unitedVisions": "United Visions",
+        "tagline": "Una agencia, todo incluido."
+    },
+    "highlights": {
+        "title": "Destacados"
+    },
+    "portfolio": {
+        "title": "Proyectos Seleccionados",
+        "comingSoon": "MUY PRONTOOOO"
+    },
     "footer": {
         "contact": "Contacto",
         "address": "Dirección",

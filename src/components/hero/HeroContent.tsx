@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import OptimizedImage from "@/components/ui/optimized-image";
 import { HeroLogo } from "./HeroLogo";
+import { useTranslation } from 'react-i18next';
 
 export const HeroContent = () => {
+  const { t } = useTranslation();
   const [showMainText, setShowMainText] = useState(false);
   const [showOneAgency, setShowOneAgency] = useState(false);
 
@@ -25,24 +27,24 @@ export const HeroContent = () => {
         <div className="md:col-span-7 lg:col-span-7 text-portfolio-text space-y-6 hero-text-container">
           <h1 className="font-headline text-3xl md:text-5xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight max-w-[15em] lg:max-w-[20em]">
             <span className="whitespace-nowrap">
-              Nothing replaces real
-            </span> <br /> <span className="whitespace-nowrap"><span className="brush-underline">human connection.</span></span>
+              {t('hero.titlePart1')}
+            </span> <br /> <span className="whitespace-nowrap"><span className="brush-underline">{t('hero.titlePart2')}</span></span>
           </h1>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-x-6">
             <div className="md:col-span-12 lg:col-span-12 space-y-6 max-w-lg">
               <p className="font-body text-xl md:text-2xl text-portfolio-text/80 font-normal leading-relaxed">
-                Since 1999, we've helped brands find meaning in constant change, bringing reason and feeling back together.
+                {t('hero.description1')}
               </p>
 
               <p className="font-body text-xl md:text-2xl text-portfolio-text/80 font-normal leading-relaxed">
-                Modern isn't about chasing the new.<br />
-                It's about making the new make sense.
+                {t('hero.description2Part1')}<br />
+                {t('hero.description2Part2')}
               </p>
 
               <div className={`transition-all duration-300 ${showOneAgency ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-                <div className="font-bold text-lg md:text-xl mb-1 text-portfolio-text">United Visions</div>
-                <strong><span className="text-portfolio-accent">One agency, all in.</span></strong>
+                <div className="font-bold text-lg md:text-xl mb-1 text-portfolio-text">{t('hero.unitedVisions')}</div>
+                <strong><span className="text-portfolio-accent">{t('hero.tagline')}</span></strong>
               </div>
             </div>
           </div>
