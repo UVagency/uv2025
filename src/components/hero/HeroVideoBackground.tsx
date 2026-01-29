@@ -64,9 +64,6 @@ export const HeroVideoBackground = ({ videoUrl }: HeroVideoBackgroundProps) => {
         isReady ? 'opacity-100' : 'opacity-0'
       }`}
     >
-      {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-portfolio-bg/30 z-10" />
-
       {/* Video container with cover behavior */}
       <div className="absolute inset-0 w-full h-full">
         <iframe
