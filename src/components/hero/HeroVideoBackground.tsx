@@ -64,6 +64,14 @@ export const HeroVideoBackground = ({ videoUrl }: HeroVideoBackgroundProps) => {
         isReady ? 'opacity-100' : 'opacity-0'
       }`}
     >
+      {/* Gradient overlay for text readability - darker on left where text is */}
+      <div
+        className="absolute inset-0 z-10 pointer-events-none"
+        style={{
+          background: 'linear-gradient(to right, rgba(245, 246, 232, 0.85) 0%, rgba(245, 246, 232, 0.6) 40%, rgba(245, 246, 232, 0.3) 70%, transparent 100%)'
+        }}
+      />
+
       {/* Video container with cover behavior */}
       <div className="absolute inset-0 w-full h-full">
         <iframe
