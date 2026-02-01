@@ -22,9 +22,11 @@ const Highlights = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {highlightedProjects.map((project) => {
+        {highlightedProjects.map((project, index) => {
           // Usar la imagen configurada para este proyecto, o fallback a la generada automáticamente
           const coverImg = highlightImages[project.id] || `/images/projects/${project.id}/${project.id.toLowerCase().replace(/ /g, "")}_profile.webp`;
+          // First 2 highlights may be partially visible above the fold
+          const isAboveFold = index < 2;
           return (
             <div
               key={project.id}
@@ -32,7 +34,7 @@ const Highlights = () => {
               className="cursor-pointer group"
             >
               <InteractiveTilt className="rounded-xl overflow-hidden">
-                <div 
+                <div
                   className="relative w-full overflow-hidden rounded-md mb-4 shadow-sm"
                   style={{
                     WebkitBoxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
@@ -47,6 +49,7 @@ const Highlights = () => {
                     aspectRatio={3/2}
                     sizes="(max-width: 768px) 92vw, 45vw"
                     srcSetWidths={[350, 500, 600, 700, 800, 900, 1200]}
+                    priority={isAboveFold}
                   />
                 </div>
 
