@@ -80,14 +80,13 @@ export const HeroVideoBackground = ({ videoUrl }: HeroVideoBackgroundProps) => {
         <iframe
           ref={iframeRef}
           src={embedUrl.toString()}
-          className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2"
+          className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 border-0"
           style={{
             aspectRatio: '16/9',
             // Ensure video covers the entire container
             width: 'max(100%, 177.78vh)', // 16:9 ratio = 177.78%
             height: 'max(100%, 56.25vw)', // 9:16 ratio = 56.25%
           }}
-          frameBorder="0"
           allow="autoplay; fullscreen"
           title="UV Agency Showreel"
         />
