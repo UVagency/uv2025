@@ -26,10 +26,18 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico" />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <!-- Preload Critical Fonts -->
+    <!-- Preconnect to critical third-party origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://player.vimeo.com" crossorigin>
+    <link rel="preconnect" href="https://i.vimeocdn.com" crossorigin>
+
+    <!-- Preload LCP image (hero logo) -->
+    <link rel="preload" href="/images/uv_logo.webp" as="image" type="image/webp" fetchpriority="high">
+
+    <!-- Critical Fonts - Non-blocking loading -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet"></noscript>
     <link rel="preload" href="/fonts/open-sans-v43-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/open-sans-v43-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
 
@@ -74,7 +82,33 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     
-    <!-- Metricool Tracking -->
-    <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"ea1ffd20c517c72e15de57da9493a686"})});</script>
+    <!-- Metricool Tracking - Deferred -->
+    <script>
+    (function() {
+      var metricoolLoaded = false;
+      function loadMetricool() {
+        if (metricoolLoaded) return;
+        metricoolLoaded = true;
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://tracker.metricool.com/resources/be.js";
+        s.onload = function() {
+          if (typeof beTracker !== 'undefined') {
+            beTracker.t({hash: "ea1ffd20c517c72e15de57da9493a686"});
+          }
+        };
+        document.head.appendChild(s);
+      }
+
+      window.addEventListener('load', function() {
+        setTimeout(loadMetricool, 4000);
+      });
+
+      ['click', 'scroll', 'mousemove', 'touchstart'].forEach(function(event) {
+        window.addEventListener(event, loadMetricool, { once: true, passive: true });
+      });
+    })();
+    </script>
   </body>
 </html>

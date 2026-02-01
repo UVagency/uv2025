@@ -194,8 +194,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       width={width}
       height={height}
       loading={priority ? "eager" : "lazy"}
+      // @ts-expect-error fetchPriority is a valid attribute but not in older TS types
+      fetchPriority={priority ? "high" : "auto"}
       className={`w-full h-full object-${fit} ${className}`}
-      decoding="async"
+      decoding={priority ? "sync" : "async"}
     />
   );
 

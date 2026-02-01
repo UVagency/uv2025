@@ -53,10 +53,9 @@ const GoogleDrivePlayer: React.FC<GoogleDrivePlayerProps> = ({
           src={embedUrl}
           width="100%"
           height="100%"
-          frameBorder="0"
           allow="autoplay; fullscreen"
           allowFullScreen
-          className="w-full h-full"
+          className="w-full h-full border-0"
           style={{ background: "black" }}
           title={title}
         />
