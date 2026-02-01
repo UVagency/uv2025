@@ -106,7 +106,10 @@ const Schedule = () => {
                                     </button>
                                 </div>
                             ) : (
-                                <div className="zcal-inline-widget w-full h-full min-h-[600px] animate-fade-in">
+                                <div
+                                    className="zcal-inline-widget w-full h-full min-h-[600px] animate-fade-in"
+                                    data-zcal="X2iTReqU"
+                                >
                                     <a href="https://zcal.co/i/X2iTReqU" className="text-portfolio-highlight hover:underline text-lg">
                                         {t('schedule.widgetLink')}
                                     </a>
