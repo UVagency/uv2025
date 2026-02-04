@@ -42,3 +42,5 @@ nerdearla-design-consistency-analysis.md
 .env*
 !.env.example
 *.md
+!CLAUDE.md
+!SECURITY_AUDIT_REPORT.md
