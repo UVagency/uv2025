@@ -93,7 +93,7 @@ const Jobs = () => {
 
                         {/* Video Section */}
                         <Suspense fallback={<SectionLoading />}>
-                            <CompanyVideo videoUrl="https://vimeo.com/1096947347" />
+                            <CompanyVideo videoUrl="https://vimeo.com/1158913129" />
                         </Suspense>
 
                         {/* Job Listings Section */}
