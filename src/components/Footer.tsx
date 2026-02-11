@@ -66,10 +66,9 @@ const Footer = () => {
           <Link to="https://www.linkedin.com/company/uvagency" target="_blank" rel="noopener noreferrer" className="text-xl uppercase underline hover:text-portfolio-highlight transition-colors">
             LinkedIn
           </Link>
-          {/* Hidden from public navigation - Jobs page still accessible via direct URL */}
-          {/* <Link to="/jobs" className="text-xl uppercase underline hover:text-portfolio-highlight transition-colors">
-            {t('footer.workWithUs')}
-          </Link> */}
+          <Link to="/jobs" className="text-xl uppercase underline hover:text-portfolio-highlight transition-colors">
+            {t('footer.jobsLink')}
+          </Link>
         </div>
       </div>
 
