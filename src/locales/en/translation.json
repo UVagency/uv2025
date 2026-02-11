@@ -248,50 +248,40 @@
             }
         ],
         "listings": {
-            "creative-director": {
-                "type": "Full-time",
-                "location": "Remote",
-                "description": "Lead our creative vision and oversee the development of groundbreaking campaigns. You'll work with top brands to create work that resonates emotionally and measurably."
-            },
-            "social-media-manager": {
-                "type": "Full-time",
-                "location": "Hybrid",
-                "description": "Develop and execute social media strategies that engage audiences and build brand loyalty. Experience with multicultural campaigns is a plus."
-            },
             "account-executive": {
                 "type": "Full-time",
                 "location": "On-site",
                 "description": "Serve as the primary liaison between clients and our creative teams. Build lasting relationships and ensure exceptional project delivery."
             },
-            "motion-designer": {
-                "type": "Full-time",
-                "location": "Remote",
-                "description": "Create stunning motion graphics and animations that bring our campaigns to life. Proficiency in After Effects and Cinema 4D required."
-            },
-            "event-producer": {
-                "type": "Full-time",
-                "location": "On-site",
-                "description": "Design and execute immersive brand experiences and events. From concept to completion, you'll create moments that move people to become customers."
-            },
-            "digital-strategist": {
+            "designer": {
                 "type": "Full-time",
                 "location": "Hybrid",
-                "description": "Develop data-driven digital strategies that drive results. You'll combine creative thinking with analytical insights to optimize campaigns."
+                "description": "Transforms concepts into powerful visual identities. Designs pieces that don't just look good but communicate with purpose and strategy."
+            },
+            "media-planner": {
+                "type": "Full-time",
+                "location": "Hybrid",
+                "description": "The reach strategist. Optimizes budgets and selects the ideal channels to ensure the message hits the right audience at the perfect moment."
+            },
+            "community-manager": {
+                "type": "Full-time",
+                "location": "Hybrid",
+                "description": "The brand's digital voice. Builds communities, manages reputation, and sparks real conversations that connect the brand with its audience."
             },
             "copywriter": {
                 "type": "Full-time",
                 "location": "Remote",
                 "description": "Craft compelling copy that tells stories and drives action. Experience writing for multicultural audiences in multiple languages is highly valued."
             },
-            "ux-ui-designer": {
+            "influencer-manager": {
                 "type": "Full-time",
                 "location": "Hybrid",
-                "description": "Design human-centered digital experiences that blend aesthetics with functionality. You'll work on websites, apps, and interactive installations."
+                "description": "Connects brands with authentic creators. Manages strategic partnerships that amplify the message organically with measurable results."
             },
-            "influencer-marketing-manager": {
+            "event-producer": {
                 "type": "Full-time",
-                "location": "Hybrid",
-                "description": "Lead influencer outreach, campaign strategy, and relationship management to drive brand awareness and engagement across social platforms."
+                "location": "On-site",
+                "description": "Design and execute immersive brand experiences and events. From concept to completion, you'll create moments that move people to become customers."
             }
         }
     }

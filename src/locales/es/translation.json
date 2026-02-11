@@ -248,50 +248,40 @@
             }
         ],
         "listings": {
-            "creative-director": {
-                "type": "Tiempo completo",
-                "location": "Remoto",
-                "description": "Lidera nuestra visión creativa y supervisa el desarrollo de campañas innovadoras. Trabajarás con marcas de primer nivel para crear trabajos que resuenen emocional y mediblemente."
-            },
-            "social-media-manager": {
-                "type": "Tiempo completo",
-                "location": "Híbrido",
-                "description": "Desarrolla y ejecuta estrategias de redes sociales que involucren a las audiencias y fomenten la lealtad a la marca. La experiencia con campañas multiculturales es un plus."
-            },
             "account-executive": {
                 "type": "Tiempo completo",
                 "location": "En el lugar",
                 "description": "Actúa como el enlace principal entre los clientes y nuestros equipos creativos. Construye relaciones duraderas y garantiza una entrega excepcional del proyecto."
             },
-            "motion-designer": {
-                "type": "Tiempo completo",
-                "location": "Remoto",
-                "description": "Crea impresionantes gráficos en movimiento y animaciones que den vida a nuestras campañas. Se requiere dominio de After Effects y Cinema 4D."
-            },
-            "event-producer": {
-                "type": "Tiempo completo",
-                "location": "En el lugar",
-                "description": "Diseña y ejecuta experiencias de marca y eventos inmersivos. Desde el concepto hasta la finalización, crearás momentos que muevan a las personas a convertirse en clientes."
-            },
-            "digital-strategist": {
+            "designer": {
                 "type": "Tiempo completo",
                 "location": "Híbrido",
-                "description": "Desarrolla estrategias digitales basadas en datos que impulsen resultados. Combinarás el pensamiento creativo con conocimientos analíticos para optimizar las campañas."
+                "description": "Transforma conceptos en identidades visuales potentes. Diseña piezas que no solo se ven bien, sino que comunican con propósito y estrategia."
+            },
+            "media-planner": {
+                "type": "Tiempo completo",
+                "location": "Híbrido",
+                "description": "El estratega del alcance. Optimiza presupuestos y selecciona los canales ideales para que el mensaje llegue al público correcto en el momento exacto."
+            },
+            "community-manager": {
+                "type": "Tiempo completo",
+                "location": "Híbrido",
+                "description": "La voz digital de la marca. Construye comunidades, gestiona la reputación y genera conversaciones reales que conectan a la marca con su audiencia."
             },
             "copywriter": {
                 "type": "Tiempo completo",
                 "location": "Remoto",
                 "description": "Redacta textos persuasivos que cuenten historias e impulsen la acción. Se valora mucho la experiencia escribiendo para audiencias multiculturales en varios idiomas."
             },
-            "ux-ui-designer": {
+            "influencer-manager": {
                 "type": "Tiempo completo",
                 "location": "Híbrido",
-                "description": "Diseña experiencias digitales centradas en el ser humano que combinen la estética con la funcionalidad. Trabajarás en sitios web, aplicaciones e instalaciones interactivas."
+                "description": "Conecta marcas con creadores auténticos. Gestiona alianzas estratégicas que amplifican el mensaje de forma orgánica y con resultados medibles."
             },
-            "influencer-marketing-manager": {
+            "event-producer": {
                 "type": "Tiempo completo",
-                "location": "Híbrido",
-                "description": "Lidera la búsqueda de influencers, la estrategia de campañas y la gestión de relaciones para impulsar el conocimiento de marca y el engagement en plataformas sociales."
+                "location": "En el lugar",
+                "description": "Diseña y ejecuta experiencias de marca y eventos inmersivos. Desde el concepto hasta la finalización, crearás momentos que muevan a las personas a convertirse en clientes."
             }
         }
     }
