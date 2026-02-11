@@ -282,6 +282,11 @@
                 "type": "Full-time",
                 "location": "On-site",
                 "description": "Design and execute immersive brand experiences and events. From concept to completion, you'll create moments that move people to become customers."
+            },
+            "content-creator": {
+                "type": "Full-time",
+                "location": "Hybrid",
+                "description": "Develop engaging content for various platforms. Collaborate with the creative team to produce high-quality visual and written material."
             }
         }
     }

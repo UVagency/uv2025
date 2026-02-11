@@ -282,6 +282,11 @@
                 "type": "Tiempo completo",
                 "location": "En el lugar",
                 "description": "Diseña y ejecuta experiencias de marca y eventos inmersivos. Desde el concepto hasta la finalización, crearás momentos que muevan a las personas a convertirse en clientes."
+            },
+            "content-creator": {
+                "type": "Tiempo completo",
+                "location": "Híbrido",
+                "description": "Desarrolla contenido atractivo para diversas plataformas. Colabora con el equipo creativo para producir material visual y escrito de alta calidad."
             }
         }
     }
