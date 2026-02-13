@@ -55,8 +55,21 @@
         ]
       },
       {
+        "type": "statsSection",
+        "columns": 7,
+        "stats": [
+          {"value": "+15M", "label": "Reach Total"},
+          {"value": "+50", "label": "Medios de Comunicación"},
+          {"value": "3X", "label": "Engagement Promedio"},
+          {"value": "98%", "label": "Sentiment Positivo"},
+          {"value": "+40%", "label": "Intención de Compra"},
+          {"value": "+30%", "label": "Tráfico E-commerce"},
+          {"value": "#1", "label": "Top of Mind Sneaker Culture"}
+        ]
+      },
+      {
         "type": "textSection",
-        "content": "RESULTS — +15M Reach • +50 Media Outlets • 3X Engagement • 98% Positive Sentiment • +40% Purchase Intent • +30% E-commerce Traffic • Top of Mind in Sneaker Culture"
+        "content": "INFLUENCER CONTENT — 50+ creators attended and shared authentic moments. No shot lists, no direction—just an environment designed to make great content inevitable."
       },
       {
         "type": "videoGrid",

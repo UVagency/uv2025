@@ -5,6 +5,8 @@ import ProjectFeatureText from './gallery/ProjectFeatureText';
 import ProjectBanner from './gallery/ProjectBanner';
 import ProjectImageGrid from './gallery/ProjectImageGrid';
 import ProjectTextSection from './gallery/ProjectTextSection';
+import ProjectVideoGrid from './gallery/ProjectVideoGrid';
+import ProjectStatsSection from './gallery/ProjectStatsSection';
 import { ImageItem } from '@/types/gallery';
 import { trackEvent, GA_EVENTS, GA_PARAMS } from '@/lib/analytics';
 import { sanitizeHtml } from '@/lib/sanitizeHtml';
@@ -144,6 +146,25 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project, carouselSpeed 
                   className={section.className}
                 />
               </div>
+            );
+          case 'videoGrid':
+            return (
+              <div className="mb-8" key={index}>
+                <ProjectVideoGrid
+                  columns={section.columns || 3}
+                  videos={section.videos}
+                  className={section.className}
+                />
+              </div>
+            );
+          case 'statsSection':
+            return (
+              <ProjectStatsSection
+                key={index}
+                stats={section.stats}
+                columns={section.columns}
+                className={section.className}
+              />
             );
           default:
             return null;
