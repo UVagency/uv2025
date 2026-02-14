@@ -5,9 +5,9 @@
   "categories": ["IMMERSIVE"],
   "description": "We transformed Under Armour's HALO collection launch into a content-generating machine. An immersive brand activation where every surface, every light, every angle was designed for one thing: to look incredible on camera and drive organic conversation.",
   "client": "Under Armour / Forus",
-  "overview": "Under Armour came to us with a challenge: launch HALO—their most innovative collection—in a way that would cut through the noise and resonate with a new generation of athletes.\n\nWe made one thing clear from the start: we didn't want to just do a launch. We wanted to create a cultural moment.\n\nNot just a product reveal. A statement.\n\nThe insight was simple but powerful: in 2024, the best marketing doesn't look like marketing. So we designed an experience where every guest became a content creator, every corner became a photo opportunity, and the brand message spread organically through the feeds of Chile's most influential voices.",
-  "execution": "CONTENT-FIRST DESIGN\n\nWe flipped the traditional event model. Instead of designing a space and then figuring out content, we started with the feed. What would make someone stop scrolling? What would make an influencer post without being asked?\n\nEvery decision—lighting angles, LED placements, spatial flow—was made with one question: Will this look incredible on camera?\n\nTHE HALO UNIVERSE\n\nHALO isn't just a collection. It's a vision of athletic performance from the future. We built that future.\n\nThe space was completely transformed into an immersive environment: deep red atmospherics, strategic LED installations, projection mapping, and laser systems that created a living, breathing brand universe.\n\nWe didn't hand out shot lists or direct content. We created the conditions where great content was inevitable. Attendees walked in and instantly understood the mood. Influencers, creators, and media captured authentic moments without needing direction.\n\nTHE FUTURISTIC GYM\n\nWe didn't want an Instagram backdrop. We wanted action.\n\nWe built a fully functional futuristic gym space where athletes could actually train. Real workouts. Real sweat. Real performance—that happened to look cinematic.\n\nThis wasn't about fake poses. It was about capturing authentic athletic moments in an environment designed to make them extraordinary.",
-  "marketingResults": "The HALO launch delivered exceptional results across every metric:\n\n+15M REACH TOTAL\nOrganic reach across all platforms and earned media.\n\n+50 MEDIA OUTLETS\nCoverage across lifestyle, sports, and mainstream press.\n\n3X ENGAGEMENT\nAbove average engagement rate on influencer content.\n\n98% POSITIVE SENTIMENT\nOverwhelmingly positive brand perception.\n\n+40% PURCHASE INTENT\nLift in intent to purchase among target audience.\n\n+30% E-COMMERCE TRAFFIC\nIncrease in traffic to Under Armour online store.\n\nTOP OF MIND\nPositioned as the reference in local sneaker culture.\n\nThe real win: guests didn't share because we asked them to. They shared because not sharing would have meant missing out on the moment.",
+  "overview": "Under Armour came to us with a challenge: launch HALO—their most innovative collection—in a way that would cut through the noise and resonate with a new generation of athletes.\n\nWe made one thing clear from the start: we didn't want to just do a launch. We wanted to create a cultural moment.\n\nNot just a product reveal. A statement.",
+  "execution": "CONTENT-FIRST DESIGN\n\nWe flipped the traditional event model. Instead of designing a space and then figuring out content, we started with the feed. What would make someone stop scrolling? What would make an influencer post without being asked?\n\nEvery decision—lighting angles, LED placements, spatial flow—was made with one question: Will this look incredible on camera?",
+  "marketingResults": "The HALO launch delivered exceptional results across every metric.",
   "videoUrl": "https://vimeo.com/1138086846",
   "images": [
     "/images/projects/under-armour-halo/under-armour-halo-01.webp",
@@ -22,90 +22,36 @@
     "featureText": "We didn't want to just do a launch—we wanted to create a cultural moment. Not just a product reveal. A statement.",
     "sections": [
       {
-        "type": "banner",
-        "image": "/images/projects/under-armour-halo/under-armour-halo-01.webp"
-      },
-      {
-        "type": "textSection",
-        "content": "CONTENT-FIRST DESIGN — We flipped the traditional event model. Every decision was made with one question: Will this look incredible on camera?"
-      },
-      {
-        "type": "imageGrid",
-        "columns": 3,
-        "images": [
-          {"src": "/images/projects/under-armour-halo/under-armour-halo-02.webp", "alt": "HALO Universe"},
-          {"src": "/images/projects/under-armour-halo/under-armour-halo-03.webp", "alt": "Immersive Experience"},
-          {"src": "/images/projects/under-armour-halo/under-armour-halo-04.webp", "alt": "Futuristic Environment"}
-        ]
-      },
-      {
-        "type": "banner",
-        "image": "/images/projects/under-armour-halo/under-armour-halo-05.webp"
-      },
-      {
-        "type": "textSection", 
-        "content": "THE FUTURISTIC GYM — We didn't want an Instagram backdrop. We wanted action. Real workouts. Real sweat. Real performance—that happened to look cinematic."
-      },
-      {
-        "type": "imageGrid",
-        "columns": 2,
-        "images": [
-          {"src": "/images/projects/under-armour-halo/under-armour-halo-06.webp", "alt": "Athletic Performance"},
-          {"src": "/images/projects/under-armour-halo/under-armour-halo-07.webp", "alt": "Real Athletes"}
-        ]
-      },
-      {
         "type": "statsSection",
         "columns": 7,
         "stats": [
           {"value": "+15M", "label": "Reach Total"},
-          {"value": "+50", "label": "Medios de Comunicación"},
-          {"value": "3X", "label": "Engagement Promedio"},
-          {"value": "98%", "label": "Sentiment Positivo"},
-          {"value": "+40%", "label": "Intención de Compra"},
-          {"value": "+30%", "label": "Tráfico E-commerce"},
-          {"value": "#1", "label": "Top of Mind Sneaker Culture"}
+          {"value": "+50", "label": "Medios"},
+          {"value": "3X", "label": "Engagement"},
+          {"value": "98%", "label": "Sentiment +"},
+          {"value": "+40%", "label": "Intención Compra"},
+          {"value": "+30%", "label": "Tráfico E-com"},
+          {"value": "#1", "label": "Top of Mind"}
+        ]
+      },
+      {
+        "type": "bentoGrid",
+        "items": [
+          {"src": "/images/projects/under-armour-halo/bento/DSC06772.webp", "span": "large", "alt": "HALO Installation", "type": "image"},
+          {"src": "/videos/halo-reels/cata-rozas.mp4", "poster": "/videos/halo-reels/cata-rozas-poster.jpg", "span": "tall", "type": "video", "name": "Cata Rozas"},
+          {"src": "/videos/halo-reels/cate-ceccarelli.mp4", "poster": "/videos/halo-reels/cate-ceccarelli-poster.jpg", "span": "tall", "type": "video", "name": "Cate Ceccarelli"},
+          {"src": "/videos/halo-reels/connie-araya.mp4", "poster": "/videos/halo-reels/connie-araya-poster.jpg", "span": "tall", "type": "video", "name": "Connie Araya"},
+          {"src": "/videos/halo-reels/fernando-altamirano.mp4", "poster": "/videos/halo-reels/fernando-altamirano-poster.jpg", "span": "tall", "type": "video", "name": "Fernando Altamirano"},
+          {"src": "/images/projects/under-armour-halo/bento/DSC07803.webp", "span": "large", "alt": "Main Stage", "type": "image"},
+          {"src": "/videos/halo-reels/nicolas-cifuentes.mp4", "poster": "/videos/halo-reels/nicolas-cifuentes-poster.jpg", "span": "tall", "type": "video", "name": "Nicolás Cifuentes"},
+          {"src": "/videos/halo-reels/pepe-lopez.mp4", "poster": "/videos/halo-reels/pepe-lopez-poster.jpg", "span": "tall", "type": "video", "name": "Pepe López"},
+          {"src": "/images/projects/under-armour-halo/bento/DSC07116.webp", "span": "tall", "alt": "Event Space", "type": "image"},
+          {"src": "/images/projects/under-armour-halo/bento/DSC07233.webp", "span": "tall", "alt": "LED Lights", "type": "image"}
         ]
       },
       {
         "type": "textSection",
         "content": "INFLUENCER CONTENT — 50+ creators attended and shared authentic moments. No shot lists, no direction—just an environment designed to make great content inevitable."
-      },
-      {
-        "type": "videoGrid",
-        "columns": 3,
-        "videos": [
-          {
-            "src": "/videos/halo-reels/cata-rozas.mp4",
-            "poster": "/videos/halo-reels/cata-rozas-poster.jpg",
-            "name": "Cata Rozas"
-          },
-          {
-            "src": "/videos/halo-reels/cate-ceccarelli.mp4",
-            "poster": "/videos/halo-reels/cate-ceccarelli-poster.jpg",
-            "name": "Cate Ceccarelli"
-          },
-          {
-            "src": "/videos/halo-reels/connie-araya.mp4",
-            "poster": "/videos/halo-reels/connie-araya-poster.jpg",
-            "name": "Connie Araya"
-          },
-          {
-            "src": "/videos/halo-reels/fernando-altamirano.mp4",
-            "poster": "/videos/halo-reels/fernando-altamirano-poster.jpg",
-            "name": "Fernando Altamirano"
-          },
-          {
-            "src": "/videos/halo-reels/nicolas-cifuentes.mp4",
-            "poster": "/videos/halo-reels/nicolas-cifuentes-poster.jpg",
-            "name": "Nicolás Cifuentes"
-          },
-          {
-            "src": "/videos/halo-reels/pepe-lopez.mp4",
-            "poster": "/videos/halo-reels/pepe-lopez-poster.jpg",
-            "name": "Pepe López"
-          }
-        ]
       }
     ]
   }

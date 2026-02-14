@@ -7,6 +7,7 @@ import ProjectImageGrid from './gallery/ProjectImageGrid';
 import ProjectTextSection from './gallery/ProjectTextSection';
 import ProjectVideoGrid from './gallery/ProjectVideoGrid';
 import ProjectStatsSection from './gallery/ProjectStatsSection';
+import ProjectBentoGrid from './gallery/ProjectBentoGrid';
 import { ImageItem } from '@/types/gallery';
 import { trackEvent, GA_EVENTS, GA_PARAMS } from '@/lib/analytics';
 import { sanitizeHtml } from '@/lib/sanitizeHtml';
@@ -165,6 +166,15 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project, carouselSpeed 
                 columns={section.columns}
                 className={section.className}
               />
+            );
+          case 'bentoGrid':
+            return (
+              <div className="mb-8" key={index}>
+                <ProjectBentoGrid
+                  items={section.items}
+                  className={section.className}
+                />
+              </div>
             );
           default:
             return null;
