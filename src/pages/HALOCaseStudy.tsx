@@ -20,7 +20,7 @@ const HALOCaseStudy: React.FC = () => {
   return (
     <>
       <SEO 
-        title="Under Armour HALO Launch | Case Study | UV"
+        title="Under Armour HALO collection Launch | Case Study | UV"
         description="An immersive brand activation that transformed Under Armour HALO collection launch into a content-generating machine."
       />
       
