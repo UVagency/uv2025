@@ -11,7 +11,7 @@ export interface ProjectSummary {
 export const projectsList: ProjectSummary[] = [
   {
     "id": "under-armour-halo",
-    "name": "HALO COLLECTION LAUNCH",
+    "name": "HALO LAUNCH",
     "year": "UNDER ARMOUR",
     "categories": [
       "IMMERSIVE"
