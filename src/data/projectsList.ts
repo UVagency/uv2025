@@ -10,6 +10,23 @@ export interface ProjectSummary {
 
 export const projectsList: ProjectSummary[] = [
   {
+    "id": "under-armour-halo",
+    "name": "HALO COLLECTION LAUNCH",
+    "year": "UNDER ARMOUR",
+    "categories": [
+      "IMMERSIVE"
+    ],
+    "images": [
+      "/images/projects/under-armour-halo/under-armour-halo-01.webp",
+      "/images/projects/under-armour-halo/under-armour-halo-02.webp",
+      "/images/projects/under-armour-halo/under-armour-halo-03.webp",
+      "/images/projects/under-armour-halo/under-armour-halo-04.webp",
+      "/images/projects/under-armour-halo/under-armour-halo-05.webp",
+      "/images/projects/under-armour-halo/under-armour-halo-06.webp",
+      "/images/projects/under-armour-halo/under-armour-halo-07.webp"
+    ]
+  },
+  {
     "id": "expomascotas",
     "name": "EXPOMASCOTAS",
     "year": "INABA CHURU",

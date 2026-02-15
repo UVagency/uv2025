@@ -94,7 +94,8 @@ const projectImports: Record<string, () => Promise<any>> = {
   "fly-your-way": () => import('./projects/fly-your-way.json'),
   "closer-to-sun": () => import('./projects/closer-to-sun.json'),
   "sabor-de-barrio": () => import('./projects/sabor-de-barrio.json'),
-  "kombi-kreme": () => import('./projects/kombi-kreme.json')
+  "kombi-kreme": () => import('./projects/kombi-kreme.json'),
+  "under-armour-halo": () => import('./projects/under-armour-halo.json')
 };
 
 export const getProjectData = async (id: string): Promise<ProjectData | null> => {

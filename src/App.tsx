@@ -22,6 +22,7 @@ const UnitedMedia = lazy(() => import("./pages/UnitedMedia"));
 const Events = lazy(() => import("./pages/Events"));
 const Jobs = lazy(() => import("./pages/Jobs"));
 const Schedule = lazy(() => import("./pages/Schedule"));
+const HALOCaseStudy = lazy(() => import("./pages/HALOCaseStudy"));
 
 // Create a client instance outside of the component
 const queryClient = new QueryClient();
@@ -126,6 +127,11 @@ const App = () => {
                 <Route path="/parisExclusive" element={
                   <RouteWrapper>
                     <PrivateVideo />
+                  </RouteWrapper>
+                } />
+                <Route path="/case/under-armour-halo" element={
+                  <RouteWrapper>
+                    <HALOCaseStudy />
                   </RouteWrapper>
                 } />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
