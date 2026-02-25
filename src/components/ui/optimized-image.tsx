@@ -53,6 +53,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   fit = 'cover'
 }) => {
   const isExternalUrl = /^https?:\/\//.test(src);
+  const isSvg = src.toLowerCase().endsWith('.svg');
   const isNetlify = import.meta.env.PROD && typeof window !== 'undefined' &&
     (window.location.hostname.includes('netlify.app') ||
       window.location.hostname.includes('netlify.com') ||
@@ -119,7 +120,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
    * Genera srcSet para imágenes responsivas usando Netlify Image CDN
    */
   const generateSrcSet = (imageSrc: string, calcHeight?: number, calcWidth?: number): string | undefined => {
-    if (!responsive || !isNetlify) return undefined;
+    if (!responsive || !isNetlify || isSvg) return undefined;
 
     // Usar widths apropiados según el tamaño calculado
     // Para banners full-width (calcWidth >= 2000), usar resoluciones altas
@@ -156,8 +157,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     // Para imágenes locales
     const normalized = src.startsWith('/') ? src : `/${src}`;
 
-    if (isNetlify) {
-      // Usar Netlify Image CDN en producción
+    if (isNetlify && !isSvg) {
+      // Usar Netlify Image CDN en producción (SVGs no son compatibles con Image CDN)
       return getNetlifyImageUrl(normalized, calcWidth, calcHeight, format);
     }
 
