@@ -83,7 +83,7 @@ const OurCompany = () => {
     { name: "Fernanda Lebrón", title: "Head of UM", url: "https://www.linkedin.com/in/fernanda-lebr%C3%B3n-0325b5107/", photo: "/images/team/fernandalebron.webp" },
     { name: "Lorena Cambas", title: "CFO", url: "https://www.linkedin.com/in/lorena-vanesa-cambas-5a714a23/", photo: "/images/team/lorenacambas.webp" },
     { name: "Agustin Herrero", title: "COO", url: "https://www.linkedin.com/in/agustinherrero/", photo: "/images/team/agustinherrero.webp" },
-    { name: "Javier Severini", title: "CEO", url: "https://www.linkedin.com/in/javierseverini/", photo: "/images/team/javierseverini.webp" },
+    { name: "Javier Severini", title: "CEO & Partner", url: "https://www.linkedin.com/in/javierseverini/", photo: "/images/team/javierseverini.webp" },
     { name: "Esteban Brenman", title: "Partner", url: "https://www.linkedin.com/in/ebrenman/", photo: "/images/team/estebanbrenman.jpg", style: { objectPosition: 'top' } },
     { name: "Gaston Silberman", title: "Partner", url: "https://www.linkedin.com/in/gastonsilberman/", photo: "/images/team/gastonsilberman.png", style: { objectPosition: 'top' } },
   ];
