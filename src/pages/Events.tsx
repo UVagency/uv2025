@@ -38,7 +38,7 @@ const Events = () => {
   });
 
   const eventInfo = {
-    videoRecapUrl: "https://vimeo.com/1138099986",
+    videoRecapUrl: "https://vimeo.com/1158913129",
   };
 
   return (
