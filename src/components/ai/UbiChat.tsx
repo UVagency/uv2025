@@ -165,7 +165,15 @@ function renderContent(text: string): React.ReactNode[] {
     // Link
     const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
     if (linkMatch) {
-      return <a key={i} href={linkMatch[2]} className="text-portfolio-accent underline hover:text-portfolio-accent/80 transition-colors">{linkMatch[1]}</a>;
+      const url = linkMatch[2].trim();
+      // Basic sanitization against javascript:, vbscript:, data:, etc.
+      const isSafeUrl = /^(https?|mailto|tel|\/|#)/i.test(url);
+      
+      if (!isSafeUrl) {
+        return <span key={i} className="text-portfolio-text/50">{linkMatch[1]} (Blocked URL)</span>;
+      }
+      
+      return <a key={i} href={url} className="text-portfolio-accent underline hover:text-portfolio-accent/80 transition-colors">{linkMatch[1]}</a>;
     }
     return <span key={i}>{part}</span>;
   });
