@@ -41,17 +41,6 @@ const Navbar = () => {
                 OUR COMPANY
               </Link>
               <Link
-                to="/um"
-                onClick={() => {
-                  if (isInfoOpen) toggleInfo();
-                  if (isContactOpen) toggleContact();
-                  if (isOurCompanyOpen) toggleOurCompany();
-                }}
-                className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-base sm:text-lg md:text-xl`}
-              >
-                MEDIA
-              </Link>
-              <Link
                 to="/ai"
                 onClick={() => {
                   if (isInfoOpen) toggleInfo();
@@ -63,6 +52,17 @@ const Navbar = () => {
                 AI
               </Link>
               <Link
+                to="/um"
+                onClick={() => {
+                  if (isInfoOpen) toggleInfo();
+                  if (isContactOpen) toggleContact();
+                  if (isOurCompanyOpen) toggleOurCompany();
+                }}
+                className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-base sm:text-lg md:text-xl`}
+              >
+                MEDIA
+              </Link>
+              <Link
                 to="/events"
                 onClick={() => {
                   if (isInfoOpen) toggleInfo();
@@ -71,13 +71,13 @@ const Navbar = () => {
                 }}
                 className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-base sm:text-lg md:text-xl`}
               >
-                Events
+                EVENTS
               </Link>
               <button
                 onClick={toggleContact}
                 className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-base sm:text-lg md:text-xl ${isContactOpen ? 'text-portfolio-highlight underline underline-offset-4 sm:underline-offset-8' : ''}`}
               >
-                Contact
+                CONTACT
               </button>
             </div>
           </div>
