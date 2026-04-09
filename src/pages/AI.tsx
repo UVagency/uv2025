@@ -152,7 +152,7 @@ const AI = () => {
                 </div>
               </div>
 
-              {/* UVI Chat */}
+              {/* UVI Chat - Temporarily Hidden 
               <div className="max-w-2xl">
                 <div className="mb-6">
                   <h2 className="text-lg sm:text-xl font-semibold text-white mb-1">
@@ -164,6 +164,7 @@ const AI = () => {
                 </div>
                 <UviChat />
               </div>
+              */}
             </div>
           </div>
 
