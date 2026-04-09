@@ -290,5 +290,145 @@
                 "description": "Develop engaging content for various platforms. Collaborate with the creative team to produce high-quality visual and written material."
             }
         }
+    },
+    "hero": {
+        "title1": "Nothing replaces real",
+        "title2": "human connection.",
+        "subtitle1": "Since 1999, we've helped brands find meaning in constant change, bringing reason and feeling back together.",
+        "subtitle2": "Now, we amplify it with intelligence.",
+        "tagline": "United Visions",
+        "taglineSub": "One agency, all in. AI-powered."
+    },
+    "ai": {
+        "pageTitle": "United Intelligence — AI & Technology @ UV",
+        "metaDescription": "United Intelligence: AI-powered agents, enterprise infrastructure, and technology solutions for brands. Dedicated AI agents for every client, proprietary Vermetal servers, and 99.9% uptime SLA.",
+        "tagTech": "Technology",
+        "tagInfra": "Infrastructure",
+        "heroTagline": "Intelligence that amplifies human creativity",
+        "heroDescription": "We integrate AI agents, enterprise-grade infrastructure, and proprietary technology into everything we do. Every client gets a dedicated AI partner that learns, adapts, and grows with their brand.",
+        "meetUbi": "Meet Ubi",
+        "meetUbiDesc": "Our AI assistant. Ask anything about UV's services and capabilities.",
+        "agentsTitle": "AI Agents built for your brand",
+        "agentsDescription": "Every partnership starts with intelligence. Our agents learn your brand, your audience, and your market — delivering insights that get sharper with every interaction.",
+        "agents": {
+            "uvi": {
+                "subtitle": "Universal Intelligence Agent",
+                "description": "UV's cross-functional AI agent. UVI operates across strategy, creative, media, and experiences — a true intelligence layer for the entire agency.",
+                "features": [
+                    "Cross-functional intelligence",
+                    "Brand & market learning",
+                    "Strategic recommendations",
+                    "Campaign optimization"
+                ]
+            },
+            "umi": {
+                "subtitle": "United Media Intelligence",
+                "description": "The specialized agent for our United Media unit. UMI focuses on media planning, buying optimization, and audience intelligence.",
+                "features": [
+                    "Media planning optimization",
+                    "Audience intelligence",
+                    "Campaign performance analysis",
+                    "Budget allocation AI"
+                ]
+            },
+            "custom": {
+                "name": "Your Agent",
+                "subtitle": "Dedicated Client Agent · 24/7",
+                "description": "Traditional agencies deliver work. We deliver agents that work for you around the clock. Your agent learns your brand, gets smarter with every interaction, and becomes an irreplaceable part of your operation. When we part ways, it transfers to you — it's your asset.",
+                "features": [
+                    "Works for you 24/7",
+                    "Gets smarter over time",
+                    "Fully transferable to you",
+                    "Your data, your intelligence"
+                ]
+            }
+        },
+        "uviService": {
+            "badge": "Available as a Service",
+            "title": "UVI as a Service",
+            "description": "Your own AI marketing intelligence partner — without a full agency engagement. We bring 25+ years of brand strategy expertise, implementation craft, and integration architecture that you can't get from an AI tool alone. Subscription-based, fully owned by you.",
+            "cta": "Learn more"
+        },
+        "infraTitle": "Infrastructure you can trust",
+        "infraDescription": "We don't rent — we own. Proprietary servers, dedicated VPS per client, and enterprise-grade security. Your data, your environment, your peace of mind.",
+        "infra": {
+            "servers": {
+                "title": "Proprietary Servers",
+                "desc": "Full hardware ownership on Vermetal servers. No shared hosting, no third-party dependencies."
+            },
+            "vps": {
+                "title": "Dedicated VPS per Client",
+                "desc": "Complete isolation with dedicated CPU, RAM, and storage. Custom configurations for every project.",
+                "stat": "1:1"
+            },
+            "security": {
+                "title": "Enterprise Security",
+                "desc": "SSL/TLS, dedicated firewalls, WAF, DDoS protection, and zero-trust architecture across all environments."
+            },
+            "uptime": {
+                "title": "Uptime Guarantee",
+                "desc": "Guaranteed SLA with automated failover, load balancing, and real-time performance monitoring."
+            },
+            "encryption": {
+                "title": "End-to-End Encryption",
+                "desc": "Data encrypted at rest and in transit. Regular penetration testing and vulnerability assessments."
+            },
+            "backup": {
+                "title": "Automated Backups",
+                "desc": "Daily backups with 30-day retention across multiple geographic locations. One-click restore."
+            },
+            "monitoring": {
+                "title": "Proactive Monitoring",
+                "desc": "Real-time alerts, anomaly detection, and performance dashboards. We catch issues before they reach you."
+            },
+            "cdn": {
+                "title": "Global CDN",
+                "desc": "Edge locations across major markets with automatic asset optimization and instant cache purge."
+            },
+            "compliance": {
+                "title": "Compliance & Privacy",
+                "desc": "GDPR, CCPA compliant. Data processing agreements, right to erasure, and data residency options available."
+            }
+        },
+        "techTitle": "Technology Stack",
+        "tech": {
+            "cicd": {
+                "automated": "Automated Pipelines",
+                "testing": "Automated Testing",
+                "rollback": "Instant Rollback"
+            },
+            "containers": {
+                "title": "Containers",
+                "orchestration": "Orchestration",
+                "isolation": "Workload Isolation",
+                "scaling": "Auto-Scaling"
+            },
+            "observability": {
+                "title": "Observability",
+                "logging": "Centralized Logging",
+                "metrics": "Real-Time Metrics",
+                "tracing": "Distributed Tracing"
+            },
+            "securityOps": {
+                "title": "Security Ops",
+                "scanning": "Automated Scanning",
+                "pentest": "Pen Testing",
+                "zeroTrust": "Zero-Trust"
+            },
+            "iac": {
+                "title": "Infrastructure as Code",
+                "reproducible": "Reproducible",
+                "versioned": "Version Controlled",
+                "auditable": "Fully Auditable"
+            },
+            "aiml": {
+                "training": "Custom Training",
+                "inference": "Real-Time Inference",
+                "finetuning": "Brand Fine-Tuning"
+            }
+        },
+        "ctaTitle": "Ready to work with intelligence?",
+        "ctaDescription": "Whether you need AI agents, enterprise infrastructure, or a full technology partner — let's build something smarter, together.",
+        "ctaCta": "Get in touch"
     }
 }

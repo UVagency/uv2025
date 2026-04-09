@@ -23,6 +23,7 @@ const Events = lazy(() => import("./pages/Events"));
 const Jobs = lazy(() => import("./pages/Jobs"));
 const Schedule = lazy(() => import("./pages/Schedule"));
 const HALOCaseStudy = lazy(() => import("./pages/HALOCaseStudy"));
+const AI = lazy(() => import("./pages/AI"));
 
 // Create a client instance outside of the component
 const queryClient = new QueryClient();
@@ -132,6 +133,11 @@ const App = () => {
                 <Route path="/case/under-armour-halo" element={
                   <RouteWrapper>
                     <HALOCaseStudy />
+                  </RouteWrapper>
+                } />
+                <Route path="/ai" element={
+                  <RouteWrapper>
+                    <AI />
                   </RouteWrapper>
                 } />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

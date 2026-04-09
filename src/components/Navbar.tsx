@@ -52,6 +52,17 @@ const Navbar = () => {
                 MEDIA
               </Link>
               <Link
+                to="/ai"
+                onClick={() => {
+                  if (isInfoOpen) toggleInfo();
+                  if (isContactOpen) toggleContact();
+                  if (isOurCompanyOpen) toggleOurCompany();
+                }}
+                className={`text-portfolio-text uppercase font-bold hover:text-portfolio-highlight transition-all duration-${NAVBAR_CONSTANTS.ANIMATION_DURATION} ease-in-out text-base sm:text-lg md:text-xl`}
+              >
+                AI
+              </Link>
+              <Link
                 to="/events"
                 onClick={() => {
                   if (isInfoOpen) toggleInfo();
