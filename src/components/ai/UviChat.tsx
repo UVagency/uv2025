@@ -191,7 +191,7 @@ const UviChat: React.FC = () => {
   ]);
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const chatContainerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const knowledgeBase = useRef(buildKnowledgeBase(lang));
 
@@ -201,7 +201,12 @@ const UviChat: React.FC = () => {
   }, [lang]);
 
   const scrollToBottom = useCallback(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTo({
+        top: chatContainerRef.current.scrollHeight,
+        behavior: 'smooth'
+      });
+    }
   }, []);
 
   useEffect(() => {
@@ -270,7 +275,7 @@ const UviChat: React.FC = () => {
         </div>
 
         {/* Messages */}
-        <div className="h-[340px] overflow-y-auto px-5 py-4 space-y-4 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-white/10">
+        <div ref={chatContainerRef} className="h-[340px] overflow-y-auto px-5 py-4 space-y-4 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-white/10">
           {messages.map((message) => (
             <div
               key={message.id}
@@ -309,7 +314,6 @@ const UviChat: React.FC = () => {
             </div>
           )}
 
-          <div ref={messagesEndRef} />
         </div>
 
         {/* Suggestions */}
