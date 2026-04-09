@@ -44,10 +44,10 @@ const buildKnowledgeBase = (lang: string): KnowledgeEntry[] => {
         : 'UMI is our specialized AI agent for United Media. It focuses on media planning, buying optimization, audience intelligence, and campaign performance analysis. UMI helps our media team make smarter, data-driven decisions.'
     },
     {
-      keywords: ['ubi', 'chat', 'bot', 'assistant', 'asistente'],
+      keywords: ['who are you', 'quién eres', 'quien eres', 'tu nombre', 'your name'],
       response: isES
-        ? '¡Ese soy yo! 👋 Soy Ubi, el asistente AI de UV para visitantes del sitio. Opero en modo seguro y anónimo — no tengo acceso a datos confidenciales de clientes. Estoy aquí para ayudarte a conocer nuestros servicios y capacidades.'
-        : 'That\'s me! 👋 I\'m Ubi, UV\'s AI assistant for website visitors. I operate in safe, anonymous mode — no access to confidential client data. I\'m here to help you learn about our services and capabilities.'
+        ? '¡Ese soy yo! 👋 Soy UVI, el asistente corporativo de UV para visitantes del sitio. Opero en modo seguro y anónimo — no tengo acceso a datos confidenciales de clientes. Estoy aquí para ayudarte a conocer nuestros servicios y capacidades.'
+        : 'That\'s me! 👋 I\'m UVI, UV\'s AI corporate assistant for website visitors. I operate in safe, anonymous mode — no access to confidential client data. I\'m here to help you learn about our services and capabilities.'
     },
     {
       keywords: ['infrastructure', 'server', 'hosting', 'infraestructura', 'servidor', 'vermetal', 'vps'],
@@ -106,8 +106,8 @@ const buildKnowledgeBase = (lang: string): KnowledgeEntry[] => {
   ];
 };
 
-const GREETING_EN = "Hi! I'm **Ubi**, UV's AI assistant. Ask me anything about our services, AI agents, infrastructure, or how we work. I'm here to help! 🤖";
-const GREETING_ES = "¡Hola! Soy **Ubi**, el asistente AI de UV. Preguntame lo que quieras sobre nuestros servicios, agentes AI, infraestructura o cómo trabajamos. ¡Estoy para ayudar! 🤖";
+const GREETING_EN = "Hi! I'm **UVI**, UV's AI assistant. Ask me anything about our services, AI agents, infrastructure, or how we work. I'm here to help! 🤖";
+const GREETING_ES = "¡Hola! Soy **UVI**, el asistente AI de UV. Preguntame lo que quieras sobre nuestros servicios, agentes AI, infraestructura o cómo trabajamos. ¡Estoy para ayudar! 🤖";
 
 const DEFAULT_RESPONSE_EN = "That's a great question! I'd need a human colleague to help with that specific topic. Feel free to reach out to us at **hello@uv.agency** or [schedule a meeting](/schedule) for a more in-depth conversation. Is there anything else about our AI services, infrastructure, or capabilities I can help with?";
 const DEFAULT_RESPONSE_ES = "¡Gran pregunta! Necesitaría la ayuda de un colega humano para ese tema específico. No dudes en contactarnos en **hello@uv.agency** o [agendar una reunión](/schedule) para una conversación más profunda. ¿Hay algo más sobre nuestros servicios AI, infraestructura o capacidades en lo que pueda ayudar?";
@@ -179,7 +179,7 @@ function renderContent(text: string): React.ReactNode[] {
   });
 }
 
-const UbiChat: React.FC = () => {
+const UviChat: React.FC = () => {
   const { t, i18n } = useTranslation();
   const lang = i18n.language?.startsWith('es') ? 'es' : 'en';
   const [messages, setMessages] = useState<Message[]>([
@@ -260,7 +260,7 @@ const UbiChat: React.FC = () => {
             <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-400 rounded-full border-2 border-[#1a2a29]" />
           </div>
           <div>
-            <h3 className="text-white font-semibold text-sm tracking-wide">Ubi</h3>
+            <h3 className="text-white font-semibold text-sm tracking-wide">UVI</h3>
             <p className="text-white/40 text-xs">{lang === 'es' ? 'AI Assistant · En línea' : 'AI Assistant · Online'}</p>
           </div>
           <div className="ml-auto flex items-center gap-1.5">
@@ -336,7 +336,7 @@ const UbiChat: React.FC = () => {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder={lang === 'es' ? 'Preguntale algo a Ubi...' : 'Ask Ubi something...'}
+              placeholder={lang === 'es' ? 'Preguntale algo a UVI...' : 'Ask UVI something...'}
               className="flex-1 bg-transparent text-white text-sm placeholder:text-white/30 outline-none"
               disabled={isTyping}
             />
@@ -365,4 +365,4 @@ const UbiChat: React.FC = () => {
   );
 };
 
-export default UbiChat;
+export default UviChat;

@@ -8,7 +8,7 @@ import { SEO } from '../components/SEO';
 import { Button } from "@/components/ui/button";
 import AgentCard from '../components/ai/AgentCard';
 import InfrastructureGrid from '../components/ai/InfrastructureGrid';
-import UbiChat from '../components/ai/UbiChat';
+import UviChat from '../components/ai/UviChat';
 import type { InfraFeature } from '../components/ai/InfrastructureGrid';
 
 const AI = () => {
@@ -152,17 +152,17 @@ const AI = () => {
                 </div>
               </div>
 
-              {/* Ubi Chat */}
+              {/* UVI Chat */}
               <div className="max-w-2xl">
                 <div className="mb-6">
                   <h2 className="text-lg sm:text-xl font-semibold text-white mb-1">
-                    {t('ai.meetUbi')}
+                    {t('ai.meetUVI')}
                   </h2>
                   <p className="text-sm text-white/40">
-                    {t('ai.meetUbiDesc')}
+                    {t('ai.meetUVIDesc')}
                   </p>
                 </div>
-                <UbiChat />
+                <UviChat />
               </div>
             </div>
           </div>

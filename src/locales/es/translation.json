@@ -306,13 +306,13 @@
         "tagInfra": "Infraestructura",
         "heroTagline": "Inteligencia que amplifica la creatividad humana",
         "heroDescription": "Integramos agentes AI, infraestructura enterprise y tecnología propia en todo lo que hacemos. Cada cliente recibe un partner AI dedicado que aprende, se adapta y crece con su marca.",
-        "meetUbi": "Conocé a Ubi",
-        "meetUbiDesc": "Nuestro asistente AI. Preguntale lo que quieras sobre los servicios y capacidades de UV.",
+        "meetUVI": "Conocé a UVI",
+        "meetUVIDesc": "Nuestro asistente AI. Preguntale lo que quieras sobre los servicios y capacidades de UV.",
         "agentsTitle": "Agentes AI construidos para tu marca",
         "agentsDescription": "Cada partnership comienza con inteligencia. Nuestros agentes aprenden tu marca, tu audiencia y tu mercado — generando insights que se vuelven más precisos con cada interacción.",
         "agents": {
             "uvi": {
-                "subtitle": "Agente de Inteligencia Universal",
+                "subtitle": "United Visions Intelligence",
                 "description": "El agente AI transversal de UV. UVI opera en estrategia, creatividad, medios y experiencias — una verdadera capa de inteligencia para toda la agencia.",
                 "features": [
                     "Inteligencia transversal",
