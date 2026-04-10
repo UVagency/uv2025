@@ -301,7 +301,7 @@
     },
     "ai": {
         "pageTitle": "United Intelligence — AI y Tecnología @ UV",
-        "metaDescription": "United Intelligence: Agentes AI, infraestructura enterprise y soluciones tecnológicas para marcas. Agentes AI dedicados para cada cliente, servidores propios Vermetal y 99.9% de uptime SLA.",
+        "metaDescription": "United Intelligence: Agentes AI, infraestructura enterprise y soluciones tecnológicas para marcas. Agentes AI dedicados para cada cliente, servidores propios Baremetal y 99.9% de uptime SLA.",
         "tagTech": "Tecnología",
         "tagInfra": "Infraestructura",
         "heroTagline": "Inteligencia que amplifica la creatividad humana",
@@ -354,7 +354,7 @@
         "infra": {
             "servers": {
                 "title": "Servidores Propios",
-                "desc": "Hardware propio sobre servidores Vermetal. Sin hosting compartido, sin dependencias de terceros."
+                "desc": "Hardware propio sobre servidores Baremetal. Sin hosting compartido, sin dependencias de terceros."
             },
             "vps": {
                 "title": "VPS Dedicado por Cliente",
@@ -371,7 +371,7 @@
             },
             "encryption": {
                 "title": "Cifrado de Extremo a Extremo",
-                "desc": "Datos cifrados en reposo y tránsito. Testing de penetración regular y evaluaciones de vulnerabilidad."
+                "desc": "Datos cifrados en reposo y tránsito."
             },
             "backup": {
                 "title": "Backups Automatizados",
@@ -412,7 +412,6 @@
             "securityOps": {
                 "title": "Ops de Seguridad",
                 "scanning": "Escaneo Automatizado",
-                "pentest": "Pen Testing",
                 "zeroTrust": "Zero-Trust"
             },
             "iac": {

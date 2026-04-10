@@ -77,12 +77,6 @@ const AI = () => {
       title: t('ai.infra.cdn.title'),
       description: t('ai.infra.cdn.desc'),
     },
-    {
-      icon: <Cloud className="w-5 h-5 text-portfolio-accent" />,
-      title: t('ai.infra.compliance.title'),
-      description: t('ai.infra.compliance.desc'),
-      stat: 'SOC 2',
-    },
   ];
 
   return (
@@ -252,9 +246,8 @@ const AI = () => {
                     {t('ai.infraDescription')}
                   </p>
                   <div className="hidden lg:flex flex-wrap gap-3">
-                    <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-portfolio-accent/10 text-portfolio-accent">Vermetal</span>
+                    <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-portfolio-accent/10 text-portfolio-accent">Baremetal</span>
                     <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-portfolio-accent/10 text-portfolio-accent">VPS</span>
-                    <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-portfolio-accent/10 text-portfolio-accent">SOC 2</span>
                     <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-portfolio-accent/10 text-portfolio-accent">GDPR</span>
                     <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-portfolio-accent/10 text-portfolio-accent">99.9% SLA</span>
                   </div>
@@ -315,7 +308,6 @@ const AI = () => {
                   </p>
                   <p className="text-portfolio-text/80 flex flex-wrap gap-x-3 gap-y-1">
                     <span>{t('ai.tech.securityOps.scanning')}</span>
-                    <span>{t('ai.tech.securityOps.pentest')}</span>
                     <span>{t('ai.tech.securityOps.zeroTrust')}</span>
                   </p>
                 </div>
