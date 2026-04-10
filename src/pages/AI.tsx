@@ -35,7 +35,7 @@ const AI = () => {
       icon: <Server className="w-5 h-5 text-portfolio-accent" />,
       title: t('ai.infra.servers.title'),
       description: t('ai.infra.servers.desc'),
-      stat: 'Vermetal',
+      stat: 'Baremetal',
     },
     {
       icon: <HardDrive className="w-5 h-5 text-portfolio-accent" />,
