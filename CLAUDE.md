@@ -1,6 +1,6 @@
 # CLAUDE.md - UV Agency Portfolio Codebase Guide
 
-**Last Updated:** 2026-01-16
+**Last Updated:** 2026-04-14
 **Repository:** UVagency/uv2025
 **Purpose:** This document provides AI assistants with comprehensive context about the codebase structure, conventions, and workflows.
 
@@ -34,6 +34,9 @@ This is a **React + TypeScript portfolio website** for UV Agency, built with mod
 - Modal-based navigation panels
 - Client logo carousel
 - Protected routes for private content
+- Internationalization (i18n) with English and Spanish translations
+- AI-focused landing page with interactive agent cards and chat UI
+- Case study pages (e.g., Under Armour HALO)
 
 ---
 
@@ -46,7 +49,7 @@ This is a **React + TypeScript portfolio website** for UV Agency, built with mod
 
 ### UI & Styling
 - **Tailwind CSS 3.4.11** - Utility-first CSS framework
-- **shadcn/ui** - Headless component library (58 components)
+- **shadcn/ui** - Headless component library (57 components)
 - **Radix UI** - Accessible primitive components
 - **class-variance-authority** - Component variant management
 - **tailwindcss-animate** - Animation utilities
@@ -69,6 +72,11 @@ This is a **React + TypeScript portfolio website** for UV Agency, built with mod
 ### SEO & Meta
 - **React Helmet Async** - Dynamic meta tags
 - Custom SEO component with JSON-LD support
+
+### Internationalization
+- **i18next** / **react-i18next** - Translation framework
+- Locale files in `src/locales/{en,es}/translation.json`
+- Initialization in `src/lib/i18n.ts`
 
 ### Development Tools
 - **ESLint** - Code linting
@@ -94,7 +102,11 @@ Routes are defined in `src/App.tsx`:
 /our-company - Company information
 /um - United Media page
 /events - Events page
+/jobs - Jobs / careers page
+/schedule - Schedule / booking page
 /parisExclusive - Private video page (password protected)
+/case/under-armour-halo - Under Armour HALO case study
+/ai - AI services landing page
 /* - 404 Not Found
 ```
 
@@ -263,6 +275,11 @@ uv2025/
 │   │   │   ├── EventsMethodWheel.tsx
 │   │   │   └── ...
 │   │   │
+│   │   ├── ai/                    # AI page components
+│   │   │   ├── AgentCard.tsx
+│   │   │   ├── InfrastructureGrid.tsx
+│   │   │   └── UviChat.tsx
+│   │   │
 │   │   ├── lazy/                  # Lazy loading exports
 │   │   │   └── index.ts           # Central lazy import point
 │   │   │
@@ -279,6 +296,10 @@ uv2025/
 │   │   ├── OurCompany.tsx
 │   │   ├── UnitedMedia.tsx
 │   │   ├── Events.tsx
+│   │   ├── Jobs.tsx
+│   │   ├── Schedule.tsx
+│   │   ├── HALOCaseStudy.tsx
+│   │   ├── AI.tsx
 │   │   ├── PrivateVideo.tsx
 │   │   └── NotFound.tsx
 │   │
@@ -297,13 +318,23 @@ uv2025/
 │   │
 │   ├── lib/                       # Utility libraries
 │   │   ├── utils.ts               # cn() helper, utilities
-│   │   └── customCursor.js        # Custom cursor logic
+│   │   ├── utils.test.ts          # utils unit tests
+│   │   ├── customCursor.js        # Custom cursor logic
+│   │   ├── scrollUtils.ts         # Scroll helpers
+│   │   ├── analytics.ts           # Analytics / tracking helpers
+│   │   ├── i18n.ts                # i18next initialization
+│   │   └── sanitizeHtml.ts        # HTML sanitization
+│   │
+│   ├── locales/                   # i18n translations
+│   │   ├── en/translation.json
+│   │   └── es/translation.json
 │   │
 │   ├── constants/                 # Application constants
 │   │   └── navbarConstants.ts     # Navigation configuration
 │   │
 │   ├── types/                     # TypeScript type definitions
-│   │   └── project.ts             # Project-related types
+│   │   ├── index.ts               # Main types (projects, etc.)
+│   │   └── gallery.ts             # Gallery-related types
 │   │
 │   ├── styles/                    # CSS files
 │   │   ├── index.css              # Main entry (imports all)
@@ -691,7 +722,9 @@ npm install --legacy-peer-deps
 | `src/data/projectsData.ts` | Project data loader with dynamic imports |
 | `src/data/highlightsConfig.ts` | Homepage featured projects |
 | `src/constants/navbarConstants.ts` | Navigation configuration |
-| `src/types/project.ts` | TypeScript types for projects |
+| `src/types/index.ts` | TypeScript types for projects |
+| `src/types/gallery.ts` | Gallery-related types |
+| `src/locales/{en,es}/translation.json` | i18n translation strings |
 
 ### Styling Files
 
@@ -709,6 +742,10 @@ npm install --legacy-peer-deps
 |------|---------|
 | `src/lib/utils.ts` | `cn()` helper, utilities |
 | `src/lib/customCursor.js` | Custom cursor implementation |
+| `src/lib/scrollUtils.ts` | Scroll-related helpers |
+| `src/lib/analytics.ts` | Analytics / tracking helpers |
+| `src/lib/i18n.ts` | i18next setup and language detection |
+| `src/lib/sanitizeHtml.ts` | HTML sanitization utilities |
 | `src/hooks/useNavigation.ts` | Navbar state management |
 | `src/hooks/use-mobile.tsx` | Mobile detection hook |
 
@@ -1141,6 +1178,14 @@ if (import.meta.env.DEV) {
 ---
 
 ## Changelog
+
+### 2026-04-14
+- Added 4 new routes/pages: `/jobs` (Jobs), `/schedule` (Schedule), `/case/under-armour-halo` (HALOCaseStudy), `/ai` (AI)
+- Documented new `src/components/ai/` directory (AgentCard, InfrastructureGrid, UviChat)
+- Documented i18n setup: `src/lib/i18n.ts` and `src/locales/{en,es}/translation.json` (react-i18next)
+- Documented new lib files: `analytics.ts`, `sanitizeHtml.ts`, `scrollUtils.ts`, `utils.test.ts`
+- Corrected types directory contents: `index.ts` and `gallery.ts` (not `project.ts`)
+- Updated shadcn/ui component count from 58 to 57
 
 ### 2025-12-27
 - Initial CLAUDE.md creation
