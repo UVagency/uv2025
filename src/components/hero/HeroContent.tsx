@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import OptimizedImage from "@/components/ui/optimized-image";
 import { HeroLogo } from "./HeroLogo";
 
@@ -38,7 +39,12 @@ export const HeroContent = () => {
               </p>
 
               <p className="font-body text-xl md:text-2xl text-portfolio-text/80 font-normal leading-relaxed">
-                {t('hero.subtitle2')}
+                <Trans
+                  i18nKey="hero.subtitle2"
+                  components={[
+                    <Link to="/ai" className="underline decoration-portfolio-accent hover:text-portfolio-accent transition-colors duration-200" />
+                  ]}
+                />
               </p>
 
               <div className={`transition-all duration-300 ${showOneAgency ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
