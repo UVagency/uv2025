@@ -301,11 +301,11 @@
     },
     "ai": {
         "pageTitle": "United Intelligence — AI & Technology @ UV",
-        "metaDescription": "United Intelligence: AI-powered agents, enterprise infrastructure, and technology solutions for brands. Dedicated AI agents for every client, proprietary Baremetal servers, and 99.9% uptime SLA.",
+        "metaDescription": "United Intelligence: AI-powered agents, dedicated infrastructure, and technology solutions for brands. Dedicated AI agents for every client, proprietary Baremetal servers, and 99.9% uptime SLA.",
         "tagTech": "Technology",
         "tagInfra": "Infrastructure",
         "heroTagline": "Intelligence that amplifies human creativity",
-        "heroDescription": "We integrate AI agents, enterprise-grade infrastructure, and proprietary technology into everything we do. Every client gets a dedicated AI partner that learns, adapts, and grows with their brand.",
+        "heroDescription": "We integrate AI agents, high-performance infrastructure, and proprietary technology into everything we do. Every client gets a dedicated AI partner that learns, adapts, and grows with their brand.",
         "meetUVI": "Meet UVI",
         "meetUVIDesc": "Our AI assistant. Ask anything about UV's services and capabilities.",
         "agentsTitle": "AI Agents built for your brand",
@@ -350,7 +350,7 @@
             "cta": "Learn more"
         },
         "infraTitle": "Infrastructure you can trust",
-        "infraDescription": "We don't rent — we own. Proprietary servers, dedicated VPS per client, and enterprise-grade security. Your data, your environment, your peace of mind.",
+        "infraDescription": "We don't rent — we own. Proprietary servers, dedicated VPS per client, and advanced security. Your data, your environment, your peace of mind.",
         "infra": {
             "servers": {
                 "title": "Proprietary Servers",
@@ -362,7 +362,7 @@
                 "stat": "1:1"
             },
             "security": {
-                "title": "Enterprise Security",
+                "title": "Advanced Security",
                 "desc": "SSL/TLS, dedicated firewalls, WAF, DDoS protection, and zero-trust architecture across all environments."
             },
             "uptime": {
@@ -427,7 +427,7 @@
             }
         },
         "ctaTitle": "Ready to work with intelligence?",
-        "ctaDescription": "Whether you need AI agents, enterprise infrastructure, or a full technology partner — let's build something smarter, together.",
+        "ctaDescription": "Whether you need AI agents, dedicated infrastructure, or a full technology partner — let's build something smarter, together.",
         "ctaCta": "Get in touch"
     }
 }

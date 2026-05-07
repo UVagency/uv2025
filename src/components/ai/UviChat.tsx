@@ -58,8 +58,8 @@ const buildKnowledgeBase = (lang: string): KnowledgeEntry[] => {
     {
       keywords: ['security', 'seguridad', 'compliance', 'gdpr', 'soc', 'cumplimiento'],
       response: isES
-        ? 'Mantenemos seguridad enterprise-grade: certificados SSL/TLS, firewalls dedicados, WAF, protección DDoS, arquitectura zero-trust, datos cifrados en reposo y tránsito (AES-256), y testing de penetración regular. Cumplimos con GDPR, CCPA y prácticas SOC 2 Type II.'
-        : 'We maintain enterprise-grade security: SSL/TLS certificates, dedicated firewalls, WAF, DDoS protection, zero-trust architecture, encrypted data at rest and in transit (AES-256), and regular penetration testing. We comply with GDPR, CCPA, and SOC 2 Type II practices.'
+        ? 'Mantenemos seguridad avanzada: certificados SSL/TLS, firewalls dedicados, WAF, protección DDoS, arquitectura zero-trust, datos cifrados en reposo y tránsito (AES-256), y testing de penetración regular. Cumplimos con GDPR, CCPA y prácticas SOC 2 Type II.'
+        : 'We maintain advanced security: SSL/TLS certificates, dedicated firewalls, WAF, DDoS protection, zero-trust architecture, encrypted data at rest and in transit (AES-256), and regular penetration testing. We comply with GDPR, CCPA, and SOC 2 Type II practices.'
     },
     {
       keywords: ['backup', 'recovery', 'disaster', 'respaldo', 'recuperación', 'desastres'],

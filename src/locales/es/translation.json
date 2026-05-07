@@ -301,11 +301,11 @@
     },
     "ai": {
         "pageTitle": "United Intelligence — AI y Tecnología @ UV",
-        "metaDescription": "United Intelligence: Agentes AI, infraestructura enterprise y soluciones tecnológicas para marcas. Agentes AI dedicados para cada cliente, servidores propios Baremetal y 99.9% de uptime SLA.",
+        "metaDescription": "United Intelligence: Agentes AI, infraestructura dedicada y soluciones tecnológicas para marcas. Agentes AI dedicados para cada cliente, servidores propios Baremetal y 99.9% de uptime SLA.",
         "tagTech": "Tecnología",
         "tagInfra": "Infraestructura",
         "heroTagline": "Inteligencia que amplifica la creatividad humana",
-        "heroDescription": "Integramos agentes AI, infraestructura enterprise y tecnología propia en todo lo que hacemos. Cada cliente recibe un partner AI dedicado que aprende, se adapta y crece con su marca.",
+        "heroDescription": "Integramos agentes AI, infraestructura de alto rendimiento y tecnología propia en todo lo que hacemos. Cada cliente recibe un partner AI dedicado que aprende, se adapta y crece con su marca.",
         "meetUVI": "Conocé a UVI",
         "meetUVIDesc": "Nuestro asistente AI. Preguntale lo que quieras sobre los servicios y capacidades de UV.",
         "agentsTitle": "Agentes AI construidos para tu marca",
@@ -350,7 +350,7 @@
             "cta": "Saber más"
         },
         "infraTitle": "Infraestructura en la que podés confiar",
-        "infraDescription": "No alquilamos — somos dueños. Servidores propios, VPS dedicado por cliente y seguridad enterprise. Tus datos, tu entorno, tu tranquilidad.",
+        "infraDescription": "No alquilamos — somos dueños. Servidores propios, VPS dedicado por cliente y seguridad avanzada. Tus datos, tu entorno, tu tranquilidad.",
         "infra": {
             "servers": {
                 "title": "Servidores Propios",
@@ -362,7 +362,7 @@
                 "stat": "1:1"
             },
             "security": {
-                "title": "Seguridad Enterprise",
+                "title": "Seguridad Avanzada",
                 "desc": "SSL/TLS, firewalls dedicados, WAF, protección DDoS y arquitectura zero-trust en todos los entornos."
             },
             "uptime": {
@@ -427,7 +427,7 @@
             }
         },
         "ctaTitle": "¿Listo para trabajar con inteligencia?",
-        "ctaDescription": "Ya sea que necesites agentes AI, infraestructura enterprise o un partner tecnológico completo — construyamos algo más inteligente, juntos.",
+        "ctaDescription": "Ya sea que necesites agentes AI, infraestructura dedicada o un partner tecnológico completo — construyamos algo más inteligente, juntos.",
         "ctaCta": "Contactanos"
     }
 }
