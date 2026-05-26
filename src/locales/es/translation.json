@@ -251,43 +251,43 @@
         "listings": {
             "account-executive": {
                 "type": "Tiempo completo",
-                "location": "En el lugar",
+                "location": "Híbrido",
                 "description": "Actúa como el enlace principal entre los clientes y nuestros equipos creativos. Construye relaciones duraderas y garantiza una entrega excepcional del proyecto."
             },
             "designer": {
-                "type": "Tiempo completo",
+                "type": "Tiempo completo / Medio tiempo",
                 "location": "Híbrido",
                 "description": "Transforma conceptos en identidades visuales potentes. Diseña piezas que no solo se ven bien, sino que comunican con propósito y estrategia."
             },
             "media-planner": {
-                "type": "Tiempo completo",
+                "type": "Tiempo completo / Medio tiempo",
                 "location": "Híbrido",
                 "description": "El estratega del alcance. Optimiza presupuestos y selecciona los canales ideales para que el mensaje llegue al público correcto en el momento exacto."
             },
-            "community-manager": {
-                "type": "Tiempo completo",
-                "location": "Híbrido",
-                "description": "La voz digital de la marca. Construye comunidades, gestiona la reputación y genera conversaciones reales que conectan a la marca con su audiencia."
-            },
             "copywriter": {
-                "type": "Tiempo completo",
-                "location": "Remoto",
+                "type": "Tiempo completo / Medio tiempo",
+                "location": "Híbrido",
                 "description": "Redacta textos persuasivos que cuenten historias e impulsen la acción. Se valora mucho la experiencia escribiendo para audiencias multiculturales en varios idiomas."
             },
-            "influencer-manager": {
-                "type": "Tiempo completo",
+            "senior-art-director": {
+                "type": "Tiempo completo / Medio tiempo",
                 "location": "Híbrido",
-                "description": "Conecta marcas con creadores auténticos. Gestiona alianzas estratégicas que amplifican el mensaje de forma orgánica y con resultados medibles."
+                "description": "Lidera la dirección visual de campañas y proyectos. Define estándares creativos y guía al equipo de diseño para entregar experiencias de marca excepcionales."
             },
-            "event-producer": {
-                "type": "Tiempo completo",
-                "location": "En el lugar",
-                "description": "Diseña y ejecuta experiencias de marca y eventos inmersivos. Desde el concepto hasta la finalización, crearás momentos que muevan a las personas a convertirse en clientes."
-            },
-            "content-creator": {
-                "type": "Tiempo completo",
+            "digital-content-editor": {
+                "type": "Tiempo completo / Medio tiempo",
                 "location": "Híbrido",
-                "description": "Desarrolla contenido atractivo para diversas plataformas. Colabora con el equipo creativo para producir material visual y escrito de alta calidad."
+                "description": "Edita y produce contenido digital para múltiples plataformas. Asegura calidad, consistencia y alineación de marca en cada pieza de contenido visual y escrito."
+            },
+            "content-creator-chile": {
+                "type": "Contrato",
+                "location": "Híbrido",
+                "description": "Crea contenido atractivo adaptado al mercado chileno. Produce material visual y escrito de alta calidad que conecta con audiencias locales."
+            },
+            "design-intern": {
+                "type": "Práctica",
+                "location": "Híbrido",
+                "description": "Únete a nuestro equipo de diseño como practicante y desarrolla tus habilidades en un entorno real de agencia. Trabaja junto a diseñadores senior en proyectos reales para grandes marcas."
             }
         }
     },
