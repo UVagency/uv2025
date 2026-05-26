@@ -251,43 +251,43 @@
         "listings": {
             "account-executive": {
                 "type": "Full-time",
-                "location": "On-site",
+                "location": "Hybrid",
                 "description": "Serve as the primary liaison between clients and our creative teams. Build lasting relationships and ensure exceptional project delivery."
             },
             "designer": {
-                "type": "Full-time",
+                "type": "Full-time / Part-time",
                 "location": "Hybrid",
                 "description": "Transforms concepts into powerful visual identities. Designs pieces that don't just look good but communicate with purpose and strategy."
             },
             "media-planner": {
-                "type": "Full-time",
+                "type": "Full-time / Part-time",
                 "location": "Hybrid",
                 "description": "The reach strategist. Optimizes budgets and selects the ideal channels to ensure the message hits the right audience at the perfect moment."
             },
-            "community-manager": {
-                "type": "Full-time",
-                "location": "Hybrid",
-                "description": "The brand's digital voice. Builds communities, manages reputation, and sparks real conversations that connect the brand with its audience."
-            },
             "copywriter": {
-                "type": "Full-time",
-                "location": "Remote",
+                "type": "Full-time / Part-time",
+                "location": "Hybrid",
                 "description": "Craft compelling copy that tells stories and drives action. Experience writing for multicultural audiences in multiple languages is highly valued."
             },
-            "influencer-manager": {
-                "type": "Full-time",
+            "senior-art-director": {
+                "type": "Full-time / Part-time",
                 "location": "Hybrid",
-                "description": "Connects brands with authentic creators. Manages strategic partnerships that amplify the message organically with measurable results."
+                "description": "Lead the visual direction of campaigns and projects. Define creative standards and mentor the design team to deliver exceptional brand experiences."
             },
-            "event-producer": {
-                "type": "Full-time",
-                "location": "On-site",
-                "description": "Design and execute immersive brand experiences and events. From concept to completion, you'll create moments that move people to become customers."
-            },
-            "content-creator": {
-                "type": "Full-time",
+            "digital-content-editor": {
+                "type": "Full-time / Part-time",
                 "location": "Hybrid",
-                "description": "Develop engaging content for various platforms. Collaborate with the creative team to produce high-quality visual and written material."
+                "description": "Edit and produce digital content across platforms. Ensure quality, consistency, and brand alignment in every piece of visual and written content."
+            },
+            "content-creator-chile": {
+                "type": "Contract",
+                "location": "Hybrid",
+                "description": "Create engaging content tailored for the Chilean market. Produce high-quality visual and written material that resonates with local audiences."
+            },
+            "design-intern": {
+                "type": "Internship",
+                "location": "Hybrid",
+                "description": "Join our design team as an intern and grow your skills in a real agency environment. Work alongside senior designers on live projects for top brands."
             }
         }
     },

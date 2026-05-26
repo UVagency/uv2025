@@ -10,66 +10,66 @@ export interface Job {
 export const jobsData: Job[] = [
     {
         id: "account-executive",
-        title: "EJECUTIVO/A CUENTAS",
+        title: "EJECUTIVO/A DE CUENTAS",
         type: "Full-time",
-        location: "On-site",
+        location: "Hybrid",
         description: "Serve as the primary liaison between clients and our creative teams. Build lasting relationships and ensure exceptional project delivery.",
-        applyUrl: "https://forms.gle/6f6xoN5V8skwspye8"
+        applyUrl: "https://forms.gle/bGtZk5bAE5XFAZzD7"
     },
     {
         id: "designer",
         title: "DISEÑADOR/A",
-        type: "Full-time",
+        type: "Full-time / Part-time",
         location: "Hybrid",
         description: "Create visual concepts that inspire, inform, and captivate consumers. Develop the overall layout and production design for various applications.",
-        applyUrl: "https://forms.gle/oUEGh5qxtjYDVmWc8"
+        applyUrl: "https://forms.gle/Qpq7VxTzss2yQGLb7"
     },
     {
         id: "media-planner",
         title: "MEDIA PLANNER",
-        type: "Full-time",
+        type: "Full-time / Part-time",
         location: "Hybrid",
         description: "Identify which media platforms would best advertise a client's brand or product. Maximize the impact of advertising campaigns through strategic planning.",
-        applyUrl: "https://forms.gle/k12SXvHDpZF2jQmA7"
-    },
-    {
-        id: "community-manager",
-        title: "COMMUNITY MANAGER",
-        type: "Full-time",
-        location: "Hybrid",
-        description: "Build and manage our online communities. Engage with audiences, moderate discussions, and represent the brand across social channels.",
-        applyUrl: "mailto:jobs@uv.agency?subject=Job Application - Community Manager"
+        applyUrl: "https://forms.gle/kAXFumdP5rrgCr7F9"
     },
     {
         id: "copywriter",
         title: "REDACTOR",
-        type: "Full-time",
-        location: "Remote",
+        type: "Full-time / Part-time",
+        location: "Hybrid",
         description: "Craft compelling copy that tells stories and drives action. Experience writing for multicultural audiences in multiple languages is highly valued.",
-        applyUrl: "https://forms.gle/3XuAu957YrVMeHLR7"
+        applyUrl: "https://forms.gle/nTqtJENXxxeVbkBU9"
     },
     {
-        id: "influencer-manager",
-        title: "INFLUENCER MANAGER",
-        type: "Full-time",
+        id: "senior-art-director",
+        title: "DIRECTORA DE ARTE SENIOR",
+        type: "Full-time / Part-time",
         location: "Hybrid",
-        description: "Lead influencer outreach, campaign strategy, and relationship management to drive brand awareness and engagement across social platforms.",
-        applyUrl: "mailto:jobs@uv.agency?subject=Job Application - Influencer Manager"
+        description: "Lead the visual direction of campaigns and projects. Define creative standards and mentor the design team to deliver exceptional brand experiences.",
+        applyUrl: "https://forms.gle/3io9JrjjtW1HrFGH7"
     },
     {
-        id: "event-producer",
-        title: "PRODUCTOR EVENTOS",
-        type: "Full-time",
-        location: "On-site",
-        description: "Design and execute immersive brand experiences and events. From concept to completion, you'll create moments that move people to become customers.",
-        applyUrl: "mailto:jobs@uv.agency?subject=Job Application - Event Producer"
-    },
-    {
-        id: "content-creator",
-        title: "CONTENT CREATOR",
-        type: "Full-time",
+        id: "digital-content-editor",
+        title: "EDITOR CONTENIDO DIGITAL",
+        type: "Full-time / Part-time",
         location: "Hybrid",
-        description: "Develop engaging content for various platforms. Collaborate with the creative team to produce high-quality visual and written material.",
-        applyUrl: "https://forms.gle/48WLRDHjtKup4WLi8"
+        description: "Edit and produce digital content across platforms. Ensure quality, consistency, and brand alignment in every piece of visual and written content.",
+        applyUrl: "https://forms.gle/iFLP9D68AE5nn49E8"
+    },
+    {
+        id: "content-creator-chile",
+        title: "CONTENT CREATOR CHILE",
+        type: "Contract",
+        location: "Hybrid",
+        description: "Create engaging content tailored for the Chilean market. Produce high-quality visual and written material that resonates with local audiences.",
+        applyUrl: "https://forms.gle/cLA1Lz2h59iu3WPQ7"
+    },
+    {
+        id: "design-intern",
+        title: "PRÁCTICA DISEÑADOR/A",
+        type: "Internship",
+        location: "Hybrid",
+        description: "Join our design team as an intern and grow your skills in a real agency environment. Work alongside senior designers on live projects for top brands.",
+        applyUrl: "https://forms.gle/neKsLtPKmrUeNRyj8"
     }
 ];
