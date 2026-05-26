@@ -250,41 +250,49 @@
         ],
         "listings": {
             "account-executive": {
+                "title": "EJECUTIVO DE CUENTAS",
                 "type": "Tiempo completo",
                 "location": "Híbrido",
                 "description": "Actúa como el enlace principal entre los clientes y nuestros equipos creativos. Construye relaciones duraderas y garantiza una entrega excepcional del proyecto."
             },
             "designer": {
+                "title": "DISEÑO",
                 "type": "Tiempo completo / Medio tiempo",
                 "location": "Híbrido",
                 "description": "Transforma conceptos en identidades visuales potentes. Diseña piezas que no solo se ven bien, sino que comunican con propósito y estrategia."
             },
             "media-planner": {
+                "title": "MEDIA PLANNER",
                 "type": "Tiempo completo / Medio tiempo",
                 "location": "Híbrido",
                 "description": "El estratega del alcance. Optimiza presupuestos y selecciona los canales ideales para que el mensaje llegue al público correcto en el momento exacto."
             },
             "copywriter": {
+                "title": "REDACTOR",
                 "type": "Tiempo completo / Medio tiempo",
                 "location": "Híbrido",
                 "description": "Redacta textos persuasivos que cuenten historias e impulsen la acción. Se valora mucho la experiencia escribiendo para audiencias multiculturales en varios idiomas."
             },
             "senior-art-director": {
+                "title": "DIRECCIÓN DE ARTE SENIOR",
                 "type": "Tiempo completo / Medio tiempo",
                 "location": "Híbrido",
                 "description": "Lidera la dirección visual de campañas y proyectos. Define estándares creativos y guía al equipo de diseño para entregar experiencias de marca excepcionales."
             },
             "digital-content-editor": {
+                "title": "EDITOR CONTENIDO DIGITAL",
                 "type": "Tiempo completo / Medio tiempo",
                 "location": "Híbrido",
                 "description": "Edita y produce contenido digital para múltiples plataformas. Asegura calidad, consistencia y alineación de marca en cada pieza de contenido visual y escrito."
             },
             "content-creator-chile": {
+                "title": "CONTENT CREATOR CHILE",
                 "type": "Contrato",
                 "location": "Híbrido",
                 "description": "Crea contenido atractivo adaptado al mercado chileno. Produce material visual y escrito de alta calidad que conecta con audiencias locales."
             },
             "design-intern": {
+                "title": "PRÁCTICA DISEÑO",
                 "type": "Práctica",
                 "location": "Híbrido",
                 "description": "Únete a nuestro equipo de diseño como practicante y desarrolla tus habilidades en un entorno real de agencia. Trabaja junto a diseñadores senior en proyectos reales para grandes marcas."

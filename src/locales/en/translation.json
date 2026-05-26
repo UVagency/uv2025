@@ -250,41 +250,49 @@
         ],
         "listings": {
             "account-executive": {
+                "title": "ACCOUNT EXECUTIVE",
                 "type": "Full-time",
                 "location": "Hybrid",
                 "description": "Serve as the primary liaison between clients and our creative teams. Build lasting relationships and ensure exceptional project delivery."
             },
             "designer": {
+                "title": "DESIGN",
                 "type": "Full-time / Part-time",
                 "location": "Hybrid",
                 "description": "Transforms concepts into powerful visual identities. Designs pieces that don't just look good but communicate with purpose and strategy."
             },
             "media-planner": {
+                "title": "MEDIA PLANNER",
                 "type": "Full-time / Part-time",
                 "location": "Hybrid",
                 "description": "The reach strategist. Optimizes budgets and selects the ideal channels to ensure the message hits the right audience at the perfect moment."
             },
             "copywriter": {
+                "title": "COPYWRITER",
                 "type": "Full-time / Part-time",
                 "location": "Hybrid",
                 "description": "Craft compelling copy that tells stories and drives action. Experience writing for multicultural audiences in multiple languages is highly valued."
             },
             "senior-art-director": {
+                "title": "SENIOR ART DIRECTION",
                 "type": "Full-time / Part-time",
                 "location": "Hybrid",
                 "description": "Lead the visual direction of campaigns and projects. Define creative standards and mentor the design team to deliver exceptional brand experiences."
             },
             "digital-content-editor": {
+                "title": "DIGITAL CONTENT EDITOR",
                 "type": "Full-time / Part-time",
                 "location": "Hybrid",
                 "description": "Edit and produce digital content across platforms. Ensure quality, consistency, and brand alignment in every piece of visual and written content."
             },
             "content-creator-chile": {
+                "title": "CONTENT CREATOR CHILE",
                 "type": "Contract",
                 "location": "Hybrid",
                 "description": "Create engaging content tailored for the Chilean market. Produce high-quality visual and written material that resonates with local audiences."
             },
             "design-intern": {
+                "title": "DESIGN INTERNSHIP",
                 "type": "Internship",
                 "location": "Hybrid",
                 "description": "Join our design team as an intern and grow your skills in a real agency environment. Work alongside senior designers on live projects for top brands."
