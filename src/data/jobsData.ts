@@ -10,7 +10,7 @@ export interface Job {
 export const jobsData: Job[] = [
     {
         id: "account-executive",
-        title: "EJECUTIVO/A DE CUENTAS",
+        title: "EJECUTIVO DE CUENTAS",
         type: "Full-time",
         location: "Hybrid",
         description: "Serve as the primary liaison between clients and our creative teams. Build lasting relationships and ensure exceptional project delivery.",
@@ -18,7 +18,7 @@ export const jobsData: Job[] = [
     },
     {
         id: "designer",
-        title: "DISEÑADOR/A",
+        title: "DISEÑO",
         type: "Full-time / Part-time",
         location: "Hybrid",
         description: "Create visual concepts that inspire, inform, and captivate consumers. Develop the overall layout and production design for various applications.",
@@ -42,7 +42,7 @@ export const jobsData: Job[] = [
     },
     {
         id: "senior-art-director",
-        title: "DIRECTORA DE ARTE SENIOR",
+        title: "DIRECCIÓN DE ARTE SENIOR",
         type: "Full-time / Part-time",
         location: "Hybrid",
         description: "Lead the visual direction of campaigns and projects. Define creative standards and mentor the design team to deliver exceptional brand experiences.",
@@ -66,7 +66,7 @@ export const jobsData: Job[] = [
     },
     {
         id: "design-intern",
-        title: "PRÁCTICA DISEÑADOR/A",
+        title: "PRÁCTICA DISEÑO",
         type: "Internship",
         location: "Hybrid",
         description: "Join our design team as an intern and grow your skills in a real agency environment. Work alongside senior designers on live projects for top brands.",
