@@ -107,7 +107,7 @@ const Jobs = () => {
                                     <InteractiveTilt key={job.id} className="rounded-xl">
                                         <div className="bg-portfolio-bg/80 border border-portfolio-divider rounded-lg p-6 sm:p-8 shadow-md h-full flex flex-col group hover:border-portfolio-highlight transition-colors overflow-hidden">
                                             <h3 className="text-2xl sm:text-3xl font-bold text-portfolio-text mb-3 group-hover:text-portfolio-highlight transition-colors">
-                                                {job.title}
+                                                {t(`jobs.listings.${job.id}.title`, job.title)}
                                             </h3>
 
                                             <div className="flex flex-wrap gap-2 mb-4">
