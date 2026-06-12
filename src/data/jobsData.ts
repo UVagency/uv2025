@@ -9,6 +9,30 @@ export interface Job {
 
 export const jobsData: Job[] = [
     {
+        id: "social-media-manager",
+        title: "SOCIAL MEDIA MANAGER",
+        type: "Full-time / Part-time",
+        location: "Hybrid",
+        description: "Lead the strategy, planning, and performance of our clients' social channels. Turn insights into content calendars that grow communities and deliver measurable results.",
+        applyUrl: "https://forms.gle/J7DqKBgCVMxdZqTn9"
+    },
+    {
+        id: "community-manager",
+        title: "COMMUNITY MANAGER",
+        type: "Full-time / Part-time",
+        location: "Hybrid",
+        description: "Be the voice of brands across social platforms. Engage, moderate, and spark genuine conversations that strengthen the bond between brands and their audiences.",
+        applyUrl: "https://forms.gle/PifrG39CNXERZXXW7"
+    },
+    {
+        id: "content-creation-intern-chile",
+        title: "PRÁCTICA CREACIÓN DE CONTENIDO CHILE",
+        type: "Internship",
+        location: "Hybrid",
+        description: "Kick-start your career creating content for real brands in the Chilean market. Learn alongside our creative team while producing visual and written pieces for live campaigns.",
+        applyUrl: "https://forms.gle/3sxBmXE9mZs1pZfk7"
+    },
+    {
         id: "account-executive",
         title: "EJECUTIVO DE CUENTAS",
         type: "Full-time",

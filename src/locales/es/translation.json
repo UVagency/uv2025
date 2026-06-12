@@ -249,6 +249,24 @@
             }
         ],
         "listings": {
+            "social-media-manager": {
+                "title": "SOCIAL MEDIA MANAGER",
+                "type": "Tiempo completo / Medio tiempo",
+                "location": "Híbrido",
+                "description": "Lidera la estrategia, planificación y performance de los canales sociales de nuestros clientes. Convierte insights en calendarios de contenido que hacen crecer comunidades y generan resultados medibles."
+            },
+            "community-manager": {
+                "title": "COMMUNITY MANAGER",
+                "type": "Tiempo completo / Medio tiempo",
+                "location": "Híbrido",
+                "description": "Sé la voz de las marcas en redes sociales. Conversa, modera y genera vínculos genuinos que fortalecen la relación entre las marcas y sus audiencias."
+            },
+            "content-creation-intern-chile": {
+                "title": "PRÁCTICA CREACIÓN DE CONTENIDO CHILE",
+                "type": "Práctica",
+                "location": "Híbrido",
+                "description": "Da tus primeros pasos creando contenido para marcas reales en el mercado chileno. Aprende junto a nuestro equipo creativo produciendo piezas visuales y escritas para campañas reales."
+            },
             "account-executive": {
                 "title": "GESTIÓN DE CUENTAS",
                 "type": "Tiempo completo",
