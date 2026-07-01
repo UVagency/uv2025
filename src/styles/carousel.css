@@ -16,7 +16,10 @@
   display: flex;
   width: max-content;
   animation: 50s slide infinite linear;
-  will-change: transform;
+  /* No usar will-change: transform aquí: fuerza a Safari mobile a promover
+     toda la tira (~10.000px) a una única capa GPU sin tiling, que supera el
+     límite de textura (~4096px) y se renderiza en blanco tras unos segundos.
+     Sin will-change, Safari usa tiled rendering y el carrusel no desaparece. */
 }
 
 .logos-slide img {
@@ -94,7 +97,8 @@
 
   .logos-slide {
     animation: 30s slide infinite linear;
-    padding: 0 5vw;
+    /* Sin padding lateral: rompía el bucle continuo porque translateX(-100%/3)
+       se mide sobre el ancho con padding y dejaba de alinear las copias. */
   }
 
   .logos-slide img {
